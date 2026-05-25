@@ -13539,6 +13539,126 @@ header.transparent.smaller {
   }
 }
 
+/* ===== Who We Work With (Services page) ===== */
+#pma-work-with {
+  padding: 72px 0 80px;
+  background: #fff;
+}
+
+#pma-work-with .pma-services-header {
+  margin-bottom: 0;
+}
+
+#pma-work-with .pma-services-divider {
+  margin-bottom: 48px;
+}
+
+.pma-work-with-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0;
+}
+
+.pma-work-with-item {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0 18px;
+  text-align: center;
+  position: relative;
+}
+
+.pma-work-with-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 8%;
+  right: 0;
+  width: 1px;
+  height: 84%;
+  background: rgba(212, 163, 89, 0.45);
+}
+
+.pma-work-with-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+  margin-bottom: 16px;
+}
+
+.pma-work-with-icon i {
+  font-size: 44px;
+  line-height: 1;
+  color: #213449;
+  -webkit-text-stroke: 0;
+}
+
+.pma-work-with-icon--accent {
+  position: relative;
+}
+
+.pma-work-with-icon-dot {
+  position: absolute;
+  top: 14px;
+  right: calc(50% - 28px);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+}
+
+.pma-work-with-label {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #213449;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1199px) {
+  .pma-work-with-item {
+    padding: 0 12px;
+  }
+
+  .pma-work-with-icon i {
+    font-size: 38px;
+  }
+
+  .pma-work-with-label {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #pma-work-with {
+    padding: 60px 0 68px;
+  }
+
+  .pma-work-with-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 24px;
+  }
+
+  .pma-work-with-item {
+    padding: 0 12px;
+  }
+
+  .pma-work-with-item::after {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .pma-work-with-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
 /* ===== PMA Our Core Services ===== */
 #pma-core-services {
   padding: 80px 0 88px;
@@ -13646,11 +13766,24 @@ header.transparent.smaller {
   justify-content: center;
   margin-bottom: 22px;
   flex-shrink: 0;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pma-service-icon i {
   font-size: 28px;
   color: var(--secondary-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.pma-service-card:hover .pma-service-icon {
+  transform: scale(1.08);
+  background-color: var(--secondary-color);
+  box-shadow: 0 8px 20px rgba(212, 163, 89, 0.35);
+}
+
+.pma-service-card:hover .pma-service-icon i {
+  transform: scale(1.1);
+  color: #213449;
 }
 
 .pma-service-card h3 {
@@ -14101,6 +14234,190 @@ header.transparent.smaller {
   }
 }
 
+/* ===== Services Page CTA Banner ===== */
+#pma-services-cta {
+  padding: 0 0 88px;
+  background: #fff;
+}
+
+.pma-services-cta-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px 14px 0 0;
+  background-color: #213449;
+  min-height: 220px;
+}
+
+.pma-services-cta-media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 58%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.pma-services-cta-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  display: block;
+}
+
+.pma-services-cta-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    #213449 0%,
+    #213449 38%,
+    rgba(33, 52, 73, 0.96) 52%,
+    rgba(33, 52, 73, 0.75) 65%,
+    rgba(33, 52, 73, 0.35) 78%,
+    rgba(33, 52, 73, 0.1) 92%,
+    transparent 100%
+  );
+}
+
+.pma-services-cta-body {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding: 44px 48px;
+  min-height: 220px;
+}
+
+.pma-services-cta-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 560px;
+}
+
+.pma-services-cta-title {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #fff;
+  margin: 0 0 14px;
+}
+
+.pma-services-cta-subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0;
+  max-width: 520px;
+}
+
+.pma-services-cta-divider {
+  flex-shrink: 0;
+  width: 1px;
+  align-self: center;
+  height: 88px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.pma-services-cta-action {
+  flex-shrink: 0;
+}
+
+.pma-services-cta-btn {
+  background: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+  color: #fff !important;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.pma-services-cta-btn i {
+  color: #fff !important;
+}
+
+.pma-services-cta-btn:hover,
+.pma-services-cta-btn:focus {
+  background: #d49530 !important;
+  border-color: #d49530 !important;
+  color: #fff !important;
+}
+
+.pma-services-cta-btn:hover i,
+.pma-services-cta-btn:focus i {
+  color: #fff !important;
+  transform: translateX(3px);
+}
+
+@media only screen and (max-width: 991px) {
+  #pma-services-cta {
+    padding-bottom: 72px;
+  }
+
+  .pma-services-cta-media {
+    width: 100%;
+    opacity: 0.45;
+  }
+
+  .pma-services-cta-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(33, 52, 73, 0.92) 0%,
+      rgba(33, 52, 73, 0.88) 100%
+    );
+  }
+
+  .pma-services-cta-body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 36px 32px;
+    min-height: 0;
+  }
+
+  .pma-services-cta-divider {
+    display: none;
+  }
+
+  .pma-services-cta-title {
+    font-size: 28px;
+  }
+
+  .pma-services-cta-text {
+    max-width: none;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .pma-services-cta-banner {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .pma-services-cta-body {
+    padding: 28px 22px;
+  }
+
+  .pma-services-cta-title {
+    font-size: 24px;
+  }
+
+  .pma-services-cta-subtitle {
+    font-size: 14px;
+  }
+
+  .pma-services-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* ===== PMA Footer ===== */
 #pma-footer {
   padding: 72px 0 0;
@@ -14502,6 +14819,471 @@ header.transparent.smaller {
 
   .pma-about-hero-lead {
     font-size: 15px;
+  }
+}
+
+/* ===== Mediation Page Hero (same background system as #pma-hero / #pma-about-hero) ===== */
+#pma-mediation-hero {
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+  background-color: #213449 !important;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 170px 0 110px 0 !important;
+  margin: 0 !important;
+}
+
+#pma-mediation-hero .pma-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #213449;
+  z-index: 1;
+}
+
+#pma-mediation-hero .pma-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
+  filter: brightness(1.0) contrast(1.05);
+  display: block;
+}
+
+#pma-mediation-hero .pma-overlay-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right,
+    #213449 0%,
+    #213449 32%,
+    rgba(33, 52, 73, 0.95) 45%,
+    rgba(33, 52, 73, 0.7) 60%,
+    rgba(33, 52, 73, 0.2) 80%,
+    rgba(33, 52, 73, 0) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+#pma-mediation-hero .pma-overlay-warm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 85% 35%,
+    rgba(212, 163, 89, 0.15) 0%,
+    rgba(33, 52, 73, 0.2) 50%,
+    transparent 100%
+  );
+  z-index: 3;
+  pointer-events: none;
+}
+
+#pma-mediation-hero .pma-hero-content-wrap {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+
+.pma-mediation-hero-content {
+  max-width: 720px;
+}
+
+.pma-mediation-hero-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  margin-bottom: 18px;
+}
+
+.pma-mediation-hero-title {
+  color: #fff !important;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 22px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.pma-mediation-hero-divider {
+  width: 80px;
+  height: 4px;
+  background: var(--secondary-color);
+  margin: 0 0 26px;
+  border-radius: 2px;
+}
+
+.pma-mediation-hero-lead {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.9) !important;
+  max-width: 620px;
+  margin-bottom: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 991px) {
+  #pma-mediation-hero {
+    min-height: auto;
+    padding-top: 120px !important;
+    padding-bottom: 80px !important;
+  }
+
+  #pma-mediation-hero .pma-hero-content-wrap {
+    padding: 0 40px;
+  }
+
+  #pma-mediation-hero .pma-overlay-dark {
+    background: linear-gradient(to bottom,
+      rgba(33, 52, 73, 0.92) 0%,
+      rgba(33, 52, 73, 0.85) 100%
+    );
+  }
+
+  .pma-mediation-hero-title {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #pma-mediation-hero .pma-hero-content-wrap {
+    padding: 0 24px;
+  }
+
+  .pma-mediation-hero-title {
+    font-size: 30px;
+  }
+
+  .pma-mediation-hero-lead {
+    font-size: 15px;
+  }
+}
+
+/* ===== Training Page Hero + IMI Banner ===== */
+#pma-training-hero {
+  position: relative;
+  width: 100%;
+  min-height: 88vh;
+  background-color: #213449 !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 170px 0 48px 0 !important;
+  margin: 0 !important;
+}
+
+#pma-training-hero .pma-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #213449;
+  z-index: 1;
+}
+
+#pma-training-hero .pma-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
+  filter: brightness(1.0) contrast(1.05);
+  display: block;
+}
+
+#pma-training-hero .pma-overlay-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right,
+    #213449 0%,
+    #213449 32%,
+    rgba(33, 52, 73, 0.95) 45%,
+    rgba(33, 52, 73, 0.7) 60%,
+    rgba(33, 52, 73, 0.2) 80%,
+    rgba(33, 52, 73, 0) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+#pma-training-hero .pma-overlay-warm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 85% 35%,
+    rgba(212, 163, 89, 0.15) 0%,
+    rgba(33, 52, 73, 0.2) 50%,
+    transparent 100%
+  );
+  z-index: 3;
+  pointer-events: none;
+}
+
+#pma-training-hero .pma-hero-content-wrap {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  padding: 0 80px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.pma-training-hero-banner-wrap {
+  position: relative;
+  z-index: 5;
+  margin-top: auto;
+  padding-top: 32px;
+}
+
+.pma-training-imi-banner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 22px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  background: rgba(15, 24, 36, 0.72);
+  backdrop-filter: blur(6px);
+}
+
+.pma-training-imi-logo {
+  flex-shrink: 0;
+  width: 132px;
+  min-height: 158px;
+  padding: 20px 14px 18px;
+  background: #fff;
+  /* Rounded top-left, top-right, bottom-left — sharp bottom-right */
+  border-radius: 72px 72px 0 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.pma-training-imi-logo img {
+  width: 100%;
+  height: auto;
+  max-height: 100px;
+  object-fit: contain;
+  display: block;
+}
+
+.pma-training-imi-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.pma-training-imi-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+
+.pma-training-imi-tagline {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin: 0 0 10px;
+  line-height: 1.35;
+}
+
+.pma-training-imi-desc {
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  max-width: 640px;
+}
+
+.pma-training-imi-cert {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pma-training-imi-cert > img {
+  width: 72px;
+  height: auto;
+  max-height: 96px;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  display: block;
+}
+
+.pma-training-imi-link-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 120px;
+  text-align: center;
+}
+
+.pma-training-imi-link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  color: #fff !important;
+  text-decoration: none !important;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.pma-training-imi-link-btn i {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.pma-training-imi-link-btn:hover,
+.pma-training-imi-link-btn:focus {
+  background: #d49530;
+  color: #fff !important;
+  transform: scale(1.05);
+}
+
+.pma-training-imi-link-text {
+  font-size: 11px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.25s ease;
+}
+
+.pma-training-imi-link-text:hover,
+.pma-training-imi-link-text:focus {
+  color: var(--secondary-color) !important;
+}
+
+@media only screen and (max-width: 1199px) {
+  .pma-training-imi-banner {
+    gap: 20px;
+    padding: 20px 22px;
+  }
+
+  .pma-training-imi-logo {
+    width: 120px;
+    min-height: 148px;
+    border-radius: 64px 64px 0 64px;
+  }
+
+  .pma-training-imi-title {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #pma-training-hero {
+    min-height: auto;
+    padding-top: 120px !important;
+    padding-bottom: 40px !important;
+  }
+
+  #pma-training-hero .pma-hero-content-wrap {
+    padding: 0 40px;
+  }
+
+  #pma-training-hero .pma-overlay-dark {
+    background: linear-gradient(to bottom,
+      rgba(33, 52, 73, 0.92) 0%,
+      rgba(33, 52, 73, 0.85) 100%
+    );
+  }
+
+  .pma-training-hero-banner-wrap {
+    padding-top: 24px;
+  }
+
+  .pma-training-imi-banner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .pma-training-imi-cert {
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 4px;
+  }
+
+  .pma-training-imi-link-wrap {
+    flex-direction: row;
+    align-items: center;
+    max-width: none;
+    text-align: left;
+    gap: 12px;
+  }
+
+  .pma-training-imi-link-text {
+    max-width: 220px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .pma-training-imi-banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .pma-training-imi-logo {
+    width: 118px;
+    min-height: 142px;
+    border-radius: 58px 58px 0 58px;
+    align-self: flex-start;
+  }
+
+  .pma-training-imi-cert {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #pma-training-hero .pma-hero-content-wrap {
+    padding: 0 24px;
+  }
+
+  .pma-training-imi-banner {
+    padding: 18px 16px;
+  }
+
+  .pma-training-imi-title {
+    font-size: 17px;
+  }
+
+  .pma-training-imi-tagline {
+    font-size: 14px;
   }
 }
 
