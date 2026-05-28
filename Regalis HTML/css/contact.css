@@ -1,0 +1,555 @@
+/* ==========================================================
+   contact.css
+   Styles for the PMA Contact page hero section.
+   ========================================================== */
+
+
+/* ── Contact Hero Section ── */
+/* Uses the same background system as #pma-mediation-hero (Resources page) */
+.pma-contact-hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    overflow: hidden;
+}
+
+/* Background layer — identical to pma-hero-bg */
+.pma-contact-hero-section .pma-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.pma-contact-hero-section .pma-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+    display: block;
+}
+
+/* Content wrapper sits above the background */
+.pma-contact-hero-content-wrap {
+    position: relative;
+    z-index: 4;
+    padding: 140px 0 80px;
+}
+
+.pma-contact-hero-inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Left panel — text */
+.pma-contact-hero-left {
+    flex: 0 0 55%;
+    max-width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Right spacer — lets the background image show through on the right */
+.pma-contact-hero-right {
+    flex: 1;
+}
+
+.pma-contact-hero-eyebrow {
+    font-family: var(--body-font);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--secondary-color);
+}
+
+.pma-contact-hero-title {
+    font-family: var(--heading-font);
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.pma-contact-hero-divider {
+    width: 40px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.pma-contact-hero-lead {
+    font-family: var(--body-font);
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.75;
+    margin: 0;
+    max-width: 480px;
+}
+
+/* Feature pills row */
+.pma-contact-hero-features {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 32px;
+    margin-top: 8px;
+}
+
+.pma-contact-hero-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.pma-contact-hero-feature-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1.5px solid var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pma-contact-hero-feature-icon i {
+    color: var(--secondary-color);
+    font-size: 15px;
+}
+
+.pma-contact-hero-feature div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.pma-contact-hero-feature strong {
+    font-family: var(--heading-font);
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.pma-contact-hero-feature span {
+    font-family: var(--body-font);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .pma-contact-hero-content-wrap {
+        padding: 110px 0 60px;
+    }
+
+    .pma-contact-hero-left {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .pma-contact-hero-right {
+        display: none;
+    }
+
+    .pma-contact-hero-title {
+        font-size: 36px;
+    }
+
+    .pma-contact-hero-features {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .pma-contact-hero-features {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .pma-contact-hero-title {
+        font-size: 28px;
+    }
+}
+
+
+/* ==========================================================
+   Contact Form Section
+   ========================================================== */
+
+.pma-contact-form-section {
+    padding: 80px 0 100px;
+    background: #ffffff;
+}
+
+.pma-contact-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* ── Left: Info column ── */
+.pma-contact-info-col {}
+
+.pma-contact-info-title {
+    font-family: var(--heading-font);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 12px;
+}
+
+.pma-contact-info-divider {
+    width: 40px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+    margin-bottom: 16px;
+}
+
+.pma-contact-info-lead {
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: var(--body-font-color);
+    line-height: 1.7;
+    margin: 0 0 24px;
+}
+
+.pma-contact-info-card {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 8px 0;
+}
+
+.pma-contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 24px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.pma-contact-info-item:last-child {
+    border-bottom: none;
+}
+
+.pma-contact-info-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(var(--primary-color-rgb), 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pma-contact-info-icon i {
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+.pma-contact-info-icon--whatsapp i {
+    color: #25d366;
+}
+
+.pma-contact-info-item div strong {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.pma-contact-info-item div span {
+    font-family: var(--body-font);
+    font-size: 13px;
+    color: var(--body-font-color);
+    line-height: 1.6;
+}
+
+.pma-contact-info-item div span a {
+    color: var(--body-font-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.pma-contact-info-item div span a:hover {
+    color: var(--primary-color);
+}
+
+/* ── Right: Form card ── */
+.pma-contact-form-card {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 36px 40px 40px;
+}
+
+.pma-contact-form-title {
+    font-family: var(--heading-font);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 8px;
+}
+
+.pma-contact-form-lead {
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: var(--body-font-color);
+    margin: 0 0 24px;
+}
+
+/* Form grid — 2 columns */
+.pma-contact-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 20px;
+    margin-bottom: 16px;
+}
+
+.pma-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pma-form-group--full {
+    grid-column: 1 / -1;
+}
+
+.pma-form-group label {
+    font-family: var(--body-font);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.pma-required {
+    color: #e53e3e;
+}
+
+.pma-form-group input,
+.pma-form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: #333333;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.pma-form-group input:focus,
+.pma-form-group textarea:focus,
+.pma-form-group select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.1);
+}
+
+.pma-form-group input::placeholder,
+.pma-form-group textarea::placeholder {
+    color: #aaaaaa;
+}
+
+.pma-form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Select wrapper */
+.pma-select-wrapper {
+    position: relative;
+}
+
+.pma-select-wrapper select {
+    width: 100%;
+    padding: 10px 36px 10px 14px;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: #333333;
+    background: #ffffff;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.pma-select-wrapper i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888888;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+/* Checkbox */
+.pma-form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.pma-form-check input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.pma-form-check label {
+    font-family: var(--body-font);
+    font-size: 13px;
+    color: var(--body-font-color);
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+/* Submit button */
+.pma-contact-submit-btn {
+    width: 100%;
+    padding: 14px 24px;
+    background: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--body-font);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    margin-bottom: 16px;
+}
+
+.pma-contact-submit-btn:hover {
+    background: var(--bg-dark-2);
+    transform: translateY(-1px);
+}
+
+/* Success / Error messages */
+.pma-form-success,
+.pma-form-error {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-family: var(--body-font);
+    font-size: 13px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pma-form-success {
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.pma-form-error {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* Footer note */
+.pma-contact-form-note {
+    font-family: var(--body-font);
+    font-size: 13px;
+    color: var(--body-font-color);
+    text-align: center;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ── Responsive ── */
+@media (max-width: 991px) {
+    .pma-contact-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .pma-contact-form-section {
+        padding: 60px 0 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pma-contact-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pma-contact-form-card {
+        padding: 24px 20px 28px;
+    }
+}
+
+
+/* ==========================================================
+   Map Section
+   ========================================================== */
+
+.pma-contact-map-section {
+    padding: 0 0 80px;
+    background: #ffffff;
+}
+
+.pma-contact-map-header {
+    margin-bottom: 24px;
+}
+
+.pma-contact-map-title {
+    font-family: var(--heading-font);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 12px;
+}
+
+.pma-contact-map-lead {
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: var(--body-font-color);
+    margin: 0;
+}
+
+.pma-contact-map-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 4px 24px rgba(33, 52, 73, 0.07);
+    line-height: 0; /* removes gap below iframe */
+}
+
+.pma-contact-map-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 420px;
+    border: 0;
+}
+
+@media (max-width: 600px) {
+    .pma-contact-map-wrapper iframe {
+        height: 280px;
+    }
+}

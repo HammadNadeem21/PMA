@@ -1,0 +1,579 @@
+/* ==========================================================
+   leadership.css
+   Styles for the PMA Leadership page — directory, sub-committee
+   accordion, member profile modal, and coming soon panel.
+   ========================================================== */
+
+/* ── Footer bottom flush fix ── */
+.pma-footer-bar-inner {
+    padding-bottom: 24px;
+}
+
+
+/* ── Sub Committee Accordion ── */
+
+#pma-subcommittee-panel {
+    padding: 10px 0 40px;
+}
+
+.pma-sc-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.pma-sc-title {
+    font-family: var(--heading-font);
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 6px;
+}
+
+.pma-sc-subtitle {
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: var(--body-font-color);
+    margin: 0;
+    max-width: 560px;
+}
+
+.pma-sc-expand-all {
+    background: transparent;
+    border: 1.5px solid var(--primary-color);
+    color: var(--primary-color);
+    font-family: var(--body-font);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+    flex-shrink: 0;
+}
+
+.pma-sc-expand-all:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+.pma-sc-item {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+.pma-sc-item:hover {
+    box-shadow: 0 4px 20px rgba(33, 52, 73, 0.08);
+}
+
+.pma-sc-item-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.pma-sc-item-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1;
+    min-width: 0;
+}
+
+.pma-sc-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pma-sc-icon i {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.pma-sc-item-text h3 {
+    font-family: var(--heading-font);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 4px;
+}
+
+.pma-sc-mandate {
+    font-family: var(--body-font);
+    font-size: 13px;
+    color: var(--body-font-color);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.pma-sc-mandate strong {
+    color: #444444;
+}
+
+.pma-sc-item-right {
+    text-align: right;
+    flex-shrink: 0;
+    margin-right: 12px;
+}
+
+.pma-sc-lead-label {
+    font-family: var(--body-font);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--secondary-color);
+    margin-bottom: 2px;
+}
+
+.pma-sc-lead-name {
+    font-family: var(--heading-font);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.pma-sc-chevron {
+    color: var(--primary-color);
+    font-size: 14px;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+.pma-sc-chevron.is-rotated {
+    transform: rotate(180deg);
+}
+
+.pma-sc-item-body {
+    display: none;
+    padding: 0 24px 20px 84px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.pma-sc-members-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 16px;
+}
+
+.pma-sc-member {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--bg-light);
+    border: 1px solid #dde4ed;
+    border-radius: 8px;
+    padding: 7px 14px;
+    font-family: var(--body-font);
+    font-size: 13px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.pma-sc-member i {
+    color: var(--secondary-color);
+    font-size: 13px;
+}
+
+@media (max-width: 640px) {
+    .pma-sc-item-head  { flex-wrap: wrap; }
+    .pma-sc-item-right { text-align: left; margin-right: 0; }
+    .pma-sc-item-body  { padding-left: 24px; }
+}
+
+
+/* ── Coming Soon Panel ── */
+
+.pma-coming-soon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 40px;
+    background: var(--bg-light);
+    border-radius: var(--rounded-1);
+    margin: 20px 0 40px;
+}
+
+.pma-coming-soon-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.pma-coming-soon-icon i {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.pma-coming-soon-box h3 {
+    font-family: var(--heading-font);
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.pma-coming-soon-box p {
+    font-family: var(--body-font);
+    font-size: 16px;
+    color: var(--body-font-color);
+    max-width: 420px;
+    margin: 0;
+}
+
+
+/* ── Member Profile Modal ── */
+
+.pma-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.pma-modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pma-modal {
+    background: #ffffff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 860px;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+    transform: translateY(30px) scale(0.97);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+}
+
+.pma-modal-overlay.is-open .pma-modal {
+    transform: translateY(0) scale(1);
+}
+
+/* Left panel */
+.pma-modal-left {
+    width: 260px;
+    min-width: 260px;
+    background: var(--primary-color);
+    border-radius: 16px 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 0 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pma-modal-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pma-modal-img-placeholder {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--body-font);
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pma-modal-left-info {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 280px;
+}
+
+.pma-modal-left-name {
+    font-family: var(--heading-font);
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 6px;
+    line-height: 1.3;
+}
+
+.pma-modal-left-role {
+    font-family: var(--body-font);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 20px;
+}
+
+.pma-modal-left-highlight {
+    font-family: var(--body-font);
+    font-size: 12px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.6;
+    margin: 10px 0 0;
+    padding: 10px 14px;
+    border-left: 2px solid var(--secondary-color);
+    text-align: left;
+}
+
+.pma-modal-left-highlight:empty {
+    display: none;
+}
+
+/* Right panel */
+.pma-modal-right {
+    flex: 1;
+    padding: 28px 32px 32px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.pma-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s;
+    line-height: 1;
+}
+
+.pma-modal-close:hover {
+    background: var(--bg-light);
+    color: var(--primary-color);
+}
+
+.pma-modal-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding-right: 40px;
+}
+
+.pma-modal-badge {
+    padding: 5px 14px;
+    border-radius: 6px;
+    font-family: var(--body-font);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border: 1.5px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.pma-modal-badge--secondary {
+    border-color: #cccccc;
+    color: #555555;
+}
+
+.pma-modal-section-label {
+    font-family: var(--heading-font);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 8px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+}
+
+.pma-modal-about {
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: var(--body-font-color);
+    line-height: 1.75;
+    margin-bottom: 24px;
+}
+
+.pma-modal-about p {
+    margin: 0 0 12px;
+}
+
+.pma-modal-about p:last-child {
+    margin-bottom: 0;
+}
+
+.pma-modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 28px;
+}
+
+.pma-modal-block-title {
+    font-family: var(--heading-font);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin: 0 0 10px;
+}
+
+.pma-modal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pma-modal-list li {
+    font-family: var(--body-font);
+    font-size: 13px;
+    color: #444444;
+    padding: 3px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+}
+
+.pma-modal-list li i {
+    color: var(--secondary-color);
+    font-size: 13px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.pma-modal-list li .pma-modal-list-icon {
+    color: var(--primary-color);
+    font-size: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.pma-modal-exp-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg-light);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+}
+
+.pma-modal-exp-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pma-modal-exp-icon i {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.pma-modal-exp-years {
+    font-family: var(--heading-font);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.pma-modal-exp-label {
+    font-family: var(--body-font);
+    font-size: 12px;
+    color: var(--body-font-color);
+}
+
+/* Coming Soon states inside modal */
+.pma-modal-coming-soon {
+    color: #aaaaaa !important;
+    font-style: italic;
+}
+
+.pma-modal-coming-soon i {
+    color: #cccccc !important;
+}
+
+.pma-modal-coming-soon-text {
+    color: #aaaaaa;
+    font-style: italic;
+}
+
+/* Clickable card cursor */
+.pma-member-col .pma-member-card {
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+    .pma-modal {
+        flex-direction: column;
+        max-height: 95vh;
+    }
+
+    .pma-modal-left {
+        width: 100%;
+        min-width: unset;
+        border-radius: 16px 16px 0 0;
+        padding-bottom: 24px;
+    }
+
+    .pma-modal-grid {
+        grid-template-columns: 1fr;
+    }
+}

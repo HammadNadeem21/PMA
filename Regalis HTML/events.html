@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>PMA - Services</title>
+    <title>PMA - Events</title>
     <link rel="icon" href="images/new/Logos/PMA Logo Alpha.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
@@ -19,6 +19,8 @@
     <link href="css/coloring.css" rel="stylesheet" type="text/css" >
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+    <!-- Events page styles -->
+    <link href="css/events.css" rel="stylesheet" type="text/css" >
 
 </head>
 
@@ -204,295 +206,204 @@
     </header>
 
     <main>
-       <!-- ===== Services Hero ===== -->
-       <section id="pma-mediation-hero">
+       <!-- ===== Resources Hero ===== -->
+      <section id="pma-mediation-hero" class="pma-events-hero">
         <div class="pma-hero-bg">
-            <img src="images/new/03-Services/Services Hero Image.png" alt="Services Hero" class="pma-hero-img">
+            <img src="images/new/07-Events/Events Hero Image.png" alt="Services Hero" class="pma-hero-img">
             <div class="pma-overlay-dark"></div>
             <div class="pma-overlay-warm"></div>
         </div>
         <div class="pma-hero-content-wrap">
             <div class="pma-hero-content pma-mediation-hero-content">
-                <div class="pma-mediation-hero-eyebrow wow fadeInUp">Our Services</div>
+                <div class="pma-mediation-hero-eyebrow wow fadeInUp">Events</div>
                 <h1 class="pma-mediation-hero-title wow fadeInUp" data-wow-delay=".15s">
-                    Professional Mediation &<br>
-                    <span class="pma-about-heading-accent">ADR Services</span>
+                    Events<br>
+                    <!-- <span class="pma-about-heading-accent">Reform.</span> -->
                 </h1>
                 <div class="pma-mediation-hero-divider wow fadeInUp" data-wow-delay=".2s" aria-hidden="true"></div>
-                <p class="pma-mediation-hero-lead wow fadeInUp" data-wow-delay=".3s">PMA provides a comprehensive range of mediation, training, and advisory services to help individuals, organizations, and institutions resolve disputes effectively and build a culture of dialogue.</p>
+                <p class="pma-mediation-hero-lead wow fadeInUp" data-wow-delay=".3s">Stay updated with PMA conferences, mediation initiatives, workshops, and important announcements.</p>
             </div>
         </div>
     </section>
 
-
-     <!-- ===== Our Core Services ===== -->
-     <section id="pma-core-services" class="pma-core-services-section">
+    <!-- ===== Events Directory ===== -->
+    <section id="pma-events-directory" class="pma-events-directory-section">
         <div class="container">
-            <div class="pma-services-header text-center wow fadeInUp">
-                <h2 class="pma-services-title">Our <span class="pma-about-heading-accent">Core</span> Services</h2>
-                <div class="pma-services-divider" aria-hidden="true">
-                    <span class="pma-services-divider-line"></span>
-                    <span class="pma-services-divider-diamond"></span>
-                    <span class="pma-services-divider-line"></span>
+
+            <!-- Tab Bar -->
+            <div class="pma-events-tabs-row wow fadeInUp">
+                <button class="pma-events-tab" data-tab="upcoming">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <span>Upcoming Events</span>
+                </button>
+                <button class="pma-events-tab active" data-tab="past">
+                    <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                    <span>Past Events</span>
+                </button>
+                <button class="pma-events-tab" data-tab="announcements">
+                    <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                    <span>Announcements</span>
+                </button>
+            </div>
+
+            <!-- ── UPCOMING EVENTS PANEL ── -->
+            <div class="pma-events-panel" id="pma-panel-upcoming" style="display:none;">
+                <div class="pma-events-coming-soon">
+                    <div class="pma-events-cs-icon"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+                    <h3>Coming Soon</h3>
+                    <p>Upcoming events, conferences, and workshops will be listed here. Check back soon.</p>
                 </div>
             </div>
 
-            <div class="row g-4 pma-services-row-top">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".1s">
-                    <a href="practice-area-single.html" class="pma-service-card">
-                        <div class="pma-service-icon"><i class="fa fa-briefcase"></i></div>
-                        <h3>Commercial &amp; Corporate Mediation</h3>
-                        <p>Resolving commercial disputes, contract conflicts, shareholder issues, and business disagreements.</p>
-                        <span class="pma-service-arrow"><i class="fa fa-arrow-right"></i></span>
-                    </a>
+            <!-- ── PAST EVENTS PANEL ── -->
+            <div class="pma-events-panel" id="pma-panel-past">
+
+                <!-- Back button -->
+                <div class="pma-events-back-row" id="pmaEventsBackRow" style="display:none;">
+                    <button class="pma-events-back-btn" id="pmaEventsBackBtn">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Events
+                    </button>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".15s">
-                    <a href="practice-area-single.html" class="pma-service-card">
-                        <div class="pma-service-icon"><i class="fa fa-gavel"></i></div>
-                        <h3>Court-Referred Mediation</h3>
-                        <p>Mediation services aligned with judicial processes to support faster and amicable resolutions.</p>
-                        <span class="pma-service-arrow"><i class="fa fa-arrow-right"></i></span>
-                    </a>
+
+                <!-- Event Cards Grid (hidden — shown when back is clicked) -->
+                <div class="pma-events-grid" id="pmaEventsGrid" style="display:none;">
+                    <div class="pma-event-card" data-event="event-1">
+                        <div class="pma-event-card-img">
+                            <span class="pma-event-badge">Past Event</span>
+                            <img src="images/new/07-Events/Past Events Hero Image.png" alt="Mediation A Way Forward">
+                            <div class="pma-event-card-img-placeholder"><i class="fa fa-image" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="pma-event-card-body">
+                            <h3>Mediation A Way Forward</h3>
+                            <p class="pma-event-card-sub">1st National Mediation Conference</p>
+                            <ul class="pma-event-card-meta">
+                                <li><i class="fa fa-calendar" aria-hidden="true"></i> 7th March, 2015</li>
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i> Hotel Marriott, Karachi</li>
+                                <li><i class="fa fa-users" aria-hidden="true"></i> National Conference</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                    <a href="practice-area-single.html" class="pma-service-card">
-                        <div class="pma-service-icon"><i class="fa fa-users"></i></div>
-                        <h3>Family &amp; Community Mediation</h3>
-                        <p>Helping families and communities resolve disputes with empathy, privacy, and understanding.</p>
-                        <span class="pma-service-arrow"><i class="fa fa-arrow-right"></i></span>
-                    </a>
+
+                <!-- Event Detail Panel — visible by default on Past Events tab -->
+                <div class="pma-event-detail" id="pmaEventDetail">
+
+                    <!-- Left: full-image card with overlay -->
+                    <div class="pma-event-detail-left">
+                        <div class="pma-event-detail-card">
+                            <!-- Background image -->
+                            <img src="images/new/07-Events/Past Events Hero Image.png" alt="Mediation A Way Forward" class="pma-event-detail-card-bg">
+                            <!-- Dark gradient overlay -->
+                            <div class="pma-event-detail-card-overlay"></div>
+                            <!-- Green corner accents -->
+                            <span class="pma-event-detail-corner pma-event-detail-corner--tl" aria-hidden="true"></span>
+                            <span class="pma-event-detail-corner pma-event-detail-corner--br" aria-hidden="true"></span>
+                            <!-- Content on top -->
+                            <div class="pma-event-detail-card-content">
+                                <span class="pma-event-badge">Past Event</span>
+                                <h3>Mediation A Way Forward</h3>
+                                <p class="pma-event-detail-sub">1st National Mediation Conference</p>
+                                <ul class="pma-event-card-meta pma-event-card-meta--dark">
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i> <span>7th March, 2015</span></li>
+                                    <li><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Hotel Marriott, Karachi</span></li>
+                                    <li><i class="fa fa-users" aria-hidden="true"></i> <span>National Conference</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: detail content -->
+                    <div class="pma-event-detail-right">
+
+                        <!-- About -->
+                        <div class="pma-event-detail-block">
+                            <p class="pma-event-detail-section-label">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i> About the Event
+                            </p>
+                            <div class="pma-event-detail-about">
+                                <p>PMA is Pakistan's first organization representing foreign trained and accredited mediators as well as other professionals who have joined the Association to further the cause of the Association. The Association was formed in 2013 and has taken over number of activities which were earlier implemented by IFC/World Bank Group's Alternative Dispute Resolution (ADR) Project.</p>
+                                <p>Considering that Pakistan's contract enforcement indicators are not encouraging and it takes number of years and cost of contract enforcement, PMA resolves to lead and support interventions which will enable litigants and disputants to resolve disputes amicably and through mediation process and complement efforts of judiciary and courts in timely resolution of disputes.</p>
+                            </div>
+                        </div>
+
+                        <!-- Key ADR Developments Highlighted -->
+                        <div class="pma-event-detail-block">
+                            <p class="pma-event-detail-section-label">
+                                <i class="fa fa-bar-chart" aria-hidden="true"></i> Key ADR Developments Highlighted
+                            </p>
+                            <div class="pma-event-detail-highlights-grid">
+                                <div class="pma-event-highlight-item"><i class="fa fa-check-circle" aria-hidden="true"></i><span>Operationalization of Karachi Centre for Dispute Resolution in Karachi and Lahore Chamber of Commerce and Industry Mediation Centre in Lahore.</span></div>
+                                <div class="pma-event-highlight-item"><i class="fa fa-check-circle" aria-hidden="true"></i><span>Lobbying for ADR/mediation law reforms in Pakistan.</span></div>
+                                <div class="pma-event-highlight-item"><i class="fa fa-check-circle" aria-hidden="true"></i><span>Presence of CEDR Accredited Mediators and Master Trainers in Pakistan.</span></div>
+                                <div class="pma-event-highlight-item"><i class="fa fa-check-circle" aria-hidden="true"></i><span>ADR Curriculum Development in Pakistan.</span></div>
+                                <div class="pma-event-highlight-item"><i class="fa fa-check-circle" aria-hidden="true"></i><span>ADR trainings strengthened and delivered in Pakistan.</span></div>
+                                <div class="pma-event-highlight-item"><i class="fa fa-check-circle" aria-hidden="true"></i><span>ADR considered as means to settle multitude of disputes including corporate governance.</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom meta grid -->
+                        <div class="pma-event-detail-meta-grid">
+                            <div class="pma-event-meta-item">
+                                <div class="pma-event-meta-icon"><i class="fa fa-bullseye" aria-hidden="true"></i></div>
+                                <div>
+                                    <p class="pma-event-meta-label">Conference Objectives</p>
+                                    <p class="pma-event-meta-text">To further the cause of ADR and mediation and debate developments, challenges and future interventions for institutionalizing mediation in Pakistan.</p>
+                                </div>
+                            </div>
+                            <div class="pma-event-meta-item">
+                                <div class="pma-event-meta-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
+                                <div>
+                                    <p class="pma-event-meta-label">Conference Hosts</p>
+                                    <p class="pma-event-meta-text">This conference is hosted by Pakistan Mediators Association with support of conference partners.</p>
+                                </div>
+                            </div>
+                            <div class="pma-event-meta-item">
+                                <div class="pma-event-meta-icon"><i class="fa fa-microphone" aria-hidden="true"></i></div>
+                                <div>
+                                    <p class="pma-event-meta-label">Speakers &amp; Guests</p>
+                                    <p class="pma-event-meta-text">Representatives from Government, Judiciary, Business Community, Bar, Academia and Mediation Centers in Pakistan along with foreign speakers.</p>
+                                </div>
+                            </div>
+                            <div class="pma-event-meta-item">
+                                <div class="pma-event-meta-icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+                                <div>
+                                    <p class="pma-event-meta-label">Event Type</p>
+                                    <p class="pma-event-meta-text">National Conference</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".25s">
-                    <a href="practice-area-single.html" class="pma-service-card">
-                        <div class="pma-service-icon"><i class="fa fa-black-tie"></i></div>
-                        <h3>Workplace &amp; Organizational Disputes</h3>
-                        <p>Addressing workplace conflicts, employment issues, and internal organizational matters.</p>
-                        <span class="pma-service-arrow"><i class="fa fa-arrow-right"></i></span>
-                    </a>
+
+            </div>
+
+            <!-- ── ANNOUNCEMENTS PANEL ── -->
+            <div class="pma-events-panel" id="pma-panel-announcements" style="display:none;">
+                <div class="pma-events-coming-soon">
+                    <div class="pma-events-cs-icon"><i class="fa fa-bullhorn" aria-hidden="true"></i></div>
+                    <h3>Coming Soon</h3>
+                    <p>Important announcements will appear here. Stay tuned.</p>
                 </div>
             </div>
 
-            <div class="row g-4 pma-services-row-bottom">
-                <div class="col-lg-3 col-md-6 offset-lg-1 wow fadeInUp" data-wow-delay=".3s">
-                    <a href="practice-area-single.html" class="pma-service-card">
-                        <div class="pma-service-icon"><i class="fa fa-certificate"></i></div>
-                        <h3>IMI-Certified Mediator Training</h3>
-                        <p>Professional training programs certified by the International Mediation Institute (IMI).</p>
-                        <span class="pma-service-arrow"><i class="fa fa-arrow-right"></i></span>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".35s">
-                    <a href="practice-area-single.html" class="pma-service-card">
-                        <div class="pma-service-icon"><i class="fa fa-bullhorn"></i></div>
-                        <h3>Workshops &amp; Awareness Sessions</h3>
-                        <p>Customized workshops and awareness sessions for institutions, professionals, and communities.</p>
-                        <span class="pma-service-arrow"><i class="fa fa-arrow-right"></i></span>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                    <a href="practice-area-single.html" class="pma-service-card">
-                        <div class="pma-service-icon"><i class="fa fa-university"></i></div>
-                        <h3>Institutional &amp; Policy Advisory</h3>
-                        <p>Advisory services for institutions and policymakers to strengthen ADR systems and frameworks.</p>
-                        <span class="pma-service-arrow"><i class="fa fa-arrow-right"></i></span>
-                    </a>
-                </div>
-            </div>
         </div>
     </section>
 
 
-      <!-- ===== Professional Training & Accreditation ===== -->
-      <section id="pma-training" class="pma-training-section">
-        <div class="container">
-            <div class="pma-training-wrap">
-                <div class="row g-4 g-lg-5 align-items-center">
-                    <div class="col-lg-6 pma-training-main wow fadeInLeft">
-                        <h2 class="pma-training-title">Professional Training &amp; <span class="pma-about-heading-accent">Accreditation</span></h2>
-                        <div class="pma-training-divider"></div>
-                        <p class="pma-training-text">PMA is an accredited training provider of the International Mediation Institute (IMI) and delivers internationally recognized programs for lawyers, judges, professionals, and organizations seeking to build mediation skills.
-                        </p>
-                        <div class="pma-training-features">
-                            <div class="pma-training-feature-item">
-                                <div class="pma-training-feature-icon"><i class="fa fa-certificate"></i></div>
-                                <span>IMI Accreditation</span>
-                            </div>
-                            <div class="pma-training-feature-item">
-                                <div class="pma-training-feature-icon"><i class="fa fa-graduation-cap"></i></div>
-                                <span>Expert Trainers</span>
-                            </div>
-                            <div class="pma-training-feature-item">
-                                <div class="pma-training-feature-icon"><i class="fa fa-book"></i></div>
-                                <span>Practical Learning</span>
-                            </div>
-                            <div class="pma-training-feature-item">
-                                <div class="pma-training-feature-icon"><i class="fa fa-globe"></i></div>
-                                <span>Global Standards</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay=".15s">
-                        <div class="pma-training-card">
-                            <div class="pma-training-card-logo">
-                                <img src="images/new/Logos/IMI Logo ALPHA.png"
-                                     alt="International Mediation Institute">
-                            </div>
-                            <div class="pma-training-card-body">
-                                <p class="pma-training-card-text">Our training programs meet international standards and empower professionals to become effective, ethical, and globally competent mediators.</p>
-                                <a href="about.html" class="pma-btn pma-btn--secondary pma-btn--on-dark pma-btn--icon">
-                                    <span>Explore Training Programs</span>
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-      <!-- ===== Who We Work With ===== -->
-      <section id="pma-work-with" class="pma-work-with-section">
-        <div class="container">
-            <div class="pma-services-header text-center wow fadeInUp">
-                <h2 class="pma-services-title">Who We <span class="pma-about-heading-accent">Work</span> With</h2>
-                <div class="pma-services-divider" aria-hidden="true">
-                    <span class="pma-services-divider-line"></span>
-                    <span class="pma-services-divider-diamond"></span>
-                    <span class="pma-services-divider-line"></span>
-                </div>
-            </div>
-
-            <div class="pma-work-with-grid wow fadeInUp" data-wow-delay=".1s">
-                <div class="pma-work-with-item">
-                    <div class="pma-work-with-icon" aria-hidden="true">
-                        <i class="fa fa-balance-scale"></i>
-                    </div>
-                    <p class="pma-work-with-label">Law Firms &amp;<br>Legal Professionals</p>
-                </div>
-                <div class="pma-work-with-item">
-                    <div class="pma-work-with-icon" aria-hidden="true">
-                        <i class="fa fa-building"></i>
-                    </div>
-                    <p class="pma-work-with-label">Corporations &amp;<br>Businesses</p>
-                </div>
-                <div class="pma-work-with-item">
-                    <div class="pma-work-with-icon" aria-hidden="true">
-                        <i class="fa fa-university"></i>
-                    </div>
-                    <p class="pma-work-with-label">Government<br>Institutions</p>
-                </div>
-                <div class="pma-work-with-item">
-                    <div class="pma-work-with-icon" aria-hidden="true">
-                        <i class="fa fa-users"></i>
-                    </div>
-                    <p class="pma-work-with-label">NGOs &amp; Community<br>Organizations</p>
-                </div>
-                <div class="pma-work-with-item">
-                    <div class="pma-work-with-icon pma-work-with-icon--accent" aria-hidden="true">
-                        <i class="fa fa-graduation-cap"></i>
-                        <span class="pma-work-with-icon-dot"></span>
-                    </div>
-                    <p class="pma-work-with-label">Educational<br>Institutions</p>
-                </div>
-                <div class="pma-work-with-item">
-                    <div class="pma-work-with-icon" aria-hidden="true">
-                        <i class="fa fa-gavel"></i>
-                    </div>
-                    <p class="pma-work-with-label">Judiciary &amp;<br>Public Sector</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ 
 
 
-    <!-- ===== Why Choose PMA ===== -->
-    <section id="pma-why-choose" class="pma-why-choose-section">
-        <div class="container">
-            <div class="row g-0 align-items-stretch pma-why-choose-row">
-                <div class="col-lg-4 pma-why-choose-intro wow fadeInLeft">
-                    <h2 class="pma-why-choose-title">Why Choose <span class="pma-about-heading-accent">PMA?</span></h2>
-                    <div class="pma-why-choose-divider"></div>
-                    <p class="pma-why-choose-lead">We combine international standards with local understanding to deliver ethical, effective, and sustainable ADR solutions.</p>
-                    <a href="about.html" class="pma-btn pma-btn--secondary pma-btn--icon">
-                        <span>Learn More About PMA</span>
-                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                    </a>
-                </div>
-
-                <div class="col-lg-8 pma-why-choose-features wow fadeInRight" data-wow-delay=".15s">
-                    <div class="pma-why-features-row">
-                        <div class="pma-why-feature">
-                            <div class="pma-why-feature-icon">
-                                <i class="fa fa-globe"></i>
-                            </div>
-                            <h4>Internationally Aligned</h4>
-                            <p>Partnerships and accreditations with global institutions.</p>
-                        </div>
-
-                        <div class="pma-why-feature">
-                            <div class="pma-why-feature-icon">
-                                <i class="fa fa-certificate"></i>
-                            </div>
-                            <h4> Experienced Professionals</h4>
-                            <p>Panel of certified mediators and subject experts.</p>
-                        </div>
-
-                        <div class="pma-why-feature">
-                            <div class="pma-why-feature-icon">
-                                <i class="fa fa-lock"></i>
-                            </div>
-                            <h4>Court-Connected Initiatives</h4>
-                            <p>Strong collaboration with judiciary across Pakistan.</p>
-                        </div>
-
-                        <div class="pma-why-feature">
-                            <div class="pma-why-feature-icon">
-                                <i class="fa fa-clock-o"></i>
-                            </div>
-                            <h4>Ethical & Confidential</h4>
-                            <p>Commitment to integrity, privacy, and neutrality.</p>
-                        </div>
-
-                        <div class="pma-why-feature">
-                            <div class="pma-why-feature-icon">
-                                <i class="fa fa-dollar"></i>
-                            </div>
-                            <h4>Nationwide Impact</h4>
-                            <p>Programs and services available across Pakistan.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
-      <!-- ===== CTA: Get in Touch ===== -->
-      <section id="pma-services-cta" class="pma-services-cta-section">
-        <div class="container">
-            <div class="pma-services-cta-banner wow fadeInUp">
-                <div class="pma-services-cta-media" aria-hidden="true">
-                    <img src="images/new/03-Services/Get in Touch Image.png" alt="">
-                </div>
-                <div class="pma-services-cta-overlay" aria-hidden="true"></div>
-                <div class="pma-services-cta-body">
-                    <div class="pma-services-cta-text">
-                        <h2 class="pma-services-cta-title">Let&rsquo;s Build Better Resolution Systems <span class="pma-about-heading-accent">Together.</span></h2>
-                        <p class="pma-services-cta-subtitle">Partner with PMA for mediation services, professional training, and advisory solutions tailored to your needs.</p>
-                    </div>
-                    <div class="pma-services-cta-divider" aria-hidden="true"></div>
-                    <div class="pma-services-cta-action">
-                        <a href="contact.html" class="pma-btn pma-services-cta-btn pma-btn--icon">
-                            <span>Get in Touch</span>
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+
+
+
+
+
+
+
 
     </main>
 
@@ -662,6 +573,75 @@
     <!-- swiper slider -->
     <script src="js/swiper.js"></script>
     <script src="js/custom-swiper-1.js"></script>
+
+    <!-- Events Directory -->
+    <script>
+    jQuery(function ($) {
+
+        /* ── TAB SWITCHING ── */
+        $('.pma-events-tab').on('click', function () {
+            $('.pma-events-tab').removeClass('active');
+            $(this).addClass('active');
+            var tab = $(this).data('tab');
+            $('.pma-events-panel').hide();
+            $('#pma-panel-' + tab).fadeIn(250);
+            // Reset to detail view when returning to past tab
+            if (tab === 'past') {
+                $('#pmaEventsGrid').hide();
+                $('#pmaEventDetail').show();
+                $('#pmaEventsBackRow').hide();
+            }
+        });
+
+        /* ── BACK BUTTON: detail → grid ── */
+        $('#pmaEventsBackBtn').on('click', function () {
+            $('#pmaEventDetail').hide();
+            $('#pmaEventsGrid').fadeIn(250);
+            $('#pmaEventsBackRow').hide();
+        });
+
+        /* ── CARD CLICK: grid → detail ── */
+        $(document).on('click', '.pma-event-card', function () {
+            $('#pmaEventsGrid').hide();
+            $('#pmaEventDetail').fadeIn(250);
+            $('#pmaEventsBackRow').show();
+            $('html, body').animate({ scrollTop: $('#pma-events-directory').offset().top - 80 }, 350);
+        });
+
+    });
+    </script>
+
+    <script>
+    jQuery(function ($) {
+        $('.pma-training-popup-trigger').magnificPopup({
+            type: 'inline',
+            midClick: true,
+            fixedContentPos: true,
+            closeBtnInside: true,
+            mainClass: 'mfp-fade pma-training-mfp',
+            removalDelay: 200
+        });
+
+        // Close the popup modal immediately and trigger smooth scroll redirect to the registration section
+        $(document).on('click', '.pma-training-popup-register', function (e) {
+            e.preventDefault();
+            
+            // Close the popup modal
+            $.magnificPopup.close();
+            
+            // Scroll target section into center viewport focus
+            var target = $('#registration-section');
+            if (target.length) {
+                setTimeout(function () {
+                    target[0].scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }, 250); // slight delay to align after removalDelay of 200ms
+            }
+        });
+    });
+    </script>
 
 
 </body>

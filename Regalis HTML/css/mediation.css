@@ -1,0 +1,501 @@
+/* ==========================================================
+   mediation.css
+   Styles for the PMA Mediation page.
+   ========================================================== */
+
+
+/* ── What is Mediation? Section ── */
+.pma-what-mediation-section {
+    background: #ffffff;
+    overflow: hidden;
+    padding: 0 60px;
+}
+
+.pma-what-mediation-inner {
+    display: flex;
+    align-items: stretch;
+    min-height: 280px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* Left: icon + text */
+.pma-what-mediation-left {
+    flex: 0 0 48%;
+    max-width: 48%;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 52px 48px 52px 60px;
+    background: #ffffff;
+}
+
+.pma-what-mediation-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.pma-what-mediation-icon i {
+    font-size: 22px;
+    color: var(--secondary-color);
+}
+
+.pma-what-mediation-text {
+    flex: 1;
+}
+
+.pma-what-mediation-text h2 {
+    font-family: var(--heading-font);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 12px;
+    line-height: 1.3;
+}
+
+.pma-what-mediation-divider {
+    width: 36px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+    margin-bottom: 16px;
+}
+
+.pma-what-mediation-text p {
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: var(--body-font-color);
+    line-height: 1.8;
+    margin: 0 0 14px;
+}
+
+.pma-what-mediation-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Right: image */
+.pma-what-mediation-right {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+}
+
+.pma-what-mediation-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Prev / Next arrows */
+.pma-what-mediation-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    font-size: 22px;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    transition: background 0.2s, color 0.2s;
+    line-height: 1;
+    padding: 0;
+}
+
+.pma-what-mediation-arrow:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
+
+.pma-what-mediation-arrow--prev {
+    left: 12px;
+}
+
+.pma-what-mediation-arrow--next {
+    right: 12px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .pma-what-mediation-section {
+        padding: 0 32px;
+    }
+}
+
+@media (max-width: 991px) {
+    .pma-what-mediation-section {
+        padding: 0 20px;
+    }
+
+    .pma-what-mediation-inner {
+        flex-direction: column;
+    }
+
+    .pma-what-mediation-left {
+        flex: unset;
+        max-width: 100%;
+        padding: 40px 24px;
+    }
+
+    .pma-what-mediation-right {
+        min-height: 240px;
+        width: 100%;
+    }
+
+    .pma-what-mediation-arrow--prev { left: 8px; }
+    .pma-what-mediation-arrow--next { right: 8px; }
+}
+
+@media (max-width: 600px) {
+    .pma-what-mediation-section {
+        padding: 0 12px;
+    }
+
+    .pma-what-mediation-left {
+        flex-direction: column;
+        gap: 16px;
+        padding: 32px 20px;
+    }
+
+    .pma-what-mediation-text h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* ==========================================================
+   How Mediation Works Section
+   ========================================================== */
+
+.pma-how-mediation-section {
+    padding: 48px 0 64px;
+    background: #ffffff;
+}
+
+/* ── Top banner strip ── */
+.pma-mediation-banner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--bg-light);
+    border-radius: 12px;
+    padding: 20px 28px;
+    margin-bottom: 48px;
+}
+
+.pma-mediation-banner-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pma-mediation-banner-icon i {
+    font-size: 22px;
+    color: var(--secondary-color);
+}
+
+.pma-mediation-banner-text {
+    font-family: var(--body-font);
+    font-size: 15px;
+    color: var(--primary-color);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.pma-mediation-banner-text strong {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* ── How Mediation Works body ── */
+.pma-how-mediation-body {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+/* Left column */
+.pma-how-mediation-left {
+    flex: 0 0 340px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pma-how-mediation-left h2 {
+    font-family: var(--heading-font);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 12px;
+    line-height: 1.25;
+}
+
+.pma-how-mediation-divider {
+    width: 36px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+    margin-bottom: 36px;
+}
+
+/* Orbit graphic */
+.pma-orbit-graphic {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+}
+
+.pma-orbit {
+    position: absolute;
+    border-radius: 50%;
+    border: 1.5px dashed rgba(var(--secondary-color-rgb), 0.35);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pma-orbit--1 { width: 100px; height: 100px; }
+.pma-orbit--2 { width: 155px; height: 155px; }
+.pma-orbit--3 { width: 210px; height: 210px; }
+
+.pma-orbit-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.pma-orbit-center i {
+    font-size: 26px;
+    color: var(--secondary-color);
+}
+
+/* Orbit dots */
+.pma-orbit-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+}
+
+.pma-orbit-dot--1 { top: 50%; left: 0; transform: translateY(-50%); }
+.pma-orbit-dot--2 { top: 0; left: 50%; transform: translateX(-50%); }
+.pma-orbit-dot--3 { bottom: 12px; left: 18px; }
+.pma-orbit-dot--4 { bottom: 12px; right: 18px; }
+
+/* Right column — steps */
+.pma-how-mediation-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pma-mediation-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.pma-mediation-step-num {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: #ffffff;
+    font-family: var(--heading-font);
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pma-mediation-step-body h4 {
+    font-family: var(--heading-font);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 4px;
+    line-height: 1.3;
+}
+
+.pma-mediation-step-body p {
+    font-family: var(--body-font);
+    font-size: 13px;
+    color: var(--body-font-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .pma-how-mediation-body {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .pma-how-mediation-left {
+        flex: unset;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .pma-how-mediation-divider {
+        margin: 0 auto 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pma-mediation-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pma-how-mediation-left h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* ==========================================================
+   Who We Serve Section
+   ========================================================== */
+
+.pma-who-we-serve-section {
+    background: var(--primary-color);
+    padding: 56px 0 60px;
+}
+
+.pma-who-we-serve-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pma-who-we-serve-header h2 {
+    font-family: var(--heading-font);
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 12px;
+}
+
+.pma-who-we-serve-divider {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    margin: 0 auto;
+}
+
+/* 5-column grid */
+.pma-who-we-serve-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.pma-serve-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 28px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    transition: background 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.pma-serve-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--secondary-color);
+    transform: translateY(-4px);
+}
+
+.pma-serve-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    border: 1.5px solid var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pma-serve-icon i {
+    font-size: 22px;
+    color: var(--secondary-color);
+}
+
+.pma-serve-card h4 {
+    font-family: var(--heading-font);
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.35;
+}
+
+.pma-serve-card p {
+    font-family: var(--body-font);
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .pma-who-we-serve-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .pma-who-we-serve-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .pma-who-we-serve-grid {
+        grid-template-columns: 1fr;
+    }
+}
