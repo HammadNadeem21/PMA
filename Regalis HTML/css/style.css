@@ -14267,7 +14267,7 @@ header.transparent.smaller {
 
 /* ===== Services Page CTA Banner ===== */
 #pma-services-cta {
-  padding: 0 0 88px;
+  padding: 88px 0;
   background: #fff;
 }
 
@@ -17787,4 +17787,790 @@ header.transparent.smaller {
   }
 }
 
+/* ==========================================
+   WHY JOIN PMA SECTION
+   ========================================== */
+.pma-why-join-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
 
+.pma-why-join-header {
+  margin-bottom: 50px;
+}
+
+.pma-why-join-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #132450;
+  margin-bottom: 15px;
+}
+
+.pma-why-join-divider {
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary-color); /* The gold/yellow color */
+  margin: 0 auto 20px;
+}
+
+.pma-why-join-subtitle {
+  font-size: 16px;
+  color: rgba(19, 36, 80, 0.8);
+  font-weight: 500;
+  margin: 0;
+}
+
+.pma-why-join-row {
+  margin-top: 10px;
+}
+
+.pma-why-join-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(19, 36, 80, 0.04);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.pma-why-join-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(19, 36, 80, 0.08);
+}
+
+.pma-why-join-icon {
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: #132450;
+}
+
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.pma-member-card:hover .pma-member-img {
+  transform: scale(1.05);
+}
+
+.pma-member-info {
+  padding: 24px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.pma-member-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #132450;
+  margin: 0 0 4px;
+}
+
+.pma-member-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--secondary-color); /* gold */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* Badges section - BLUE like the project theme */
+.pma-member-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pma-member-badge {
+  background: rgba(19, 36, 80, 0.08); /* light blue tint */
+  color: #132450; /* deep blue */
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Highlight primary badge to be dark blue, secondary to be light blue */
+.pma-member-badge:first-child {
+  background: #132450; /* deep blue brand color */
+  color: #ffffff;
+}
+
+.pma-member-badge.pma-member-badge--secondary {
+  background: rgba(19, 36, 80, 0.08);
+  color: #132450;
+}
+
+/* Circle Plus Action Button */
+.pma-member-action {
+  margin-top: auto;
+}
+
+.pma-member-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-color); /* gold */
+  background: transparent;
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.pma-member-btn i {
+  font-size: 12px;
+}
+
+.pma-member-card:hover .pma-member-btn {
+  background: var(--secondary-color);
+  color: #ffffff;
+}
+
+/* Pagination Dots */
+.pma-directory-pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pma-pagination-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(19, 36, 80, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pma-pagination-dot.active {
+  background: #132450;
+  width: 24px;
+  border-radius: 5px;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 991px) {
+  .pma-directory-filters-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .pma-directory-search {
+    width: 100%;
+  }
+  .pma-leadership-directory-section {
+    padding: 60px 0;
+  }
+}
+
+/* ==========================================
+   WHY JOIN PMA SECTION
+   ========================================== */
+.pma-why-join-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.pma-why-join-header {
+  margin-bottom: 50px;
+}
+
+.pma-why-join-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #132450;
+  margin-bottom: 15px;
+}
+
+.pma-why-join-divider {
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary-color); /* The gold/yellow color */
+  margin: 0 auto 20px;
+}
+
+.pma-why-join-subtitle {
+  font-size: 16px;
+  color: rgba(19, 36, 80, 0.8);
+  font-weight: 500;
+  margin: 0;
+}
+
+.pma-why-join-row {
+  margin-top: 10px;
+}
+
+.pma-why-join-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(19, 36, 80, 0.04);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.pma-why-join-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(19, 36, 80, 0.08);
+}
+
+.pma-why-join-icon {
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: #132450;
+}
+
+.pma-why-join-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #132450;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.pma-why-join-card p {
+  font-size: 14px;
+  color: rgba(19, 36, 80, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================
+   MEMBERSHIP BENEFITS SECTION
+   ========================================== */
+.pma-membership-benefits-section {
+  padding: 0 0 100px; /* Space below the section */
+}
+
+.pma-benefits-container {
+  background-color: #f8f9fc;
+  border-radius: 20px;
+  padding: 80px 40px;
+}
+
+@media (max-width: 768px) {
+  .pma-benefits-container {
+    padding: 60px 20px;
+  }
+}
+
+.pma-benefits-row {
+  margin-top: 20px;
+}
+
+.pma-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.pma-benefit-icon {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  background-color: #132450;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.pma-benefit-text h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #132450;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.pma-benefit-text p {
+  font-size: 15px;
+  color: rgba(19, 36, 80, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================
+   MEMBERSHIP JOURNEY SECTION
+   ========================================== */
+.pma-membership-journey-section {
+  padding: 0 0 100px;
+}
+
+.pma-journey-banner {
+  position: relative;
+  background-color: #213449;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 50px 40px 40px; /* Reduced from 80px */
+  color: #ffffff;
+}
+
+.pma-journey-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.pma-journey-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+.pma-journey-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(33, 52, 73, 1) 40%, rgba(33, 52, 73, 0.8) 70%, rgba(33, 52, 73, 0) 100%);
+  z-index: 2;
+}
+
+.pma-journey-content {
+  position: relative;
+  z-index: 3;
+}
+
+.pma-journey-header {
+  margin-bottom: 30px; /* Reduced from 60px */
+}
+
+.pma-journey-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.pma-journey-divider {
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  margin: 0 auto 20px;
+}
+
+.pma-journey-subtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  margin: 0;
+}
+
+.pma-journey-steps {
+  position: relative;
+}
+
+.pma-journey-step {
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.pma-step-icon-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.pma-step-icon {
+  width: 60px; /* Reduced from 80px */
+  height: 60px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px; /* Reduced from 32px */
+  color: #ffffff;
+  margin-bottom: 15px;
+  background-color: rgba(33, 52, 73, 0.5);
+  position: relative;
+  z-index: 2;
+}
+
+.pma-step-number {
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.pma-journey-step h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.pma-journey-step p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 10px;
+}
+
+/* Connective lines and arrows for journey steps */
+@media (min-width: 992px) {
+  .pma-journey-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 30px; /* Half of 60px icon height */
+    left: calc(50% + 40px);
+    width: calc(100% - 80px);
+    height: 1px;
+    background-color: var(--secondary-color);
+    z-index: 1;
+  }
+  
+  .pma-journey-step:not(:last-child)::before {
+    content: "\f105"; /* FontAwesome right angle bracket */
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 30px;
+    right: calc(-50% + 40px);
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+    font-size: 16px;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .pma-journey-banner {
+    padding: 60px 20px;
+  }
+  
+  .pma-journey-overlay {
+    background: linear-gradient(to bottom, rgba(33, 52, 73, 1) 40%, rgba(33, 52, 73, 0.8) 70%, rgba(33, 52, 73, 0) 100%);
+  }
+}
+
+/* ==========================================
+   MEMBERSHIP APPLICATION SECTION
+   ========================================== */
+.pma-membership-application-section {
+  padding: 100px 0;
+  background-color: #f7f9fc;
+}
+
+.pma-application-form-wrap {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 50px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+}
+
+.pma-form-header {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 20px;
+}
+
+.pma-form-header h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #132450;
+  margin-bottom: 8px;
+}
+
+.pma-form-header p {
+  color: rgba(19, 36, 80, 0.6);
+  font-size: 14px;
+  margin: 0;
+}
+
+.pma-form-section {
+  margin-bottom: 40px;
+}
+
+.pma-form-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #132450;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pma-form-section-title i {
+  color: var(--secondary-color);
+}
+
+.pma-membership-form label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #132450;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.pma-membership-form .form-control {
+  background-color: #ffffff;
+  border: 1px solid #e1e5eb;
+  border-radius: 6px;
+  padding: 12px 15px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: none;
+  transition: all 0.3s;
+}
+
+.pma-membership-form .form-control:focus {
+  border-color: var(--secondary-color);
+  background-color: #fff;
+}
+
+.pma-file-upload-box {
+  border: 2px dashed #e1e5eb;
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  background: #fdfdfd;
+  transition: all 0.3s;
+  height: calc(100% - 28px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+}
+
+.pma-file-upload-box:hover {
+  border-color: var(--secondary-color);
+  background: #fffbfa;
+}
+
+.pma-file-upload-box i {
+  font-size: 24px;
+  color: #132450;
+  margin-bottom: 10px;
+}
+
+.pma-file-upload-box span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #132450;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.pma-file-upload-box small {
+  color: #888;
+  font-size: 11px;
+}
+
+.pma-file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.pma-form-declaration {
+  margin-bottom: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eaeaea;
+}
+
+.pma-form-declaration .form-check-label {
+  font-size: 14px;
+  color: #333;
+}
+
+.pma-btn-submit {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 6px;
+  border: none;
+  transition: all 0.3s;
+}
+
+.pma-btn-submit:hover {
+  background-color: #a88550;
+  color: #ffffff;
+}
+
+.pma-btn-submit i {
+  margin-right: 8px;
+}
+
+/* Sidebar styling */
+.pma-sidebar-card {
+  background-color: #213449;
+  border-radius: 14px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.pma-sidebar-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.pma-sidebar-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  opacity: 0.6;
+}
+
+.pma-sidebar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(33, 52, 73, 1) 0%, rgba(33, 52, 73, 0.8) 50%, rgba(33, 52, 73, 0.4) 100%);
+  z-index: 2;
+}
+
+.pma-sidebar-content {
+  position: relative;
+  z-index: 3;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pma-sidebar-icon {
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin: 0 auto 30px;
+}
+
+.pma-sidebar-content h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.pma-sidebar-desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.pma-sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+}
+
+.pma-sidebar-list li {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pma-sidebar-list li i {
+  color: var(--secondary-color);
+  font-size: 16px;
+}
+
+.pma-sidebar-quote {
+  margin-top: auto; /* push to bottom */
+  position: relative;
+  padding-left: 20px;
+}
+
+.pma-sidebar-quote > i {
+  color: var(--secondary-color);
+  font-size: 24px;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  opacity: 0.8;
+}
+
+.pma-sidebar-quote p {
+  font-size: 14px;
+  font-style: italic;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.pma-quote-author {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 991px) {
+  .pma-application-form-wrap {
+    padding: 30px 20px;
+  }
+  .pma-sidebar-content {
+    padding: 40px 30px;
+  }
+}
