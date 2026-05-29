@@ -1,0 +1,681 @@
+/* ==========================================================
+   faq.css
+   Styles for the PMA FAQ page accordion and contact box.
+   Theme: Navy (#213449) primary, Gold (#EAA638) secondary.
+   ========================================================== */
+
+
+/* ── Section wrapper ── */
+.pma-faq-section {
+    background: #f8f9fb;
+}
+
+
+/* ── Accordion ── */
+.pma-faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 32px;
+}
+
+/* Each item */
+.pma-faq-item {
+    background: #ffffff;
+    border: 1px solid #e4e8ee !important;
+    border-radius: 0 !important;
+    border-bottom: none !important;
+    overflow: hidden;
+}
+
+.pma-faq-item:first-child {
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.pma-faq-item:last-child {
+    border-bottom: 1px solid #e4e8ee !important;
+    border-radius: 0 0 10px 10px !important;
+}
+
+/* Header / button */
+.pma-faq-header {
+    margin: 0;
+}
+
+.pma-faq-button {
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+    padding: 18px 24px !important;
+    background: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s !important;
+}
+
+.pma-faq-button:not(.collapsed) {
+    background: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.pma-faq-button:hover {
+    background: #f8f9fb !important;
+}
+
+/* Remove Bootstrap's default arrow */
+.pma-faq-button::after {
+    display: none !important;
+}
+
+/* Number badge */
+.pma-faq-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: #ffffff;
+    font-family: var(--heading-font);
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+
+/* Active state — number turns gold */
+.pma-faq-button:not(.collapsed) .pma-faq-number {
+    background: var(--secondary-color);
+}
+
+/* Question text */
+.pma-faq-question {
+    font-family: var(--heading-font);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 0.02em;
+    flex: 1;
+}
+
+.pma-faq-button:not(.collapsed) .pma-faq-question {
+    color: var(--secondary-color);
+}
+
+/* Custom chevron icon — right side */
+.pma-faq-button .pma-faq-chevron {
+    margin-left: auto;
+    font-size: 14px;
+    color: var(--primary-color);
+    transition: transform 0.25s ease, color 0.2s;
+    flex-shrink: 0;
+}
+
+.pma-faq-button:not(.collapsed) .pma-faq-chevron {
+    transform: rotate(180deg);
+    color: var(--secondary-color);
+}
+
+/* Answer body */
+.pma-faq-body {
+    padding: 4px 24px 20px 70px !important;
+    font-family: var(--body-font) !important;
+    font-size: 14px !important;
+    color: var(--body-font-color) !important;
+    line-height: 1.8 !important;
+    background: #ffffff;
+}
+
+
+/* ── Contact box ── */
+.pma-faq-contact-box {
+    background: var(--bg-light);
+    border-radius: 12px;
+    padding: 20px 28px;
+}
+
+.pma-faq-contact-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.pma-faq-contact-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.pma-faq-contact-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(var(--primary-color-rgb), 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pma-faq-contact-icon i {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.pma-faq-contact-text h4 {
+    font-family: var(--heading-font);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 4px;
+}
+
+.pma-faq-contact-text p {
+    font-family: var(--body-font);
+    font-size: 13px;
+    color: var(--body-font-color);
+    margin: 0;
+}
+
+/* Contact Us button */
+.pma-faq-contact-btn-wrap .pma-btn-green {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 24px;
+    background: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--body-font);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+}
+
+.pma-faq-contact-btn-wrap .pma-btn-green:hover {
+    background: var(--secondary-color);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .pma-faq-contact-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pma-faq-contact-btn-wrap {
+        width: 100%;
+    }
+
+    .pma-faq-contact-btn-wrap .pma-btn-green {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .pma-faq-body {
+        padding-left: 24px !important;
+    }
+}
+
+
+/* ==========================================================
+   Privacy Policy — icon list layout
+   ========================================================== */
+
+.pma-privacy-section {
+    background: #ffffff;
+    padding: 60px 0 80px;
+}
+
+.pma-privacy-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.pma-privacy-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.pma-privacy-item:last-child {
+    border-bottom: none;
+}
+
+.pma-privacy-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    border: 1.5px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.pma-privacy-icon i {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.pma-privacy-content p {
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: var(--body-font-color);
+    line-height: 1.85;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .pma-privacy-item {
+        flex-direction: column;
+        gap: 14px;
+    }
+}
+
+/* Privacy item title */
+.pma-privacy-title {
+    font-family: var(--heading-font);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 10px;
+}
+
+/* Privacy bullet list */
+.pma-privacy-list-items {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.pma-privacy-list-items li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: var(--body-font-color);
+    line-height: 1.5;
+}
+
+.pma-privacy-list-items li i {
+    color: var(--secondary-color);
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+
+/* ==========================================================
+   Complaint Policy Section
+   ========================================================== */
+
+.pma-complaint-section {
+    background: #ffffff;
+    padding: 60px 0 80px;
+}
+
+.pma-complaint-card {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    background: #f0f7f0;
+    border-radius: 16px;
+    padding: 36px 40px;
+    flex-wrap: wrap;
+}
+
+/* Icon box */
+.pma-complaint-icon {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pma-complaint-icon > .fa-file-text-o {
+    font-size: 44px;
+    color: var(--primary-color);
+    opacity: 0.85;
+}
+
+.pma-complaint-icon-badge {
+    position: absolute;
+    bottom: 0;
+    right: -4px;
+    font-size: 18px;
+    color: var(--primary-color);
+    background: #f0f7f0;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+/* Left text */
+.pma-complaint-left {
+    flex: 1;
+    min-width: 240px;
+}
+
+.pma-complaint-left p {
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: var(--primary-color);
+    line-height: 1.75;
+    margin: 0 0 10px;
+}
+
+.pma-complaint-left p:last-child {
+    margin-bottom: 0;
+}
+
+.pma-complaint-left strong {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Vertical divider */
+.pma-complaint-divider {
+    width: 1px;
+    height: 80px;
+    background: rgba(var(--primary-color-rgb), 0.2);
+    flex-shrink: 0;
+}
+
+/* Right bullet list */
+.pma-complaint-right {
+    flex: 1;
+    min-width: 220px;
+}
+
+.pma-complaint-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.pma-complaint-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: var(--primary-color);
+    line-height: 1.55;
+}
+
+.pma-complaint-list li i {
+    color: var(--primary-color);
+    font-size: 16px;
+    margin-top: 1px;
+    flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pma-complaint-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px 24px;
+    }
+
+    .pma-complaint-divider {
+        width: 100%;
+        height: 1px;
+    }
+}
+
+
+/* ==========================================================
+   Complaint Process Steps Section
+   ========================================================== */
+
+.pma-complaint-steps-section {
+    background: #ffffff;
+    padding: 0 0 80px;
+}
+
+.pma-complaint-steps-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.pma-complaint-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    padding: 28px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.pma-complaint-step:last-child {
+    border-bottom: none;
+}
+
+/* Dark navy filled circle icon */
+.pma-cstep-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 0;
+}
+
+.pma-cstep-icon i {
+    font-size: 22px;
+    color: #ffffff;
+}
+
+/* Gold left-border accent on text */
+.pma-cstep-content {
+    flex: 1;
+    border-left: 3px solid var(--secondary-color);
+    padding-left: 24px;
+    margin-left: 20px;
+}
+
+.pma-cstep-content p {
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: var(--body-font-color);
+    line-height: 1.8;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .pma-complaint-step {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .pma-cstep-content {
+        margin-left: 0;
+    }
+}
+
+
+/* ==========================================================
+   Terms & Conditions Accordion
+   ========================================================== */
+
+.pma-terms-section {
+    background: #ffffff;
+    padding: 60px 0 80px;
+}
+
+.pma-terms-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Each item */
+.pma-terms-item {
+    background: #ffffff;
+    border: 1px solid #e4e8ee !important;
+    border-radius: 0 !important;
+    border-bottom: none !important;
+    overflow: hidden;
+}
+
+.pma-terms-item:first-child {
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.pma-terms-item:last-child {
+    border-bottom: 1px solid #e4e8ee !important;
+    border-radius: 0 0 10px 10px !important;
+}
+
+/* Button row */
+.pma-terms-button {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    padding: 20px 24px !important;
+    background: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.2s !important;
+}
+
+.pma-terms-button:not(.collapsed) {
+    background: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.pma-terms-button:hover {
+    background: #f8f9fb !important;
+}
+
+/* Remove Bootstrap default arrow */
+.pma-terms-button::after {
+    display: none !important;
+}
+
+/* Light green icon box — matching screenshot */
+.pma-terms-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: rgba(var(--primary-color-rgb), 0.07);
+    border: 1.5px solid rgba(var(--primary-color-rgb), 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+
+.pma-terms-icon-box i {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.pma-terms-button:not(.collapsed) .pma-terms-icon-box {
+    background: rgba(var(--secondary-color-rgb), 0.12);
+    border-color: rgba(var(--secondary-color-rgb), 0.3);
+}
+
+.pma-terms-button:not(.collapsed) .pma-terms-icon-box i {
+    color: var(--secondary-color);
+}
+
+/* Title */
+.pma-terms-title {
+    font-family: var(--heading-font);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-color);
+    flex: 1;
+    text-align: left;
+}
+
+.pma-terms-button:not(.collapsed) .pma-terms-title {
+    color: var(--primary-color);
+}
+
+/* Chevron */
+.pma-terms-chevron {
+    font-size: 14px;
+    color: var(--body-font-color);
+    transition: transform 0.25s ease, color 0.2s;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.pma-terms-button:not(.collapsed) .pma-terms-chevron {
+    transform: rotate(180deg);
+    color: var(--secondary-color);
+}
+
+/* Body */
+.pma-terms-body {
+    padding: 4px 24px 24px 96px !important;
+    background: #ffffff;
+}
+
+.pma-terms-body p {
+    font-family: var(--body-font) !important;
+    font-size: 14px !important;
+    color: var(--body-font-color) !important;
+    line-height: 1.8 !important;
+    margin: 0 0 12px !important;
+}
+
+.pma-terms-body p:last-child {
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 600px) {
+    .pma-terms-body {
+        padding-left: 24px !important;
+    }
+}
+
+/* Terms header text block (title + preview paragraph) */
+.pma-terms-header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-width: 0;
+}
+
+/* Preview paragraph — always visible inside the button */
+.pma-terms-preview {
+    font-family: var(--body-font);
+    font-size: 13px;
+    color: var(--body-font-color);
+    line-height: 1.6;
+    font-weight: 400;
+    white-space: normal;
+}
