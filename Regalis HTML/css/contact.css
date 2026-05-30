@@ -553,3 +553,22 @@
         height: 280px;
     }
 }
+
+
+/* ── Responsive additions ── */
+
+/* Contact hero — reduce padding on small mobile */
+@media (max-width: 480px) {
+    .pma-contact-hero-content-wrap { padding: 90px 0 48px; }
+    .pma-contact-hero-title { font-size: 24px; }
+    .pma-contact-hero-lead { font-size: 14px; }
+}
+
+/* Contact info title on mobile */
+@media (max-width: 600px) {
+    .pma-contact-info-title { font-size: 24px; }
+    .pma-contact-form-title { font-size: 20px; }
+    .pma-contact-form-section { padding: 48px 0 60px; }
+    .pma-contact-map-section { padding: 0 0 60px; }
+    .pma-contact-map-title { font-size: 22px; }
+}

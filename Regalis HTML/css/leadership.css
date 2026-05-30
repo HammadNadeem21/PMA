@@ -577,3 +577,35 @@
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ── Responsive additions ── */
+
+/* Directory tabs — icon-only on small screens */
+@media (max-width: 600px) {
+    .pma-directory-filters-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .pma-directory-tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .pma-directory-tab span { display: none; }
+    .pma-directory-tab { padding: 10px 14px; }
+    .pma-directory-search { width: 100%; }
+    .pma-search-wrapper { width: 100%; }
+    .pma-search-wrapper input { width: 100%; }
+}
+
+/* Coming soon box — reduce padding on mobile */
+@media (max-width: 600px) {
+    .pma-coming-soon-box { padding: 48px 20px; }
+    .pma-coming-soon-box h3 { font-size: 22px; }
+}
+
+/* Modal — already has 680px breakpoint, add 400px for very small */
+@media (max-width: 400px) {
+    .pma-modal-right { padding: 20px 16px 24px; }
+    .pma-modal-left-name { font-size: 17px; }
+}

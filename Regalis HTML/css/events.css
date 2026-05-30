@@ -554,3 +554,20 @@
         padding: 40px 0 60px;
     }
 }
+
+
+/* ── Responsive additions ── */
+
+/* Event detail meta grid — 2 cols on tablet */
+@media (max-width: 900px) {
+    .pma-event-detail-meta-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Events section padding on mobile */
+@media (max-width: 480px) {
+    .pma-events-directory-section { padding: 32px 0 48px; }
+    .pma-event-detail-card { min-height: 320px; }
+    .pma-event-detail-card-content h3 { font-size: 18px; }
+}

@@ -450,3 +450,23 @@
         justify-content: center;
     }
 }
+
+
+/* ── Responsive additions ── */
+
+/* Resources tab bar — smaller padding on mobile */
+@media (max-width: 480px) {
+    .pma-resources-tab {
+        padding: 12px 10px;
+        font-size: 11px;
+    }
+    .pma-resources-tab i { font-size: 16px; }
+    .pma-resources-panel-title { font-size: 20px; }
+    .pma-resources-view-all { width: 100%; justify-content: center; }
+    .pma-resources-panel-header { flex-direction: column; }
+}
+
+/* Search bar on very small screens */
+@media (max-width: 480px) {
+    .pma-res-search-left { flex-direction: column; align-items: flex-start; }
+}
