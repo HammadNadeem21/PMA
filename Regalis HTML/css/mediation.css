@@ -234,39 +234,142 @@
 .pma-how-mediation-body {
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 80px;
+    padding-top: 20px;
 }
 
 /* Left column */
 .pma-how-mediation-left {
-    flex: 0 0 340px;
+    flex: 0 0 48%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
-.pma-how-mediation-left h2 {
-    font-family: var(--heading-font);
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin: 0 0 12px;
-    line-height: 1.25;
+.pma-how-mediation-left-heading {
+    margin-bottom: 28px;
+    max-width: 520px;
 }
 
-.pma-how-mediation-divider {
-    width: 36px;
-    height: 3px;
-    background: var(--secondary-color);
-    border-radius: 2px;
+.pma-how-mediation-image-card {
+    position: relative;
+    width: 100%;
+    max-width: 620px;
+    align-self: flex-start;
+    /* border-radius: 28px; */
+    overflow: hidden;
+    /* background: #a02e2e; */
+}
+
+.pma-how-mediation-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    animation: pma-image-float 1.5s ease-in-out infinite;
+    transform-origin: center center;
+}
+
+@keyframes pma-image-float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.01);
+    }
+}
+
+.pma-how-mediation-play {
+    position: absolute;
+    inset: auto auto 32px 32px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.9);
+    background: rgba(20, 85, 170, 0.92);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 18px 30px rgba(17, 39, 83, 0.18);
+    cursor: pointer;
+}
+
+.pma-how-mediation-headline {
     margin-bottom: 36px;
 }
 
-/* Orbit graphic */
+.pma-how-mediation-label {
+    display: inline-flex;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(21, 89, 210, 0.08);
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.pma-how-mediation-headline h2 {
+    font-family: var(--heading-font);
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1.08;
+    margin: 0;
+}
+
+.pma-mediation-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 0;
+}
+
+.pma-mediation-step--last {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.pma-mediation-step-num {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: #ffffff;
+    font-family: var(--heading-font);
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pma-mediation-step-body h4 {
+    font-family: var(--heading-font);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 8px;
+    line-height: 1.25;
+}
+
+.pma-mediation-step-body p {
+    font-family: var(--body-font);
+    font-size: 15px;
+    color: var(--body-font-color);
+    margin: 0;
+    line-height: 1.75;
+}
+
+.pma-how-mediation-left h2,
+.pma-how-mediation-divider,
 .pma-orbit-graphic {
-    position: relative;
-    width: 220px;
-    height: 220px;
-    margin: 0 auto;
+    display: none;
 }
 
 .pma-orbit {
@@ -322,27 +425,60 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
+    padding-left: 24px;
 }
 
 .pma-mediation-step {
     display: flex;
     align-items: flex-start;
     gap: 18px;
+    position: relative;
+    padding-bottom: 28px;
+    border-bottom: none;
+}
+
+.pma-mediation-step--last {
+    padding-bottom: 0;
 }
 
 .pma-mediation-step-num {
-    width: 38px;
-    height: 38px;
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
     border-radius: 50%;
     background: var(--primary-color);
     color: #ffffff;
     font-family: var(--heading-font);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.pma-mediation-step-num::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 47px;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% + 22px);
+    background: #ffbe2e;
+    border-radius: 999px;
+    z-index: 0;
+}
+
+.pma-mediation-step--last .pma-mediation-step-num::after {
+    display: none;
+}
+
+.pma-mediation-step-body {
+    flex: 1;
 }
 
 .pma-mediation-step-body h4 {
@@ -439,13 +575,14 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
-    transition: background 0.25s, border-color 0.25s, transform 0.25s;
+    transition: background 300ms ease, border-color 300ms ease, transform 350ms cubic-bezier(.2,.8,.2,1), box-shadow 350ms cubic-bezier(.2,.8,.2,1);
 }
 
 .pma-serve-card:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--secondary-color);
-    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 190, 46, 0.12);
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 10px 24px rgba(31,50,72,0.06);
 }
 
 .pma-serve-icon {
@@ -497,5 +634,250 @@
 @media (max-width: 480px) {
     .pma-who-we-serve-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ── What is Mediation Section — Mediation Page Override ── */
+#pma-mediation.pma-mediation-section {
+    background-color: #f0f3f7;
+    background-image: none;
+    background-attachment: scroll;
+    padding: 90px 0 100px;
+    margin-top: 0;
+}
+
+/* ── Eyebrow label ── */
+.pma-mediation-eyebrow {
+    display: inline-block;
+    font-family: var(--body-font);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    background: rgba(33, 52, 73, 0.08);
+    border: 1px solid rgba(33, 52, 73, 0.15);
+    border-radius: 4px;
+    padding: 5px 12px;
+    margin-bottom: 20px;
+}
+
+/* ── Content column ── */
+#pma-mediation .pma-mediation-content {
+    background: transparent;
+    padding: 0;
+    min-height: unset;
+}
+
+#pma-mediation .pma-mediation-title {
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+#pma-mediation .pma-mediation-text {
+    color: #5a6573;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ── Image card ── */
+.pma-mediation-img-wrap {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(33, 52, 73, 0.14);
+    line-height: 0;
+}
+
+.pma-mediation-img-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 18px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 991px) {
+    #pma-mediation.pma-mediation-section {
+        padding: 64px 0 72px;
+    }
+    #pma-mediation .pma-mediation-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    .pma-mediation-img-wrap {
+        margin-top: 32px;
+    }
+}
+
+
+/* ==========================================================
+   Why Choose Mediation with PMA? Section
+   ========================================================== */
+
+#pma-why-mediation.pma-why-mediation-section {
+    background-color: var(--primary-color);
+    padding: 64px 0 72px;
+}
+
+/* ── Header ── */
+.pma-why-mediation-header {
+    text-align: center;
+    margin-bottom: 52px;
+}
+
+.pma-why-mediation-header h2 {
+    font-family: var(--heading-font);
+    font-size: 34px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 18px;
+    line-height: 1.25;
+}
+
+.pma-why-mediation-divider {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    margin: 0 auto;
+    position: relative;
+}
+
+.pma-why-mediation-divider::before,
+.pma-why-mediation-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 2px;
+    background: var(--secondary-color);
+    opacity: 0.5;
+    border-radius: 1px;
+}
+
+.pma-why-mediation-divider::before { right: calc(100% + 6px); }
+.pma-why-mediation-divider::after  { left:  calc(100% + 6px); }
+
+/* ── Grid ── */
+.pma-why-mediation-grid {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+/* ── Card ── */
+.pma-why-mediation-card {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 28px;
+    transition: transform 0.25s ease;
+}
+
+.pma-why-mediation-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ── Icon ── */
+.pma-why-mediation-icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(212, 163, 89, 0.4);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.pma-why-mediation-card:hover .pma-why-mediation-icon {
+    border-color: var(--secondary-color);
+    background: rgba(212, 163, 89, 0.08);
+}
+
+.pma-why-mediation-icon i {
+    font-size: 28px;
+    color: var(--secondary-color);
+    line-height: 1;
+}
+
+/* ── Card Title ── */
+.pma-why-mediation-card h4 {
+    font-family: var(--heading-font);
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px;
+    line-height: 1.35;
+}
+
+/* ── Card Description ── */
+.pma-why-mediation-card p {
+    font-family: var(--body-font);
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── Vertical Separator ── */
+.pma-why-mediation-separator {
+    width: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    align-self: stretch;
+    flex-shrink: 0;
+    margin: 8px 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+    .pma-why-mediation-card {
+        padding: 20px 18px;
+    }
+}
+
+@media (max-width: 991px) {
+    .pma-why-mediation-grid {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .pma-why-mediation-separator {
+        display: none;
+    }
+
+    .pma-why-mediation-card {
+        flex: 1 1 33.333%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 28px 20px;
+    }
+
+    .pma-why-mediation-card:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .pma-why-mediation-header h2 {
+        font-size: 26px;
+    }
+
+    .pma-why-mediation-card {
+        flex: 1 1 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .pma-why-mediation-card {
+        flex: 1 1 100%;
     }
 }

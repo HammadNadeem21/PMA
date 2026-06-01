@@ -13652,6 +13652,7 @@ header.transparent.smaller {
   padding: 0 18px;
   text-align: center;
   position: relative;
+  transition: transform 280ms cubic-bezier(.2,.8,.2,1), box-shadow 280ms ease, background 200ms ease;
 }
 
 .pma-work-with-item:not(:last-child)::after {
@@ -13699,6 +13700,16 @@ header.transparent.smaller {
   line-height: 1.45;
   color: #213449;
   margin: 0;
+}
+
+/* Subtle hover for work-with cards */
+.pma-work-with-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(33,52,73,0.06);
+}
+
+.pma-work-with-item:hover .pma-work-with-icon i {
+  color: var(--secondary-color);
 }
 
 @media only screen and (max-width: 1199px) {
@@ -14373,7 +14384,7 @@ header.transparent.smaller {
 .pma-services-cta-banner {
   position: relative;
   overflow: hidden;
-  border-radius: 14px 14px 0 0;
+  border-radius: 14px;
   background-color: #213449;
   min-height: 220px;
 }
