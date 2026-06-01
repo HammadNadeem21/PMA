@@ -564,6 +564,39 @@
     <script src="js/swiper.js"></script>
     <script src="js/custom-swiper-1.js"></script>
 
+    <script>
+    jQuery(function ($) {
+        var $form = $('#pma_contact_form');
+        var $success = $('#pma_success_message');
+        var $error = $('#pma_error_message');
+        var $submit = $form.find('button[type=submit]');
+
+        $form.on('submit', function (e) {
+            e.preventDefault();
+
+            $success.hide();
+            $error.hide();
+
+            $submit.prop('disabled', true).text('Sending...');
+
+            $.post('contact.php', $form.serialize())
+                .done(function (response) {
+                    if ($.trim(response) === 'sent') {
+                        $success.show();
+                        $form[0].reset();
+                    } else {
+                        $error.show();
+                    }
+                })
+                .fail(function () {
+                    $error.show();
+                })
+                .always(function () {
+                    $submit.prop('disabled', false).text('Send Message');
+                });
+        });
+    });
+    </script>
 
 </body>
 

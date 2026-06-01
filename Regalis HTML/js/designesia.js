@@ -170,6 +170,21 @@
              type: 'image'
          });
      }
+
+     /* --------------------------------------------------
+      * PMA Leadership Message Popup Image Handler
+      * --------------------------------------------------*/
+     function handlePmaPopupImages() {
+         $('.pma-msg-popup').on('click', function(e) {
+             const popupId = $(this).data('popup-id');
+             const photoImg = $('#js-pma-popup-photo');
+             const photoSrc = photoImg.data(popupId);
+             
+             if (photoSrc) {
+                 photoImg.attr('src', photoSrc);
+             }
+         });
+     }
      
      /* --------------------------------------------------
       * plugin | enquire.js
@@ -1258,6 +1273,7 @@
          modeRtl();         
          $(".jarallax").jarallax();
          loadMagnificPopup();
+         handlePmaPopupImages();
          gridGallery();
          initResize();
          deProgress();

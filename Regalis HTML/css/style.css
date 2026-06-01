@@ -248,8 +248,14 @@ header {
   z-index: 1001;
   background: var(--bg-dark-1);
   margin: 0;
+  padding: 20px 0;
   /* Ensure header doesn't interfere with flexbox layout */
   flex-shrink: 0;
+}
+
+header .container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 header.header-s1 {
@@ -397,8 +403,6 @@ header.header-center #logo{
   display: none;
 }
 
-header.smaller div#logo,
-header.s2 div#logo {}
 
 header.smaller .logo-init {
   display: none;
@@ -421,6 +425,29 @@ header .logo-mobile {
   display: none;
 }
 
+header #logo .logo-main {
+  max-width: 160px;
+  height: auto;
+}
+
+header #logo .logo-mobile {
+  max-width: 200px;
+  height: auto;
+}
+
+header nav a,
+#mainmenu > li > a,
+#mainmenu a.menu-item {
+  font-size: 18px;
+}
+
+@media (max-width: 991px) {
+  header nav a,
+  #mainmenu > li > a,
+  #mainmenu a.menu-item {
+    font-size: 15px;
+  }
+}
 
 header.smaller.scroll-light {
   background: #ffffff;
@@ -8293,11 +8320,11 @@ p.slider-teaser{
 }
 
 .float-text a{
-    color: #000000;
+    color: var(--secondary-color);
 }
 
 .float-text.dark a{
-  color:#ffffff;
+  color: var(--secondary-color);
 }
 
 .float-text span{
@@ -8308,7 +8335,7 @@ p.slider-teaser{
     -webkit-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
     transform: rotate(-180deg);
-    color: #222;
+    color: var(--secondary-color);
 }
 
 
@@ -12506,7 +12533,7 @@ header.transparent.smaller {
 
 .pma-hero-content h1 {
   color: #ffffff !important;
-  font-size: 54px;
+  font-size: 46px;
   line-height: 1.15;
   margin-bottom: 20px;
   font-weight: 700;
@@ -12659,18 +12686,19 @@ header.transparent.smaller {
 }
 
 .pma-glance-title {
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 700;
   color: #213449;
   margin-bottom: 10px;
-  letter-spacing: 0.3px;
+  line-height: 1.25;
 }
 
 .pma-glance-divider {
-  width: 40px;
+  width: 45px;
   height: 3px;
   background: var(--secondary-color);
   border-radius: 2px;
+  margin-bottom: 22px;
 }
 
 .pma-glance-row {
@@ -12793,11 +12821,11 @@ header.transparent.smaller {
 /* Timer / 10+ YEARS — floated on image, inset from edges */
 .pma-about-badge {
   position: absolute;
-  left: 30px;
-  top: 50px;
+  left: 20px;
+  top: 40px;
   bottom: 20px;
-  width: 36%;
-  height: 70%;
+  width: 34%;
+  height: 55%;
   max-width: 188px;
   min-width: 132px;
   background: #213449;
@@ -12814,13 +12842,13 @@ header.transparent.smaller {
 }
 
 .pma-about-stat-icon {
-  font-size: 34px;
+  font-size: 42px;
   color: var(--secondary-color);
   margin-bottom: 16px;
 }
 
 .pma-about-stat-num {
-  font-size: 58px;
+  font-size: 75px;
   font-weight: 900;
   line-height: 1;
   color: var(--secondary-color);
@@ -12828,7 +12856,7 @@ header.transparent.smaller {
 }
 
 .pma-about-stat-unit {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   color: #fff;
   letter-spacing: 3px;
@@ -13091,9 +13119,15 @@ header.transparent.smaller {
 
 /* ===== PMA What is Mediation ===== */
 #pma-mediation {
-  padding: 20px 20px;
+  padding: 0;
+  margin: 0;
   overflow: hidden;
-  background: #213449;
+  background-color: #213449;
+  background-image: url('../images/new/00-Home Page/What is Mediation Image.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .pma-mediation-section .row {
@@ -13101,20 +13135,20 @@ header.transparent.smaller {
 }
 
 .pma-mediation-media {
+  margin: 0;
   padding: 0;
   min-height: 460px;
+  background: transparent;
+  border-radius: 0;
 }
 
 .pma-mediation-img {
-  width: 100%;
-  height: 100%;
-  min-height: 460px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
+  display: none;
 }
 
 .pma-mediation-content {
+  position: relative;
+  z-index: 2;
   background: #213449;
   padding: 64px 56px;
   display: flex;
@@ -13261,21 +13295,36 @@ header.transparent.smaller {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  transition: all 0.3s ease;
+  /* background: #fff; */
 }
 
 .pma-why-feature:last-child {
   border-right: none;
 }
 
+.pma-why-feature:hover {
+  transform: translateY(-3px);
+  /* box-shadow: 0 18px 45px rgba(33, 52, 73, 0.08); */
+  border-color: transparent;
+}
+
 .pma-why-feature-icon {
   margin-bottom: 18px;
   line-height: 1;
+  transition: all 0.3s ease;
 }
 
 .pma-why-feature-icon i {
   font-size: 40px;
   color: var(--secondary-color);
   font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.pma-why-feature:hover .pma-why-feature-icon i {
+  transform: scale(1.1);
+  color: #213449;
 }
 
 .pma-why-feature h4 {
@@ -13284,6 +13333,11 @@ header.transparent.smaller {
   color: #213449;
   margin-bottom: 10px;
   line-height: 1.35;
+  transition: color 0.3s ease;
+}
+
+.pma-why-feature:hover h4 {
+  color: var(--secondary-color);
 }
 
 .pma-why-feature p {
@@ -13925,6 +13979,8 @@ header.transparent.smaller {
   min-height: 320px;
   background: #e8ecf1;
   border-radius: 4px;
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13936,8 +13992,51 @@ header.transparent.smaller {
   transition: background 0.25s ease;
 }
 
+.pma-leadership-overlay {
+  position: absolute;
+  height: 30%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 10;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 24px 16px;
+  background: rgba(31, 40, 59, 0.65);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.pma-leadership-card:hover .pma-leadership-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pma-leadership-overlay-content {
+  text-align: center;
+  width: 100%;
+}
+
+.pma-leadership-overlay-name {
+  margin: 0;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.pma-leadership-overlay-role {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
 .pma-leadership-card:hover .pma-leadership-photo {
-  background: #dde3ea;
+  background: transparent;
 }
 
 @media only screen and (max-width: 991px) {
@@ -14451,13 +14550,13 @@ header.transparent.smaller {
 
 /* ===== PMA Footer ===== */
 #pma-footer {
-  padding: 72px 0 0;
-  background: #0a1528;
-  color: rgba(255, 255, 255, 0.88);
+  padding: 30px 0 0;
+  background: #000000;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 #pma-footer a {
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.92);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -14468,19 +14567,35 @@ header.transparent.smaller {
 
 .pma-footer-logo-link {
   display: inline-block;
+  margin: 0;
+  line-height: 1;
 }
 
 .pma-footer-logo {
-  max-width: 200px;
+  max-width: 190px;
   width: 100%;
   height: auto;
   display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.pma-footer-brand {
+  text-align: left;
+  padding: 0;
+  margin: 0 0 8px 0;
+}
+
+.pma-footer-bar {
+  margin-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 18px 0 18px;
 }
 
 .pma-footer-divider {
   height: 2px;
   max-width: 120px;
-  margin: 22px 0 20px;
+  margin: 8px 0 8px;
   background: linear-gradient(90deg, var(--secondary-color) 0%, rgba(197, 157, 95, 0) 100%);
 }
 
@@ -14488,7 +14603,7 @@ header.transparent.smaller {
   font-size: 14px;
   line-height: 1.75;
   color: rgba(255, 255, 255, 0.82);
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   max-width: 320px;
 }
 
@@ -16256,7 +16371,7 @@ header.transparent.smaller {
 
 .pma-msg-card-profile {
   flex: 0 0 160px;
-  text-align: center;
+  text-align: left;
 }
 
 .pma-msg-card-photo {
@@ -16273,6 +16388,15 @@ header.transparent.smaller {
   font-weight: 600;
   color: #8a96a3;
   text-transform: lowercase;
+  overflow: hidden;
+}
+
+.pma-msg-card-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 8px;
 }
 
 .pma-msg-card-name {
@@ -16571,6 +16695,15 @@ header.transparent.smaller {
   font-weight: 600;
   color: #8a96a3;
   text-transform: uppercase;
+  overflow: hidden;
+}
+
+.pma-msg-popup-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 4px;
 }
 
 .pma-msg-popup-side-quote {
@@ -17656,6 +17789,7 @@ header.transparent.smaller {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
