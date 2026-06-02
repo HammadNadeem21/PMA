@@ -13123,10 +13123,10 @@ header.transparent.smaller {
   margin: 0;
   overflow: hidden;
   background-color: #213449;
-  background-image: url('../images/new/00-Home Page/What is Mediation Image.png');
+  background-image: url('../images/new/02-Mediation/What\ is\ Mediation\ Image\ 03.png');
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: cover;
+  background-size: 40% auto;
   background-attachment: fixed;
 }
 
@@ -13149,7 +13149,7 @@ header.transparent.smaller {
 .pma-mediation-content {
   position: relative;
   z-index: 2;
-  background: #213449;
+  background: var(--primary-color);
   padding: 64px 56px;
   display: flex;
   flex-direction: column;
@@ -13160,7 +13160,7 @@ header.transparent.smaller {
 .pma-mediation-title {
   font-size: 36px;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 14px;
   line-height: 1.2;
 }
@@ -13176,7 +13176,7 @@ header.transparent.smaller {
 .pma-mediation-text {
   font-size: 16px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.92);
   margin-bottom: 22px;
   max-width: 540px;
 }
