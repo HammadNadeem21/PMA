@@ -15150,6 +15150,7 @@ header.transparent.smaller {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
   padding: 170px 0 48px 0 !important;
   margin: 0 !important;
 }
@@ -15223,6 +15224,8 @@ header.transparent.smaller {
   z-index: 5;
   margin-top: auto;
   padding-top: 32px;
+  margin-left:60px;
+ 
 }
 
 .pma-training-imi-banner {
@@ -15261,6 +15264,7 @@ header.transparent.smaller {
 .pma-training-imi-content {
   flex: 1 1 auto;
   min-width: 0;
+  text-align: left;
 }
 
 .pma-training-imi-title {

@@ -128,7 +128,7 @@
 }
 
 .pma-sc-item-right {
-    text-align: right;
+    text-align: left;
     flex-shrink: 0;
     margin-right: 12px;
 }
