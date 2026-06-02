@@ -18678,7 +18678,6 @@ header.transparent.smaller {
 }
 
 .pma-sidebar-quote {
-  margin-top: auto; /* push to bottom */
   position: relative;
   padding-left: 20px;
 }

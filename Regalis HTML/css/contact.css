@@ -35,7 +35,8 @@
 .pma-contact-hero-content-wrap {
     position: relative;
     z-index: 4;
-    padding: 140px 0 80px;
+    /* match other hero sections horizontal padding */
+    padding: 140px 80px 80px;
 }
 
 .pma-contact-hero-inner {
@@ -44,10 +45,11 @@
     gap: 40px;
 }
 
-/* Left panel — text */
+/* Left panel — text: constrain to hero content width like other pages */
 .pma-contact-hero-left {
-    flex: 0 0 55%;
-    max-width: 55%;
+    flex: 0 0 auto;
+    max-width: 650px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -94,10 +96,14 @@
 
 /* Feature pills row */
 .pma-contact-hero-features {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
     margin-top: 8px;
+    
+    width: 100%;
 }
 
 .pma-contact-hero-feature {
@@ -109,8 +115,8 @@
 }
 
 .pma-contact-hero-feature-icon {
-    width: 38px;
-    height: 38px;
+    width: 58px;
+    height: 58px;
     border-radius: 50%;
     border: 1.5px solid var(--secondary-color);
     display: flex;
@@ -121,27 +127,28 @@
 
 .pma-contact-hero-feature-icon i {
     color: var(--secondary-color);
-    font-size: 15px;
+    font-size: 25px;
 }
 
 .pma-contact-hero-feature div {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 15px;
 }
 
 .pma-contact-hero-feature strong {
     font-family: var(--heading-font);
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 700;
     color: #ffffff;
 }
 
 .pma-contact-hero-feature span {
     font-family: var(--body-font);
-    font-size: 12px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
-    line-height: 1.4;
+    line-height: 1;
+    margin-top: -14px;
 }
 
 /* Responsive */
