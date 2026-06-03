@@ -13133,6 +13133,50 @@ header.transparent.smaller {
   }
 }
 
+@media only screen and (max-width: 575px) {
+  .pma-about-image-card {
+    min-height: 320px;
+  }
+
+  .pma-about-badge {
+    position: relative;
+    left: 10;
+    top: 10;
+    bottom: 0;
+    width: 150;
+    max-width: 150px;
+    min-width: auto;
+    /* margin: 16px auto 0; */
+    padding: 10px 10px;
+  }
+
+  .pma-about-stat-icon {
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+
+  .pma-about-stat-num {
+    font-size: 30px;
+  }
+
+  .pma-about-stat-unit {
+    font-size: 16px;
+  }
+
+  .pma-about-stat-label {
+    font-size: 12px;
+  }
+
+  .pma-about-heading {
+    font-size: 24px;
+  }
+
+  .pma-about-text,
+  .pma-mission-list li {
+    font-size: 14px;
+  }
+}
+
 /* ===== PMA What is Mediation ===== */
 #pma-mediation {
   padding: 0;
@@ -13225,6 +13269,7 @@ header.transparent.smaller {
   .pma-mediation-media,
   .pma-mediation-img {
     min-height: 260px;
+    
   }
 
   .pma-mediation-content {
