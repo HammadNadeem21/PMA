@@ -15467,11 +15467,20 @@ header.transparent.smaller {
 
   .pma-training-hero-banner-wrap {
     padding-top: 24px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .pma-training-imi-banner {
     flex-wrap: wrap;
     align-items: flex-start;
+    padding: 18px 20px;
+  }
+
+  .pma-training-imi-logo {
+    align-self: flex-start;
   }
 
   .pma-training-imi-cert {
@@ -15494,10 +15503,16 @@ header.transparent.smaller {
 }
 
 @media only screen and (max-width: 767px) {
+  .pma-training-hero-banner-wrap {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   .pma-training-imi-banner {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
     gap: 18px;
+    padding: 18px 16px;
   }
 
   .pma-training-imi-logo {
@@ -15505,11 +15520,16 @@ header.transparent.smaller {
     min-height: 142px;
     border-radius: 58px 58px 0 58px;
     align-self: flex-start;
+    margin: 0;
   }
 
   .pma-training-imi-cert {
     flex-direction: row;
     align-items: flex-start;
+  }
+
+  .pma-training-imi-link-text {
+    max-width: 100%;
   }
 }
 
@@ -15703,19 +15723,19 @@ header.transparent.smaller {
   border-color: #1b2f63 !important;
 }
 
-/* Keep both cards same color palette (navy + gold) */
+/* Keep both cards same color palette (navy + green for non-accredited) */
 .pma-training-program-card--non-accredited .pma-training-program-badge {
   background: #132450;
 }
 
 .pma-training-program-card--non-accredited .pma-training-program-icon {
-  border-color: rgba(212, 163, 89, 0.55);
+  border-color: rgba(42, 143, 88, 0.55);
 }
 
 .pma-training-program-card--non-accredited .pma-training-program-icon i,
 .pma-training-program-card--non-accredited .pma-training-program-metric i,
 .pma-training-program-card--non-accredited .pma-training-program-outcomes li i {
-  color: #c99a39;
+  color: #2a8f58;
 }
 
 .pma-training-program-card--non-accredited .pma-training-program-btn {
@@ -16054,6 +16074,16 @@ header.transparent.smaller {
   margin-bottom: 22px;
 }
 
+/* ---- Three-column layout: Course Outline | Course Structure | Training Methodology ---- */
+.pma-training-popup-columns--3col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Generic column child (works in both 2-col and 3-col grids) */
+.pma-popup-col {
+  min-width: 0;
+}
+
 /* Course Outline checklist */
 .pma-popup-checklist {
   list-style: none;
@@ -16311,18 +16341,38 @@ header.transparent.smaller {
 }
 
 /* ---- Responsive ---- */
+/* =========================================================
+   TRAINING POPUP — RESPONSIVE BREAKPOINTS
+   1199px  Large tablet / small laptop
+    991px  Tablet landscape  (sidebar moves to top, horizontal)
+    767px  Tablet portrait / large phone  (sidebar stacks vertically)
+    575px  Small phone
+    400px  Very small phone
+   ========================================================= */
+
+/* ---- ≤ 1199px  Large tablet / small laptop ---- */
 @media only screen and (max-width: 1199px) {
+  .pma-training-popup {
+    margin: 16px auto;
+  }
   .pma-training-popup-layout {
-    max-height: calc(100vh - 30px);
+    max-height: calc(100vh - 32px);
   }
   .pma-training-popup-side {
-    width: 250px;
+    width: 240px;
+    min-width: 240px;
+  }
+  .pma-training-popup-side h3 {
+    font-size: 18px;
   }
   .pma-popup-section-title {
     font-size: 20px;
   }
-  .pma-training-popup-learn,
-  .pma-training-popup-learn--6col {
+  .pma-training-popup-scroll {
+    padding: 24px 26px 20px;
+  }
+  /* 5-col → keep at 5, 6-col → stay 6 */
+  .pma-training-popup-learn {
     grid-template-columns: repeat(5, 1fr);
     gap: 8px;
   }
@@ -16332,24 +16382,63 @@ header.transparent.smaller {
   .pma-popup-learn-card {
     padding: 12px 6px 10px;
   }
+  /* 3-col → 2-col on large tablet */
+  .pma-training-popup-columns--3col {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
+/* ---- ≤ 991px  Tablet landscape ---- */
 @media only screen and (max-width: 991px) {
+  .pma-training-popup {
+    margin: 12px auto;
+  }
+  /* Layout: sidebar on top, content below */
   .pma-training-popup-layout {
     flex-direction: column;
     max-height: calc(100vh - 24px);
+    overflow-y: auto;
   }
+  /* Sidebar spans full width, goes horizontal */
   .pma-training-popup-side {
     width: 100%;
+    min-width: 0;
     flex-direction: row;
+    align-items: stretch;
+  }
+  .pma-training-popup-badge-banner {
+    writing-mode: vertical-rl;
+    width: auto;
+    padding: 12px 10px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
   }
   .pma-training-popup-side-content {
     flex: 1;
-    padding: 20px;
+    padding: 18px 20px;
   }
+  .pma-training-popup-side h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+  .pma-training-popup-side p {
+    font-size: 11.5px;
+    margin-bottom: 10px;
+  }
+  /* Stats list: 2-column grid on tablet */
+  .pma-training-popup-side-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 16px;
+  }
+  /* Decorative image: shrink to right column */
   .pma-training-popup-side-zen {
-    width: 200px;
+    width: 180px;
+    flex-shrink: 0;
     height: auto;
+    position: relative;
+    bottom: auto;
+    right: auto;
   }
   .pma-training-popup-side-zen::before {
     background: linear-gradient(to right, #132450 0%, transparent 100%);
@@ -16357,65 +16446,284 @@ header.transparent.smaller {
     height: 100%;
     top: 0;
     right: auto;
+    left: 0;
+    bottom: auto;
   }
+  /* Main content */
+  .pma-training-popup-main {
+    max-height: none;
+    overflow-y: visible;
+  }
+  .pma-training-popup-scroll {
+    padding: 22px 24px 20px;
+  }
+  .pma-popup-section-title {
+    font-size: 19px;
+    margin-bottom: 12px;
+  }
+  /* Learn grid: 3-col */
   .pma-training-popup-learn {
     grid-template-columns: repeat(3, 1fr);
   }
   .pma-training-popup-learn--6col {
     grid-template-columns: repeat(3, 1fr);
   }
+  /* Column grids: all stack to 1-col */
+  .pma-training-popup-columns,
+  .pma-training-popup-columns--3col {
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+  }
   .pma-training-popup-bottom {
     grid-template-columns: 1fr;
   }
+  /* Module badges: slightly smaller */
+  .pma-popup-module-badge {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
 }
 
+/* ---- ≤ 767px  Tablet portrait / large phone ---- */
 @media only screen and (max-width: 767px) {
+  .pma-training-popup {
+    margin: 8px auto;
+  }
+  .pma-training-popup-layout {
+    border-radius: 10px;
+    max-height: calc(100vh - 16px);
+  }
+  /* Sidebar: stack icon + content + image vertically */
   .pma-training-popup-side {
     flex-direction: column;
   }
+  .pma-training-popup-badge-banner {
+    writing-mode: horizontal-tb;
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+  .pma-training-popup-side-content {
+    padding: 16px 18px 12px;
+  }
+  .pma-training-popup-side-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+  }
+  .pma-training-popup-side-icon i {
+    font-size: 20px;
+  }
+  .pma-training-popup-side h3 {
+    font-size: 16px;
+  }
+  /* Stats: 2-column grid stays */
+  .pma-training-popup-side-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 12px;
+  }
+  /* Decorative image as a short banner */
   .pma-training-popup-side-zen {
     width: 100%;
-    height: 120px;
+    height: 110px;
+    position: relative;
+  }
+  .pma-training-popup-side-zen img {
+    object-position: center 30%;
   }
   .pma-training-popup-side-zen::before {
     background: linear-gradient(to bottom, #132450 0%, transparent 100%);
     width: 100%;
     height: 50px;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: auto;
   }
+  /* Main scroll area */
   .pma-training-popup-scroll {
-    padding: 22px 20px 20px;
-  }
-  .pma-training-popup-learn {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .pma-training-popup-learn--6col {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .pma-training-popup-columns {
-    grid-template-columns: 1fr;
-  }
-  .pma-popup-attend-grid {
-    justify-content: center;
-  }
-}
-
-@media only screen and (max-width: 575px) {
-  .pma-training-popup-scroll {
-    padding: 18px 16px 16px;
+    padding: 20px 18px 18px;
   }
   .pma-popup-section-title {
     font-size: 18px;
   }
-  .pma-training-popup-learn {
+  /* Learn grid: 2-col */
+  .pma-training-popup-learn,
+  .pma-training-popup-learn--6col {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
+  }
+  /* All column grids: single column */
+  .pma-training-popup-columns,
+  .pma-training-popup-columns--3col {
+    grid-template-columns: 1fr;
+  }
+  .pma-training-popup-bottom {
+    flex-direction: column;
+  }
+  /* Attend grid */
+  .pma-popup-attend-grid,
+  .pma-popup-attend-grid--full {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+  /* Info table: allow wrapping */
+  .pma-popup-info-table td {
+    font-size: 12px;
+    padding: 5px 6px;
   }
   .pma-popup-info-table td:first-child {
     white-space: normal;
   }
+}
+
+/* ---- ≤ 575px  Small phone ---- */
+@media only screen and (max-width: 575px) {
+  .pma-training-popup {
+    margin: 4px auto;
+  }
+  .pma-training-popup-layout {
+    border-radius: 8px;
+    max-height: calc(100vh - 8px);
+  }
+  .pma-training-popup-side-content {
+    padding: 14px 14px 10px;
+  }
+  .pma-training-popup-side h3 {
+    font-size: 15px;
+  }
+  .pma-training-popup-side p {
+    font-size: 11px;
+  }
+  /* Stats: single column on small phones */
+  .pma-training-popup-side-stats {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .pma-training-popup-side-zen {
+    height: 90px;
+  }
+  /* Main area */
+  .pma-training-popup-scroll {
+    padding: 16px 14px 14px;
+  }
+  .pma-popup-section-title {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .pma-training-popup-main h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  /* Learn grid: 2-col stays */
+  .pma-training-popup-learn,
+  .pma-training-popup-learn--6col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+  }
+  .pma-popup-learn-card {
+    padding: 10px 5px 8px;
+  }
+  .pma-popup-learn-card span {
+    font-size: 10.5px;
+  }
+  /* Checklist */
+  .pma-popup-checklist li {
+    font-size: 12px;
+    padding: 4px 0;
+  }
+  /* Modules */
+  .pma-popup-module-item {
+    padding: 8px 10px;
+  }
+  .pma-popup-module-badge {
+    font-size: 9.5px;
+    padding: 2px 7px;
+    min-width: 70px;
+  }
+  .pma-popup-module-title {
+    font-size: 12px;
+  }
+  /* Attend grid: 2-col */
+  .pma-popup-attend-grid,
+  .pma-popup-attend-grid--full {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .pma-popup-attend-item span {
+    font-size: 11px;
+  }
+  /* Info table */
+  .pma-popup-info-table {
+    font-size: 12px;
+  }
+  .pma-popup-info-table td {
+    padding: 5px 4px;
+  }
+  /* Register button */
   .pma-training-popup-register {
-    font-size: 14px !important;
+    font-size: 13px !important;
     min-height: 44px;
+    padding: 10px 18px !important;
+  }
+  /* Note box */
+  .pma-popup-note-box {
+    padding: 12px;
+    font-size: 12px;
+  }
+}
+
+/* ---- ≤ 400px  Very small phone ---- */
+@media only screen and (max-width: 400px) {
+  .pma-training-popup-badge-banner {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+  .pma-training-popup-side h3 {
+    font-size: 14px;
+  }
+  .pma-training-popup-side-zen {
+    height: 70px;
+  }
+  .pma-training-popup-scroll {
+    padding: 14px 12px 12px;
+  }
+  .pma-popup-section-title {
+    font-size: 16px;
+  }
+  /* Learn grid: single column on tiny screens */
+  .pma-training-popup-learn,
+  .pma-training-popup-learn--6col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+  .pma-popup-learn-card {
+    padding: 8px 4px 7px;
+  }
+  .pma-popup-learn-icon {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 6px;
+  }
+  .pma-popup-learn-icon i {
+    font-size: 14px;
+  }
+  /* Attend grid: single column */
+  .pma-popup-attend-grid,
+  .pma-popup-attend-grid--full {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .pma-popup-attend-icon {
+    width: 34px;
+    height: 34px;
+  }
+  .pma-popup-attend-icon i {
+    font-size: 14px;
+  }
+  .pma-training-popup-register {
+    font-size: 12px !important;
+    padding: 9px 14px !important;
   }
 }
 
