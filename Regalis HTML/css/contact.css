@@ -5,7 +5,7 @@
 
 
 /* ── Contact Hero Section ── */
-/* Uses the same background system as #pma-mediation-hero (Resources page) */
+/* Uses the same background system as #pma-mediation-hero (FAQ/Resources page) */
 .pma-contact-hero-section {
     position: relative;
     width: 100%;
@@ -13,29 +13,68 @@
     overflow: hidden;
 }
 
-/* Background layer — identical to pma-hero-bg */
-.pma-contact-hero-section .pma-hero-bg {
+/* Background layer */
+#pma-contact-hero .pma-hero-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    background-color: #213449;
+    z-index: 1;
 }
 
-.pma-contact-hero-section .pma-hero-img {
+#pma-contact-hero .pma-hero-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center right;
+    mix-blend-mode: normal !important;
+    opacity: 1 !important;
+    filter: brightness(1.0) contrast(1.05);
     display: block;
+}
+
+/* Dark navy gradient — left solid → right transparent (same as FAQ/mediation hero) */
+#pma-contact-hero .pma-overlay-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,
+        #213449 0%,
+        #213449 32%,
+        rgba(33, 52, 73, 0.95) 45%,
+        rgba(33, 52, 73, 0.7) 60%,
+        rgba(33, 52, 73, 0.2) 80%,
+        rgba(33, 52, 73, 0) 100%
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Warm golden glow on right (same as FAQ/mediation hero) */
+#pma-contact-hero .pma-overlay-warm {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at 85% 35%,
+        rgba(212, 163, 89, 0.15) 0%,
+        rgba(33, 52, 73, 0.2) 50%,
+        transparent 100%
+    );
+    z-index: 3;
+    pointer-events: none;
 }
 
 /* Content wrapper sits above the background */
 .pma-contact-hero-content-wrap {
     position: relative;
     z-index: 4;
-    /* match other hero sections horizontal padding */
     padding: 140px 80px 80px;
 }
 
@@ -151,38 +190,248 @@
     margin-top: -14px;
 }
 
-/* Responsive */
-@media (max-width: 991px) {
+/* =========================================================
+   CONTACT HERO — RESPONSIVE BREAKPOINTS
+   ========================================================= */
+
+/* ── ≤ 1199px  Large tablet / small laptop ── */
+@media (max-width: 1199px) {
     .pma-contact-hero-content-wrap {
-        padding: 110px 0 60px;
+        padding: 130px 48px 72px;
+    }
+
+    .pma-contact-hero-left {
+        max-width: 600px;
+    }
+
+    .pma-mediation-hero-title {
+        font-size: 44px;
+    }
+}
+
+/* ── ≤ 991px  Tablet landscape ── */
+@media (max-width: 991px) {
+    .pma-contact-hero-section {
+        min-height: 380px;
+    }
+
+    .pma-contact-hero-content-wrap {
+        padding: 110px 32px 60px;
+    }
+
+    .pma-contact-hero-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
     }
 
     .pma-contact-hero-left {
         flex: 0 0 100%;
         max-width: 100%;
+        width: 100%;
+        gap: 14px;
     }
 
     .pma-contact-hero-right {
         display: none;
     }
 
-    .pma-contact-hero-title {
-        font-size: 36px;
+    .pma-mediation-hero-title {
+        font-size: 38px;
+    }
+
+    .pma-contact-hero-lead {
+        max-width: 100%;
+        font-size: 15px;
     }
 
     .pma-contact-hero-features {
-        flex-wrap: wrap;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .pma-contact-hero-feature-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .pma-contact-hero-feature-icon i {
+        font-size: 22px;
+    }
+
+    .pma-contact-hero-feature strong {
+        font-size: 17px;
+    }
+
+    .pma-contact-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .pma-contact-form-section {
+        padding: 60px 0 80px;
     }
 }
 
-@media (max-width: 600px) {
-    .pma-contact-hero-features {
-        flex-direction: column;
-        gap: 16px;
+/* ── ≤ 767px  Tablet portrait / large phone ── */
+@media (max-width: 767px) {
+    .pma-contact-hero-section {
+        min-height: 340px;
     }
 
-    .pma-contact-hero-title {
+    .pma-contact-hero-content-wrap {
+        padding: 100px 24px 52px;
+    }
+
+    .pma-contact-hero-eyebrow {
+        font-size: 11px;
+    }
+
+    .pma-mediation-hero-title {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+
+    .pma-contact-hero-lead {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* Feature pills: 1 column on tablet portrait */
+    .pma-contact-hero-features {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 4px;
+    }
+
+    .pma-contact-hero-feature {
+        align-items: center;
+    }
+
+    .pma-contact-hero-feature-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .pma-contact-hero-feature-icon i {
+        font-size: 20px;
+    }
+
+    .pma-contact-hero-feature strong {
+        font-size: 16px;
+    }
+
+    .pma-contact-hero-feature span {
+        font-size: 13px;
+    }
+}
+
+/* ── ≤ 575px  Small phone ── */
+@media (max-width: 575px) {
+    .pma-contact-hero-section {
+        min-height: 300px;
+    }
+
+    .pma-contact-hero-content-wrap {
+        padding: 90px 18px 44px;
+    }
+
+    .pma-mediation-hero-title {
         font-size: 28px;
+    }
+
+    .pma-contact-hero-divider {
+        width: 32px;
+    }
+
+    .pma-contact-hero-lead {
+        font-size: 13.5px;
+    }
+
+    .pma-contact-hero-features {
+        gap: 12px;
+    }
+
+    .pma-contact-hero-feature-icon {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+    }
+
+    .pma-contact-hero-feature-icon i {
+        font-size: 18px;
+    }
+
+    .pma-contact-hero-feature strong {
+        font-size: 15px;
+    }
+
+    .pma-contact-hero-feature span {
+        font-size: 12px;
+    }
+
+    /* Form section */
+    .pma-contact-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pma-contact-form-card {
+        padding: 24px 18px 28px;
+    }
+
+    .pma-contact-info-title {
+        font-size: 24px;
+    }
+
+    .pma-contact-form-title {
+        font-size: 20px;
+    }
+
+    .pma-contact-form-section {
+        padding: 48px 0 60px;
+    }
+
+    .pma-contact-map-section {
+        padding: 0 0 60px;
+    }
+
+    .pma-contact-map-title {
+        font-size: 22px;
+    }
+
+    .pma-contact-map-wrapper iframe {
+        height: 280px;
+    }
+}
+
+/* ── ≤ 400px  Very small phone ── */
+@media (max-width: 400px) {
+    .pma-contact-hero-content-wrap {
+        padding: 85px 14px 38px;
+    }
+
+    .pma-mediation-hero-title {
+        font-size: 25px;
+    }
+
+    .pma-contact-hero-lead {
+        font-size: 13px;
+    }
+
+    .pma-contact-hero-feature-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .pma-contact-hero-feature-icon i {
+        font-size: 16px;
+    }
+
+    .pma-contact-hero-feature strong {
+        font-size: 14px;
+    }
+
+    .pma-contact-hero-feature span {
+        font-size: 11.5px;
     }
 }
 
@@ -559,23 +808,4 @@
     .pma-contact-map-wrapper iframe {
         height: 280px;
     }
-}
-
-
-/* ── Responsive additions ── */
-
-/* Contact hero — reduce padding on small mobile */
-@media (max-width: 480px) {
-    .pma-contact-hero-content-wrap { padding: 90px 0 48px; }
-    .pma-contact-hero-title { font-size: 24px; }
-    .pma-contact-hero-lead { font-size: 14px; }
-}
-
-/* Contact info title on mobile */
-@media (max-width: 600px) {
-    .pma-contact-info-title { font-size: 24px; }
-    .pma-contact-form-title { font-size: 20px; }
-    .pma-contact-form-section { padding: 48px 0 60px; }
-    .pma-contact-map-section { padding: 0 0 60px; }
-    .pma-contact-map-title { font-size: 22px; }
 }
