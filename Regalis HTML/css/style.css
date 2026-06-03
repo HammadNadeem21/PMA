@@ -18894,6 +18894,14 @@ header.transparent.smaller {
   .pma-journey-overlay {
     background: linear-gradient(to bottom, rgba(33, 52, 73, 1) 40%, rgba(33, 52, 73, 0.8) 70%, rgba(33, 52, 73, 0) 100%);
   }
+
+  .pma-journey-bg img {
+    display: none;
+  }
+
+  .pma-journey-overlay {
+    background: none;
+  }
 }
 
 /* ==========================================
@@ -19566,11 +19574,14 @@ header.transparent.smaller {
 }
 
 /* ── Mobile-only Become a Member button in nav ── */
-.mobile-only-member-btn {
+.mobile-only-member-btn,
+#mainmenu .mobile-only-member-btn,
+#mainmenu li.mobile-only-member-btn {
   display: none !important;
 }
 
 @media (max-width: 1199px) {
+  header.header-mobile #mainmenu li.mobile-only-member-btn,
   header.header-mobile .mobile-only-member-btn {
     display: block !important;
     border-bottom: none !important;
@@ -19578,6 +19589,7 @@ header.transparent.smaller {
     margin-bottom: 0 !important;
   }
 
+  header.header-mobile #mainmenu li.mobile-only-member-btn a,
   header.header-mobile .mobile-only-member-btn a {
     display: inline-flex !important;
     align-items: center !important;
@@ -19597,6 +19609,7 @@ header.transparent.smaller {
     white-space: nowrap !important;
   }
 
+  header.header-mobile #mainmenu li.mobile-only-member-btn a:hover,
   header.header-mobile .mobile-only-member-btn a:hover {
     background: #d49530 !important;
     color: #fff !important;
