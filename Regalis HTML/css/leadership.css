@@ -274,9 +274,10 @@
     width: 100%;
     max-width: 1150px;
     max-height: 90vh;
-    overflow-y: auto;
+    overflow: hidden;        /* modal itself does NOT scroll */
     display: flex;
     flex-direction: row;
+    position: relative;      /* anchor for the close button */
     transform: translateY(30px) scale(0.97);
     transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
     box-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
@@ -374,33 +375,38 @@
 /* Right panel */
 .pma-modal-right {
     flex: 1;
+    min-width: 0;
     padding: 28px 32px 32px;
-    overflow-y: auto;
+    overflow-y: auto;        /* only the right panel scrolls */
     position: relative;
+    max-height: 90vh;        /* matches modal max-height so it scrolls */
 }
 
 .pma-modal-close {
-    position: absolute;
-    top: 18px;
-    right: 20px;
-    width: 32px;
-    height: 32px;
+    position: absolute;      /* anchored to .pma-modal, not the scrolling panel */
+    top: 16px;
+    right: 18px;
+    width: 34px;
+    height: 34px;
     border: none;
-    background: transparent;
-    font-size: 20px;
-    color: #999;
+    background: rgba(255, 255, 255, 0.92);
+    font-size: 18px;
+    color: #555;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     line-height: 1;
+    z-index: 10;             /* always above scrolling content */
 }
 
 .pma-modal-close:hover {
-    background: var(--bg-light);
+    background: #ffffff;
     color: var(--primary-color);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
 }
 
 .pma-modal-badges {
@@ -562,22 +568,373 @@
     cursor: pointer;
 }
 
-/* Responsive */
-@media (max-width: 680px) {
+/* ==========================================================
+   MEMBER PROFILE MODAL — RESPONSIVE BREAKPOINTS
+   991px   Tablet landscape
+   767px   Tablet portrait / large phone
+   575px   Small phone
+   400px   Very small phone
+   ========================================================== */
+
+/* ── ≤ 991px  Tablet landscape ── */
+@media (max-width: 991px) {
+    /* Modal: shrink left panel width, allow full scrolling */
     .pma-modal {
-        flex-direction: column;
-        max-height: 95vh;
+        max-width: 740px;
+        max-height: 92vh;
+    }
+
+    /* Right panel scrolls within the 92vh modal */
+    .pma-modal-right {
+        padding: 24px 24px 28px;
+        max-height: 92vh;
     }
 
     .pma-modal-left {
-        width: 100%;
-        min-width: unset;
-        border-radius: 16px 16px 0 0;
-        padding-bottom: 24px;
+        width: 210px;
+        min-width: 210px;
+        padding-top: 220px;
     }
 
+    .pma-modal-img,
+    .pma-modal-img-placeholder {
+        height: 220px;
+    }
+
+    .pma-modal-left-name {
+        font-size: 18px;
+    }
+
+    /* Grid stays 2-col but narrower */
+    .pma-modal-grid {
+        gap: 16px 20px;
+    }
+
+    .pma-modal-badges {
+        padding-right: 36px;
+    }
+}
+
+/* ── ≤ 767px  Tablet portrait / large phone ── */
+@media (max-width: 767px) {
+    /* Overlay: tighter padding */
+    .pma-modal-overlay {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    /* Modal: stack vertically — whole modal scrolls as one unit */
+    .pma-modal {
+        flex-direction: column;
+        max-width: 100%;
+        max-height: 94vh;
+        overflow-y: auto;    /* re-enable scroll on the whole modal when stacked */
+        border-radius: 14px;
+    }
+
+    /* Right panel should NOT have its own scroll when stacked */
+    .pma-modal-right {
+        overflow-y: visible;
+        max-height: none;
+    }
+
+    /* Left panel: horizontal layout — photo left, info right */
+    .pma-modal-left {
+        width: 100%;
+        min-width: unset;
+        border-radius: 14px 14px 0 0;
+        flex-direction: row;
+        align-items: stretch;
+        padding: 0;
+        min-height: 220px;
+        overflow: hidden;
+    }
+
+    /* Photo: fills the full height of the left panel */
+    .pma-modal-img {
+        position: relative;
+        width: 180px;
+        min-width: 180px;
+        height: 100%;
+        min-height: 220px;
+        object-fit: cover;
+        object-position: center top;
+        flex-shrink: 0;
+        border-radius: 14px 0 0 0;
+        display: block;
+        top: auto;
+        left: auto;
+    }
+
+    .pma-modal-img-placeholder {
+        position: relative;
+        width: 180px;
+        min-width: 180px;
+        height: 100%;
+        min-height: 220px;
+        flex-shrink: 0;
+        border-radius: 14px 0 0 0;
+        top: auto;
+        left: auto;
+    }
+
+    /* Name/role/highlight fills the right side of left panel */
+    .pma-modal-left-info {
+        flex: 1;
+        padding: 20px 16px 20px 20px;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .pma-modal-left-name {
+        font-size: 17px;
+        margin-bottom: 4px;
+    }
+
+    .pma-modal-left-role {
+        font-size: 11.5px;
+        margin-bottom: 10px;
+    }
+
+    .pma-modal-left-highlight {
+        font-size: 11px;
+        padding: 8px 10px;
+        margin-top: 6px;
+    }
+
+    /* Close button: fixed to viewport top-right on mobile so it never scrolls away */
+    .pma-modal-close {
+        position: fixed;
+        top: 14px;
+        right: 14px;
+        z-index: 10001;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Right panel */
+    .pma-modal-right {
+        padding: 20px 18px 24px;
+    }
+
+    .pma-modal-badges {
+        padding-right: 34px;
+        gap: 6px;
+        margin-bottom: 16px;
+    }
+
+    .pma-modal-badge {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .pma-modal-about {
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+
+    /* Detail grid: 2-col still fits on tablet portrait */
+    .pma-modal-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px 18px;
+    }
+
+    .pma-modal-block-title {
+        font-size: 12px;
+    }
+
+    .pma-modal-list li {
+        font-size: 12.5px;
+    }
+
+    .pma-modal-exp-box {
+        padding: 10px 12px;
+    }
+
+    .pma-modal-exp-years {
+        font-size: 15px;
+    }
+}
+
+/* ── ≤ 575px  Small phone ── */
+@media (max-width: 575px) {
+    .pma-modal-overlay {
+        padding: 6px;
+    }
+
+    .pma-modal {
+        border-radius: 12px;
+        max-height: 96vh;
+    }
+
+    /* Left panel: keep min-height so photo has enough room */
+    .pma-modal-left {
+        min-height: 200px;
+    }
+
+    /* Left panel: keep horizontal but narrower photo */
+    .pma-modal-img {
+        width: 130px;
+        min-width: 130px;
+        height: 100%;
+        min-height: 200px;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .pma-modal-img-placeholder {
+        width: 130px;
+        min-width: 130px;
+        height: 100%;
+        min-height: 200px;
+    }
+
+    .pma-modal-left-info {
+        padding: 14px 12px 14px 14px;
+    }
+
+    .pma-modal-left-name {
+        font-size: 15px;
+    }
+
+    .pma-modal-left-role {
+        font-size: 10.5px;
+        margin-bottom: 8px;
+    }
+
+    .pma-modal-left-highlight {
+        display: none; /* hide italic quote on small phones to save space */
+    }
+
+    /* Right panel */
+    .pma-modal-right {
+        padding: 16px 14px 20px;
+    }
+
+    .pma-modal-close {
+        top: 12px;
+        right: 12px;
+        width: 28px;
+        height: 28px;
+        font-size: 17px;
+    }
+
+    .pma-modal-badges {
+        padding-right: 30px;
+        gap: 5px;
+        margin-bottom: 14px;
+    }
+
+    .pma-modal-badge {
+        font-size: 10.5px;
+        padding: 3px 8px;
+    }
+
+    .pma-modal-section-label {
+        font-size: 14px;
+    }
+
+    .pma-modal-about {
+        font-size: 12.5px;
+        line-height: 1.65;
+        margin-bottom: 16px;
+    }
+
+    /* Grid: single column on small phones */
     .pma-modal-grid {
         grid-template-columns: 1fr;
+        gap: 14px 0;
+    }
+
+    .pma-modal-block-title {
+        font-size: 11.5px;
+    }
+
+    .pma-modal-list li {
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .pma-modal-exp-box {
+        padding: 9px 10px;
+        gap: 10px;
+    }
+
+    .pma-modal-exp-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .pma-modal-exp-icon i {
+        font-size: 13px;
+    }
+
+    .pma-modal-exp-years {
+        font-size: 14px;
+    }
+
+    .pma-modal-exp-label {
+        font-size: 11px;
+    }
+}
+
+/* ── ≤ 400px  Very small phone ── */
+@media (max-width: 400px) {
+    .pma-modal-overlay {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    /* Full-width bottom sheet style on very tiny phones */
+    .pma-modal {
+        border-radius: 14px 14px 0 0;
+        max-height: 97vh;
+        width: 100%;
+    }
+
+    .pma-modal-left {
+        min-height: 175px;
+    }
+
+    .pma-modal-img,
+    .pma-modal-img-placeholder {
+        width: 110px;
+        min-width: 110px;
+        height: 100%;
+        min-height: 175px;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .pma-modal-left-info {
+        padding: 12px 10px 12px 12px;
+    }
+
+    .pma-modal-left-name {
+        font-size: 14px;
+    }
+
+    .pma-modal-left-role {
+        font-size: 10px;
+    }
+
+    .pma-modal-right {
+        padding: 14px 12px 18px;
+    }
+
+    .pma-modal-badge {
+        font-size: 10px;
+        padding: 2px 7px;
+    }
+
+    .pma-modal-about {
+        font-size: 12px;
+    }
+
+    .pma-modal-list li {
+        font-size: 11.5px;
     }
 }
 
@@ -605,12 +962,6 @@
 @media (max-width: 600px) {
     .pma-coming-soon-box { padding: 48px 20px; }
     .pma-coming-soon-box h3 { font-size: 22px; }
-}
-
-/* Modal — already has 680px breakpoint, add 400px for very small */
-@media (max-width: 400px) {
-    .pma-modal-right { padding: 20px 16px 24px; }
-    .pma-modal-left-name { font-size: 17px; }
 }
 
 
