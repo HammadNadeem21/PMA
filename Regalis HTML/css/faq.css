@@ -19,6 +19,125 @@
     margin-bottom: 32px;
 }
 
+/* Disable WOW.js on accordion items — prevents visibility:hidden gaps between items */
+.pma-faq-accordion .pma-faq-item.wow {
+    visibility: visible !important;
+    opacity: 1 !important;
+    animation-name: none !important;
+    animation-duration: 0s !important;
+}
+
+/* ── Responsive ── */
+
+/* ≤ 991px  Tablet */
+@media (max-width: 991px) {
+    .pma-faq-button {
+        padding: 16px 20px !important;
+        gap: 12px !important;
+        align-items: flex-start !important; /* top-align so wrapping text doesn't push number/chevron */
+    }
+
+    .pma-faq-number {
+        margin-top: 1px;
+        flex-shrink: 0;
+    }
+
+    .pma-faq-chevron {
+        margin-top: 2px;
+        flex-shrink: 0;
+    }
+
+    .pma-faq-question {
+        font-size: 13px;
+        line-height: 1.4;
+        white-space: normal;
+    }
+
+    .pma-faq-body {
+        padding: 4px 20px 18px 62px !important;
+    }
+}
+
+/* ≤ 767px  Tablet portrait / large phone */
+@media (max-width: 767px) {
+    .pma-faq-button {
+        padding: 14px 16px !important;
+        gap: 10px !important;
+    }
+
+    .pma-faq-number {
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+    }
+
+    .pma-faq-question {
+        font-size: 12.5px;
+    }
+
+    .pma-faq-body {
+        padding: 2px 16px 16px 52px !important;
+        font-size: 13px !important;
+    }
+}
+
+/* ≤ 575px  Small phone */
+@media (max-width: 575px) {
+    .pma-faq-section {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+
+    .pma-faq-button {
+        padding: 12px 14px !important;
+        gap: 10px !important;
+    }
+
+    .pma-faq-number {
+        width: 24px;
+        height: 24px;
+        font-size: 11px;
+    }
+
+    .pma-faq-question {
+        font-size: 12px;
+        letter-spacing: 0.01em;
+    }
+
+    .pma-faq-chevron {
+        font-size: 12px;
+    }
+
+    .pma-faq-body {
+        padding: 2px 14px 14px 24px !important;
+        font-size: 13px !important;
+        line-height: 1.7 !important;
+    }
+}
+
+/* ≤ 400px  Very small phone */
+@media (max-width: 400px) {
+    .pma-faq-button {
+        padding: 11px 12px !important;
+        gap: 8px !important;
+    }
+
+    .pma-faq-number {
+        width: 22px;
+        height: 22px;
+        font-size: 10px;
+    }
+
+    .pma-faq-question {
+        font-size: 11.5px;
+    }
+
+    .pma-faq-body {
+        padding: 2px 12px 12px 12px !important;
+        font-size: 12.5px !important;
+    }
+}
+
 /* Each item */
 .pma-faq-item {
     background: #ffffff;
@@ -54,6 +173,9 @@
     text-align: left;
     cursor: pointer;
     transition: background 0.2s !important;
+    /* Prevent Bootstrap min-height from adding internal whitespace */
+    min-height: 0 !important;
+    line-height: 1.4 !important;
 }
 
 .pma-faq-button:not(.collapsed) {
