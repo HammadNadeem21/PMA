@@ -253,7 +253,7 @@
     inset: 0;
     background: rgba(0, 0, 0, 0.55);
     z-index: 9999;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -263,6 +263,7 @@
 }
 
 .pma-modal-overlay.is-open {
+    display: flex;
     opacity: 1;
     visibility: visible;
 }
@@ -610,4 +611,62 @@
 @media (max-width: 400px) {
     .pma-modal-right { padding: 20px 16px 24px; }
     .pma-modal-left-name { font-size: 17px; }
+}
+
+
+/* ── Fix: WOW.js white space gap in leadership directory section ──
+   Disable WOW animations inside this section so elements are
+   always fully visible on load — no hidden state, no gaps.    */
+#pma-leadership-directory .wow,
+#pma-coming-soon-panel .wow,
+#pma-subcommittee-panel .wow {
+    visibility: visible !important;
+    opacity: 1 !important;
+    animation-name: none !important;
+    animation-duration: 0s !important;
+}
+
+/* ── Force auto height — prevent artificial space at section bottom ── */
+.pma-leadership-directory-section {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    padding-bottom: 80px !important;
+}
+
+/* Ensure Bootstrap row doesn't create overflow that gets painted as white space */
+.pma-leadership-directory-section > .container > .row,
+.pma-leadership-directory-section .pma-directory-grid,
+.pma-leadership-directory-section .container {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+}
+
+/* Mediators tab — 33 cards must flow naturally, no inner scroll, no height cap */
+.pma-leadership-directory-section .pma-member-col {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+}
+
+/* Swiper wrapper on leadership page — prevent height bleed */
+.pma-leadership-directory-section .swiper-wrapper,
+.pma-leadership-directory-section .swiper-slide {
+    height: auto !important;
+    padding-bottom: 0 !important;
+}
+
+/* Ensure nothing below the section (modal, extra-wrap) contributes height */
+.pma-modal-overlay,
+#extra-wrap {
+    position: fixed !important;
+    height: 0 !important;
+    overflow: hidden;
+}
+
+.pma-modal-overlay.is-open,
+#extra-wrap.open {
+    height: 100% !important;
+    overflow: visible;
 }
