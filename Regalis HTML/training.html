@@ -19,6 +19,8 @@
     <link href="css/coloring.css" rel="stylesheet" type="text/css" >
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+    <!-- Form feedback message styles (shared with contact page) -->
+    <link href="css/contact.css" rel="stylesheet" type="text/css" >
 
 </head>
 
@@ -523,7 +525,7 @@
                         <h3>Registration Details</h3>
                     </div>
 
-                    <form class="pma-join-form-grid" id="pma-join-form" action="#" method="POST">
+                    <form class="pma-join-form-grid" id="pma-join-form" action="register.php" method="POST">
                         <!-- Full Name -->
                         <div class="pma-join-form-group">
                             <label for="pma-join-name">Full Name <span class="pma-required">*</span></label>
@@ -599,6 +601,10 @@
                                 <i class="fa fa-paper-plane" aria-hidden="true"></i>
                             </button>
                         </div>
+
+                        <!-- Success / Error messages -->
+                        <div id="pma_register_success_message" class="pma-form-success" style="display:none;"><i class="fa fa-check-circle" aria-hidden="true"></i> Your registration has been submitted successfully. We will contact you within 24 hours.</div>
+                        <div id="pma_register_error_message" class="pma-form-error" style="display:none;"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Sorry, there was an error submitting your registration. Please try again.</div>
 
                         <!-- Privacy Note -->
                         <div class="pma-join-form-privacy">
@@ -1160,6 +1166,40 @@
     <script src="js/custom-swiper-1.js"></script>
     <script>
     jQuery(function ($) {
+
+        // ── Enrollment form AJAX submission ──
+        var $regForm    = $('#pma-join-form');
+        var $regSuccess = $('#pma_register_success_message');
+        var $regError   = $('#pma_register_error_message');
+        var $regSubmit  = $regForm.find('button[type=submit]');
+
+        $regForm.on('submit', function (e) {
+            e.preventDefault();
+
+            $regSuccess.hide();
+            $regError.hide();
+
+            // Show loading state on button
+            $regSubmit.prop('disabled', true).html('<span>Sending...</span> <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>');
+
+            $.post('register.php', $regForm.serialize())
+                .done(function (response) {
+                    if ($.trim(response) === 'sent') {
+                        $regSuccess.show();
+                        $regForm[0].reset();
+                    } else {
+                        $regError.show();
+                    }
+                })
+                .fail(function () {
+                    $regError.show();
+                })
+                .always(function () {
+                    $regSubmit.prop('disabled', false).html('<span>Apply for Enrollment</span> <i class="fa fa-paper-plane" aria-hidden="true"></i>');
+                });
+        });
+
+        // ── Training course popups ──
         $('.pma-training-popup-trigger').magnificPopup({
             type: 'inline',
             midClick: true,
