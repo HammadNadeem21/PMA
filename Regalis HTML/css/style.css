@@ -13179,7 +13179,7 @@ header.transparent.smaller {
 
 /* ===== PMA What is Mediation ===== */
 #pma-mediation {
-  padding: 40px 0;
+  padding: 0px 0;
   margin: 0;
   overflow: hidden;
   background-color: #213449;
@@ -13210,7 +13210,7 @@ header.transparent.smaller {
   position: relative;
   z-index: 2;
   background: var(--primary-color);
-  padding: 64px 56px;
+  padding: 0 56px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13261,7 +13261,7 @@ header.transparent.smaller {
 
   .pma-mediation-content {
     min-height: auto;
-    padding: 48px 32px;
+    padding: 0 32px;
   }
 }
 
@@ -13288,7 +13288,7 @@ header.transparent.smaller {
   }
 
   .pma-mediation-content {
-    padding: 40px 16px;
+    padding: 0 16px;
   }
 
   .pma-mediation-title {
