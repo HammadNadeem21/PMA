@@ -19708,14 +19708,108 @@ header.transparent.smaller {
 }
 
 /* Hide the Google Translate toolbar injected at top */
-.goog-te-banner-frame,
-.skiptranslate {
+.goog-te-banner-frame {
     display: none !important;
 }
 
-body {
-    top: 0 !important;
+/* Only hide the top bar skiptranslate, not the hidden element container */
+body > .skiptranslate {
+    display: none !important;
 }
+
+/* Prevent Google Translate from pushing the page down */
+html body {
+    top: 0 !important;
+    position: relative !important;
+}
+
+/* Hide the Google Translate "translated to" notification */
+.goog-te-spinner-pos,
+#goog-gt-tt,
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+/* Prevent font tag color overrides from breaking layout */
+font[color] {
+    color: inherit !important;
+}
+
+.goog-te-menu-frame {
+    display: none !important;
+}
+
+/* ==========================================================
+   Google Translate font-tag layout fix
+   When GT wraps text nodes in <font> tags they become
+   unwanted flex/grid children and break layouts.
+   Make every injected <font> behave like inline content.
+   ========================================================== */
+
+/* Global: font tags should never be block-level */
+font {
+    display: inline !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+    float: none !important;
+    clear: none !important;
+    vertical-align: baseline !important;
+}
+
+/* Row / flex containers: ignore injected font children in flex sizing */
+.row > font,
+.de-flex > font,
+.de-flex-col > font,
+[class*="pma-"] > font,
+[class*="col-"] > font,
+section > font,
+header > font,
+main > font,
+footer > font,
+div > font {
+    display: contents !important;
+}
+
+/* Hero sections — ensure bg image containers keep their height */
+.pma-hero-bg,
+#pma-about-hero .pma-hero-bg,
+#pma-mediation-hero .pma-hero-bg,
+#pma-training-hero .pma-hero-bg,
+#pma-contact-hero .pma-hero-bg,
+#pma-resources-hero .pma-hero-bg,
+#pma-faq-hero .pma-hero-bg,
+#pma-leadership-hero .pma-hero-bg,
+#pma-events-hero .pma-hero-bg,
+#pma-services-hero .pma-hero-bg {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Sections that use min-height to show background images */
+.pma-mediation-section .row,
+.pma-mediation-media,
+.pma-mediation-content {
+    min-height: 460px;
+}
+
+/* Prevent translated sections from collapsing to zero height */
+[class*="pma-hero"],
+[class*="pma-section"],
+[id*="pma-hero"] {
+    position: relative;
+}
+
 
 /* Scrolled header — adjust button border colour */
 header.header-scrolled .pma-lang-btn {
