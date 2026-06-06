@@ -19615,3 +19615,121 @@ header.transparent.smaller {
     color: #fff !important;
   }
 }
+
+
+/* ==========================================================
+   PMA Language Switcher
+   ========================================================== */
+
+.pma-lang-switcher {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.pma-lang-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    border-radius: 6px;
+    color: #ffffff;
+    font-family: var(--body-font);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.pma-lang-btn:hover {
+    border-color: var(--secondary-color);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.pma-lang-btn .fa-globe {
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.pma-lang-arrow {
+    font-size: 10px;
+    transition: transform 0.2s;
+}
+
+.pma-lang-open .pma-lang-arrow {
+    transform: rotate(180deg);
+}
+
+/* Dropdown list */
+.pma-lang-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 160px;
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(33, 52, 73, 0.14);
+    list-style: none;
+    margin: 0;
+    padding: 6px 0;
+    z-index: 9999;
+}
+
+.pma-lang-open .pma-lang-dropdown {
+    display: block;
+}
+
+.pma-lang-dropdown li {
+    padding: 9px 16px;
+    font-family: var(--body-font);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+}
+
+.pma-lang-dropdown li:hover {
+    background: rgba(var(--primary-color-rgb), 0.07);
+    color: var(--primary-color);
+}
+
+.pma-lang-dropdown li.pma-lang-active {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* Hide the Google Translate toolbar injected at top */
+.goog-te-banner-frame,
+.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
+/* Scrolled header — adjust button border colour */
+header.header-scrolled .pma-lang-btn {
+    border-color: rgba(33, 52, 73, 0.3);
+    color: var(--primary-color);
+}
+
+header.header-scrolled .pma-lang-btn .fa-globe {
+    color: var(--secondary-color);
+}
+
+/* Mobile: hide switcher with the rest of sm-hide items */
+@media (max-width: 991px) {
+    .pma-lang-switcher {
+        display: none;
+    }
+}
