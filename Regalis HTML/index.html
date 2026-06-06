@@ -186,25 +186,6 @@
 
                         <div class="de-flex-col">
                             <div class="sm-hide">
-                                <!-- Google Translate Custom Dropdown -->
-                                <div class="pma-lang-switcher" id="pma-lang-switcher">
-                                    <button class="pma-lang-btn" id="pma-lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
-                                        <i class="fa fa-globe" aria-hidden="true"></i>
-                                        <span id="pma-lang-current">EN</span>
-                                        <i class="fa fa-chevron-down pma-lang-arrow" aria-hidden="true"></i>
-                                    </button>
-                                    <ul class="pma-lang-dropdown" id="pma-lang-dropdown" role="listbox">
-                                        <li data-lang="en"   data-label="EN">🇬🇧 English</li>
-                                        <li data-lang="ur"   data-label="UR">🇵🇰 Urdu</li>
-                                        <li data-lang="sd"   data-label="SD">🌐 Sindhi</li>
-                                        <li data-lang="ps"   data-label="PS">🌐 Pashto</li>
-                                        <li data-lang="zh-CN" data-label="中文">🇨🇳 Chinese</li>
-                                        <li data-lang="ar"   data-label="AR">🌐 Arabic</li>
-                                    </ul>
-                                </div>
-                                <!-- Hidden Google Translate element -->
-                                <div id="google_translate_element" style="display:none;"></div>
-
                                 <a href="become-a-member.html" class="pma-btn pma-btn--primary pma-btn--nav">Become a Member</a>
                             </div>
 
@@ -248,7 +229,6 @@
                 </div>
             </div>
         </section>
-
 
         <section class="p-0 bg-dark-2 text-light section-dark overflow-hidden">
             <div class="container-fluid">
@@ -852,9 +832,6 @@
             </div>
         </section>
 
-
-
-
        
 
      
@@ -1019,7 +996,6 @@
     </div>
 </footer>
 
-
     <!-- Javascript Files
     ================================================== -->
     <script src="js/vendors.js"></script>
@@ -1028,99 +1004,7 @@
     <!-- swiper slider -->
     <script src="js/swiper.js"></script>
     <script src="js/custom-swiper-1.js"></script>
-
-    <!-- Google Translate API -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,ur,sd,ps,zh-CN,ar',
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <!-- Custom language switcher logic -->
-    <script>
-    (function () {
-        var btn      = document.getElementById('pma-lang-btn');
-        var dropdown = document.getElementById('pma-lang-dropdown');
-        var current  = document.getElementById('pma-lang-current');
-        var switcher = document.getElementById('pma-lang-switcher');
-
-        // Toggle dropdown
-        btn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            var open = switcher.classList.toggle('pma-lang-open');
-            btn.setAttribute('aria-expanded', open);
-        });
-
-        // Close on outside click
-        document.addEventListener('click', function () {
-            switcher.classList.remove('pma-lang-open');
-            btn.setAttribute('aria-expanded', 'false');
-        });
-
-        // Language selection
-        dropdown.addEventListener('click', function (e) {
-            var li = e.target.closest('li');
-            if (!li) return;
-
-            var lang  = li.getAttribute('data-lang');
-            var label = li.getAttribute('data-label');
-
-            // Update button label
-            current.textContent = label;
-
-            // Mark active
-            dropdown.querySelectorAll('li').forEach(function (el) {
-                el.classList.remove('pma-lang-active');
-            });
-            li.classList.add('pma-lang-active');
-
-            // Close dropdown
-            switcher.classList.remove('pma-lang-open');
-            btn.setAttribute('aria-expanded', 'false');
-
-            // Trigger Google Translate
-            if (lang === 'en') {
-                // Restore original language
-                var restore = document.querySelector('.goog-te-banner-frame');
-                if (restore) {
-                    var frame = restore.contentDocument || restore.contentWindow.document;
-                    var restoreBtn = frame.querySelector('.goog-te-banner-content .goog-close-link');
-                    if (restoreBtn) restoreBtn.click();
-                }
-                // fallback: reload with no cookie
-                var cookie = document.cookie.match(/googtrans=([^;]+)/);
-                if (cookie) {
-                    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-                    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname + ';';
-                    location.reload();
-                }
-            } else {
-                // Set googtrans cookie and reload
-                var cookieVal = '/en/' + lang;
-                document.cookie = 'googtrans=' + cookieVal + '; path=/;';
-                document.cookie = 'googtrans=' + cookieVal + '; path=/; domain=' + location.hostname + ';';
-                location.reload();
-            }
-        });
-
-        // Reflect current language from cookie on load
-        var match = document.cookie.match(/googtrans=\/en\/([^;]+)/);
-        if (match) {
-            var activeLang = decodeURIComponent(match[1]);
-            var activeItem = dropdown.querySelector('[data-lang="' + activeLang + '"]');
-            if (activeItem) {
-                current.textContent = activeItem.getAttribute('data-label');
-                activeItem.classList.add('pma-lang-active');
-            }
-        }
-    })();
-    </script>
-
+    
 </body>
 
 </html>

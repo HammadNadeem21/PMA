@@ -188,24 +188,6 @@
 
                         <div class="de-flex-col">
                             <div class="sm-hide">
-                                <!-- Google Translate Custom Dropdown -->
-                                <div class="pma-lang-switcher" id="pma-lang-switcher">
-                                    <button class="pma-lang-btn" id="pma-lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
-                                        <i class="fa fa-globe" aria-hidden="true"></i>
-                                        <span id="pma-lang-current">EN</span>
-                                        <i class="fa fa-chevron-down pma-lang-arrow" aria-hidden="true"></i>
-                                    </button>
-                                    <ul class="pma-lang-dropdown" id="pma-lang-dropdown" role="listbox">
-                                        <li data-lang="en"    data-label="EN">&#127468;&#127463; English</li>
-                                        <li data-lang="ur"    data-label="UR">&#127477;&#127472; Urdu</li>
-                                        <li data-lang="sd"    data-label="SD">&#127760; Sindhi</li>
-                                        <li data-lang="ps"    data-label="PS">&#127760; Pashto</li>
-                                        <li data-lang="zh-CN" data-label="&#20013;&#25991;">&#127464;&#127475; Chinese</li>
-                                        <li data-lang="ar"    data-label="AR">&#127760; Arabic</li>
-                                    </ul>
-                                </div>
-                                <!-- Hidden Google Translate element -->
-                                <div id="google_translate_element" style="display:none;"></div>
                                 <a href="become-a-member.html" class="pma-btn pma-btn--primary pma-btn--nav">Become a Member</a>
                             </div>
 
@@ -288,7 +270,6 @@
         </div>
 
       </section>
-
 
     <section id="pma-contact-form-section" class="pma-contact-form-section">
         <div class="container">
@@ -573,7 +554,6 @@
     </div>
 </footer>
 
-
     <!-- Javascript Files
     ================================================== -->
     <script src="js/vendors.js"></script>
@@ -617,74 +597,7 @@
         });
     });
     </script>
-
-
-    <!-- Google Translate API -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,ur,sd,ps,zh-CN,ar',
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <!-- Custom language switcher logic -->
-    <script>
-    (function () {
-        var btn      = document.getElementById('pma-lang-btn');
-        var dropdown = document.getElementById('pma-lang-dropdown');
-        var current  = document.getElementById('pma-lang-current');
-        var switcher = document.getElementById('pma-lang-switcher');
-
-        btn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            var open = switcher.classList.toggle('pma-lang-open');
-            btn.setAttribute('aria-expanded', open);
-        });
-
-        document.addEventListener('click', function () {
-            switcher.classList.remove('pma-lang-open');
-            btn.setAttribute('aria-expanded', 'false');
-        });
-
-        dropdown.addEventListener('click', function (e) {
-            var li = e.target.closest('li');
-            if (!li) return;
-            var lang  = li.getAttribute('data-lang');
-            var label = li.getAttribute('data-label');
-            current.textContent = label;
-            dropdown.querySelectorAll('li').forEach(function (el) { el.classList.remove('pma-lang-active'); });
-            li.classList.add('pma-lang-active');
-            switcher.classList.remove('pma-lang-open');
-            btn.setAttribute('aria-expanded', 'false');
-
-            if (lang === 'en') {
-                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname + ';';
-                location.reload();
-            } else {
-                var cookieVal = '/en/' + lang;
-                document.cookie = 'googtrans=' + cookieVal + '; path=/;';
-                document.cookie = 'googtrans=' + cookieVal + '; path=/; domain=' + location.hostname + ';';
-                location.reload();
-            }
-        });
-
-        var match = document.cookie.match(/googtrans=\/en\/([^;]+)/);
-        if (match) {
-            var activeLang = decodeURIComponent(match[1]);
-            var activeItem = dropdown.querySelector('[data-lang="' + activeLang + '"]');
-            if (activeItem) {
-                current.textContent = activeItem.getAttribute('data-label');
-                activeItem.classList.add('pma-lang-active');
-            }
-        }
-    })();
-    </script>
-
+    
 </body>
 
 </html>
