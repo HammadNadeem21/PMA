@@ -138,12 +138,41 @@ header.smaller.scroll-light .pma-lang-selector:hover .pma-lang-btn i.fa-caret-do
 }
 
 /* ==========================================================
+   RTL Language Adaptations (Arabic, Urdu, Pashto, Sindhi)
+   Translator Button Only - Service Cards handled in style.css
+   ========================================================== */
+
+body.rtl .pma-lang-selector-wrapper {
+  margin-right: 0;
+  margin-left: 25px;
+}
+
+body.rtl .pma-lang-dropdown {
+  right: auto;
+  left: 0;
+}
+
+body.rtl .pma-lang-option {
+  text-align: right;
+}
+
+body.rtl .pma-lang-option:hover {
+  padding-left: 16px;
+  padding-right: 20px;
+}
+
+/* ==========================================================
    Responsive Adaptations
    ========================================================== */
 
 @media (max-width: 991px) {
   .pma-lang-selector-wrapper {
     margin-right: 15px;
+  }
+  
+  body.rtl .pma-lang-selector-wrapper {
+    margin-right: 0;
+    margin-left: 15px;
   }
   
   .pma-lang-btn {
@@ -161,6 +190,11 @@ header.smaller.scroll-light .pma-lang-selector:hover .pma-lang-btn i.fa-caret-do
     margin-right: 12px;
   }
   
+  body.rtl .pma-lang-selector-wrapper {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+  
   header.header-mobile .pma-lang-btn {
     color: #ffffff;
     border-color: rgba(255, 255, 255, 0.25);
@@ -172,3 +206,40 @@ header.smaller.scroll-light .pma-lang-selector:hover .pma-lang-btn i.fa-caret-do
     border-color: rgba(0, 0, 0, 0.18);
   }
 }
+
+/* ==========================================================
+   RTL Override Styles (Urdu support)
+   ========================================================== */
+body.rtl .pma-lang-selector-wrapper {
+  margin-right: 0;
+  margin-left: 25px;
+}
+
+body.rtl .pma-lang-dropdown {
+  right: auto;
+  left: 0;
+}
+
+body.rtl .pma-lang-option {
+  text-align: right;
+}
+
+body.rtl .pma-lang-option:hover {
+  padding-left: 16px;
+  padding-right: 20px;
+}
+
+@media (max-width: 991px) {
+  body.rtl .pma-lang-selector-wrapper {
+    margin-right: 0;
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  body.rtl .pma-lang-selector-wrapper {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}
+

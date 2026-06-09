@@ -19616,3 +19616,166 @@ header.transparent.smaller {
   }
 }
 
+/* ================================================== */
+/* RTL Language Support (Arabic, Urdu, Pashto, Sindhi) */
+/* ================================================== */
+
+body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ── Why Choose Section - RTL ── */
+body.rtl .pma-why-choose-intro {
+  padding: 24px 0 24px 48px;
+  border-right: none;
+  border-left: 1px solid #ddd5c8;
+  text-align: center;
+}
+
+body.rtl .pma-why-choose-divider {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+body.rtl .pma-why-choose-intro .pma-btn {
+  align-self: center;
+}
+
+body.rtl .pma-why-choose-lead {
+  text-align: center;
+}
+
+body.rtl .pma-why-feature {
+  border-right: none;
+  border-left: 1px solid #ddd5c8;
+  text-align: center;
+}
+
+body.rtl .pma-why-feature:last-child {
+  border-left: none;
+}
+
+/* ── Why Choose Media Queries - RTL ── */
+@media only screen and (max-width: 991px) {
+  body.rtl .pma-why-choose-intro {
+    border-right: none;
+    border-bottom: 1px solid #ddd5c8;
+    border-left: none;
+  }
+
+  body.rtl .pma-why-feature {
+    flex: 1 1 33.333%;
+    border-right: none;
+    border-bottom: 1px solid #ddd5c8;
+    border-left: none;
+  }
+
+  body.rtl .pma-why-feature:nth-child(3n) {
+    border-left: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body.rtl .pma-why-feature:nth-child(odd) {
+    border-right: none;
+    border-left: 1px solid #ddd5c8;
+  }
+
+  body.rtl .pma-why-feature:nth-child(even) {
+    border-left: none;
+  }
+}
+
+/* ── Training Section - RTL ── */
+body.rtl .pma-training-main {
+  text-align: center;
+}
+
+body.rtl .pma-training-divider {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+body.rtl .pma-training-text {
+  text-align: center;
+}
+
+body.rtl .pma-training-feature-item {
+  text-align: center;
+}
+
+body.rtl .pma-training-card {
+  flex-direction: row-reverse;
+  text-align: center;
+}
+
+body.rtl .pma-training-card-logo {
+  text-align: center;
+}
+
+body.rtl .pma-training-card-body {
+  text-align: center;
+}
+
+/* ── Mediation Section - RTL ── */
+body.rtl .pma-mediation-content {
+  text-align: center;
+}
+
+body.rtl .pma-mediation-divider {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+body.rtl .pma-mediation-text {
+  text-align: center;
+}
+
+/* ── Service Cards - RTL ── */
+body.rtl .pma-service-card {
+  text-align: center;
+}
+
+body.rtl .pma-service-card h3 {
+  text-align: center;
+}
+
+body.rtl .pma-service-card p {
+  text-align: center;
+}
+
+body.rtl .pma-service-arrow {
+  left: auto;
+  right: 22px;
+}
+
+body.rtl .pma-service-card:hover .pma-service-arrow i {
+  transform: translateX(-4px);
+}
+
+/* ── Translator Button - RTL ── */
+body.rtl .pma-lang-selector-wrapper {
+  margin-right: 0;
+  margin-left: 25px;
+}
+
+body.rtl .pma-lang-dropdown {
+  right: auto;
+  left: 0;
+}
+
+body.rtl .pma-lang-option {
+  text-align: right;
+}
+
+body.rtl .pma-lang-option:hover {
+  padding-left: 16px;
+  padding-right: 20px;
+}
+
+/* ── General RTL Fixes ── */
+body.rtl .pma-about-heading-accent {
+  /* Yellow accent remains same */
+}
+

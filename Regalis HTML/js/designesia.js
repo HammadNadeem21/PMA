@@ -1836,5 +1836,13 @@
         });
         gridGallery();
     });
+
+    // Load PMA Language Translator dynamically on all pages
+    (function() {
+        const script = document.createElement('script');
+        script.src = 'js/translator.js';
+        script.defer = true;
+        document.body.appendChild(script);
+    })();
     
  })(jQuery);

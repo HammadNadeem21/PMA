@@ -1,5 +1,5 @@
 {
-    "en": {
+  "en": {
     "nav": {
       "home": "Home",
       "about": "About PMA",
@@ -11,6 +11,98 @@
       "events": "Events",
       "contact": "Contact Us",
       "membership": "Become a Member"
+    },
+    "hero": {
+      "title_part1": "Promoting Peaceful Resolution",
+      "title_part2": "Through Dialogue, Understanding & Respect",
+      "description1": "We promote mediation as an effective, efficient, confidential, and collaborative alternative to traditional litigation.",
+      "description2": "Through structured dialogue and professional facilitation, we help individuals, families, businesses, and institutions resolve conflicts amicably — while preserving relationships and reducing time, cost, and stress.",
+      "btn_consult": "Request a Free Consultation",
+      "btn_training": "Explore Training Programs"
+    },
+    "features": {
+      "confidential_title": "Confidential & Private",
+      "confidential_desc": "Your discussions remain fully secure and protected.",
+      "faster_title": "Faster Resolution",
+      "faster_desc": "Resolve disputes in days or weeks instead of months.",
+      "cost_title": "Cost-Effective Solution",
+      "cost_desc": "Avoid expensive legal fees and lengthy court battles."
+    },
+    "glance": {
+      "title": "PMA at a Glance",
+      "founded": "Founded 2013–14",
+      "founded_label": "Pakistan’s First Mediation Association",
+      "mediations": "2000+",
+      "mediations_label": "Successful Mediations & Facilitation Cases",
+      "mediators": "100+",
+      "mediators_label": "Certified Mediators Across Pakistan",
+      "training": "100+",
+      "training_label": "Training Programs Delivered",
+      "impact": "National Impact",
+      "impact_label": "Advancing ADR Awareness & Policy Reform"
+    },
+    "about": {
+      "years": "YEARS",
+      "stat_label": "Promoting Mediation Excellence",
+      "tab1_title": "About PMA",
+      "tab1_text": "PMA (Pakistan Mediators Association) is an independent institution established to promote peaceful dispute resolution through mediation and Alternative Dispute Resolution (ADR) across Pakistan. With internationally accredited mediators and trainers, PMA works actively to advance mediation awareness, professional training, institutional ADR development, and policy advocacy. Our mission is to create accessible, confidential, and effective conflict resolution systems that help individuals, businesses, organizations, and communities resolve disputes efficiently while preserving relationships and reducing unnecessary litigation.",
+      "tab2_title": "Our Vision",
+      "tab2_text": "To establish mediation as the leading and most trusted method of dispute resolution in Pakistan, promoting a culture of constructive dialogue, mutual understanding, and peaceful coexistence.",
+      "tab3_title": "Our Mission",
+      "tab3_mission1": "To promote mediation as an accessible and effective dispute resolution mechanism",
+      "tab3_mission2": "To train and accredit mediators in line with international standards",
+      "tab3_mission3": "To collaborate with courts, government institutions, and private sectors",
+      "tab3_mission4": "To raise awareness about the benefits of mediation across society",
+      "tab4_title": "Our Impact",
+      "tab4_text1": "PMA has successfully trained hundreds of lawyers, Judges, professionals and has played a key role in promoting court-connected mediation initiatives in Pakistan.",
+      "tab4_text2": "We continue to work closely with the judiciary and stakeholders to strengthen mediation as a sustainable dispute resolution system.",
+      "info_phone_label": "Need Our Services?",
+      "info_phone_val": "Call: +92 300 000 0000",
+      "info_hours_label": "Opening Hours",
+      "info_hours_val": "Mon-Fri (9am to 5pm)",
+      "info_email_label": "Email Us",
+      "info_email_val": "info@pma.org.pk"
+    },
+    "mediation": {
+    "title": "What is <span class='pma-about-heading-accent'>Mediation?</span>",
+    "text1": "Mediation is a voluntary, confidential, and structured process where a neutral mediator helps the parties in conflict to communicate, understand each other's perspectives and reach a mutually acceptable solution.",
+    "text2": "It empowers the parties to shape the outcome, preserves relationships and saves time, cost and emotional stress.",
+    "btn": "Understand the Mediation Process"
+  },
+  "why_choose": {
+    "title": "Why Choose <span class='pma-about-heading-accent'>PMA?</span>",
+    "lead": "We combine international standards with local understanding to deliver ethical, effective, and sustainable ADR solutions.",
+    "btn": "Learn More About PMA",
+    "features": {
+      "f1_title": "International Standards",
+      "f1_desc": "We follow globally recognized mediation principles and practices.",
+      "f2_title": "Experienced & Certified Mediators",
+      "f2_desc": "Our panel includes highly trained and accredited professionals.",
+      "f3_title": "Confidential Process",
+      "f3_desc": "Your privacy is our top priority at every stage.",
+      "f4_title": "Faster & Amicable Outcomes",
+      "f4_desc": "We help resolve disputes efficiently and effectively.",
+      "f5_title": "Cost Effective",
+      "f5_desc": "A practical alternative to expensive and lengthy litigation."
     }
+  },
+  "training": {
+    "title": "Professional Training & <span class='pma-about-heading-accent'>Accreditation</span>",
+    "text": "PMA provides internationally aligned mediation training and professional development programs designed for lawyers, corporate professionals, HR teams, educators, and aspiring mediators. Our workshops and certification programs focus on practical dispute resolution skills, negotiation strategies, communication, and ADR frameworks.",
+    "card_text": "Our training programs meet international standards and empower professionals to become effective, ethical, and globally competent mediators.",
+    "btn": "Explore Training Programs"
+  },
+  "services": {
+    "title": "Our <span class='pma-about-heading-accent'>Core</span> Services",
+    "list": {
+      "s1": { "title": "Commercial & Corporate Mediation", "desc": "Resolving business, partnership, contractual, and commercial disputes efficiently." },
+      "s2": { "title": "Court-Referred Mediation", "desc": "Alternative dispute resolution support for court-connected matters." },
+      "s3": { "title": "Family & Community Mediation", "desc": "Helping families and communities resolve disputes peacefully and respectfully." },
+      "s4": { "title": "Workplace & Organizational Disputes", "desc": "Addressing internal workplace conflicts and organizational disagreements." },
+      "s5": { "title": "IMI-Certified Mediator Training", "desc": "Professional mediator certification and skills development programs." },
+      "s6": { "title": "Workshops & Awareness Programs", "desc": "Educational sessions promoting ADR awareness and conflict resolution culture." },
+      "s7": { "title": "Institutional & Policy Advisory", "desc": "Supporting institutions in building ADR systems and mediation frameworks." }
+    }
+  }
   }
 }
