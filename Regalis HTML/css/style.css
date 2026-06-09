@@ -177,12 +177,20 @@ Table of content:
 html {
   background: var(--bg-default);
   overflow-x: hidden;
+  scrollbar-gutter: stable;
   padding: 0;
   margin: 0;
   /* Flexbox sticky footer: apply flex container to html */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+/* Applied by translator.js during Bootstrap LTR↔RTL stylesheet swap.
+   Hides the scrollbar for exactly two animation frames to prevent
+   a layout-width flash when the new stylesheet loads. */
+html.lang-switching {
+  overflow: hidden !important;
 }
 
 body {
@@ -13896,11 +13904,21 @@ header.transparent.smaller {
   .pma-services-row-bottom > .offset-lg-1 {
     margin-left: 8.33333333%;
   }
+
+  /* RTL: flip the centering offset from left to right */
+  body.rtl .pma-services-row-bottom > .offset-lg-1 {
+    margin-left: 0;
+    margin-right: 8.33333333%;
+  }
 }
 
 @media only screen and (max-width: 991px) {
   .pma-services-row-bottom > .offset-lg-1 {
     margin-left: 0;
+  }
+
+  body.rtl .pma-services-row-bottom > .offset-lg-1 {
+    margin-right: 0;
   }
 }
 

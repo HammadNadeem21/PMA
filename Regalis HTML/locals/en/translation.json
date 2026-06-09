@@ -29,7 +29,7 @@
       "cost_desc": "Avoid expensive legal fees and lengthy court battles."
     },
     "glance": {
-      "title": "PMA at a Glance",
+      "title": "PMA at a <span class='pma-about-heading-accent'>Glance</span>",
       "founded": "Founded 2013–14",
       "founded_label": "Pakistan’s First Mediation Association",
       "mediations": "2000+",

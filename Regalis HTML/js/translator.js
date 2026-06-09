@@ -44,7 +44,7 @@
           cost_desc: "Avoid expensive legal fees and lengthy court battles."
         },
         glance: {
-          title: "PMA at a Glance",
+          title: "PMA at a <span class='pma-about-heading-accent'>Glance</span>",
           founded: "Founded 2013–14",
           founded_label: "Pakistan's First Mediation Association",
           mediations: "2000+",
@@ -79,13 +79,13 @@
           info_email_val: "info@pma.org.pk"
         },
         mediation: {
-          title: "What is Mediation?",
+          title: "What is <span class='pma-about-heading-accent'>Mediation?</span>",
           text1: "Mediation is a voluntary, confidential, and structured process where a neutral mediator helps the parties in conflict to communicate, understand each other's perspectives and reach a mutually acceptable solution.",
           text2: "It empowers the parties to shape the outcome, preserves relationships and saves time, cost and emotional stress.",
           btn: "Understand the Mediation Process"
         },
         why_choose: {
-          title: "Why Choose PMA?",
+          title: "Why Choose <span class='pma-about-heading-accent'>PMA?</span>",
           lead: "We combine international standards with local understanding to deliver ethical, effective, and sustainable ADR solutions.",
           btn: "Learn More About PMA",
           features: {
@@ -97,13 +97,13 @@
           }
         },
         training: {
-          title: "Professional Training & Accreditation",
+          title: "Professional Training & <span class='pma-about-heading-accent'>Accreditation</span>",
           text: "PMA provides internationally aligned mediation training and professional development programs designed for lawyers, corporate professionals, HR teams, educators, and aspiring mediators.",
           card_text: "Our training programs meet international standards and empower professionals to become effective, ethical, and globally competent mediators.",
           btn: "Explore Training Programs"
         },
         services: {
-          title: "Our Core Services",
+          title: "Our <span class='pma-about-heading-accent'>Core</span> Services",
           list: {
             s1: { title: "Commercial & Corporate Mediation", desc: "Resolving business, partnership, contractual, and commercial disputes efficiently." },
             s2: { title: "Court-Referred Mediation", desc: "Alternative dispute resolution support for court-connected matters." },
@@ -667,21 +667,27 @@
         return fallbackResources;
       }
 
-      // Fetch translation JSONs
-      const enRes = await fetch('locals/en/translation.json');
-      const urRes = await fetch('locals/ur/translation.json');
+      // Fetch all supported language translation JSONs in parallel
+      const fetches = await Promise.all(
+        SUPPORTED_LANGS.map(lang =>
+          fetch(`locals/${lang}/translation.json`)
+            .then(res => {
+              if (!res.ok) throw new Error(`HTTP ${res.status} for lang: ${lang}`);
+              return res.json();
+            })
+            .then(data => ({ lang, data }))
+        )
+      );
 
-      if (!enRes.ok || !urRes.ok) {
-        throw new Error('Failed to fetch translation files');
-      }
+      // Build the i18next resources object — each JSON file has the lang code as root key
+      const resources = {};
+      fetches.forEach(({ lang, data }) => {
+        // Support both { "en": { ... } } and bare { nav: {...}, ... } formats
+        const translationData = data[lang] !== undefined ? data[lang] : data;
+        resources[lang] = { translation: translationData };
+      });
 
-      const enData = await enRes.json();
-      const urData = await urRes.json();
-
-      return {
-        en: { translation: enData.en },
-        ur: { translation: urData.ur }
-      };
+      return resources;
     } catch (err) {
       console.warn('PMA Translator: Could not load translation JSON files. Using built-in fallback translations. Error:', err.message);
       return fallbackResources;
@@ -697,14 +703,8 @@
       document.documentElement.setAttribute('dir', 'ltr');
       document.body.classList.remove('rtl');
     }
-
-    // Force browser repaint and scrollbar layout refresh
-    const originalOverflow = document.documentElement.style.overflow;
-    document.documentElement.style.overflow = 'hidden';
-    document.body.offsetHeight; // trigger reflow
-    setTimeout(() => {
-      document.documentElement.style.overflow = originalOverflow || '';
-    }, 20);
+    // No overflow manipulation needed — scrollbar-gutter: stable on <html> (style.css)
+    // keeps the scrollbar gutter reserved at all times, preventing layout shift.
   }
 
   // Set document direction and stylesheet based on selected language
@@ -719,26 +719,30 @@
       const targetHref = isRTL ? 'css/bootstrap.rtl.min.css' : 'css/bootstrap.min.css';
 
       if (currentHref !== targetHref) {
+        // Lock scrollbar gutter during stylesheet swap to prevent flash
+        document.documentElement.classList.add('lang-switching');
+
         // Create a temporary link element to preload the stylesheet to avoid styling mismatch flashes
         const tempLink = document.createElement('link');
         tempLink.rel = 'stylesheet';
         tempLink.type = 'text/css';
         tempLink.href = targetHref;
-        
-        tempLink.onload = function() {
-          // Once loaded in browser cache, swap main href and apply layout changes
+
+        const finalize = function () {
           bootstrapSheet.setAttribute('href', targetHref);
           applyDirection(isRTL);
           tempLink.remove();
+          // Release the scroll lock after one frame so the new layout has painted
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              document.documentElement.classList.remove('lang-switching');
+            });
+          });
         };
 
-        tempLink.onerror = function() {
-          // Fallback if loading stylesheet fails
-          bootstrapSheet.setAttribute('href', targetHref);
-          applyDirection(isRTL);
-          tempLink.remove();
-        };
-        
+        tempLink.onload = finalize;
+        tempLink.onerror = finalize;
+
         document.head.appendChild(tempLink);
       } else {
         applyDirection(isRTL);
@@ -777,25 +781,37 @@
 
   // Apply translations to all DOM elements
   function translatePage() {
-    // 1. Translate elements with data-i18n attributes
+    // 1. Translate elements with data-i18n attributes (plain text)
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (key) {
-        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-          if (el.hasAttribute('placeholder')) {
-            el.setAttribute('placeholder', window.i18next.t(key));
-          }
-        } else {
-          el.textContent = window.i18next.t(key);
+      if (!key) return;
+
+      const translated = window.i18next.t(key);
+
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        // For form fields, update placeholder only
+        if (el.hasAttribute('placeholder')) {
+          el.setAttribute('placeholder', translated);
         }
+      } else {
+        // Plain text — safe for all keys that do not contain HTML markup
+        el.textContent = translated;
       }
     });
 
-    // 2. Translate header links using automated selector mapping (failsafe fallback)
+    // 2. Translate elements with data-i18n-html attributes (innerHTML — allows accent spans)
+    //    Used for heading keys that contain <span class="pma-about-heading-accent"> markup.
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (!key) return;
+      el.innerHTML = window.i18next.t(key);
+    });
+
+    // 3. Translate header links using automated selector mapping (failsafe fallback)
     headerTranslationMap.forEach(({ selector, key }) => {
       document.querySelectorAll(selector).forEach(el => {
-        // Only override text if it does not have a custom data-i18n attribute already
-        if (!el.hasAttribute('data-i18n')) {
+        // Only override text if it does not already have a translation attribute
+        if (!el.hasAttribute('data-i18n') && !el.hasAttribute('data-i18n-html')) {
           el.textContent = window.i18next.t(key);
         }
       });
