@@ -19,6 +19,8 @@
     <link href="css/coloring.css" rel="stylesheet" type="text/css" >
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" >
+    <!-- Language translator styles -->
+    <link href="css/translator.css" rel="stylesheet" type="text/css" >
 
 </head>
 
@@ -186,6 +188,24 @@
                         </div>
 
                         <div class="de-flex-col">
+                            <!-- Language Dropdown -->
+                            <div class="pma-lang-selector-wrapper">
+                                <div class="pma-lang-selector">
+                                    <button class="pma-lang-btn">
+                                        <i class="fa fa-globe" aria-hidden="true"></i>
+                                        <span class="pma-lang-current">English</span>
+                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="pma-lang-dropdown">
+                                        <a href="#" class="pma-lang-option active" data-lang="en">English</a>
+                                        <a href="#" class="pma-lang-option" data-lang="ur">اردو (Urdu)</a>
+                                        <a href="#" class="pma-lang-option" data-lang="ar">العربية (Arabic)</a>
+                                        <a href="#" class="pma-lang-option" data-lang="zh">中文 (Chinese)</a>
+                                        <a href="#" class="pma-lang-option" data-lang="fr">Français</a>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="sm-hide">
                                 <a href="become-a-member.html" class="pma-btn pma-btn--primary pma-btn--nav">Become a Member</a>
                             </div>

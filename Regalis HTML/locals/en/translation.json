@@ -1,0 +1,16 @@
+{
+    "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About PMA",
+      "mediation": "Mediation",
+      "services": "Services",
+      "training": "Training",
+      "leadership": "Leadership",
+      "resources": "Resources",
+      "events": "Events",
+      "contact": "Contact Us",
+      "membership": "Become a Member"
+    }
+  }
+}

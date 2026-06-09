@@ -1,0 +1,174 @@
+/* ==========================================================
+   translator.css
+   Styles for the PMA Language Translator Dropdown UI.
+   Matches the gold (#EAA638) and blue (#213449) brand colors.
+   ========================================================== */
+
+/* Dropdown Container Wrapper */
+.pma-lang-selector-wrapper {
+  margin-right: 25px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pma-lang-selector {
+  position: relative;
+  display: inline-block;
+}
+
+/* Trigger Button */
+.pma-lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: var(--body-font);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 6px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  line-height: 1.35;
+}
+
+.pma-lang-btn i.fa-globe {
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+.pma-lang-btn i.fa-caret-down {
+  font-size: 11px;
+  transition: transform 0.25s ease;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Button Hover State */
+.pma-lang-selector:hover .pma-lang-btn {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.pma-lang-selector:hover .pma-lang-btn i.fa-caret-down {
+  transform: rotate(180deg);
+  color: var(--secondary-color);
+}
+
+/* Dropdown Content */
+.pma-lang-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: rgba(33, 52, 73, 0.98); /* PMA Dark Blue */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(234, 166, 56, 0.25); /* Gold tint border */
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+}
+
+/* Hover Show Dropdown */
+.pma-lang-selector:hover .pma-lang-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Language Link Option */
+.pma-lang-option {
+  color: #ffffff !important;
+  font-family: var(--body-font);
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 8px 16px;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  display: block;
+  text-align: left;
+}
+
+.pma-lang-option:hover {
+  background: rgba(234, 166, 56, 0.12); /* Semi-transparent gold highlight */
+  color: var(--secondary-color) !important;
+  padding-left: 20px;
+}
+
+.pma-lang-option.active {
+  color: var(--secondary-color) !important;
+  font-weight: 700;
+  background: rgba(234, 166, 56, 0.08);
+}
+
+/* ==========================================================
+   Header Scroll / Theme Adaptations
+   ========================================================== */
+
+/* When header is scrolled (gets white background) */
+header.smaller.scroll-light .pma-lang-btn {
+  color: var(--heading-font-color);
+  border-color: rgba(0, 0, 0, 0.18);
+}
+
+header.smaller.scroll-light .pma-lang-btn i.fa-caret-down {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+header.smaller.scroll-light .pma-lang-selector:hover .pma-lang-btn {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+header.smaller.scroll-light .pma-lang-selector:hover .pma-lang-btn i.fa-caret-down {
+  color: var(--secondary-color);
+}
+
+/* ==========================================================
+   Responsive Adaptations
+   ========================================================== */
+
+@media (max-width: 991px) {
+  .pma-lang-selector-wrapper {
+    margin-right: 15px;
+  }
+  
+  .pma-lang-btn {
+    padding: 5px 11px;
+    font-size: 13px;
+  }
+  
+  .pma-lang-dropdown {
+    width: 140px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pma-lang-selector-wrapper {
+    margin-right: 12px;
+  }
+  
+  header.header-mobile .pma-lang-btn {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+  
+  /* If mobile header is white scheme */
+  header.header-mobile.header-light .pma-lang-btn {
+    color: var(--heading-font-color);
+    border-color: rgba(0, 0, 0, 0.18);
+  }
+}
