@@ -98,6 +98,75 @@
       "s6": { "title": "研讨会与宣传项目", "desc": "推广 ADR 意识与冲突解决文化的教育课程。" },
       "s7": { "title": "制度与政策咨询", "desc": "支持机构构建 ADR 系统与调解框架。" }
     }
+  },
+  "leadership": {
+    "title": "认识我们的领导团队",
+    "roles": { "president": "主席", "secretary": "秘书长", "vp_north": "副主席（北方）", "vp_south": "副主席（南方）" }
+  },
+  "stats": {
+    "s1": { "label": "已协调调解", "unit": "+" },
+    "s2": { "label": "成功解决率", "unit": "%" },
+    "s3": { "label": "100% 私密流程", "value": "保密" },
+    "s4": { "label": "受训调解员", "value": "已认证" }
+  },
+  "partners": {
+    "title": "我们的合作伙伴",
+    "p1": "信德省高等法院",
+    "p2": "政府机构",
+    "p3": "国际调解协会"
+  },
+  "cta": {
+    "title": "让我们谈谈，因为我们可以。",
+    "subtitle": "准备好和平解决争端了吗？或者有兴趣成为认证调解员？今天就联系我们",
+    "btn1": "申请免费咨询",
+    "btn2": "成为认证调解员",
+    "link": "与我们的团队即时聊天"
+  },
+  "footer": {
+    "brand": {
+      "tagline": "在巴基斯坦全境通过对话、调解和相互理解促进和平解决方案。",
+      "logo_alt": "巴基斯坦调解员协会"
+    },
+    "quick_links": {
+      "title": "快速链接",
+      "items": [
+        { "label": "首页", "link": "index.html" },
+        { "label": "关于 PMA", "link": "about.html" },
+        { "label": "调解", "link": "mediation.html" },
+        { "label": "服务", "link": "services.html" },
+        { "label": "培训", "link": "training.html" },
+        { "label": "领导团队", "link": "leadership.html" },
+        { "label": "资源", "link": "resources.html" },
+        { "label": "活动", "link": "events.html" },
+        { "label": "联系我们", "link": "contact.html" }
+      ]
+    },
+    "services": {
+      "title": "我们的服务",
+      "items": [
+        "调解服务",
+        "IMI 认证调解员培训",
+        "ADR 研讨会及宣传课程",
+        "机构 ADR 咨询",
+        "政策与调解倡导"
+      ]
+    },
+    "contact": {
+      "title": "联系信息",
+      "hours": "周一至周五（上午 9 点至下午 5 点）",
+      "address": "253, P.E.C.H.S., Block-6, Off Shahrah-e-Faisal, Karachi 75400, Pakistan",
+      "email": "info@pma.org.pk",
+      "phone": "+92 21 0000 0000"
+    },
+    "bar": {
+      "copyright": "© 2026 巴基斯坦调解员协会 (PMA)。版权所有。",
+      "legal": [
+        { "label": "常见问题 (FAQ's)", "link": "faq.html" },
+        { "label": "隐私政策", "link": "privacy-policy.html" },
+        { "label": "投诉与申诉政策", "link": "complaint-policy.html" },
+        { "label": "条款与条件", "link": "terms.html" }
+      ]
+    }
   }
   }
 }

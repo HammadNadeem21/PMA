@@ -103,6 +103,80 @@
       "s6": { "title": "Workshops & Awareness Programs", "desc": "Educational sessions promoting ADR awareness and conflict resolution culture." },
       "s7": { "title": "Institutional & Policy Advisory", "desc": "Supporting institutions in building ADR systems and mediation frameworks." }
     }
+  },
+  "leadership": {
+    "title": "Meet Our Leadership",
+    "roles": {
+      "president": "President",
+      "secretary": "Secretary General",
+      "vp_north": "Vice President – North",
+      "vp_south": "Vice President – South"
+    }
+  },
+  "stats": {
+    "s1": { "label": "Mediations Facilitated", "unit": "+" },
+    "s2": { "label": "Successful Resolutions", "unit": "%" },
+    "s3": { "label": "100% Private Process", "value": "Confidential" },
+    "s4": { "label": "Trained Mediators", "value": "Certified" }
+  },
+  "partners": {
+    "title": "Our Partners",
+    "p1": "Sindh High Court",
+    "p2": "Govt. Institutions",
+    "p3": "International Mediation Institute"
+  },
+  "cta": {
+    "title": "Let's Talk Because We Can.",
+    "subtitle": "Ready to resolve your dispute peacefully? Or interested in becoming a certified mediator? Contact Us Today",
+    "btn1": "Request a Free Consultation",
+    "btn2": "Become a Certified Mediator",
+    "link": "Chat instantly with our team"
+  },
+  "footer": {
+    "brand": {
+      "tagline": "Promoting peaceful resolution through dialogue, mediation, and mutual understanding across Pakistan.",
+      "logo_alt": "Pakistan Mediators Association"
+    },
+    "quick_links": {
+      "title": "Quick Links",
+      "items": [
+        { "label": "Home", "link": "index.html" },
+        { "label": "About PMA", "link": "about.html" },
+        { "label": "Mediation", "link": "mediation.html" },
+        { "label": "Services", "link": "services.html" },
+        { "label": "Training", "link": "training.html" },
+        { "label": "Leadership", "link": "leadership.html" },
+        { "label": "Resources", "link": "resources.html" },
+        { "label": "Events", "link": "events.html" },
+        { "label": "Contact Us", "link": "contact.html" }
+      ]
+    },
+    "services": {
+      "title": "Our Services",
+      "items": [
+        "Mediation Services",
+        "IMI-Certified Mediator Training",
+        "ADR Workshops & Awareness Sessions",
+        "Institutional ADR Advisory",
+        "Policy & Mediation Advocacy"
+      ]
+    },
+    "contact": {
+      "title": "Contact Info",
+      "hours": "Mon To Fri (9am to 5pm)",
+      "address": "253, P.E.C.H.S., Block-6, Off Shahrah-e-Faisal, Karachi 75400, Pakistan",
+      "email": "info@pma.org.pk",
+      "phone": "+92 21 0000 0000"
+    },
+    "bar": {
+      "copyright": "© 2026 Pakistan Mediators Association (PMA). All rights reserved.",
+      "legal": [
+        { "label": "FAQ's", "link": "faq.html" },
+        { "label": "Privacy Policy", "link": "privacy-policy.html" },
+        { "label": "Complaint & Appeal Policy", "link": "complaint-policy.html" },
+        { "label": "Terms and Conditions", "link": "terms.html" }
+      ]
+    }
   }
   }
 }

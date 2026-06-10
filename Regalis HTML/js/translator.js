@@ -113,6 +113,80 @@
             s6: { title: "Workshops & Awareness Programs", desc: "Educational sessions promoting ADR awareness and conflict resolution culture." },
             s7: { title: "Institutional & Policy Advisory", desc: "Supporting institutions in building ADR systems and mediation frameworks." }
           }
+        },
+        leadership: {
+          title: "Meet Our Leadership",
+          roles: {
+            president: "President",
+            secretary: "Secretary General",
+            vp_north: "Vice President – North",
+            vp_south: "Vice President – South"
+          }
+        },
+        stats: {
+          s1: { label: "Mediations Facilitated", unit: "+" },
+          s2: { label: "Successful Resolutions", unit: "%" },
+          s3: { label: "100% Private Process", value: "Confidential" },
+          s4: { label: "Trained Mediators", value: "Certified" }
+        },
+        partners: {
+          title: "Our Partners",
+          p1: "Sindh High Court",
+          p2: "Govt. Institutions",
+          p3: "International Mediation Institute"
+        },
+        cta: {
+          title: "Let's Talk Because We Can.",
+          subtitle: "Ready to resolve your dispute peacefully? Or interested in becoming a certified mediator? Contact Us Today",
+          btn1: "Request a Free Consultation",
+          btn2: "Become a Certified Mediator",
+          link: "Chat instantly with our team"
+        },
+        footer: {
+          brand: {
+            tagline: "Promoting peaceful resolution through dialogue, mediation, and mutual understanding across Pakistan.",
+            logo_alt: "Pakistan Mediators Association"
+          },
+          quick_links: {
+            title: "Quick Links",
+            items: [
+              { label: "Home", link: "index.html" },
+              { label: "About PMA", link: "about.html" },
+              { label: "Mediation", link: "mediation.html" },
+              { label: "Services", link: "services.html" },
+              { label: "Training", link: "training.html" },
+              { label: "Leadership", link: "leadership.html" },
+              { label: "Resources", link: "resources.html" },
+              { label: "Events", link: "events.html" },
+              { label: "Contact Us", link: "contact.html" }
+            ]
+          },
+          services: {
+            title: "Our Services",
+            items: [
+              "Mediation Services",
+              "IMI-Certified Mediator Training",
+              "ADR Workshops & Awareness Sessions",
+              "Institutional ADR Advisory",
+              "Policy & Mediation Advocacy"
+            ]
+          },
+          contact: {
+            title: "Contact Info",
+            hours: "Mon To Fri (9am to 5pm)",
+            address: "253, P.E.C.H.S., Block-6, Off Shahrah-e-Faisal, Karachi 75400, Pakistan",
+            email: "info@pma.org.pk",
+            phone: "+92 21 0000 0000"
+          },
+          bar: {
+            copyright: "© 2026 Pakistan Mediators Association (PMA). All rights reserved.",
+            legal: [
+              { label: "FAQ's", link: "faq.html" },
+              { label: "Privacy Policy", link: "privacy-policy.html" },
+              { label: "Complaint & Appeal Policy", link: "complaint-policy.html" },
+              { label: "Terms and Conditions", link: "terms.html" }
+            ]
+          }
         }
       }
     },
@@ -215,6 +289,75 @@
             s5: { title: "IMI-تصدیق شدہ ثالث ٹریننگ", desc: "پیشہ ورانہ ثالث سرٹیفیکیشن پروگرام۔" },
             s6: { title: "ورکشاپس اور آگاہی", desc: "ADR آگاہی پیدا کرنے والے تعلیمی سیشن۔" },
             s7: { title: "ادارہ جاتی مشاورتی خدمات", desc: "ADR سسٹمز بنانے میں اداروں کی معاونت۔" }
+          }
+        },
+        leadership: {
+          title: "ہماری قیادت سے ملیں",
+          roles: { president: "صدر", secretary: "سیکرٹری جنرل", vp_north: "نائب صدر - شمال", vp_south: "نائب صدر - جنوب" }
+        },
+        stats: {
+          s1: { label: "کامیاب میڈیشنز", unit: "+" },
+          s2: { label: "کامیاب حل", unit: "%" },
+          s3: { label: "100% نجی عمل", value: "خفیہ" },
+          s4: { label: "تربیت یافتہ ثالث", value: "مستند" }
+        },
+        partners: {
+          title: "ہمارے پارٹنرز",
+          p1: "سندھ ہائی کورٹ",
+          p2: "سرکاری ادارے",
+          p3: "انٹرنیشنل میڈیشن انسٹی ٹیوٹ"
+        },
+        cta: {
+          title: "آئیں بات کریں، کیونکہ ہم کر سکتے ہیں۔",
+          subtitle: "کیا آپ تنازعہ پرامن طریقے سے حل کرنا چاہتے ہیں؟ یا مصدقہ ثالث بننا چاہتے ہیں؟ آج ہی رابطہ کریں",
+          btn1: "مفت مشاورت",
+          btn2: "مصدقہ ثالث بنیں",
+          link: "ہماری ٹیم سے فوری چیٹ کریں"
+        },
+        footer: {
+          brand: {
+            tagline: "پاکستان بھر میں مکالمے، مصالحت اور باہمی افہام و تفہیم کے ذریعے پرامن حل کو فروغ دینا۔",
+            logo_alt: "پاکستان میڈیٹرز ایسوسی ایشن"
+          },
+          quick_links: {
+            title: "فوری لنکس",
+            items: [
+              { label: "گھر", link: "index.html" },
+              { label: "PMA کے بارے میں", link: "about.html" },
+              { label: "میڈیشن (مصالحت)", link: "mediation.html" },
+              { label: "خدمات", link: "services.html" },
+              { label: "تربیت", link: "training.html" },
+              { label: "قیادت", link: "leadership.html" },
+              { label: "وسائل", link: "resources.html" },
+              { label: "ایونٹس", link: "events.html" },
+              { label: "رابطہ کریں", link: "contact.html" }
+            ]
+          },
+          services: {
+            title: "ہماری خدمات",
+            items: [
+              "میڈیشن کی خدمات",
+              "IMI سے تصدیق شدہ میڈیٹر ٹریننگ",
+              "ADR ورکشاپس اور آگاہی سیشن",
+              "ادارہ جاتی ADR مشاورتی خدمات",
+              "پالیسی اور میڈیشن ایڈوکیسی"
+            ]
+          },
+          contact: {
+            title: "رابطہ کی معلومات",
+            hours: "پیر تا جمعہ (صبح 9 بجے سے شام 5 بجے تک)",
+            address: "253, P.E.C.H.S., Block-6, Off Shahrah-e-Faisal, Karachi 75400, Pakistan",
+            email: "info@pma.org.pk",
+            phone: "+92 21 0000 0000"
+          },
+          bar: {
+            copyright: "© 2026 پاکستان میڈیٹرز ایسوسی ایشن (PMA)۔ جملہ حقوق محفوظ ہیں۔",
+            legal: [
+              { label: "اکثر پوچھے گئے سوالات (FAQ's)", link: "faq.html" },
+              { label: "پرائیویسی پالیسی", link: "privacy-policy.html" },
+              { label: "شکایت اور اپیل پالیسی", link: "complaint-policy.html" },
+              { label: "شرائط و ضوابط", link: "terms.html" }
+            ]
           }
         }
       }
@@ -319,6 +462,75 @@
             s6: { title: "ورش العمل وبرامج التوعية", desc: "جلسات تعليمية لتعزيز ثقافة حل النزاعات." },
             s7: { title: "الاستشارات المؤسسية والسياسات", desc: "دعم المؤسسات في بناء أنظمة تسوية المنازعات." }
           }
+        },
+        leadership: {
+          title: "تعرف على قيادتنا",
+          roles: { president: "الرئيس", secretary: "الأمين العام", vp_north: "نائب الرئيس - الشمال", vp_south: "نائب الرئيس - الجنوب" }
+        },
+        stats: {
+          s1: { label: "وساطات ميسرة", unit: "+" },
+          s2: { label: "حلول ناجحة", unit: "%" },
+          s3: { label: "عملية خاصة 100%", value: "سري" },
+          s4: { label: "وسطاء مدربون", value: "معتمد" }
+        },
+        partners: {
+          title: "شركاؤنا",
+          p1: "محكمة السند العليا",
+          p2: "المؤسسات الحكومية",
+          p3: "المعهد الدولي للوساطة"
+        },
+        cta: {
+          title: "لنتحدث لأننا نستطيع.",
+          subtitle: "هل أنت مستعد لحل نزاعك سلمياً؟ أو مهتم بأن تصبح وسيطاً معتمداً؟ اتصل بنا اليوم",
+          btn1: "طلب استشارة مجانية",
+          btn2: "كن وسيطاً معتمداً",
+          link: "تحدث فوراً مع فريقنا"
+        },
+        footer: {
+          brand: {
+            tagline: "تعزيز الحلول السلمية من خلال الحوار والوساطة والتفاهم المتبادل في جميع أنحاء باكستان.",
+            logo_alt: "الجمعية الباكستانية للوسطاء"
+          },
+          quick_links: {
+            title: "روابط سريعة",
+            items: [
+              { label: "الرئيسية", link: "index.html" },
+              { label: "عن PMA", link: "about.html" },
+              { label: "الوساطة", link: "mediation.html" },
+              { label: "الخدمات", link: "services.html" },
+              { label: "التدريب", link: "training.html" },
+              { label: "القيادة", link: "leadership.html" },
+              { label: "الموارد", link: "resources.html" },
+              { label: "الفعاليات", link: "events.html" },
+              { label: "اتصل بنا", link: "contact.html" }
+            ]
+          },
+          services: {
+            title: "خدماتنا",
+            items: [
+              "خدمات الوساطة",
+              "تدريب الوسطاء المعتمد من IMI",
+              "ورش عمل وجلسات توعية حول ADR",
+              "استشارات مؤسسية في ADR",
+              "السياسات ودعم الوساطة"
+            ]
+          },
+          contact: {
+            title: "معلومات الاتصال",
+            hours: "من الاثنين إلى الجمعة (9 صباحاً - 5 مساءً)",
+            address: "253, P.E.C.H.S., Block-6, Off Shahrah-e-Faisal, Karachi 75400, Pakistan",
+            email: "info@pma.org.pk",
+            phone: "+92 21 0000 0000"
+          },
+          bar: {
+            copyright: "© 2026 الجمعية الباكستانية للوسطاء (PMA). جميع الحقوق محفوظة.",
+            legal: [
+              { label: "الأسئلة الشائعة (FAQ's)", link: "faq.html" },
+              { label: "سياسة الخصوصية", link: "privacy-policy.html" },
+              { label: "سياسة الشكاوى والاستئناف", link: "complaint-policy.html" },
+              { label: "الشروط والأحكام", link: "terms.html" }
+            ]
+          }
         }
       }
     },
@@ -422,6 +634,75 @@
             s6: { title: "研讨会与宣传项目", desc: "推广 ADR 意识与冲突解决文化的教育课程。" },
             s7: { title: "制度与政策咨询", desc: "支持机构构建 ADR 系统与调解框架。" }
           }
+        },
+        leadership: {
+          title: "认识我们的领导团队",
+          roles: { president: "主席", secretary: "秘书长", vp_north: "副主席（北方）", vp_south: "副主席（南方）" }
+        },
+        stats: {
+          s1: { label: "已协调调解", unit: "+" },
+          s2: { label: "成功解决率", unit: "%" },
+          s3: { label: "100% 私密流程", value: "保密" },
+          s4: { label: "受训调解员", value: "已认证" }
+        },
+        partners: {
+          title: "我们的合作伙伴",
+          p1: "信德省高等法院",
+          p2: "政府机构",
+          p3: "国际调解协会"
+        },
+        cta: {
+          title: "让我们谈谈，因为我们可以。",
+          subtitle: "准备好和平解决争端了吗？或者有兴趣成为认证调解员？今天就联系我们",
+          btn1: "申请免费咨询",
+          btn2: "成为认证调解员",
+          link: "与我们的团队即时聊天"
+        },
+        footer: {
+          brand: {
+            tagline: "在巴基斯坦全境通过对话、调解和相互理解促进和平解决方案。",
+            logo_alt: "巴基斯坦调解员协会"
+          },
+          quick_links: {
+            title: "快速链接",
+            items: [
+              { label: "首页", link: "index.html" },
+              { label: "关于 PMA", link: "about.html" },
+              { label: "调解", link: "mediation.html" },
+              { label: "服务", link: "services.html" },
+              { label: "培训", link: "training.html" },
+              { label: "领导团队", link: "leadership.html" },
+              { label: "资源", link: "resources.html" },
+              { label: "活动", link: "events.html" },
+              { label: "联系我们", link: "contact.html" }
+            ]
+          },
+          services: {
+            title: "我们的服务",
+            items: [
+              "调解服务",
+              "IMI 认证调解员培训",
+              "ADR 研讨会及宣传课程",
+              "机构 ADR 咨询",
+              "政策与调解倡导"
+            ]
+          },
+          contact: {
+            title: "联系信息",
+            hours: "周一至周五（上午 9 点至下午 5 点）",
+            address: "253, P.E.C.H.S., Block-6, Off Shahrah-e-Faisal, Karachi 75400, Pakistan",
+            email: "info@pma.org.pk",
+            phone: "+92 21 0000 0000"
+          },
+          bar: {
+            copyright: "© 2026 巴基斯坦调解员协会 (PMA)。版权所有。",
+            legal: [
+              { label: "常见问题 (FAQ's)", link: "faq.html" },
+              { label: "隐私政策", link: "privacy-policy.html" },
+              { label: "投诉与申诉政策", link: "complaint-policy.html" },
+              { label: "条款与条件", link: "terms.html" }
+            ]
+          }
         }
       }
     },
@@ -523,7 +804,76 @@
             s5: { title: "IMI-تصدیق شوې روزنه", desc: "مسلکي روزنیز پروګرامونه." },
             s6: { title: "ورکشاپونه او پوهاوی", desc: "د ADR په اړه تعلیمي غونډې." },
             s7: { title: "اداراتي مشورتي خدمات", desc: "د ADR سیسټمونو په جوړولو کې مرسته." }
-          }        }
+          }        },
+        leadership: {
+          title: "زموږ د مشرتابه سره وپیژنئ",
+          roles: { president: "رئیس", secretary: "عمومي سکرتر", vp_north: "مرستیال رئیس - شمال", vp_south: "مرستیال رئیس - جنوب" }
+        },
+        stats: {
+          s1: { label: "ترسره شوي منځګړیتوبونه", unit: "+" },
+          s2: { label: "کامیاب حل", unit: "%" },
+          s3: { label: "100% خصوصي پروسه", value: "محرم" },
+          s4: { label: "روزنه لیدلي منځګړي", value: "تصدیق شوي" }
+        },
+        partners: {
+          title: "زموږ شریکان",
+          p1: "سندھ عالي محکمه",
+          p2: "حکومتي ادارې",
+          p3: "نړیوال منځګړیتوب انسټیټیوټ"
+        },
+        cta: {
+          title: "راځئ خبرې وکړو، ځکه موږ کولی شو.",
+          subtitle: "ایا غواړئ خپلې شخړې په سوله ایزه توګه حل کړئ؟ یا غواړئ یو تصدیق شوی منځګړی شئ؟ نن له موږ سره اړیکه ونیسئ",
+          btn1: "وړیا مشوره",
+          btn2: "یو تصدیق شوی منځګړی شئ",
+          link: "زموږ ټیم سره فوری چیټ وکړئ"
+        },
+        footer: {
+          brand: {
+            tagline: "د پاکستان په کچه د خبرو اترو، منځګړیتوب او متقابل تفاهم له لارې د سوله ایزو حلونو هڅول.",
+            logo_alt: "د پاکستان منځګړو ټولنه"
+          },
+          quick_links: {
+            title: "چټک لینکونه",
+            items: [
+              { label: "کور پاڼه", link: "index.html" },
+              { label: "د PMA په اړه", link: "about.html" },
+              { label: "منځګړیتوب", link: "mediation.html" },
+              { label: "خدمتونه", link: "services.html" },
+              { label: "روزنه", link: "training.html" },
+              { label: "مشرتابه", link: "leadership.html" },
+              { label: "سرچینې", link: "resources.html" },
+              { label: "پیښې", link: "events.html" },
+              { label: "اړیکه", link: "contact.html" }
+            ]
+          },
+          services: {
+            title: "زموږ خدمتونه",
+            items: [
+              "د منځګړیتوب خدمتونه",
+              "د IMI لخوا تصدیق شوې روزنه",
+              "د ADR ورکشاپونه او د پوهاوي غونډې",
+              "اداراتي ADR مشورتي خدمتونه",
+              "پالیسي او د منځګړیتوب ملاتړ"
+            ]
+          },
+          contact: {
+            title: "د اړیکې معلومات",
+            hours: "د دوشنبې نه تر جمعې (د سهار 9 بجو نه د ماښام تر 5 بجو)",
+            address: "253, P.E.C.H.S., Block-6, Off Shahrah-e-Faisal, Karachi 75400, Pakistan",
+            email: "info@pma.org.pk",
+            phone: "+92 21 0000 0000"
+          },
+          bar: {
+            copyright: "© 2026 د پاکستان منځګړو ټولنه (PMA). ټول حقوق خوندي دي.",
+            legal: [
+              { label: "عامې پوښتنې (FAQ's)", link: "faq.html" },
+              { label: "د محرمیت تګلاره", link: "privacy-policy.html" },
+              { label: "د شکایت او اپیل تګلاره", link: "complaint-policy.html" },
+              { label: "شرایط او ضوابط", link: "terms.html" }
+            ]
+          }
+        }
       }
     },
     sd: {
@@ -624,7 +974,76 @@
             s5: { title: "IMI-تصديق ٿيل ميڊئيٽر ٽريننگ", desc: "پيشيوراڻي سرٽيفڪيشن پروگرام." },
             s6: { title: "ورڪشاپس ۽ شعور", desc: "ADR بابت ڄاڻ ڏيندڙ سيمينار." },
             s7: { title: "اداراتي مشورتي خدمتون", desc: "ADR سسٽم ٺاهڻ ۾ ادارن جي مدد." }
-          }        }
+          }        },
+        leadership: {
+          title: "اسان جي قيادت سان ملو",
+          roles: { president: "صدر", secretary: "سيڪريٽري جنرل", vp_north: "نائب صدر - اتر", vp_south: "نائب صدر - ڏکڻ" }
+        },
+        stats: {
+          s1: { label: "ڪامياب ميڊئيشنز", unit: "+" },
+          s2: { label: "ڪامياب حل", unit: "%" },
+          s3: { label: "100% ذاتي عمل", value: "رازدارانه" },
+          s4: { label: "تربيت يافته ميڊئيٽرز", value: "مستند" }
+        },
+        partners: {
+          title: "اسان جا پارٽنرز",
+          p1: "سنڌ هاءِ ڪورٽ",
+          p2: "سرڪاري ادارا",
+          p3: "انٽرنيشنل ميڊئيشن انسٽيٽيوٽ"
+        },
+        cta: {
+          title: "اچو ته ڳالهايون، ڇو ته اسان ڪري سگهون ٿا.",
+          subtitle: "ڇا توهان تڪرار پرامن طريقي سان حل ڪرڻ چاهيو ٿا؟ يا مستند ثالث بڻجڻ چاهيو ٿا؟ اڄ ئي رابطو ڪريو",
+          btn1: "مفت صلاح مشورو",
+          btn2: "مستند ثالث بڻجو",
+          link: "اسان جي ٽيم سان فوري چيٽ ڪريو"
+        },
+        footer: {
+          brand: {
+            tagline: "پاڪستان ۾ ڳالهين، مصالحت ۽ باهمي افهام و تفهيم جي ذريعي پرامن حل کي هٿي ڏيڻ.",
+            logo_alt: "پاڪستان ميڊئيٽرز ايسوسيئيشن"
+          },
+          quick_links: {
+            title: "فوري لنڪس",
+            items: [
+              { label: "گهر", link: "index.html" },
+              { label: "PMA بابت", link: "about.html" },
+              { label: "ميڊئيشن (مصالحت)", link: "mediation.html" },
+              { label: "خدمتون", link: "services.html" },
+              { label: "تربيت", link: "training.html" },
+              { label: "قيادت", link: "leadership.html" },
+              { label: "وسائل", link: "resources.html" },
+              { label: "ايونٽس", link: "events.html" },
+              { label: "رابطو ڪريو", link: "contact.html" }
+            ]
+          },
+          services: {
+            title: "اسان جون خدمتون",
+            items: [
+              "ميڊئيشن جون خدمتون",
+              "IMI کان تصديق ٿيل ميڊئيٽر ٽريننگ",
+              "ADR ورڪشاپس ۽ شعور اجاگر ڪرڻ جا سيشن",
+              "اداراتي ADR مشورتي خدمتون",
+              "پاليسي ۽ ميڊئيشن ايڊووڪيسي"
+            ]
+          },
+          contact: {
+            title: "رابطي جي معلومات",
+            hours: "سومر کان جمعو (صبح 9 کان شام 5 وڳي تائين)",
+            address: "253, P.E.C.H.S., Block-6, Off Shahrah-e-Faisal, Karachi 75400, Pakistan",
+            email: "info@pma.org.pk",
+            phone: "+92 21 0000 0000"
+          },
+          bar: {
+            copyright: "© 2026 پاڪستان ميڊئيٽرز ايسوسيئيشن (PMA). سڀ حق محفوظ آهن.",
+            legal: [
+              { label: "اڪثر پڇيا ويندڙ سوال (FAQ's)", link: "faq.html" },
+              { label: "پرائيويسي پاليسي", link: "privacy-policy.html" },
+              { label: "شڪايت ۽ اپيل پاليسي", link: "complaint-policy.html" },
+              { label: "شرطون ۽ ضابطا", link: "terms.html" }
+            ]
+          }
+        }
       }
     }
   };
@@ -699,12 +1118,16 @@
     if (isRTL) {
       document.documentElement.setAttribute('dir', 'rtl');
       document.body.classList.add('rtl');
+      // Disable scrollbar-gutter in RTL: the stable gutter would be reserved on
+      // the inline-start (left) side, creating phantom horizontal scroll space.
+      document.documentElement.style.scrollbarGutter = 'auto';
     } else {
       document.documentElement.setAttribute('dir', 'ltr');
       document.body.classList.remove('rtl');
+      // Restore stable gutter for LTR so the layout width doesn't shift on
+      // pages where the vertical scrollbar appears/disappears.
+      document.documentElement.style.scrollbarGutter = 'stable';
     }
-    // No overflow manipulation needed — scrollbar-gutter: stable on <html> (style.css)
-    // keeps the scrollbar gutter reserved at all times, preventing layout shift.
   }
 
   // Set document direction and stylesheet based on selected language
@@ -807,7 +1230,56 @@
       el.innerHTML = window.i18next.t(key);
     });
 
-    // 3. Translate header links using automated selector mapping (failsafe fallback)
+    // 3. Translate footer list elements (data-i18n-list)
+    //    Supports two list types:
+    //    - "link"  → items are objects with { label, link }
+    //    - "plain" → items are plain strings
+    document.querySelectorAll('[data-i18n-list]').forEach(ul => {
+      const key = ul.getAttribute('data-i18n-list');
+      const listType = ul.getAttribute('data-i18n-list-type') || 'plain';
+      if (!key) return;
+
+      const items = window.i18next.t(key, { returnObjects: true });
+      if (!Array.isArray(items) || items.length === 0) return;
+
+      // Determine icon class from existing first <li> (preserve icon style)
+      let iconClass = '';
+      const firstLi = ul.querySelector('li');
+      if (firstLi) {
+        const icon = firstLi.querySelector('i');
+        if (icon) {
+          iconClass = icon.className;
+        }
+      }
+
+      // Re-render list items
+      ul.innerHTML = items.map(item => {
+        if (listType === 'link' && item && typeof item === 'object') {
+          const label = item.label || '';
+          const link = item.link || '#';
+          const iconHtml = iconClass
+            ? `<i class="${iconClass}" aria-hidden="true"></i> `
+            : '';
+          return `<li><a href="${link}">${iconHtml}${label}</a></li>`;
+        } else {
+          // plain string
+          const text = typeof item === 'string' ? item : String(item);
+          const iconHtml = iconClass
+            ? `<i class="${iconClass}" aria-hidden="true"></i> `
+            : '';
+          return `<li><a>${iconHtml}${text}</a></li>`;
+        }
+      }).join('\n');
+    });
+
+    // 4. Translate attribute values (data-i18n-attr-alt → alt attribute)
+    document.querySelectorAll('[data-i18n-attr-alt]').forEach(el => {
+      const key = el.getAttribute('data-i18n-attr-alt');
+      if (!key) return;
+      el.setAttribute('alt', window.i18next.t(key));
+    });
+
+    // 5. Translate header links using automated selector mapping (failsafe fallback)
     headerTranslationMap.forEach(({ selector, key }) => {
       document.querySelectorAll(selector).forEach(el => {
         // Only override text if it does not already have a translation attribute
