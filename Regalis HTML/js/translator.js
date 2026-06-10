@@ -1128,6 +1128,38 @@
       // pages where the vertical scrollbar appears/disappears.
       document.documentElement.style.scrollbarGutter = 'stable';
     }
+
+    // Force a synchronous reflow so the browser recalculates all layout
+    // dimensions immediately. Without this, stale cached heights from the
+    // previous dir/gutter state cause phantom scroll space below the footer.
+    void document.documentElement.offsetHeight;
+  }
+
+  // Force a complete layout recalculation: reset body height, trigger resize,
+  // and scroll to top so that no stale cached dimensions persist.
+  function forceLayoutRecalculation() {
+    // 1. Temporarily clear any explicit/cached heights on body and html
+    document.body.style.minHeight = '';
+    document.body.style.height = '';
+    document.documentElement.style.height = '';
+
+    // 2. Force synchronous reflow
+    void document.body.offsetHeight;
+
+    // 3. Scroll to current position (preserves user position but forces
+    //    the browser to recalculate scroll boundaries)
+    window.scrollTo(window.scrollX, window.scrollY);
+
+    // 4. Fire resize event so any JS that caches heights (e.g. WOW.js,
+    //    sticky headers, parallax) will recalculate
+    try {
+      window.dispatchEvent(new Event('resize'));
+    } catch (e) {
+      // IE11 fallback
+      var evt = document.createEvent('Event');
+      evt.initEvent('resize', true, true);
+      window.dispatchEvent(evt);
+    }
   }
 
   // Set document direction and stylesheet based on selected language
@@ -1155,10 +1187,12 @@
           bootstrapSheet.setAttribute('href', targetHref);
           applyDirection(isRTL);
           tempLink.remove();
-          // Release the scroll lock after one frame so the new layout has painted
+          // Release the scroll lock after the new layout has painted,
+          // then force a full layout recalculation to eliminate phantom scroll
           requestAnimationFrame(() => {
             requestAnimationFrame(() => {
               document.documentElement.classList.remove('lang-switching');
+              forceLayoutRecalculation();
             });
           });
         };
@@ -1169,9 +1203,11 @@
         document.head.appendChild(tempLink);
       } else {
         applyDirection(isRTL);
+        forceLayoutRecalculation();
       }
     } else {
       applyDirection(isRTL);
+      forceLayoutRecalculation();
     }
   }
 
@@ -1351,6 +1387,14 @@
 
             // Rerender translations
             translatePage();
+
+            // Final safety: schedule another layout recalculation after
+            // all DOM mutations and style recalcs from translation have settled.
+            // This catches any edge cases where translated text changes element
+            // heights and the previous recalc happened too early.
+            setTimeout(function () {
+              forceLayoutRecalculation();
+            }, 350);
           }
         });
       });

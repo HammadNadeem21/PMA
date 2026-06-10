@@ -183,10 +183,11 @@ html {
 }
 
 /* Applied by translator.js during Bootstrap LTR↔RTL stylesheet swap.
-   Hides the scrollbar for exactly two animation frames to prevent
-   a layout-width flash when the new stylesheet loads. */
+   Locks both axes during the swap to prevent layout-width flash and
+   any phantom scroll region below the footer while the new stylesheet loads. */
 html.lang-switching {
   overflow: hidden !important;
+  max-height: 100vh !important;
 }
 
 /* In RTL languages the scrollbar-gutter moves to the left edge.
@@ -195,7 +196,9 @@ html.lang-switching {
 html[dir="rtl"] {
   scrollbar-gutter: auto;
   overflow-x: hidden;
+  max-width: 100vw;
 }
+
 
 body {
   background: var(--bg-default);
