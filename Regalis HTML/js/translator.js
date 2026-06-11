@@ -187,6 +187,46 @@
               { label: "Terms and Conditions", link: "terms.html" }
             ]
           }
+        },
+        "about-page": {
+          hero: {
+            img_alt: "About PMA",
+            eyebrow: "About PMA",
+            title_part1: "Building a Culture of",
+            title_part2: "Dialogue, Resolution & Mutual Understanding",
+            lead: "Pakistan Mediators Association (PMA) is committed to advancing mediation and alternative dispute resolution across Pakistan through professional training, institutional collaboration, and internationally recognized standards of practice."
+          },
+          about: {
+            hero_img_alt: "About PMA",
+            hero_eyebrow: "About PMA",
+            hero_title_part1: "Building a Culture of",
+            hero_title_part2: "Dialogue, Resolution & Mutual Understanding",
+            hero_lead: "Pakistan Mediators Association (PMA) is committed to advancing mediation and alternative dispute resolution across Pakistan through professional training, institutional collaboration, and internationally recognized standards of practice.",
+            badge_years: "YEARS",
+            badge_stat_label: "Promoting Mediation<br>Excellence",
+            nav_tab1: "About PMA",
+            nav_tab2: "Our Vision",
+            nav_tab3: "Our Mission",
+            nav_tab4: "Our Impact",
+            tab1_title1: "About",
+            tab1_title2: "PMA",
+            tab1_text: "PMA Established in 2013 and registered with the Government of Pakistan, PMA is the professional body authorized by the Centre for Effective Dispute Resolution (CEDR), United Kingdom, to deliver CEDR-model mediation training in Pakistan.<br><br>PMA has signed a Memorandum of Understanding with the Thailand Arbitration Centre (2018) and maintains strong relations with institutions in other SAARC countries.<br><br>Our association comprises internationally accredited CEDR-trained master trainers and mediators who have successfully conducted numerous training programs for judges and lawyers across Sindh, Punjab, and Islamabad, thereby raising professional standards of mediation in the country.",
+            tab2_title1: "Our",
+            tab2_title2: "Vision",
+            tab2_text: "To establish mediation as the leading and most trusted method of dispute resolution in Pakistan, promoting a culture of constructive dialogue, mutual understanding, and peaceful coexistence.",
+            tab3_title1: "Our",
+            tab3_title2: "Mission",
+            tab3_points: [
+              "To promote mediation as an accessible and effective dispute resolution mechanism",
+              "To train and accredit mediators in line with international standards",
+              "To collaborate with courts, government institutions, and private sectors",
+              "To raise awareness about the benefits of mediation across society"
+            ],
+            tab4_title1: "Our",
+            tab4_title2: "Impact",
+            tab4_text1: "PMA has successfully trained hundreds of lawyers, Judges, professionals and has played a key role in promoting court-connected mediation initiatives in Pakistan.",
+            tab4_text2: "We continue to work closely with the judiciary and stakeholders to strengthen mediation as a sustainable dispute resolution system."
+          }
         }
       }
     },
@@ -358,6 +398,46 @@
               { label: "شکایت اور اپیل پالیسی", link: "complaint-policy.html" },
               { label: "شرائط و ضوابط", link: "terms.html" }
             ]
+          }
+        },
+        "about-page": {
+          hero: {
+            img_alt: "PMA کے بارے میں",
+            eyebrow: "PMA بابت",
+            title_part1: "ایک ایسی ثقافت کی تعمیر",
+            title_part2: "مکالمہ، تصفیہ اور باہمی افہام و تفہیم کے ذریعے",
+            lead: "پاکستان میڈیٹرز ایسوسی ایشن (PMA) پیشہ ورانہ تربیت، ادارہ جاتی تعاون، اور بین الاقوامی سطح پر تسلیم شدہ معیارات کے ذریعے پورے پاکستان میں میڈیشن (مصالحت) اور متبادل تنازعات کے حل (ADR) کو فروغ دینے کے لیے پرعزم ہے۔"
+          },
+          about: {
+            hero_img_alt: "PMA کے بارے میں",
+            hero_eyebrow: "PMA بابت",
+            hero_title_part1: "ایک ایسی ثقافت کی تعمیر",
+            hero_title_part2: "مکالمہ، تصفیہ اور باہمی افہام و تفہیم کے ذریعے",
+            hero_lead: "پاکستان میڈیٹرز ایسوسی ایشن (PMA) پیشہ ورانہ تربیت، ادارہ جاتی تعاون، اور بین الاقوامی سطح پر تسلیم شدہ معیارات کے ذریعے پورے پاکستان میں میڈیشن (مصالحت) اور متبادل تنازعات کے حل (ADR) کو فروغ دینے کے لیے پرعزم ہے۔",
+            badge_years: "سال",
+            badge_stat_label: "مصالحتی مہارت کا <br>فروغ",
+            nav_tab1: "PMA کے بارے میں",
+            nav_tab2: "ہمارا وژن",
+            nav_tab3: "ہمارا مشن",
+            nav_tab4: "ہمارا اثر",
+            tab1_title1: "PMA کے",
+            tab1_title2: "بارے میں",
+            tab1_text: "PMA 2013 میں قائم ہوئی اور حکومت پاکستان کے ساتھ رجسٹرڈ ہے، PMA وہ پیشہ ورانہ ادارہ ہے جسے سینٹر فار ایفیکٹیو ڈسپیوٹ ریزولوشن (CEDR)، برطانیہ نے پاکستان میں CEDR ماڈل کی مصالحتی تربیت فراہم کرنے کا اختیار دیا ہے۔<br><br>PMA نے تھائی لینڈ آربیٹریشن سینٹر (2018) کے ساتھ مفاہمت کی ایک یادداشت پر دستخط کیے ہیں اور دیگر سارک ممالک کے اداروں کے ساتھ مضبوط تعلقات برقرار رکھے ہوئے ہے۔<br><br>ہماری ایسوسی ایشن بین الاقوامی سطح پر تسلیم شدہ CEDR سے تربیت یافتہ ماسٹر ٹرینرز اور مصالحت کاروں پر مشتمل ہے جنہوں نے سندھ، پنجاب اور اسلام آباد میں ججوں اور وکلاء کے لیے متعدد تربیتی پروگرام کامیابی کے ساتھ منعقد کیے ہیں، جس سے ملک میں مصالحت کے پیشہ ورانہ معیار بلند ہوئے ہیں۔",
+            tab2_title1: "ہمارا",
+            tab2_title2: "وژن",
+            tab2_text: "پاکستان میں تنازعات کے حل کے سب سے نمایاں اور قابل اعتماد طریقے کے طور پر مصالحت (Mediation) کو قائم کرنا، تعمیری مکالمے، باہمی افہام و تفہیم اور پرامن بقائے باہمی کی ثقافت کو فروغ دینا۔",
+            tab3_title1: "ہمارا",
+            tab3_title2: "مشن",
+            tab3_points: [
+              "مصالحت کو تنازعات کے حل کے ایک آسان اور مؤثر طریقہ کار کے طور پر فروغ دینا",
+              "بین الاقوامی معیارات کے مطابق مصالحت کاروں (Mediators) کو تربیت دینا اور ان کی تصدیق کرنا",
+              "عدالتوں، حکومتی اداروں اور نجی شعبوں کے ساتھ تعاون کرنا",
+              "پورے معاشرے میں مصالحت کے فوائد کے بارے میں آگاہی پیدا کرنا"
+            ],
+            tab4_title1: "ہمارا",
+            tab4_title2: "اثر",
+            tab4_text1: "PMA نے سینکڑوں وکلاء، ججوں اور پیشہ ور افراد کو کامیابی کے ساتھ تربیت دی ہے اور پاکستان میں عدالتوں سے منسلک مصالحتی اقدامات کو فروغ دینے میں کلیدی کردار ادا کیا ہے۔",
+            tab4_text2: "ہم مصالحت کو ایک پائیدار تنازعات کے حل کے نظام کے طور پر مضبوط بنانے کے لیے عدلیہ اور اسٹیک ہولڈرز کے ساتھ مل کر کام جاری رکھے ہوئے ہیں۔"
           }
         }
       }
@@ -531,6 +611,46 @@
               { label: "الشروط والأحكام", link: "terms.html" }
             ]
           }
+        },
+        "about-page": {
+          hero: {
+            img_alt: "عن الجمعية الباكستانية للوسطاء",
+            eyebrow: "عن PMA",
+            title_part1: "بناء ثقافة قائمة على",
+            title_part2: "الحوار، والحلول السلمية، والتفاهم المتبادل",
+            lead: "تلتزم الجمعية الباكستانية للوسطاء (PMA) بتطوير الوساطة والحلول البديلة لتسوية النزاعات (ADR) في جميع أنحاء باكستان من خلال التدريب المهني، والتعاون المؤسسي، ومعايير الممارسة المعترف بها دولياً."
+          },
+          about: {
+            hero_img_alt: "عن الجمعية الباكستانية للوسطاء",
+            hero_eyebrow: "عن PMA",
+            hero_title_part1: "بناء ثقافة قائمة على",
+            hero_title_part2: "الحوار، والحلول السلمية، والتفاهم المتبادل",
+            hero_lead: "تلتزم الجمعية الباكستانية للوسطاء (PMA) بتطوير الوساطة والحلول البديلة لتسوية النزاعات (ADR) في جميع أنحاء باكستان من خلال التدريب المهني، والتعاون المؤسسي، ومعايير الممارسة المعترف بها دولياً.",
+            badge_years: "سنوات",
+            badge_stat_label: "تعزيز التميز في <br>مجال الوساطة",
+            nav_tab1: "عن الجمعية",
+            nav_tab2: "رؤيتنا",
+            nav_tab3: "رسالتنا",
+            nav_tab4: "تأثيرنا",
+            tab1_title1: "عن",
+            tab1_title2: "PMA",
+            tab1_text: "تأسست جمعية PMA في عام 2013 وهي مسجلة لدى حكومة باكستان، وهي الهيئة المهنية المعتمدة من قبل مركز التسوية الفعالة للنزاعات (CEDR) في المملكة المتحدة، لتقديم التدريب على الوساطة وفقًا لنموذج CEDR في باكستان.<br><br>وقعت PMA مذكرة تفاهم مع مركز تايلاند للتحكيم (2018) وتحافظ على علاقات قوية مع المؤسسات في دول سارك (SAARC) الأخرى.<br><br>تضم جمعيتنا مدربين معتمدين دولياً ووسطاء مدربين في CEDR نجحوا في تقديم العديد من البرامج التدريبية للقضاة والمحامين في جميع أنحاء السند والبنجاب وإسلام آباد، مما ساهم في رفع المعايير المهنية للوساطة في البلاد.",
+            tab2_title1: "رؤيتنا",
+            tab2_title2: "",
+            tab2_text: "ترسيخ الوساطة كوسيلة رائدة والأكثر موثوقية لتسوية النزاعات في باكستان، وتعزيز ثقافة الحوار البنّاء، والتفاهم المتبادل، والتعايش السلمي.",
+            tab3_title1: "رسالتنا",
+            tab3_title2: "",
+            tab3_points: [
+              "تعزيز الوساطة كآلية ميسرة وفعالة لتسوية النزاعات",
+              "تدريب واعتماد الوسطاء بما يتماشى مع المعايير الدولية",
+              "التعاون مع المحاكم والمؤسسات الحكومية والقطاعات الخاصة",
+              "رفع مستوى الوعي بفوائد الوساطة في جميع أنحاء المجتمع"
+            ],
+            tab4_title1: "تأثيرنا",
+            tab4_title2: "",
+            tab4_text1: "نجحت جمعية PMA في تدريب مئات المحامين والقضاة والمهنيين، ولعبت دوراً رئيسياً في تعزيز مبادرات الوساطة المرتبطة بالمحاكم في باكستان.",
+            tab4_text2: "نحن نواصل العمل عن كثب مع القضاء وأصحاب المصلحة لتعزيز الوساطة كنظام مستدام لتسوية النزاعات."
+          }
         }
       }
     },
@@ -703,6 +823,46 @@
               { label: "条款与条件", link: "terms.html" }
             ]
           }
+        },
+        "about-page": {
+          hero: {
+            img_alt: "关于 PMA",
+            eyebrow: "关于 PMA",
+            title_part1: "构建一种专注于",
+            title_part2: "对话、争端解决与相互理解的文化",
+            lead: "巴基斯坦调解员协会 (PMA) 致力于通过专业培训、机构合作和国际认可的执业标准，在巴基斯坦全境推动调解和替代性争议解决 (ADR) 的发展。"
+          },
+          about: {
+            hero_img_alt: "关于 PMA",
+            hero_eyebrow: "关于 PMA",
+            hero_title_part1: "构建一种专注于",
+            hero_title_part2: "对话、争端解决与相互理解的文化",
+            hero_lead: "巴基斯坦调解员协会 (PMA) 致力于通过专业培训、机构合作和国际认可的执业标准，在巴基斯坦全境推动调解和替代性争议解决 (ADR) 的发展。",
+            badge_years: "周年",
+            badge_stat_label: "推行卓越的 <br>调解服务",
+            nav_tab1: "关于 PMA",
+            nav_tab2: "我们的愿景",
+            nav_tab3: "我们的使命",
+            nav_tab4: "我们的影响",
+            tab1_title1: "关于",
+            tab1_title2: "PMA",
+            tab1_text: "PMA 成立于 2013 年，并在巴基斯坦政府注册，是经英国有效争议解决中心 (CEDR) 授权在巴基斯坦开展 CEDR 模式调解培训的专业机构。<br><br>PMA 已于 2018 年与泰国仲裁中心签署了谅解备忘录，并与南亚区域合作联盟 (SAARC) 其他国家的机构保持着紧密的合作关系。<br><br>我们的协会由国际公认、经 CEDR 培训的主讲培训师和调解员组成。他们已成功为信德省、旁遮普省和伊斯兰堡 Jurisdictions 的法官和律师开展了多项培训计划，从而提高了该国调解的专业标准。",
+            tab2_title1: "我们的",
+            tab2_title2: "愿景",
+            tab2_text: "将调解确立为巴基斯坦领先且最值得信赖的争议解决方式，促进建设性对话、相互理解和和平共处的文化。",
+            tab3_title1: "我们的",
+            tab3_title2: "使命",
+            tab3_points: [
+              "推动调解成为一种可及且有效的争议解决机制",
+              "按照国际标准培训和认证调解员",
+              "与法院、政府机构和私营部门开展紧密合作",
+              "提高全社会对调解益处的认识"
+            ],
+            tab4_title1: "我们的",
+            tab4_title2: "影响",
+            tab4_text1: "PMA 已成功培训了数百名律师、法官和专业人士，并在推动巴基斯坦法院衔接调解工作方面发挥了关键作用。",
+            tab4_text2: "我们继续与司法界及各利益相关方密切合作，以巩固调解作为可持续争议解决体系的地位。"
+          }
         }
       }
     },
@@ -873,6 +1033,46 @@
               { label: "شرایط او ضوابط", link: "terms.html" }
             ]
           }
+        },
+        "about-page": {
+          hero: {
+            img_alt: "د PMA په اړه",
+            eyebrow: "د PMA په اړه",
+            title_part1: "د داسې کلتور رامنځته کول",
+            title_part2: "چې بنسټ یې په خبرو اترو، حل لارو او دوه اړخیزه تفاهم وي",
+            lead: "د پاکستان منځګړو ټولنه (PMA) ژمنه ده چې د مسلکي روزنې, اداري همکارۍ، او په نړیواله کچه منل شویو معیارونو له لارې په ټول پاکستان کې منځګړیتوب او د شخړو متبادل حل (ADR) ته وده ورکړي."
+          },
+          about: {
+            hero_img_alt: "د PMA په اړه",
+            hero_eyebrow: "د PMA په اړه",
+            hero_title_part1: "د داسې کلتور رامنځته کول",
+            hero_title_part2: "چې بنسټ یې په خبرو اترو، حل لارو او دوه اړخیزه تفاهم وي",
+            hero_lead: "د پاکستان منځګړو ټولنه (PMA) ژمنه ده چې د مسلکي روزنې، اداري همکارۍ، اور په نړیواله کچه منل شویو معیارونو له لارې په ټول پاکستان کې منځګړیتوب او د شخړو متبادل حل (ADR) ته وده ورکړي.",
+            badge_years: "کاله",
+            badge_stat_label: "د منځګړیتوب د عالي معیارونو <br>وده",
+            nav_tab1: "د PMA په اړه",
+            nav_tab2: "زموږ لیدلوری",
+            nav_tab3: "زموږ ماموریت",
+            nav_tab4: "زموږ اغېز",
+            tab1_title1: "د PMA",
+            tab1_title2: "په اړه",
+            tab1_text: "PMA په 2013 کې تاسیس شوې او د پاکستان حکومت سره راجستر ده، PMA هغه مسلکي اداره ده چې د انګلستان د اغېزمنو شخړو حل مرکز (CEDR) لخوا اجازه ورکړل شوې ترڅو په پاکستان کې د CEDR ماډل منځګړیتوب روزنه وړاندې کړي.<br><br>PMA د تایلینډ د منځګړیتوب مرکز (2018) سره د تفاهم یادښت لاسلیک کړی او د سارک په نورو هیوادونو کې له بنسټونو سره قوي اړیکې پالي.<br><br>زموږ ټولنه په نړیواله کچه منل شوي د CEDR لخوا روزل شوي ماسټر ټرینرانو او منځګړو څخه جوړه ده چې په بریالیتوب سره یې په سند، پنجاب او اسلام آباد کې د قاضیانو او وکیلانو لپاره ډیری روزنیز پروګرامونه ترسره کړي دي.",
+            tab2_title1: "زموږ",
+            tab2_title2: "لیدلوری",
+            tab2_text: "په پاکستان کې د شخړو د حل د ترټولو مخکښې او باوري طریقې په توګه د منځګړیتوب رامنځته کول، د رغنده خبرو اترو، دوه اړخیزه تفاهم او سوله ایز ژوند کلتور ته وده ورکول.",
+            tab3_title1: "زموږ",
+            tab3_title2: "ماموریت",
+            tab3_points: [
+              "منځګړیتوب ته د شخړو د حل د یوې اسانه او اغېزمنې لارې په توګه وده ورکول",
+              "د نړیوالو معیارونو سره سم د منځګړو روزنه او تصدیق کول",
+              "د محکمو، دولتي بنسټونو او خصوصي سکټورونو سره همکاري کول",
+              "په ټولنه کې د منځګړیتوب د ګټو په اړه پوهاوی رامنځته کول"
+            ],
+            tab4_title1: "زموږ",
+            tab4_title2: "اغېز",
+            tab4_text1: "PMA په بریالیتوب سره په سلګونو وکیلان، قاضیان او مسلکي کسان روزلي او په پاکستان کې یې له محکمو سره د تړلي منځګړیتوب نوښتونو په وده کې مهم رول لوبولی دی.",
+            tab4_text2: "موږ د قضایه قوې او شریکانو سره نږدې کار کولو ته دوام ورکوو ترڅو منځګړیتوب د شخړو د حل د یو باثباته سیسټم په توګه پیاوړی کړو."
+          }
         }
       }
     },
@@ -1042,6 +1242,46 @@
               { label: "شڪايت ۽ اپيل پاليسي", link: "complaint-policy.html" },
               { label: "شرطون ۽ ضابطا", link: "terms.html" }
             ]
+          }
+        },
+        "about-page": {
+          hero: {
+            img_alt: "PMA بابت",
+            eyebrow: "PMA بابت",
+            title_part1: "هڪ اهڙي ثقافت جي تعمير",
+            title_part2: "ڳالهين، مصالحت ۽ باهمي افهام و تفهيم جي ذريعي",
+            lead: "پاڪستان ميڊئيٽرز ايسوسيئيشن (PMA) پروفيشنل تربيت، اداراتي تعاون، ۽ بين الاقوامي سطح تي تسليم ٿيل معيارن جي ذريعي پوري پاڪستان ۾ ميڊئيشن (مصالحت) ۽ متبادل تڪرارن جي حل (ADR) کي هٿي ڏيڻ لاءِ پرعزم آهي."
+          },
+          about: {
+            hero_img_alt: "PMA بابت",
+            hero_eyebrow: "PMA بابت",
+            hero_title_part1: "هڪ اهڙي ثقافت جي تعمير",
+            hero_title_part2: "ڳالهين، مصالحت ۽ باهمي افهام و تفهيم جي ذريعي",
+            hero_lead: "پاڪستان ميڊئيٽرز ايسوسيئيشن (PMA) پروفيشنل تربيت، اداراتي تعاون، ۽ بين الاقوامي سطح تي تسليم ٿيل معيارن جي ذريعي پوري پاڪستان ۾ ميڊئيشن (مصالحت) ۽ متبادل تڪرارن جي حل (ADR) کي هٿي ڏيڻ لاءِ پرعزم آهي .",
+            badge_years: "سال",
+            badge_stat_label: "مصالحتي مهارت کي <br>هٿي ڏيڻ",
+            nav_tab1: "PMA بابت",
+            nav_tab2: "اسان جو ويزن",
+            nav_tab3: "اسان جو مشن",
+            nav_tab4: "اسان جو اثر",
+            tab1_title1: "PMA",
+            tab1_title2: "بابت",
+            tab1_text: "PMA 2013 ۾ قائم ٿي ۽ پاڪستان حڪومت سان رجسٽرڊ آهي، PMA اهو پروفيشنل ادارو آهي جنهن کي سينٽر فار ايفيڪٽو ڊسپيوٽ ريزوليوشن (CEDR)، برطانيه پاران پاڪستان ۾ CEDR ماڊل جي مصالحتي تربيت فراهم ڪرڻ جو اختيار ڏنو ويو آهي.<br><br>PMA ٿائيلينڊ آربيٽريشن سينٽر (2018) سان هڪ مفاهمتي ياداشت تي دستخط ڪيا آهن ۽ ٻين سارڪ ملڪن جي ادارن سان مضبوط لاڳاپا برقرار رکيا آهن.<br><br>اسان جي ايسوسيئيشن بين الاقوامي سطح تي تسليم ٿيل CEDR مان تربيت يافته ماسٽر ٽرينرز ۽ مصالحت ڪندڙن تي مشتمل آهي، جن سنڌ، پنجاب ۽ اسلام آباد ۾ ججن ۽ وڪيلن لاءِ ڪيترائي تربيتي پروگرام ڪاميابيءَ سان هلايا آهن، جنهن سان ملڪ ۾ مصالحت جا پروفيشنل معيار بلند ٿيا آهن.",
+            tab2_title1: "اسان جو",
+            tab2_title2: "ويزن",
+            tab2_text: "پاڪستان ۾ تڪرارن جي حل جي سڀ کان نمايان ۽ معتبر طريقي جي طور تي مصالحت (Mediation) کي قائم ڪرڻ، تعميري ڳالهين، باهمي افهام و تفهيم ۽ پرامن گڏيل بقا جي ثقافت کي هٿي ڏيڻ.",
+            tab3_title1: "اسان جو",
+            tab3_title2: "مشن",
+            tab3_points: [
+              "مصالحت کي تڪرارن جي حل جي هڪ آسان ۽ مؤثر طريقي جي طور تي هٿي ڏيڻ",
+              "بين الاقوامي معيارن جي مطابق مصالحت ڪندڙن (Mediators) کي تربيت ڏيڻ ۽ انهن جي تصديق ڪرڻ",
+              "عدالتن، حڪومتي ادارن ۽ نجي شعبن سان تعاون ڪرڻ",
+              "پوري معاشري ۾ مصالحت جي فائدن بابت آگاهي پيدا ڪرڻ"
+            ],
+            tab4_title1: "اسان جو",
+            tab4_title2: "اثر",
+            tab4_text1: "PMA سوين وڪيلن، ججن ۽ پروفيشنلز کي ڪاميابيءَ سان تربيت ڏني آهي ۽ پاڪستان ۾ عدالتن سان لاڳاپيل مصالحتي قدمن کي هٿي ڏيڻ ۾ اهم ڪردار ادا ڪيو آهي.",
+            tab4_text2: "اسان مصالحت کي هڪ پائيدار تڪرارن جي حل جي نظام جي طور تي مضبوط ڪرڻ لاءِ عدليه ۽ اسٽيڪ هولڊرز سان گڏجي ڪم جاري رکيو پيا اچون."
           }
         }
       }
@@ -1238,6 +1478,40 @@
     }
   }
 
+
+  // Helper: resolves translation keys with namespace-aware fallbacks.
+  // Supports direct keys (e.g., "about-page.hero.eyebrow") and legacy flat keys.
+  function translateKey(key, options) {
+    if (!key) return '';
+
+    // 1. Try directly (handles prefixed keys like "about-page.X" or "home-page.X")
+    let res = window.i18next.t(key, options);
+    if (res !== key && res !== undefined && res !== null) {
+      return res;
+    }
+
+    // 2. Try with "home-page." prefix (legacy home page keys stored under namespace)
+    const prefixedKey = 'home-page.' + key;
+    let prefixedRes = window.i18next.t(prefixedKey, options);
+    if (prefixedRes !== prefixedKey && prefixedRes !== undefined && prefixedRes !== null) {
+      return prefixedRes;
+    }
+
+    // 3. Strip known prefixes and try flat lookup (graceful fallback)
+    const prefixes = ['home-page.', 'about-page.'];
+    for (const prefix of prefixes) {
+      if (key.startsWith(prefix)) {
+        const flatKey = key.slice(prefix.length);
+        let flatRes = window.i18next.t(flatKey, options);
+        if (flatRes !== flatKey && flatRes !== undefined && flatRes !== null) {
+          return flatRes;
+        }
+      }
+    }
+
+    return res;
+  }
+
   // Apply translations to all DOM elements
   function translatePage() {
     // 1. Translate elements with data-i18n attributes (plain text)
@@ -1245,7 +1519,7 @@
       const key = el.getAttribute('data-i18n');
       if (!key) return;
 
-      const translated = window.i18next.t(key);
+      const translated = translateKey(key);
 
       if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
         // For form fields, update placeholder only
@@ -1263,7 +1537,7 @@
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
       const key = el.getAttribute('data-i18n-html');
       if (!key) return;
-      el.innerHTML = window.i18next.t(key);
+      el.innerHTML = translateKey(key);
     });
 
     // 3. Translate footer list elements (data-i18n-list)
@@ -1275,7 +1549,7 @@
       const listType = ul.getAttribute('data-i18n-list-type') || 'plain';
       if (!key) return;
 
-      const items = window.i18next.t(key, { returnObjects: true });
+      const items = translateKey(key, { returnObjects: true });
       if (!Array.isArray(items) || items.length === 0) return;
 
       // Determine icon class from existing first <li> (preserve icon style)
@@ -1303,7 +1577,7 @@
           const iconHtml = iconClass
             ? `<i class="${iconClass}" aria-hidden="true"></i> `
             : '';
-          return `<li><a>${iconHtml}${text}</a></li>`;
+          return `<li>${iconHtml}${text}</li>`;
         }
       }).join('\n');
     });
@@ -1312,7 +1586,7 @@
     document.querySelectorAll('[data-i18n-attr-alt]').forEach(el => {
       const key = el.getAttribute('data-i18n-attr-alt');
       if (!key) return;
-      el.setAttribute('alt', window.i18next.t(key));
+      el.setAttribute('alt', translateKey(key));
     });
 
     // 5. Translate header links using automated selector mapping (failsafe fallback)
@@ -1320,7 +1594,7 @@
       document.querySelectorAll(selector).forEach(el => {
         // Only override text if it does not already have a translation attribute
         if (!el.hasAttribute('data-i18n') && !el.hasAttribute('data-i18n-html')) {
-          el.textContent = window.i18next.t(key);
+          el.textContent = translateKey(key);
         }
       });
     });
