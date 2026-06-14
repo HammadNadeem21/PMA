@@ -19768,16 +19768,16 @@ body.rtl .pma-training-card-body {
 
 /* ── Mediation Section - RTL ── */
 body.rtl .pma-mediation-content {
-  text-align: center;
+  text-align: right;
 }
 
 body.rtl .pma-mediation-divider {
-  margin-left: 0;
-  margin-right: auto;
+  margin-right: 0;
+  margin-left: auto;
 }
 
 body.rtl .pma-mediation-text {
-  text-align: center;
+  text-align: right;
 }
 
 /* ── Service Cards - RTL ── */

@@ -226,7 +226,175 @@
             tab4_title2: "Impact",
             tab4_text1: "PMA has successfully trained hundreds of lawyers, Judges, professionals and has played a key role in promoting court-connected mediation initiatives in Pakistan.",
             tab4_text2: "We continue to work closely with the judiciary and stakeholders to strengthen mediation as a sustainable dispute resolution system."
+          },
+          leadership: {
+            title1: "Leadership",
+            title2: "Messages",
+            president: {
+              name: "Aga Zafar Ahmad",
+              role1: "Advocate Supreme Court of Pakistan",
+              role2: "President",
+              role3: "Pakistan Mediators Association",
+              heading: "President's Message",
+              quote: "Mediation is not just a professional tool, but a necessity for a developing legal system.",
+              lead: "As the legal and commercial landscapes evolve, the role of ADR has never been more critical in ensuring swift, equitable, and effective justice. My focus as President is to expand our reach, ensuring that mediation becomes a cornerstone of our legal landscape.",
+              read_more: "Read Full Message",
+              sign_role: "Advocate Supreme Court of Pakistan<br>President, Pakistan Mediators Association",
+              popup: {
+                p1: "It is a profound honor to serve as the President of the Pakistan Mediators Association (PMA). As the legal and commercial landscapes evolve, the role of Alternative Dispute Resolution (ADR) has never been more critical in ensuring swift, equitable, and effective justice.",
+                p2: "My journey as a founding member of this Association has been driven by a belief that mediation is not just a professional tool, but a necessity for a developing legal system. As we look toward the future, my commitment is to ensure our Association becomes a more vibrant and collaborative platform, bridging the gap between traditional litigation and modern dispute resolution.",
+                p3: "Since our inception, the PMA has been dedicated to promoting and organizing the practice of mediation across Pakistan. We strive to maintain the highest standards of professional conduct and to provide a unified voice for mediators nationwide. My focus as President is to expand our reach, ensuring that Mediation becomes a cornerstone of our legal landscape, recognized by both the judiciary and the public as a vital tool for social and economic harmony.",
+                commit_heading: "We are committed to:",
+                commit_list: [
+                  "<strong>Capacity Building & Professional Development:</strong> Continuing to facilitate high-caliber training and accreditation for mediators to ensure world-class standards of practice to keep our members' skills at the forefront of the industry.",
+                  "<strong>Advocacy:</strong> Engaging with stakeholders and the judiciary to integrate mediation into the mainstream legal framework.",
+                  "<strong>Innovation:</strong> Embracing modern techniques and global best practices to resolve trade, maritime, and commercial conflicts effectively.",
+                  "<strong>National Conventions:</strong> We will endeavour to organize regular gatherings to share insights, celebrate successes, and strengthen our collective voice across the country.",
+                  "<strong>Enhanced Coordination:</strong> We are dedicated to improving communication and engagement between all members to ensure every perspective is heard and valued.",
+                  "<strong>Membership Growth:</strong> We will actively welcome new professionals to expand the reach and influence of mediation within Pakistan's legal and business communities.",
+                  "<strong>Code of Conduct for Mediators:</strong> Furthermore, a key priority for this term is the establishment of a new committee dedicated to coordinating with the Pakistan Bar Council and Provincial Bar Councils. This initiative will focus on formalizing a robust Code of Conduct for Mediators, ensuring that our practice remains grounded in the highest ethical and professional standards."
+                ],
+                closing: "I invite you all to join us in this mission to mainstream mediation and foster a culture of harmony and professional excellence in Pakistan."
+              }
+            },
+            founding_president: {
+              name: "Anwar Kashif Mumtaz",
+              role1: "Advocate Supreme Court of Pakistan",
+              role2: "Accredited Mediator",
+              heading: "Founding President's Message",
+              quote: "Together, we can build a culture where understanding prevails over confrontation.",
+              lead: "Our mission is to promote mediation as an effective tool towards ethical and accessible means of dispute resolution within our beloved country.",
+              read_more: "Read Full Message",
+              sign_role: "Advocate Supreme Court<br>Accredited Mediator",
+              popup: {
+                p1: "Today, being the founding president of Pakistan Mediators Association, I am delighted to witness the growth of platform dedicated for dialogue and peaceful dispute resolution. Our mission is to promote Mediation as an effective tool towards ethical and accessible means of dispute resolution within our beloved country. We remain committed to upholding the highest professional standards and fostering trust in alternative dispute resolution mechanisms.",
+                p2: "Through collaboration, training and continuous learning, we aim to strengthen the capacity of Mediators nationwide.",
+                p3: "I encourage all the stakeholders to embrace mediation as a constructive path to supplement the judiciary and towards justice and harmony.",
+                closing: "Together, we can build a culture where understanding prevails over confrontation."
+              }
+            },
+            stats: {
+              s1_title: "Hundreds Trained",
+              s1_text: "Lawyers, Judges & Professionals trained across Pakistan.",
+              s2_title: "Court-Connected Mediation",
+              s2_text: "Promoting and strengthening mediation initiatives nationwide.",
+              s3_title: "Strong Collaboration",
+              s3_text: "Working closely with the judiciary and stakeholders for a sustainable dispute resolution system."
+            }
+          }, partners: {
+            title: "Our Partners",
+            p1: "Sindh High Court",
+            p2: "Govt. Institutions",
+            p3: "International Mediation Institute"
           }
+        }, "mediation-page": {
+          hero: {
+            img_alt: "Mediation consultation room",
+            eyebrow: "Mediation",
+            title_part1: "Resolve Disputes Through",
+            title_part2: "Dialogue & Understanding",
+            lead: "Mediation is a voluntary, confidential, and structured process where a neutral mediator helps parties reach a mutually acceptable and sustainable resolution."
+          },
+          mediation: {
+            title1: "What is",
+            title2: "Mediation?",
+            text1: "Mediation is a voluntary, confidential, and structured process in which a neutral and impartial third party — the mediator — facilitates dialogue between disputing parties to help them reach a mutually acceptable and sustainable resolution.",
+            text2: "Unlike litigation, mediation emphasizes collaboration, self-determination, and creative problem-solving. It enables parties to achieve faster, more cost-effective outcomes while preserving relationships.",
+            img_alt: "What is Mediation"
+          }, whyChoose: {
+            heading_part1: "Why Choose",
+            heading_part2: "Mediation",
+            heading_part3: "with PMA?",
+            cards: {
+              card1: {
+                title: "Faster & Cost-Effective",
+                desc: "Resolve disputes in weeks, not years."
+              },
+              card2: {
+                title: "Confidential",
+                desc: "Private process with no public records."
+              },
+              card3: {
+                title: "Relationship-Preserving",
+                desc: "Focus on mutual understanding and win-win solutions."
+              },
+              card4: {
+                title: "Flexible & Collaborative",
+                desc: "Parties control the outcome."
+              },
+              card5: {
+                title: "IMI-Certified Standards",
+                desc: "Internationally recognized mediator accreditation."
+              }
+            }
+          }, banner: {
+            text: "PMA is Pakistan's <strong>first and oldest</strong> dedicated organization for mediation accreditation, professional training, and advocacy — <strong>established in 2013–2014</strong> and based in Karachi."
+          },
+          how_it_works: {
+            title_part1: "How Mediation",
+            title_part2: "Works?",
+            img_alt: "Mediation process",
+            steps: {
+              step1: {
+                num: "1",
+                title: "Submit Your Request",
+                desc: "You contact PMA to share the details of your dispute."
+              },
+              step2: {
+                num: "2",
+                title: "Initial Case Assessment",
+                desc: "We review the matter and determine its suitability for mediation."
+              },
+              step3: {
+                num: "3",
+                title: "Mediator Assignment",
+                desc: "A neutral and qualified mediator is assigned to your case."
+              },
+              step4: {
+                num: "4",
+                title: "Facilitated Sessions",
+                desc: "The mediator facilitates structured dialogue to explore solutions."
+              },
+              step5: {
+                num: "5",
+                title: "Resolution & Agreement",
+                desc: "Parties reach a mutually acceptable outcome and formalize the agreement."
+              }
+            }
+          },
+          who_we_serve: {
+            title_part1: "Who We",
+            title_part2: "Serve",
+            cards: {
+              card1: {
+                title: "Individuals & Families",
+                desc: "Helping individuals and families resolve personal and civil disputes."
+              },
+              card2: {
+                title: "Businesses & Corporations",
+                desc: "Supporting businesses in resolving commercial and workplace disputes."
+              },
+              card3: {
+                title: "Government Institutions",
+                desc: "Assisting government departments in resolving public sector disputes."
+              },
+              card4: {
+                title: "NGOs & Community Organizations",
+                desc: "Facilitating conflict resolution for community and social organizations."
+              },
+              card5: {
+                title: "Law Firms & Legal Professionals",
+                desc: "Partnering with legal professionals for effective ADR solutions."
+              }
+            }
+          },
+          cta: {
+            title_part1: "Let’s Resolve Conflict",
+            title_part2: "Peacefully.",
+            subtitle: "Mediation creates understanding. Understanding creates solutions. Contact PMA today to learn how mediation can help you.",
+            btn_text: "Contact Us Today"
+          }
+
         }
       }
     },
@@ -438,7 +606,176 @@
             tab4_title2: "اثر",
             tab4_text1: "PMA نے سینکڑوں وکلاء، ججوں اور پیشہ ور افراد کو کامیابی کے ساتھ تربیت دی ہے اور پاکستان میں عدالتوں سے منسلک مصالحتی اقدامات کو فروغ دینے میں کلیدی کردار ادا کیا ہے۔",
             tab4_text2: "ہم مصالحت کو ایک پائیدار تنازعات کے حل کے نظام کے طور پر مضبوط بنانے کے لیے عدلیہ اور اسٹیک ہولڈرز کے ساتھ مل کر کام جاری رکھے ہوئے ہیں۔"
-          }
+          },
+          leadership: {
+            title1: "قیادت کے",
+            title2: "پیغامات",
+            president: {
+              name: "آغا ظفر احمد",
+              role1: "ایڈووکیٹ سپریم کورٹ آف پاکستان",
+              role2: "صدر",
+              role3: "پاکستان میڈیٹرز ایسوسی ایشن",
+              heading: "صدر کا پیغام",
+              quote: "مصالحت (میڈیشن) صرف ایک پیشہ ورانہ ذریعہ نہیں، بلکہ ترقی پذیر قانونی نظام کے لیے ایک ناگزیر ضرورت ہے۔",
+              lead: "جیسے جیسے قانونی اور تجارتی منظر نامہ تبدیل ہو رہا ہے، فوری، منصفانہ اور مؤثر انصاف کی فراہمی کے لیے اے ڈی آر (ADR) کا کردار پہلے سے کہیں زیادہ اہم ہو گیا ہے۔ بطور صدر میری توجہ اپنے دائرہ کار کو وسعت دینے پر ہے، تاکہ مصالحت ہمارے قانونی منظر نامے کا ایک بنیادی ستون بن سکے۔",
+              read_more: "مکمل پیغام پڑھیں",
+              sign_role: "ایڈووکیٹ سپریم کورٹ آف پاکستان<br>صدر، پاکستان میڈیٹرز ایسوسی ایشن",
+              popup: {
+                p1: "پاکستان میڈیٹرز ایسوسی ایشن (PMA) کے صدر کی حیثیت سے خدمات انجام دینا میرے لیے انتہائی اعزاز کی بات ہے۔ جیسے جیسے قانونی اور تجارتی منظر نامہ تبدیل ہو رہا ہے، فوری، منصفانہ اور مؤثر انصاف کو یقینی بنانے میں متبادل تنازعات کے حل (ADR) کا کردار کبھی اتنا اہم نہیں رہا۔",
+                p2: "اس ایسوسی ایشن کے بانی رکن کے طور پر میرا سفر اس یقین کے ساتھ شروع ہوا کہ مصالحت صرف ایک پیشہ ورانہ ذریعہ نہیں بلکہ ترقی پذیر قانونی نظام کے لیے ایک ناگزیر ضرورت ہے۔ جیسے ہی ہم مستقبل کی طرف دیکھتے ہیں، میرا عزم ہے کہ ہم اپنی ایسوسی ایشن کو ایک زیادہ متحرک اور باہمی تعاون کا پلیٹ فارم بنائیں، جو روایتی قانونی چارہ جوئی اور جدید تنازعات کے حل کے درمیان خلیج کو پاٹ سکے۔",
+                p3: "اپنے قیام کے بعد سے، پی ایم اے پاکستان بھر میں مصالحت کے عمل کو فروغ دینے اور اسے منظم کرنے کے لیے وقف ہے۔ ہم پیشہ ورانہ رویے کے اعلیٰ ترین معیار کو برقرار رکھنے اور ملک بھر میں مصالحت کاروں کے لیے ایک متحدہ آواز فراہم کرنے کی کوشش کرتے ہیں۔ بطور صدر میری توجہ اپنے دائرہ کار کو وسعت دینے پر ہے، تاکہ یہ بات یقینی بنائی جا سکے کہ مصالحت ہمارے قانونی منظر نامے کا ایک بنیادی ستون بن جائے، جسے عدلیہ اور عوام دونوں سماجی اور اقتصادی ہم آہنگی کے لیے ایک اہم ذریعے کے طور پر تسلیم کریں۔",
+                commit_heading: "ہم مندرجہ ذیل کے لیے پرعزم ہیں:",
+                commit_list: [
+                  "<strong>صلاحیتوں کی تعمیر اور پیشہ ورانہ ترقی:</strong> مصالحت کاروں کے لیے اعلیٰ معیار کی تربیت اور منظوری کی سہولت فراہم کرنا جاری رکھنا تاکہ عالمی معیار کے طریقوں کو یقینی بنایا جا سکے اور ہمارے اراکین کی مہارتیں صنعت میں سب سے آگے رہیں۔",
+                  "<strong>وکالت و تائید:</strong> مصالحت کو مرکزی دھارے کے قانونی فریم ورک میں ضم کرنے کے لیے شراکت داروں اور عدلیہ کے ساتھ مل کر کام کرنا۔",
+                  "<strong>جدت طرازی:</strong> تجارتی، بحری اور کاروباری تنازعات کو مؤثر طریقے سے حل کرنے کے لیے جدید تکنیکوں اور عالمی بہترین طریقوں کو اپنانا۔",
+                  "<strong>قومی کنونشنز:</strong> ہم ملک بھر میں تجربات شیئر کرنے، کامیابیوں کا جشن منانے اور اپنی اجتماعی آواز کو مضبوط بنانے کے لیے باقاعدہ اجتماعات منعقد کرنے کی کوشش کریں گے۔",
+                  "<strong>بہتر ہم آہنگی:</strong> ہم تمام اراکین کے درمیان رابطے اور شمولیت کو بہتر بنانے کے لیے وقف ہیں تاکہ ہر نقطہ نظر کو سنا اور اہمیت دی جا سکے۔",
+                  "<strong>اراکین کی تعداد میں اضافہ:</strong> ہم پاکستان کی قانونی اور کاروباری برادریوں میں مصالحت کے اثر و رسوخ اور رسائی کو بڑھانے کے لیے نئے پیشہ ور افراد کا گرمجوشی سے خیرمقدم کریں گے۔",
+                  "<strong>مصالحت کاروں کے لیے ضابطہ اخلاق:</strong> مزید برآں، اس مدت کے لیے ایک اہم ترجیح پاکستان بار کونسل اور صوبائی بار کونسلوں کے ساتھ ہم آہنگی کے لیے ایک نئی کمیٹی کا قیام ہے۔ یہ اقدام مصالحت کاروں کے لیے ایک جامع ضابطہ اخلاق کو باقاعدہ بنانے پر توجہ مرکوز کرے گا، اس بات کو یقینی بناتے ہوئے کہ ہماری پریکٹس اعلیٰ ترین اخلاقی اور پیشہ ورانہ معیارات پر مبنی رہے۔"
+                ],
+                closing: "میں آپ سب کو دعوت دیتا ہوں کہ مصالحت کو مرکزی دھارے میں لانے اور پاکستان میں ہم آہنگی اور پیشہ ورانہ مہارت کے کلچر کو فروغ دینے کے اس مشن میں ہمارا ساتھ دیں۔"
+              }
+            },
+            founding_president: {
+              name: "انوار کاشف ممتاز",
+              role1: "ایڈووکیٹ سپریم کورٹ آف پاکستان",
+              role2: "منظور شدہ مصالحت کار",
+              heading: "بانی صدر کا پیغام",
+              quote: "مل کر، ہم ایک ایسی ثقافت کی تعمیر کر سکتے ہیں جہاں محاذ آرائی پر افہام و تفہیم غالب ہو۔",
+              lead: "ہمارا مشن اپنے پیارے ملک کے اندر اخلاقی اور آسان ترین طریقے سے تنازعات کے حل کے لیے مصالحت کو ایک مؤثر ذریعے کے طور پر فروغ دینا ہے۔",
+              read_more: "مکمل پیغام پڑھیں",
+              sign_role: "ایڈووکیٹ سپریم کورٹ<br>منظور شدہ مصالحت کار",
+              popup: {
+                p1: "آج، پاکستان میڈیٹرز ایسوسی ایشن کا بانی صدر ہونے کے ناطے، مجھے مکالمے اور پرامن تائید و تصفیہ کے لیے وقف اس پلیٹ فارم کی ترقی دیکھ کر دلی خوشی ہو رہی ہے۔ ہمارا مشن اپنے پیارے ملک کے اندر اخلاقی اور آسان ترین طریقے سے تنازعات کے حل کے لیے مصالحت کو ایک مؤثر ذریعے کے طور پر فروغ دینا ہے۔ ہم اعلیٰ ترین پیشہ ورانہ معیارات کو برقرار رکھنے اور متبادل تنازعات کے حل کے طریقہ کار پر اعتماد کو فروغ دینے کے لیے پرعزم ہیں۔",
+                p2: "باهي تعاون، تربيت اور مسلسل سيکهڻ جي ذريعي، هم ملک بهر ۾ مصالحت ڪارن جي صلاحيتن کي مضبوط بنائڻ چاهيون ٿا.",
+                p3: "مين تمام شريڪ دارن جي حوصلي افزائي ڪريان ٿو ته اهي انصاف ۽ هم آهنگي جي حصول لاءِ ۽ عدليه جي مدد لاءِ مصالحت کي هڪ تعميري رستي جي طور تي اپنائين.",
+                closing: "مل کر، ہم ایک ایسی ثقافت کی تعمیر کر سکتے ہیں جہاں محاذ آرائی پر افہام و تفہیم غالب ہو۔"
+              }
+            },
+            stats: {
+              s1_title: "سینکڑوں تربیت یافتہ",
+              s1_text: "پورے پاکستان میں وکلاء، ججز اور پیشہ ور افراد کو تربیت دی گئی۔",
+              s2_title: "عدالت سے منسلک مصالحت",
+              s2_text: "ملک بھر میں مصالحتی اقدامات کا فروغ اور استحکام۔",
+              s3_title: "مضبوط تعاون",
+              s3_text: "پائیدار تنازعات کے حل کے نظام کے لیے عدلیہ اور شراکت داروں کے ساتھ مل کر کام کرنا۔"
+            }
+          },
+          partners: {
+            title: "ہمارے پارٹنرز",
+            p1: "سندھ ہائی کورٹ",
+            p2: "سرکاری ادارے",
+            p3: "انٹرنیشنل میڈیشن انسٹی ٹیوٹ"
+          },
+        }, "mediation-page": {
+          hero: {
+            img_alt: "مصالحتی مشاورتی کمرہ",
+            eyebrow: "مصالحت (Mediation)",
+            title_part1: "تنازعات کا حل تلاش کریں",
+            title_part2: "مکالمے اور باہمی افہام و تفہیم کے ذریعے",
+            lead: "مصالحت ایک رضاکارانہ، بااعتماد اور منظم عمل ہے جہاں ایک غیر جانبدار ثالث فریقین کو باہمی طور پر قابل قبول اور پائیدار حل تک پہنچنے میں مدد کرتا ہے۔"
+          },
+          mediation: {
+            title1: "مصالحت (Mediation)",
+            title2: "کیا ہے؟",
+            text1: "مصالحت ایک رضاکارانہ، بااعتماد اور منظم عمل ہے جس میں ایک غیر جانبدار اور بے لوث تیسرا فریق — یعنی ثالث (Mediator) — متنازعہ فریقین کے درمیان بات چیت کو آسان بناتا ہے تاکہ وہ باہمی طور پر قابل قبول اور پائیدار حل تک پہنچ سکیں۔",
+            text2: "عدالتی چارہ جوئی (Litigation) کے برعکس، مصالحت باہمی تعاون، خود ارادیت، اور تعمیری طریقے سے مسائل کو حل کرنے پر زور دیتی ہے۔ یہ فریقین کو تعلقات برقرار رکھنے کے ساتھ ساتھ تیز تر اور انتہائی کم لاگت میں نتائج حاصل کرنے کے قابل بناتی ہے۔",
+            img_alt: "مصالحت کیا ہے"
+          }, whyChoose: {
+            heading_part1: "PMA کے ساتھ",
+            heading_part2: "مصالحت",
+            heading_part3: "کا انتخاب کیوں کریں؟",
+            cards: {
+              card1: {
+                title: "تیز تر اور انتہائی کم لاگت",
+                desc: "برسوں کے بجائے چند ہفتوں میں تنازعات کا حل پائیں۔"
+              },
+              card2: {
+                title: "مکمل رازداری",
+                desc: "بغیر کسی عوامی ریکارڈ کے ایک نجی اور محفوظ عمل۔"
+              },
+              card3: {
+                title: "تعلقات کو برقرار رکھنا",
+                desc: "باہمی افہام و تفہیم اور دونوں فریقین کی کامیابی (win-win) پر توجہ۔"
+              },
+              card4: {
+                title: "لچکدار اور باہمی تعاون",
+                desc: "نتائج اور فیصلوں پر فریقین کا اپنا مکمل اختیار۔"
+              },
+              card5: {
+                title: "IMI سے تصدیق شدہ معیار",
+                desc: "ثالثین (Mediators) کے لیے بین الاقوامی سطح پر تسلیم شدہ اسناد۔"
+              }
+            }
+          },
+          banner: {
+            text: "PMA ثالثی کی توثیق، پیشہ ورانہ تربیت، اور وکالت کے لیے پاکستان کی <strong>پہلی اور قدیم ترین</strong> سرشار تنظیم ہے — جو <strong>2013–2014 میں قائم ہوئی</strong> اور اس کا صدر دفتر کراچی میں ہے۔"
+          },
+          how_it_works: {
+            title_part1: "ثالثی (Mediation)",
+            title_part2: "کیسے کام کرتی ہے؟",
+            img_alt: "ثالثی کا عمل",
+            steps: {
+              step1: {
+                num: "۱",
+                title: "اپنی درخواست جمع کروائیں",
+                desc: "آپ اپنے تنازعہ کی تفصیلات شیئر کرنے کے لیے PMA سے رابطہ کرتے ہیں۔"
+              },
+              step2: {
+                num: "۲",
+                title: "کیس کا ابتدائی جائزہ",
+                desc: "ہم معاملے کا جائزہ لیتے ہیں اور ثالثی کے لیے اس کی موزونیت کا تعین کرتے ہیں۔"
+              },
+              step3: {
+                num: "۳",
+                title: "ثالث (Mediator) کا تعین",
+                desc: "آپ کے کیس کے لیے ایک غیر جانبدار اور اہل ثالث کا تعین کیا جاتا ہے۔"
+              },
+              step4: {
+                num: "۴",
+                title: "ثالثی کے باقاعدہ سیشنز",
+                desc: "ثالث حل تلاش کرنے کے لیے فریقین کے درمیان منظم اور تعمیری گفتگو کی سہولت فراہم کرتا ہے۔"
+              },
+              step5: {
+                num: "۵",
+                title: "تصفیہ اور معاہدہ",
+                desc: "فریقین باہمی طور پر قابل قبول نتیجے پر پہنچتے ہیں اور معاہدے کو رسمی شکل دیتے ہیں۔"
+              }
+            }
+          },
+           who_we_serve: {
+    heading_part1: "ہم کن کو",
+    heading_part2: "خدمات فراہم کرتے ہیں",
+    cards: {
+      card1: {
+        title: "افراد اور خاندان",
+        desc: "افراد اور خاندانوں کو ان کے ذاتی اور دیوانی (civil) تنازعات حل کرنے میں مدد فراہم کرنا۔"
+      },
+      card2: {
+        title: "کاروبار اور کارپوریشنز",
+        desc: "تجارتی اور کام کی جگہ کے تنازعات کو حل کرنے میں کاروباری اداروں کی معاونت کرنا۔"
+      },
+      card3: {
+        title: "سرکاری ادارے",
+        desc: "پبلک سیکٹر کے تنازعات کو حل کرنے میں سرکاری محکموں کی مدد کرنا۔"
+      },
+      card4: {
+        title: "این جی اوز اور کمیونٹی تنظیمیں",
+        desc: "کمیونٹی اور سماجی تنظیموں کے لیے تنازعات کے حل کو آسان بنانا۔"
+      },
+      card5: {
+        title: "لا فرمز اور قانونی ماہرین",
+        desc: "مؤثر ADR (متبادل تصفیہ تنازعات) کے حل کے لیے قانونی ماہرین کے ساتھ شراکت داری۔"
+      }
+    }
+  },
+  cta: {
+    title_part1: "آئیں تنازعات کو حل کریں",
+    title_part2: "امن و امان کے ساتھ۔",
+    subtitle: "مصالحت افہام و تفہیم پیدا کرتی ہے۔ افہام و تفہیم سے حل نکلتے ہیں۔ یہ جاننے کے لیے کہ مصالحت آپ کی کیسے مدد کر سکتی ہے، آج ہی PMA سے رابطہ کریں۔",
+    btn_text: "آج ہی ہم سے رابطہ کریں"
+  }
         }
       }
     },
@@ -650,7 +987,176 @@
             tab4_title2: "",
             tab4_text1: "نجحت جمعية PMA في تدريب مئات المحامين والقضاة والمهنيين، ولعبت دوراً رئيسياً في تعزيز مبادرات الوساطة المرتبطة بالمحاكم في باكستان.",
             tab4_text2: "نحن نواصل العمل عن كثب مع القضاء وأصحاب المصلحة لتعزيز الوساطة كنظام مستدام لتسوية النزاعات."
+          },
+          leadership: {
+            title1: "القيادة",
+            title2: "الرسائل",
+            president: {
+              name: "آغا ظفر أحمد",
+              role1: "محامٍ لدى المحكمة العليا في باكستان",
+              role2: "الرئيس",
+              role3: "الجمعية الباكستانية للوسطاء",
+              heading: "رسالة الرئيس",
+              quote: "الوساطة ليست مجرد أداة مهنية، بل هي ضرورة ملحة لنظام قانوني متطور.",
+              lead: "مع تطور المشهد القانوني والتجاري، لم يكن دور الحلول البديلة لتسوية النزاعات (ADR) أكثر أهمية من أي وقت مضى لضمان تحقيق عدالة سريعة ومنصفة وفعالة. ينصب تركيزي كرئيس على توسيع نطاق انتشارنا، لضمان أن تصبح الوساطة حجر الزاوية في مشهدنا القانوني.",
+              read_more: "قراءة الرسالة كاملة",
+              sign_role: "محامٍ لدى المحكمة العليا في باكستان<br>رئيس الجمعية الباكستانية للوسطاء",
+              popup: {
+                p1: "إنه لشرف كبير لي أن أخدم كرئيس للجمعية الباكستانية للوسطاء (PMA). مع تطور المشهد القانوني والتجاري، لم يكن دور الحلول البديلة لتسوية النزاعات (ADR) أكثر أهمية من أي وقت مضى لضمان تحقيق عدالة سريعة ومنصفة وفعالة.",
+                p2: "إن مسيرتي كعضو مؤسس في هذه الجمعية كانت مدفوعة بإيماني بأن الوساطة ليست مجرد أداة مهنية، بل هي ضرورة لنظام قانوني متطور. وبينما نتطلع نحو المستقبل، فإن التزامي هو ضمان أن تصبح جمعيتنا منصة أكثر حيوية وتعاوناً، لسد الفجوة بين التقاضي التقليدي والحلول الحديثة لتسوية النزاعات.",
+                p3: "منذ تأسيسنا، كرست PMA جهودها لتعزيز وتنظيم ممارسة الوساطة في جميع أنحاء باكستان. نحن نسعى جاهدين للحفاظ على أعلى معايير السلوك المهني وتقديم صوت موحد للوسطاء على مستوى الوطن. ينصب تركيزي كرئيس على توسيع نطاق انتشارنا، لضمان أن تصبح الوساطة حجر الزاوية في مشهدنا القانوني، ومعترفاً بها من قبل كل من القضاء والجمهور كأداة حيوية للوئام الاجتماعي والاقتصادي.",
+                commit_heading: "نحن ملتزمون بـ:",
+                commit_list: [
+                  "<strong>بناء القدرات والتطوير المهني:</strong> الاستمرار في تسهيل التدريب والاعتماد رفيع المستوى للوسطاء لضمان ممارسات ذات معايير عالمية للحفاظ على مهارات أعضائنا في طليعة هذه المهنة.",
+                  "<strong>الدعم والمناصرة:</strong> التواصل مع أصحاب المصلحة والقضاء لدمج الوساطة في الإطار القانوني السائد.",
+                  "<strong>الابتكار:</strong> تبني التقنيات الحديثة وأفضل الممارسات العالمية لحل النزاعات التجارية والبحرية والشركات بفعالية.",
+                  "<strong>المؤتمرات الوطنية:</strong> سنسعى لتنظيم لقاءات منتظمة لتبادل الأفكار والاحتفاء بالنجاحات وتعزيز صوتنا الجماعي في جميع أنحاء البلاد.",
+                  "<strong>التنسيق المحسن:</strong> نحن ملتزمون بتحسين التواصل والمشاركة بين جميع الأعضاء لضمان سماع وتقدير كل وجهة نظر.",
+                  "<strong>نمو العضوية:</strong> نرحب بنشاط بالمهنيين الجدد لتوسيع نطاق الوساطة وتأثيرها داخل المجتمعات القانونية والتجارية في باكستان.",
+                  "<strong>ميثاق الشرف للوسطاء:</strong> علاوة على ذلك، فإن الأولوية الرئيسية لهذه الدورة هي إنشاء لجنة جديدة مخصصة للتنسيق مع مجلس بار الباكستاني ومجالس بار الأقاليم. سيركز هذا القرار على إضفاء الطابع الرسمي على ميثاق شرف قوي وصارم للوسطاء، مما يضمن بقاء ممارستنا قائمة على أعلى المعايير الأخلاقية والمهنية."
+                ],
+                closing: "إنني أدعوكم جميعاً للانضمام إلينا في هذه المهمة لتعميم الوساطة وتعزيز ثقافة الانسجام والتميز المهني في باكستان."
+              }
+            },
+            founding_president: {
+              name: "أنور كاشف ممتاز",
+              role1: "محامٍ لدى المحكمة العليا في باكستان",
+              role2: "وسيط معتمد",
+              heading: "رسالة الرئيس المؤسس",
+              quote: "معاً، يمكننا بناء ثقافة يسود فيها التفاهم على المواجهة.",
+              lead: "إن رسالتنا هي تعزيز الوساطة كأداة فعالة نحو وسائل أخلاقية ومتاحة لتسوية النزاعات داخل وطننا الحبيب.",
+              read_more: "قراءة الرسالة كاملة",
+              sign_role: "محامٍ لدى المحكمة العليا<br>وسيط معتمد",
+              popup: {
+                p1: "اليوم، وبصفتي الرئيساً المؤسساً للجمعية الباكستانية للوسطاء، يسعدني جداً أن أشهد نمو هذه المنصة المخصصة للحوار والحل السلمي للنزاعات. إن رسالتنا هي تعزيز الوساطة كأداة فعالة نحو وسائل أخلاقية ومتاحة لتسوية النزاعات داخل وطننا الحبيب. ونحن لا نزال ملتزمين بإنفاذ أعلى المعايير المهنية وتعزيز الثقة في آليات الحلول البديلة لتسوية النزاعات.",
+                p2: "من خلال التعاون والتدريب والتعلم المستمر، نهدف إلى تعزيز قدرات الوسطاء في جميع أنحاء البلاد.",
+                p3: "أحث جميع أصحاب المصلحة على تبني الوساطة كمسار بناء لدعم القضاء والمضي قدماً نحو العدالة والوئام.",
+                closing: "معاً، يمكننا بناء ثقافة يسود فيها التفاهم على المواجهة."
+              }
+            },
+            stats: {
+              s1_title: "تدريب المئات",
+              s1_text: "تدريب المحامين والقضاة والمهنيين في جميع أنحاء باكستان.",
+              s2_title: "الوساطة المرتبطة بالمحاكم",
+              s2_text: "تعزيز وتقوية مبادرات الوساطة على مستوى البلاد.",
+              s3_title: "تعاون قوي",
+              s3_text: "العمل عن كثب مع القضاء وأصحاب المصلحة من أجل نظام مستدام لتسوية النزاعات."
+            }
+          },
+          partners: {
+            title: "شركاؤنا",
+            p1: "محكمة السند العليا",
+            p2: "المؤسسات الحكومية",
+            p3: "المعهد الدولي للوساطة"
           }
+        }, "mediation-page": {
+          hero: {
+            img_alt: "غرفة الاستشارات الخاصة بالوساطة",
+            eyebrow: "الوساطة (Mediation)",
+            title_part1: "حل النزاعات من خلال",
+            title_part2: "الحوار وبناء التفاهم",
+            lead: "الوساطة هي عملية تطوعية، سرية، ومنظمة يساعد من خلالها وسيط محايد الأطراف على التوصل إلى حل مستدام ومقبول للجميع."
+          },
+          mediation: {
+            title1: "ما هي",
+            title2: "الوساطة؟",
+            text1: "الوساطة هي عملية تطوعية وسرية ومنظمة يقوم فيها طرف ثالث محايد ونزيه — وهو الوسيط (Mediator) — بتسهيل الحوار بين الأطراف المتنازعة لمساعدتهم على التوصل إلى حل مقبول ومستدام للجميع.",
+            text2: "على عكس التقاضي في المحاكم، تركز الوساطة على التعاون، والتقرير الذاتي، والحل المبتكر للمشكلات. وهي تمكّن الأطراف من تحقيق نتائج أسرع وأكثر فعالية من حيث التكلفة مع الحفاظ على العلاقات الودية.",
+            img_alt: "ما هي الوساطة"
+          }, whyChoose: {
+            heading_part1: "لماذا تختار",
+            heading_part2: "الوساطة",
+            heading_part3: "مع PMA؟",
+            cards: {
+              card1: {
+                title: "أسرع وأقل تكلفة",
+                desc: "حل النزاعات في غضون أسابيع وليس سنوات."
+              },
+              card2: {
+                title: "سرية تامة",
+                desc: "عملية خاصة وآمنة دون أي سجلات عامة."
+              },
+              card3: {
+                title: "الحفاظ على العلاقات",
+                desc: "التركيز على التفاهم المتبادل والحلول المرضية للطرفين (win-win)."
+              },
+              card4: {
+                title: "مرنة وتشاركيه",
+                desc: "الأطراف المتنازعة تتحكم بشكل كامل في النتائج والقرارات."
+              },
+              card5: {
+                title: "معايير معتمدة من IMI",
+                desc: "اعتماد للوسطاء معترف به على المستوى الدولي."
+              }
+            }
+          },
+          banner: {
+            text: "إن PMA هي المنظمة المتخصصة <strong>الأولى والأقدم</strong> في باكستان لاعتماد الوساطة، والتدريب المهني، والمناصرة — <strong>تأسست في 2013–2014</strong> ومقرها الرئيسي في كراتشي."
+          },
+          how_it_works: {
+            title_part1: "كيف تعمل",
+            title_part2: "الوساطة؟",
+            img_alt: "عملية الوساطة",
+            steps: {
+              step1: {
+                num: "١",
+                title: "تقديم طلبك",
+                desc: "تقوم بالاتصال بـ PMA لمشاركة تفاصيل النزاع الخاص بك."
+              },
+              step2: {
+                num: "٢",
+                title: "التقييم الأولي للحالة",
+                desc: "نقوم بمراجعة المسألة وتحديد مدى ملاءمتها للوساطة."
+              },
+              step3: {
+                num: "٣",
+                title: "تعيين الوسيط",
+                desc: "يتم تعيين وسيط محايد ومؤهل لمتابعة قضيتك."
+              },
+              step4: {
+                num: "٤",
+                title: "الجلسات الميسرة",
+                desc: "يقوم الوسيط بتسهيل حوار منظم لاستكشاف الحلول الممكنة."
+              },
+              step5: {
+                num: "٥",
+                title: "التسوية والاتفاق",
+                desc: "يتوصل الأطراف إلى نتيجة مقبولة للجميع ويتم صياغة الاتفاقية بشكل رسمي."
+              }
+            }
+          },
+          who_we_serve: {
+            heading_part1: "من هم",
+            heading_part2: "عملاؤنا؟",
+            cards: {
+              card1: {
+                title: "الأفراد والعائلات",
+                desc: "مساعدة الأفراد والعائلات على تسوية النزاعات الشخصية والمدنية."
+              },
+              card2: {
+                title: "الشركات والمؤسسات",
+                desc: "دعم الشركات في حل النزاعات التجارية والنزاعات في بيئة العمل."
+              },
+              card3: {
+                title: "المؤسسات الحكومية",
+                desc: "مساعدة الدوائر الحكومية في حل النزاعات المتعلقة بالقطاع العام."
+              },
+              card4: {
+                title: "المنظمات غير الحكومية والمجتمعية",
+                desc: "تسهيل حل النزاعات للمنظمات الاجتماعية والمجتمعية."
+              },
+              card5: {
+                title: "شركات المحاماة والمحترفون القانونيون",
+                desc: "الشراكة مع المتخصصين في القانون لتقديم حلول بديلة فعالة لتسوية النزاعات (ADR)."
+              }
+            }
+          },
+  cta: {
+    title_part1: "دعونا نحل النزاعات",
+    title_part2: "بطرق سلمية.",
+    subtitle: "الوساطة تبني التفاهم، والتفاهم يصنع الحلول. اتصل بـ PMA اليوم لمعرفة كيف يمكن للوساطة أن تساعدك.",
+    btn_text: "اتصل بنا اليوم"
+  }
         }
       }
     },
@@ -862,7 +1368,176 @@
             tab4_title2: "影响",
             tab4_text1: "PMA 已成功培训了数百名律师、法官和专业人士，并在推动巴基斯坦法院衔接调解工作方面发挥了关键作用。",
             tab4_text2: "我们继续与司法界及各利益相关方密切合作，以巩固调解作为可持续争议解决体系的地位。"
+          },
+          leadership: {
+            title1: "领导团队",
+            title2: "致辞",
+            president: {
+              name: "Aga Zafar Ahmad",
+              role1: "巴基斯坦最高法院律师",
+              role2: "主席",
+              role3: "巴基斯坦调解员协会",
+              heading: "主席致辞",
+              quote: "调解不仅是一种专业工具，更是发展中法律体系 tank 必需品。",
+              lead: "随着法律和商业环境的演变，替代性争议解决 (ADR) 在确保快速、公平和有效正义方面的作用从未像现在这样至关重要。作为主席，我的工作重点是扩大我们的影响力，确保调解成为我们法律体系的基石。",
+              read_more: "阅读完整致辞",
+              sign_role: "巴基斯坦最高法院律师<br>巴基斯坦调解员协会主席",
+              popup: {
+                p1: "有幸担任巴基斯坦调解员协会 (PMA) 主席，我深感荣幸。随着法律和商业环境的演变，替代性争议解决 (ADR) 在确保快速、公平和有效正义方面的作用从未像现在这样至关重要。",
+                p2: "作为本协会的创始成员，我的历程源于一种信念：调解不仅是一种专业工具，更是发展中法律体系的必需品。展望未来，我的承诺是确保我们的协会成为一个更具活力和协作性的平台，架起传统诉讼与现代争议解决方式之间的桥梁。",
+                p3: "自成立以来，PMA 一直致力于在巴基斯坦全境推广和规范调解实践。我们努力保持最高标准的专业操守，并为全国的调解员提供统一发声的平台。作为主席，我的工作重点是扩大我们的影响力，确保调解成为我们法律体系的基石，并被司法界和公众公认为促进社会与经济和谐的重要工具。",
+                commit_heading: "我们致力于：",
+                commit_list: [
+                  "<strong>能力建设与专业发展：</strong> 继续为调解员提供高水平的培训和认证，以确保达到世界级的执业标准，使我们成员的技能始终处于行业前沿。",
+                  "<strong>行业倡导：</strong> 与利益相关方和司法界紧密沟通，将调解引入并融入主流法律框架。",
+                  "<strong>坚持创新：</strong> 采用现代技术和全球最佳实践，有效解决贸易、海事和商业冲突。",
+                  "<strong>全国大会：</strong> 我们将努力组织定期集会，分享行业见解、庆祝成功，并加强我们在全国的共同发声。",
+                  "<strong>加强协调：</strong> 我们致力于改善所有成员之间的沟通与参与，确保每种观点都能被倾听和重视。",
+                  "<strong>扩大成员规模：</strong> 我们将积极欢迎新专业人士的加入，以扩大调解在巴基斯坦法律界和商界的影响力。",
+                  "<strong>调解员行为准则：</strong> 此外，本届任期的一个核心重点是成立一个新委员会，专门负责与巴基斯坦律师理事会和各省律师理事会进行协调。该举措将专注于正式确立一套完善的《调解员行为准则》，确保我们的执业始终基于最高的道德和专业标准。"
+                ],
+                closing: "我邀请大家加入我们的使命，共同推进调解主流化，在巴基斯坦培育和谐与追求卓越专业的文化。"
+              }
+            },
+            founding_president: {
+              name: "Anwar Kashif Mumtaz",
+              role1: "巴基斯坦最高法院律师",
+              role2: "认证调解员",
+              heading: "创始主席致辞",
+              quote: "齐心协力，我们可以构建一种理解重于对抗的文化。",
+              lead: "我们的使命是在我们挚爱的国家内推广调解，使其成为一种有效、合乎道德且易于获取的争议解决手段。",
+              read_more: "阅读完整致辞",
+              sign_role: "最高法院律师<br>认证调解员",
+              popup: {
+                p1: "今天，作为巴基斯坦调解员协会的创始主席，很高兴见证这一致力于对话和和平解决争议平台的成长。我们的使命是在我们挚爱的国家内推广调解，使其成为一种有效、合乎道德且易于获取的争议解决手段。我们依然致力于维护最高的专业标准，并增进对替代性争议解决机制的信任。",
+                p2: "通过合作、培训和持续学习，我们旨在加强全国调解员的能力建设。",
+                p3: "我鼓励所有利益相关方拥抱调解，将其作为补充司法体系、走向正义与和谐的建设性路径。",
+                closing: "齐心协力，我们可以构建一种理解重于对抗的文化。"
+              }
+            },
+            stats: {
+              s1_title: "数百人受训",
+              s1_text: "在巴基斯坦全境培训了数以百计的律师、法官和专业人士。",
+              s2_title: "法院衔接调解",
+              s2_text: "在全国范围内推广并强化法院衔接调解的各项举措。",
+              s3_title: "紧密合作",
+              s3_text: "与司法界和利益相关方密切合作，打造可持续的争议解决体系。"
+            }
+          },
+          partners: {
+            title: "我们的合作伙伴",
+            p1: "信德省高等法院",
+            p2: "政府机构",
+            p3: "国际调解协会"
           }
+        }, "mediation-page": {
+          hero: {
+            img_alt: "调解咨询室",
+            eyebrow: "调解服务 (Mediation)",
+            title_part1: "化解矛盾争议 坚守",
+            title_part2: "对话与相互理解",
+            lead: "调解是一个自愿、保密且结构化的过程。在此过程中，中立的调解员将协助各方达成相互接受且可持续的解决方案。"
+          },
+          mediation: {
+            title1: "什么是",
+            title2: "调解？",
+            text1: "调解是一个自愿、保密且结构化的过程。在此过程中，中立且公正的第三方——即调解员 (Mediator)——促进纠纷各方之间的对话，以帮助他们达成相互接受且可持续的解决方案。",
+            text2: "与法庭訴訟不同，调解强调合作、自主决定和创造性地解决问题。它使各方能够在保持彼此关系的同时，获得更高效、更具成本效益的结果。",
+            img_alt: "什么是调解"
+          }, whyChoose: {
+            heading_part1: "为什么选择 PMA 的",
+            heading_part2: "调解服务",
+            heading_part3: "？",
+            cards: {
+              card1: {
+                title: "高效且极具成本效益",
+                desc: "在数周内化解矛盾争议，而非耗费数年。"
+              },
+              card2: {
+                title: "严格保密",
+                desc: "私密安全的调解过程，不留任何公开记录。"
+              },
+              card3: {
+                title: "维护彼此关系",
+                desc: "专注于相互理解，寻求实现双赢的解决方案。"
+              },
+              card4: {
+                title: "灵活且注重协作",
+                desc: "争议各方对最终结果和决定拥有完全的控制权。"
+              },
+              card5: {
+                title: "IMI 认证标准",
+                desc: "国际公认的调解员专业资质认证。"
+              }
+            }
+          },
+          banner: {
+            text: "PMA 是巴基斯坦<strong>首家且历史最悠久</strong>的致力于调解认证、专业培训和行业倡导的专职机构——<strong>成立于 2013–2014 年</strong>，总部位于卡拉奇。"
+          },
+          how_it_works: {
+            title_part1: "调解服务如何",
+            title_part2: "开展？",
+            img_alt: "调解流程",
+            steps: {
+              step1: {
+                num: "1",
+                title: "提交您的申请",
+                desc: "您联络 PMA 并提供您的争议细节信息。"
+              },
+              step2: {
+                num: "2",
+                title: "初步案件评估",
+                desc: "我们评估相关事宜，并确定其是否适合通过调解解决。"
+              },
+              step3: {
+                num: "3",
+                title: "指定专属调解员",
+                desc: "我们将为您的案件分配一位中立且具备专业资质的调解员。"
+              },
+              step4: {
+                num: "4",
+                title: "协助开展调解会",
+                desc: "调解员将促进结构化对话，引导各方共同探索解决方案。"
+              },
+              step5: {
+                num: "5",
+                title: "达成共识与协议",
+                desc: "争议各方达成相互接受的结果，并正式签署和解协议。"
+              }
+            }
+          },
+          who_we_serve: {
+            heading_part1: "我们的",
+            heading_part2: "服务对象",
+            cards: {
+              card1: {
+                title: "个人与家庭",
+                desc: "协助个人及家庭化解各类私人与民事纠纷。"
+              },
+              card2: {
+                title: "企业与公司",
+                desc: "支持各类商业机构解决商事及职场内部争议。"
+              },
+              card3: {
+                title: "政府机构",
+                desc: "协助政府部门高效解决公共服务领域的争端。"
+              },
+              card4: {
+                title: "非政府组织与社区团体",
+        desc: "促进社区及社会公益组织内部与外部的矛盾化解。"
+      },
+              card5: {
+                title: "律师事务所与法律从业者",
+                desc: "与法律界专业人士携手合作，提供高效的多样化纠纷解决机制（ADR）方案。"
+              }
+            }
+  },
+  "cta": {
+    "title_part1": "让我们共同",
+    "title_part2": "和平化解争议。",
+    "subtitle": "调解凝聚共识，共识孕育方案。欢迎立即联络 PMA，了解调解服务如何为您提供协助。",
+    "btn_text": "立即联系我们"
+  }
         }
       }
     },
@@ -929,7 +1604,8 @@
           info_hours_label: "کاري وخت",
           info_hours_val: "دوشنبه-جمعه (9 بجې تر 5 بجې)",
           info_email_label: "زما ته ای میل کړئ",
-          info_email_val: "info@pma.org.pk"        },
+          info_email_val: "info@pma.org.pk"
+        },
         mediation: {
           title: "منځګړیتوب څه شی دی؟",
           text1: "منځګړیتوب یو رضاکارانه، محرم او منظم بهیر دی چیرې چې یو بې طرفه منځګړی د شخړې ښکیلو اړخونو سره مرسته کوي ترڅو خبرې وکړي، یو د بل لید درک کړي او یو داسې حل ته ورسیږي چې دواړو ته د منلو وړ وي.",
@@ -964,7 +1640,8 @@
             s5: { title: "IMI-تصدیق شوې روزنه", desc: "مسلکي روزنیز پروګرامونه." },
             s6: { title: "ورکشاپونه او پوهاوی", desc: "د ADR په اړه تعلیمي غونډې." },
             s7: { title: "اداراتي مشورتي خدمات", desc: "د ADR سیسټمونو په جوړولو کې مرسته." }
-          }        },
+          }
+        },
         leadership: {
           title: "زموږ د مشرتابه سره وپیژنئ",
           roles: { president: "رئیس", secretary: "عمومي سکرتر", vp_north: "مرستیال رئیس - شمال", vp_south: "مرستیال رئیس - جنوب" }
@@ -1072,7 +1749,170 @@
             tab4_title2: "اغېز",
             tab4_text1: "PMA په بریالیتوب سره په سلګونو وکیلان، قاضیان او مسلکي کسان روزلي او په پاکستان کې یې له محکمو سره د تړلي منځګړیتوب نوښتونو په وده کې مهم رول لوبولی دی.",
             tab4_text2: "موږ د قضایه قوې او شریکانو سره نږدې کار کولو ته دوام ورکوو ترڅو منځګړیتوب د شخړو د حل د یو باثباته سیسټم په توګه پیاوړی کړو."
+          },
+          leadership: {
+            title1: "مشرتابه",
+            title2: "پیغامونه",
+            president: {
+              name: "آغا ظفر احمد",
+              role1: "د پاکستان د سترې محکمې (سپريم کورټ) وکیل",
+              role2: "مشر (ولسمشر)",
+              role3: "د پاکستان منځګړو ټولنه",
+              heading: "د مشر پيغام",
+              quote: "منځګړیتوب یوازې یو مسلکي وسیله نه ده، بلکې د پرمختلونکي قانوني سیسټم لپاره یو اړتیا ده.",
+              lead: "لکه څنګه چې قانوني او سوداګریز چاپیریال بدلیږي، د ګړندي، عادلانه او اغېزمن انصاف په یقیني کولو کې د ADR رول هیڅکله دومره مهم نه و. د مشر په توګه زما پام زموږ د لاسرسي پراخولو باندې دی، ترڅو منځګړیتوب زموږ د قانوني چاپیریال یو بنسټیز ډبره شي.",
+              read_more: "بشپړ پيغام لوستل",
+              sign_role: "د پاکستان د سترې محکمې وکیل<br>مشر، د پاکستان منځګړو ټولنه",
+              popup: {
+                p1: "د پاکستان منځګړو ټولنې (PMA) د مشر په توګه خدمت کول یو لوی ویاړ دی. لکه څنګه چې قانوني او سوداګریز چاپیریال بدلیږي، د شخړو د متبادل حل (ADR) رول د ګړندي، عادلانه او اغېزمن انصاف په یقیني کولو کې د هر وخت په پرتله خورا مهم شوی دی.",
+                p2: "د دې ټولنې د یو بنسټ اېښودونکي غړي په توګه زما سفر د دې باور لخوا پرمخ وړل شوی چې منځګړیتوب یوازې یو مسلکي وسیله نه ده، بلکې د یو پرمختلونکي قانوني سیسټم لپاره یوه جدي اړتیا ده. کله چې موږ راتلونکي ته ګورو، زما ژمنه دا ده چې ډاډ ترلاسه کړم چې زموږ ټولنه یو ډیر خوځنده او ګډ پلیټ فارم شي، چې د دودیزو محکمو او د شخړو د حل د عصري لارو ترمنځ د پله رول ولوبوي.",
+                p3: "زموږ د تاسیس راهیسې، PMA په ټول پاکستان کې د منځګړیتوب د عمل دودولو او تنظیم کولو ته ځانګړې پاملرنه کړې ده. موږ هڅه کوو چې د مسلکي چلند ترټولو لوړ معیارونه وساتو او په ټول هیواد کې د منځګړو لپاره یو ګډ غږ چمتو کړو. د مشر په توګه زما تمرکز زموږ د لاسرسي په پراخولو دی، ترڅو ډاډ ترلاسه شي چې منځګړیتوب زموږ د قانوني سیسټم یو بنسټیز برخه شي، چې د عدلیې او عامو خلکو لخوا د ټولنیز او اقتصادي همغږۍ د یوې حیاتي وسیلې په توګه وپیژندل شي.",
+                commit_heading: "موږ ژمن یو چې:",
+                commit_list: [
+                  "<strong>د وړتیاوو لوړول او مسلکي پراختیا:</strong> د منځګړو لپاره د لوړ کیفیت روزنې او تصدیق کولو اسانتیا ته دوام ورکول ترڅو د نړیوالې کچې معیارونه رامنځته شي او زموږ د غړو مهارتونه په صنعت کې ترټولو مخکښ وساتل شي.",
+                  "<strong>وکالت (Advocacy):</strong> د شریکانو او عدلیې سره یوځای کار کول ترڅو منځګړیتوب په اصلي قانوني چوکاټ کې مدغم شي.",
+                  "<strong>نوښت (Innovation):</strong> د سوداګریزو، سمندري او کښتیو شخړو په مؤثره توګه حل کولو لپاره د عصري تخنیکونو او نړیوالو غوره لارو کارول.",
+                  "<strong>قومي کنوانسیونونه:</strong> موږ به هڅه وکړو چې په ټول هیواد کې د تجربو شریکولو، د بریالیتوبونو نمانځلو او زموږ د ګډ غږ پیاوړي کولو لپاره منظمې غونډې تنظیم کړو.",
+                  "<strong>غوره همغږي:</strong> موږ د ټولو غړو ترمنځ د اړیکو او بوختیا ښه کولو ته ژمن یو ترڅو ډاډ ترلاسه شي چې د هرچا نظر اوریدل کیږي او ارزښت ورکول کیږي.",
+                  "<strong>د غړیتوب وده:</strong> موږ به نوي مسلکي کسانو ته په تودوخې سره ښه راغلاست ووایو ترڅو د پاکستان په قانوني او سوداګریزو ټولنو کې د منځګړیتوب لاسرسی او نفوذ پراخ کړو.",
+                  "<strong>د منځګړو لپاره د اخلاقي چلند ضابطه (Code of Conduct):</strong> سربیره پردې، د دې دورې یو مهم لومړیتوب د پاکستان بار کونسل او ولایتي بار کونسلونو سره د همغږۍ لپاره د یوې نوې کمیټې رامنځته کول دي. دا نوښت به د منځګړو لپاره د یوې قوي اخلاقي ضابطې په رسمي کولو تمرکز وکړي، ترڅو ډاډ ترلاسه شي چې زموږ کړنې په لوړو اخلاقي او مسلکي معیارونو ولاړې وي."
+                ],
+                closing: "زه له تاسو ټولو څخه غوښتنه کوم چې پدې ماموریت کې له موږ سره یوځای شئ ترڅو منځګړیتوب عام کړو او په پاکستان کې د همغږۍ او مسلکي عالي والي کلتور ته وده ورکړو."
+              }
+            },
+            founding_president: {
+              name: "انور کاشف ممتاز",
+              role1: "د پاکستان د سترې محکمې وکیل",
+              role2: "تصدیق شوی منځګړی (Accredited Mediator)",
+              heading: "د بنسټ اېښودونکي مشر پيغام",
+              quote: "په ګډه، موږ کولی شو داسې کلتور رامنځته کړو چې هلته د نښتې پر ځای تفاهم برلاسی وي.",
+              lead: "زموږ ماموریت زموږ په ګران هیواد کې د شخړو د حل لپاره منځګړیتوب ته د یوې اخلاقي، اغېزمنې او اسانې لارې په توګه وده ورکول دي.",
+              read_more: "بشپړ پيغام لوستل",
+              sign_role: "د سترې محکمې وکیل<br>تصدیق شوی منځګړی",
+              popup: {
+                p1: "نن د پاکستان منځګړو ټولنې د بنسټ اېښودونکي مشر په توګه، زه ډیر خوښ یم چې د داسې یو پلیټ فارم د ودې شاهد یم چې د خبرو اترو او د شخړو سوله ایز حل ته وقف شوی دی. زموږ ماموریت زموږ په ګران هیواد کې د شخړو د حل لپاره د یوې اخلاقي او اسانې لارې په توګه د منځګړیتوب رامنځته کول دي. موږ د لوړو مسلکي معیارونو ساتلو او د شخړو د متبادل حل په لارو چارو د باور رامنځته کولو ته ژمن یو.",
+                p2: "د همکارۍ، روزنې او دوامداره زده کړې له لارې، موږ موخه لرو چې په ټول هیواد کې د منځګړو وړتیاوې پیاوړې کړو.",
+                p3: "زه ټول شریکان هڅوم چې منځګړیتوب د محکمو د ملاتړ او د عدالت او همغږۍ په لور د یوې رغندې لارې په توګه غوره کړي.",
+                closing: "په ګډه، موږ کولی شو داسې کلتور رامنځته کړو چې هلته د نښتې پر ځای تفاهم برلاسی وي."
+              }
+            },
+            stats: {
+              s1_title: "په سلګونو روزل شوي",
+              s1_text: "په ټول پاکستان کې وکیلان، قاضیان او مسلکي کسان روزل شوي دي.",
+              s2_title: "له محکمو سره تړلی منځګړیتوب",
+              s2_text: "په ټول هیواد کې د منځګړیتوب نوښتونو ته وده ورکول او پیاوړي کول.",
+              s3_title: "قوي همکاري",
+              s3_text: "د شخړو د حل د یو باثباته سیسټم لپاره د عدلیې او شریکانو سره نږدې کار کول."
+            }
           }
+        }, "mediation-page": {
+          hero: {
+            img_alt: "د منځګړیتوب د مشورې خونه",
+            eyebrow: "منځګړیتوب (Mediation)",
+            title_part1: "د شخړو حل لاره لټول",
+            title_part2: "د خبرو اترو او دوه اړخیزه تفاهم له لارې",
+            lead: "منځګړیتوب یو داوطلبانه، پټ او منظم بهیر دی چیرې چې یو بې طرفه منځګړی د ښکیلو غاړو سره مرسته کوي ترڅو دوه اړخیزه د منلو وړ او باثباته حل لارې ته ورسیږي."
+          },
+          mediation: {
+            title1: "منځګړیتوب",
+            title2: "څه شی دی؟",
+            text1: "منځګړیتوب یو داوطلبانه، پټ او منظم بهیر دی چې پکې یو بې طرفه او ناپیيلې دریمه ډله — یعنې منځګړی (Mediator) — د شخړې د ښکیلو غاړو ترمنځ خبرې اترې اسانه کوي ترڅو هغوی وکولی شي د دوه اړخیزه د منلو وړ او باثباته حل لارې ته ورسیږي.",
+            text2: "د محکمو د اوږدو جنجالونو برعکس، منځګړیتوب په ګډه همکارۍ، خپلواکې پرېکړې، او د ستونزو په تعميري حل ټینګار کوي. دا ښکيلو غاړو ته دا وړتیا ورکوي چې د خپلمنځي اړیکو د ساتلو ترڅنګ، په ګړندۍ او خورا لږ لګښت سره پایلې ترلاسه کړي.",
+            img_alt: "منځګړیتوب څه شی دی"
+          }, whyChoose: {
+            heading_part1: "د PMA سره",
+            heading_part2: "منځګړیتوب",
+            heading_part3: "ولې غوره کړئ؟",
+            cards: {
+              card1: {
+                title: "ګړندی او لږ لګښت لرونکی",
+                desc: "د کلونو پر ځای په څو اونیو کې شخړې حل کړئ."
+              },
+              card2: {
+                title: "پټ او محرم",
+                desc: "بې له کوم عامه ریکارډ څخه یو شخصي او خوندي بهیر."
+              },
+              card3: {
+                title: "د اړیکو ساتل",
+                desc: "په دوه اړخیزه تفاهم او د دواړو خواوو په ګټه (win-win) حل لارو تمرکز."
+              },
+              card4: {
+                title: "انعطاف منونکی او ګډ کار",
+                desc: "ښکیلې غاړې په پایلو او پرېکړو بشپړ کنټرول لري."
+              },
+              card5: {
+                title: "د IMI لخوا تایید شوي معیارونه",
+                desc: "د منځګړو لپاره په نړیواله کچه منل شوي اعتبارپاڼې."
+              }
+            }
+          },
+          banner: {
+            text: "PMA د منځګړیتوب د اعتبار، مسلکي روزنې، او وکالت لپاره د پاکستان <strong>لومړنۍ او تر ټولو پخوانۍ</strong> ځانګړې اداره ده — چې په <strong>2013–2014 کې تاسیس شوې</strong> او په کراچۍ کې موقعیت لري."
+          },
+          how_it_works: {
+            title_part1: "منځګړیتوب څنګه",
+            title_part2: "کار کوي؟",
+            img_alt: "د منځګړیتوب پروسه",
+            steps: {
+              step1: {
+                num: "۱",
+                title: "خپله غوښتنه وسپارئ",
+                desc: "تاسو د خپلې شخړې د جزیاتو شریکولو لپاره د PMA سره اړیکه ونیسئ."
+              },
+              step2: {
+                num: "۲",
+                title: "د قضیې لومړنۍ ارزونه",
+                desc: "موږ موضوع ارزوو او د منځګړیتوب لپاره د هغې وړتیا ټاکو."
+              },
+              step3: {
+                num: "۳",
+                title: "د منځګړي (Mediator) ټاکل",
+                desc: "ستاسو قضیې ته یو بې طرفه او وړ منځګړی ټاکل کیږي."
+              },
+              step4: {
+                num: "۴",
+                title: "تنظیم شوي ناستې (Sessions)",
+                desc: "منځګړی د حل لارو موندلو لپاره د جوړښت شوي او ګټور ډیالوګ زمینه برابروي."
+              },
+              step5: {
+                num: "۵",
+                title: "تصفیه او هوکړه لیک",
+                desc: "ښکیلې غاړې دوه اړخیزې د منلو وړ پایلې ته رسیږي او هوکړه لیک رسمي کوي."
+              }
+            }
+          },
+          who_we_serve: {
+    heading_part1: "موږ چا ته",
+    heading_part2: "خدمت کوو",
+    cards: {
+      card1: {
+        title: "افراد او کورنۍ",
+        desc: "د شخصي او مدني شخړو په هواري کې د افرادو او کورنیو سره مرسته کول."
+      },
+      card2: {
+        title: "سوداګرۍ او کارپوریشنونه",
+        desc: "د سوداګریزو او کار ځای د شخړو په حل کې د سوداګریزو ادارو ملاتړ کول."
+      },
+      card3: {
+        title: "دولتي ادارې",
+        desc: "د عامه سکتور د شخړو په حل کې د دولتي څانګو سره مرسته کول."
+      },
+      card4: {
+        title: "این جی اوز او د ټولنې تنظیمونه",
+        desc: "د ټولنیزو او عامه کچې سازمانونو لپاره د شخړو حل کول اسانول."
+      },
+      card5: {
+        title: "د قانون شرکتونه او حقوقي متخصصین",
+        desc: "د اغېزمنو ADR حل لارو لپاره د حقوقي متخصصینو سره ملګرتیا کول."
+      }
+    }
+  },
+  cta: {
+    title_part1: "راځئ چې شخړې حل کړو",
+    title_part2: "په سوله ییزه توګه.",
+    subtitle: "منځګړیتوب تفاهم رامنځته کوي. تفاهم حل لارې لټوي. نن ورځ د PMA سره اړیکه ونیسئ ترڅو پوه شئ چې منځګړیتوب څنګه ستاسو سره مرسته کولی شي.",
+    btn_text: "نن ورځ له موږ سره اړیکه ونیسئ"
+  }
         }
       }
     },
@@ -1139,7 +1979,8 @@
           info_hours_label: "ڪم جي وقت",
           info_hours_val: "سوموار-جمعو (9 صبح تي 5 شام)",
           info_email_label: "اسان کي ای میل ڪريو",
-          info_email_val: "info@pma.org.pk"        },
+          info_email_val: "info@pma.org.pk"
+        },
         mediation: {
           title: "ميڊئيشن (مصالحت) ڇا آهي؟",
           text1: "ميڊئيشن هڪ رضاکارانه، رازدارانه ۽ منظم عمل آهي جتي هڪ غير جانبدار ثالث ڌرين کي ڳالهين ڪرڻ، هڪ ٻئي جي نقطي نظر کي سمجهڻ ۽ باهمي طور قبول جوڳي حل تائين پهچڻ ۾ مدد ڪري ٿو.",
@@ -1174,7 +2015,8 @@
             s5: { title: "IMI-تصديق ٿيل ميڊئيٽر ٽريننگ", desc: "پيشيوراڻي سرٽيفڪيشن پروگرام." },
             s6: { title: "ورڪشاپس ۽ شعور", desc: "ADR بابت ڄاڻ ڏيندڙ سيمينار." },
             s7: { title: "اداراتي مشورتي خدمتون", desc: "ADR سسٽم ٺاهڻ ۾ ادارن جي مدد." }
-          }        },
+          }
+        },
         leadership: {
           title: "اسان جي قيادت سان ملو",
           roles: { president: "صدر", secretary: "سيڪريٽري جنرل", vp_north: "نائب صدر - اتر", vp_south: "نائب صدر - ڏکڻ" }
@@ -1282,7 +2124,176 @@
             tab4_title2: "اثر",
             tab4_text1: "PMA سوين وڪيلن، ججن ۽ پروفيشنلز کي ڪاميابيءَ سان تربيت ڏني آهي ۽ پاڪستان ۾ عدالتن سان لاڳاپيل مصالحتي قدمن کي هٿي ڏيڻ ۾ اهم ڪردار ادا ڪيو آهي.",
             tab4_text2: "اسان مصالحت کي هڪ پائيدار تڪرارن جي حل جي نظام جي طور تي مضبوط ڪرڻ لاءِ عدليه ۽ اسٽيڪ هولڊرز سان گڏجي ڪم جاري رکيو پيا اچون."
+          },
+          leadership: {
+            title1: "قيادت",
+            title2: "پيغام",
+            president: {
+              name: "آغا ظفر احمد",
+              role1: "ايڊووڪيٽ سپريم ڪورٽ آف پاڪستان",
+              role2: "صدر",
+              role3: "پاڪستان ميڊئيٽرز ايسوسيئيشن",
+              heading: "صدر جو پيغام",
+              quote: "مصالحت صرف هڪ پروفيشنل اوزار ناهي، پر هڪ ترقي پذير قانوني نظام لاءِ هڪ ضرورت آهي.",
+              lead: "جيئن جيئن قانوني ۽ تجارتي ماحول تبديل ٿي رهيو آهي، تيئن تيز، منصفاڻي ۽ اثرائتي انصاف کي يقيني بڻائڻ ۾ ADR جو ڪردار ڪڏهن به ايترو اهم ناهي رهيو. صدر جي حيثيت ۾ منهنجو ڌيان اسان جي پهچ کي وڌائڻ آهي، ته جيئن مصالحت اسان جي قانوني نظام جو بنيادي پٿر بڻجي وڃي.",
+              read_more: "پورو پيغام پڙهو",
+              sign_role: "ايڊووڪيٽ سپريم ڪورٽ آف پاڪستان<br>صدر، پاڪستان ميڊئيٽرز ايسوسيئيشن",
+              popup: {
+                p1: "پاڪستان ميڊئيٽرز ايسوسيئيشن (PMA) جي صدر جي حيثيت سان خدمتون سرانجام ڏيڻ هڪ وڏو اعزاز آهي. جيئن ته قانوني ۽ تجارتي ماحول تبديل ٿي رهيو آهي، متبادل تڪرارن جي حل (ADR) جو ڪردار تيز، منصفاڻي ۽ اثرائتي انصاف کي يقيني بڻائڻ ۾ ڪڏهن به ايترو اهم ناهي رهيو.",
+                p2: "هن ايسوسيئيشن جي هڪ باني ميمبر جي حيثيت سان منهنجو سفر ان يقين سان رهيو آهي ته مصالحت صرف هڪ پروفيشنل اوزار ناهي، پر هڪ ترقي پذير قانوني نظام لاءِ هڪ ضرورت آهي. جڏهن اسان مستقبل ڏانهن ڏسون ٿا، منهنجو عزم اهو آهي ته اسان جي ايسوسيئيشن کي هڪ وڌيڪ متحرڪ ۽ تعاون وارو پليٽ فارم بڻايو وڃي، جيڪو روايتي عدالتن ۽ جديد تڪرارن جي حل جي وچ ۾ هڪ پل جو ڪردار ادا ڪري.",
+                p3: "اسان جي شروعات کان وٺي، PMA پوري پاڪستان ۾ مصالحت جي عمل کي فروغ ڏيڻ ۽ منظم ڪرڻ لاءِ وقف آهي. اسان پروفيشنل اخلاقيات جي اعليٰ معيارن کي برقرار رکڻ ۽ سڄي ملڪ جي مصالحت ڪندڙن لاءِ هڪ گڏيل آواز مهيا ڪرڻ جي ڪوشش ڪندا آهيون. صدر جي حيثيت ۾ منهنجو مقصد اسان جي پهچ کي وڌائڻ آهي، انهي ڳالهه کي يقيني بڻائڻ ته مصالحت اسان جي قانوني نظام جو هڪ بنيادي حصو بڻجي وڃي، جنهن کي عدليه ۽ عوام ٻئي سماجي ۽ اقتصادي هم آهنگي لاءِ هڪ اهم اوزار طور تسليم ڪن.",
+                commit_heading: "اسان ان لاءِ پرعزم آهيون:",
+                commit_list: [
+                  "<strong>صلاحيتن جي اڏاوت ۽ پروفيشنل ترقي:</strong> مصالحت ڪندڙن لاءِ اعليٰ معيار جي تربيت ۽ تصديق کي جاري رکڻ ته جيئن عالمي معيار جي عمل کي يقيني بڻائي سگهجي ۽ اسان جي ميمبرن جي مهارتن کي انڊسٽري ۾ سڀ کان اڳتي رکيو وڃي.",
+                  "<strong>وکالت (Advocacy):</strong> اسٽيڪ هولڊرز ۽ عدليه سان گڏجي ڪم ڪرڻ ته جيئن مصالحت کي بنيادي قانوني فريم ورڪ جو حصو بڻائي سگهجي.",
+                  "<strong>جدت (Innovation):</strong> تجارتي، سامونڊي ۽ ڪاروباري تڪرارن کي مؤثر طريقي سان حل ڪرڻ لاءِ جديد طريقن ۽ عالمي بهترين عملن کي اپنائڻ.",
+                  "<strong>قومي ڪنوينشن:</strong> اسان سڄي ملڪ ۾ تجربا شيئر ڪرڻ، ڪاميابين جو جشن ملهائڻ، ۽ پنهنجي گڏيل آواز کي مضبوط ڪرڻ لاءِ باقاعدي گڏجاڻيون منظم ڪرڻ جي ڪوشش ڪنداسين.",
+                  "<strong>بهترين هماهنگي:</strong> اسان سڀني ميمبرن جي وچ ۾ رابطي ۽ مصروفيت کي بهتر بڻائڻ لاءِ وقف آهيون ته جيئن هر نقطه نظر کي ٻڌو ۽ اهميت ڏني وڃي.",
+                  "<strong>ميمبرشپ ۾ واڌارو:</strong> اسان پاڪستان جي قانوني ۽ ڪاروباري برادرين ۾ مصالحت جي پهچ ۽ اثر کي وڌائڻ لاءِ نون پروفيشنلز کي دل سان ڀليڪار ڪنداسين.",
+                  "<strong>مصالحت ڪندڙن لاءِ اخلاقي ضابطو (Code of Conduct):</strong> ان کان علاوه، هن مدت جي هڪ اهم ترجيح پاڪستان بار ڪائونسل ۽ صوبائي بار ڪائونسلن سان هماهنگي لاءِ هڪ نئين ڪميٽي قائم ڪرڻ آهي. هي قدم مصالحت ڪندڙن لاءِ هڪ مضبوط اخلاقي ضابطي کي باقاعدي بڻائڻ تي ڌيان ڏيندو، انهي ڳالهه کي يقيني بڻائڻ ته اسان جو عمل اعليٰ اخلاقي ۽ پروفيشنل معيارن تي قائم رهي."
+                ],
+                closing: "مان توهان سڀني کي دعوت ڏيان ٿو ته اسان سان گڏ هن مشن ۾ شامل ٿيو ته جيئن مصالحت کي عام ڪيو وڃي ۽ پاڪستان ۾ هم آهنگي ۽ پروفيشنل مهارت جي ثقافت کي هٿي ڏني وڃي."
+              }
+            },
+            founding_president: {
+              name: "انور ڪاشف ممتاز",
+              role1: "ايڊووڪيٽ سپريم ڪورٽ آف پاڪستان",
+              role2: "تصديق ٿيل مصالحت ڪندڙ (Accredited Mediator)",
+              heading: "باني صدر جو پيغام",
+              quote: "گڏجي، اسان هڪ اهڙي ثقافت تعمير ڪري سگهون ٿا جتي جهڳڙي جي ڀيٽ ۾ افهام و تفهيم کي فوقيت حاصل هجي.",
+              lead: "اسان جو مشن اسان جي پياري ملڪ ۾ تڪرارن جي حل لاءِ مصالحت کي هڪ اخلاقي، اثرائتي ۽ آسان طريقي جي طور تي فروغ ڏيڻ آهي.",
+              read_more: "پورو پيغام پڙهو",
+              sign_role: "ايڊووڪيٽ سپريم ڪورٽ<br>تصديق ٿيل مصالحت ڪندڙ",
+              popup: {
+                p1: "اڄ، پاڪستان ميڊئيٽرز ايسوسيئيشن جي باني صدر جي حيثيت سان، مان هڪ اهڙي پليٽ فارم جي ترقيءَ کي ڏسي ڏاڍو خوش ٿيو آهيان جيڪو ڳالهين ۽ پرامن تڪرارن جي حل لاءِ وقف آهي. اسان جو مشن اسان جي پياري ملڪ ۾ تڪرارن جي حل لاءِ مصالحت کي هڪ اخلاقي ۽ آسان طريقي جي طور تي فروغ ڏيڻ آهي. اسان اعليٰ پروفيشنل معيارن کي برقرار رکڻ ۽ متبادل تڪرارن جي حل جي طريقن تي اعتماد وڌائڻ لاءِ پرعزم آهيون.",
+                p2: "تعاون، تربيت ۽ مسلسل سکيا جي ذريعي، اسان جو مقصد سڄي ملڪ ۾ مصالحت ڪندڙن جي صلاحيتن کي مضبوط ڪرڻ آهي.",
+                p3: "مان سڀني اسٽيڪ هولڊرز کي حوصلا افزائي ڪريان ٿو ته اهي مصالحت کي عدالتن جي مدد ۽ انصاف ۽ هم آهنگي جي هڪ تعميري رستي طور اپنائين.",
+                closing: "گڏجي، اسان هڪ اهڙي ثقافت تعمير ڪري سگهون ٿا جتي جهڳڙي جي ڀيٽ ۾ افهام و تفهيم کي فوقيت حاصل هجي."
+              }
+            },
+            stats: {
+              s1_title: "سوين تربيت يافته",
+              s1_text: "پوري پاڪستان ۾ وڪيلن، ججن ۽ پروفيشنلز کي تربيت ڏني وئي.",
+              s2_title: "عدالتن سان لاڳاپيل مصالحت",
+              s2_text: "سڄي ملڪ ۾ مصالحت جي قدمن کي فروغ ڏيڻ ۽ مضبوط ڪرڻ.",
+              s3_title: "مضبوط تعاون",
+              "s3_text": "تڪرارن جي حل جي هڪ پائيدار نظام لاءِ عدليه ۽ اسٽيڪ هولڊرز سان گڏجي ڪم ڪرڻ."
+            }
+          },
+          partners: {
+            title: "اسان جا پارٽنرز",
+            p1: "سنڌ هاءِ ڪورٽ",
+            p2: "سرڪاري ادارا",
+            p3: "انٽرنيشنل ميڊئيشن انسٽيٽيوٽ"
           }
+        }, "mediation-page": {
+          hero: {
+            img_alt: "مصالحتي مشورتي ڪمرو",
+            eyebrow: "مصالحت (Mediation)",
+            title_part1: "تڪرارن جو حل ڳوليو",
+            title_part2: "ڳالهين ۽ باهمي افهام و تفهيم جي ذريعي",
+            lead: "مصالحت هڪ رضاڪارانه، بااعتماد ۽ منظم عمل آهي جتي هڪ غير جانبدار ثالث ڌرين کي باهمي طور تي قابل قبول ۽ پائيدار حل تائين پهچڻ ۾ مدد ڪندو آهي."
+          },
+          mediation: {
+            title1: "مصالحت (Mediation)",
+            title2: "ڇا آهي؟",
+            text1: "مصالحت هڪ رضاڪارانه، بااعتماد ۽ منظم عمل آهي جنهن ۾ هڪ غير جانبدار ۽ بي لوث ٽيون ڌر — يعني ثالث (Mediator) — تڪراري ڌرين جي وچ ۾ ڳالهه ٻولهه کي آسان بڻائيندو آهي ته جيئن اهي باهمي طور تي قابل قبول ۽ پائيدار حل تائين پهچي سگهن.",
+            text2: "عدالتي ڪارروائي (Litigation) جي برعڪس، مصالحت باهمي تعاون، پنهنجي مرضي، ۽ تعميري طريقي سان مسئلن کي حل ڪرڻ تي زور ڏئي ٿي. هي ڌرين کي پاڻ ۾ لاڳاپا برقرار رکڻ سان گڏوگڏ تيزيءَ سان ۽ انتهائي گهٽ خرچ ۾ نتيجا حاصل ڪرڻ جي قابل بڻائي ٿي.",
+            img_alt: "مصالحت ڇا آهي"
+          }, whyChoose: {
+            heading_part1: "PMA سان",
+            heading_part2: "مصالحت",
+            heading_part3: "ڇو چونڊيو؟",
+            cards: {
+              card1: {
+                title: "تيز تر ۽ انتهائي گهٽ خرچ",
+                desc: "برسن جي بدران چند هفتن ۾ تڪرارن جو حل ماڻيو."
+              },
+              card2: {
+                title: "مڪمل رازداري",
+                desc: "بغير ڪنهن عوامي رڪارڊ جي هڪ نجي ۽ محفوظ عمل."
+              },
+              card3: {
+                title: "لاڳاپن کي برقرار رکڻ",
+                desc: "باهمني افهام و تفهيم ۽ ٻنهي ڌرين جي ڪاميابيءَ (win-win) تي ڌيان."
+              },
+              card4: {
+                title: "لچڪدار ۽ باهمي تعاون",
+                desc: "نتيجڻ ۽ فيصلن تي ڌرين جو پنهنجو مڪمل اختيار."
+              },
+              card5: {
+                title: "IMI پاران تصديق ٿيل معيار",
+                desc: "ثالثن (Mediators) لاءِ بين الاقوامي سطح تي تسليم ٿيل اسناد."
+              }
+            }
+          },
+          banner: {
+            text: "PMA ثالثي جي توثيق، پروفيشنل تربيت، ۽ وکالت لاءِ پاڪستان جي <strong>پهرين ۽ سڀ کان پراڻي</strong> سرشار تنظيم آهي — جيڪا <strong>2013–2014 ۾ قائم ٿي</strong> ۽ ڪراچي ۾ ٻڌل آهي."
+          },
+          how_it_works: {
+            title_part1: "مصالحت ڪيئن",
+            title_part2: "ڪم ڪندي آهي؟",
+            img_alt: "مصالحت جو عمل",
+            steps: {
+              step1: {
+                num: "۱",
+                title: "پنهنجي درخواست جمع ڪرايو",
+                desc: "توهان پنهنجي تڪرار جي تفصيلن کي شيئر ڪرڻ لاءِ PMA سان رابطو ڪريو ٿا."
+              },
+              step2: {
+                num: "۲",
+                title: "ڪيس جو ابتدائي جائزو",
+                desc: "اسان معاملي جو جائزو وٺون ٿا ۽ مصالحت لاءِ ان جي موزونيت جو تعين ڪريون ٿا."
+              },
+              step3: {
+                num: "۳",
+                title: "ثالث (Mediator) جو تعين",
+                desc: "توهان جي ڪيس لاءِ هڪ غير جانبدار ۽ اهل ثالث مقرر ڪيو ويندو آهي."
+              },
+              step4: {
+                num: "۴",
+                title: "سهولتي سيزنز (Sessions)",
+                desc: "ثالث حل ڳولڻ لاءِ منظم ۽ تعميري ڳالهه ٻولهه جي سهولت فراهم ڪندو آهي."
+              },
+              step5: {
+                num: "۵",
+                title: "تصفيو ۽ معاهدو",
+                desc: "ڌريون هڪ باهمي طور تي قابل قبول نتيجي تي پهچن ٿيون ۽ معاهدي کي رسمي شڪل ڏين ٿيون."
+              }
+            }
+          },
+          who_we_serve: {
+            heading_part1: "اسان ڪنهن کي",
+            heading_part2: "خدمتون فراهم ڪيون ٿا",
+            cards: {
+              card1: {
+                title: "افراد ۽ خاندان",
+                desc: "فرد ن ۽ خاندانن کي سندن ذاتي ۽ ديواني (civil) تڪرارن کي حل ڪرڻ ۾ مدد ڪرڻ."
+              },
+              card2: {
+                title: "کاروبار ۽ ڪارپوريشنون",
+                desc: "تجارتي ۽ ڪم واري جڳهه جي تڪرارن کي حل ڪرڻ ۾ کاروباري ادارن جي مدد ڪرڻ."
+              },
+              card3: {
+                title: "سرڪاري ادارا",
+                desc: "پبلڪ سيڪٽر جي تڪرارن کي حل ڪرڻ ۾ سرڪاري کاتن جي مدد ڪرڻ."
+              },
+              card4: {
+                title: "اين جي اوز ۽ ڪميونٽي تنظيمون",
+                desc: "ڪميونٽي ۽ سماجي تنظيمن لاءِ تڪرارن جي حل کي آسان بڻائڻ."
+              },
+              card5: {
+                title: "لا فرمز ۽ قانوني ماهر",
+                desc: "مؤثر ADR حلن لاءِ قانوني ماهرن سان ڀاڱيوالي (شراڪت داري) ڪرڻ."
+              }
+            }
+          },
+  cta: {
+    title_part1: "اچو ته تڪرارن جو حل ڳوليون",
+    title_part2: "امن امان سان.",
+    subtitle: "مصالحت باهمي افهام و تفهيم پيدا ڪندي آهي. افهام و تفهيم مان حل نڪرندا آهن. اڄ ئي PMA سان رابطو ڪريو ته جيئن معلوم ٿئي ته مصالحت توهان جي ڪيئن مدد ڪري سگهي ٿي.",
+    btn_text: "اڄ ئي اسان سان رابطو ڪريو"
+  }
         }
       }
     }
@@ -1571,6 +2582,12 @@
             ? `<i class="${iconClass}" aria-hidden="true"></i> `
             : '';
           return `<li><a href="${link}">${iconHtml}${label}</a></li>`;
+        } else if (listType === 'span' || listType === 'list-item') {
+          const text = typeof item === 'string' ? item : String(item);
+          const iconHtml = iconClass
+            ? `<i class="${iconClass}" aria-hidden="true"></i> `
+            : '';
+          return `<li>${iconHtml}<span>${text}</span></li>`;
         } else {
           // plain string
           const text = typeof item === 'string' ? item : String(item);
@@ -1582,11 +2599,20 @@
       }).join('\n');
     });
 
-    // 4. Translate attribute values (data-i18n-attr-alt → alt attribute)
-    document.querySelectorAll('[data-i18n-attr-alt]').forEach(el => {
-      const key = el.getAttribute('data-i18n-attr-alt');
-      if (!key) return;
-      el.setAttribute('alt', translateKey(key));
+    // 4. Translate attribute values (finds all data-i18n-attr-* attributes and sets the target attribute)
+    // E.g., data-i18n-attr-alt="key" -> sets alt="translated"
+    // E.g., data-i18n-attr-data-popup-quote="key" -> sets data-popup-quote="translated"
+    const attrPrefix = 'data-i18n-attr-';
+    document.querySelectorAll('*').forEach(el => {
+      Array.from(el.attributes).forEach(attr => {
+        if (attr.name.startsWith(attrPrefix)) {
+          const targetAttr = attr.name.slice(attrPrefix.length);
+          const translationKey = attr.value;
+          if (translationKey) {
+            el.setAttribute(targetAttr, translateKey(translationKey));
+          }
+        }
+      });
     });
 
     // 5. Translate header links using automated selector mapping (failsafe fallback)

@@ -296,7 +296,177 @@
   "tab4_title2": "Impact",
   "tab4_text1": "PMA has successfully trained hundreds of lawyers, Judges, professionals and has played a key role in promoting court-connected mediation initiatives in Pakistan.",
   "tab4_text2": "We continue to work closely with the judiciary and stakeholders to strengthen mediation as a sustainable dispute resolution system."
-}
-}
+},
+"leadership": {
+  "title1": "Leadership",
+  "title2": "Messages",
+  "president": {
+    "name": "Aga Zafar Ahmad",
+    "role1": "Advocate Supreme Court of Pakistan",
+    "role2": "President",
+    "role3": "Pakistan Mediators Association",
+    "heading": "President's Message",
+    "quote": "Mediation is not just a professional tool, but a necessity for a developing legal system.",
+    "lead": "As the legal and commercial landscapes evolve, the role of ADR has never been more critical in ensuring swift, equitable, and effective justice. My focus as President is to expand our reach, ensuring that mediation becomes a cornerstone of our legal landscape.",
+    "read_more": "Read Full Message",
+    "sign_role": "Advocate Supreme Court of Pakistan<br>President, Pakistan Mediators Association",
+    "popup": {
+      "p1": "It is a profound honor to serve as the President of the Pakistan Mediators Association (PMA). As the legal and commercial landscapes evolve, the role of Alternative Dispute Resolution (ADR) has never been more critical in ensuring swift, equitable, and effective justice.",
+      "p2": "My journey as a founding member of this Association has been driven by a belief that mediation is not just a professional tool, but a necessity for a developing legal system. As we look toward the future, my commitment is to ensure our Association becomes a more vibrant and collaborative platform, bridging the gap between traditional litigation and modern dispute resolution.",
+      "p3": "Since our inception, the PMA has been dedicated to promoting and organizing the practice of mediation across Pakistan. We strive to maintain the highest standards of professional conduct and to provide a unified voice for mediators nationwide. My focus as President is to expand our reach, ensuring that Mediation becomes a cornerstone of our legal landscape, recognized by both the judiciary and the public as a vital tool for social and economic harmony.",
+      "commit_heading": "We are committed to:",
+      "commit_list": [
+        "<strong>Capacity Building & Professional Development:</strong> Continuing to facilitate high-caliber training and accreditation for mediators to ensure world-class standards of practice to keep our members' skills at the forefront of the industry.",
+        "<strong>Advocacy:</strong> Engaging with stakeholders and the judiciary to integrate mediation into the mainstream legal framework.",
+        "<strong>Innovation:</strong> Embracing modern techniques and global best practices to resolve trade, maritime, and commercial conflicts effectively.",
+        "<strong>National Conventions:</strong> We will endeavour to organize regular gatherings to share insights, celebrate successes, and strengthen our collective voice across the country.",
+        "<strong>Enhanced Coordination:</strong> We are dedicated to improving communication and engagement between all members to ensure every perspective is heard and valued.",
+        "<strong>Membership Growth:</strong> We will actively welcome new professionals to expand the reach and influence of mediation within Pakistan's legal and business communities.",
+        "<strong>Code of Conduct for Mediators:</strong> Furthermore, a key priority for this term is the establishment of a new committee dedicated to coordinating with the Pakistan Bar Council and Provincial Bar Councils. This initiative will focus on formalizing a robust Code of Conduct for Mediators, ensuring that our practice remains grounded in the highest ethical and professional standards."
+      ],
+      "closing": "I invite you all to join us in this mission to mainstream mediation and foster a culture of harmony and professional excellence in Pakistan."
+    }
+  },
+  "founding_president": {
+    "name": "Anwar Kashif Mumtaz",
+    "role1": "Advocate Supreme Court of Pakistan",
+    "role2": "Accredited Mediator",
+    "heading": "Founding President's Message",
+    "quote": "Together, we can build a culture where understanding prevails over confrontation.",
+    "lead": "Our mission is to promote mediation as an effective tool towards ethical and accessible means of dispute resolution within our beloved country.",
+    "read_more": "Read Full Message",
+    "sign_role": "Advocate Supreme Court<br>Accredited Mediator",
+    "popup": {
+      "p1": "Today, being the founding president of Pakistan Mediators Association, I am delighted to witness the growth of platform dedicated for dialogue and peaceful dispute resolution. Our mission is to promote Mediation as an effective tool towards ethical and accessible means of dispute resolution within our beloved country. We remain committed to upholding the highest professional standards and fostering trust in alternative dispute resolution mechanisms.",
+      "p2": "Through collaboration, training and continuous learning, we aim to strengthen the capacity of Mediators nationwide.",
+      "p3": "I encourage all the stakeholders to embrace mediation as a constructive path to supplement the judiciary and towards justice and harmony.",
+      "closing": "Together, we can build a culture where understanding prevails over confrontation."
+    }
+  },
+  "stats": {
+    "s1_title": "Hundreds Trained",
+    "s1_text": "Lawyers, Judges & Professionals trained across Pakistan.",
+    "s2_title": "Court-Connected Mediation",
+    "s2_text": "Promoting and strengthening mediation initiatives nationwide.",
+    "s3_title": "Strong Collaboration",
+    "s3_text": "Working closely with the judiciary and stakeholders for a sustainable dispute resolution system."
   }
+},
+ "partners": {
+        "title": "Our Partners",
+        "p1": "Sindh High Court",
+        "p2": "Govt. Institutions",
+        "p3": "International Mediation Institute"
+      }
+},
+"mediation-page": {
+  "hero": {
+    "img_alt": "Mediation consultation room",
+    "eyebrow": "Mediation",
+    "title_part1": "Resolve Disputes Through",
+    "title_part2": "Dialogue & Understanding",
+    "lead": "Mediation is a voluntary, confidential, and structured process where a neutral mediator helps parties reach a mutually acceptable and sustainable resolution."
+  },
+  "mediation": {
+    "title1": "What is",
+    "title2": "Mediation?",
+    "text1": "Mediation is a voluntary, confidential, and structured process in which a neutral and impartial third party — the mediator — facilitates dialogue between disputing parties to help them reach a mutually acceptable and sustainable resolution.",
+    "text2": "Unlike litigation, mediation emphasizes collaboration, self-determination, and creative problem-solving. It enables parties to achieve faster, more cost-effective outcomes while preserving relationships.",
+    "img_alt": "What is Mediation"
+  },
+  "whyChoose": {
+    "heading_part1": "Why Choose",
+    "heading_part2": "Mediation",
+    "heading_part3": "with PMA?",
+    "cards": {
+      "card1": {
+        "title": "Faster & Cost-Effective",
+        "desc": "Resolve disputes in weeks, not years."
+      },
+      "card2": {
+        "title": "Confidential",
+        "desc": "Private process with no public records."
+      },
+      "card3": {
+        "title": "Relationship-Preserving",
+        "desc": "Focus on mutual understanding and win-win solutions."
+      },
+      "card4": {
+        "title": "Flexible & Collaborative",
+        "desc": "Parties control the outcome."
+      },
+      "card5": {
+        "title": "IMI-Certified Standards",
+        "desc": "Internationally recognized mediator accreditation."
+      }
+    }
+  },"banner": {
+    "text": "PMA is Pakistan's <strong>first and oldest</strong> dedicated organization for mediation accreditation, professional training, and advocacy — <strong>established in 2013–2014</strong> and based in Karachi."
+  },
+  "how_it_works": {
+    "title_part1": "How Mediation",
+    "title_part2": "Works?",
+    "img_alt": "Mediation process",
+    "steps": {
+      "step1": {
+        "num": "1",
+        "title": "Submit Your Request",
+        "desc": "You contact PMA to share the details of your dispute."
+      },
+      "step2": {
+        "num": "2",
+        "title": "Initial Case Assessment",
+        "desc": "We review the matter and determine its suitability for mediation."
+      },
+      "step3": {
+        "num": "3",
+        "title": "Mediator Assignment",
+        "desc": "A neutral and qualified mediator is assigned to your case."
+      },
+      "step4": {
+        "num": "4",
+        "title": "Facilitated Sessions",
+        "desc": "The mediator facilitates structured dialogue to explore solutions."
+      },
+      "step5": {
+        "num": "5",
+        "title": "Resolution & Agreement",
+        "desc": "Parties reach a mutually acceptable outcome and formalize the agreement."
+      }
+    }
+  },
+   "who_we_serve": {
+    "title_part1": "Who We",
+    "title_part2": "Serve",
+    "cards": {
+      "card1": {
+        "title": "Individuals & Families",
+        "desc": "Helping individuals and families resolve personal and civil disputes."
+      },
+      "card2": {
+        "title": "Businesses & Corporations",
+        "desc": "Supporting businesses in resolving commercial and workplace disputes."
+      },
+      "card3": {
+        "title": "Government Institutions",
+        "desc": "Assisting government departments in resolving public sector disputes."
+      },
+      "card4": {
+        "title": "NGOs & Community Organizations",
+        "desc": "Facilitating conflict resolution for community and social organizations."
+      },
+      "card5": {
+        "title": "Law Firms & Legal Professionals",
+        "desc": "Partnering with legal professionals for effective ADR solutions."
+      }
+    }
+  },
+  "cta": {
+    "title_part1": "Let’s Resolve Conflict",
+    "title_part2": "Peacefully.",
+    "subtitle": "Mediation creates understanding. Understanding creates solutions. Contact PMA today to learn how mediation can help you.",
+    "btn_text": "Contact Us Today"
+  }
+}
+}
 }
