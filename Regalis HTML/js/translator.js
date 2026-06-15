@@ -97,10 +97,17 @@
           }
         },
         training: {
-          title: "Professional Training & <span class='pma-about-heading-accent'>Accreditation</span>",
-          text: "PMA provides internationally aligned mediation training and professional development programs designed for lawyers, corporate professionals, HR teams, educators, and aspiring mediators.",
+          title_part1: "Professional Training &",
+          title_part2: "Accreditation",
+          text: "PMA provides internationally aligned mediation training and professional development programs designed for lawyers, corporate professionals, HR teams, educators, and aspiring mediators.<br>Our workshops and certification programs focus on practical dispute resolution skills, negotiation strategies, communication, and ADR frameworks.",
+          features: {
+            feat1: "IMI Accreditation",
+            feat2: "Expert Trainers",
+            feat3: "Practical Learning",
+            feat4: "Global Standards"
+          },
           card_text: "Our training programs meet international standards and empower professionals to become effective, ethical, and globally competent mediators.",
-          btn: "Explore Training Programs"
+          btn_text: "Explore Training Programs"
         },
         services: {
           title: "Our <span class='pma-about-heading-accent'>Core</span> Services",
@@ -395,7 +402,16 @@
             btn_text: "Contact Us Today"
           }
 
-        }
+        },
+        "services-page": {
+  hero: {
+    img_alt: "Services Hero",
+    eyebrow: "Our Services",
+    title_part1: "Professional Mediation &",
+    title_part2: "ADR Services",
+    lead: "PMA provides a comprehensive range of mediation, training, and advisory services to help individuals, organizations, and institutions resolve disputes effectively and build a culture of dialogue."
+  }
+}
       }
     },
     ur: {
@@ -482,10 +498,17 @@
           }
         },
         training: {
-          title: "پیشہ ورانہ تربیت اور منظوری",
-          text: "PMA وکلاء، کارپوریٹ پیشہ ور افراد، HR ٹیموں، اساتذہ اور خواہشمند ثالثوں کے لیے بین الاقوامی سطح کی میڈیشن ٹریننگ اور پیشہ ورانہ ترقی کے پروگرام فراہم کرتا ہے۔",
-          card_text: "ہمارے تربیتی پروگرام بین الاقوامی معیارات کے مطابق ہیں اور پیشہ ور افراد کو مؤثر، اخلاقی اور باصلاحیت ثالث بننے کے قابل بناتے ہیں۔",
-          btn: "تربیتی پروگرام دیکھیں"
+          title_part1: "پیشہ ورانہ تربیت اور",
+          title_part2: "توثیق (Accreditation)",
+          text: "PMA بین الاقوامی سطح کے مطابق مصالحت کی تربیت اور پیشہ ورانہ ترقی کے پروگرام فراہم کرتا ہے جو وکلاء، کارپوریٹ پیشہ ور افراد، HR ٹیموں، اساتذہ، اور ابھرتے ہوئے ثالثین کے لیے تیار کیے گئے ہیں۔<br>ہمارے ورکشاپس اور سرٹیفیکیشن پروگرامز تنازعات کے عملی حل کی مہارتوں، گفت و شنید کی حکمت عملیوں، باہمی رابطے اور ADR کے فریم ورکس پر توجہ مرکوز کرتے ہیں۔",
+          features: {
+            feat1: "IMI توثیق (Accreditation)",
+            feat2: "ماہر ٹرینرز",
+            feat3: "عملی سیکھنے کا عمل",
+            feat4: "عالمی معیار"
+          },
+          card_text: "ہمارے تربیتی پروگرام بین الاقوامی معیارات پر پورا اترتے ہیں اور پیشہ ور افراد کو مؤثر، اخلاقی، اور عالمی سطح پر قابل ثالث بننے کے لیے بااختیار بناتے ہیں۔",
+          btn_text: "تربیتی پروگرامز دریافت کریں"
         },
         services: {
           title: "ہماری بنیادی خدمات",
@@ -776,7 +799,16 @@
     subtitle: "مصالحت افہام و تفہیم پیدا کرتی ہے۔ افہام و تفہیم سے حل نکلتے ہیں۔ یہ جاننے کے لیے کہ مصالحت آپ کی کیسے مدد کر سکتی ہے، آج ہی PMA سے رابطہ کریں۔",
     btn_text: "آج ہی ہم سے رابطہ کریں"
   }
-        }
+        },
+        "services-page": {
+  hero: {
+    img_alt: "خدمات کا ہیرو امیج",
+    eyebrow: "ہماری خدمات",
+    title_part1: "پیشہ ورانہ مصالحت اور",
+    title_part2: "ADR خدمات",
+    lead: "PMA مصالحت، تربیت، اور مشاورتی خدمات کا ایک جامع دائرہ فراہم کرتا ہے تاکہ افراد، تنظیموں اور اداروں کو تنازعات کو مؤثر طریقے سے حل کرنے اور باہمی گفتگو کے کلچر کو فروغ دینے میں مدد مل سکے۔"
+  }
+}
       }
     },
     ar: {
@@ -863,11 +895,18 @@
           }
         },
         training: {
-          title: "التدريب المهني والاعتماد",
-          text: "توفر PMA تدريبًا على الوساطة وبرامج تطوير مهني مصممة للمحامين والمهنيين والفرق والمدربين الطموحين وفق المعايير الدولية.",
-          card_text: "برامجنا التدريبية تلبي المعايير الدولية وتمكن المهنيين من أن يصبحوا وسطاء فعالين وأخلاقيين.",
-          btn: "استكشف برامج التدريب"
-        },
+    title_part1: "التدريب المهني و",
+    title_part2: "الاعتماد (Accreditation)",
+    text: "توفر PMA برامج تدريب وتطوير مهني متوافقة مع المعايير الدولية في مجال الوساطة، ومصممة خصيصاً للمحامين، ومحترفي الشركات، وفرق الموارد البشرية، والمعلمين، والوسطاء الطموحين.<br>تركز ورش العمل وبرامج الشهادات لدينا على مهارات حل النزاعات العملية، واستراتيجيات التفاوض، والتواصل، وأطر الحلول البديلة لتسوية النزاعات (ADR).",
+    features: {
+      feat1: "اعتماد IMI",
+      feat2: "مدربون خبراء",
+      feat3: "تعلم عملي",
+      feat4: "معايير عالمية"
+    },
+    card_text: "تلبي برامجنا التدريبية المعايير الدولية وتمكن المحترفين من أن يصبحوا وسطاء فعالين وأخلاقيين ومؤهلين عالمياً.",
+    btn_text: "استكشاف برامج التدريب"
+  },
         services: {
           title: "خدماتنا الأساسية",
           list: {
@@ -1244,11 +1283,18 @@
           }
         },
         training: {
-          title: "专业培训与认证",
-          text: "PMA 提供与国际接轨的调解培训及职业发展项目，专为律师、企业专业人士、人力资源团队和有抱负的调解员设计。",
-          card_text: "我们的培训项目符合国际标准，使专业人士能够成为高效、合乎道德且具备全球胜任力的调解员。",
-          btn: "探索培训课程"
-        },
+    title_part1: "专业培训与",
+    title_part2: "资质认证",
+    text: "PMA 提供与国际接轨的调解 training 与专业发展项目，专为律师、企业高管、HR 团队、教育工作者以及有志于成为调解员的人士设计。<br>我们的工作坊和认证课程专注于实际的纠纷解决技巧、谈判策略、沟通技巧以及多样化纠纷解决机制（ADR）框架。",
+    features: {
+      feat1: "IMI 国际认证",
+      feat2: "专家级培训师",
+      feat3: "实战化学习",
+      feat4: "全球化标准"
+    },
+    card_text: "我们的培训项目符合国际标准，赋予专业人士成为高效、恪守职业道德且具备全球竞争力的调解员的能力。",
+    btn_text: "探索培训项目"
+  },
         services: {
           title: "我们的核心服务",
           list: {
@@ -1532,11 +1578,11 @@
               }
             }
   },
-  "cta": {
-    "title_part1": "让我们共同",
-    "title_part2": "和平化解争议。",
-    "subtitle": "调解凝聚共识，共识孕育方案。欢迎立即联络 PMA，了解调解服务如何为您提供协助。",
-    "btn_text": "立即联系我们"
+  cta: {
+    title_part1: "让我们共同",
+    title_part2: "和平化解争议。",
+    subtitle: "调解凝聚共识，共识孕育方案。欢迎立即联络 PMA，了解调解服务如何为您提供协助。",
+    btn_text: "立即联系我们"
   }
         }
       }
@@ -1625,11 +1671,18 @@
           }
         },
         training: {
-          title: "مسلکي روزنه او تصدیق",
-          text: "PMA د وکیلانو، کارپوریټ مسلکي کسانو، او منځګړو لپاره د نړیوالو معیارونو سره سم روزنیز پروګرامونه وړاندې کوي.",
-          card_text: "زموږ روزنیز پروګرامونه مسلکي کسان د دې وړ کوي چې اغیزمن او اخلاقي منځګړي شي.",
-          btn: "روزنیز پروګرامونه وګورئ"
-        },
+    title_part1: "التدريب المهني و",
+    title_part2: "الاعتماد (Accreditation)",
+    text: "توفر PMA برامج تدريب وتطوير مهني متوافقة مع المعايير الدولية في مجال الوساطة، ومصممة خصيصاً للمحامين، ومحترفي الشركات، وفرق الموارد البشرية، والمعلمين، والوسطاء الطموحين.<br>تركز ورش العمل وبرامج الشهادات لدينا على مهارات حل النزاعات العملية، واستراتيجيات التفاوض، والتواصل، وأطر الحلول البديلة لتسوية النزاعات (ADR).",
+    features: {
+      feat1: "اعتماد IMI",
+      feat2: "مدربون خبراء",
+      feat3: "تعلم عملي",
+      feat4: "معايير عالمية"
+    },
+    card_text: "تلبي برامجنا التدريبية المعايير الدولية وتمكن المحترفين من أن يصبحوا وسطاء فعالين وأخلاقيين ومؤهلين عالمياً.",
+    btn_text: "استكشاف برامج التدريب"
+  },
         services: {
           title: "زموږ اصلي خدمات",
           list: {
@@ -2000,11 +2053,18 @@
           }
         },
         training: {
-          title: "پيشيوراڻي تربيت ۽ تصديق",
-          text: "PMA وڪيلن، ڪارپوريٽ ماهرن، HR ٽيمن ۽ استادن لاءِ بين الاقوامي معيار جي ميڊئيشن ٽريننگ ۽ پيشيوراڻي ترقي جا پروگرام مهيا ڪري ٿو.",
-          card_text: "اسان جا تربيتي پروگرام بين الاقوامي معيارن مطابق آهن ۽ ماهرن کي باصلاحيت ميڊئيٽر بڻائين ٿا.",
-          btn: "تربيتي پروگرام ڏسو"
-        },
+    title_part1: "پروفيشنل تربيت ۽",
+    title_part2: "توثيق (Accreditation)",
+    text: "PMA بين الاقوامي معيارن جي مطابق مصالحت جي تربيت ۽ پروفيشنل ڊيولپمينٽ پروگرام فراهم ڪري ٿي جيڪي وڪيلن، ڪارپوريٽ پيشيور ماڻهن، HR ٽيمن، استادن، ۽ ثالث بڻجڻ جي خواهش رکندڙن لاءِ تيار ڪيا ويا آهن.<br>اسان جا ورڪشاپ ۽ سرٽيفڪيشن پروگرام تڪرارن جي عملي حل جي مهارتن، ڳالهه ٻولهه جي حڪمت عملين، رابطي ۽ ADR فريم ورڪ تي ڌيان ڏين ٿا.",
+    features: {
+      feat1: "IMI توثيق (Accreditation)",
+      feat2: "ماهر ٽرينرز",
+      feat3: "عملي سکيا",
+      feat4: "عالمهي معيار"
+    },
+    card_text: "اسان جا تربيتي پروگرام بين الاقوامي معيارن تي پورو لهن ٿا ۽ پيشيور ماڻهن کي مؤثر، اخلاقي، ۽ عالمي سطح تي قابل ثالث (Mediators) بڻجڻ لاءِ بااختيار بڻائين ٿا.",
+    btn_text: "تربيت جا پروگرام دريافت ڪريو"
+  },
         services: {
           title: "اسان جون بنيادي خدمتون",
           list: {

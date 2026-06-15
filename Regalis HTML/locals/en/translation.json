@@ -88,11 +88,18 @@
         }
       },
       "training": {
-        "title": "Professional Training & <span class='pma-about-heading-accent'>Accreditation</span>",
-        "text": "PMA provides internationally aligned mediation training and professional development programs designed for lawyers, corporate professionals, HR teams, educators, and aspiring mediators. Our workshops and certification programs focus on practical dispute resolution skills, negotiation strategies, communication, and ADR frameworks.",
-        "card_text": "Our training programs meet international standards and empower professionals to become effective, ethical, and globally competent mediators.",
-        "btn": "Explore Training Programs"
-      },
+    "title_part1": "Professional Training &",
+    "title_part2": "Accreditation",
+    "text": "PMA provides internationally aligned mediation training and professional development programs designed for lawyers, corporate professionals, HR teams, educators, and aspiring mediators.<br>Our workshops and certification programs focus on practical dispute resolution skills, negotiation strategies, communication, and ADR frameworks.",
+    "features": {
+      "feat1": "IMI Accreditation",
+      "feat2": "Expert Trainers",
+      "feat3": "Practical Learning",
+      "feat4": "Global Standards"
+    },
+    "card_text": "Our training programs meet international standards and empower professionals to become effective, ethical, and globally competent mediators.",
+    "btn_text": "Explore Training Programs"
+  },
       "services": {
         "title": "Our <span class='pma-about-heading-accent'>Core</span> Services",
         "list": {
@@ -466,6 +473,15 @@
     "title_part2": "Peacefully.",
     "subtitle": "Mediation creates understanding. Understanding creates solutions. Contact PMA today to learn how mediation can help you.",
     "btn_text": "Contact Us Today"
+  }
+},
+"services-page": {
+  "hero": {
+    "img_alt": "Services Hero",
+    "eyebrow": "Our Services",
+    "title_part1": "Professional Mediation &",
+    "title_part2": "ADR Services",
+    "lead": "PMA provides a comprehensive range of mediation, training, and advisory services to help individuals, organizations, and institutions resolve disputes effectively and build a culture of dialogue."
   }
 }
 }
