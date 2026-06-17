@@ -482,6 +482,19 @@
     "title_part1": "Professional Mediation &",
     "title_part2": "ADR Services",
     "lead": "PMA provides a comprehensive range of mediation, training, and advisory services to help individuals, organizations, and institutions resolve disputes effectively and build a culture of dialogue."
+  },
+  "work_with": {
+    "title_part1": "Who We",
+    "title_part2": "Work",
+    "title_part3": "With",
+    "items": {
+      "item1": "Law Firms &<br>Legal Professionals",
+      "item2": "Corporations &<br>Businesses",
+      "item3": "Government<br>Institutions",
+      "item4": "NGOs & Community<br>Organizations",
+      "item5": "Educational<br>Institutions",
+      "item6": "Judiciary &<br>Public Sector"
+    }
   }
 }
 }
