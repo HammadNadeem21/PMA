@@ -99,7 +99,7 @@
         training: {
           title_part1: "Professional Training &",
           title_part2: "Accreditation",
-          text: "PMA provides internationally aligned mediation training and professional development programs designed for lawyers, corporate professionals, HR teams, educators, and aspiring mediators.<br>Our workshops and certification programs focus on practical dispute resolution skills, negotiation strategies, communication, and ADR frameworks.",
+          text: "PMA provides internationally aligned mediation training and professional development programs designed for lawyers, corporate professionals, HR teams, educators, and aspiring mediators. Our workshops and certification programs focus on practical dispute resolution skills, negotiation strategies, communication, and ADR frameworks.",
           features: {
             feat1: "IMI Accreditation",
             feat2: "Expert Trainers",
@@ -127,7 +127,7 @@
             president: "President",
             secretary: "Secretary General",
             vp_north: "Vice President – North",
-            vp_south: "Vice President – South"
+            ec_north: "Executive Committee – North"
           }
         },
         stats: {
@@ -404,27 +404,110 @@
 
         },
         "services-page": {
-  hero: {
-    img_alt: "Services Hero",
-    eyebrow: "Our Services",
-    title_part1: "Professional Mediation &",
-    title_part2: "ADR Services",
-    lead: "PMA provides a comprehensive range of mediation, training, and advisory services to help individuals, organizations, and institutions resolve disputes effectively and build a culture of dialogue."
-  },
-  work_with: {
-    title_part1: "Who We",
-    title_part2: "Work",
-    title_part3: "With",
-    items: {
-      item1: "Law Firms & Legal Professionals",
-      item2: "Corporations & Businesses",
-      item3: "Government Institutions",
-      item4: "NGOs & Community Organizations",
-      item5: "Educational Institutions",
-      item6: "Judiciary & Public Sector"
-    }
-  }
-}
+          hero: {
+            img_alt: "Services Hero",
+            eyebrow: "Our Services",
+            title_part1: "Professional Mediation &",
+            title_part2: "ADR Services",
+            lead: "PMA provides a comprehensive range of mediation, training, and advisory services to help individuals, organizations, and institutions resolve disputes effectively and build a culture of dialogue."
+          },
+          work_with: {
+            title_part1: "Who We",
+            title_part2: "Work",
+            title_part3: "With",
+            items: {
+              item1: "Law Firms & Legal Professionals",
+              item2: "Corporations & Businesses",
+              item3: "Government Institutions",
+              item4: "NGOs & Community Organizations",
+              item5: "Educational Institutions",
+              item6: "Judiciary & Public Sector"
+            }
+          },
+          services_cta: {
+            title_part1: "Let's Build Better Resolution",
+            title_part2: "Systems Together.",
+            subtitle: "Partner with PMA for mediation services, professional training, and advisory solutions tailored to your needs.",
+            btn_text: "Get in Touch"
+          }
+        },
+        "contact-page": {
+          hero: {
+            img_alt: "Contact Us Hero",
+            eyebrow: "Contact Us",
+            title_part1: "We're Here to",
+            title_part2: "Help.",
+            lead: "Whether you have a question, need guidance, or want to collaborate, our team is ready to assist you. Reach out to us and we'll get back to you as soon as possible.",
+            features: {
+              f1_title: "Confidential",
+              f1_desc: "Your information is always protected",
+              f2_title: "Responsive",
+              f2_desc: "We typically respond within 24 hours",
+              f3_title: "Professional",
+              f3_desc: "Experienced team of mediation experts"
+            }
+          },
+          contact_section: {
+            info_col: {
+              title: "Get in Touch",
+              lead: "We are here to answer your questions and provide the support you need for your mediation journey.",
+              labels: {
+                address: "Office Address",
+                email: "Email",
+                phone: "Phone",
+                whatsapp: "WhatsApp",
+                hours: "Office Hours"
+              },
+              values: {
+                address_text: "253, P.E.C.H.S., Block-6, Off Shahrah-e-Faisal, Karachi 75400, Pakistan",
+                hours_text: "Monday – Friday 9:00 AM – 5:00 PM (PKT)"
+              }
+            },
+            form_col: {
+              title: "Send Us a Message",
+              lead: "Share a few details and our team will get back to you.",
+              labels: {
+                name: "Full Name",
+                email: "Email Address",
+                phone: "Phone Number",
+                inquiry: "Type of Inquiry",
+                subject: "Subject",
+                message: "Message",
+                consent: "All conversations are confidential and your information is secure."
+              },
+              placeholders: {
+                name: "Your Name",
+                email: "Your Email",
+                phone: "Your Phone",
+                subject: "Subject of your message",
+                message: "How can we help you?"
+              },
+              options: {
+                default: "Select an option",
+                general: "General Inquiry",
+                mediation: "Mediation Services",
+                training: "Training & Certification",
+                membership: "Membership Information",
+                advisory: "Institutional ADR Advisory",
+                workshops: "Workshops & Awareness Sessions",
+                event: "Event Participation",
+                partnership: "Partnership & Collaboration",
+                media: "Media & Press Inquiry",
+                consultation: "Legal / Policy Consultation",
+                feedback: "Complaint or Feedback",
+                volunteer: "Volunteer Opportunities",
+                speaker: "Speaker / Trainer Request",
+                corporate: "Corporate Mediation Support",
+                community: "Community Mediation Support",
+                support: "Technical Website Support"
+              },
+              btn_text: "Send Message",
+              success_msg: "Your message has been sent successfully. We will get back to you within 24 hours.",
+              error_msg: "Sorry, there was an error sending your message. Please try again.",
+              note: "No legal process. No court. Just resolution. We typically respond within 24 hours."
+            }
+          }
+        }
       }
     },
     ur: {
@@ -518,7 +601,7 @@
         training: {
           title_part1: "پیشہ ورانہ تربیت اور",
           title_part2: "توثیق (Accreditation)",
-          text: "PMA بین الاقوامی سطح کے مطابق مصالحت کی تربیت اور پیشہ ورانہ ترقی کے پروگرام فراہم کرتا ہے جو وکلاء، کارپوریٹ پیشہ ور افراد، HR ٹیموں، اساتذہ، اور ابھرتے ہوئے ثالثین کے لیے تیار کیے گئے ہیں۔<br>ہمارے ورکشاپس اور سرٹیفیکیشن پروگرامز تنازعات کے عملی حل کی مہارتوں، گفت و شنید کی حکمت عملیوں، باہمی رابطے اور ADR کے فریم ورکس پر توجہ مرکوز کرتے ہیں۔",
+          text: "PMA بین الاقوامی سطح کے مطابق مصالحت کی تربیت اور پیشہ ورانہ ترقی کے پروگرام فراہم کرتا ہے جو وکلاء، کارپوریٹ پیشہ ور افراد، HR ٹیموں، اساتذہ، اور ابھرتے ہوئے ثالثین کے لیے تیار کیے گئے ہیں۔ ہمارے ورکشاپس اور سرٹیفیکیشن پروگرامز تنازعات کے عملی حل کی مہارتوں، گفت و شنید کی حکمت عملیوں، باہمی رابطے اور ADR کے فریم ورکس پر توجہ مرکوز کرتے ہیں۔",
           features: {
             feat1: "IMI توثیق (Accreditation)",
             feat2: "ماہر ٹرینرز",
@@ -542,7 +625,9 @@
         },
         leadership: {
           title: "ہماری قیادت سے ملیں",
-          roles: { president: "صدر", secretary: "سیکرٹری جنرل", vp_north: "نائب صدر - شمال", vp_south: "نائب صدر - جنوب" }
+          roles: {
+            president: "صدر", secretary: "سیکرٹری جنرل", vp_north: "نائب صدر - شمال", ec_north: "ایگزیکٹو کمیٹی - شمال"
+          }
         },
         stats: {
           s1: { label: "کامیاب میڈیشنز", unit: "+" },
@@ -785,61 +870,144 @@
               }
             }
           },
-           who_we_serve: {
-    heading_part1: "ہم کن کو",
-    heading_part2: "خدمات فراہم کرتے ہیں",
-    cards: {
-      card1: {
-        title: "افراد اور خاندان",
-        desc: "افراد اور خاندانوں کو ان کے ذاتی اور دیوانی (civil) تنازعات حل کرنے میں مدد فراہم کرنا۔"
-      },
-      card2: {
-        title: "کاروبار اور کارپوریشنز",
-        desc: "تجارتی اور کام کی جگہ کے تنازعات کو حل کرنے میں کاروباری اداروں کی معاونت کرنا۔"
-      },
-      card3: {
-        title: "سرکاری ادارے",
-        desc: "پبلک سیکٹر کے تنازعات کو حل کرنے میں سرکاری محکموں کی مدد کرنا۔"
-      },
-      card4: {
-        title: "این جی اوز اور کمیونٹی تنظیمیں",
-        desc: "کمیونٹی اور سماجی تنظیموں کے لیے تنازعات کے حل کو آسان بنانا۔"
-      },
-      card5: {
-        title: "لا فرمز اور قانونی ماہرین",
-        desc: "مؤثر ADR (متبادل تصفیہ تنازعات) کے حل کے لیے قانونی ماہرین کے ساتھ شراکت داری۔"
-      }
-    }
-  },
-  cta: {
-    title_part1: "آئیں تنازعات کو حل کریں",
-    title_part2: "امن و امان کے ساتھ۔",
-    subtitle: "مصالحت افہام و تفہیم پیدا کرتی ہے۔ افہام و تفہیم سے حل نکلتے ہیں۔ یہ جاننے کے لیے کہ مصالحت آپ کی کیسے مدد کر سکتی ہے، آج ہی PMA سے رابطہ کریں۔",
-    btn_text: "آج ہی ہم سے رابطہ کریں"
-  }
+          who_we_serve: {
+            title_part1: "ہم کن کو",
+            title_part2: "خدمات فراہم کرتے ہیں",
+            cards: {
+              card1: {
+                title: "افراد اور خاندان",
+                desc: "افراد اور خاندانوں کو ان کے ذاتی اور دیوانی (civil) تنازعات حل کرنے میں مدد فراہم کرنا۔"
+              },
+              card2: {
+                title: "کاروبار اور کارپوریشنز",
+                desc: "تجارتی اور کام کی جگہ کے تنازعات کو حل کرنے میں کاروباری اداروں کی معاونت کرنا۔"
+              },
+              card3: {
+                title: "سرکاری ادارے",
+                desc: "پبلک سیکٹر کے تنازعات کو حل کرنے میں سرکاری محکموں کی مدد کرنا۔"
+              },
+              card4: {
+                title: "این جی اوز اور کمیونٹی تنظیمیں",
+                desc: "کمیونٹی اور سماجی تنظیموں کے لیے تنازعات کے حل کو آسان بنانا۔"
+              },
+              card5: {
+                title: "لا فرمز اور قانونی ماہرین",
+                desc: "مؤثر ADR (متبادل تصفیہ تنازعات) کے حل کے لیے قانونی ماہرین کے ساتھ شراکت داری۔"
+              }
+            }
+          },
+          cta: {
+            title_part1: "آئیں تنازعات کو حل کریں",
+            title_part2: "امن و امان کے ساتھ۔",
+            subtitle: "مصالحت افہام و تفہیم پیدا کرتی ہے۔ افہام و تفہیم سے حل نکلتے ہیں۔ یہ جاننے کے لیے کہ مصالحت آپ کی کیسے مدد کر سکتی ہے، آج ہی PMA سے رابطہ کریں۔",
+            btn_text: "آج ہی ہم سے رابطہ کریں"
+          }
         },
         "services-page": {
-  hero: {
-    img_alt: "خدمات کا ہیرو امیج",
-    eyebrow: "ہماری خدمات",
-    title_part1: "پیشہ ورانہ مصالحت اور",
-    title_part2: "ADR خدمات",
-    lead: "PMA مصالحت، تربیت، اور مشاورتی خدمات کا ایک جامع دائرہ فراہم کرتا ہے تاکہ افراد، تنظیموں اور اداروں کو تنازعات کو مؤثر طریقے سے حل کرنے اور باہمی گفتگو کے کلچر کو فروغ دینے میں مدد مل سکے۔"
-  },
-  work_with: {
-    title_part1: "ہم کن کے",
-    title_part2: "ساتھ",
-    title_part3: "کام کرتے ہیں",
-    items: {
-      item1: "لا فرمز اورقانونی ماہرین",
-      item2: "کارپوریشنز اور کاروباری ادارے",
-      item3: "سرکاری ادارے",
-      item4: "این جی اوز اور کمیونٹی تنظیمیں",
-      item5: "تعلیمی ادارے",
-      item6: "عدلیہ اور پبلک سیکٹر"
-    }
-  }
-}
+          hero: {
+            img_alt: "خدمات کا ہیرو امیج",
+            eyebrow: "ہماری خدمات",
+            title_part1: "پیشہ ورانہ مصالحت اور",
+            title_part2: "ADR خدمات",
+            lead: "PMA مصالحت، تربیت، اور مشاورتی خدمات کا ایک جامع دائرہ فراہم کرتا ہے تاکہ افراد، تنظیموں اور اداروں کو تنازعات کو مؤثر طریقے سے حل کرنے اور باہمی گفتگو کے کلچر کو فروغ دینے میں مدد مل سکے۔"
+          },
+          work_with: {
+            title_part1: "ہم کن کے",
+            title_part2: "ساتھ",
+            title_part3: "کام کرتے ہیں",
+            items: {
+              item1: "لا فرمز اورقانونی ماہرین",
+              item2: "کارپوریشنز اور کاروباری ادارے",
+              item3: "سرکاری ادارے",
+              item4: "این جی اوز اور کمیونٹی تنظیمیں",
+              item5: "تعلیمی ادارے",
+              item6: "عدلیہ اور پبلک سیکٹر"
+            }
+          },
+          services_cta: {
+            title_part1: "آئیں مل کر بہتر حل کے",
+            title_part2: "نظام تشکیل دیں۔",
+            subtitle: "اپنی ضروریات کے مطابق مصالحتی خدمات، پیشہ ورانہ تربیت، اور مشاورتی حل کے لیے PMA کے ساتھ شراکت داری کریں۔",
+            btn_text: "رابطہ کریں"
+          }
+        },
+        "contact-page": {
+          hero: {
+            img_alt: "رابطہ صفحہ کا ہیرو امیج",
+            eyebrow: "ہم سے رابطہ کریں",
+            title_part1: "ہم آپ کی مدد کے لیے",
+            title_part2: "موجود ہیں۔",
+            lead: "خواہ آپ کا کوئی سوال ہو، رہنمائی کی ضرورت ہو، یا شراکت داری کے خواہشمند ہوں، ہماری ٹیم آپ کی مدد کے لیے تیار ہے۔ ہم سے رابطہ کریں اور ہم جلد از جلد آپ کو جواب دیں گے۔",
+            features: {
+              f1_title: "انتہائی خفیہ",
+              f1_desc: "آپ کی معلومات ہمیشہ محفوظ رہتی ہیں",
+              f2_title: "فوری جواب",
+              f2_desc: "ہم عام طور پر 24 گھنٹوں کے اندر جواب دیتے ہیں",
+              f3_title: "پیشہ ورانہ مہارت",
+              f3_desc: "مصالحتی ماہرین کی تجربہ کار ٹیم"
+            }
+          },
+          contact_section: {
+            info_col: {
+              title: "رابطہ کریں",
+              lead: "ہم آپ کے سوالات کے جوابات دینے اور آپ کے مصالحتی سفر کے لیے درکار تعاون فراہم کرنے کے لیے حاضر ہیں۔",
+              labels: {
+                address: "دفتر کا پتہ",
+                email: "ای میل",
+                phone: "فون نمبر",
+                whatsapp: "واٹس ایپ",
+                hours: "دفتر کے اوقات"
+              },
+              values: {
+                address_text: "253، پی۔ای۔سی۔ایچ۔ایس، بلاک-6، شاہراہِ فیصل، کراچی 75400، پاکستان",
+                hours_text: "پیر تا جمعہ صبح 9:00 بجے سے شام 5:00 بجے تک (پاکستانی وقت)"
+              }
+            },
+            form_col: {
+              title: "ہمیں پیغام بھیجیں",
+              lead: "کچھ تفصیلات شیئر کریں اور ہماری ٹیم جلد ہی آپ سے رابطہ کرے گی۔",
+              labels: {
+                name: "پورا نام",
+                email: "ای میل ایڈریس",
+                phone: "فون نمبر",
+                inquiry: "پوچھ گچھ کی قسم",
+                subject: "موضوع",
+                message: "پیغام",
+                consent: "تمام گفتگو انتہائی خفیہ ہے اور آپ کی معلومات مکمل محفوظ ہیں۔"
+              },
+              placeholders: {
+                name: "آپ کا نام",
+                email: "آپ کی ای میل",
+                phone: "آپ کا فون",
+                subject: "آپ کے پیغام کا موضوع",
+                message: "ہم آپ کی کیا مدد کر سکتے ہیں؟"
+              },
+              options: {
+                default: "ایک آپشن منتخب کریں",
+                general: "عمومی پوچھ گچھ",
+                mediation: "مصالحتی خدمات",
+                training: "تربیت اور سرٹیفیکیشن",
+                membership: "ممبرشپ کی معلومات",
+                advisory: "ادارتی ADR ایڈوائزری",
+                workshops: "ورکشاپس اور آگاہی سیشنز",
+                event: "ایونٹ میں شرکت",
+                partnership: "شراکت داری اور تعاون",
+                media: "میڈیا اور پریس انکوائری",
+                consultation: "قانونی / پالیسی مشاورت",
+                feedback: "شکایت یا رائے",
+                volunteer: "رضاکارانہ مواقع",
+                speaker: "اسپیکر / ٹرینر کی درخواست",
+                corporate: "کارپوریٹ مصالحتی تعاون",
+                community: "کمیونٹی مصالحتی تعاون",
+                support: "تکنیکی ویب سائٹ سپورٹ"
+              },
+              btn_text: "پیغام بھیجیں",
+              success_msg: "آپ کا پیغام کامیابی کے ساتھ بھیج دیا گیا ہے۔ ہم 24 گھنٹوں کے اندر آپ سے رابطہ کریں گے۔",
+              error_msg: "معذرت، آپ کا پیغام بھیجنے میں کوئی غلطی ہوئی ہے۔ براہ کرم دوبارہ کوشش کریں۔",
+              note: "نہ کوئی قانونی عمل، نہ عدالت۔ صرف تصفیہ۔ ہم عام طور پر 24 گھنٹوں کے اندر جواب دیتے ہیں۔"
+            }
+          }
+        }
       }
     },
     ar: {
@@ -914,35 +1082,35 @@
           btn: "فهم عملية الوساطة"
         },
         why_choose: {
-  title: "لماذا تختار <span class='pma-about-heading-accent'>PMA؟</span>",
-  lead: "نحن نجمع بين المعايير الدولية والفهم المحلي لتقديم حلول بديلة لتسوية النزاعات (ADR) أخلاقية، وفعالة، ومستدامة.",
-  btn: "تعرف على المزيد حول PMA",
-  features: {
-    f1_title: "المعايير الدولية",
-    f1_desc: "نحن نتبع مبادئ وممارسات الوساطة المعترف بها عالمياً.",
-    f2_title: "وسطاء ذوو خبرة ومعتمدون",
-    f2_desc: "تضم لوحتنا محترفين مدربين تدريباً عالياً ومعتمدين.",
-    f3_title: "عملية سرية للغاية",
-    f3_desc: "خصوصيتك هي أولويتنا القصوى في كل مرحلة من مراحل العملية.",
-    f4_title: "نتائج أسرع وودية",
-    f4_desc: "نساعد في حل النزاعات بكفاءة وفعالية عالية.",
-    f5_title: "فعالية من حيث التكلفة",
-    f5_desc: "بديل عملي وممتاز للتقاضي المكلف والطويل."
-  }
-},
+          title: "لماذا تختار <span class='pma-about-heading-accent'>PMA؟</span>",
+          lead: "نحن نجمع بين المعايير الدولية والفهم المحلي لتقديم حلول بديلة لتسوية النزاعات (ADR) أخلاقية، وفعالة، ومستدامة.",
+          btn: "تعرف على المزيد حول PMA",
+          features: {
+            f1_title: "المعايير الدولية",
+            f1_desc: "نحن نتبع مبادئ وممارسات الوساطة المعترف بها عالمياً.",
+            f2_title: "وسطاء ذوو خبرة ومعتمدون",
+            f2_desc: "تضم لوحتنا محترفين مدربين تدريباً عالياً ومعتمدين.",
+            f3_title: "عملية سرية للغاية",
+            f3_desc: "خصوصيتك هي أولويتنا القصوى في كل مرحلة من مراحل العملية.",
+            f4_title: "نتائج أسرع وودية",
+            f4_desc: "نساعد في حل النزاعات بكفاءة وفعالية عالية.",
+            f5_title: "فعالية من حيث التكلفة",
+            f5_desc: "بديل عملي وممتاز للتقاضي المكلف والطويل."
+          }
+        },
         training: {
-    title_part1: "التدريب المهني و",
-    title_part2: "الاعتماد (Accreditation)",
-    text: "توفر PMA برامج تدريب وتطوير مهني متوافقة مع المعايير الدولية في مجال الوساطة، ومصممة خصيصاً للمحامين، ومحترفي الشركات، وفرق الموارد البشرية، والمعلمين، والوسطاء الطموحين.<br>تركز ورش العمل وبرامج الشهادات لدينا على مهارات حل النزاعات العملية، واستراتيجيات التفاوض، والتواصل، وأطر الحلول البديلة لتسوية النزاعات (ADR).",
-    features: {
-      feat1: "اعتماد IMI",
-      feat2: "مدربون خبراء",
-      feat3: "تعلم عملي",
-      feat4: "معايير عالمية"
-    },
-    card_text: "تلبي برامجنا التدريبية المعايير الدولية وتمكن المحترفين من أن يصبحوا وسطاء فعالين وأخلاقيين ومؤهلين عالمياً.",
-    btn_text: "استكشاف برامج التدريب"
-  },
+          title_part1: "التدريب المهني و",
+          title_part2: "الاعتماد (Accreditation)",
+          text: "توفر PMA برامج تدريب وتطوير مهني متوافقة مع المعايير الدولية في مجال الوساطة، ومصممة خصيصاً للمحامين، ومحترفي الشركات، وفرق الموارد البشرية، والمعلمين، والوسطاء الطموحين. تركز ورش العمل وبرامج الشهادات لدينا على مهارات حل النزاعات العملية، واستراتيجيات التفاوض، والتواصل، وأطر الحلول البديلة لتسوية النزاعات (ADR).",
+          features: {
+            feat1: "اعتماد IMI",
+            feat2: "مدربون خبراء",
+            feat3: "تعلم عملي",
+            feat4: "معايير عالمية"
+          },
+          card_text: "تلبي برامجنا التدريبية المعايير الدولية وتمكن المحترفين من أن يصبحوا وسطاء فعالين وأخلاقيين ومؤهلين عالمياً.",
+          btn_text: "استكشاف برامج التدريب"
+        },
         services: {
           title: "خدماتنا الأساسية",
           list: {
@@ -957,7 +1125,7 @@
         },
         leadership: {
           title: "تعرف على قيادتنا",
-          roles: { president: "الرئيس", secretary: "الأمين العام", vp_north: "نائب الرئيس - الشمال", vp_south: "نائب الرئيس - الجنوب" }
+          roles: { president: "الرئيس", secretary: "الأمين العام", vp_north: "نائب الرئيس - الشمال", ec_north: "اللجنة التنفيذية - الشمال" }
         },
         stats: {
           s1: { label: "وساطات ميسرة", unit: "+" },
@@ -1201,8 +1369,8 @@
             }
           },
           who_we_serve: {
-            heading_part1: "من هم",
-            heading_part2: "عملاؤنا؟",
+            title_part1: "من هم",
+            title_part2: "عملاؤنا؟",
             cards: {
               card1: {
                 title: "الأفراد والعائلات",
@@ -1226,35 +1394,58 @@
               }
             }
           },
-  cta: {
-    title_part1: "دعونا نحل النزاعات",
-    title_part2: "بطرق سلمية.",
-    subtitle: "الوساطة تبني التفاهم، والتفاهم يصنع الحلول. اتصل بـ PMA اليوم لمعرفة كيف يمكن للوساطة أن تساعدك.",
-    btn_text: "اتصل بنا اليوم"
-  }
+          cta: {
+            title_part1: "دعونا نحل النزاعات",
+            title_part2: "بطرق سلمية.",
+            subtitle: "الوساطة تبني التفاهم، والتفاهم يصنع الحلول. اتصل بـ PMA اليوم لمعرفة كيف يمكن للوساطة أن تساعدك.",
+            btn_text: "اتصل بنا اليوم"
+          }
         },
         "services-page": {
-  hero: {
-    img_alt: "الصورة الرئيسية للخدمات",
-    eyebrow: "خدماتنا",
-    title_part1: "الوساطة المهنية و",
-    title_part2: "خدمات الحلول البديلة لتسوية النزاعات (ADR)",
-    lead: "تقدم PMA مجموعة شاملة من خدمات الوساطة، والتدريب، والاستشارات لمساعدة الأفراد، والمنظمات، والمؤسسات على حل النزاعات بفعالية وبناء ثقافة الحوار."
-  },
-  work_with: {
-    title_part1: "من هم",
-    title_part2: "شركاؤنا في",
-    title_part3: "العمل؟",
-    items: {
-      item1: "شركات المحاماة والمهنيون القانونيون",
-      item2: "الشركات والمؤسسات التجارية",
-      item3: "المؤسسات الحكومية",
-      item4: "المنظمات غير الحكومية والمجتمعية",
-      item5: "المؤسسات التعليمية",
-      item6: "السلطة القضائية والقطاع العام"
-    }
-  }
-}
+          hero: {
+            img_alt: "الصورة الرئيسية للخدمات",
+            eyebrow: "خدماتنا",
+            title_part1: "الوساطة المهنية و",
+            title_part2: "خدمات الحلول البديلة لتسوية النزاعات (ADR)",
+            lead: "تقدم PMA مجموعة شاملة من خدمات الوساطة، والتدريب، والاستشارات لمساعدة الأفراد، والمنظمات، والمؤسسات على حل النزاعات بفعالية وبناء ثقافة الحوار."
+          },
+          work_with: {
+            title_part1: "من هم",
+            title_part2: "شركاؤنا في",
+            title_part3: "العمل؟",
+            items: {
+              item1: "شركات المحاماة والمهنيون القانونيون",
+              item2: "الشركات والمؤسسات التجارية",
+              item3: "المؤسسات الحكومية",
+              item4: "المنظمات غير الحكومية والمجتمعية",
+              item5: "المؤسسات التعليمية",
+              item6: "السلطة القضائية والقطاع العام"
+            }
+          },
+          services_cta: {
+            title_part1: "دعونا نبني معاً أنظمة",
+            title_part2: "أفضل لحل النزاعات.",
+            subtitle: "شاهد شراكة مثمرة مع PMA للحصول على خدمات الوساطة، والتدريب المهني، والحلول الاستشارية المصممة خصيصاً لتلبية احتياجاتك.",
+            btn_text: "اتصل بنا"
+          }
+        },
+        "contact-page": {
+          hero: {
+            img_alt: "الصورة الرئيسية لصفحة الاتصال",
+            eyebrow: "اتصل بنا",
+            title_part1: "نحن هنا من أجل",
+            title_part2: "مساعدتك.",
+            lead: "سواء كان لديك سؤال، أو بحاجة إلى توجيه، أو ترغب في التعاون معنا، فإن فريقنا مستعد لمساعدتك. تواصل معنا وسنقوم بالرد عليك في أقرب وقت ممكن.",
+            features: {
+              f1_title: "سرية تامة",
+              f1_desc: "معلوماتك محمية وآمنة دائماً",
+              f2_title: "سرعة الاستجابة",
+              f2_desc: "عادتةً ما نقوم بالرد خلال 24 ساعة",
+              f3_title: "احترافية عالية",
+              f3_desc: "فريق ذو خبرة من خبراء الوساطة"
+            }
+          }
+        }
       }
     },
     ch: {
@@ -1346,18 +1537,18 @@
           }
         },
         training: {
-    title_part1: "专业培训与",
-    title_part2: "资质认证",
-    text: "PMA 提供与国际接轨的调解 training 与专业发展项目，专为律师、企业高管、HR 团队、教育工作者以及有志于成为调解员的人士设计。<br>我们的工作坊和认证课程专注于实际的纠纷解决技巧、谈判策略、沟通技巧以及多样化纠纷解决机制（ADR）框架。",
-    features: {
-      feat1: "IMI 国际认证",
-      feat2: "专家级培训师",
-      feat3: "实战化学习",
-      feat4: "全球化标准"
-    },
-    card_text: "我们的培训项目符合国际标准，赋予专业人士成为高效、恪守职业道德且具备全球竞争力的调解员的能力。",
-    btn_text: "探索培训项目"
-  },
+          title_part1: "专业培训与",
+          title_part2: "资质认证",
+          text: "PMA 提供与国际接轨的调解 training 与专业发展项目，专为律师、企业高管、HR 团队、教育工作者以及有志于成为调解员的人士设计。我们的工作坊和认证课程专注于实际的纠纷解决技巧、谈判策略、沟通技巧以及多样化纠纷解决机制（ADR）框架。",
+          features: {
+            feat1: "IMI 国际认证",
+            feat2: "专家级培训师",
+            feat3: "实战化学习",
+            feat4: "全球化标准"
+          },
+          card_text: "我们的培训项目符合国际标准，赋予专业人士成为高效、恪守职业道德且具备全球竞争力的调解员的能力。",
+          btn_text: "探索培训项目"
+        },
         services: {
           title: "我们的核心服务",
           list: {
@@ -1372,7 +1563,7 @@
         },
         leadership: {
           title: "认识我们的领导团队",
-          roles: { president: "主席", secretary: "秘书长", vp_north: "副主席（北方）", vp_south: "副主席（南方）" }
+          roles: { president: "主席", secretary: "秘书长", vp_north: "副主席（北方）", ec_north: "执行委员会 - 北部" }
         },
         stats: {
           s1: { label: "已协调调解", unit: "+" },
@@ -1616,8 +1807,8 @@
             }
           },
           who_we_serve: {
-            heading_part1: "我们的",
-            heading_part2: "服务对象",
+            title_part1: "我们的",
+            title_part2: "服务对象",
             cards: {
               card1: {
                 title: "个人与家庭",
@@ -1633,43 +1824,66 @@
               },
               card4: {
                 title: "非政府组织与社区团体",
-        desc: "促进社区及社会公益组织内部与外部的矛盾化解。"
-      },
+                desc: "促进社区及社会公益组织内部与外部的矛盾化解。"
+              },
               card5: {
                 title: "律师事务所与法律从业者",
                 desc: "与法律界专业人士携手合作，提供高效的多样化纠纷解决机制（ADR）方案。"
               }
             }
-  },
-  cta: {
-    title_part1: "让我们共同",
-    title_part2: "和平化解争议。",
-    subtitle: "调解凝聚共识，共识孕育方案。欢迎立即联络 PMA，了解调解服务如何为您提供协助。",
-    btn_text: "立即联系我们"
-  }
+          },
+          cta: {
+            title_part1: "让我们共同",
+            title_part2: "和平化解争议。",
+            subtitle: "调解凝聚共识，共识孕育方案。欢迎立即联络 PMA，了解调解服务如何为您提供协助。",
+            btn_text: "立即联系我们"
+          }
         },
         "services-page": {
-  hero: {
-    img_alt: "服务核心主图",
-    eyebrow: "我们的服务",
-    title_part1: "专业调解与",
-    title_part2: "多样化纠纷解决机制（ADR）服务",
-    lead: "PMA 提供全方位的调解、培训和咨询服务，旨在协助个人、各类组织及机构高效化解争议，并共同构建积极对话的文化背景。"
-  },
-  work_with: {
-    title_part1: "我们的",
-    title_part2: "合作",
-    title_part3: "群体",
-    items: {
-      item1: "律师事务所与法律从业者",
-      item2: "各大企业与商业机构",
-      item3: "政府机构",
-      item4: "非政府组织与社区团体",
-      item5: "教育机构",
-      item6: "司法部门与公共领域"
-    }
-  }
-}
+          hero: {
+            img_alt: "服务核心主图",
+            eyebrow: "我们的服务",
+            title_part1: "专业调解与",
+            title_part2: "多样化纠纷解决机制（ADR）服务",
+            lead: "PMA 提供全方位的调解、培训和咨询服务，旨在协助个人、各类组织及机构高效化解争议，并共同构建积极对话的文化背景。"
+          },
+          work_with: {
+            title_part1: "我们的",
+            title_part2: "合作",
+            title_part3: "群体",
+            items: {
+              item1: "律师事务所与法律从业者",
+              item2: "各大企业与商业机构",
+              item3: "政府机构",
+              item4: "非政府组织与社区团体",
+              item5: "教育机构",
+              item6: "司法部门与公共领域"
+            }
+          },
+          services_cta: {
+            title_part1: "让我们携手共建",
+            title_part2: "更完善的纠纷解决 system。",
+            subtitle: "与 PMA 携手合作，为您量身定制调解服务、专业培训及咨询解决方案。",
+            btn_text: "取得联系"
+          }
+        },
+        "contact-page": {
+          hero: {
+            img_alt: "联系我们 page 主图",
+            eyebrow: "联系我们",
+            title_part1: "我们随时为您",
+            title_part2: "提供 column 帮助。",
+            lead: "无论您有任何疑问、需要指导还是希望与我们展开合作，我们的团队都已准备就绪为您提供支持。请随时联系我们，我们将在第一时间为您解答。",
+            features: {
+              f1_title: "严格保密",
+              f1_desc: "您的个人信息将始终受到隐私保护",
+              f2_title: "快速响应",
+              f2_desc: "我们通常会在 24 小时内完成回复",
+              f3_title: "专业团队",
+              f3_desc: "由经验丰富的调解专家组成的专业团队"
+            }
+          }
+        }
       }
     },
     psh: {
@@ -1743,36 +1957,36 @@
           text2: "دا اړخونه ځواکمن کوي چې د پایلو په جوړولو کې برخه واخلي، اړیکې وساتي او وخت، لګښت او فشار کم کړي.",
           btn: "د منځګړیتوب پروسه وپېژنئ"
         },
-       why_choose: {
-  title: "ولې <span class='pma-about-heading-accent'>PMA</span> غوره کړئ؟",
-  lead: "موږ د اخلاقي، اغېزمنو او پایداره ADR حلونو وړاندې کولو لپاره د سیمه ایز تفاهم سره نړیوال معیارونه یوځای کوو.",
-  btn: "د PMA په اړه نور معلومات ترلاسه کړئ",
-  features: {
-    f1_title: "نړیوال معیارونه",
-    f1_desc: "موږ په نړیواله کچه منل شوي د منځګړیتوب اصول او کړنې تعقیبوو.",
-    f2_title: "تجربه لرونکي او تصدیق شوي منځګړي",
-    f2_desc: "زموږ په پینل کې خورا روزل شوي او باوري مسلکي کسان شامل دي.",
-    f3_title: "پټه او محرمه پروسه",
-    f3_desc: "ستاسو محرمیت په هر پړاو کې زموږ لومړیتوب دی.",
-    f4_title: "ګړندۍ او دوستانه پایلې",
-    f4_desc: "موږ د شخړو په اغېزمنه او ګټوره توګه حل کولو کې مرسته کوو.",
-    f5_title: "اقتصادي او کم مصرفه",
-    f5_desc: "د ګرانو او اوږدو قضایي دعوو لپاره یو عملي او غوره بدیل."
-  }
-},
+        why_choose: {
+          title: "ولې <span class='pma-about-heading-accent'>PMA</span> غوره کړئ؟",
+          lead: "موږ د اخلاقي، اغېزمنو او پایداره ADR حلونو وړاندې کولو لپاره د سیمه ایز تفاهم سره نړیوال معیارونه یوځای کوو.",
+          btn: "د PMA په اړه نور معلومات ترلاسه کړئ",
+          features: {
+            f1_title: "نړیوال معیارونه",
+            f1_desc: "موږ په نړیواله کچه منل شوي د منځګړیتوب اصول او کړنې تعقیبوو.",
+            f2_title: "تجربه لرونکي او تصدیق شوي منځګړي",
+            f2_desc: "زموږ په پینل کې خورا روزل شوي او باوري مسلکي کسان شامل دي.",
+            f3_title: "پټه او محرمه پروسه",
+            f3_desc: "ستاسو محرمیت په هر پړاو کې زموږ لومړیتوب دی.",
+            f4_title: "ګړندۍ او دوستانه پایلې",
+            f4_desc: "موږ د شخړو په اغېزمنه او ګټوره توګه حل کولو کې مرسته کوو.",
+            f5_title: "اقتصادي او کم مصرفه",
+            f5_desc: "د ګرانو او اوږدو قضایي دعوو لپاره یو عملي او غوره بدیل."
+          }
+        },
         training: {
-    title_part1: "التدريب المهني و",
-    title_part2: "الاعتماد (Accreditation)",
-    text: "توفر PMA برامج تدريب وتطوير مهني متوافقة مع المعايير الدولية في مجال الوساطة، ومصممة خصيصاً للمحامين، ومحترفي الشركات، وفرق الموارد البشرية، والمعلمين، والوسطاء الطموحين.<br>تركز ورش العمل وبرامج الشهادات لدينا على مهارات حل النزاعات العملية، واستراتيجيات التفاوض، والتواصل، وأطر الحلول البديلة لتسوية النزاعات (ADR).",
-    features: {
-      feat1: "اعتماد IMI",
-      feat2: "مدربون خبراء",
-      feat3: "تعلم عملي",
-      feat4: "معايير عالمية"
-    },
-    card_text: "تلبي برامجنا التدريبية المعايير الدولية وتمكن المحترفين من أن يصبحوا وسطاء فعالين وأخلاقيين ومؤهلين عالمياً.",
-    btn_text: "استكشاف برامج التدريب"
-  },
+          title_part1: "التدريب المهني و",
+          title_part2: "الاعتماد (Accreditation)",
+          text: "توفر PMA برامج تدريب وتطوير مهني متوافقة مع المعايير الدولية في مجال الوساطة، ومصممة خصيصاً للمحامين، ومحترفي الشركات، وفرق الموارد البشرية، والمعلمين، والوسطاء الطموحين. تركز ورش العمل وبرامج الشهادات لدينا على مهارات حل النزاعات العملية، واستراتيجيات التفاوض، والتواصل، وأطر الحلول البديلة لتسوية النزاعات (ADR).",
+          features: {
+            feat1: "اعتماد IMI",
+            feat2: "مدربون خبراء",
+            feat3: "تعلم عملي",
+            feat4: "معايير عالمية"
+          },
+          card_text: "تلبي برامجنا التدريبية المعايير الدولية وتمكن المحترفين من أن يصبحوا وسطاء فعالين وأخلاقيين ومؤهلين عالمياً.",
+          btn_text: "استكشاف برامج التدريب"
+        },
         services: {
           title: "زموږ اصلي خدمات",
           list: {
@@ -1787,7 +2001,7 @@
         },
         leadership: {
           title: "زموږ د مشرتابه سره وپیژنئ",
-          roles: { president: "رئیس", secretary: "عمومي سکرتر", vp_north: "مرستیال رئیس - شمال", vp_south: "مرستیال رئیس - جنوب" }
+          roles: { president: "رئیس", secretary: "عمومي سکرتر", vp_north: "مرستیال رئیس - شمال", ec_north: "اجرائيوي کمیټه - شمال" }
         },
         stats: {
           s1: { label: "ترسره شوي منځګړیتوبونه", unit: "+" },
@@ -2025,60 +2239,83 @@
             }
           },
           who_we_serve: {
-    heading_part1: "موږ چا ته",
-    heading_part2: "خدمت کوو",
-    cards: {
-      card1: {
-        title: "افراد او کورنۍ",
-        desc: "د شخصي او مدني شخړو په هواري کې د افرادو او کورنیو سره مرسته کول."
-      },
-      card2: {
-        title: "سوداګرۍ او کارپوریشنونه",
-        desc: "د سوداګریزو او کار ځای د شخړو په حل کې د سوداګریزو ادارو ملاتړ کول."
-      },
-      card3: {
-        title: "دولتي ادارې",
-        desc: "د عامه سکتور د شخړو په حل کې د دولتي څانګو سره مرسته کول."
-      },
-      card4: {
-        title: "این جی اوز او د ټولنې تنظیمونه",
-        desc: "د ټولنیزو او عامه کچې سازمانونو لپاره د شخړو حل کول اسانول."
-      },
-      card5: {
-        title: "د قانون شرکتونه او حقوقي متخصصین",
-        desc: "د اغېزمنو ADR حل لارو لپاره د حقوقي متخصصینو سره ملګرتیا کول."
-      }
-    }
-  },
-  cta: {
-    title_part1: "راځئ چې شخړې حل کړو",
-    title_part2: "په سوله ییزه توګه.",
-    subtitle: "منځګړیتوب تفاهم رامنځته کوي. تفاهم حل لارې لټوي. نن ورځ د PMA سره اړیکه ونیسئ ترڅو پوه شئ چې منځګړیتوب څنګه ستاسو سره مرسته کولی شي.",
-    btn_text: "نن ورځ له موږ سره اړیکه ونیسئ"
-  }
+            title_part1: "موږ چا ته",
+            title_part2: "خدمت کوو",
+            cards: {
+              card1: {
+                title: "افراد او کورنۍ",
+                desc: "د شخصي او مدني شخړو په هواري کې د افرادو او کورنیو سره مرسته کول."
+              },
+              card2: {
+                title: "سوداګرۍ او کارپوریشنونه",
+                desc: "د سوداګریزو او کار ځای د شخړو په حل کې د سوداګریزو ادارو ملاتړ کول."
+              },
+              card3: {
+                title: "دولتي ادارې",
+                desc: "د عامه سکتور د شخړو په حل کې د دولتي څانګو سره مرسته کول."
+              },
+              card4: {
+                title: "این جی اوز او د ټولنې تنظیمونه",
+                desc: "د ټولنیزو او عامه کچې سازمانونو لپاره د شخړو حل کول اسانول."
+              },
+              card5: {
+                title: "د قانون شرکتونه او حقوقي متخصصین",
+                desc: "د اغېزمنو ADR حل لارو لپاره د حقوقي متخصصینو سره ملګرتیا کول."
+              }
+            }
+          },
+          cta: {
+            title_part1: "راځئ چې شخړې حل کړو",
+            title_part2: "په سوله ییزه توګه.",
+            subtitle: "منځګړیتوب تفاهم رامنځته کوي. تفاهم حل لارې لټوي. نن ورځ د PMA سره اړیکه ونیسئ ترڅو پوه شئ چې منځګړیتوب څنګه ستاسو سره مرسته کولی شي.",
+            btn_text: "نن ورځ له موږ سره اړیکه ونیسئ"
+          }
         },
         "services-page": {
-  hero: {
-    img_alt: "د خدماتو هیرو انځور",
-    eyebrow: "زموږ خدمات",
-    title_part1: "مسلکي منځګړیتوب او",
-    title_part2: "د ADR خدمات",
-    lead: "PMA د منځګړیتوب، روزنې، او مشورتي خدماتو یو جامع لړۍ وړاندې کوي ترڅو افرادو، سازمانونو او ادارو سره د شخړو په اغېزمنه توګه حل کولو او د ډیالوګ کلتور رامنځته کولو کې مرسته وکړي."
-  },
-  work_with: {
-    title_part1: "موږ له چا سره",
-    title_part2: "کار",
-    title_part3: "کوو",
-    items: {
-      item1: "د قانون شرکتونه او حقوقي متخصصین",
-      item2: "کارپوریشنونه او سوداګرۍ",
-      item3: "دولتي ادارات",
-      item4: "این جي اوز او د ټولنې سازمانونه",
-      item5: "تعليمي مؤسسې",
-      item6: "قضايه او عامه سکتور"
-    }
-  }
-}
+          hero: {
+            img_alt: "د خدماتو هیرو انځور",
+            eyebrow: "زموږ خدمات",
+            title_part1: "مسلکي منځګړیتوب او",
+            title_part2: "د ADR خدمات",
+            lead: "PMA د منځګړیتوب، روزنې، او مشورتي خدماتو یو جامع لړۍ وړاندې کوي ترڅو افرادو، سازمانونو او ادارو سره د شخړو په اغېزمنه توګه حل کولو او د ډیالوګ کلتور رامنځته کولو کې مرسته وکړي."
+          },
+          work_with: {
+            title_part1: "موږ له چا سره",
+            title_part2: "کار",
+            title_part3: "کوو",
+            items: {
+              item1: "د قانون شرکتونه او حقوقي متخصصین",
+              item2: "کارپوریشنونه او سوداګرۍ",
+              item3: "دولتي ادارات",
+              item4: "این جي اوز او د ټولنې سازمانونه",
+              item5: "تعليمي مؤسسې",
+              item6: "قضايه او عامه سکتور"
+            }
+          },
+          services_cta: {
+            title_part1: "راشئ چې په ګډه د شخړو د حل غوره",
+            title_part2: "سیسټمونه جوړ کړو.",
+            subtitle: "ستاسو د اړتیاوو سره سم د منځګړیتوب خدماتو، مسلکي روزنې، او مشورتي حلونو لپاره د PMA سره ملګرتیا وکړئ.",
+            btn_text: "اړيکه ونیسئ"
+          }
+        },
+        "contact-page": {
+          hero: {
+            img_alt: "د اړيکې پاڼې هیرو انځور",
+            eyebrow: "له موږ سره اړيکه ونیسئ",
+            title_part1: "موږ دلته ستاسو د مرستې",
+            title_part2: "لپاره یو.",
+            lead: "که تاسو کومه پوښتنه لرئ، لارښوونې ته اړتیا لرئ، یا غواړئ همکاري وکړئ، زموږ ټیم ستاسو مرستې ته چمتو دی. له موږ سره اړیکه ونیسئ او موږ به په نږدې وخت کې تاسو ته ځواب درکړو.",
+            features: {
+              f1_title: "بشپړ محرمیت",
+              f1_desc: "ستاسو معلومات تل خوندي ساتل کیږي",
+              f2_title: "فوري ځواب",
+              f2_desc: "موږ معمولاً په 24 ساعتونو کې ځواب ورکوو",
+              f3_title: "مسلکي ټیم",
+              f3_desc: "د منځګړیتوب د تجربه لرونکو کارپوهانو ټیم"
+            }
+          }
+        }
       }
     },
     sd: {
@@ -2167,21 +2404,21 @@
             f4_desc: "اسان تڪرارن کي ڪارگر ۽ مؤثر طريقي سان حل ڪرڻ ۾ مدد ڪريون ٿا.",
             f5_title: "خرچ ۾ بچت (ڪفايتي)",
             f5_desc: "مهانگي ۽ طويل قانوني ڪارروائيءَ جو هڪ عملي متبادل."
-  }
-},
+          }
+        },
         training: {
-    title_part1: "پروفيشنل تربيت ۽",
-    title_part2: "توثيق (Accreditation)",
-    text: "PMA بين الاقوامي معيارن جي مطابق مصالحت جي تربيت ۽ پروفيشنل ڊيولپمينٽ پروگرام فراهم ڪري ٿي جيڪي وڪيلن، ڪارپوريٽ پيشيور ماڻهن، HR ٽيمن، استادن، ۽ ثالث بڻجڻ جي خواهش رکندڙن لاءِ تيار ڪيا ويا آهن.<br>اسان جا ورڪشاپ ۽ سرٽيفڪيشن پروگرام تڪرارن جي عملي حل جي مهارتن، ڳالهه ٻولهه جي حڪمت عملين، رابطي ۽ ADR فريم ورڪ تي ڌيان ڏين ٿا.",
-    features: {
-      feat1: "IMI توثيق (Accreditation)",
-      feat2: "ماهر ٽرينرز",
-      feat3: "عملي سکيا",
-      feat4: "عالمهي معيار"
-    },
-    card_text: "اسان جا تربيتي پروگرام بين الاقوامي معيارن تي پورو لهن ٿا ۽ پيشيور ماڻهن کي مؤثر، اخلاقي، ۽ عالمي سطح تي قابل ثالث (Mediators) بڻجڻ لاءِ بااختيار بڻائين ٿا.",
-    btn_text: "تربيت جا پروگرام دريافت ڪريو"
-  },
+          title_part1: "پروفيشنل تربيت ۽",
+          title_part2: "توثيق (Accreditation)",
+          text: "PMA بين الاقوامي معيارن جي مطابق مصالحت جي تربيت ۽ پروفيشنل ڊيولپمينٽ پروگرام فراهم ڪري ٿي جيڪي وڪيلن، ڪارپوريٽ پيشيور ماڻهن، HR ٽيمن، استادن، ۽ ثالث بڻجڻ جي خواهش رکندڙن لاءِ تيار ڪيا ويا آهن. اسان جا ورڪشاپ ۽ سرٽيفڪيشن پروگرام تڪرارن جي عملي حل جي مهارتن، ڳالهه ٻولهه جي حڪمت عملين، رابطي ۽ ADR فريم ورڪ تي ڌيان ڏين ٿا.",
+          features: {
+            feat1: "IMI توثيق (Accreditation)",
+            feat2: "ماهر ٽرينرز",
+            feat3: "عملي سکيا",
+            feat4: "عالمهي معيار"
+          },
+          card_text: "اسان جا تربيتي پروگرام بين الاقوامي معيارن تي پورو لهن ٿا ۽ پيشيور ماڻهن کي مؤثر، اخلاقي، ۽ عالمي سطح تي قابل ثالث (Mediators) بڻجڻ لاءِ بااختيار بڻائين ٿا.",
+          btn_text: "تربيت جا پروگرام دريافت ڪريو"
+        },
         services: {
           title: "اسان جون بنيادي خدمتون",
           list: {
@@ -2196,7 +2433,7 @@
         },
         leadership: {
           title: "اسان جي قيادت سان ملو",
-          roles: { president: "صدر", secretary: "سيڪريٽري جنرل", vp_north: "نائب صدر - اتر", vp_south: "نائب صدر - ڏکڻ" }
+          roles: { president: "صدر", secretary: "سيڪريٽري جنرل", vp_north: "نائب صدر - اتر", ec_north: "ايگزيكٽو ڪميٽي - اتر" }
         },
         stats: {
           s1: { label: "ڪامياب ميڊئيشنز", unit: "+" },
@@ -2440,8 +2677,8 @@
             }
           },
           who_we_serve: {
-            heading_part1: "اسان ڪنهن کي",
-            heading_part2: "خدمتون فراهم ڪيون ٿا",
+            title_part1: "اسان ڪنهن کي",
+            title_part2: "خدمتون فراهم ڪيون ٿا",
             cards: {
               card1: {
                 title: "افراد ۽ خاندان",
@@ -2465,35 +2702,58 @@
               }
             }
           },
-  cta: {
-    title_part1: "اچو ته تڪرارن جو حل ڳوليون",
-    title_part2: "امن امان سان.",
-    subtitle: "مصالحت باهمي افهام و تفهيم پيدا ڪندي آهي. افهام و تفهيم مان حل نڪرندا آهن. اڄ ئي PMA سان رابطو ڪريو ته جيئن معلوم ٿئي ته مصالحت توهان جي ڪيئن مدد ڪري سگهي ٿي.",
-    btn_text: "اڄ ئي اسان سان رابطو ڪريو"
-  }
+          cta: {
+            title_part1: "اچو ته تڪرارن جو حل ڳوليون",
+            title_part2: "امن امان سان.",
+            subtitle: "مصالحت باهمي افهام و تفهيم پيدا ڪندي آهي. افهام و تفهيم مان حل نڪرندا آهن. اڄ ئي PMA سان رابطو ڪريو ته جيئن معلوم ٿئي ته مصالحت توهان جي ڪيئن مدد ڪري سگهي ٿي.",
+            btn_text: "اڄ ئي اسان سان رابطو ڪريو"
+          }
         },
         "services-page": {
-  hero: {
-    img_alt: "خدمات جو هيرو ايميج",
-    eyebrow: "اسان جون خدمتون",
-    title_part1: "پروفيشنل مصالحت ۽",
-    title_part2: "ADR خدمتون",
-    lead: "PMA مصالحت، تربيت، ۽ مشاورتی خدمتن جو هڪ وسيع دائرو فراهم ڪري ٿي ته جيئن فردن، تنظيمن ۽ ادارن کي تڪرارن کي مؤثر طريقي سان حل ڪرڻ ۽ باهمي ڳالهه ٻولهه جي ثقافت کي هٿي وٺرائڻ ۾ مدد ملي سگهي."
-  },
-  work_with: {
-    title_part1: "اسان ڪنهن سان",
-    title_part2: "ڪام",
-    title_part3: "ڪنداسين",
-    items: {
-      item1: "لا فرمز ۽ قانوني ماهر",
-      item2: "ڪارپوريشنون ۽ ڪاروباري اڳواڻ",
-      item3: "سرڪاري ادارا",
-      item4: "اين جي اوز ۽ ڪميونٽي تنظيمون",
-      item5: "تعليمي ادارا",
-      item6: "عدليه ۽ پبلڪ سيڪٽر"
-    }
-  }
-}
+          hero: {
+            img_alt: "خدمات جو هيرو ايميج",
+            eyebrow: "اسان جون خدمتون",
+            title_part1: "پروفيشنل مصالحت ۽",
+            title_part2: "ADR خدمتون",
+            lead: "PMA مصالحت، تربيت، ۽ مشاورتی خدمتن جو هڪ وسيع دائرو فراهم ڪري ٿي ته جيئن فردن، تنظيمن ۽ ادارن کي تڪرارن کي مؤثر طريقي سان حل ڪرڻ ۽ باهمي ڳالهه ٻولهه جي ثقافت کي هٿي وٺرائڻ ۾ مدد ملي سگهي."
+          },
+          work_with: {
+            title_part1: "اسان ڪنهن سان",
+            title_part2: "ڪام",
+            title_part3: "ڪنداسين",
+            items: {
+              item1: "لا فرمز ۽ قانوني ماهر",
+              item2: "ڪارپوريشنون ۽ ڪاروباري اڳواڻ",
+              item3: "سرڪاري ادارا",
+              item4: "اين جي اوز ۽ ڪميونٽي تنظيمون",
+              item5: "تعليمي ادارا",
+              item6: "عدليه ۽ پبلڪ سيڪٽر"
+            }
+          },
+          services_cta: {
+            title_part1: "اچو ته گڏجي بهتر حل جو",
+            title_part2: "نظام تيار ڪريون.",
+            subtitle: "توهان جي ضرورتن جي مطابق مصالحت جي خدمتن، پروفيشنل تربيت، ۽ مشاورتی حلن لاءِ PMA سان ڀاڱيوالي ڪريو.",
+            btn_text: "رابطو ڪريو"
+          }
+        },
+        "contact-page": {
+          hero: {
+            img_alt: "رابطو صفحي جو هيرو ايميج",
+            eyebrow: "اسان سان رابطو ڪريو",
+            title_part1: "اسان توهان جي مدد لاءِ",
+            title_part2: "موجود آهيون.",
+            lead: "خواهه توهان جو ڪو سوال هجي، رهنمائي جي ضرورت هجي، يا ڀاڱيوالي ڪرڻ چاهيو، اسان جي ٽيم توهان جي مدد لاءِ تيار آهي. اسان سان رابطو ڪريو ۽ اسان جلد کان جلد توهان کي جواب ڏينداسين.",
+            features: {
+              f1_title: "انتهاڪاري خفيو (پوشيدو)",
+              f1_desc: "توهان جي معلومات هميشه محفوظ رهندي آهي",
+              f2_title: "فوري جواب",
+              f2_desc: "اسان عام طور تي 24 ڪلاڪن جي اندر جواب ڏيندا آهيون",
+              f3_title: "پروفيشنل مهارت",
+              f3_desc: "مصالحت جي ماهرن جي تجربيڪار ٽيم"
+            }
+          }
+        }
       }
     }
   };
