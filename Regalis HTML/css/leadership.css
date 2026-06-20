@@ -41,6 +41,16 @@
     max-width: 560px;
 }
 
+.pma-sc-note {
+    font-family: var(--body-font);
+    font-size: 14px;
+    color: var(--body-font-color);
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+}
+
 .pma-sc-expand-all {
     background: transparent;
     border: 1.5px solid var(--primary-color);

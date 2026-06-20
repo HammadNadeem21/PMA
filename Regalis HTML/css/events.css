@@ -593,3 +593,304 @@
     .pma-event-detail-card { min-height: 320px; }
     .pma-event-detail-card-content h3 { font-size: 18px; }
 }
+
+
+/* ── Past Events Gallery Lightbox Styles ── */
+
+/* View Gallery Button styling adjustments */
+.pma-btn-gallery {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    padding: 14px 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(234, 166, 56, 0.2);
+    transition: all 0.3s ease;
+}
+
+.pma-btn-gallery:hover {
+    box-shadow: 0 6px 20px rgba(234, 166, 56, 0.35);
+}
+
+.pma-btn-gallery i {
+    font-size: 15px;
+}
+
+/* Lightbox overlay background */
+.pma-gallery-mfp.mfp-bg {
+    background: rgba(16, 26, 38, 0.94);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.pma-gallery-mfp.mfp-bg.mfp-ready {
+    opacity: 0.98;
+}
+
+.pma-gallery-mfp.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+
+/* Center the popup container on screen */
+.pma-gallery-mfp .mfp-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 24px !important;
+    box-sizing: border-box !important;
+    height: 90vh !important;
+}
+
+/* Lightbox Content wrapper */
+.pma-gallery-mfp .mfp-content {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.3s ease-out;
+    margin: auto !important;
+    position: relative;
+    top: auto;
+    max-height: calc(100vh - 48px) !important;
+}
+
+.pma-gallery-mfp.mfp-ready .mfp-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.pma-gallery-mfp.mfp-removing .mfp-content {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+/* Image styling */
+.pma-gallery-mfp .mfp-figure {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #101a26;
+    max-height: calc(100vh - 40px) !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.pma-gallery-mfp .mfp-figure figure {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 40px);
+    overflow: hidden;
+}
+
+.pma-gallery-mfp img.mfp-img {
+    padding: 0 !important;
+    border-radius: 12px 12px 0 0;
+    max-height: calc(100vh - 130px) !important;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-sizing: border-box;
+    object-fit: contain;
+    flex-shrink: 1;
+    min-height: 0;
+}
+
+/* Bottom Bar (Caption & Counter) */
+.pma-gallery-mfp .mfp-bottom-bar {
+    background: #101a26;
+    padding: 16px 24px;
+    margin-top: -1px; /* overlap to prevent seam */
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.pma-gallery-mfp .mfp-title {
+    font-family: var(--heading-font), sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.4;
+    padding-right: 40px;
+    text-align: left;
+}
+
+.pma-gallery-mfp .mfp-title small {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+}
+
+.pma-gallery-mfp .mfp-counter {
+    position: static;
+    font-family: var(--body-font), sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.pma-gallery-mfp .mfp-counter-curr {
+    color: var(--secondary-color);
+}
+
+/* Modernized navigation arrows */
+.pma-gallery-mfp .mfp-arrow {
+    width: 54px;
+    height: 54px;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 50%;
+    transition: all 0.25s ease;
+    margin-top: -27px;
+    opacity: 0.85;
+    padding: 0 !important;
+}
+
+/* Kill all default Magnific Popup arrow pseudo-element borders */
+.pma-gallery-mfp .mfp-arrow:before,
+.pma-gallery-mfp .mfp-arrow:after {
+    content: '' !important;
+    display: block !important;
+    width: 14px !important;
+    height: 14px !important;
+    border: none !important;
+    border-top: 3px solid #ffffff !important;
+    border-right: 3px solid #ffffff !important;
+    position: absolute !important;
+    top: 50% !important;
+    margin: 0 !important;
+    background: none !important;
+}
+
+/* Hide the :after entirely — only use :before for the chevron */
+.pma-gallery-mfp .mfp-arrow:after {
+    display: none !important;
+}
+
+/* Left arrow chevron */
+.pma-gallery-mfp .mfp-arrow-left {
+    left: 20px;
+}
+.pma-gallery-mfp .mfp-arrow-left:before {
+    left: 55% !important;
+    transform: translate(-50%, -50%) rotate(-135deg) !important;
+}
+
+/* Right arrow chevron */
+.pma-gallery-mfp .mfp-arrow-right {
+    right: 20px;
+}
+.pma-gallery-mfp .mfp-arrow-right:before {
+    left: 42% !important;
+    transform: translate(-50%, -50%) rotate(45deg) !important;
+}
+
+/* Arrow hover */
+.pma-gallery-mfp .mfp-arrow:hover {
+    background: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+.pma-gallery-mfp .mfp-arrow:hover:before {
+    border-color: #000000 !important;
+}
+
+/* Custom Close Button */
+.pma-gallery-mfp .mfp-close {
+    width: 44px !important;
+    height: 44px !important;
+    line-height: 44px !important;
+    font-size: 26px !important;
+    background: var(--primary-color) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+    opacity: 1 !important;
+    right: 24px !important;
+    top: 24px !important;
+    text-align: center !important;
+    padding: 0 !important;
+    transition: all 0.25s ease;
+}
+
+.pma-gallery-mfp .mfp-close:hover {
+    background: var(--secondary-color) !important;
+    color: #000000 !important;
+    border-color: var(--secondary-color) !important;
+    /* transform: scale(1.08) rotate(90deg); */
+    cursor: pointer;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+    .pma-gallery-mfp .mfp-arrow {
+        width: 46px;
+        height: 46px;
+        margin-top: -23px;
+    }
+    .pma-gallery-mfp .mfp-arrow:before {
+        font-size: 16px;
+    }
+    .pma-gallery-mfp .mfp-arrow-left {
+        left: 12px;
+    }
+    .pma-gallery-mfp .mfp-arrow-right {
+        right: 12px;
+    }
+    .pma-gallery-mfp .mfp-close {
+        right: 12px !important;
+        top: 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .pma-gallery-mfp .mfp-arrow {
+        display: none !important; /* Hide arrows on small mobile for touch-friendly swiping/tapping on image */
+    }
+    .pma-gallery-mfp .mfp-bottom-bar {
+        padding: 12px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .pma-gallery-mfp .mfp-counter {
+        align-self: flex-end;
+    }
+    .pma-gallery-mfp .mfp-title {
+        font-size: 13px;
+        padding-right: 0;
+    }
+}
+
+/* Prevent html and body overflow scrolling */
+html.mfp-helper,
+.mfp-zoom-out-cur,
+.mfp-zoom-out-cur body {
+    overflow: hidden !important;
+}
+
+/* Restrict padding and wrapper scroll of the popup elements */
+.pma-gallery-mfp.mfp-wrap {
+    overflow: hidden !important;
+}
+
+.pma-gallery-mfp .mfp-image-holder {
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}

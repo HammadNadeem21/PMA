@@ -332,6 +332,9 @@
                                 </ul>
                             </div>
                         </div>
+                        <button class="pma-btn pma-btn--primary pma-btn-gallery w-100 mt-3" id="pmaViewGalleryBtn">
+                            <i class="fa fa-picture-o" aria-hidden="true"></i> View Event Gallery
+                        </button>
                     </div>
 
                     <!-- Right: detail content -->
@@ -396,6 +399,25 @@
                         </div>
 
                     </div>
+                </div>
+
+                <!-- Hidden Event Gallery -->
+                <div id="pma-past-event-gallery" style="display: none;">
+                    <a href="images/new/Gallery/Cover.png" title="1st National Mediation Conference - Event Gallery"></a>
+                    <a href="images/new/Gallery/01.png" title="1st National Mediation Conference - Event Gallery"></a>
+                    <a href="images/new/Gallery/02.png" title="1st National Mediation Conference - Event Gallery"></a>
+                    <a href="images/new/Gallery/03.png" title="1st National Mediation Conference - Event Gallery"></a>
+                    <a href="images/new/Gallery/04.png" title="1st National Mediation Conference - Event Gallery"></a>
+                    <a href="images/new/Gallery/06.png" title="1st National Mediation Conference - Event Gallery"></a>
+                    <a href="images/new/Gallery/07.png" title="1st National Mediation Conference - Event Gallery"></a>
+                    <a href="images/new/Gallery/08.png" title="1st National Mediation Conference - Event Gallery"></a>
+                    <a href="images/new/Gallery/09.png" title="1st National Mediation Conference - Event Gallery"></a>
+                    <a href="images/new/Gallery/11.png" title="1st National Mediation Conference - Event Gallery"></a>
+                    <a href="images/new/Gallery/12.png" title="1st National Mediation Conference - Event Gallery"></a>
+                    <a href="images/new/Gallery/14.png" title="1st National Mediation Conference - Event Gallery"></a>
+                    <a href="images/new/Gallery/15.png" title="1st National Mediation Conference - Event Gallery"></a>
+                    <a href="images/new/Gallery/16.png" title="1st National Mediation Conference - Event Gallery"></a>
+                    <a href="images/new/Gallery/18.png" title="1st National Mediation Conference - Event Gallery"></a>
                 </div>
 
             </div>
@@ -644,6 +666,32 @@
             $('#pmaEventDetail').fadeIn(250);
             $('#pmaEventsBackRow').show();
             $('html, body').animate({ scrollTop: $('#pma-events-directory').offset().top - 80 }, 350);
+        });
+
+        /* ── EVENT GALLERY POPUP ── */
+        $('#pma-past-event-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            fixedContentPos: true,
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [1, 2],
+                tCounter: '<span class="mfp-counter-curr">%curr%</span> of <span class="mfp-counter-total">%total%</span>'
+            },
+            image: {
+                tError: 'The image could not be loaded.',
+                titleSrc: function(item) {
+                    return item.el.attr('title') + ' <small>Pakistan Mediators Association</small>';
+                }
+            },
+            mainClass: 'mfp-fade pma-gallery-mfp',
+            removalDelay: 300
+        });
+
+        $('#pmaViewGalleryBtn').on('click', function (e) {
+            e.preventDefault();
+            $('#pma-past-event-gallery a').first().click();
         });
 
     });
