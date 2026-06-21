@@ -15895,7 +15895,7 @@ header.transparent.smaller {
   position: relative;
   width: 270px;
   flex-shrink: 0;
-  background: #132450;
+  background: #22364c;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -16006,7 +16006,7 @@ header.transparent.smaller {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 220px; /* Taller height for a smoother blend */
+  height: 250px;
   overflow: hidden;
   pointer-events: none;
   z-index: 2;
@@ -16016,8 +16016,7 @@ header.transparent.smaller {
   content: "";
   position: absolute;
   inset: 0;
-  /* Shift transition point higher up the container to maximize image brightness and clarity */
-  background: linear-gradient(to bottom, #132450 0%, rgba(19, 36, 80, 0.3) 40%, transparent 100%);
+  background: linear-gradient(to bottom, #22364c 0%, rgba(34, 54, 76, 0.9) 30%, rgba(34, 54, 76, 0.4) 70%, transparent 100%);
   z-index: 2;
 }
 
@@ -16392,7 +16391,7 @@ header.transparent.smaller {
    ========================================== */
 #pma-msic-popup .pma-training-popup-side,
 #pma-bims-popup .pma-training-popup-side {
-  background: linear-gradient(to bottom, #072e17 0%, #0c4422 40%, #0f4d28 100%);
+  background: #072e17;
 }
 
 #pma-msic-popup .pma-training-popup-badge-banner,
@@ -16428,7 +16427,7 @@ header.transparent.smaller {
 
 #pma-msic-popup .pma-training-popup-side-zen::before,
 #pma-bims-popup .pma-training-popup-side-zen::before {
-  background: linear-gradient(to bottom, #0f4d28 0%, rgba(50, 143, 88, 0.3) 40%, transparent 100%);
+  background: linear-gradient(to bottom, #072e17 0%, rgba(7, 46, 23, 0.9) 30%, rgba(7, 46, 23, 0.4) 70%, transparent 100%);
 }
 
 #pma-msic-popup .pma-popup-learn-card,
@@ -16629,17 +16628,23 @@ body.mfp-helper {
     flex-shrink: 0;
     height: auto;
     position: relative;
+    top: auto;
+    left: auto;
     bottom: auto;
     right: auto;
   }
   .pma-training-popup-side-zen::before {
-    background: linear-gradient(to right, #132450 0%, transparent 100%);
+    background: linear-gradient(to right, #22364c 0%, transparent 100%);
     width: 60px;
     height: 100%;
     top: 0;
     right: auto;
     left: 0;
     bottom: auto;
+  }
+  #pma-msic-popup .pma-training-popup-side-zen::before,
+  #pma-bims-popup .pma-training-popup-side-zen::before {
+    background: linear-gradient(to right, #072e17 0%, transparent 100%);
   }
   /* Main content */
   .pma-training-popup-main {
@@ -16724,13 +16729,17 @@ body.mfp-helper {
     object-position: center 30%;
   }
   .pma-training-popup-side-zen::before {
-    background: linear-gradient(to bottom, #132450 0%, transparent 100%);
+    background: linear-gradient(to bottom, #22364c 0%, transparent 100%);
     width: 100%;
     height: 50px;
     top: 0;
     left: 0;
     right: auto;
     bottom: auto;
+  }
+  #pma-msic-popup .pma-training-popup-side-zen::before,
+  #pma-bims-popup .pma-training-popup-side-zen::before {
+    background: linear-gradient(to bottom, #072e17 0%, transparent 100%);
   }
   /* Main scroll area */
   .pma-training-popup-scroll {

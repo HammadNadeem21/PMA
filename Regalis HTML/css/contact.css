@@ -447,13 +447,18 @@
 
 .pma-contact-form-row {
     display: grid;
-    grid-template-columns: 1fr 1.6fr;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: start;
 }
 
 /* ── Left: Info column ── */
-.pma-contact-info-col {}
+/* .pma-contact-info-col {
+    background: #F7F7F7;
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+} */
 
 .pma-contact-info-title {
     font-family: var(--heading-font);
