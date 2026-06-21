@@ -15850,11 +15850,10 @@ header.transparent.smaller {
 /* ===== Training course popup (Introductory) ===== */
 .pma-training-popup {
   max-width: 1100px;
-  margin: 40px auto;
+  margin: 20px auto;
   background: transparent;
   position: relative;
-  height: calc(100vh - 80px);
-  max-height: 800px;
+  max-height: calc(100vh - 40px);
 }
 
 .pma-training-popup-layout {
@@ -15864,7 +15863,7 @@ header.transparent.smaller {
   background: #fff;
   box-shadow: 0 24px 72px rgba(0, 0, 0, 0.38);
   position: relative;
-  height: 100%;
+  max-height: calc(100vh - 40px);
 }
 
 /* ---- Close button (MFP default, restyled) ---- */
@@ -15874,7 +15873,7 @@ header.transparent.smaller {
   height: 36px !important;
   line-height: 36px !important;
   font-size: 22px !important;
-  background: #1a2b3c !important;
+  background: #132450 !important;
   color: #fff !important;
   border-radius: 50% !important;
   opacity: 1 !important;
@@ -15887,7 +15886,7 @@ header.transparent.smaller {
 }
 .pma-training-popup .mfp-close:hover,
 .pma-training-mfp .mfp-close:hover {
-  background: #132450 !important;
+  background: var(--secondary-color) !important;
   transform: scale(1.08);
 }
 
@@ -16037,7 +16036,6 @@ header.transparent.smaller {
 .pma-training-popup-main {
   flex: 1;
   min-width: 0;
-  min-height: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -16045,7 +16043,6 @@ header.transparent.smaller {
 
 .pma-training-popup-scroll {
   flex: 1;
-  min-height: 0;
   padding: 28px 32px 24px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -16390,6 +16387,135 @@ header.transparent.smaller {
   transform: translateY(-1px);
 }
 
+/* ==========================================
+   GREEN THEME OVERRIDES (Non-Accredited Courses)
+   ========================================== */
+#pma-msic-popup .pma-training-popup-side,
+#pma-bims-popup .pma-training-popup-side {
+  background: linear-gradient(to bottom, #072e17 0%, #0c4422 40%, #0f4d28 100%);
+}
+
+#pma-msic-popup .pma-training-popup-badge-banner,
+#pma-bims-popup .pma-training-popup-badge-banner {
+  background: #0a3a1c;
+  color: #ffffff;
+}
+
+#pma-msic-popup .pma-training-popup-side-icon,
+#pma-bims-popup .pma-training-popup-side-icon {
+  border-color: #328f58;
+}
+
+#pma-msic-popup .pma-training-popup-side-icon i,
+#pma-bims-popup .pma-training-popup-side-icon i {
+  color: #328f58;
+}
+
+#pma-msic-popup .pma-training-popup-side-stats,
+#pma-bims-popup .pma-training-popup-side-stats {
+  border-top-color: rgba(255, 255, 255, 0.25);
+}
+
+#pma-msic-popup .pma-training-popup-side-stats li i,
+#pma-bims-popup .pma-training-popup-side-stats li i {
+  color: #328f58;
+}
+
+#pma-msic-popup .pma-training-popup-side-stats strong,
+#pma-bims-popup .pma-training-popup-side-stats strong {
+  color: #328f58;
+}
+
+#pma-msic-popup .pma-training-popup-side-zen::before,
+#pma-bims-popup .pma-training-popup-side-zen::before {
+  background: linear-gradient(to bottom, #0f4d28 0%, rgba(50, 143, 88, 0.3) 40%, transparent 100%);
+}
+
+#pma-msic-popup .pma-popup-learn-card,
+#pma-bims-popup .pma-popup-learn-card {
+  border: 1px solid #328f58;
+}
+
+#pma-msic-popup .pma-popup-learn-card:hover,
+#pma-bims-popup .pma-popup-learn-card:hover {
+  border-color: rgba(50, 143, 88, 0.45);
+  box-shadow: 0 3px 12px rgba(50, 143, 88, 0.06);
+}
+
+#pma-msic-popup .pma-popup-learn-icon,
+#pma-bims-popup .pma-popup-learn-icon {
+  border-color: #328f58;
+}
+
+#pma-msic-popup .pma-popup-learn-icon i,
+#pma-bims-popup .pma-popup-learn-icon i {
+  color: #328f58;
+}
+
+#pma-msic-popup .pma-popup-check,
+#pma-bims-popup .pma-popup-check {
+  background: rgba(50, 143, 88, 0.14);
+}
+
+#pma-msic-popup .pma-popup-check i,
+#pma-bims-popup .pma-popup-check i {
+  color: #328f58;
+}
+
+#pma-msic-popup .pma-popup-info-table td i,
+#pma-bims-popup .pma-popup-info-table td i {
+  color: #328f58;
+}
+
+#pma-msic-popup .pma-popup-attend-icon,
+#pma-bims-popup .pma-popup-attend-icon {
+  border-color: #328f58;
+}
+
+#pma-msic-popup .pma-popup-attend-icon i,
+#pma-bims-popup .pma-popup-attend-icon i {
+  color: #328f58;
+}
+
+#pma-msic-popup .pma-popup-note-icon,
+#pma-bims-popup .pma-popup-note-icon {
+  background: rgba(32, 143, 88, 0.08);
+}
+
+#pma-msic-popup .pma-popup-note-icon i,
+#pma-bims-popup .pma-popup-note-icon i {
+  color: #328f58;
+}
+
+#pma-msic-popup .pma-training-popup-register,
+#pma-bims-popup .pma-training-popup-register {
+  background: #328f58 !important;
+  border-color: #328f58 !important;
+  color: #ffffff !important;
+}
+
+#pma-msic-popup .pma-training-popup-register i,
+#pma-bims-popup .pma-training-popup-register i {
+  color: #fff !important;
+}
+
+#pma-msic-popup .pma-training-popup-register:hover,
+#pma-bims-popup .pma-training-popup-register:hover {
+  background: #196d3a !important;
+  border-color: #196d3a !important;
+  color: #ffffff !important;
+}
+
+#pma-msic-popup .mfp-close,
+#pma-bims-popup .mfp-close {
+  background: #328f58 !important;
+}
+
+#pma-msic-popup .mfp-close:hover,
+#pma-bims-popup .mfp-close:hover {
+  background: #196d3a !important;
+}
+
 /* MFP wrapper overrides */
 .pma-training-mfp .mfp-content {
   width: calc(100% - 28px);
@@ -16420,12 +16546,9 @@ body.mfp-helper {
 @media only screen and (max-width: 1199px) {
   .pma-training-popup {
     margin: 16px auto;
-    height: calc(100vh - 32px);
-    max-height: none;
   }
   .pma-training-popup-layout {
-    height: 100%;
-    max-height: none;
+    max-height: calc(100vh - 32px);
   }
   .pma-training-popup-side {
     width: 240px;
@@ -16461,14 +16584,11 @@ body.mfp-helper {
 @media only screen and (max-width: 991px) {
   .pma-training-popup {
     margin: 12px auto;
-    height: auto;
-    max-height: none;
   }
   /* Layout: sidebar on top, content below */
   .pma-training-popup-layout {
     flex-direction: column;
     max-height: calc(100vh - 24px);
-    height: auto;
     overflow-y: auto;
   }
   /* Sidebar spans full width, goes horizontal */
@@ -16525,14 +16645,9 @@ body.mfp-helper {
   .pma-training-popup-main {
     max-height: none;
     overflow-y: visible;
-    flex: none;
-    min-height: auto;
   }
   .pma-training-popup-scroll {
     padding: 22px 24px 20px;
-    overflow-y: visible;
-    flex: none;
-    min-height: auto;
   }
   .pma-popup-section-title {
     font-size: 19px;
@@ -16565,13 +16680,10 @@ body.mfp-helper {
 @media only screen and (max-width: 767px) {
   .pma-training-popup {
     margin: 8px auto;
-    height: auto;
-    max-height: none;
   }
   .pma-training-popup-layout {
     border-radius: 10px;
     max-height: calc(100vh - 16px);
-    height: auto;
   }
   /* Sidebar: stack icon + content + image vertically */
   .pma-training-popup-side {
@@ -16661,13 +16773,10 @@ body.mfp-helper {
 @media only screen and (max-width: 575px) {
   .pma-training-popup {
     margin: 4px auto;
-    height: auto;
-    max-height: none;
   }
   .pma-training-popup-layout {
     border-radius: 8px;
     max-height: calc(100vh - 8px);
-    height: auto;
   }
   .pma-training-popup-side-content {
     padding: 14px 14px 10px;
