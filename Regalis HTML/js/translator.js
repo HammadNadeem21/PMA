@@ -506,8 +506,431 @@
               error_msg: "Sorry, there was an error sending your message. Please try again.",
               note: "No legal process. No court. Just resolution. We typically respond within 24 hours."
             }
+          },
+          "map_section": {
+            "title": "Visit Our Office",
+            "lead": "We welcome you to visit us at our office in Karachi.",
+            "iframe_title": "PMA Office Location — 253, P.E.C.H.S., Block-6, Karachi"
           }
+        },
+        "faq_page": {
+          "hero": {
+            "img_alt": "FAQs Hero",
+            "title": "FAQs",
+            "lead": "Find answers to the most common questions about mediation and our services."
+          },
+            "faq_section": {
+  "items": {
+    "q1": {
+      "question": "WHAT IS STANDARD CLAUSE OF MEDIATION?",
+      "answer": "That any and every dispute, difference or question which may arise between the Parties to this Agreement shall be first settled by the Parties by an attempt at amicably settling the dispute through mutual negotiations. In case the disputes, differences or questions cannot be settled amicably or satisfactorily by correspondence or by mutual discussion within thirty days (30) after receipt by one party of the other party’s request for amicable settlement, it shall be referred to mediation to a panel of PMA Accredited Mediators. Mediation proceedings will be governed by the internationally recognized rules of mediation."
+    },
+    "q2": {
+      "question": "AN ALTERNATIVE TO COST AND TIME – MEDIATION",
+      "answer": "Mediation offers a faster, cost-effective, and confidential alternative to lengthy legal proceedings. It helps parties resolve disputes amicably while preserving professional and personal relationships."
+    },
+    "q3": {
+      "question": "WHAT IS MEDIATION?",
+      "answer": "Mediation is a voluntary and confidential process in which a neutral third party assists disputing parties in reaching a mutually acceptable agreement."
+    },
+    "q4": {
+      "question": "HOW TO TRY MEDIATION?",
+      "answer": "You can contact PMA through our website or office to initiate mediation services. Our team will guide you through the process and connect you with accredited mediators."
+    },
+    "q5": {
+      "question": "BENEFITS OF MEDIATION",
+      "benefits_list": {
+        "b1": "Faster dispute resolution",
+        "b2": "Lower legal costs",
+        "b3": "Confidential proceedings",
+        "b4": "Flexible solutions",
+        "b5": "Improved communication between parties"
+      }
+    },
+    "q6": {
+      "question": "WHEN WILL THE MEDIATION SESSION BE HELD?",
+      "answer": "The mediation session is scheduled based on the availability of both parties and the mediator. PMA coordinates the process to ensure convenience and efficiency."
+    },
+    "q7": {
+      "question": "WHAT HAPPENS AT MEDIATION?",
+      "answer": "During mediation, both parties discuss their concerns in a structured environment facilitated by a mediator who helps explore solutions and common ground."
+    },
+    "q8": {
+      "question": "WHAT HAPPENS IF NO AGREEMENT IS REACHED?",
+      "answer": "If mediation does not result in an agreement, both parties remain free to pursue other legal or dispute resolution options available to them."
+    },
+    "q9": {
+      "question": "WHO CAN ATTEND THE MEDIATION?",
+      "answer": "Only the involved parties, their authorized representatives, legal advisors (if permitted), and the mediator may attend the mediation session."
+    },
+    "q10": {
+      "question": "HOW MUCH WILL IT COST?",
+      "answer": "The cost of mediation depends on the nature, complexity, and duration of the dispute. PMA provides fee details before the mediation process begins."
+    }
+  },
+  "contact_box": {
+    "title": "Still Have Questions?",
+    "lead": "We're here to help. Reach out to us and our team will be happy to assist you.",
+    "btn_text": "Contact Us"
+  }
+}
+        },
+         "training-page":{
+     "hero": {
+  "hero_img_alt": "Training Hero",
+  "eyebrow": "PROFESSIONAL TRAINING",
+ "title_part1": "Building Pakistan's Future Mediators Through",
+  "title_part2": "Internationally Recognized Training",
+  "lead": "Strengthen your skills. Elevate your practice. Promote dialogue, understanding and peaceful resolution in society.",
+  "banner": {
+    "logo_alt": "International Mediation Institute",
+    "title": "IMI-Certified Mediator Training Program",
+    "tagline": "Internationally Recognized. Globally Respected.",
+    "desc": "PMA is an officially registered training provider with the International Mediation Institute (IMI). Our IMI-Certified Mediator Training Program meets the highest global standards for professional mediator training.",
+    "link_text": "for more information please click on the link"
+  }
+},
+"training_programs_section": {
+  "header": {
+    "title_part1": "Our",
+    "title_part2": "Training",
+    "title_part3": "Programs"
+  },
+  "programs": {
+    "accredited_course": {
+      "badge": "Accredited Course",
+      "title": "Mediation Skills Accredited Course",
+      "desc_p1": "This course is for those who are interested in getting to know the mediation skills. A candidate will become an educated consumer.",
+      "desc_p2": "All courses are conducted through exercises and role plays.",
+      "metrics": {
+        "total_hours": "Total Hours",
+        "days": "Days (Tue - Sat)",
+        "daily_hours": "Daily Hours",
+        "cert_status": "Certificate",
+        "cert_sub": "Accredited"
+      },
+      "outcomes": {
+        "headline": "By the end of the course participant should be able to:",
+        "list": {
+          "item1": "Skilled in Mediation",
+          "item2": "Learn Best Practices of Mediation",
+          "item3": "Learn Pakistan laws on mediation",
+          "item4": "Learn negotiation skills",
+          "item5": "Become certified mediator"
         }
+      },
+      "btn_text": "View Course Details"
+    },
+    "introductory_course": {
+      "badge": "Non-Accredited Course",
+      "title": "Mediation Skills Introductory Course",
+      "desc_p1": "This course is for those who are interested in getting a know how of the mediation skills. This is a very basic level course.",
+      "desc_p2": "There are no exercises or role plays.",
+      "metrics": {
+        "total_hours": "Total Hours",
+        "days": "Days (To be announced)",
+        "daily_hours": "Daily Hours",
+        "cert_status": "Non-Accredited"
+      },
+      "btn_text": "View Course Details"
+    },
+    "basic_info_course": {
+      "badge": "Non-Accredited Course",
+      "title": "Basic Information About Mediation Skills",
+      "desc_p1": "This course is for those who are interested in getting a know how of the mediation skills. This is a very basic level course.",
+      "desc_p2": "There are no exercises or role plays.",
+      "metrics": {
+        "total_hours": "Total Hours",
+        "days": "Day",
+        "daily_hours": "Daily Hours",
+        "cert_status": "Non-Accredited"
+      },
+      "btn_text": "View Course Details"
+    }
+  }
+},
+"attendees_section": {
+  "header": {
+    "title_part1": "Who",
+    "title_part2": "Should",
+    "title_part3": "Attend?",
+    "subtitle": "This Training is Designed for Professionals Who Want to Make a Difference"
+  },
+  "cards": {
+    "c1": {
+      "title": "Lawyers & Legal Professionals",
+      "desc": "Enhance your dispute resolution skills and expand your professional practice."
+    },
+    "c2": {
+      "title": "Judges & Court Officials",
+      "desc": "Strengthen your understanding of ADR and support effective case management."
+    },
+    "c3": {
+      "title": "Corporate Professionals",
+      "desc": "Improve negotiation, communication and conflict management at the workplace."
+    },
+    "c4": {
+      "title": "HR & Admin Professionals",
+      "desc": "Build people-centered conflict resolution and workplace harmony."
+    },
+    "c5": {
+      "title": "NGOs & Community Leaders",
+      "desc": "Resolve community disputes and promote social cohesion and inclusion."
+    },
+    "c6": {
+      "title": "Students & ADR Enthusiasts",
+      "desc": "Kick-start your journey in mediation and build a strong foundation in ADR."
+    },
+    "c7": {
+      "title": "Government Officials",
+      "desc": "Apply mediation skills to public sector disputes and policy implementation."
+    },
+    "c8": {
+      "title": "Anyone Interested in ADR & Mediation",
+      "desc": "Open to those passionate about peaceful dialogue and resolving disputes."
+    }
+  }
+},
+"cta_resolution_section": {
+  "graphic_alt": "Different backgrounds, one goal",
+  "title": "Different backgrounds. One goal: Peaceful Resolution.",
+  "desc": "Our training brings together diverse professionals who believe in dialogue, understanding and building better communities.",
+  "btn_text": "Register for a Course"
+},
+"registration_section": {
+  "left_panel": {
+    "badge_text": "Join Our Program",
+    "title": "Join Our Mediation Training Programs",
+    "tagline": "Take the First Step Towards Excellence",
+    "desc": "Register today and become part of internationally recognized training programs designed to build your skills, empower your practice and promote peaceful resolution in society.",
+    "img_alt": "Zen meditation stones",
+    "seat_badge": {
+      "title": "Secure Your Seat",
+      "desc_part1": "Limited seats",
+  "desc_part2": "available in each batch."
+    }
+  },
+  "form_panel": {
+    "header_title": "Registration Details",
+    "labels": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "background": "Professional Background",
+      "city": "City",
+      "program": "Select Training Program",
+      "additional_info": "Additional Information (Optional)"
+    },
+    "placeholders": {
+      "name": "Enter your full name",
+      "email": "Enter your email address",
+      "phone": "Enter your phone number",
+      "background": "e.g. Lawyer, HR Professional, Student",
+      "city": "Enter your city",
+      "program_default": "-- Please choose a program --",
+      "additional_info": "Any additional information you would like to share"
+    },
+    "options": {
+      "accredited": "Mediation Skills Accredited Course",
+      "introductory": "Mediation Skills Introductory Course",
+      "basic": "Basic Information About Mediation Skills"
+    },
+    "btn_text": "Apply for Enrollment",
+    "privacy_note": "Your information is safe and will only be used for registration purposes.",
+    "messages": {
+      "success": "Registration submitted! We'll contact you within 24 hours.",
+      "error": "Sorry, there was an error submitting your registration. Please try again."
+    }
+  }
+},
+"training_badges_section": {
+  "badges": {
+    "b1": {
+      "title": "IMI Recognized",
+      "desc": "Our programs are certified by the International Mediation Institute (IMI)."
+    },
+    "b2": {
+      "title": "Expert Trainers",
+      "desc": "Learn from experienced mediators and industry professionals."
+    },
+    "b3": {
+      "title": "International Standards",
+      "desc": "Training aligned with globally accepted mediation standards."
+    },
+    "b4": {
+      "title": "Professional Certification",
+      "desc": "Earn a recognized certificate upon successful completion."
+    }
+  }
+},
+"popup_msac": {
+  "sidebar": {
+    "badge": "Accredited Course",
+    "title_part1": "Mediation Skills",
+    "title_part2": "Accredited Course",
+    "desc": "This course is for those who are interested in getting to know the mediation skills. A candidate will become an educated consumer. All courses are conducted through exercises and role plays.",
+    "stats": {
+      "type": { "label": "Accredited Course", "value": "Certificate Accredited" },
+      "total_hours": { "label": "Total Hours", "value": "40" },
+      "duration": { "label": "Duration", "value": "5 Days (One Week)" },
+      "daily_hours": { "label": "Daily Hours", "value": "8" },
+      "days": { "label": "Training Days", "value": "Tuesday to Saturday" },
+      "time": { "label": "Training Time", "value": "9 AM – 5 PM" }
+    }
+  },
+  "main_content": {
+    "about": {
+      "title": "About This Course",
+      "desc": "This comprehensive program equips participants with practical mediation skills, negotiation techniques, and an understanding of Pakistani laws on mediation. Through experiential learning, exercises, and role plays, participants will be prepared to handle real-life disputes effectively and ethically."
+    },
+    "outcomes": {
+      "title": "What You Will Learn",
+      "items": [
+        "Skilled in Mediation",
+        "Learn Best Practices of Mediation",
+        "Learn Pakistani laws on mediation",
+        "Learn negotiation skills",
+        "Become certified mediator",
+        "Draft effective settlement agreements"
+      ]
+    },
+    "columns": {
+      "outline": {
+        "title": "Course Outline",
+        "items": [
+          "Landscape of Alternate Dispute Resolution",
+          "Phases of Mediation",
+          "Non-verbal and verbal communication",
+          "Negotiation Style",
+          "Question Techniques",
+          "Zone of Potential Agreement",
+          "Breaking the deadlock",
+          "Draft of Settlement Agreement",
+          "Cases Appropriate for Mediation",
+          "Self-assessment",
+          "Bargaining Techniques"
+        ]
+      },
+      "structure": {
+        "title": "Course Structure",
+        "modules": [
+          { "badge": "Module 01", "title": "Landscape of ADR" },
+          { "badge": "Module 02", "title": "Mediation Process & Phases" },
+          { "badge": "Module 03", "title": "Communication & Questioning" },
+          { "badge": "Module 04", "title": "Negotiation Techniques" },
+          { "badge": "Module 05", "title": "Deadlock Resolution" },
+          { "badge": "Module 06", "title": "Settlement Drafting & Closure" },
+          { "badge": "Module 07", "title": "Self Assessment & Best Practices" }
+        ]
+      },
+      "methodology": {
+        "title": "Training Methodology",
+        "items": [
+          "Experiential Learning",
+          "Practical Exercises",
+          "Role Plays & Simulations",
+          "Group Discussions",
+          "Case Studies",
+          "Interactive Sessions"
+        ]
+      }
+    },
+    "certification": {
+      "title": "Certification Outcome",
+      "desc": "Participants will receive a Certificate of Completion upon successful participation. The course prepares individuals to apply mediation skills ethically, professionally, and effectively in diverse settings."
+    },
+    "attendees": {
+      "title": "Who Should Attend?",
+      "items": [
+        "Lawyers & Legal Professionals",
+        "Judges & Court Officials",
+        "Corporate Professionals",
+        "HR & Admin Professionals",
+        "NGOs & Community Leaders",
+        "Students & ADR Enthusiasts"
+      ]
+    },
+    "btn_text": "Apply for This Program"
+  }
+},
+"popup_msic": {
+  "sidebar": {
+    "badge": "Non-Accredited Course",
+    "title_part1": "Mediation Skills",
+    "title_part2": "Introductory Course",
+    "desc": "This course is designed for those who are interested in getting a know how of the mediation skills. This is a very basic level course and is non-accredited.",
+    "stats": {
+      "type": { "label": "Non-Accredited Course", "value": "" },
+      "total_hours": { "label": "Total Hours", "value": "16" },
+      "duration": { "label": "Duration", "value": "2 Business Days" },
+      "daily_hours": { "label": "Daily Hours", "value": "8" },
+      "days": { "label": "Training Days", "value": "Any Two Days (To Be Announced)" },
+      "time": { "label": "Training Time", "value": "9 AM – 5 PM" }
+    }
+  },
+  "main_content": {
+    "about": {
+      "title": "About This Course",
+      "desc": "This introductory course provides a basic understanding of mediation skills and the mediation process. Participants will become educated consumers of mediation and will be able to understand what future does it hold for anyone. This course is theory-oriented with no exercises or role plays."
+    },
+    "outcomes": {
+      "title": "What You Will Learn",
+      "items": [
+        "Understand the basics of mediation",
+        "Learn key mediation concepts",
+        "Understand when mediation can be used",
+        "Awareness of mediation process",
+        "Become an educated consumer"
+      ]
+    },
+    "columns": {
+      "outline": {
+        "title": "Course Outline",
+        "items": [
+          "Landscape of Alternate Dispute Resolution",
+          "Phases of Mediation",
+          "Non-verbal and verbal communication",
+          "Negotiation Style",
+          "Question Techniques",
+          "Zone of Potential Agreement",
+          "Breaking the deadlock",
+          "Draft of Settlement Agreement",
+          "Cases Appropriate for Mediation",
+          "Bargaining Techniques"
+        ]
+      },
+      "info_table": {
+        "title": "Course Information",
+        "trainer": { "label": "Trainer", "value": "To Be Announced (TBA)" },
+        "daily_hours": { "label": "Daily Hours", "value": "Eight (8)" },
+        "total_hours": { "label": "Total Hours", "value": "Sixteen (16)" },
+        "days": { "label": "Training Days", "value": "Any Two Days (To Be Announced)" },
+        "time": { "label": "Training Time", "value": "9 AM – 5 PM" },
+        "duration": { "label": "Course Duration", "value": "Two (2) Business Days" },
+        "type": { "label": "Course Type", "value": "Non-Accredited Course" }
+      }
+    },
+    "bottom_panel": {
+      "attendees": {
+        "title": "Who Should Attend?",
+        "items": [
+          "Students & Fresh Graduates",
+          "Professionals from Any Field",
+          "HR & Admin Professionals",
+          "NGOs & Community Workers",
+          "Anyone Interested in Mediation"
+        ]
+      },
+      "note": {
+        "title": "Important Note",
+        "desc": "This is a basic level course designed to provide knowledge and awareness only. There are no exercises, role plays or self-assessment in this course."
+      }
+    },
+    "btn_text": "Register for This Course"
+  }
+},
+
+    }
       }
     },
     ur: {
@@ -1006,8 +1429,430 @@
               error_msg: "معذرت، آپ کا پیغام بھیجنے میں کوئی غلطی ہوئی ہے۔ براہ کرم دوبارہ کوشش کریں۔",
               note: "نہ کوئی قانونی عمل، نہ عدالت۔ صرف تصفیہ۔ ہم عام طور پر 24 گھنٹوں کے اندر جواب دیتے ہیں۔"
             }
-          }
+          },
+          "map_section": {
+  "title": "ہمارے دفتر تشریف لائیں",
+  "lead": "ہم آپ کو کراچی میں واقع ہمارے دفتر میں آمد پر خوش آمدید کہتے ہیں۔",
+  "iframe_title": "پی ایم اے آفس لوکیشن — 253، پی۔ای۔سی۔ایچ۔ایس، بلاک-6، کراچی"
+}
+        },
+        "faq_page": {
+  "hero": {
+    "img_alt": "سوالات کے جوابات کا ہیرو امیج",
+    "title": "عام طور پر پوچھے جانے والے سوالات",
+    "lead": "مصالحت اور ہماری خدمات کے بارے میں عام طور پر پوچھے جانے والے سوالات کے جوابات یہاں تلاش کریں۔"
+  },
+  "faq_section": {
+  "items": {
+    "q1": {
+      "question": "مصالحت (MEDIATION) کی معیاری شق کیا ہے؟",
+      "answer": "اس معاہدے کے فریقین کے درمیان پیدا ہونے والے کسی بھی اور ہر قسم کے تنازعہ، اختلاف یا سوال کو پہلے فریقین باہمی مذاکرات کے ذریعے دوستانہ طور پر حل کرنے کی کوشش کریں گے۔ اگر تنازعات، اختلافات یا سوالات دوستانہ تصفیہ کے لیے ایک فریق کی طرف سے دوسرے فریق کی درخواست کی وصولی کے بعد تیس (30) دنوں کے اندر خط و کتابت یا باہمی بحث کے ذریعے خوش اسلوبی یا تسلی بخش طریقے سے حل نہیں ہوسکتے، تو اسے پی ایم اے (PMA) کے تسلیم شدہ مصالحتی پینل کو بھیجا جائے گا۔ مصالحت کی کارروائی بین الاقوامی سطح پر تسلیم شدہ قوانین کے تحت چلائی جائے گی۔"
+    },
+    "q2": {
+      "question": "وقت اور لاگت کا ایک متبادل – مصالحت",
+      "answer": "مصالحت طویل قانونی کارروائیوں کا ایک تیز رفتار، کفایتی اور خفیہ متبادل پیش کرتی ہے۔ یہ پیشہ ورانہ اور ذاتی تعلقات کو برقرار رکھتے ہوئے فریقین کو دوستانہ طور پر تنازعات حل کرنے میں مدد دیتی ہے۔"
+    },
+    "q3": {
+      "question": "مصالحت (MEDIATION) کیا ہے؟",
+      "answer": "مصالحت ایک رضاکارانہ اور خفیہ عمل ہے جس میں ایک غیر جانبدار تیسرا فریق تنازعہ کے شکار فریقین کو باہمی طور پر قابل قبول معاہدے تک پہنچنے میں مدد فراہم کرتا ہے۔"
+    },
+    "q4": {
+      "question": "مصالحت کے لیے کیسے رجوع کریں؟",
+      "answer": "آپ مصالحتی خدمات شروع کرنے کے لیے ہماری ویب سائٹ یا دفتر کے ذریعے پی ایم اے (PMA) سے رابطہ کر سکتے ہیں۔ ہماری ٹیم اس پورے عمل میں آپ کی رہنمائی کرے گی اور آپ کو مستند مصالحتی ماہرین سے منسلک کرے گی۔"
+    },
+    "q5": {
+      "question": "مصالحت کے فوائد",
+      "benefits_list": {
+        "b1": "تنازعات کا تیز رفتار حل",
+        "b2": "کم قانونی اخراجات",
+        "b3": "خفیہ تصفیہ کی کارروائی",
+        "b4": "لچکدار حل",
+        "b5": "فریقین کے درمیان بہتر رابطہ و مواصلات"
+      }
+    },
+    "q6": {
+      "question": "مصالحت کا سیشن کب منعقد ہوگا؟",
+      "answer": "مصالحت کے سیشن کا شیڈول دونوں فریقین اور ثالث (ثالثی کار) کی دستیابی کی بنیاد پر طے کیا جاتا ہے۔ پی ایم اے سہولت اور کارکردگی کو یقینی بنانے کے لیے اس عمل کو مربوط کرتا ہے۔"
+    },
+    "q7": {
+      "question": "مصالحت کے دوران کیا ہوتا ہے؟",
+      "answer": "مصالحت کے دوران، دونوں فریقین ایک ثالث کی موجودگی میں ایک منظم ماحول میں اپنے تحفظات پر بات کرتے ہیں، جو حل اور مشترکہ نکات تلاش کرنے میں مدد کرتا ہے۔"
+    },
+    "q8": {
+      "question": "اگر کوئی معاہدہ طے نہ پائے تو کیا ہوتا ہے؟",
+      "answer": "اگر مصالحت کے نتیجے میں کوئی معاہدہ طے نہیں پاتا، تو دونوں فریق اپنے پاس موجود دیگر قانونی متبادلات یا تنازعات کے حل کے اختیارات حاصل کرنے کے لیے آزاد رہتے ہیں۔"
+    },
+    "q9": {
+      "question": "مصالحت کے سیشن میں کون شرکت کر سکتا ہے؟",
+      "answer": "مصالحت کے سیشن میں صرف متعلقہ فریقین، ان کے مجاز نمائندے، قانونی مشیر (اگر اجازت ہو) اور ثالث ہی شرکت کر سکتے ہیں۔"
+    },
+    "q10": {
+      "question": "اس پر کتنی لاگت آئے گی؟",
+      "answer": "مصالحت کے اخراجات کا انحصار تنازعہ کی نوعیت، پیچیدگی اور مدت پر ہوتا ہے۔ پی ایم اے مصالحتی عمل شروع ہونے سے پہلے فیس کی تمام تفصیلات فراہم کرتا ہے۔"
+    }
+  },
+  "contact_box": {
+    "title": "ابھی بھی کوئی سوال ہے؟",
+    "lead": "ہم آپ کی مدد کے لیے حاضر ہیں۔ ہم سے رابطہ کریں اور ہماری ٹیم کو آپ کی رہنمائی کر کے خوشی ہوگی۔",
+    "btn_text": "ہم سے رابطہ کریں"
+  }
+}
+},
+"training-page": {
+  "hero": {
+    "hero_img_alt": "تربیت کا ہیرو امیج",
+    "eyebrow": "پیشہ ورانہ تربیت",
+   "title_part1": "بین الاقوامی سطح پر تسلیم شدہ تربیت کے ذریعے",
+  "title_part2": "پاکستان کے مستقبل کے مصالحت کاروں کی تیاری",
+    "lead": "اپنی صلاحیتوں کو مضبوط کریں۔ اپنے طریقہ کار کو بہتر بنائیں۔ معاشرے میں مکالمے، افہام و تفہیم اور پرامن حل کو فروغ دیں۔",
+    "banner": {
+      "logo_alt": "انٹرنیشنل میڈیشن انسٹی ٹیوٹ",
+      "title": "آئی ایم آئی (IMI) سے تصدیق شدہ میڈیٹر ٹریننگ پروگرام",
+      "tagline": "بین الاقوامی سطح پر تسلیم شدہ۔ عالمی سطح پر معتبر۔",
+      "desc": "پی ایم اے (PMA) انٹرنیشنل میڈیشن انسٹی ٹیوٹ (IMI) کے ساتھ ایک باقاعدہ رجسٹرڈ ٹریننگ فراہم کنندہ ہے۔ ہمارا IMI سے تصدیق شدہ میڈیٹر ٹریننگ پروگرام پیشہ ورانہ مصالحتی تربیت کے اعلیٰ ترین عالمی معیاروں پر پورا اترتا ہے۔",
+      "link_text": "مزید معلومات کے لیے براہ کرم اس لنک پر کلک کریں"
+    }
+  },
+  "training_programs_section": {
+  "header": {
+    "title_part1": "ہمارے",
+    "title_part2": "تربیت کے",
+    "title_part3": "پروگرامز"
+  },
+  "programs": {
+    "accredited_course": {
+      "badge": "ایکرedited (مسلمہ) کورس",
+      "title": "مصالحتی مہارتوں کا ایکریڈیٹڈ کورس",
+      "desc_p1": "یہ کورس ان لوگوں کے لیے ہے جو مصالحتی مہارتوں کو جاننے میں دلچسپی رکھتے ہیں۔ ایک امیدوار اس عمل سے مکمل واقفیت حاصل کر لے گا۔",
+      "desc_p2": "تمام کورسز عملی مشقوں اور رول پلے (کردار نگاری) کے ذریعے کروائے جاتے ہیں۔",
+      "metrics": {
+        "total_hours": "کل گھنٹے",
+        "days": "دن (منگل تا ہفتہ)",
+        "daily_hours": "روزانہ کے گھنٹے",
+        "cert_status": "سرٹیفکیٹ",
+        "cert_sub": "تسلیم شدہ (Accredited)"
+      },
+      "outcomes": {
+        "headline": "کورس کے اختتام پر شرکاء اس قابل ہو جائیں گے کہ:",
+        "list": {
+          "item1": "مصالحت میں مہارت حاصل کر سکیں",
+          "item2": "مصالحت کے بہترین طریقوں کو سیکھ سکیں",
+          "item3": "مصالحت سے متعلق پاکستان کے قوانین جان سکیں",
+          "item4": "مذاکرات کی مہارتیں سیکھ سکیں",
+          "item5": "سند یافتہ مصالحت کار بن سکیں"
         }
+      },
+      "btn_text": "کورس کی تفصیلات دیکھیں"
+    },
+    "introductory_course": {
+      "badge": "نان-ایکریڈیٹڈ کورس",
+      "title": "مصالحتی مہارتوں کا تعارفی کورس",
+      "desc_p1": "یہ کورس ان لوگوں کے لیے ہے جو مصالحتی مہارتوں کی بنیادی سمجھ بوجھ حاصل کرنے میں دلچسپی رکھتے ہیں۔ یہ بالکل ابتدائی سطح کا کورس ہے۔",
+      "desc_p2": "اس میں کوئی عملی مشقیں یا رول پلے شامل نہیں ہیں۔",
+      "metrics": {
+        "total_hours": "کل گھنٹے",
+        "days": "دن (جلد اعلان کیا جائے گا)",
+        "daily_hours": "روزانہ کے گھنٹے",
+        "cert_status": "غیر تسلیم شدہ (Non-Accredited)"
+      },
+      "btn_text": "کورس کی تفصیلات دیکھیں"
+    },
+    "basic_info_course": {
+      "badge": "نان-ایکریڈیٹڈ کورس",
+      "title": "مصالحتی مہارتوں کے بارے میں بنیادی معلومات",
+      "desc_p1": "یہ کورس ان لوگوں کے لیے ہے جو مصالحتی مہارتوں کی بنیادی سمجھ بوجھ حاصل کرنے میں دلچسپی رکھتے ہیں۔ یہ بالکل ابتدائی سطح کا کورس ہے۔",
+      "desc_p2": "اس میں کوئی عملی مشقیں یا رول پلے شامل نہیں ہیں۔",
+      "metrics": {
+        "total_hours": "کل گھنٹے",
+        "days": "دن",
+        "daily_hours": "روزانہ کے گھنٹے",
+        "cert_status": "غیر تسلیم شدہ (Non-Accredited)"
+      },
+      "btn_text": "کورس کی تفصیلات دیکھیں"
+    }
+  }
+},
+"attendees_section": {
+  "header": {
+    "title_part1": "کسے",
+    "title_part2": "شرکت",
+    "title_part3": "کرنی چاہیے؟",
+    "subtitle": "یہ تربیت ان پیشہ ور افراد کے لیے تیار کی گئی ہے جو مثبت تبدیلی لانا چاہتے ہیں"
+  },
+  "cards": {
+    "c1": {
+      "title": "وکلاء اور قانونی پیشہ ور افراد",
+      "desc": "اپنے تنازعات کے حل کی مہارتوں کو بہتر بنائیں اور اپنے پیشہ ورانہ دائرہ کار کو وسعت دیں۔"
+    },
+    "c2": {
+      "title": "ججز اور عدالتی حکام",
+      "desc": "اے ڈی آر (ADR) کی اپنی سمجھ بوجھ کو مضبوط کریں اور مقدمات کے مؤثر انتظام میں مدد کریں۔"
+    },
+    "c3": {
+      "title": "کارپوریٹ پیشہ ور افراد",
+      "desc": "کام کی جگہ پر مذاکرات، روابط اور تنازعات کے انتظام کو بہتر بنائیں۔"
+    },
+    "c4": {
+      "title": "ایچ آر اور ایڈمنڈ کے پیشہ ور افراد",
+      "desc": "افراد پر مرکوز تنازعات کا حل اور کام کی جگہ پر ہم آہنگی پیدا کریں۔"
+    },
+    "c5": {
+      "title": "این جی اوز اور کمیونٹی رہنما",
+      "desc": "برادری کے تنازعات کو حل کریں اور سماجی ہم آہنگی اور شمولیت کو فروغ دیں۔"
+    },
+    "c6": {
+      "title": "طلباء اور اے ڈی آر کے شوقین",
+      "desc": "مصالحت میں اپنے سفر کا آغاز کریں اور اے ڈی آر (ADR) میں ایک مضبوط بنیاد بنائیں۔"
+    },
+    "c7": {
+      "title": "سرکاری حکام",
+      "desc": "عوامی شعبے کے تنازعات اور پالیسی کے نفاذ پر مصالحت کی مہارتیں لاگو کریں۔"
+    },
+    "c8": {
+      "title": "اے ڈی آر اور مصالحت میں دلچسپی رکھنے والا کوئی بھی فرد",
+      "desc": "ان تمام لوگوں کے لیے کھلا ہے جو پرامن مکالمے اور تنازعات کے حل کا جذبہ رکھتے ہیں۔"
+    }
+  }
+},
+"cta_resolution_section": {
+  "graphic_alt": "مختلف پس منظر، ایک ہی مقصد",
+  "title": "مختلف پس منظر۔ ایک ہی مقصد: پرامن تصفیہ۔",
+  "desc": "ہماری تربیت مختلف شعبوں سے تعلق رکھنے والے ایسے پیشہ ور افراد کو یکجا کرتی ہے جو مکالمے، افہام و تفہیم اور بہتر معاشرے کی تعمیر پر یقین رکھتے ہیں۔",
+  "btn_text": "کورس کے لیے رجسٹریشن کریں"
+},
+"registration_section": {
+  "left_panel": {
+    "badge_text": "ہمارے پروگرام میں شامل ہوں",
+    "title": "ہمارے مصالحتی تربیتی پروگراموں کا حصہ بنیں",
+    "tagline": "اعلیٰ کارکردگی کی طرف پہلا قدم بڑھائیں",
+    "desc": "آج ہی رجسٹریشن کروائیں اور بین الاقوامی سطح پر تسلیم شدہ تربیتی پروگراموں کا حصہ بنیں جو آپ کی مہارتوں کو نکھارنے، آپ کے پیشے کو مضبوط بنانے اور معاشرے میں پرامن حل کو فروغ دینے کے لیے ڈیزائن کیے گئے ہیں۔",
+    "img_alt": "زن میڈیٹیشن اسٹونز",
+    "seat_badge": {
+      "title": "اپنی نشست محفوظ کریں",
+      "desc_part1": "محدود نشستیں",
+  "desc_part2": "ہر بیچ میں دستیاب ہیں۔"
+    }
+  },
+  "form_panel": {
+    "header_title": "رجسٹریشن کی تفصیلات",
+    "labels": {
+      "name": "پورا نام",
+      "email": "ای میل ایڈریس",
+      "phone": "فون نمبر",
+      "background": "پیشہ ورانہ پس منظر",
+      "city": "شہر",
+      "program": "تربیتی پروگرام منتخب کریں",
+      "additional_info": "اضافی معلومات (اختیاری)"
+    },
+    "placeholders": {
+      "name": "اپنا پورا نام درج کریں",
+      "email": "اپنا ای میل ایڈریس درج کریں",
+      "phone": "اپنا فون نمبر درج کریں",
+      "background": "مثلاً وکیل، ایچ آر پروفیشنل، طالب علم",
+      "city": "اپنا شہر درج کریں",
+      "program_default": "-- براہ کرم ایک پروگرام منتخب کریں --",
+      "additional_info": "کوئی بھی اضافی معلومات جو آپ شیئر کرنا چاہیں"
+    },
+    "options": {
+      "accredited": "مصالحتی مہارتوں کا ایکریڈیٹڈ کورس",
+      "introductory": "مصالحتی مہارتوں کا تعارفی کورس",
+      "basic": "مصالحتی مہارتوں کے بارے میں بنیادی معلومات"
+    },
+    "btn_text": "داخلے کے لیے درخواست دیں",
+    "privacy_note": "آپ کی معلومات محفوظ ہیں اور صرف رجسٹریشن کے مقاصد کے لیے استعمال کی جائیں گی۔",
+    "messages": {
+      "success": "رجسٹریشن جمع ہو گئی! ہم 24 گھنٹے کے اندر آپ سے رابطہ کریں گے۔",
+      "error": "معذرت، آپ کی رجسٹریشن جمع کرنے میں ایک خرابی پیش آئی ہے۔ براہ کرم دوبارہ کوشش کریں۔"
+    }
+  }
+},
+"training_badges_section": {
+  "badges": {
+    "b1": {
+      "title": "آئی ایم آئی (IMI) سے تسلیم شدہ",
+      "desc": "ہمارے پروگرامز انٹرنیشنل میڈیشن انسٹی ٹیوٹ (IMI) سے تصدیق شدہ ہیں۔"
+    },
+    "b2": {
+      "title": "ماہر ٹرینرز",
+      "desc": "تجربہ کار مصالحت کاروں اور صنعتی ماہرین سے سیکھیں۔"
+    },
+    "b3": {
+      "title": "بین الاقوامی معیار",
+      "desc": "عالمی سطح پر مقبول مصالحتی معیاروں کے مطابق تربیت۔"
+    },
+    "b4": {
+      "title": "پیشہ ورانہ سرٹیفیکیشن",
+      "desc": "کامیابی سے تکمیل پر ایک تسلیم شدہ سرٹیفکیٹ حاصل کریں۔"
+    }
+  }
+},
+"popup_msac": {
+  "sidebar": {
+    "badge": "ایکرedited (مسلمہ) کورس",
+    "title_part1": "مصالحتی مہارتوں کا",
+    "title_part2": "ایکرedited کورس",
+    "desc": "یہ کورس ان لوگوں کے لیے ہے جو مصالحتی مہارتوں کو جاننے میں دلچسپی رکھتے ہیں۔ ایک امیدوار اس عمل سے مکمل واقفیت حاصل کر لے گا۔ تمام کورسز عملی مشقوں اور رول پلے (کردار نگاری) کے ذریعے کروائے جاتے ہیں۔",
+    "stats": {
+      "type": { "label": "تسلیم شدہ کورس", "value": "سرٹیفکیٹ تسلیم شدہ" },
+      "total_hours": { "label": "کل گھنٹے", "value": "40" },
+      "duration": { "label": "دورانیہ", "value": "5 دن (ایک ہفتہ)" },
+      "daily_hours": { "label": "روزانہ کے گھنٹے", "value": "8" },
+      "days": { "label": "تربیت کے دن", "value": "منگل تا ہفتہ" },
+      "time": { "label": "تربیت کا وقت", "value": "صبح 9 بجے سے شام 5 بجے تک" }
+    }
+  },
+  "main_content": {
+    "about": {
+      "title": "کورس کے بارے میں",
+      "desc": "یہ جامع پروگرام شرکاء کو مصالحت کی عملی مہارتوں، مذاکرات کی تکنیکوں اور مصالحت سے متعلق پاکستانی قوانین کی سمجھ بوجھ سے آراستہ کرتا ہے۔ عملی سیکھنے، مشقوں اور رول پلے کے ذریعے شرکاء کو حقیقی زندگی کے تنازعات کو مؤثر اور اخلاقی طور پر حل کرنے کے لیے تیار کیا جائے گا۔"
+    },
+    "outcomes": {
+      "title": "آپ کیا سیکھیں گے",
+      "items": [
+        "مصالحت میں مہارت حاصل کرنا",
+        "مصالحت کے بہترین طریقوں کو سیکھنا",
+        "مصالحت سے متعلق پاکستان کے قوانین جاننا",
+        "مذاکرات کی مہارتیں سیکھنا",
+        "سند یافتہ مصالحت کار بننا",
+        "مؤثر تصفیہ کے معاہدے تیار کرنا"
+      ]
+    },
+    "columns": {
+      "outline": {
+        "title": "کورس کا خاکہ",
+        "items": [
+          "متبادل تنازعات کے حل (ADR) کا منظرنامہ",
+          "مصالحت کے مراحل اور فیزز",
+          "غیر زبانی اور زبانی رابطہ (Communication)",
+          "مذاکرات کا انداز (Negotiation Style)",
+          "سوالات کرنے کی تکنیک",
+          "ممکنہ معاہدے کا دائرہ کار (Zone of Potential Agreement)",
+          "مردہ لاک (Deadlock) کو ختم کرنا",
+          "تصفیہ کے معاہدے کا مسودہ بنانا",
+          "مصالحت کے لیے موزوں مقدمات",
+          "ذاتی تشخیص (Self-assessment)",
+          "سودے بازی کی تکنیکیں"
+        ]
+      },
+      "structure": {
+        "title": "کورس کی ساخت",
+        "modules": [
+          { "badge": "ماڈیول 01", "title": "متبادل تنازعات کے حل (ADR) کا خاکہ" },
+          { "badge": "ماڈیول 02", "title": "مصالحتی عمل اور اس کے مراحل" },
+          { "badge": "ماڈیول 03", "title": "روابط اور سوالات کرنے کا طریقہ" },
+          { "badge": "ماڈیول 04", "title": "مذاکرات کی تکنیکیں" },
+          { "badge": "ماڈیول 05", "title": "ڈیڈ لاک کا حل" },
+          { "badge": "ماڈیول 06", "title": "معاہدے کا مسودہ اور تکمیل" },
+          { "badge": "ماڈیول 07", "title": "ذاتی تشخیص اور بہترین طریقہ کار" }
+        ]
+      },
+      "methodology": {
+        "title": "تربیت کا طریقہ کار",
+        "items": [
+          "تجرباتی اور عملی سیکھنا",
+          "عملی مشقیں",
+          "رول پلے اور سیمولیشنز",
+          "گروپ ڈسکشن (مباحثے)",
+          "کیس اسٹڈیز (حقیقی مثالیں)",
+          "انٹرایکٹو سیشنز"
+        ]
+      }
+    },
+    "certification": {
+      "title": "سرٹیفیکیشن کا نتیجہ",
+      "desc": "کامیاب شرکت پر شرکاء کو تکمیل کا سرٹیفکیٹ دیا جائے گا۔ یہ کورس افراد کو مختلف ماحول میں اخلاقی، پیشہ ورانہ اور مؤثر طریقے سے مصالحتی مہارتیں لاگو کرنے کے لیے تیار کرتا ہے۔"
+    },
+    "attendees": {
+      "title": "کسے شرکت کرنی چاہیے؟",
+      "items": [
+        "وکلاء اور قانونی پیشہ ور افراد",
+        "ججز اور عدالتی حکام",
+        "کارپوریٹ پیشہ ور افراد",
+        "ایچ آر اور ایڈمن کے پیشہ ور افراد",
+        "این جی اوز اور کمیونٹی رہنما",
+        "طلباء اور اے ڈی آر کے شوقین"
+      ]
+    },
+    "btn_text": "اس پروگرام کے لیے درخواست دیں"
+  }
+},
+"popup_msic": {
+  "sidebar": {
+    "badge": "نان-ایکریڈیٹڈ کورس",
+    "title_part1": "مصالحتی مہارتوں کا",
+    "title_part2": "تعارفی کورس",
+    "desc": "یہ کورس ان لوگوں کے لیے تیار کیا گیا ہے جو مصالحتی مہارتوں کے بارے میں بنیادی معلومات حاصل کرنا چاہتے ہیں۔ یہ ایک انتہائی ابتدائی سطح کا کورس ہے اور غیر تسلیم شدہ ہے۔",
+    "stats": {
+      "type": { "label": "نان-ایکریڈیٹڈ کورس", "value": "" },
+      "total_hours": { "label": "کل گھنٹے", "value": "16" },
+      "duration": { "label": "دورانیہ", "value": "2 کاروباری دن" },
+      "daily_hours": { "label": "روزانہ کے گھنٹے", "value": "8" },
+      "days": { "label": "تربیت کے دن", "value": "کوئی بھی دو دن (جلد اعلان کیا جائے گا)" },
+      "time": { "label": "تربیت کا وقت", "value": "صبح 9 بجے سے شام 5 بجے تک" }
+    }
+  },
+  "main_content": {
+    "about": {
+      "title": "کورس کے بارے میں",
+      "desc": "یہ تعارفی کورس مصالحتی مہارتوں اور مصالحت کے عمل کی بنیادی سمجھ فراہم کرتا ہے۔ شرکاء مصالحت کے عمل سے اچھی طرح واقف ہو جائیں گے اور یہ سمجھنے کے قابل ہوں گے کہ اس کا مستقبل کیا ہے۔ یہ کورس مکمل طور پر نظریاتی (Theory-oriented) ہے جس میں کوئی عملی مشق یا رول پلے شامل نہیں ہے۔"
+    },
+    "outcomes": {
+      "title": "آپ کیا سیکھیں گے",
+      "items": [
+        "مصالحت کی بنیادی باتوں کو سمجھنا",
+        "مصالحت کے اہم تصورات کو جاننا",
+        "یہ سمجھنا کہ مصالحت کا استعمال کب کیا جا سکتا ہے",
+        "مصالحتی عمل کے بارے میں آگاہی حاصل کرنا",
+        "ایک باخبر اور واقف کار صارف بننا"
+      ]
+    },
+    "columns": {
+      "outline": {
+        "title": "کورس کا خاکہ",
+        "items": [
+          "متبادل تنازعات کے حل (ADR) کا منظرنامہ",
+          "مصالحت کے مراحل اور فیزز",
+          "غیر زبانی اور زبانی رابطہ (Communication)",
+          "مذاکرات کا انداز (Negotiation Style)",
+          "سوالات کرنے کی تکنیک",
+          "ممکنہ معاہدے کا دائرہ کار (Zone of Potential Agreement)",
+          "مردہ لاک (Deadlock) کو ختم کرنا",
+          "تصفیہ کے معاہدے کا مسودہ بنانا",
+          "مصالحت کے لیے موزوں مقدمات",
+          "سودے بازی کی تکنیکیں"
+        ]
+      },
+      "info_table": {
+        "title": "کورس کی معلومات",
+        "trainer": { "label": "ٹرینر", "value": "جلد اعلان کیا جائے گا (TBA)" },
+        "daily_hours": { "label": "روزانہ کے گھنٹے", "value": "آٹھ (8)" },
+        "total_hours": { "label": "کل گھنٹے", "value": "سولہ (16)" },
+        "days": { "label": "تربیت کے دن", "value": "کوئی بھی دو دن (جلد اعلان کیا جائے گا)" },
+        "time": { "label": "تربیت کا وقت", "value": "صبح 9 بجے سے شام 5 بجے تک" },
+        "duration": { "label": "کورس کا دورانیہ", "value": "دو (2) کاروباری دن" },
+        "type": { "label": "کورس کی قسم", "value": "نان-ایکریڈیٹڈ کورس" }
+      }
+    },
+    "bottom_panel": {
+      "attendees": {
+        "title": "کسے شرکت کرنی چاہیے؟",
+        "items": [
+          "طلباء اور نئے گریجویٹس",
+          "کسی بھی شعبے سے تعلق رکھنے والے پیشہ ور افراد",
+          "ایچ آر اور ایڈمن کے پیشہ ور افراد",
+          "این جی اوز اور کمیونٹی ورکرز",
+          "مصالحت میں دلچسپی رکھنے والا کوئی بھی فرد"
+        ]
+      },
+      "note": {
+        "title": "اہم نوٹ",
+        "desc": "یہ ایک بنیادی سطح کا کورس ہے جو صرف معلومات اور آگاہی فراہم کرنے کے لیے تیار کیا گیا ہے۔ اس کورس میں کوئی عملی مشق، رول پلے یا ذاتی تشخیص شامل نہیں ہے۔"
+      }
+    },
+    "btn_text": "اس کورس کے لیے رجسٹریشن کریں"
+  }
+} 
+}
       }
     },
     ar: {
@@ -1444,8 +2289,491 @@
               f3_title: "احترافية عالية",
               f3_desc: "فريق ذو خبرة من خبراء الوساطة"
             }
-          }
+          },
+                "contact_section": {
+  "info_col": {
+    "title": "اتصل بنا",
+    "lead": "نحن هنا للإجابة على أسئلتك وتقديم الدعم الذي تحتاجه في رحلتك نحو الوساطة.",
+    "labels": {
+      "address": "عنوان المكتب",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "whatsapp": "واتساب",
+      "hours": "ساعات العمل"
+    },
+    "values": {
+      "address_text": "253، بي.إي.سي.إتش.إس، المربع 6، متفرع من شارع فيصل، كراتشي 75400، باكستان",
+      "hours_text": "الاثنين – الجمعة 9:00 صباحاً – 5:00 مساءً (بتوقيت باكستان)"
+    }
+  },
+  "form_col": {
+    "title": "أرسل لنا رسالة",
+    "lead": "شاركنا ببعض التفاصيل وسيقوم فريقنا بالرد عليك.",
+    "labels": {
+      "name": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "inquiry": "نوع الاستفسار",
+      "subject": "الموضوع",
+      "message": "الرسالة",
+      "consent": "جميع المحادثات سرية للغاية ومعلوماتك آمنة ومحمية."
+    },
+    "placeholders": {
+      "name": "اسمك",
+      "email": "بريدك الإلكتروني",
+      "phone": "هاتفك",
+      "subject": "موضوع رسالتك",
+      "message": "كيف يمكننا مساعدتك؟"
+    },
+    "options": {
+      "default": "حدد خياراً",
+      "general": "استفسار عام",
+      "mediation": "خدمات الوساطة",
+      "training": "التدريب والشهادات",
+      "membership": "معلومات العضوية",
+      "advisory": "الاستشارات المؤسسية لحل النزاعات بدائل (ADR)",
+      "workshops": "ورش العمل وجلسات التوعية",
+      "event": "المشاركة في الفعاليات",
+      "partnership": "الشراكة والتعاون",
+      "media": "الاستفسارات الإعلامية والصحفية",
+      "consultation": "الاستشارات القانونية / السياسات العامة",
+      "feedback": "شكوى أو مقترح",
+      "volunteer": "الفرص التطوعية",
+      "speaker": "طلب متحدث / مدرب",
+      "corporate": "دعم الوساطة للشركات",
+      "community": "دعم الوساطة المجتمعية",
+      "support": "الدعم الفني للموقع الإلكتروني"
+    },
+    "btn_text": "إرسال الرسالة",
+    "success_msg": "تم إرسال رسالتك بنجاح. سنقوم بالرد عليك خلال 24 ساعة.",
+    "error_msg": "عذراً، حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى.",
+    "note": "لا توجد إجراءات قانونية. لا محاكم. فقط حلول ودية وتصفية. نرد عادةً خلال 24 ساعة."
+  }
+},
+"map_section": {
+  "title": "تفضل بزيارة مكتبنا",
+  "lead": "نرحب بزيارتكم لنا في مكتبنا الكائن في كراتشي.",
+  "iframe_title": "موقع مكتب PMA — ٢٥٣، بي.إي.سي.إتش.إس، المربع ٦، كراتشي"
+}
+          
+        },
+        "faq_page": {
+  "hero": {
+    "img_alt": "الصورة الرئيسية لصفحة الأسئلة الشائعة",
+    "title": "الأسئلة الشائعة",
+    "lead": "اعثر على إجابات لأكثر الأسئلة شيوعاً حول الوساطة وخدماتنا."
+  },
+  "faq_section": {
+  "items": {
+    "q1": {
+      "question": "ما هو البند القياسي للوساطة؟",
+      "answer": "إن أي نزاع或是 خلاف أو مسألة قد تنشأ بين أطراف هذه الاتفاقية يتعين تسويتها أولاً من قبل الأطراف من خلال محاولة حل النزاع ودياً عبر المفاوضات المتبادلة. وفي حال تعذر تسوية النزاعات أو الخلافات أو المسائل ودياً أو بشكل مرضٍ عن طريق المراسلات أو المناقشة المتبادلة في غضون ثلاثين يوماً (30) من استلام أحد الأطراف طلب الطرف الآخر للتسوية الودية، يتم إحالتها إلى الوساطة أمام لجنة من وسيطي PMA المعتمدين. وتخضع إجراءات الوساطة لقواعد الوساطة المعترف بها دولياً."
+    },
+    "q2": {
+      "question": "الوساطة كبديل للتكلفة والوقت",
+      "answer": "توفر الوساطة بديلاً أسرع وأكثر فعالية من حيث التكلفة ويتسم بالسرية مقارنة بالإجراءات القانونية المطولة. وهي تساعد الأطراف على حل النزاعات ودياً مع الحفاظ على العلاقات المهنية والشخصية."
+    },
+    "q3": {
+      "question": "ما هي الوساطة؟",
+      "answer": "الوساطة هي عملية تطوعية وسرية يقوم فيها طرف ثالث محايد بمساعدة الأطراف المتنازعة على التوصل إلى اتفاق مقبول متبادل بينهما."
+    },
+    "q4": {
+      "question": "كيف يمكن تجربة الوساطة展开？",
+      "answer": "يمكنك الاتصال بـ PMA من خلال موقعنا الإلكتروني أو مكتبنا لبدء خدمات الوساطة. سيقوم فريقنا بتوجيهك خلال العملية وتوصيلك بوسطاء معتمدين."
+    },
+    "q5": {
+      "question": "فوائد الوساطة",
+      "benefits_list": {
+        "b1": "تسويه أسرع للنزاعات",
+        "b2": "تكاليف قانونية أقل",
+        "b3": "إجراءات سرية للغاية",
+        "b4": "حلول مرنة ومبتكرة",
+        "b5": "تحسين مستويات التواصل بين الأطراف"
+      }
+    },
+    "q6": {
+      "question": "متى ستُعقد جلسة الوساطة؟",
+      "answer": "يتم جدولة جلسة الوساطة بناءً على توفر كلا الطرفين والوسيط. وتقوم PMA بتنسيق العملية لضمان الراحة والكفاءة."
+    },
+    "q7": {
+      "question": "ماذا يحدث في جلسة الوساطة؟",
+      "answer": "خلال الوساطة، يناقش كلا الطرفين مخاوفهما في بيئة مهيكلة ييسرها وسيط يساعد في استكشاف الحلول والأرضية المشتركة."
+    },
+    "q8": {
+      "question": "ماذا يحدث إذا لم يتم التوصل إلى اتفاق؟",
+      "answer": "إذا لم تؤدِ الوساطة إلى اتفاق، يظل كلا الطرفين حراً في متابعة الخيارات القانونية أو خيارات تسوية النزاعات الأخرى المتاحة لهما."
+    },
+    "q9": {
+      "question": "من يمكنه حضور جلسة الوساطة؟",
+      "answer": "لا يجوز حضور جلسة الوساطة إلا للأطراف المعنية، وممثليها المفوضين، والمستشارين القانونيين (إذا سُمح بذلك)، والوسيط."
+    },
+    "q10": {
+      "question": "كم ستكون التكلفة؟",
+      "answer": "تعتمد تكلفة الوساطة على طبيعة النزاع وتعقيده ومدته. وتقدم PMA تفاصيل الرسوم قبل بدء عملية الوساطة."
+    }
+  },
+  "contact_box": {
+    "title": "هل لا تزال لديك أسئلة؟",
+    "lead": "نحن هنا للمساعدة. تواصل معنا وسيسعد فريقنا بتقديم الدعم لك.",
+    "btn_text": "اتصل بنا"
+  }
+}
+},
+"training-page": {
+  "hero": {
+    "hero_img_alt": "الصورة الرئيسية لصفحة التدريب",
+    "eyebrow": "التدريب المهني",
+   "title_part1": "بناء وسطاء المستقبل في باكستان من خلال",
+  "title_part2": "تدريب معترف به دولياً",
+    "lead": "عزز مهاراتك. ارتقِ بممارستك المهنية. عزز لغة الحوار والتفاهم والحلول السلمية في المجتمع.",
+    "banner": {
+      "logo_alt": "المعهد الدولي للوساطة",
+      "title": "برنامج تدريب الوسطاء المعتمد من IMI",
+      "tagline": "معترف به دولياً. ومحترم عالمياً.",
+      "desc": "تعد PMA مزود تدريب مسجل رسمياً لدى المعهد الدولي للوساطة (IMI). ويلبي برنامجنا لتدريب الوسطاء المعتمد من IMI أعلى المعايير العالمية للتدريب المهني للوسطاء.",
+      "link_text": "لمزيد من المعلومات يرجى الضغط على الرابط"
+    }
+  },
+  "training_programs_section": {
+  "header": {
+    "title_part1": "برامجنا",
+    "title_part2": "التدريبية",
+    "title_part3": ""
+  },
+  "programs": {
+    "accredited_course": {
+      "badge": "دورة معتمدة",
+      "title": "الدورة المعتمدة لمهارات الوساطة",
+      "desc_p1": "هذه الدورة مخصصة للمهتمين بالتعرف على مهارات الوساطة، حيث سيصبح المرشح مستهلكاً واعياً ومثقفاً لهذه العملية.",
+      "desc_p2": "يتم تقديم جميع الدورات من خلال التمارين العملية ولعب الأدوار.",
+      "metrics": {
+        "total_hours": "إجمالي الساعات",
+        "days": "الأيام (الثلاثاء - السبت)",
+        "daily_hours": "الساعات اليومية",
+        "cert_status": "الشهادة",
+        "cert_sub": "معتمدة"
+      },
+      "outcomes": {
+        "headline": "في نهاية الدورة، يجب أن يكون المشارك قادراً على:",
+        "list": {
+          "item1": "اكتساب المهارة في الوساطة",
+          "item2": "تعلم أفضل الممارسات في الوساطة",
+          "item3": "التعرف على القوانين الباكستانية المتعلقة بالوساطة",
+          "item4": "تعلم مهارات التفاوض",
+          "item5": "أن يصبح وسيطاً معتمداً"
         }
+      },
+      "btn_text": "عرض تفاصيل الدورة"
+    },
+    "introductory_course": {
+      "badge": "دورة غير معتمدة",
+      "title": "الدورة التمهيدية لمهارات الوساطة",
+      "desc_p1": "هذه الدورة مخصصة للمهتمين بالحصول على معرفة عامة وبسيطة عن مهارات الوساطة. وهي دورة ذات مستوى أساسي جداً.",
+      "desc_p2": "لا تحتوي هذه الدورة على أي تمارين عمليّة أو لعب للأدوار.",
+      "metrics": {
+        "total_hours": "إجمالي الساعات",
+        "days": "الأيام (سيتم الإعلان عنها)",
+        "daily_hours": "الساعات اليومية",
+        "cert_status": "غير معتمدة"
+      },
+      "btn_text": "عرض تفاصيل الدورة"
+    },
+    "basic_info_course": {
+      "badge": "دورة غير معتمدة",
+      "title": "معلومات أساسية حول مهارات الوساطة",
+      "desc_p1": "هذه الدورة مخصصة للمهتمين بالحصول على معرفة عامة وبسيطة عن مهارات الوساطة. وهي دورة ذات مستوى أساسي جداً.",
+      "desc_p2": "لا تحتوي هذه الدورة على أي تمارين عمليّة أو لعب للأدوار.",
+      "metrics": {
+        "total_hours": "إجمالي الساعات",
+        "days": "يوم واحد",
+        "daily_hours": "الساعات اليومية",
+        "cert_status": "غير معتمدة"
+      },
+      "btn_text": "عرض تفاصيل الدورة"
+    }
+  }
+},
+"attendees_section": {
+  "header": {
+    "title_part1": "من",
+    "title_part2": "ينبغي له",
+    "title_part3": "الحضور؟",
+    "subtitle": "تم تصميم هذا التدريب للمهنيين الراغبين في إحداث فارق حقيقي"
+  },
+  "cards": {
+    "c1": {
+      "title": "المحامون والقانونيون",
+      "desc": "عزز مهاراتك في تسوية النزاعات ووسع نطاق ممارستك المهنية."
+    },
+    "c2": {
+      "title": "القضاة ومسؤولو المحاكم",
+      "desc": "عزز فهمك للوسائل البديلة لتسوية النزاعات (ADR) وادعم إدارة القضايا بفعالية."
+    },
+    "c3": {
+      "title": "مهنيو الشركات وقطاع الأعمال",
+      "desc": "طور مهارات التفاوض والتواصل وإدارة النزاعات في بيئة العمل."
+    },
+    "c4": {
+      "title": "مسؤولو الموارد البشرية والإدارة",
+      "desc": "ابنِ حلولاً للنزاعات تركز على الأفراد وعزز الانسجام في مكان العمل."
+    },
+    "c5": {
+      "title": "المنظمات غير الحكومية وقادة المجتمع",
+      "desc": "حل النزاعات المجتمعية وعزز التماسك الاجتماعي والشمولية."
+    },
+    "c6": {
+      "title": "الطلاب والمهتمون بـ ADR",
+      "desc": "ابدأ رحلتك في مجال الوساطة وابنِ أساساً قوياً في الحلول البديلة للنزاعات."
+    },
+    "c7": {
+      "title": "المسؤولون الحكوميون",
+      "desc": "طبق مهارات الوساطة في نزاعات القطاع العام وتنفيذ السياسات."
+    },
+    "c8": {
+      "title": "أي شخص مهتم بالوساطة و ADR",
+      "desc": "متاح لكل من لديه شغف بالحوار السلمي وحل النزاعات."
+    }
+  }
+},
+"cta_resolution_section": {
+  "graphic_alt": "خلفيات مختلفة، هدف واحد",
+  "title": "خلفيات مختلفة. هدف واحد: الحل السلمي.",
+  "desc": "يجمع تدريبنا بين مهنيين متنوعين يؤمنون بلغة الحوار والتفاهم وبناء مجتمعات أفضل.",
+  "btn_text": "التسجيل في دورة تدريبية"
+},
+"registration_section": {
+  "left_panel": {
+    "badge_text": "انضم إلى برنامجنا",
+    "title": "انضم إلى برامجنا للتدريب على الوساطة",
+    "tagline": "خذ الخطوة الأولى نحو التميز",
+    "desc": "سجل اليوم لتصبح جزءاً من برامج تدريبية معترف بها دولياً ومصممة لبناء مهاراتك، وتمكين ممارستك المهنية، وتعزيز الحلول السلمية في المجتمع.",
+    "img_alt": "أحجار التأمل زين",
+    "seat_badge": {
+      "title": "احجز مقعدك",
+      "desc_part1": "مقاعد محدودة",
+  "desc_part2": "متاحة في كل دفعة تدريبية."
+    }
+  },
+  "form_panel": {
+    "header_title": "تفاصيل التسجيل",
+    "labels": {
+      "name": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "background": "الخلفية المهنية",
+      "city": "المدينة",
+      "program": "اختر البرنامج التدريبي",
+      "additional_info": "معلومات إضافية (اختياري)"
+    },
+    "placeholders": {
+      "name": "أدخل اسمك الكامل",
+      "email": "أدخل بريدك الإلكتروني",
+      "phone": "أدخل رقم هاتفك",
+      "background": "مثال: محامٍ، مسؤول موارد بشرية، طالب",
+      "city": "أدخل مدينتك",
+      "program_default": "-- يرجى اختيار البرنامج --",
+      "additional_info": "أي معلومات إضافية ترغب في مشاركتها"
+    },
+    "options": {
+      "accredited": "الدورة المعتمدة لمهارات الوساطة",
+      "introductory": "الدورة التمهيدية لمهارات الوساطة",
+      "basic": "معلومات أساسية حول مهارات الوساطة"
+    },
+    "btn_text": "تقديم طلب الالتحاق",
+    "privacy_note": "معلوماتك آمنة تماماً وسيتم استخدامها لأغراض التسجيل فقط.",
+    "messages": {
+      "success": "تم إرسال التسجيل بنجاح! سنتواصل معك خلال 24 ساعة.",
+      "error": "عذراً، حدث خطأ أثناء إرسال طلب التسجيل الخاص بك. يرجى المحاولة مرة أخرى."
+    }
+  }
+},
+"training_badges_section": {
+  "badges": {
+    "b1": {
+      "title": "معتمد من IMI",
+      "desc": "برامجنا معتمدة من قبل المعهد الدولي للوساطة (IMI)."
+    },
+    "b2": {
+      "title": "مدربون خبراء",
+      "desc": "تعلم على أيدي وسطاء ذوي خبرة ومهنيين متخصصين في هذا المجال."
+    },
+    "b3": {
+      "title": "معايير دولية",
+      "desc": "تدريب متوافق تماماً مع معايير الوساطة المقبولة عالمياً."
+    },
+    "b4": {
+      "title": "شهادة مهنية",
+      "desc": "احصل على شهادة معترف بها عند إتمام الدورة بنجاح."
+    }
+  }
+},
+"popup_msac": {
+  "sidebar": {
+    "badge": "دورة معتمدة",
+    "title_part1": "الدورة المعتمدة",
+    "title_part2": "لمهارات الوساطة",
+    "desc": "هذه الدورة مخصصة للمهتمين بالتعرف على مهارات الوساطة، حيث سيصبح المرشح مستهلكاً واعياً ومثقفاً لهذه العملية. يتم تقديم جميع الدورات من خلال التمارين العملية ولعب الأدوار.",
+    "stats": {
+      "type": { "label": "نوع الدورة", "value": "شهادة معتمدة" },
+      "total_hours": { "label": "إجمالي الساعات", "value": "40" },
+      "duration": { "label": "المدة", "value": "5 أيام (أسبوع واحد)" },
+      "daily_hours": { "label": "الساعات اليومية", "value": "8" },
+      "days": { "label": "أيام التدريب", "value": "من الثلاثاء إلى السبت" },
+      "time": { "label": "وقت التدريب", "value": "9 صباحاً – 5 مساءً" }
+    }
+  },
+  "main_content": {
+    "about": {
+      "title": "حول هذه الدورة",
+      "desc": "يزود هذا البرنامج الشامل المشاركين بمهارات الوساطة العملية، وتقنيات التفاوض، وفهم القوانين الباكستانية المتعلقة بالوساطة. من خلال التعلم التجريبي والتمارين ولعب الأدوار، سيتم إعداد المشاركين للتعامل مع النزاعات الواقعية بفعالية وأخلاقية."
+    },
+    "outcomes": {
+      "title": "ماذا ستتعلم",
+      "items": [
+        "اكتساب المهارة في الوساطة",
+        "تعلم أفضل الممارسات في الوساطة",
+        "التعرف على القوانين الباكستانية المتعلقة بالوساطة",
+        "تعلم مهارات التفاوض",
+        "أن تصبح وسيطاً معتمداً",
+        "صياغة اتفاقيات تسوية فعالة"
+      ]
+    },
+    "columns": {
+      "outline": {
+        "title": "مخطط الدورة",
+        "items": [
+          "مشهد الوسائل البديلة لتسوية النزاعات (ADR)",
+          "مراحل وجلسات الوساطة",
+          "التواصل اللفظي وغير اللفظي",
+          "أسلوب ونمط التفاوض",
+          "تقنيات طرح الأسئلة",
+          "منطقة الاتفاق المحتمل (ZOPA)",
+          "كسر الجمود وإنهاء الطريق المسدود",
+          "مسودة اتفاقية التسوية",
+          "القضايا المناسبة للوساطة",
+          "التقييم الذاتي",
+          "تقنيات المساومة والمفاوضة"
+        ]
+      },
+      "structure": {
+        "title": "هيكل الدورة",
+        "modules": [
+          { "badge": "الوحدة 01", "title": "نظرة عامة على ADR" },
+          { "badge": "الوحدة 02", "title": "عملية الوساطة ومراحلها" },
+          { "badge": "الوحدة 03", "title": "التواصل وطرح الأسئلة" },
+          { "badge": "الوحدة 04", "title": "تقنيات التفاوض" },
+          { "badge": "الوحدة 05", "title": "حل الجمود وتجاوز العقبات" },
+          { "badge": "الوحدة 06", "title": "صياغة التسوية والإغلاق" },
+          { "badge": "الوحدة 07", "title": "التقييم الذاتي وأفضل الممارسات" }
+        ]
+      },
+      "methodology": {
+        "title": "منهجية التدريب",
+        "items": [
+          "التعلم التجريبي والعملي",
+          "التمارين التطبيقية",
+          "لعب الأدوار والمحاكاة",
+          "المناقشات المجموعاتيّة",
+          "دراسة الحالات الواقعية",
+          "الجلسات التفاعلية"
+        ]
+      }
+    },
+    "certification": {
+      "title": "مخرجات الشهادة",
+      "desc": "سيتلقى المشاركون شهادة إتمام عند المشاركة الناجحة. تؤهل الدورة الأفراد لتطبيق مهارات الوساطة بشكل أخلاقي ومهني وفعال في سياقات متنوعة."
+    },
+    "attendees": {
+      "title": "من ينبغي له الحضور؟",
+      "items": [
+        "المحامون والقانونيون",
+        "القضاة ومسؤولو المحاكم",
+        "مهنيو الشركات وقطاع الأعمال",
+        "مسؤولو الموارد البشرية والإدارة",
+        "المنظمات غير الحكومية وقادة المجتمع",
+        "الطلاب والمهتمون بـ ADR"
+      ]
+    },
+    "btn_text": "تقديم طلب الالتحاق بهذا البرنامج"
+  }
+},
+"popup_msic": {
+  "sidebar": {
+    "badge": "دورة غير معتمدة",
+    "title_part1": "الدورة التمهيدية",
+    "title_part2": "لمهارات الوساطة",
+    "desc": "تم تصميم هذه الدورة للمهتمين بالحصول على معرفة عامة وبسيطة عن مهارات الوساطة. وهي دورة ذات مستوى أساسي جداً وغير معتمدة.",
+    "stats": {
+      "type": { "label": "دورة غير معتمدة", "value": "" },
+      "total_hours": { "label": "إجمالي الساعات", "value": "16" },
+      "duration": { "label": "المدة", "value": "يوما عمل (2)" },
+      "daily_hours": { "label": "الساعات اليومية", "value": "8" },
+      "days": { "label": "أيام التدريب", "value": "أي يومين (سيتم الإعلان عنها)" },
+      "time": { "label": "وقت التدريب", "value": "9 صباحاً – 5 مساءً" }
+    }
+  },
+  "main_content": {
+    "about": {
+      "title": "حول هذه الدورة",
+      "desc": "توفر هذه الدورة التمهيدية فهماً أساسياً لمهارات الوساطة وعمليتها. سيصبح المشاركون مستهلكين واعين ومثقفين لعملية الوساطة ولديهم القدرة على فهم المستقبل الذي تحمله. هذه الدورة ذات طابع نظري فقط دون أي تمارين عملية أو لعب للأدوار."
+    },
+    "outcomes": {
+      "title": "ماذا ستتعلم",
+      "items": [
+        "فهم أساسيات الوساطة",
+        "تعلم المفاهيم الأساسية للوساطة",
+        "فهم الحالات والأوقات التي يمكن فيها استخدام الوساطة",
+        "الوعي الكامل بعملية الوساطة ومراحلها",
+        "أن تصبح مستهلكاً واعياً ومثقفاً للعملية"
+      ]
+    },
+    "columns": {
+      "outline": {
+        "title": "مخطط الدورة",
+        "items": [
+          "مشهد الوسائل البديلة لتسوية النزاعات (ADR)",
+          "مراحل وجلسات الوساطة",
+          "التواصل اللفظي وغير اللفظي",
+          "أسلوب ونمط التفاوض",
+          "تقنيات طرح الأسئلة",
+          "منطقة الاتفاق المحتمل (ZOPA)",
+          "كسر الجمود وإنهاء الطريق المسدود",
+          "مسودة اتفاقية التسوية",
+          "القضايا المناسبة للوساطة",
+          "تقنيات المساومة والمفاوضة"
+        ]
+      },
+      "info_table": {
+        "title": "معلومات الدورة",
+        "trainer": { "label": "المدرب", "value": "سيتم الإعلان عنه لاحقاً (TBA)" },
+        "daily_hours": { "label": "الساعات اليومية", "value": "ثماني ساعات (8)" },
+        "total_hours": { "label": "إجمالي الساعات", "value": "ست عشرة ساعة (16)" },
+        "days": { "label": "أيام التدريب", "value": "أي يومين (سيتم الإعلان عنها)" },
+        "time": { "label": "وقت التدريب", "value": "9 صباحاً – 5 مساءً" },
+        "duration": { "label": "مدة الدورة", "value": "يومي عمل (2)" },
+        "type": { "label": "نوع الدورة", "value": "دورة غير معتمدة" }
+      }
+    },
+    "bottom_panel": {
+      "attendees": {
+        "title": "من ينبغي له الحضور؟",
+        "items": [
+          "الطلاب والخريجون الجدد",
+          "المهنيون من أي مجال أو تخصص",
+          "مسؤولو الموارد البشرية والإدارة",
+          "المنظمات غير الحكومية والعاملون في المجتمع",
+          "أي شخص مهتم بمجال الوساطة"
+        ]
+      },
+      "note": {
+        "title": "ملاحظة هامة",
+        "desc": "هذه دورة ذات مستوى أساسي تم تصميمها لتقديم المعرفة والوعي فقط. لا توجد أي تمارين عمليّة أو لعب للأدوار أو تقييم ذاتي في هذه الدورة."
+      }
+    },
+    "btn_text": "التسجيل في هذه الدورة"
+  }
+}
+}
       }
     },
     ch: {
@@ -1882,8 +3210,490 @@
               f3_title: "专业团队",
               f3_desc: "由经验丰富的调解专家组成的专业团队"
             }
+          },
+          "contact_section": {
+          "info_col": {
+            "title": "取得联系",
+            "lead": "我们随时为您解答疑问，并为您在调解之旅中提供所需的全力支持。",
+            "labels": {
+              "address": "办公地址",
+              "email": "电子邮箱",
+              "phone": "电话",
+              "whatsapp": "WhatsApp",
+              "hours": "办公时间"
+            },
+            "values": {
+              "address_text": "巴基斯坦，卡拉奇 75400，沙赫拉·费萨尔大道旁，P.E.C.H.S. 街区 6，253 号",
+              "hours_text": "星期一 – 星期五 上午 9:00 – 下午 5:00（巴基斯坦标准时间）"
+            }
+          },
+          "form_col": {
+            "title": "给我们留言",
+            "lead": "请提供一些详细信息，我们的团队将尽快给您回复。",
+            "labels": {
+              "name": "全名",
+              "email": "电子邮箱",
+              "phone": "电话号码",
+              "inquiry": "咨询类型",
+              "subject": "主题",
+              "message": "留言内容",
+              "consent": "所有沟通内容均严格保密，您的个人信息安全无虞。"
+            },
+            "placeholders": {
+              "name": "您的姓名",
+              "email": "您的邮箱",
+              "phone": "您的电话",
+              "subject": "留言主题",
+              "message": "请问有什么可以帮您？"
+            },
+            "options": {
+              "default": "请选择一个选项",
+              "general": "常规咨询",
+              "mediation": "调解服务",
+              "training": "培训与认证",
+              "membership": "会员信息咨询",
+              "advisory": "机构多元化纠纷解决机制（ADR）咨询服务",
+              "workshops": "研讨会与宣讲会",
+              "event": "活动参与",
+              "partnership": "伙伴关系与商务合作",
+              "media": "媒体与新闻采访咨询",
+              "consultation": "法律与政策咨询",
+              "feedback": "投诉与意见反馈",
+              "volunteer": "志愿者机会",
+              "speaker": "演讲者/培训师邀请需求",
+              "corporate": "企业调解支持",
+              "community": "社区调解支持",
+              "support": "网站技术支持"
+            },
+            "btn_text": "发送留言",
+            "success_msg": "您的留言已成功发送。我们通常会在 24 小时内与您取得联系。",
+            "error_msg": "抱歉，发送您的留言时出现错误。请稍后重试。",
+            "note": "无需法律诉讼，无需对簿公堂，唯有圆满解决。我们通常在 24 小时内回复。"
           }
+        },
+        "map_section": {
+          "title": "欢迎光临我们的办公室",
+          "lead": "我们竭诚欢迎您莅临我们位于卡拉奇的办公室。",
+          "iframe_title": "PMA 办公室位置 — 巴基斯坦，卡拉奇，P.E.C.H.S. 街区 6，253 号"
         }
+        },
+        "faq_page": {
+  "hero": {
+    "img_alt": "常见问题 page 主图",
+    "title": "常见问题",
+    "lead": "在这里查找关于调解服务和我们机构最常见问题的解答。"
+  },
+  "faq_section": {
+  "items": {
+    "q1": {
+      "question": "什么是标准调解条款？",
+      "answer": "本协议各方之间可能发生的任何及所有争议、分歧或问题，首先应由各方尝试通过友好协商加以解决。如果自一方收到另一方友好解决请求后三十（30）天内，无法通过书信或相互讨论友好或圆满地解决争议、分歧或问题，则应提交给 PMA 认可的调解员小组进行调解。调解程序将受国际公认的调解规则约束。"
+    },
+    "q2": {
+      "question": "时间和成本的替代方案 —— 调解",
+      "answer": "与冗长的法律诉讼相比，调解提供了一种更快、更具成本效益且保密的替代方案。它有助于各方友好解决争议，同时维护专业和个人关系。"
+    },
+    "q3": {
+      "question": "什么是调解？",
+      "answer": "调解是一个自愿且保密的过程，由中立的第三方协助争议各方达成相互接受的协议。"
+    },
+    "q4": {
+      "question": "如何尝试调解？",
+      "answer": "您可以通过我们的网站或办公室联系 PMA 以启动调解服务。我们的团队将引导您完成整个流程，并为您联系获得认证的调解员。"
+    },
+    "q5": {
+      "question": "调解的好处",
+      "benefits_list": {
+        "b1": "更快的争议解决速度",
+        "b2": "更低的法律成本",
+        "b3": "保密的调解程序",
+        "b4": "灵活的解决方案",
+        "b5": "改善各方之间的沟通"
+      }
+    },
+    "q6": {
+      "question": "调解会议何时举行？",
+      "answer": "调解会议的时间安排取决于双方以及调解员的可用时间。PMA 将协调该流程，以确保便利和高效。"
+    },
+    "q7": {
+      "question": "调解过程中会发生什么？",
+      "answer": "在调解期间，双方将在调解员协助的结构化环境中讨论他们所关心的问题，调解员将帮助探索解决方案和共同基础。"
+    },
+    "q8": {
+      "question": "如果未能达成协议会怎么样？",
+      "answer": "如果调解未能达成协议，双方仍可自由寻求其他可用的法律或争议解决途径。"
+    },
+    "q9": {
+      "question": "谁可以参加调解？",
+      "answer": "只有相关各方、其授权代表、法律顾问（如获允许）以及调解员可以参加调解会议。"
+    },
+    "q10": {
+      "question": "费用是多少？",
+      "answer": "调解费用取决于争议的性质、复杂程度和持续时间。PMA 会在调解程序开始前提供详细的费用说明。"
+    }
+  },
+  "contact_box": {
+    "title": "还有其他问题吗？",
+    "lead": "我们随时为您提供帮助。请联系我们，我们的团队将竭诚为您服务。",
+    "btn_text": "联系我们"
+  }
+}
+},
+"training-page": {
+  "hero": {
+    "hero_img_alt": "培训页面主图",
+    "eyebrow": "专业培训",
+    "title_part1": "通过国际公认的培训",
+    "title_part2": "培养巴基斯坦未来的调解员",
+    "lead": "强化您的技能。提升您的专业实践。在社会中促进对话、理解与和平解决争议。",
+    "banner": {
+      "logo_alt": "国际调解学院",
+      "title": "IMI 认证调解员培训项目",
+      "tagline": "国际公认。全球推崇。",
+      "desc": "PMA 是国际调解学院 (IMI) 官方注册的培训机构。我们获得 IMI 认证的调解员培训项目符合专业调解员培训的最高全球标准。",
+      "link_text": "欲了解更多信息，请点击此链接"
+    }
+  },
+  "training_programs_section": {
+  "header": {
+    "title_part1": "我们的",
+    "title_part2": "培训",
+    "title_part3": "项目"
+  },
+  "programs": {
+    "accredited_course": {
+      "badge": "认证课程",
+      "title": "调解技能认证课程",
+      "desc_p1": "本课程适合那些有兴趣了解调解技能的人士。学员将成为理性的调解服务消费者。",
+      "desc_p2": "所有课程均通过练习和角色扮演进行。",
+      "metrics": {
+        "total_hours": "总学时",
+        "days": "天数（周二至周六）",
+        "daily_hours": "每日学时",
+        "cert_status": "证书",
+        "cert_sub": "已认证"
+      },
+      "outcomes": {
+        "headline": "课程结束时，学员应能够：",
+        "list": {
+          "item1": "熟练掌握调解技能",
+          "item2": "学习调解的最佳实践",
+          "item3": "了解巴基斯坦关于调解的法律",
+          "item4": "学习谈判技巧",
+          "item5": "成为认证调解员"
+        }
+      },
+      "btn_text": "查看课程详情"
+    },
+    "introductory_course": {
+      "badge": "非认证课程",
+      "title": "调解技能入门课程",
+      "desc_p1": "本课程适合那些有兴趣了解调解技能基础概念的人士。这是一门非常基础级别的课程。",
+      "desc_p2": "不包含任何练习或角色扮演。",
+      "metrics": {
+        "total_hours": "总学时",
+        "days": "天数（待公布）",
+        "daily_hours": "每日学时",
+        "cert_status": "非认证"
+      },
+      "btn_text": "查看课程详情"
+    },
+    "basic_info_course": {
+      "badge": "非认证课程",
+      "title": "调解技能基本信息课程",
+      "desc_p1": "本课程适合那些有兴趣了解调解技能基础概念的人士。这是一门非常基础级别的课程。",
+      "desc_p2": "不包含任何练习或角色扮演。",
+      "metrics": {
+        "total_hours": "总学时",
+        "days": "天数（1天）",
+        "daily_hours": "每日学时",
+        "cert_status": "非认证"
+      },
+      "btn_text": "查看课程详情"
+    }
+  }
+},
+"attendees_section": {
+  "header": {
+    "title_part1": "谁",
+    "title_part2": "应当",
+    "title_part3": "参加？",
+    "subtitle": "本培训专为渴望创造改变的专业人士设计"
+  },
+  "cards": {
+    "c1": {
+      "title": "律师及法律专业人士",
+      "desc": "提升您的争议解决技能，并拓展您的专业实践范围。"
+    },
+    "c2": {
+      "title": "法官及法院官员",
+      "desc": "加强您对多元化纠纷解决机制（ADR）的理解，并支持案件的高效管理。"
+    },
+    "c3": {
+      "title": "企业及职场专业人士",
+      "desc": "改善职场中的谈判、沟通以及冲突管理能力。"
+    },
+    "c4": {
+      "title": "人力资源及行政专业人士",
+      "desc": "构建以人为本的冲突解决方案，促进职场和谐。"
+    },
+    "c5": {
+      "title": "非政府组织（NGO）及社区领袖",
+      "desc": "化解社区纠纷，促进社会凝聚力与包容性。"
+    },
+    "c6": {
+      "title": "学生及 ADR 爱好者",
+      "desc": "开启您的调解之旅，在多元化纠纷解决（ADR）领域打下坚实基础。"
+    },
+    "c7": {
+      "title": "政府官员",
+      "desc": "将调解技能应用于公共部门的争议解决和政策执行中。"
+    },
+    "c8": {
+      "title": "任何对 ADR 和调解感兴趣的人士",
+      "desc": "面向所有对和平对话与化解争议充满热情的人员开放。"
+    }
+  }
+},
+"cta_resolution_section": {
+  "graphic_alt": "不同的背景，同一个目标",
+  "title": "不同的背景。同一个目标：和平解决。",
+  "desc": "我们的培训汇聚了来自各个领域的专业人士，他们坚信对话、理解以及构建更美好的社区。",
+  "btn_text": "报名参加课程"
+},
+"registration_section": {
+  "left_panel": {
+    "badge_text": "加入我们的项目",
+    "title": "加入我们的调解培训项目",
+    "tagline": "迈向卓越的第一步",
+    "desc": "立即注册，加入国际认可的培训项目，旨在提升您的技能、赋能您的实践并促进社会的和平解决。",
+    "img_alt": "禅修冥想石",
+    "seat_badge": {
+      "title": "锁定您的席位",
+      "desc_part1": "名额有限",
+  "desc_part2": "每期班级提供。"
+    }
+  },
+  "form_panel": {
+    "header_title": "报名信息详情",
+    "labels": {
+      "name": "姓名",
+      "email": "电子邮箱",
+      "phone": "手机号码",
+      "background": "专业背景",
+      "city": "城市",
+      "program": "选择培训课程",
+      "additional_info": "附加信息（选填）"
+    },
+    "placeholders": {
+      "name": "请输入您的全名",
+      "email": "请输入您的电子邮箱",
+      "phone": "请输入您的手机号码",
+      "background": "例如：律师、人力资源、学生",
+      "city": "请输入您所在的城市",
+      "program_default": "-- 请选择一个课程 --",
+      "additional_info": "您想分享 liquor 的任何其他补充信息"
+    },
+    "options": {
+      "accredited": "调解技能认证课程",
+      "introductory": "调解技能入门课程",
+      "basic": "调解技能基本信息课程"
+    },
+    "btn_text": "申请报名",
+    "privacy_note": "您的信息非常安全，将仅用于本次课程报名。",
+    "messages": {
+      "success": "报名信息提交成功！我们将在 24 小时内与您联系。",
+      "error": "抱歉，提交您的报名申请时出错。请稍后重试。"
+    }
+  }
+},
+"training_badges_section": {
+  "badges": {
+    "b1": {
+      "title": "IMI 官方认可",
+      "desc": "我们的项目均通过国际调解学院 (IMI) 的认证。"
+    },
+    "b2": {
+      "title": "专家级导师",
+      "desc": "向经验丰富的调解员和行业资深专业人士学习。"
+    },
+    "b3": {
+      "title": "国际化标准",
+      "desc": "培训课程紧密贴合全球公认的调解业务标准。"
+    },
+    "b4": {
+      "title": "专业技能认证",
+      "desc": "顺利完成课程后将荣获行业认可的结业证书。"
+    }
+  }
+},
+"popup_msac": {
+  "sidebar": {
+    "badge": "认证课程",
+    "title_part1": "调解技能",
+    "title_part2": "认证课程",
+    "desc": "本课程适合那些有兴趣了解调解技能的人士。学员将成为理性的调解服务消费者。所有课程均通过练习和角色扮演进行。",
+    "stats": {
+      "type": { "label": "课程类型", "value": "官方认证证书" },
+      "total_hours": { "label": "总学时", "value": "40" },
+      "duration": { "label": "课程周期", "value": "5天（一周）" },
+      "daily_hours": { "label": "每日学时", "value": "8" },
+      "days": { "label": "培训日", "value": "周二至周六" },
+      "time": { "label": "培训时间", "value": "上午 9 点至下午 5 点" }
+    }
+  },
+  "main_content": {
+    "about": {
+      "title": "关于本课程",
+      "desc": "本系统化项目旨在赋予学员实用的调解技能、谈判技巧以及对巴基斯坦调解法律的深度理解。通过体验式学习、实操练习和角色扮演，学员将做好充分准备，以高效且合乎职业道德的方式应对现实生活中的各类争议。"
+    },
+    "outcomes": {
+      "title": "您将收获什么",
+      "items": [
+        "熟练掌握调解核心技能",
+        "学习调解业务的最佳实践",
+        "深入了解巴基斯坦调解法律",
+        "掌握高阶谈判技巧",
+        "成为行业认证的调解员",
+        "起草切实有效的和解协议"
+      ]
+    },
+    "columns": {
+      "outline": {
+        "title": "课程大纲",
+        "items": [
+          "多元化纠纷解决机制（ADR）概述",
+          "调解的各个阶段与流程",
+          "语言与非语言沟通技巧",
+          "谈判风格与策略分析",
+          "课堂提问与核心盘问技术",
+          "潜在协议空间（ZOPA）界定",
+          "打破僵局与化解死结的策略",
+          "和解协议书的草拟要点",
+          "适合采用调解机制的案件类型",
+          "个人技能自我评估",
+          "商务议价与妥协技巧"
+        ]
+      },
+      "structure": {
+        "title": "课程结构",
+        "modules": [
+          { "badge": "模块 01", "title": "ADR 背景与大局观" },
+          { "badge": "模块 02", "title": "调解流程与阶段划分" },
+          { "badge": "模块 03", "title": "高效沟通与提问艺术" },
+          { "badge": "模块 04", "title": "谈判实战技巧" },
+          { "badge": "模块 05", "title": "争议僵局破局方案" },
+          { "badge": "模块 06", "title": "和解书起草与结案" },
+          { "badge": "模块 07", "title": "自我评估与国际最佳实践" }
+        ]
+      },
+      "methodology": {
+        "title": "教学方法",
+        "items": [
+          "体验式互动学习",
+          "实战性课题练习",
+          "情景角色扮演与模拟法庭",
+          "小组深度座谈研讨",
+          "真实典型案例分析",
+          "双向互动答疑课"
+        ]
+      }
+    },
+    "certification": {
+      "title": "结业资质",
+      "desc": "学员在圆满完成所有规定课程后，将获得官方颁发的结业证书。本课程旨在培养个人在多变的环境中，以合规、专业且充满智慧的方式运用调解手段。"
+    },
+    "attendees": {
+      "title": "谁应当参加？",
+      "items": [
+        "律师及法律专业人士",
+        "法官及法院官员",
+        "企业及职场专业人士",
+        "人力资源及行政专业人士",
+        "非政府组织（NGO）及社区领袖",
+        "学生及 ADR 爱好者"
+      ]
+    },
+    "btn_text": "申请报名此项目"
+  }
+},
+"popup_msic": {
+  "sidebar": {
+    "badge": "非认证课程",
+    "title_part1": "调解技能",
+    "title_part2": "入门课程",
+    "desc": "本课程适合那些有兴趣了解调解技能基础概念的人士。这是一门非常基础级别的课程，且不包含官方认证。",
+    "stats": {
+      "type": { "label": "非认证课程", "value": "" },
+      "total_hours": { "label": "总学时", "value": "16" },
+      "duration": { "label": "课程周期", "value": "2 个工作日" },
+      "daily_hours": { "label": "每日学时", "value": "8" },
+      "days": { "label": "培训日", "value": "任意两天（待公布）" },
+      "time": { "label": "培训时间", "value": "上午 9 点至下午 5 点" }
+    }
+  },
+  "main_content": {
+    "about": {
+      "title": "关于本课程",
+      "desc": "本入门课程提供对调解技能和调解流程的基本认识。学员将成为明智的调解服务消费者，并能理解该领域为个人带来的未来前景。本课程完全以理论为导向，不包含任何实操练习或角色扮演。"
+    },
+    "outcomes": {
+      "title": "您将收获什么",
+      "items": [
+        "理解调解的核心基础知识",
+        "学习关键的调解基础概念",
+        "明白在何种情况下适用调解机制",
+        "培养对调解流程的全面认识",
+        "成为理性且知情的调解服务消费者"
+      ]
+    },
+    "columns": {
+      "outline": {
+        "title": "课程大纲",
+        "items": [
+          "多元化纠纷解决机制（ADR）概述",
+          "调解的各个阶段与流程",
+          "语言与非语言沟通技巧",
+          "谈判风格与基本类型",
+          "课堂提问的基础技术",
+          "潜在协议空间（ZOPA）概念",
+          "打破常规僵局的基本方法",
+          "和解协议书的草拟初步",
+          "适合采用调解机制的案件类型",
+          "商务议价基本策略"
+        ]
+      },
+      "info_table": {
+        "title": "课程信息",
+        "trainer": { "label": "授课导师", "value": "待公布 (TBA)" },
+        "daily_hours": { "label": "每日学时", "value": "八 (8) 学时" },
+        "total_hours": { "label": "总学时", "value": "十六 (16) 学时" },
+        "days": { "label": "培训时间", "value": "任意两天（具体安排待公布）" },
+        "time": { "label": "时间段", "value": "上午 9 点至下午 5 点" },
+        "duration": { "label": "课程时长", "value": "两 (2) 个工作日" },
+        "type": { "label": "课程性质", "value": "非认证普通课程" }
+      }
+    },
+    "bottom_panel": {
+      "attendees": {
+        "title": "谁应当参加？",
+        "items": [
+          "高校学生及应届毕业生",
+          "来自任何领域的职场专业人士",
+          "人力资源及行政管理人员",
+          "非政府组织（NGO）及社区工作者",
+          "任何对调解机制感兴趣的大众"
+        ]
+      },
+      "note": {
+        "title": "重要提示",
+        "desc": "这是一门普及型初级课程，仅旨在传授基础知识和提高认知。本课程中不设任何模拟练习、角色扮演或个人能力评估环节。"
+      }
+    },
+    "btn_text": "报名参加此课程"
+  }
+}
+}
       }
     },
     psh: {
@@ -2314,8 +4124,490 @@
               f3_title: "مسلکي ټیم",
               f3_desc: "د منځګړیتوب د تجربه لرونکو کارپوهانو ټیم"
             }
+          },
+          "contact_section": {
+          "info_col": {
+            "title": "له موږ سره اړيکه ونیسئ",
+            "lead": "موږ دلته ستاسو د پوښتنو ځوابولو او ستاسو د منځګړیتوب په سفر کې د اړتیا وړ ملاتړ چمتو کولو لپاره یو.",
+            "labels": {
+              "address": "د دفتر پته",
+              "email": "برېښنالیک",
+              "phone": "تلیفون",
+              "whatsapp": "واټساپ",
+              "hours": "د کار ساعتونه"
+            },
+            "values": {
+              "address_text": "253، P.E.C.H.S.، بلاک-6، شاهراه فیصل، کراچۍ 75400، پاکستان",
+              "hours_text": "د دوشنبې څخه تر جمعې پورې، د سهار 9:00 بجو څخه تر ماښام 5:00 بجو پورې (د پاکستان وخت)"
+            }
+          },
+          "form_col": {
+            "title": "موږ ته یو پیغام واستوئ",
+            "lead": "ځینې جزیات شریک کړئ او زموږ ټیم به ژر تر ژره له تاسو سره اړیکه ونیسي.",
+            "labels": {
+              "name": "بشپړ نوم",
+              "email": "د برېښنالیک پته",
+              "phone": "د تلیفون شمیره",
+              "inquiry": "د پوښتنې ډول",
+              "subject": "موضوع",
+              "message": "پیغام",
+              "consent": "ټولې خبرې اترې په بشپړ ډول محرم دي او ستاسو معلومات خوندي دي."
+            },
+            "placeholders": {
+              "name": "ستاسو نوم",
+              "email": "ستاسو برېښنالیک",
+              "phone": "ستاسو تلیفون",
+              "subject": "ستاسو د پیغام موضوع",
+              "message": "موږ څنګه کولای شو ستاسو مرسته وکړو؟"
+            },
+            "options": {
+              "default": "یو اختیار غوره کړئ",
+              "general": "عمومي پوښتنې",
+              "mediation": "د منځګړیتوب خدمات",
+              "training": "روزنه او تصدیق",
+              "membership": "د غړیتوب معلومات",
+              "advisory": "د اداراتي ADR مشورتي خدمتونه",
+              "workshops": "ورکشاپونه او د پوهاوي ناستې",
+              "event": "په پیښو کې ګډون",
+              "partnership": "ملګرتیا او همکاري",
+              "media": "د رسنیو او مطبوعاتو پوښتنې",
+              "consultation": "قانوني / د پالیسۍ مشوره",
+              "feedback": "شکایت یا نظر",
+              "volunteer": "د رضاکارۍ فرصتونه",
+              "speaker": "د وینا کونکي / ښوونکي غوښتنه",
+              "corporate": "د کارپوریټ منځګړیتوب ملاتړ",
+              "community": "د ټولنیز منځګړیتوب ملاتړ",
+              "support": "د ویب پاڼې تخنیکي ملاتړ"
+            },
+            "btn_text": "پیغام واستوئ",
+            "success_msg": "ستاسو پیغام په بریالیتوب سره واستول شو. موږ به په 24 ساعتونو کې تاسو سره اړیکه ونیسو.",
+            "error_msg": "بخښنه غواړو، ستاسو د پیغام په لیږلو کې تېروتنه رامنځته شوه. مهرباني وکړئ بیا هڅه وکړئ.",
+            "note": "نه قانوني پروسه، نه محکمه. یوازې سوله ایز حل. موږ معمولاً په 24 ساعتونو کې ځواب ورکوو."
           }
+        },
+        "map_section": {
+          "title": "زموږ دفتر ته تشریف راوړئ",
+          "lead": "موږ په کراچۍ کې زموږ دفتر ته ستاسو د راتګ په تودوخې سره هرکلی کوو.",
+          "iframe_title": "د پی ایم اې د دفتر ځای — 253، P.E.C.H.S.، بلاک-6، کراچۍ"
         }
+        },
+        "faq_page": {
+  "hero": {
+    "img_alt": "د مکررو پوښتنو د پاڼې هیرو انځور",
+    "title": "عامې پوښتنې",
+    "lead": "د منځګړیتوب او زموږ د خدماتو په اړه د خورا عامو پوښتنو ځوابونه ومومئ."
+  },
+  "faq_section": {
+  "items": {
+    "q1": {
+      "question": "د منځګړیتوب (MEDIATION) معیاري شق څه شی دی؟",
+      "answer": "هر هغه او ټولې شخړې، اختلافات یا پوښتنې چې د دې تړون د خواوو ترمنځ رامنځته کیږي، باید لومړی د دواړو خواوو لخوا د دوه اړخیزو خبرو اترو له لارې په دوستانه ډول حل شي. که چیرې شخړې، اختلافات یا پوښتنې د یوې خوا لخوا د دوستانه حل لپاره د بلې خوا د غوښتنې ترلاسه کولو وروسته په دېرش (30) ورځو کې د لیکونو یا دوه اړخیزو بحثونو له لارې په دوستانه یا د قناعت وړ ډول حل نشي، نو دا به د PMA د منل شویو منځګړو یوې ډلې (پینل) ته راجع کیږي. د منځګړیتوب چارې به د منځګړیتوب د نړیوالو منل شویو مقرراتو سره سم پرمخ وړل کیږي."
+    },
+    "q2": {
+      "question": "د وخت او لګښت یو متبادل – منځګړیتوب",
+      "answer": "منځګړیتوب د اوږدو قانوني پړاوونو په پرتله یو ګړندی، ارزانه او محرم بدیل وړاندې کوي. دا د مسلکي او شخصي اړیکو ساتلو په ترڅ کې د خواوو سره په دوستانه ډول د شخړو په حل کې مرسته کوي."
+    },
+    "q3": {
+      "question": "منځګړیتوب (MEDIATION) څه شی دی؟",
+      "answer": "منځګړیتوب یوه داوطلبانه او محرمه پروسه ده چې په کې یو بې طرفه دریم غړی د شخړې ښکیل اړخونو سره د دوه اړخیزه د منلو وړ تړون په ترلاسه کولو کې مرسته کوي."
+    },
+    "q4": {
+      "question": "د منځګړیتوب لپاره څنګه هڅه وکړو؟",
+      "answer": "تاسو کولی شئ د منځګړیتوب خدماتو پیل کولو لپاره زموږ د ویب پاڼې یا دفتر له لارې له PMA سره اړیکه ونیسئ. زموږ ټیم به په دې پروسه کې ستاسو لارښوونه وکړي او تاسو به د باوري منځګړو سره وصل کړي."
+    },
+    "q5": {
+      "question": "د منځګړیتوب ګټې",
+      "benefits_list": {
+        "b1": "د شخړو ګړندی حل",
+        "b2": "کم قانوني لګښتونه",
+        "b3": "محرمې کاروایۍ",
+        "b4": "انعطاف منونکي حلونه",
+        "b5": "د خواوو ترمنځ د اړیکو ښه والی"
+      }
+    },
+    "q6": {
+      "question": "د منځګړیتوب ناسته (سیشن) به کله ترسره کیږي؟",
+      "answer": "د منځګړیتوب ناسته د دواړو خواوو او منځګړي د شتون (وخت) پراساس مهالویش کیږي. PMA دا پروسه همغږي کوي ترڅو اسانتیا او موثریت یقیني کړي."
+    },
+    "q7": {
+      "question": "په منځګړیتوب کې څه پیښیږي؟",
+      "answer": "د منځګړیتوب پرمهال، دواړه خواوې خپلې اندیښنې په یو منظم چاپیریال کې د منځګړي په شتون کې مطرح کوي، کوم چې د حل لارو او ګډو ټکو په موندلو کې مرسته کوي."
+    },
+    "q8": {
+      "question": "څه پیښیږي که چیرې هیڅ هوکړه لیک لاسلیک نشي؟",
+      "answer": "که چیرې منځګړیتوب د هوکړې لامل نشي، دواړه خواوې آزادې دي چې د دوی لپاره شتون لرونکي نور قانوني انتخابونه یا د شخړې د حل لارې تعقیب کړي."
+    },
+    "q9": {
+      "question": "د منځګړیتوب په ناسته کې څوک ګډون کولی شي؟",
+      "answer": "یوازې ښکیلې غاړې، د دوی باصلاحیته استازي، قانوني مشاورین (که اجازه وي) او منځګړی کولی شي د منځګړیتوب په ناسته کې ګډون وکړي."
+    },
+    "q10": {
+      "question": "دا به څومره لګښت ولري؟",
+      "answer": "د منځګړیتوب لګښت د شخړې په نوعیت، پیچلتیا او موده پورې اړه لري. PMA د منځګړیتوب پروسې پیل کیدو دمخه د فیس په اړه بشپړ معلومات چمتو کوي."
+    }
+  },
+  "contact_box": {
+    "title": "لا هم پوښتنې لرئ؟",
+    "lead": "موږ دلته ستاسو مرستې ته چمتو یو. له موږ سره اړیکه ونیسئ او زموږ ټیم به په خوښۍ سره ستاسو لارښوونه وکړي.",
+    "btn_text": "له موږ سره اړیکه ونیسئ"
+  }
+}
+},
+"training-page": {
+  "hero": {
+    "hero_img_alt": "د تربیت د پاڼې هیرو انځور",
+    "eyebrow": "مسلکي روزنه",
+    "title_part1": "د نړیوالې کچې منل شوې روزنې له لارې",
+    "title_part2": "د پاکستان د راتلونکو منځګړو چمتو کول",
+    "lead": "خپل مهارتونه پیاوړي کړئ. خپل مسلکي عمل لوړ کړئ. په ټولنه کې خبرو اترو، تفاهم او سوله ایز حل ته وده ورکړئ.",
+    "banner": {
+      "logo_alt": "د منځګړیتوب نړیوال انسټیټیوټ",
+      "title": "د IMI څخه تصدیق شوی د منځګړیتوب روزنیز پروګرام",
+      "tagline": "په نړیواله کچه منل شوی. په نړیواله کچه د درناوي وړ.",
+      "desc": "PMA د منځګړیتوب نړیوال انسټیټیوټ (IMI) سره په رسمي ډول راجستر شوی د روزنې چمتو کونکی دی. زموږ د IMI څخه تصدیق شوی د منځګړیتوب روزنیز پروګرام د مسلکي منځګړو د روزنې لپاره ترټولو لوړ نړیوال معیارونه پوره کوي.",
+      "link_text": "د لا زیاتو معلوماتو لپاره مهرباني وکړئ په لینک کلیک وکړئ"
+    }
+  },
+  "training_programs_section": {
+  "header": {
+    "title_part1": "زموږ",
+    "title_part2": "د روزنې",
+    "title_part3": "پروګرامونه"
+  },
+  "programs": {
+    "accredited_course": {
+      "badge": "منل شوی (Accredited) کورس",
+      "title": "د منځګړیتوب د مهارتونو منل شوی کورس",
+      "desc_p1": "دا کورس د هغو کسانو لپاره دی چې د منځګړیتوب د مهارتونو سره په بلدتیا کې لیوالتیا لري. یو ګډونوال به د دې پروسې څخه بشپړ باخبره شي.",
+      "desc_p2": "ټول کورسونه د عملي تمرینونو او رول پلي (کردار نګاري) له لارې ترسره کیږي.",
+      "metrics": {
+        "total_hours": "ټول ساعتونه",
+        "days": "ورځې (له سې شنبې تر شنبې)",
+        "daily_hours": "ورځني ساعتونه",
+        "cert_status": "سند",
+        "cert_sub": "منل شوی"
+      },
+      "outcomes": {
+        "headline": "د کورس په پای کې ګډونوال باید وکولی شي چې:",
+        "list": {
+          "item1": "په منځګړیتوب کې مهارت ترلاسه کړي",
+          "item2": "د منځګړیتوب غوره لارې چارې زده کړي",
+          "item3": "د منځګړیتوب په اړه د پاکستان قوانین زده کړي",
+          "item4": "د خبرو اترو (مذاکراتو) مهارتونه زده کړي",
+          "item5": "تصدیق شوی منځګړی شي"
+        }
+      },
+      "btn_text": "د کورس جزیات وګورئ"
+    },
+    "introductory_course": {
+      "badge": "غیر منل شوی کورس",
+      "title": "د منځګړیتوب د مهارتونو تعارفي کورس",
+      "desc_p1": "دا کورس د هغو کسانو لپاره دی چې د منځګړیتوب د مهارتونو د لومړني پوهاوي ترلاسه کولو کې لیوالتیا لرې. دا یو خورا لومړنی کورس دی.",
+      "desc_p2": "په دې کې هیڅ تمرینونه یا رول پلي شتون نلري.",
+      "metrics": {
+        "total_hours": "ټول ساعتونه",
+        "days": "ورځې (نږدې وخت کې به اعلان شي)",
+        "daily_hours": "ورځني ساعتونه",
+        "cert_status": "غیر منل شوی"
+      },
+      "btn_text": "د کورس جزیات وګورئ"
+    },
+    "basic_info_course": {
+      "badge": "غیر منل شوی کورس",
+      "title": "د منځګړیتوب د مهارتونو په اړه بنسټیز معلومات",
+      "desc_p1": "دا کورس د هغو کسانو لپاره دی چې د منځګړیتوب د مهارتونو د لومړني پوهاوي ترلاسه کولو کې لیوالتیا لرې. دا یو خورا لومړنی کورس دی.",
+      "desc_p2": "په دې کې هیڅ تمرینونه یا رول پلي شتون نلري.",
+      "metrics": {
+        "total_hours": "ټول ساعتونه",
+        "days": "ورځ (۱ ورځ)",
+        "daily_hours": "ورځني ساعتونه",
+        "cert_status": "غیر منل شوی"
+      },
+      "btn_text": "د کورس جزیات وګورئ"
+    }
+  }
+},
+"attendees_section": {
+  "header": {
+    "title_part1": "څوک",
+    "title_part2": "باید",
+    "title_part3": "ګډون وکړي؟",
+    "subtitle": "دا روزنه د هغو مسلکي کسانو لپاره ډیزاین شوې چې غواړي مثبت بدلون رامنځته کړي"
+  },
+  "cards": {
+    "c1": {
+      "title": "وکیلان او د قانون د برخې مسلکي کسان",
+      "desc": "د شخړو د حل کولو مهارتونه مو پیاوړي کړئ او خپل مسلکي عمل ته پراختیا ورکړئ."
+    },
+    "c2": {
+      "title": "قاضیان او د محکمې چارواکي",
+      "desc": "د ADR په اړه خپل پوهاوی پیاوړی کړئ او د قضیو د اغیزمن مدیریت ملاتړ وکړئ."
+    },
+    "c3": {
+      "title": "د کارپوریټ (شرکتونو) مسلکي کسان",
+      "desc": "په کاري ځای کې د خبرو اترو، اړیکو او د شخړو مدیریت ته وده ورکړئ."
+    },
+    "c4": {
+      "title": "د HR او اداري برخې مسلکي کسان",
+      "desc": "د افرادو په محور د شخړو حل او په کاري ځای کې همغږي رامنځته کړئ."
+    },
+    "c5": {
+      "title": "این‌جیوګانې (NGOs) او د ټولنې مشران",
+      "desc": "د ټولنې شخړې حل کړئ او ټولنیز پیوستون او شمولیت ته وده ورکړئ."
+    },
+    "c6": {
+      "title": "زدکونکي او د ADR مینه وال",
+      "desc": "په منځګړیتوب کې خپل سفر پیل کړئ او په ADR کې یو قوي بنسټ رامنځته کړئ."
+    },
+    "c7": {
+      "title": "دولتي چارواکي",
+      "desc": "د عامه سکتور په شخړو او د پالیسۍ په پلي کولو کې د منځګړیتوب مهارتونه وکاروئ."
+    },
+    "c8": {
+      "title": "هر هغه څوک چې له ADR او منځګړیتوب سره مینه لري",
+      "desc": "د هغو ټولو کسانو لپاره خلاص دی چې د سوله ایزو خبرو اترو او شخړو حل کولو سره لیوالتیا لري."
+    }
+  }
+},
+"cta_resolution_section": {
+  "graphic_alt": "مختلف شالیدونه، یو هدف",
+  "title": "مختلف شالیدونه (پس منظر). یو هدف: سوله ایز حل.",
+  "desc": "زموږ روزنه د بیلا بیلو برخو مسلکي کسان یو ځای کوي چې په خبرو اترو، تفاهم او د غوره ټولنو په جوړولو باور لري.",
+  "btn_text": "کورس لپاره نوم لیکنه وکړئ"
+},
+"registration_section": {
+  "left_panel": {
+    "badge_text": "زموږ له پروګرام سره یو ځای شئ",
+    "title": "د منځګړیتوب د روزنې په پروګرامونو کې ګډون وکړئ",
+    "tagline": "د غوره والي په لور لومړی ګام پورته کړئ",
+    "desc": "نن ورځ نوم لیکنه وکړئ او د نړیوال کچه منل شوي روزنیز پروګرامونو برخه شئ چې ستاسو د مهارتونو لوړولو، ستاسو د مسلک پیاوړتیا او په ټولنه کې د سوله ایز حل د ودې لپاره ډیزاین شوي.",
+    "img_alt": "د زین مراقبې ډبرې",
+    "seat_badge": {
+      "title": "خپله څوکۍ خوندي کړئ",
+      "desc_part1": "محدودې څوکۍ",
+  "desc_part2": "په هره دوره (batch) کې شتون لري."
+    }
+  },
+  "form_panel": {
+    "header_title": "د نوم لیکنې جزیات",
+    "labels": {
+      "name": "بشپړ نوم",
+      "email": "د بریښنالیک پته",
+      "phone": "د تلیفون شمیره",
+      "background": "مسلکي شالید",
+      "city": "ښار",
+      "program": "روزنیز پروګرام غوره کړئ",
+      "additional_info": "اضافي معلومات (اختیاري)"
+    },
+    "placeholders": {
+      "name": "خپل بشپړ نوم دننه کړئ",
+      "email": "خپل بریښنالیک پته دننه کړئ",
+      "phone": "خپل د تلیفون شمیره دننه کړئ",
+      "background": "مثلا: وکیل، د HR مسلکي، زدکونکی",
+      "city": "خپل ښار دننه کړئ",
+      "program_default": "-- مهرباني وکړئ یو پروګرام غوره کړئ --",
+      "additional_info": "هر هغه اضافي معلومات چې تاسو یې شریکول غواړئ"
+    },
+    "options": {
+      "accredited": "د منځګړیتوب د مهارتونو منل شوی کورس",
+      "introductory": "د منځګړیتوب د مهارتونو تعارفي کورس",
+      "basic": "د منځګړیتوب د مهارتونو په اړه بنسټیز معلومات"
+    },
+    "btn_text": "د شمولیت لپاره غوښتنه وکړئ",
+    "privacy_note": "ستاسو معلومات خوندي دي او یوازې د نوم لیکنې د موخو لپاره کارول کیږي.",
+    "messages": {
+      "success": "نوم لیکنه بریالۍ شوه! موږ به په ۲۴ ساعتونو کې له تاسو سره اړیکه ونیسو.",
+      "error": "بښنه غواړو، ستاسو د نوم لیکنې په لیږلو کې ستونزه رامنځته شوه. مهرباني وکړئ بیا هڅه وکړئ."
+    }
+  }
+},
+"training_badges_section": {
+  "badges": {
+    "b1": {
+      "title": "د IMI لخوا منل شوی",
+      "desc": "زموږ پروګرامونه د منځګړیتوب د نړیوال انسټیټیوټ (IMI) لخوا تایید شوي دي."
+    },
+    "b2": {
+      "title": "ماهر روزونکي (Trainers)",
+      "desc": "د تجربه لرونکو منځګړو او د دې برخې له مسلکي کسانو څخه زده کړه وکړئ."
+    },
+    "b3": {
+      "title": "نړیوال معیارونه",
+      "desc": "روزنه په نړیواله کچه د منځګړیتوب له منل شویو معیارونو سره برابره ده."
+    },
+    "b4": {
+      "title": "مسلکي تصدیق (Certification)",
+      "desc": "د کورس په بریالیتوب سره پای ته رسولو په صورت کې یو منل شوی سند ترلاسه کړئ."
+    }
+  }
+},
+"popup_msac": {
+  "sidebar": {
+    "badge": "منل شوی کورس",
+    "title_part1": "د منځګړیتوب د مهارتونو",
+    "title_part2": "منل شوی کورس",
+    "desc": "دا کورس د هغو کسانو لپاره دی چې د منځګړیتوب د مهارتونو سره په بلدتیا کې لیوالتیا لري. یو ګډونوال به د دې پروسې څخه بشپړ باخبره شي. ټول کورسونه د عملي تمرینونو او رول پلي (کردار نګاري) له لارې ترسره کیږي.",
+    "stats": {
+      "type": { "label": "د کورس ډول", "value": "د اعتبار وړ سند" },
+      "total_hours": { "label": "ټول ساعتونه", "value": "40" },
+      "duration": { "label": "موده", "value": "۵ ورځې (یوه اونۍ)" },
+      "daily_hours": { "label": "ورځني ساعتونه", "value": "۸" },
+      "days": { "label": "د روزنې ورځې", "value": "له سې شنبې تر شنبې" },
+      "time": { "label": "د روزنې وخت", "value": "د سهار له ۹ تر مازدیګر ۵ بجو" }
+    }
+  },
+  "main_content": {
+    "about": {
+      "title": "د دې کورس په اړه",
+      "desc": "دا هراړخیز پروګرام ګډونوال د منځګړیتوب په عملي مهارتونو، د مذاکراتو په تخنیکونو او د منځګړیتوب په اړه د پاکستان په قوانینو سمبالوي. د عملي زدکړې، تمرینونو او رول پلي کولو له لارې، ګډونوال به چمتو شي چې د ریښتیني ژوند شخړې په مؤثره او اخلاقي توګه حل کړي."
+    },
+    "outcomes": {
+      "title": "تاسو به څه زده کړئ",
+      "items": [
+        "په منځګړیتوب کې مهارت ترلاسه کول",
+        "د منځګړیتوب غوره لارې چارې زده کول",
+        "د منځګړیتوب په اړه د پاکستان قوانین زده کول",
+        "د خبرو اترو (مذاکراتو) مهارتونه زده کول",
+        "تصدیق شوی منځګړی کیدل",
+        "د اغیزمنو تصفیې تړونونو مسوده چمتو کول"
+      ]
+    },
+    "columns": {
+      "outline": {
+        "title": "د کورس خاکه (Outline)",
+        "items": [
+          "د شخړو د بدیل حل (ADR) لیدلوری",
+          "د منځګړیتوب پړاوونه او فیزونه",
+          "کلامي او غیر کلامي اړیکې (Communication)",
+          "د خبرو اترو سټایل (Negotiation Style)",
+          "د پوښتنو کولو تخنیکونه",
+          "د احتمالي هوکړې ساحه (ZOPA)",
+          "د ډیډ لاک (خنډ) ماتول",
+          "د تصفیې د تړون د مسودې چمتو کول",
+          "د منځګړیتوب لپاره مناسبې قضیې",
+          "ذاتي ارزونه (Self-assessment)",
+          "د معاملې او سوداګرۍ تخنیکونه"
+        ]
+      },
+      "structure": {
+        "title": "د کورس جوړښت",
+        "modules": [
+          { "badge": "ماډیول 01", "title": "د ADR بنسټیز معلومات" },
+          { "badge": "ماډیول 02", "title": "د منځګړیتوب پروسه او پړاوونه" },
+          { "badge": "ماډیول 03", "title": "اړیکې او پوښتنې کول" },
+          { "badge": "ماډیول 04", "title": "د مذاکراتو تخنیکونه" },
+          { "badge": "ماډیول 05", "title": "د ډیډ لاک (خنډ) حل کول" },
+          { "badge": "ماډیول 06", "title": "د تړون مسوده او پایله" },
+          { "badge": "ماډیول 07", "title": "ذاتي ارزونه او غوره تګلارې" }
+        ]
+      },
+      "methodology": {
+        "title": "د روزنې طریقه کار",
+        "items": [
+          "تجرباتي او عملي زدکړه",
+          "عملي تمرینونه",
+          "رول پلي او سیمولیشنز",
+          "ګروپي بحثونه (مباحثې)",
+          "کیس سټډیز (عملي قضیې)",
+          "انټرایکټیو (دوه اړخیزې) ناستې"
+        ]
+      }
+    },
+    "certification": {
+      "title": "د سند لاسته راوړنه",
+      "desc": "ګډونوالو ته به په کورس کې د بریالۍ برخې اخیستنې وروسته د کورس د بشپړولو سند ورکړل شي. دا کورس اشخاص چمتو کوي چې په بیلا بیلو چاپیریالونو کې په اخلاقي، مسلکي او مؤثره توګه د منځګړیتوب مهارتونه پلي کړي."
+    },
+    "attendees": {
+      "title": "څوک باید ګډون وکړي؟",
+      "items": [
+        "وکیلان او د قانون د برخې مسلکي کسان",
+        "قاضیان او د محکمې چارواکي",
+        "د کارپوریټ (شرکتونو) مسلکي کسان",
+        "د HR او اداري برخې مسلکي کسان",
+        "این‌جیوګانې او د ټولنې مشران",
+        "زدکونکي او د ADR مینه وال"
+      ]
+    },
+    "btn_text": "د دې پروګرام لپاره غوښتنه وکړئ"
+  }
+},
+"popup_msic": {
+  "sidebar": {
+    "badge": "غیر منل شوی کورس",
+    "title_part1": "د منځګړیتوب د مهارتونو",
+    "title_part2": "تعارفي کورس",
+    "desc": "دا کورس د هغو کسانو لپاره دی چې د منځګړیتوب د مهارتونو د لومړني پوهاوي ترلاسه کولو کې لیوالتیا لرې. دا یو خورا لومړنی کورس دی او غیر منل شوی دی.",
+    "stats": {
+      "type": { "label": "غیر منل شوی کورس", "value": "" },
+      "total_hours": { "label": "ټول ساعتونه", "value": "16" },
+      "duration": { "label": "موده", "value": "۲ کاري ورځې" },
+      "daily_hours": { "label": "ورځني ساعتونه", "value": "۸" },
+      "days": { "label": "د روزنې ورځې", "value": "هر ډول دوه ورځې (نږدې وخت کې به اعلان شي)" },
+      "time": { "label": "د روزنې وخت", "value": "د سهار له ۹ تر مازدیګر ۵ بجو" }
+    }
+  },
+  "main_content": {
+    "about": {
+      "title": "د دې کورس په اړه",
+      "desc": "دا تعارفي کورس د منځګړیتوب د مهارتونو او د هغې د پروسې بنسټیز پوهاوی چمتو کوي. ګډونوال به د منځګړیتوب د پروسې څخه باخبره شي او پدې به پوه شي چې دا د هر چا لپاره څه راتلونکی لري. دا کورس په تیوري ولاړ دی او هیڅ عملي تمرینونه یا رول پلي نلري."
+    },
+    "outcomes": {
+      "title": "تاسو به څه زده کړئ",
+      "items": [
+        "د منځګړیتوب په بنسټونو پوهیدل",
+        "د منځګړیتوب کلیدي مفاهیم زده کول",
+        "پدې پوهیدل چې منځګړیتوب کله کارول کیدی شي",
+        "د منځګړیتوب پروسې په اړه پوهاوی ترلاسه کول",
+        "د پروسې یو باخبره کاروونکی کیدل"
+      ]
+    },
+    "columns": {
+      "outline": {
+        "title": "د کورس خاکه (Outline)",
+        "items": [
+          "د شخړو د بدیل حل (ADR) لیدلوری",
+          "د منځګړیتوب پړاوونه او فیزونه",
+          "کلامي او غیر کلامي اړیکې (Communication)",
+          "د خبرو اترو سټایل (Negotiation Style)",
+          "د پوښتنو کولو تخنیکونه",
+          "د احتمالي هوکړې ساحه (ZOPA)",
+          "د ډیډ لاک (خنډ) ماتول",
+          "د تصفیې د تړون د مسودې چمتو کول",
+          "د منځګړیتوب لپاره مناسبې قضیې",
+          "د معاملې او سوداګرۍ تخنیکونه"
+        ]
+      },
+      "info_table": {
+        "title": "د کورس معلومات",
+        "trainer": { "label": "روزونکی", "value": "وروسته به اعلان شي (TBA)" },
+        "daily_hours": { "label": "ورځني ساعتونه", "value": "اته (8)" },
+        "total_hours": { "label": "ټول ساعتونه", "value": "شپاړس (16)" },
+        "days": { "label": "د روزنې ورځې", "value": "هر ډول دوه ورځې (وروسته به اعلان شي)" },
+        "time": { "label": "د روزنې وخت", "value": "د سهار له ۹ تر مازدیګر ۵ بجو" },
+        "duration": { "label": "د کورس موده", "value": "دوه (2) کاري ورځې" },
+        "type": { "label": "د کورس ډول", "value": "غیر منل شوی کورس" }
+      }
+    },
+    "bottom_panel": {
+      "attendees": {
+        "title": "څوک باید ګډون وکړي؟",
+        "items": [
+          "زدکونکي او نوي فارغ شوي ځوانان",
+          "د هرې برخې مسلکي کسان",
+          "د HR او اداري برخې مسلکي کسان",
+          "این‌جیوګانې او د ټولنې کارکونکي",
+          "هر هغه څوک چې له منځګړیتوب سره مینه لري"
+        ]
+      },
+      "note": {
+        "title": "مهم یادونه",
+        "desc": "دا یو بنسټیز کورس دی چې یوازې د پوهې او پوهاوي چمتو کولو لپاره ډیزاین شوی. په دې کورس کې هیڅ تمرینونه، رول پلي یا ذاتي ارزونه شتون نلري."
+      }
+    },
+    "btn_text": "پدې کورس کې نوم لیکنه وکړئ"
+  }
+}
+}
       }
     },
     sd: {
@@ -2752,8 +5044,491 @@
               f3_title: "پروفيشنل مهارت",
               f3_desc: "مصالحت جي ماهرن جي تجربيڪار ٽيم"
             }
+          },
+          "contact_section": {
+          "info_col": {
+            "title": "رابطو ڪريو",
+            "lead": "اسان توهان جي سوالن جا جواب ڏيڻ ۽ توهان جي مصالحتي سفر لاءِ گهربل مدد فراهم ڪرڻ لاءِ حاضر آهيون.",
+            "labels": {
+              "address": "دفتر جو پتو",
+              "email": "اي ميل",
+              "phone": "فون نمبر",
+              "whatsapp": "واٽس ائپ",
+              "hours": "دفتر جا اوقات"
+            },
+            "values": {
+              "address_text": "253، پي.اي.سي.ايڇ.ايس، بلاڪ-6، شاهراهه فيصل، ڪراچي 75400، پاڪستان",
+              "hours_text": "سومر کان جمعو صبح 9:00 کان شام 5:00 تائين (پاڪستاني وقت)"
+            }
+          },
+          "form_col": {
+            "title": "اسان کي پيغام موڪليو",
+            "lead": "ڪجهه تفصيل شيئر ڪريو ۽ اسان جي ٽيم جلد ئي توهان سان رابطو ڪندي.",
+            "labels": {
+              "name": "پورو نالو",
+              "email": "اي ميل ائڊريس",
+              "phone": "فون نمبر",
+              "inquiry": "پوڇا ڳاڇا جو قسم",
+              "subject": "موضوع",
+              "message": "پيغام",
+              "consent": "سڀئي ڳالهيون انتهائي خفيه آهن ۽ توهان جي معلومات مڪمل محفوظ آهي."
+            },
+            "placeholders": {
+              "name": "توهان جو نالو",
+              "email": "توهان جي اي ميل",
+              "phone": "توهان جو فون",
+              "subject": "توهان جي پيغام جو موضوع",
+              "message": "اسان توهان جي ڪهڙي مدد ڪري سگهون ٿا؟"
+            },
+            "options": {
+              "default": "هڪ آپشن چونڊيو",
+              "general": "عمومي پڇا ڳاڇا",
+              "mediation": "مصالحتي خدمتون",
+              "training": "تربيت ۽ سرٽيفڪيشن",
+              "membership": "ميمبرشپ جي معلومات",
+              "advisory": "ادارتي ADR ايڊوائزري",
+              "workshops": "ورڪشاپون ۽ آگاهي سيزنز",
+              "event": "ايونٽ ۾ شرڪت",
+              "partnership": "شراڪتداري ۽ تعاون",
+              "media": "ميڊيا ۽ پريس انڪوائري",
+              "consultation": "قانوني / پاليسي مشاورت",
+              "feedback": "شڪايت يا راءِ",
+              "volunteer": "رضاڪاراڻا موقعا",
+              "speaker": "اسپيڪر / ٽرينر جي درخواست",
+              "corporate": "ڪارپوريٽ مصالحتي تعاون",
+              "community": "ڪميونٽي مصالحتي تعاون",
+              "support": "تڪنيڪي ويب سائيٽ سپورٽ"
+            },
+            "btn_text": "پيغام موڪليو",
+            "success_msg": "توهان جو پيغام ڪاميابيءَ سان موڪليو ويو آهي. اسان 24 ڪلاڪن اندر توهان سان رابطو ڪنداسين.",
+            "error_msg": "معذرت، پيغام موڪلڻ ۾ ڪا غلطي ٿي آهي. مهرباني ڪري ٻيهر ڪوشش ڪريو.",
+            "note": "نه ڪو قانوني عمل، نه عدالت. صرف تصفيو. اسان عام طور تي 24 ڪلاڪن اندر جواب ڏيندا آهيون."
           }
+        },
+        "map_section": {
+          "title": "اسان جي دفتر تشريف آڻيو",
+          "lead": "اسان توهان کي ڪراچي ۾ واقع اسان جي دفتر ۾ آمد تي خوش آمديد چئون ٿا.",
+          "iframe_title": "پي ايم اي آفيس لوڪيشن — 253، پي.اي.سي.ايڇ.ايس، بلاڪ-6، ڪراچي"
         }
+        },
+        "faq_page": {
+  "hero": {
+    "img_alt": "عام سوالن جي صفحي جو هيرو ايميج",
+    "title": "عام طور پڇيا ويندڙ سوال",
+    "lead": "مصالحت ۽ اسان جي خدمتن بابت عام طور تي پڇيا ويندڙ سوالن جا جواب هتي ڳولهيو."
+  },
+  "faq_section": {
+  "items": {
+    "q1": {
+      "question": "مصالحت (MEDIATION) جي معياري شق ڇا آهي؟",
+      "answer": "هن معاهدي جي ڌرين جي وچ ۾ پيدا ٿيندڙ ڪنهن به ۽ هر قسم جي تڪرار، اختلاف يا سوال کي پهريان ڌريون باهمي ڳالهين ذريعي دوستانه نموني حل ڪرڻ جي ڪوشش ڪنديون. جيڪڏهن تڪرار، اختلاف يا سوال هڪ ڌر پاران دوستانه تصفئي لاءِ ٻي ڌر جي درخواست جي وصولي کانپوءِ تيهه (30) ڏينهن اندر خط و ڪتابت يا باهمي بحث ذريعي خوش اسلوبي يا تسلي بخش طريقي سان حل نٿا ٿي سگهن، ته ان کي PMA جي مڃيل مصالحتي پينل ڏانهن موڪليو ويندو. مصالحت جي ڪارروائي بين الاقوامي سطح تي تسليم ٿيل اصولن تحت هلائي ويندي."
+    },
+    "q2": {
+      "question": "وقت ۽ لاڳت جو هڪ متبادل – مصالحت",
+      "answer": "مصالحت وڏين قانوني ڪارروائين جو هڪ تيز رفتار، سستو ۽ خفيه متبادل پيش ڪري ٿي. هي پيشيوراڻا ۽ ذاتي لاڳاپا برقرار رکندي ڌرين کي دوستانه نموني تڪرار حل ڪرڻ ۾ مدد ڏئي ٿي."
+    },
+    "q3": {
+      "question": "مصالحت (MEDIATION) ڇا آهي؟",
+      "answer": "مصالحت هڪ رضاڪاراڻو ۽ خفيه عمل آهي جنهن ۾ هڪ غير جانبدار ٽيون ڌر تڪرار جي شڪار ڌرين کي باهمي طور تي قابل قبول معاهدي تائين پهچڻ ۾ مدد فراهم ڪندي آهي."
+    },
+    "q4": {
+      "question": "مصالحت لاءِ ڪيئن رجوع ڪجي؟",
+      "answer": "توهان مصالحتي خدمتون شروع ڪرڻ لاءِ اسان جي ويب سائيٽ يا دفتر ذريعي پي ايم اي (PMA) سان رابطو ڪري سگهو ٿا. اسان جي ٽيم هن سڄي عمل ۾ توهان جي رهنمائي ڪندي ۽ توهان کي مستند مصالحتي ماهرن سان ملائيندي."
+    },
+    "q5": {
+      "question": "مصالحت جا فائدا",
+      "benefits_list": {
+        "b1": "تڪرارن جو تيز رفتار حل",
+        "b2": "گھٽ قانوني اخراجات",
+        "b3": "خفيه تصفئي جي ڪارروائي",
+        "b4": "لچڪدار حل",
+        "b5": "ڌرين جي وچ ۾ بهتر رابطو ۽ ڳالهه ٻولهه"
+      }
+    },
+    "q6": {
+      "question": "مصالحت جو سيشن ڪڏهن منعقد ٿيندو؟",
+      "answer": "مصالحت جي سيشن جو شيڊول ٻنهي ڌرين ۽ ثالث (مصالحت ڪار) جي دستيابي جي بنياد تي طئي ڪيو ويندو آهي. PMA سهولت ۽ ڪارڪردگي کي يقيني بڻائڻ لاءِ ان عمل کي مربوط ڪندي آهي."
+    },
+    "q7": {
+      "question": "مصالحت دوران ڇا ٿيندو آهي؟",
+      "answer": "مصالحت دوران، ٻئي ڌريون هڪ ثالث جي موجودگي ۾ هڪ منظم ماحول ۾ پنهنجي تحفظات تي ڳالهائينديون آهن، جيڪو حل ۽ گڏيل نڪتا ڳولڻ ۾ مدد ڪندو آهي."
+    },
+    "q8": {
+      "question": "جيڪڏهن ڪو معاهدو طئي نه ٿئي ته ڇا ٿيندو؟",
+      "answer": "جيڪڏهن مصالحت جي نتيجي ۾ ڪو معاهدو طئي نٿو ٿئي، ته ٻئي ڌريون پنهنجي وٽ موجود ٻيا قانوني متبادل يا تڪرار جي حل جا اختيار حاصل ڪرڻ لاءِ آزاد رهنديون آهن."
+    },
+    "q9": {
+      "question": "مصالحت جي سيشن ۾ ڪير شرڪت ڪري سگهي ٿو؟",
+      "answer": "مصالحت جي سيشن ۾ صرف لاڳاپيل ڌريون، سندن مجاز نمائندا، قانوني صلاحڪار (جيڪڏهن اجازت هجي) ۽ ثالث ئي شرڪت ڪري سگهن ٿا."
+    },
+    "q10": {
+      "question": "ان تي ڪيتري لاڳت ايندي؟",
+      "answer": "مصالحت جي اخراجات جو دارومدار تڪرار جي نوعيت، پيچيدگي ۽ مدت تي هوندو آهي. PMA مصالحتي عمل شروع ٿيڻ کان اڳ فيس جي مڪمل تفصيل فراهم ڪندي آهي."
+    }
+  },
+  "contact_box": {
+    "title": "اڃا به ڪو سوال آهي؟",
+    "lead": "اسان توهان جي مدد لاءِ حاضر آهيون. اسان سان رابطو ڪريو ۽ اسان جي ٽيم کي توهان جي رهنمائي ڪندي خوشي ٿيندي.",
+    "btn_text": "اسان سان رابطو ڪريو"
+  }
+}
+
+},
+"training-page": {
+  "hero": {
+    "hero_img_alt": "تربيت واري صفحي جو هيرو ايميج",
+    "eyebrow": "پيشيوراڻي تربيت",
+    "title_part1": "بين الاقوامي طور تي تسليم ٿيل تربيت ذريعي",
+    "title_part2": "پاڪستان جي مستقبل جي مصالحت ڪارن جي تياري",
+    "lead": "پنهنجي صلاحيتن کي مضبوط ڪريو. پنهنجي طريقيڪار کي بهتر بڻايو. سماج ۾ ڳالهه ٻولهه، فهم و ادراڪ ۽ پرامن حل کي هٿي ڏيو.",
+    "banner": {
+      "logo_alt": "انٽرنيشنل ميڊيئيشن انسٽيٽيوٽ",
+      "title": "آءِ ايم آءِ (IMI) پاران تصديق ٿيل ميڊيئيٽر ٽريننگ پروگرام",
+      "tagline": "بين الاقوامي طور تي مڃيل. عالمي سطح تي معتبر.",
+      "desc": "PMA انٽرنيشنل ميڊيئيشن انسٽيٽيوٽ (IMI) سان هڪ باقاعده رجسٽرڊ ٽريننگ فراهم ڪندڙ آهي. اسان جو IMI مان تصديق ٿيل ميڊيئيٽر ٽريننگ پروگرام پيشيوراڻي مصالحتي تربيت جي اعليٰ ترين عالمي معيارن تي پورو لهي ٿو.",
+      "link_text": "وڌيڪ معلومات لاءِ مهرباني ڪري لنڪ تي ڪلڪ ڪريو"
+    }
+  },
+  "training_programs_section": {
+  "header": {
+    "title_part1": "اسان جا",
+    "title_part2": "تربيت جا",
+    "title_part3": "پروگرامز"
+  },
+  "programs": {
+    "accredited_course": {
+      "badge": "ايڪريڊيٽڊ (مسلمه) ڪورس",
+      "title": "مصالحتي مهارتن جو ايڪريڊيٽڊ ڪورس",
+      "desc_p1": "هي ڪورس انهن ماڻهن لاءِ آهي جيڪي مصالحتي مهارتن کي ڄاڻڻ ۾ دلچسپي رکن ٿا. هڪ اميدوار هن عمل کان مڪمل واقفيت حاصل ڪري وٺندو.",
+      "desc_p2": "سڀئي ڪورسز عملي مشقن ۽ رول پلي (ڪردار نگاري) ذريعي ڪرايا ويندا آهن.",
+      "metrics": {
+        "total_hours": "ڪل ڪلاڪ",
+        "days": "ڏينهن (اڱارو کان ڇنڇر)",
+        "daily_hours": "روزاني جا ڪلاڪ",
+        "cert_status": "سرٽيفڪيٽ",
+        "cert_sub": "تصديق ٿيل (Accredited)"
+      },
+      "outcomes": {
+        "headline": "ڪورس جي پڄاڻي تي شرڪت ڪندڙ ان قابل ٿي ويندا ته:",
+        "list": {
+          "item1": "مصالحت ۾ مهارت حاصل ڪري سگهن",
+          "item2": "مصالحت جا بهترين طريقا سيکي سگهن",
+          "item3": "مصالحت بابت پاڪستان جا قانون ڄاڻي سگهن",
+          "item4": "مذاڪرات جون مهارتون سيکي سگهن",
+          "item5": "سند يافته مصالحت ڪار بڻجي سگهن"
+        }
+      },
+      "btn_text": "ڪورس جي تفصيل ڏسو"
+    },
+    "introductory_course": {
+      "badge": "نان-ايڪريڊيٽڊ ڪورس",
+      "title": "مصالحتي مهارتن جو تعارفي ڪورس",
+      "desc_p1": "هي ڪورس انهن ماڻهن لاءِ آهي جيڪي مصالحتي مهارتن جي بنيادي سمجھاڻي حاصل ڪرڻ ۾ دلچسپي رکن ٿا. هي بلڪل شروعاتي سطح جو ڪورس آهي.",
+      "desc_p2": "هن ۾ ڪابه عملي مشق يا رول پلي شامل ناهي.",
+      "metrics": {
+        "total_hours": "ڪل ڪلاڪ",
+        "days": "ڏينهن (جلد اعلان ڪيو ويندو)",
+        "daily_hours": "روزاني جا ڪلاڪ",
+        "cert_status": "غير تصديق ٿيل"
+      },
+      "btn_text": "ڪورس جي تفصيل ڏسو"
+    },
+    "basic_info_course": {
+      "badge": "نان-ايڪريڊيٽڊ ڪورس",
+      "title": "مصالحتي مهارتن بابت بنيادي معلومات",
+      "desc_p1": "هي ڪورس انهن ماڻهن لاءِ آهي جيڪي مصالحتي مهارتن جي بنيادي سمجھاڻي حاصل ڪرڻ ۾ دلچسپي رکن ٿا. هي بلڪل شروعاتي سطح جو ڪورس آهي.",
+      "desc_p2": "هن ۾ ڪابه عملي مشق يا رول پلي شامل ناهي.",
+      "metrics": {
+        "total_hours": "ڪل ڪلاڪ",
+        "days": "ڏينهن (1 ڏينهن)",
+        "daily_hours": "روزاني جا ڪلاڪ",
+        "cert_status": "غير تصديق ٿيل"
+      },
+      "btn_text": "ڪورس جي تفصيل ڏسو"
+    }
+  }
+},
+"attendees_section": {
+  "header": {
+    "title_part1": "ڪنهن کي",
+    "title_part2": "شرڪت",
+    "title_part3": "ڪرڻ گهرجي؟",
+    "subtitle": "هيءَ تربيت انهن پيشيور ماڻهن لاءِ تيار ڪئي وئي آهي جيڪي مثبت تبديلي آڻڻ چاهين ٿا"
+  },
+  "cards": {
+    "c1": {
+      "title": "وڪيل ۽ قانوني پيشيور ماڻهو",
+      "desc": "پنهنجي تڪرارن جي حل جي مهارتن کي بهتر بڻايو ۽ پنهنجي پيشيوراڻي دائري کي وسيع ڪريو."
+    },
+    "c2": {
+      "title": "جج ۽ عدالتي عملدار",
+      "desc": "اي ڊي آر (ADR) جي پنهنجي سمجھاڻي کي مضبوط ڪريو ۽ مقدمي جي مؤثر انتظام ۾ مدد ڪريو."
+    },
+    "c3": {
+      "title": "ڪارپوريٽ پيشيور ماڻهو",
+      "desc": "ڪم جي جڳهه تي مذاڪرات، رابطي ۽ تڪرارن جي انتظام کي بهتر بڻايو."
+    },
+    "c4": {
+      "title": "ايڇ آر ۽ ائڊمن جا پيشيور ماڻهو",
+      "desc": "انسانن تي ٻڌل تڪرارن جو حل ۽ ڪم جي جڳهه تي هم آهنگي پيدا ڪريو."
+    },
+    "c5": {
+      "title": "اين جي اوز ۽ ڪميونٽي اڳواڻ",
+      "desc": "برادري جي تڪرارن کي حل ڪريو ۽ سماجي يڪجهتي ۽ شموليت کي هٿي ڏيو."
+    },
+    "c6": {
+      "title": "شاگرد ۽ اي ڊي آر جا شوقين",
+      "desc": "مصالحت ۾ پنهنجي سفر جي شروعات ڪريو ۽ اي ڊي آر (ADR) ۾ هڪ مضبوط بنياد وجهو."
+    },
+    "c7": {
+      "title": "سرڪاري عملدار",
+      "desc": "عوامي شعبي جي تڪرارن ۽ پاليسي جي نفاذ تي مصالحت جون مهارتون لاڳو ڪريو."
+    },
+    "c8": {
+      "title": "اي ڊي آر ۽ مصالحت ۾ دلچسپي رکندڙ ڪو به فرد",
+      "desc": "انهن سڀني ماڻهن لاءِ کليل آهي جيڪي پرامن ڳالهه ٻولهه ۽ تڪرارن جي حل جو جذبو رکن ٿا."
+    }
+  }
+},
+"cta_resolution_section": {
+  "graphic_alt": "مختلف پس منظر، هڪڙو مقصد",
+  "title": "مختلف پس منظر. هڪڙو مقصد: پرامن حل.",
+  "desc": "اسان جي تربيت مختلف شعبن سان تعلق رکندڙ اهڙن پيشيور ماڻهن کي گڏ ڪري ٿي جيڪي ڳالهه ٻولهه، مفاهمت ۽ بهتر سماج جي اڏاوت تي يقين رکن ٿا.",
+  "btn_text": "ڪورس لاءِ رجسٽريشن ڪريو"
+},
+"registration_section": {
+  "left_panel": {
+    "badge_text": "اسان جي پروگرام ۾ شامل ٿيو",
+    "title": "اسان جي مصالحتي تربيتي پروگرامن جو حصو بڻجو",
+    "tagline": "اعليٰ ڪارڪردگي ڏانهن پهريون قدم وڌايو",
+    "desc": "اڄ ئي رجسٽريشن ڪرايو ۽ بين الاقوامي سطح تي تسليم ٿيل تربيتي پروگرامن جو حصو بڻجو جيڪي توهان جي مهارتن کي نکارڻ، توهان جي پيشي کي مضبوط ڪرڻ ۽ سماج ۾ پرامن حل کي هٿي ڏيڻ لاءِ تيار ڪيا ويا آهن.",
+    "img_alt": "زن ميڊيٽيشن پٿر",
+    "seat_badge": {
+      "title": "پنهنجي سيٽ محفوظ ڪريو",
+      "desc_part1": "محدود سيٽون",
+  "desc_part2": "هر بيچ ۾ دستياب آهن."
+    }
+  },
+  "form_panel": {
+    "header_title": "رجسٽريشن جا تفصيل",
+    "labels": {
+      "name": "پورو نالو",
+      "email": "اي ميل ائڊريس",
+      "phone": "فون نمبر",
+      "background": "پيشيوراڻو پس منظر",
+      "city": "شهر",
+      "program": "تربيت جو پروگرام چونڊيو",
+      "additional_info": "اضافي معلومات (اختياري)"
+    },
+    "placeholders": {
+      "name": "پنهنجو پورو نالو داخل ڪريو",
+      "email": "پنهنجي اي ميل ائڊريس داخل ڪريو",
+      "phone": "پنهنجو فون نمبر داخل ڪريو",
+      "background": "مثال طور: وڪيل، ايڇ آر پيشيور، شاگرد",
+      "city": "پنهنجو شهر داخل ڪريو",
+      "program_default": "-- مهرباني ڪري هڪ پروگرام چونڊيو --",
+      "additional_info": "ڪا به اضافي معلومات جيڪا توهان شيئر ڪرڻ چاهيو"
+    },
+    "options": {
+      "accredited": "مصالحتي مهارتن جو ايڪريڊيٽڊ ڪورس",
+      "introductory": "مصالحتي مهارتن جو تعارفي ڪورس",
+      "basic": "مصالحتي مهارتن بابت بنيادي معلومات"
+    },
+    "btn_text": "دخلي لاءِ درخواست ڏيو",
+    "privacy_note": "توهان جي معلومات محفوظ آهي ۽ صرف رجسٽريشن جي مقصدن لاءِ استعمال ڪئي ويندي.",
+    "messages": {
+      "success": "رجسٽريشن جمع ٿي وئي! اسان 24 ڪلاڪن اندر توهان سان رابطو ڪنداسين.",
+      "error": "معذرت، توهان جي رجسٽريشن جمع ڪرڻ ۾ هڪ غلطي پيش آئي آهي. مهرباني ڪري ٻيهر ڪوشش ڪريو."
+    }
+  }
+},
+"training_badges_section": {
+  "badges": {
+    "b1": {
+      "title": "آءِ ايم آءِ (IMI) پاران مڃيل",
+      "desc": "اسان جا پروگرام انٽرنيشنل ميڊيئيشن انسٽيٽيوٽ (IMI) پاران تصديق ٿيل آهن."
+    },
+    "b2": {
+      "title": "ماهر ٽرينرز",
+      "desc": "تجربيڪار مصالحت ڪارن ۽ صنعتي ماهرن کان سکو."
+    },
+    "b3": {
+      "title": "بين الاقوامي معيار",
+      "desc": "عالمي سطح تي تسليم ٿيل مصالحتي معيارن مطابق تربيت."
+    },
+    "b4": {
+      "title": "پيشيوراڻي سرٽيفڪيشن",
+      "desc": "ڪورس ڪاميابيءَ سان مڪمل ڪرڻ تي هڪ معتبر سرٽيفڪيٽ حاصل ڪريو."
+    }
+  }
+},
+"popup_msac": {
+  "sidebar": {
+    "badge": "ايڪريڊيٽڊ ڪورس",
+    "title_part1": "مصالحتي مهارتن جو",
+    "title_part2": "ايڪريڊيٽڊ ڪورس",
+    "desc": "هي ڪورس انهن ماڻهن لاءِ آهي جيڪي مصالحتي مهارتن کي ڄاڻڻ ۾ دلچسپي رکن ٿا. هڪ اميدوار هن عمل کان مڪمل واقفيت حاصل ڪري وٺندو. سڀئي ڪورسز عملي مشقن ۽ رول پلي (ڪردار نگاري) ذريعي ڪرايا ويندا آهن.",
+    "stats": {
+      "type": { "label": "ڪورس جو قسم", "value": "سرٽيفڪيٽ تسليم ٿيل" },
+      "total_hours": { "label": "ڪل ڪلاڪ", "value": "40" },
+      "duration": { "label": "دورانيو", "value": "5 ڏينهن (هڪ هفتو)" },
+      "daily_hours": { "label": "روزاني جا ڪلاڪ", "value": "8" },
+      "days": { "label": "تربيت جا ڏينهن", "value": "اڱارو کان ڇنڇر" },
+      "time": { "label": "تربيت جو وقت", "value": "صبح 9 بجن کان شام 5 بجن تائين" }
+    }
+  },
+  "main_content": {
+    "about": {
+      "title": "ڪورس بابت معلومات",
+      "desc": "هي جامع پروگرام شرڪت ڪندڙن کي مصالحت جي عملي مهارتن، مذاڪرات جي طريقن ۽ مصالحت بابت پاڪستاني قانونن جي سمجھاڻي سان آراسته ڪري ٿو. عملي سکيا، مشقن ۽ رول پلي جي ذريعي شرڪت ڪندڙن کي حقيقي زندگي جي تڪرارن کي مؤثر ۽ اخلاقي طور تي حل ڪرڻ لاءِ تيار ڪيو ويندو."
+    },
+    "outcomes": {
+      "title": "توهان ڇا سيکندا",
+      "items": [
+        "مصالحت ۾ مهارت حاصل ڪرڻ",
+        "مصالحت جا بهترين طريقا سيکڻ",
+        "مصالحت بابت پاڪستان جا قانون ڄاڻڻ",
+        "مذاڪرات جون مهارتون سيکڻ",
+        "سند يافته مصالحت ڪار بڻجڻ",
+        "مؤثر حل جا معاهدا تيار ڪرڻ"
+      ]
+    },
+    "columns": {
+      "outline": {
+        "title": "ڪورس جو خاڪو",
+        "items": [
+          "متبادل تڪرارن جي حل (ADR) جو پس منظر",
+          "مصالحت جا مرحلا ۽ فيزز",
+          "غير زباني ۽ زباني رابطو (Communication)",
+          "مذاڪرات جو انداز (Negotiation Style)",
+          "سوال ڪرڻ جا طريقا ۽ ٽيڪنيڪون",
+          "ممڪنه معاهدي جو دائرو (Zone of Potential Agreement)",
+          "ڊيڊ لاڪ (پند) کي ختم ڪرڻ",
+          "حل جي معاهدي جو مسودو ٺاهڻ",
+          "مصالحت لاءِ موزون مقدمو",
+          "ذاتي تشخيص (Self-assessment)",
+          "سودي بازي جون ٽيڪنيڪون"
+        ]
+      },
+      "structure": {
+        "title": "ڪورس جي ساخت",
+        "modules": [
+          { "badge": "ماڊيول 01", "title": "متبادل تڪرارن جي حل (ADR) جو خاڪو" },
+          { "badge": "ماڊيول 02", "title": "مصالحتي عمل ۽ ان جا مرحلا" },
+          { "badge": "ماڊيول 03", "title": "رابطا ۽ سوال ڪرڻ جا طريقا" },
+          { "badge": "ماڊيول 04", "title": "مذاڪرات جون ٽيڪنيڪون" },
+          { "badge": "ماڊيول 05", "title": "ڊيڊ لاڪ جو حل" },
+          { "badge": "ماڊيول 06", "title": "معاهدي جو مسودو ۽ پڄاڻي" },
+          { "badge": "ماڊيول 07", "title": "ذاتي تشخيص ۽ بهترين طريقا" }
+        ]
+      },
+      "methodology": {
+        "title": "تربيت جو طريقو",
+        "items": [
+          "تجرباتي ۽ عملي سکيا",
+          "عملي مشقون",
+          "رول پلي ۽ سميوليشنز",
+          "گروپ ۾ بحث (مباحثا)",
+          "ڪيس اسٽڊيز (حقيقي مثالون)",
+          "انٽرئيڪٽو سيشنز"
+        ]
+      }
+    },
+    "certification": {
+      "title": "سرٽيفڪيشن جو نتيجو",
+      "desc": "ڪامياب شرڪت تي شرڪت ڪندڙن کي ڪورس مڪمل ڪرڻ جو سرٽيفڪيٽ ڏنو ويندو. هي ڪورس ماڻهن کي مختلف ماحولن ۾ اخلاقي، پيشيوراڻي ۽ مؤثر طريقي سان مصالحتي مهارتون لاڳو ڪرڻ لاءِ تيار ڪري ٿو."
+    },
+    "attendees": {
+      "title": "ڪنهن کي شرڪت ڪرڻ گهرجي؟",
+      "items": [
+        "وڪيل ۽ قانوني پيشيور ماڻهو",
+        "جج ۽ عدالتي عملدار",
+        "ڪارپوريٽ پيشيور ماڻهو",
+        "ايڇ آر ۽ ائڊمن جا پيشيور ماڻهو",
+        "اين جي اوز ۽ ڪميونٽي اڳواڻ",
+        "شاگرد ۽ اي ڊي آر جا شوقين"
+      ]
+    },
+    "btn_text": "هن پروگرام لاءِ درخواست ڏيو"
+  }
+},
+"popup_msic": {
+  "sidebar": {
+    "badge": "نان-ايڪريڊيٽڊ ڪورس",
+    "title_part1": "مصالحتي مهارتن جو",
+    "title_part2": "تعارفي ڪورس",
+    "desc": "هي ڪورس انهن ماڻهن لاءِ آهي جيڪي مصالحتي مهارتن جي بنيادي سمجھاڻي حاصل ڪرڻ ۾ دلچسپي رکن ٿا. هي بلڪل شروعاتي سطح جو ڪورس آهي ۽ غير مسلمه آهي.",
+    "stats": {
+      "type": { "label": "نان-ايڪريڊيٽڊ ڪورس", "value": "" },
+      "total_hours": { "label": "ڪل ڪلاڪ", "value": "16" },
+      "duration": { "label": "دورانيو", "value": "2 ڪاروباري ڏينهن" },
+      "daily_hours": { "label": "روزاني جا ڪلاڪ", "value": "8" },
+      "days": { "label": "تربيت جا ڏينهن", "value": "ڪي به ٻه ڏينهن (جلد اعلان ڪيو ويندو)" },
+      "time": { "label": "تربيت جو وقت", "value": "صبح 9 بجن کان شام 5 بجن تائين" }
+    }
+  },
+  "main_content": {
+    "about": {
+      "title": "ڪورس بابت معلومات",
+      "desc": "هي تعارفي ڪورس مصالحتي مهارتن ۽ مصالحت جي عمل جي بنيادي سمجھاڻي فراهم ڪري ٿو. شرڪت ڪندڙ مصالحت جي عمل کان واقف ٿي ويندا ۽ سمجهي سگهندا ته مستقبل ۾ ان جي ڪهڙي اهميت آهي. هي ڪورس نظرياتي (Theory-oriented) آهي جنهن ۾ ڪابه عملي مشق يا رول پلي شامل ناهي."
+    },
+    "outcomes": {
+      "title": "توهان ڇا سيکندا",
+      "items": [
+        "مصالحت جي بنيادي ڳالهين کي سمجهڻ",
+        "مصالحت جي اهم تصورن کي ڄاڻڻ",
+        "اهو سمجهڻ ته مصالحت ڪڏهن استعمال ڪري سگهجي ٿي",
+        "مصالحتي عمل بابت آگاهي حاصل ڪرڻ",
+        "هڪ واقف ڪار ۽ باخبر صارف بڻجڻ"
+      ]
+    },
+    "columns": {
+      "outline": {
+        "title": "ڪورس جو خاڪو",
+        "items": [
+          "متبادل تڪرارن جي حل (ADR) جو پس منظر",
+          "مصالحت جا مرحلا ۽ فيزز",
+          "غير زباني ۽ زباني رابطو (Communication)",
+          "مذاڪرات جو انداز (Negotiation Style)",
+          "سوال ڪرڻ جا طريقا ۽ ٽيڪنيڪون",
+          "ممڪنه معاهدي جو دائرو (Zone of Potential Agreement)",
+          "ڊيڊ لاڪ (پند) کي ختم ڪرڻ",
+          "حل جي معاهدي جو مسودو ٺاهڻ",
+          "مصالحت لاءِ موزون مقدمو",
+          "سودي بازي جون ٽيڪنيڪون"
+        ]
+      },
+      "info_table": {
+        "title": "ڪورس جي معلومات",
+        "trainer": { "label": "ٽرينر", "value": "جلد اعلان ڪيو ويندو (TBA)" },
+        "daily_hours": { "label": "روزاني جا ڪلاڪ", "value": "اٺ (8)" },
+        "total_hours": { "label": "ڪل ڪلاڪ", "value": "سورنهن (16)" },
+        "days": { "label": "تربيت جا ڏينهن", "value": "ڪي به ٻه ڏينهن (جلد اعلان ڪيو ويندو)" },
+        "time": { "label": "تربيت جو وقت", "value": "صبح 9 بجن کان شام 5 بجن تائين" },
+        "duration": { "label": "ڪورس جو دورانيو", "value": "ٻه (2) ڪاروباري ڏينهن" },
+        "type": { "label": "ڪورس جو قسم", "value": "نان-ايڪريڊيٽڊ ڪورس" }
+      }
+    },
+    "bottom_panel": {
+      "attendees": {
+        "title": "ڪنهن کي شرڪت ڪرڻ گهرجي؟",
+        "items": [
+          "شاگرد ۽ نوان گريجوئيٽس",
+          "ڪنهن به شعبي سان تعلق رکندڙ پيشيور ماڻهو",
+          "ايڇ آر ۽ ائڊمن جا پيشيور ماڻهو",
+          "اين جي اوز ۽ ڪميونٽي ورڪرز",
+          "مصالحت ۾ دلچسپي رکندڙ ڪو به فرد"
+        ]
+      },
+      "note": {
+        "title": "اهم ڳالهه",
+        "desc": "هي هڪ بنيادي سطح جو ڪورس آهي جيڪو صرف معلومات ۽ آگاهي فراهم ڪرڻ لاءِ تيار ڪيو ويو آهي. هن ڪورس ۾ ڪابه عملي مشق، رول پلي يا ذاتي تشخيص شامل ناهي."
+      }
+    },
+    "btn_text": "هن ڪورس لاءِ رجسٽريشن ڪريو"
+  }
+}
+}
       }
     }
   };
