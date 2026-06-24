@@ -575,427 +575,636 @@
         }
       },
       "map_section": {
-  "title": "Visit Our Office",
-  "lead": "We welcome you to visit us at our office in Karachi.",
-  "iframe_title": "PMA Office Location — 253, P.E.C.H.S., Block-6, Karachi"
-}
+        "title": "Visit Our Office",
+        "lead": "We welcome you to visit us at our office in Karachi.",
+        "iframe_title": "PMA Office Location — 253, P.E.C.H.S., Block-6, Karachi"
+      }
     },
     "faq_page": {
       "hero": {
-  "img_alt": "FAQs Hero",
-  "title": "FAQs",
-  "lead": "Find answers to the most common questions about mediation and our services."
-},
-"faq_section": {
-  "items": {
-    "q1": {
-      "question": "WHAT IS STANDARD CLAUSE OF MEDIATION?",
-      "answer": "That any and every dispute, difference or question which may arise between the Parties to this Agreement shall be first settled by the Parties by an attempt at amicably settling the dispute through mutual negotiations. In case the disputes, differences or questions cannot be settled amicably or satisfactorily by correspondence or by mutual discussion within thirty days (30) after receipt by one party of the other party’s request for amicable settlement, it shall be referred to mediation to a panel of PMA Accredited Mediators. Mediation proceedings will be governed by the internationally recognized rules of mediation."
-    },
-    "q2": {
-      "question": "AN ALTERNATIVE TO COST AND TIME – MEDIATION",
-      "answer": "Mediation offers a faster, cost-effective, and confidential alternative to lengthy legal proceedings. It helps parties resolve disputes amicably while preserving professional and personal relationships."
-    },
-    "q3": {
-      "question": "WHAT IS MEDIATION?",
-      "answer": "Mediation is a voluntary and confidential process in which a neutral third party assists disputing parties in reaching a mutually acceptable agreement."
-    },
-    "q4": {
-      "question": "HOW TO TRY MEDIATION?",
-      "answer": "You can contact PMA through our website or office to initiate mediation services. Our team will guide you through the process and connect you with accredited mediators."
-    },
-    "q5": {
-      "question": "BENEFITS OF MEDIATION",
-      "benefits_list": {
-        "b1": "Faster dispute resolution",
-        "b2": "Lower legal costs",
-        "b3": "Confidential proceedings",
-        "b4": "Flexible solutions",
-        "b5": "Improved communication between parties"
+        "img_alt": "FAQs Hero",
+        "title": "FAQs",
+        "lead": "Find answers to the most common questions about mediation and our services."
+      },
+      "faq_section": {
+        "items": {
+          "q1": {
+            "question": "WHAT IS STANDARD CLAUSE OF MEDIATION?",
+            "answer": "That any and every dispute, difference or question which may arise between the Parties to this Agreement shall be first settled by the Parties by an attempt at amicably settling the dispute through mutual negotiations. In case the disputes, differences or questions cannot be settled amicably or satisfactorily by correspondence or by mutual discussion within thirty days (30) after receipt by one party of the other party’s request for amicable settlement, it shall be referred to mediation to a panel of PMA Accredited Mediators. Mediation proceedings will be governed by the internationally recognized rules of mediation."
+          },
+          "q2": {
+            "question": "AN ALTERNATIVE TO COST AND TIME – MEDIATION",
+            "answer": "Mediation offers a faster, cost-effective, and confidential alternative to lengthy legal proceedings. It helps parties resolve disputes amicably while preserving professional and personal relationships."
+          },
+          "q3": {
+            "question": "WHAT IS MEDIATION?",
+            "answer": "Mediation is a voluntary and confidential process in which a neutral third party assists disputing parties in reaching a mutually acceptable agreement."
+          },
+          "q4": {
+            "question": "HOW TO TRY MEDIATION?",
+            "answer": "You can contact PMA through our website or office to initiate mediation services. Our team will guide you through the process and connect you with accredited mediators."
+          },
+          "q5": {
+            "question": "BENEFITS OF MEDIATION",
+            "benefits_list": {
+              "b1": "Faster dispute resolution",
+              "b2": "Lower legal costs",
+              "b3": "Confidential proceedings",
+              "b4": "Flexible solutions",
+              "b5": "Improved communication between parties"
+            }
+          },
+          "q6": {
+            "question": "WHEN WILL THE MEDIATION SESSION BE HELD?",
+            "answer": "The mediation session is scheduled based on the availability of both parties and the mediator. PMA coordinates the process to ensure convenience and efficiency."
+          },
+          "q7": {
+            "question": "WHAT HAPPENS AT MEDIATION?",
+            "answer": "During mediation, both parties discuss their concerns in a structured environment facilitated by a mediator who helps explore solutions and common ground."
+          },
+          "q8": {
+            "question": "WHAT HAPPENS IF NO AGREEMENT IS REACHED?",
+            "answer": "If mediation does not result in an agreement, both parties remain free to pursue other legal or dispute resolution options available to them."
+          },
+          "q9": {
+            "question": "WHO CAN ATTEND THE MEDIATION?",
+            "answer": "Only the involved parties, their authorized representatives, legal advisors (if permitted), and the mediator may attend the mediation session."
+          },
+          "q10": {
+            "question": "HOW MUCH WILL IT COST?",
+            "answer": "The cost of mediation depends on the nature, complexity, and duration of the dispute. PMA provides fee details before the mediation process begins."
+          }
+        },
+        "contact_box": {
+          "title": "Still Have Questions?",
+          "lead": "We're here to help. Reach out to us and our team will be happy to assist you.",
+          "btn_text": "Contact Us"
+        }
       }
     },
-    "q6": {
-      "question": "WHEN WILL THE MEDIATION SESSION BE HELD?",
-      "answer": "The mediation session is scheduled based on the availability of both parties and the mediator. PMA coordinates the process to ensure convenience and efficiency."
-    },
-    "q7": {
-      "question": "WHAT HAPPENS AT MEDIATION?",
-      "answer": "During mediation, both parties discuss their concerns in a structured environment facilitated by a mediator who helps explore solutions and common ground."
-    },
-    "q8": {
-      "question": "WHAT HAPPENS IF NO AGREEMENT IS REACHED?",
-      "answer": "If mediation does not result in an agreement, both parties remain free to pursue other legal or dispute resolution options available to them."
-    },
-    "q9": {
-      "question": "WHO CAN ATTEND THE MEDIATION?",
-      "answer": "Only the involved parties, their authorized representatives, legal advisors (if permitted), and the mediator may attend the mediation session."
-    },
-    "q10": {
-      "question": "HOW MUCH WILL IT COST?",
-      "answer": "The cost of mediation depends on the nature, complexity, and duration of the dispute. PMA provides fee details before the mediation process begins."
-    }
-  },
-  "contact_box": {
-    "title": "Still Have Questions?",
-    "lead": "We're here to help. Reach out to us and our team will be happy to assist you.",
-    "btn_text": "Contact Us"
-  }
-}
-    },
-    "training-page":{
-     "hero": {
-  "hero_img_alt": "Training Hero",
-  "eyebrow": "PROFESSIONAL TRAINING",
-"title_part1": "Building Pakistan's Future Mediators Through",
-  "title_part2": "Internationally Recognized Training",
-  "lead": "Strengthen your skills. Elevate your practice. Promote dialogue, understanding and peaceful resolution in society.",
-  "banner": {
-    "logo_alt": "International Mediation Institute",
-    "title": "IMI-Certified Mediator Training Program",
-    "tagline": "Internationally Recognized. Globally Respected.",
-    "desc": "PMA is an officially registered training provider with the International Mediation Institute (IMI). Our IMI-Certified Mediator Training Program meets the highest global standards for professional mediator training.",
-    "link_text": "for more information please click on the link"
-  }
-},
-"training_programs_section": {
-  "header": {
-    "title_part1": "Our",
-    "title_part2": "Training",
-    "title_part3": "Programs"
-  },
-  "programs": {
-    "accredited_course": {
-      "badge": "Accredited Course",
-      "title": "Mediation Skills Accredited Course",
-      "desc_p1": "This course is for those who are interested in getting to know the mediation skills. A candidate will become an educated consumer.",
-      "desc_p2": "All courses are conducted through exercises and role plays.",
-      "metrics": {
-        "total_hours": "Total Hours",
-        "days": "Days (Tue - Sat)",
-        "daily_hours": "Daily Hours",
-        "cert_status": "Certificate",
-        "cert_sub": "Accredited"
-      },
-      "outcomes": {
-        "headline": "By the end of the course participant should be able to:",
-        "list": {
-          "item1": "Skilled in Mediation",
-          "item2": "Learn Best Practices of Mediation",
-          "item3": "Learn Pakistan laws on mediation",
-          "item4": "Learn negotiation skills",
-          "item5": "Become certified mediator"
+    "training-page": {
+      "hero": {
+        "hero_img_alt": "Training Hero",
+        "eyebrow": "PROFESSIONAL TRAINING",
+        "title_part1": "Building Pakistan's Future Mediators Through",
+        "title_part2": "Internationally Recognized Training",
+        "lead": "Strengthen your skills. Elevate your practice. Promote dialogue, understanding and peaceful resolution in society.",
+        "banner": {
+          "logo_alt": "International Mediation Institute",
+          "title": "IMI-Certified Mediator Training Program",
+          "tagline": "Internationally Recognized. Globally Respected.",
+          "desc": "PMA is an officially registered training provider with the International Mediation Institute (IMI). Our IMI-Certified Mediator Training Program meets the highest global standards for professional mediator training.",
+          "link_text": "for more information please click on the link"
         }
       },
-      "btn_text": "View Course Details"
-    },
-    "introductory_course": {
-      "badge": "Non-Accredited Course",
-      "title": "Mediation Skills Introductory Course",
-      "desc_p1": "This course is for those who are interested in getting a know how of the mediation skills. This is a very basic level course.",
-      "desc_p2": "There are no exercises or role plays.",
-      "metrics": {
-        "total_hours": "Total Hours",
-        "days": "Days (To be announced)",
-        "daily_hours": "Daily Hours",
-        "cert_status": "Non-Accredited"
+      "training_programs_section": {
+        "header": {
+          "title_part1": "Our",
+          "title_part2": "Training",
+          "title_part3": "Programs"
+        },
+        "programs": {
+          "accredited_course": {
+            "badge": "Accredited Course",
+            "title": "Mediation Skills Accredited Course",
+            "desc_p1": "This course is for those who are interested in getting to know the mediation skills. A candidate will become an educated consumer.",
+            "desc_p2": "All courses are conducted through exercises and role plays.",
+            "metrics": {
+              "total_hours": "Total Hours",
+              "days": "Days (Tue - Sat)",
+              "daily_hours": "Daily Hours",
+              "cert_status": "Certificate",
+              "cert_sub": "Accredited"
+            },
+            "outcomes": {
+              "headline": "By the end of the course participant should be able to:",
+              "list": {
+                "item1": "Skilled in Mediation",
+                "item2": "Learn Best Practices of Mediation",
+                "item3": "Learn Pakistan laws on mediation",
+                "item4": "Learn negotiation skills",
+                "item5": "Become certified mediator"
+              }
+            },
+            "btn_text": "View Course Details"
+          },
+          "introductory_course": {
+            "badge": "Non-Accredited Course",
+            "title": "Mediation Skills Introductory Course",
+            "desc_p1": "This course is for those who are interested in getting a know how of the mediation skills. This is a very basic level course.",
+            "desc_p2": "There are no exercises or role plays.",
+            "metrics": {
+              "total_hours": "Total Hours",
+              "days": "Days (To be announced)",
+              "daily_hours": "Daily Hours",
+              "cert_status": "Non-Accredited"
+            },
+            "btn_text": "View Course Details"
+          },
+          "basic_info_course": {
+            "badge": "Non-Accredited Course",
+            "title": "Basic Information About Mediation Skills",
+            "desc_p1": "This course is for those who are interested in getting a know how of the mediation skills. This is a very basic level course.",
+            "desc_p2": "There are no exercises or role plays.",
+            "metrics": {
+              "total_hours": "Total Hours",
+              "days": "Day",
+              "daily_hours": "Daily Hours",
+              "cert_status": "Non-Accredited"
+            },
+            "btn_text": "View Course Details"
+          }
+        }
       },
-      "btn_text": "View Course Details"
-    },
-    "basic_info_course": {
-      "badge": "Non-Accredited Course",
-      "title": "Basic Information About Mediation Skills",
-      "desc_p1": "This course is for those who are interested in getting a know how of the mediation skills. This is a very basic level course.",
-      "desc_p2": "There are no exercises or role plays.",
-      "metrics": {
-        "total_hours": "Total Hours",
-        "days": "Day",
-        "daily_hours": "Daily Hours",
-        "cert_status": "Non-Accredited"
+      "attendees_section": {
+        "header": {
+          "title_part1": "Who",
+          "title_part2": "Should",
+          "title_part3": "Attend?",
+          "subtitle": "This Training is Designed for Professionals Who Want to Make a Difference"
+        },
+        "cards": {
+          "c1": {
+            "title": "Lawyers & Legal Professionals",
+            "desc": "Enhance your dispute resolution skills and expand your professional practice."
+          },
+          "c2": {
+            "title": "Judges & Court Officials",
+            "desc": "Strengthen your understanding of ADR and support effective case management."
+          },
+          "c3": {
+            "title": "Corporate Professionals",
+            "desc": "Improve negotiation, communication and conflict management at the workplace."
+          },
+          "c4": {
+            "title": "HR & Admin Professionals",
+            "desc": "Build people-centered conflict resolution and workplace harmony."
+          },
+          "c5": {
+            "title": "NGOs & Community Leaders",
+            "desc": "Resolve community disputes and promote social cohesion and inclusion."
+          },
+          "c6": {
+            "title": "Students & ADR Enthusiasts",
+            "desc": "Kick-start your journey in mediation and build a strong foundation in ADR."
+          },
+          "c7": {
+            "title": "Government Officials",
+            "desc": "Apply mediation skills to public sector disputes and policy implementation."
+          },
+          "c8": {
+            "title": "Anyone Interested in ADR & Mediation",
+            "desc": "Open to those passionate about peaceful dialogue and resolving disputes."
+          }
+        }
       },
-      "btn_text": "View Course Details"
-    }
-  }
-},
-"attendees_section": {
-  "header": {
-    "title_part1": "Who",
-    "title_part2": "Should",
-    "title_part3": "Attend?",
-    "subtitle": "This Training is Designed for Professionals Who Want to Make a Difference"
-  },
-  "cards": {
-    "c1": {
-      "title": "Lawyers & Legal Professionals",
-      "desc": "Enhance your dispute resolution skills and expand your professional practice."
-    },
-    "c2": {
-      "title": "Judges & Court Officials",
-      "desc": "Strengthen your understanding of ADR and support effective case management."
-    },
-    "c3": {
-      "title": "Corporate Professionals",
-      "desc": "Improve negotiation, communication and conflict management at the workplace."
-    },
-    "c4": {
-      "title": "HR & Admin Professionals",
-      "desc": "Build people-centered conflict resolution and workplace harmony."
-    },
-    "c5": {
-      "title": "NGOs & Community Leaders",
-      "desc": "Resolve community disputes and promote social cohesion and inclusion."
-    },
-    "c6": {
-      "title": "Students & ADR Enthusiasts",
-      "desc": "Kick-start your journey in mediation and build a strong foundation in ADR."
-    },
-    "c7": {
-      "title": "Government Officials",
-      "desc": "Apply mediation skills to public sector disputes and policy implementation."
-    },
-    "c8": {
-      "title": "Anyone Interested in ADR & Mediation",
-      "desc": "Open to those passionate about peaceful dialogue and resolving disputes."
-    }
-  }
-},
-"cta_resolution_section": {
-  "graphic_alt": "Different backgrounds, one goal",
-  "title": "Different backgrounds. One goal: Peaceful Resolution.",
-  "desc": "Our training brings together diverse professionals who believe in dialogue, understanding and building better communities.",
-  "btn_text": "Register for a Course"
-},
-"registration_section": {
-  "left_panel": {
-    "badge_text": "Join Our Program",
-    "title": "Join Our Mediation Training Programs",
-    "tagline": "Take the First Step Towards Excellence",
-    "desc": "Register today and become part of internationally recognized training programs designed to build your skills, empower your practice and promote peaceful resolution in society.",
-    "img_alt": "Zen meditation stones",
-    "seat_badge": {
-      "title": "Secure Your Seat",
-      "desc_part1": "Limited seats",
-      "desc_part2": "available in each batch."
-    }
-  },
-  "form_panel": {
-    "header_title": "Registration Details",
-    "labels": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "background": "Professional Background",
-      "city": "City",
-      "program": "Select Training Program",
-      "additional_info": "Additional Information (Optional)"
-    },
-    "placeholders": {
-      "name": "Enter your full name",
-      "email": "Enter your email address",
-      "phone": "Enter your phone number",
-      "background": "e.g. Lawyer, HR Professional, Student",
-      "city": "Enter your city",
-      "program_default": "-- Please choose a program --",
-      "additional_info": "Any additional information you would like to share"
-    },
-    "options": {
-      "accredited": "Mediation Skills Accredited Course",
-      "introductory": "Mediation Skills Introductory Course",
-      "basic": "Basic Information About Mediation Skills"
-    },
-    "btn_text": "Apply for Enrollment",
-    "privacy_note": "Your information is safe and will only be used for registration purposes.",
-    "messages": {
-      "success": "Registration submitted! We'll contact you within 24 hours.",
-      "error": "Sorry, there was an error submitting your registration. Please try again."
-    }
-  }
-},
-"training_badges_section": {
-  "badges": {
-    "b1": {
-      "title": "IMI Recognized",
-      "desc": "Our programs are certified by the International Mediation Institute (IMI)."
-    },
-    "b2": {
-      "title": "Expert Trainers",
-      "desc": "Learn from experienced mediators and industry professionals."
-    },
-    "b3": {
-      "title": "International Standards",
-      "desc": "Training aligned with globally accepted mediation standards."
-    },
-    "b4": {
-      "title": "Professional Certification",
-      "desc": "Earn a recognized certificate upon successful completion."
-    }
-  }
-},
-"popup_msac": {
-  "sidebar": {
-    "badge": "Accredited Course",
-    "title_part1": "Mediation Skills",
-    "title_part2": "Accredited Course",
-    "desc": "This course is for those who are interested in getting to know the mediation skills. A candidate will become an educated consumer. All courses are conducted through exercises and role plays.",
-    "stats": {
-      "type": { "label": "Accredited Course", "value": "Certificate Accredited" },
-      "total_hours": { "label": "Total Hours", "value": "40" },
-      "duration": { "label": "Duration", "value": "5 Days (One Week)" },
-      "daily_hours": { "label": "Daily Hours", "value": "8" },
-      "days": { "label": "Training Days", "value": "Tuesday to Saturday" },
-      "time": { "label": "Training Time", "value": "9 AM – 5 PM" }
-    }
-  },
-  "main_content": {
-    "about": {
-      "title": "About This Course",
-      "desc": "This comprehensive program equips participants with practical mediation skills, negotiation techniques, and an understanding of Pakistani laws on mediation. Through experiential learning, exercises, and role plays, participants will be prepared to handle real-life disputes effectively and ethically."
-    },
-    "outcomes": {
-      "title": "What You Will Learn",
-      "items": [
-        "Skilled in Mediation",
-        "Learn Best Practices of Mediation",
-        "Learn Pakistani laws on mediation",
-        "Learn negotiation skills",
-        "Become certified mediator",
-        "Draft effective settlement agreements"
-      ]
-    },
-    "columns": {
-      "outline": {
-        "title": "Course Outline",
-        "items": [
-          "Landscape of Alternate Dispute Resolution",
-          "Phases of Mediation",
-          "Non-verbal and verbal communication",
-          "Negotiation Style",
-          "Question Techniques",
-          "Zone of Potential Agreement",
-          "Breaking the deadlock",
-          "Draft of Settlement Agreement",
-          "Cases Appropriate for Mediation",
-          "Self-assessment",
-          "Bargaining Techniques"
-        ]
+      "cta_resolution_section": {
+        "graphic_alt": "Different backgrounds, one goal",
+        "title": "Different backgrounds. One goal: Peaceful Resolution.",
+        "desc": "Our training brings together diverse professionals who believe in dialogue, understanding and building better communities.",
+        "btn_text": "Register for a Course"
       },
-      "structure": {
-        "title": "Course Structure",
-        "modules": [
-          { "badge": "Module 01", "title": "Landscape of ADR" },
-          { "badge": "Module 02", "title": "Mediation Process & Phases" },
-          { "badge": "Module 03", "title": "Communication & Questioning" },
-          { "badge": "Module 04", "title": "Negotiation Techniques" },
-          { "badge": "Module 05", "title": "Deadlock Resolution" },
-          { "badge": "Module 06", "title": "Settlement Drafting & Closure" },
-          { "badge": "Module 07", "title": "Self Assessment & Best Practices" }
-        ]
+      "registration_section": {
+        "left_panel": {
+          "badge_text": "Join Our Program",
+          "title": "Join Our Mediation Training Programs",
+          "tagline": "Take the First Step Towards Excellence",
+          "desc": "Register today and become part of internationally recognized training programs designed to build your skills, empower your practice and promote peaceful resolution in society.",
+          "img_alt": "Zen meditation stones",
+          "seat_badge": {
+            "title": "Secure Your Seat",
+            "desc_part1": "Limited seats",
+            "desc_part2": "available in each batch."
+          }
+        },
+        "form_panel": {
+          "header_title": "Registration Details",
+          "labels": {
+            "name": "Full Name",
+            "email": "Email Address",
+            "phone": "Phone Number",
+            "background": "Professional Background",
+            "city": "City",
+            "program": "Select Training Program",
+            "additional_info": "Additional Information (Optional)"
+          },
+          "placeholders": {
+            "name": "Enter your full name",
+            "email": "Enter your email address",
+            "phone": "Enter your phone number",
+            "background": "e.g. Lawyer, HR Professional, Student",
+            "city": "Enter your city",
+            "program_default": "-- Please choose a program --",
+            "additional_info": "Any additional information you would like to share"
+          },
+          "options": {
+            "accredited": "Mediation Skills Accredited Course",
+            "introductory": "Mediation Skills Introductory Course",
+            "basic": "Basic Information About Mediation Skills"
+          },
+          "btn_text": "Apply for Enrollment",
+          "privacy_note": "Your information is safe and will only be used for registration purposes.",
+          "messages": {
+            "success": "Registration submitted! We'll contact you within 24 hours.",
+            "error": "Sorry, there was an error submitting your registration. Please try again."
+          }
+        }
       },
-      "methodology": {
-        "title": "Training Methodology",
-        "items": [
-          "Experiential Learning",
-          "Practical Exercises",
-          "Role Plays & Simulations",
-          "Group Discussions",
-          "Case Studies",
-          "Interactive Sessions"
-        ]
+      "training_badges_section": {
+        "badges": {
+          "b1": {
+            "title": "IMI Recognized",
+            "desc": "Our programs are certified by the International Mediation Institute (IMI)."
+          },
+          "b2": {
+            "title": "Expert Trainers",
+            "desc": "Learn from experienced mediators and industry professionals."
+          },
+          "b3": {
+            "title": "International Standards",
+            "desc": "Training aligned with globally accepted mediation standards."
+          },
+          "b4": {
+            "title": "Professional Certification",
+            "desc": "Earn a recognized certificate upon successful completion."
+          }
+        }
+      },
+      "popup_msac": {
+        "sidebar": {
+          "badge": "Accredited Course",
+          "title_part1": "Mediation Skills",
+          "title_part2": "Accredited Course",
+          "desc": "This course is for those who are interested in getting to know the mediation skills. A candidate will become an educated consumer. All courses are conducted through exercises and role plays.",
+          "stats": {
+            "type": {
+              "label": "Accredited Course",
+              "value": "Certificate Accredited"
+            },
+            "total_hours": {
+              "label": "Total Hours",
+              "value": "40"
+            },
+            "duration": {
+              "label": "Duration",
+              "value": "5 Days (One Week)"
+            },
+            "daily_hours": {
+              "label": "Daily Hours",
+              "value": "8"
+            },
+            "days": {
+              "label": "Training Days",
+              "value": "Tuesday to Saturday"
+            },
+            "time": {
+              "label": "Training Time",
+              "value": "9 AM – 5 PM"
+            }
+          }
+        },
+        "main_content": {
+          "about": {
+            "title": "About This Course",
+            "desc": "This comprehensive program equips participants with practical mediation skills, negotiation techniques, and an understanding of Pakistani laws on mediation. Through experiential learning, exercises, and role plays, participants will be prepared to handle real-life disputes effectively and ethically."
+          },
+          "outcomes": {
+            "title": "What You Will Learn",
+            "items": [
+              "Skilled in Mediation",
+              "Learn Best Practices of Mediation",
+              "Learn Pakistani laws on mediation",
+              "Learn negotiation skills",
+              "Become certified mediator",
+              "Draft effective settlement agreements"
+            ]
+          },
+          "columns": {
+            "outline": {
+              "title": "Course Outline",
+              "items": [
+                "Landscape of Alternate Dispute Resolution",
+                "Phases of Mediation",
+                "Non-verbal and verbal communication",
+                "Negotiation Style",
+                "Question Techniques",
+                "Zone of Potential Agreement",
+                "Breaking the deadlock",
+                "Draft of Settlement Agreement",
+                "Cases Appropriate for Mediation",
+                "Self-assessment",
+                "Bargaining Techniques"
+              ]
+            },
+            "structure": {
+              "title": "Course Structure",
+              "modules": [
+                {
+                  "badge": "Module 01",
+                  "title": "Landscape of ADR"
+                },
+                {
+                  "badge": "Module 02",
+                  "title": "Mediation Process & Phases"
+                },
+                {
+                  "badge": "Module 03",
+                  "title": "Communication & Questioning"
+                },
+                {
+                  "badge": "Module 04",
+                  "title": "Negotiation Techniques"
+                },
+                {
+                  "badge": "Module 05",
+                  "title": "Deadlock Resolution"
+                },
+                {
+                  "badge": "Module 06",
+                  "title": "Settlement Drafting & Closure"
+                },
+                {
+                  "badge": "Module 07",
+                  "title": "Self Assessment & Best Practices"
+                }
+              ]
+            },
+            "methodology": {
+              "title": "Training Methodology",
+              "items": [
+                "Experiential Learning",
+                "Practical Exercises",
+                "Role Plays & Simulations",
+                "Group Discussions",
+                "Case Studies",
+                "Interactive Sessions"
+              ]
+            }
+          },
+          "certification": {
+            "title": "Certification Outcome",
+            "desc": "Participants will receive a Certificate of Completion upon successful participation. The course prepares individuals to apply mediation skills ethically, professionally, and effectively in diverse settings."
+          },
+          "attendees": {
+            "title": "Who Should Attend?",
+            "items": [
+              "Lawyers & Legal Professionals",
+              "Judges & Court Officials",
+              "Corporate Professionals",
+              "HR & Admin Professionals",
+              "NGOs & Community Leaders",
+              "Students & ADR Enthusiasts"
+            ]
+          },
+          "btn_text": "Apply for This Program"
+        }
+      },
+      "popup_msic": {
+        "sidebar": {
+          "badge": "Non-Accredited Course",
+          "title_part1": "Mediation Skills",
+          "title_part2": "Introductory Course",
+          "desc": "This course is designed for those who are interested in getting a know how of the mediation skills. This is a very basic level course and is non-accredited.",
+          "stats": {
+            "type": {
+              "label": "Non-Accredited Course",
+              "value": ""
+            },
+            "total_hours": {
+              "label": "Total Hours",
+              "value": "16"
+            },
+            "duration": {
+              "label": "Duration",
+              "value": "2 Business Days"
+            },
+            "daily_hours": {
+              "label": "Daily Hours",
+              "value": "8"
+            },
+            "days": {
+              "label": "Training Days",
+              "value": "Any Two Days (To Be Announced)"
+            },
+            "time": {
+              "label": "Training Time",
+              "value": "9 AM – 5 PM"
+            }
+          }
+        },
+        "main_content": {
+          "about": {
+            "title": "About This Course",
+            "desc": "This introductory course provides a basic understanding of mediation skills and the mediation process. Participants will become educated consumers of mediation and will be able to understand what future does it hold for anyone. This course is theory-oriented with no exercises or role plays."
+          },
+          "outcomes": {
+            "title": "What You Will Learn",
+            "items": [
+              "Understand the basics of mediation",
+              "Learn key mediation concepts",
+              "Understand when mediation can be used",
+              "Awareness of mediation process",
+              "Become an educated consumer"
+            ]
+          },
+          "columns": {
+            "outline": {
+              "title": "Course Outline",
+              "items": [
+                "Landscape of Alternate Dispute Resolution",
+                "Phases of Mediation",
+                "Non-verbal and verbal communication",
+                "Negotiation Style",
+                "Question Techniques",
+                "Zone of Potential Agreement",
+                "Breaking the deadlock",
+                "Draft of Settlement Agreement",
+                "Cases Appropriate for Mediation",
+                "Bargaining Techniques"
+              ]
+            },
+            "info_table": {
+              "title": "Course Information",
+              "trainer": {
+                "label": "Trainer",
+                "value": "To Be Announced (TBA)"
+              },
+              "daily_hours": {
+                "label": "Daily Hours",
+                "value": "Eight (8)"
+              },
+              "total_hours": {
+                "label": "Total Hours",
+                "value": "Sixteen (16)"
+              },
+              "days": {
+                "label": "Training Days",
+                "value": "Any Two Days (To Be Announced)"
+              },
+              "time": {
+                "label": "Training Time",
+                "value": "9 AM – 5 PM"
+              },
+              "duration": {
+                "label": "Course Duration",
+                "value": "Two (2) Business Days"
+              },
+              "type": {
+                "label": "Course Type",
+                "value": "Non-Accredited Course"
+              }
+            }
+          },
+          "bottom_panel": {
+            "attendees": {
+              "title": "Who Should Attend?",
+              "items": [
+                "Students & Fresh Graduates",
+                "Professionals from Any Field",
+                "HR & Admin Professionals",
+                "NGOs & Community Workers",
+                "Anyone Interested in Mediation"
+              ]
+            },
+            "note": {
+              "title": "Important Note",
+              "desc": "This is a basic level course designed to provide knowledge and awareness only. There are no exercises, role plays or self-assessment in this course."
+            }
+          },
+          "btn_text": "Register for This Course"
+        }
+      },
+      "popup_bims": {
+        "sidebar": {
+          "badge": "Non-Accredited Course",
+          "title_part1": "Basic Information About",
+          "title_part2": "Mediation Skills",
+          "desc": "This introductory course is designed to provide general awareness of mediation skills and their application. This is a basic level course and is non-accredited.",
+          "stats": {
+            "type": {
+              "label": "Non-Accredited Course",
+              "value": ""
+            },
+            "total_hours": {
+              "label": "Total Hours",
+              "value": "8"
+            },
+            "duration": {
+              "label": "Duration",
+              "value": "1 Day"
+            },
+            "daily_hours": {
+              "label": "Daily Hours",
+              "value": "8"
+            },
+            "days": {
+              "label": "Training Days",
+              "value": "Any Day (To Be Announced)"
+            },
+            "time": {
+              "label": "Training Time",
+              "value": "9 AM – 5 PM"
+            }
+          }
+        },
+        "main_content": {
+          "about": {
+            "title": "About This Course",
+            "desc": "This basic information course is designed to provide general awareness of mediation skills, the mediation process, and key dispute resolution concepts. Participants will gain a foundational understanding of how mediation functions without engaging in role plays or practical exercises."
+          },
+          "outcomes": {
+            "title": "What You Will Learn",
+            "items": [
+              "Understand the basics of mediation",
+              "Learn key mediation concepts",
+              "Understand when mediation can be used",
+              "Awareness of mediation process",
+              "Foundational dispute resolution concepts"
+            ]
+          },
+          "columns": {
+            "outline": {
+              "title": "Course Outline",
+              "items": [
+                "Landscape of Alternate Dispute Resolution",
+                "Phases of Mediation",
+                "Introduction to Mediation",
+                "Mediation Process Overview",
+                "Communication in Mediation",
+                "Questions & Clarifications",
+                "Understanding deadlocks",
+                "Basics of Agreement"
+              ]
+            },
+            "info_table": {
+              "title": "Course Information",
+              "trainer": {
+                "label": "Trainer",
+                "value": "To Be Announced (TBA)"
+              },
+              "daily_hours": {
+                "label": "Daily Hours",
+                "value": "Eight (8)"
+              },
+              "total_hours": {
+                "label": "Total Hours",
+                "value": "Eight (8)"
+              },
+              "days": {
+                "label": "Training Days",
+                "value": "Any Day (To Be Announced)"
+              },
+              "time": {
+                "label": "Training Time",
+                "value": "9 AM – 5 PM"
+              },
+              "duration": {
+                "label": "Course Duration",
+                "value": "One (1) Day"
+              },
+              "type": {
+                "label": "Course Type",
+                "value": "Non-Accredited Course"
+              }
+            }
+          },
+          "bottom_panel": {
+            "attendees": {
+              "title": "Who Should Attend?",
+              "items": [
+                "Students & Fresh Graduates",
+                "Professionals from Any Field",
+                "HR & Admin Professionals",
+                "NGOs & Community Workers",
+                "Anyone Interested in Mediation"
+              ]
+            },
+            "note": {
+              "title": "Important Note",
+              "desc": "This is a basic level course designed to provide general information and awareness only. There are no exercises, role plays or self-assessment in this course."
+            }
+          },
+          "btn_text": "Register for This Course"
+        }
       }
     },
-    "certification": {
-      "title": "Certification Outcome",
-      "desc": "Participants will receive a Certificate of Completion upon successful participation. The course prepares individuals to apply mediation skills ethically, professionally, and effectively in diverse settings."
-    },
-    "attendees": {
-      "title": "Who Should Attend?",
-      "items": [
-        "Lawyers & Legal Professionals",
-        "Judges & Court Officials",
-        "Corporate Professionals",
-        "HR & Admin Professionals",
-        "NGOs & Community Leaders",
-        "Students & ADR Enthusiasts"
-      ]
-    },
-    "btn_text": "Apply for This Program"
-  }
-},
-"popup_msic": {
-  "sidebar": {
-    "badge": "Non-Accredited Course",
-    "title_part1": "Mediation Skills",
-    "title_part2": "Introductory Course",
-    "desc": "This course is designed for those who are interested in getting a know how of the mediation skills. This is a very basic level course and is non-accredited.",
-    "stats": {
-      "type": { "label": "Non-Accredited Course", "value": "" },
-      "total_hours": { "label": "Total Hours", "value": "16" },
-      "duration": { "label": "Duration", "value": "2 Business Days" },
-      "daily_hours": { "label": "Daily Hours", "value": "8" },
-      "days": { "label": "Training Days", "value": "Any Two Days (To Be Announced)" },
-      "time": { "label": "Training Time", "value": "9 AM – 5 PM" }
-    }
-  },
-  "main_content": {
-    "about": {
-      "title": "About This Course",
-      "desc": "This introductory course provides a basic understanding of mediation skills and the mediation process. Participants will become educated consumers of mediation and will be able to understand what future does it hold for anyone. This course is theory-oriented with no exercises or role plays."
-    },
-    "outcomes": {
-      "title": "What You Will Learn",
-      "items": [
-        "Understand the basics of mediation",
-        "Learn key mediation concepts",
-        "Understand when mediation can be used",
-        "Awareness of mediation process",
-        "Become an educated consumer"
-      ]
-    },
-    "columns": {
-      "outline": {
-        "title": "Course Outline",
-        "items": [
-          "Landscape of Alternate Dispute Resolution",
-          "Phases of Mediation",
-          "Non-verbal and verbal communication",
-          "Negotiation Style",
-          "Question Techniques",
-          "Zone of Potential Agreement",
-          "Breaking the deadlock",
-          "Draft of Settlement Agreement",
-          "Cases Appropriate for Mediation",
-          "Bargaining Techniques"
-        ]
+    "leadership_page": {
+      "hero": {
+        "eyebrow": "Leadership",
+        "title_main": "Leadership",
+        "title_accent": "Our People. Our Strength",
+        "lead_text": "Meet the dedicated professionals leading PMA's mission of promoting dialogue, understanding and peaceful resolution across Pakistan."
       },
-      "info_table": {
-        "title": "Course Information",
-        "trainer": { "label": "Trainer", "value": "To Be Announced (TBA)" },
-        "daily_hours": { "label": "Daily Hours", "value": "Eight (8)" },
-        "total_hours": { "label": "Total Hours", "value": "Sixteen (16)" },
-        "days": { "label": "Training Days", "value": "Any Two Days (To Be Announced)" },
-        "time": { "label": "Training Time", "value": "9 AM – 5 PM" },
-        "duration": { "label": "Course Duration", "value": "Two (2) Business Days" },
-        "type": { "label": "Course Type", "value": "Non-Accredited Course" }
+      "directory_filters": {
+        "tabs": {
+          "executive_team": "Executive Team",
+          "sub_committee": "Sub Committee",
+          "mediator": "Mediators",
+          "trainer": "Trainers",
+          "former_president": "Former Presidents"
+        },
+        "search_placeholder": "Search by name or expertise..."
       }
-    },
-    "bottom_panel": {
-      "attendees": {
-        "title": "Who Should Attend?",
-        "items": [
-          "Students & Fresh Graduates",
-          "Professionals from Any Field",
-          "HR & Admin Professionals",
-          "NGOs & Community Workers",
-          "Anyone Interested in Mediation"
-        ]
-      },
-      "note": {
-        "title": "Important Note",
-        "desc": "This is a basic level course designed to provide knowledge and awareness only. There are no exercises, role plays or self-assessment in this course."
-      }
-    },
-    "btn_text": "Register for This Course"
-  }
-} 
     }
   }
 }

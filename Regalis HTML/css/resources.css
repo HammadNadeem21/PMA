@@ -30,7 +30,9 @@
     scrollbar-width: none;
 }
 
-.pma-resources-tabs::-webkit-scrollbar { display: none; }
+.pma-resources-tabs::-webkit-scrollbar {
+    display: none;
+}
 
 .pma-resources-tab {
     display: inline-flex;
@@ -147,7 +149,8 @@
 
 /* Image placeholder */
 .pma-resource-card-img {
-    height: 180px;
+    height: 200px;
+    width: 220;
     background: var(--bg-light);
     display: flex;
     align-items: center;
@@ -159,7 +162,7 @@
 .pma-resource-card-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     display: block;
 }
 
@@ -526,7 +529,8 @@
 
     /* Remove right border on last tab of each row */
     .pma-resources-tab:nth-child(3n) {
-        border-right: 1px solid #f0f0f0; /* reset 3-col rule */
+        border-right: 1px solid #f0f0f0;
+        /* reset 3-col rule */
     }
 
     .pma-resources-tab:nth-child(2n) {

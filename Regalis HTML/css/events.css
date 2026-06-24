@@ -21,7 +21,7 @@
     background: #ffffff;
     padding: 10px 14px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(33,52,73,0.06);
+    box-shadow: 0 10px 30px rgba(33, 52, 73, 0.06);
     margin-bottom: 40px;
 }
 
@@ -51,7 +51,7 @@
 
 .pma-events-tab:hover {
     color: var(--primary-color);
-    box-shadow: 0 8px 24px rgba(33,52,73,0.06);
+    box-shadow: 0 8px 24px rgba(33, 52, 73, 0.06);
     transform: translateY(-2px);
 }
 
@@ -79,9 +79,18 @@
         min-width: auto;
         margin: 0 6px;
     }
-    .pma-events-tabs-row { padding: 8px; }
-    .pma-events-tab span { display: none; }
-    .pma-events-tab i { font-size: 18px; }
+
+    .pma-events-tabs-row {
+        padding: 8px;
+    }
+
+    .pma-events-tab span {
+        display: none;
+    }
+
+    .pma-events-tab i {
+        font-size: 18px;
+    }
 }
 
 
@@ -191,12 +200,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255,255,255,0.3);
+    color: rgba(255, 255, 255, 0.3);
     font-size: 40px;
     z-index: 0;
 }
 
-.pma-event-card-img img + .pma-event-card-img-placeholder {
+.pma-event-card-img img+.pma-event-card-img-placeholder {
     display: none;
 }
 
@@ -303,12 +312,10 @@
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(
-        to bottom,
-        rgba(10, 21, 40, 0.88) 0%,
-        rgba(10, 21, 40, 0.72) 45%,
-        rgba(10, 21, 40, 0.15) 100%
-    );
+    background: linear-gradient(to bottom,
+            rgba(10, 21, 40, 0.88) 0%,
+            rgba(10, 21, 40, 0.72) 45%,
+            rgba(10, 21, 40, 0.15) 100%);
 }
 
 /* Green corner accents */
@@ -400,7 +407,7 @@
 }
 
 .pma-event-card-meta--dark li {
-    color: rgba(255,255,255,0.75);
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .pma-event-card-meta--dark li i {
@@ -589,9 +596,17 @@
 
 /* Events section padding on mobile */
 @media (max-width: 480px) {
-    .pma-events-directory-section { padding: 32px 0 48px; }
-    .pma-event-detail-card { min-height: 320px; }
-    .pma-event-detail-card-content h3 { font-size: 18px; }
+    .pma-events-directory-section {
+        padding: 32px 0 48px;
+    }
+
+    .pma-event-detail-card {
+        min-height: 500px;
+    }
+
+    .pma-event-detail-card-content h3 {
+        font-size: 18px;
+    }
 }
 
 
@@ -701,7 +716,8 @@
 .pma-gallery-mfp .mfp-bottom-bar {
     background: #101a26;
     padding: 16px 24px;
-    margin-top: -1px; /* overlap to prevent seam */
+    margin-top: -1px;
+    /* overlap to prevent seam */
     border-radius: 0 0 12px 12px;
     display: flex;
     align-items: center;
@@ -783,6 +799,7 @@
 .pma-gallery-mfp .mfp-arrow-left {
     left: 20px;
 }
+
 .pma-gallery-mfp .mfp-arrow-left:before {
     left: 55% !important;
     transform: translate(-50%, -50%) rotate(-135deg) !important;
@@ -792,6 +809,7 @@
 .pma-gallery-mfp .mfp-arrow-right {
     right: 20px;
 }
+
 .pma-gallery-mfp .mfp-arrow-right:before {
     left: 42% !important;
     transform: translate(-50%, -50%) rotate(45deg) !important;
@@ -842,15 +860,19 @@
         height: 46px;
         margin-top: -23px;
     }
+
     .pma-gallery-mfp .mfp-arrow:before {
         font-size: 16px;
     }
+
     .pma-gallery-mfp .mfp-arrow-left {
         left: 12px;
     }
+
     .pma-gallery-mfp .mfp-arrow-right {
         right: 12px;
     }
+
     .pma-gallery-mfp .mfp-close {
         right: 12px !important;
         top: 12px !important;
@@ -859,17 +881,21 @@
 
 @media (max-width: 480px) {
     .pma-gallery-mfp .mfp-arrow {
-        display: none !important; /* Hide arrows on small mobile for touch-friendly swiping/tapping on image */
+        display: none !important;
+        /* Hide arrows on small mobile for touch-friendly swiping/tapping on image */
     }
+
     .pma-gallery-mfp .mfp-bottom-bar {
         padding: 12px 16px;
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
     }
+
     .pma-gallery-mfp .mfp-counter {
         align-self: flex-end;
     }
+
     .pma-gallery-mfp .mfp-title {
         font-size: 13px;
         padding-right: 0;
