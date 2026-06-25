@@ -1206,224 +1206,1041 @@
         "search_placeholder": "按姓名或专业领域搜索..."
       },
       "members": {
-    "member_1": {
-      "name": "阿加·扎法尔·艾哈迈德 (Aga Zafar Ahmed)",
-      "title": "主席",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
+        "member_1": {
+          "name": "阿加·扎法尔·艾哈迈德 (Aga Zafar Ahmed)",
+          "title": "主席",
+          "badges": {
+            "executive_team": "执行团队",
+            "mediator": "调解员",
+            "cedr_accredited": "CEDR 认证调解员"
+          },
+          "aria_label": "查看 阿加·扎法尔·艾哈迈德 的个人资料"
+        },
+        "member_2": {
+          "name": "赛玛·阿敏·卡瓦贾 (Saima Amin Khawaja)",
+          "title": "副主席 – 北区",
+          "badges": {
+            "executive_team": "执行团队",
+            "mediator": "调解员",
+            "cedr_accredited": "CEDR 认证调解员"
+          },
+          "aria_label": "查看 赛玛·阿敏·卡瓦贾 的个人资料"
+        },
+        "member_3": {
+          "name": "阿斯凡德·亚尔·阿里·汗 (Asfand Yar Ali Khan)",
+          "title": "副主席 – 北区",
+          "badges": {
+            "executive_team": "执行团队",
+            "mediator": "调解员",
+            "cedr_accredited": "CEDR 认证调解员"
+          },
+          "aria_label": "查看 阿斯凡德·亚尔·阿里·汗 的个人资料"
+        },
+        "member_4": {
+          "name": "赛义德·哈比卜 (Saeed Habib)",
+          "title": "副主席 – 南区",
+          "badges": {
+            "executive_team": "执行团队"
+          },
+          "aria_label": "查看 赛义德·哈比卜 的个人资料"
+        },
+        "member_5": {
+          "name": "沙巴娜·阿里 (Shabana Ali)",
+          "title": "副主席 – 南区",
+          "badges": {
+            "executive_team": "执行团队",
+            "mediator": "调解员",
+            "pma_accredited": "PMA 认证调解员"
+          },
+          "aria_label": "查看 沙巴娜·阿里 的个人资料"
+        },
+        "member_6": {
+          "name": "瓦吉哈·阿利姆 (Wajiha Aleem)",
+          "title": "秘书长",
+          "badges": {
+            "executive_team": "执行团队",
+            "mediator": "调解员",
+            "cedr_accredited": "CEDR 认证调解员"
+          },
+          "aria_label": "查看 瓦吉哈·阿利姆 的个人资料"
+        },
+        "member_7": {
+          "name": "赛义德·萨马德·乌尔·哈克 (Syed Sammad-ul-Haque)",
+          "title": "财务秘书",
+          "badges": {
+            "executive_team": "执行团队"
+          },
+          "aria_label": "查看 赛义德·萨马德·乌尔·哈克 的个人资料"
+        },
+        "member_8": {
+          "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
+          "title": "执行委员会 – 北区",
+          "badges": {
+            "executive_team": "执行团队",
+            "mediator": "调解员",
+            "cedr_accredited": "CEDR 认证调解员"
+          },
+          "aria_label": "查看 塔里克·赛义德·拉纳 的个人资料"
+        },
+        "member_9": {
+          "name": "胡玛·沙阿 (Huma Shah)",
+          "title": "执行委员会 – 北区",
+          "badges": {
+            "executive_team": "执行团队",
+            "mediator": "调解员",
+            "cedr_accredited": "CEDR 认证调解员"
+          },
+          "aria_label": "查看 胡玛·沙阿 的个人资料"
+        },
+        "member_10": {
+          "name": "乌迈玛·安瓦尔·汗 (Umaimah Anwar Khan)",
+          "title": "执行委员会 – 南区",
+          "badges": {
+            "executive_team": "执行团队"
+          },
+          "aria_label": "查看 乌迈玛·安瓦尔·汗 的个人资料"
+        },
+        "member_11": {
+          "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
+          "title": "执行委员会 – 南区",
+          "badges": {
+            "executive_team": "执行团队",
+            "mediator": "调解员",
+            "cedr_accredited": "CEDR 认证调解员"
+          },
+          "aria_label": "查看 穆斯坦西尔·扎基尔 的个人资料"
+        },
+        "member_12": {
+          "name": "阿德南·穆夫蒂 (Adnan Mufti)",
+          "title": "执行委员会 – 南区",
+          "badges": {
+            "executive_team": "执行团队",
+            "mediator": "调解员",
+            "cedr_accredited": "CEDR 认证调解员"
+          },
+          "aria_label": "查看 阿德南·穆夫蒂 的个人资料"
+        }
       },
-      "aria_label": "查看 阿加·扎法尔·艾哈迈德 的个人资料"
-    },
-    "member_2": {
-      "name": "赛玛·阿敏·卡瓦贾 (Saima Amin Khawaja)",
-      "title": "副主席 – 北区",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
+      "trainers": {
+        "trainer_1": {
+          "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
+          "title": "高级培训师",
+          "badges": {
+            "master_trainer": "高级培训师",
+            "director_training": "培训总监",
+            "ex_president": "前任主席"
+          },
+          "aria_label": "查看 穆斯坦西尔·扎基尔 的个人资料"
+        },
+        "trainer_2": {
+          "name": "安瓦尔·卡西夫· ممتاز (Anwar Kashif Mumtaz)",
+          "title": "高级培训师",
+          "badges": {
+            "master_trainer": "高级培训师",
+            "ex_president": "前任主席",
+            "leadership_trainer": "领导力培训师"
+          },
+          "aria_label": "查看 安瓦尔·卡西夫· ممتاز 的个人资料"
+        },
+        "trainer_3": {
+          "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
+          "title": "高级培训师",
+          "badges": {
+            "master_trainer": "高级培训师",
+            "ex_president": "前任主席",
+            "executive_committee_north": "执行委员会 – 北区"
+          },
+          "aria_label": "查看 塔里克·赛义德·拉纳 的个人资料"
+        },
+        "trainer_4": {
+          "name": "赛玛·阿敏·卡瓦贾 (Saima Amin Khawaja)",
+          "title": "高级培训师",
+          "badges": {
+            "master_trainer": "高级培训师",
+            "executive_member": "执行委员",
+            "vice_president_north": "副主席 – 北区"
+          },
+          "aria_label": "查看 赛玛·阿敏·卡瓦贾 的个人资料"
+        },
+        "trainer_5": {
+          "name": "胡玛·沙阿 (Huma Shah)",
+          "title": "高级培训师",
+          "badges": {
+            "master_trainer": "高级培训师",
+            "executive_committee_north": "执行委员会 – 北区",
+            "training_committee": "培训委员会"
+          },
+          "aria_label": "查看 胡玛·沙阿 的个人资料"
+        },
+        "trainer_6": {
+          "name": "乌斯曼·G·拉希德 (Usman G. Rashid)",
+          "title": "高级培训师",
+          "badges": {
+            "master_trainer": "高级培训师",
+            "barrister_at_law": "出庭律师 (Barrister)",
+            "former_secretary_general": "前任秘书长 – PMA"
+          },
+          "aria_label": "查看 乌斯曼·G·拉希德 的个人资料"
+        },
+        "trainer_7": {
+          "name": "阿斯凡德·亚尔·阿里·汗 (Asfand Yar Ali Khan)",
+          "title": "高级培训师",
+          "badges": {
+            "master_trainer": "高级培训师",
+            "executive_leadership": "高管领导力",
+            "vice_president_north": "副主席 – 北区"
+          },
+          "aria_label": "查看 阿斯凡德·亚尔·阿里·汗 的个人资料"
+        }
       },
-      "aria_label": "查看 赛玛·阿敏·卡瓦贾 的个人资料"
-    },
-    "member_3": {
-      "name": "阿斯凡德·亚尔·阿里·汗 (Asfand Yar Ali Khan)",
-      "title": "副主席 – 北区",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
+      "former_presidents": {
+        "president_1": {
+          "name": "安瓦尔·卡西夫· ممتاز (Anwar Kashif Mumtaz)",
+          "title": "前任主席"
+        },
+        "president_2": {
+          "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
+          "title": "前任主席"
+        },
+        "president_3": {
+          "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
+          "title": "前任主席"
+        }
       },
-      "aria_label": "查看 阿斯凡德·亚尔·阿里·汗 的个人资料"
-    },
-    "member_4": {
-      "name": "赛义德·哈比卜 (Saeed Habib)",
-      "title": "副主席 – 南区",
-      "badges": {
-        "executive_team": "执行团队"
+      "subcommittee_panel": {
+        "header": {
+          "title": "小组委员会",
+          "subtitle": "我们的小组委员会通过专业知识、协同合作和奉献服务，推动关键举措并支持 PMA 的使命。",
+          "expand_all": "展开全部"
+        },
+        "labels": {
+          "mandate": "职责:",
+          "director": "总监",
+          "convener": "召集人"
+        },
+        "committees": {
+          "training": {
+            "title": "培训委员会",
+            "mandate": "迎新、培训、认证/认可/进修课程/培训讲师 (TOT)",
+            "lead_name": "Mustansir Zakir",
+            "members": [
+              "Anwar Kashif Mumtaz",
+              "Saima Khawaja",
+              "Tariq Rana",
+              "Huma Shah",
+              "Asfandyar Ali Khan"
+            ]
+          },
+          "conduct": {
+            "title": "行为准则委员会",
+            "mandate": "为调解员起草行为准则，并争取获得法律部的批准以在全国范围内实施",
+            "lead_name": "Umaima Khan",
+            "members": [
+              "Anwar Kashif Mumtaz",
+              "Saima Khawaja",
+              "Khalid Mehmood",
+              "Adnan Mufti",
+              "Tariq Rana",
+              "Asfandyar Ali Khan"
+            ]
+          },
+          "membership": {
+            "title": "会员 committee",
+            "mandate": "保留和激活老会员，通过邀请其他机构的认可调解员来扩大联合会员组合，并接纳准会员和名誉会员。",
+            "lead_name": "Saeed Habib",
+            "members": [
+              "Khalid Mehmood",
+              "Saima Khawaja",
+              "Samad Ul Haq",
+              "Asfandyar Ali Khan"
+            ]
+          },
+          "bar_south": {
+            "title": "法律与学术协调 – 南部",
+            "mandate": "与律师协会/律师公会及法学院协调，组织会议、研讨会、宣讲会和培训/工作坊",
+            "lead_name": "Shabana Ali",
+            "members": [
+              "Saadat Yar Khan",
+              "Umaima Khan",
+              "Mrs. Khalid Mehmood",
+              "Samad Ul Haq",
+              "Mansoor Meer",
+              "Naved Ahmed"
+            ]
+          },
+          "bar_north": {
+            "title": "法律与学术协调 – 北部",
+            "mandate": "与律师协会/律师公会及法学院协调，组织会议、研讨会、宣讲会和培训/工作坊",
+            "lead_name": "Saima Khawaja",
+            "members": [
+              "Zafar Kalanauri",
+              "Barrister Tariq Rana",
+              "Asfandyar Ali Khan"
+            ]
+          },
+          "institutional": {
+            "title": "机构协调委员会",
+            "mandate": "与商会、行业团体、专业协会/机构进行协调",
+            "lead_name": "Adnan Mufti",
+            "members": [
+              "Mustansir Zakir",
+              "Saeed Habib",
+              "Tariq Rana",
+              "Asfandyar Ali Khan",
+              "Samad Ul Haq"
+            ]
+          }
+        },
+        "footer_note": "Aga Zafar Ahmed（主席）和 Wajiha Aleem（秘书长）是每个委员会的当然成员。"
       },
-      "aria_label": "查看 赛义德·哈比卜 的个人资料"
-    },
-    "member_5": {
-      "name": "沙巴娜·阿里 (Shabana Ali)",
-      "title": "副主席 – 南区",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "pma_accredited": "PMA 认证调解员"
-      },
-      "aria_label": "查看 沙巴娜·阿里 的个人资料"
-    },
-    "member_6": {
-      "name": "瓦吉哈·阿利姆 (Wajiha Aleem)",
-      "title": "秘书长",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
-      },
-      "aria_label": "查看 瓦吉哈·阿利姆 的个人资料"
-    },
-    "member_7": {
-      "name": "赛义德·萨马德·乌尔·哈克 (Syed Sammad-ul-Haque)",
-      "title": "财务秘书",
-      "badges": {
-        "executive_team": "执行团队"
-      },
-      "aria_label": "查看 赛义德·萨马德·乌尔·哈克 的个人资料"
-    },
-    "member_8": {
-      "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
-      "title": "执行委员会 – 北区",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
-      },
-      "aria_label": "查看 塔里克·赛义德·拉纳 的个人资料"
-    },
-    "member_9": {
-      "name": "胡玛·沙阿 (Huma Shah)",
-      "title": "执行委员会 – 北区",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
-      },
-      "aria_label": "查看 胡玛·沙阿 的个人资料"
-    },
-    "member_10": {
-      "name": "乌迈玛·安瓦尔·汗 (Umaimah Anwar Khan)",
-      "title": "执行委员会 – 南区",
-      "badges": {
-        "executive_team": "执行团队"
-      },
-      "aria_label": "查看 乌迈玛·安瓦尔·汗 的个人资料"
-    },
-    "member_11": {
-      "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
-      "title": "执行委员会 – 南区",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
-      },
-      "aria_label": "查看 穆斯坦西尔·扎基尔 的个人资料"
-    },
-    "member_12": {
-      "name": "阿德南·穆夫蒂 (Adnan Mufti)",
-      "title": "执行委员会 – 南区",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
-      },
-      "aria_label": "查看 阿德南·穆夫蒂 的个人资料"
-    }
-  },
-  "trainers": {
-    "trainer_1": {
-      "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
-      "title": "高级培训师",
-      "badges": {
-        "master_trainer": "高级培训师",
-        "director_training": "培训总监",
-        "ex_president": "前任主席"
-      },
-      "aria_label": "查看 穆斯坦西尔·扎基尔 的个人资料"
-    },
-    "trainer_2": {
-      "name": "安瓦尔·卡西夫· ممتاز (Anwar Kashif Mumtaz)",
-      "title": "高级培训师",
-      "badges": {
-        "master_trainer": "高级培训师",
-        "ex_president": "前任主席",
-        "leadership_trainer": "领导力培训师"
-      },
-      "aria_label": "查看 安瓦尔·卡西夫· ممتاز 的个人资料"
-    },
-    "trainer_3": {
-      "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
-      "title": "高级培训师",
-      "badges": {
-        "master_trainer": "高级培训师",
-        "ex_president": "前任主席",
-        "executive_committee_north": "执行委员会 – 北区"
-      },
-      "aria_label": "查看 塔里克·赛义德·拉纳 的个人资料"
-    },
-    "trainer_4": {
-      "name": "赛玛·阿敏·卡瓦贾 (Saima Amin Khawaja)",
-      "title": "高级培训师",
-      "badges": {
-        "master_trainer": "高级培训师",
-        "executive_member": "执行委员",
-        "vice_president_north": "副主席 – 北区"
-      },
-      "aria_label": "查看 赛玛·阿敏·卡瓦贾 的个人资料"
-    },
-    "trainer_5": {
-      "name": "胡玛·沙阿 (Huma Shah)",
-      "title": "高级培训师",
-      "badges": {
-        "master_trainer": "高级培训师",
-        "executive_committee_north": "执行委员会 – 北区",
-        "training_committee": "培训委员会"
-      },
-      "aria_label": "查看 胡玛·沙阿 的个人资料"
-    },
-    "trainer_6": {
-      "name": "乌斯曼·G·拉希德 (Usman G. Rashid)",
-      "title": "高级培训师",
-      "badges": {
-        "master_trainer": "高级培训师",
-        "barrister_at_law": "出庭律师 (Barrister)",
-        "former_secretary_general": "前任秘书长 – PMA"
-      },
-      "aria_label": "查看 乌斯曼·G·拉希德 的个人资料"
-    },
-    "trainer_7": {
-      "name": "阿斯凡德·亚尔·阿里·汗 (Asfand Yar Ali Khan)",
-      "title": "高级培训师",
-      "badges": {
-        "master_trainer": "高级培训师",
-        "executive_leadership": "高管领导力",
-        "vice_president_north": "副主席 – 北区"
-      },
-      "aria_label": "查看 阿斯凡德·亚尔·阿里·汗 的个人资料"
-    }
-  },
-  "former_presidents": {
-    "president_1": {
-      "name": "安瓦尔·卡西夫· ممتاز (Anwar Kashif Mumtaz)",
-      "title": "前任主席"
-    },
-    "president_2": {
-      "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
-      "title": "前任主席"
-    },
-    "president_3": {
-      "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
-      "title": "前任主席"
-    }
-  }
+      "mediators": {
+        "adnan-mufti": {
+          "name": "Adnan Mufti",
+          "role": "会员"
+        },
+        "anwar-kashif-mumtaz": {
+          "name": "Anwar Kashif Mumtaz",
+          "role": "会员"
+        },
+        "ayesha-sarfraz-ali-khan": {
+          "name": "Ayesha Sarfraz Ali Khan",
+          "role": "会员"
+        },
+        "barrister-tariq-saeed-lahore": {
+          "name": "Barrister Tariq Saeed",
+          "role": "会员"
+        },
+        "farrukh-junaidy": {
+          "name": "Farrukh Junaidy",
+          "role": "会员"
+        },
+        "huma-shah": {
+          "name": "Huma Shah",
+          "role": "会员"
+        },
+        "ishtiaq-memon": {
+          "name": "Ishtiaq Memon",
+          "role": "会员"
+        },
+        "isfandyar-ali-khan": {
+          "name": "Isfandyar Ali Khan",
+          "role": "会员"
+        },
+        "khalid-firoz-arfeen": {
+          "name": "Khalid Firoz Arfeen",
+          "role": "会员"
+        },
+        "khalid-mahmood-siddiqui": {
+          "name": "Khalid Mahmood Siddiqui",
+          "role": "会员"
+        },
+        "mohammad-rehan-siddqui": {
+          "name": "Mohammad Rehan Siddqui",
+          "role": "会员"
+        },
+        "mustansir-zakir": {
+          "name": "Mustansir Zakir",
+          "role": "会员"
+        },
+        "nausheen-ahmed": {
+          "name": "Nausheen Ahmed",
+          "role": "会员"
+        },
+        "neelofar-hameed": {
+          "name": "Neelofar Hameed",
+          "role": "会员"
+        },
+        "omair-nisar-khan": {
+          "name": "Omair Nisar Khan",
+          "role": "会员"
+        },
+        "raheem-hasnani": {
+          "name": "Raheem Hasnani",
+          "role": "会员"
+        },
+        "reshma-aftab": {
+          "name": "Reshma Aftab",
+          "role": "会员"
+        },
+        "rubina-virani": {
+          "name": "Rubina Virani",
+          "role": "会员"
+        },
+        "saadat-yar-khan": {
+          "name": "Saadat Yar Khan",
+          "role": "会员"
+        },
+        "saeed-habib": {
+          "name": "Saeed Habib",
+          "role": "会员"
+        },
+        "saima-khawaja": {
+          "name": "Saima Amin Khawaja",
+          "role": "会员"
+        },
+        "salina-khalfan": {
+          "name": "Salina Khalfan",
+          "role": "会员"
+        },
+        "shabana-ali": {
+          "name": "Shabana Ali",
+          "role": "会员"
+        },
+        "shaheen-premani": {
+          "name": "Shaheen Premani",
+          "role": "会员"
+        },
+        "syed-haider-imam-rizvi": {
+          "name": "Syed Haider Imam Rizvi",
+          "role": "会员"
+        },
+        "syed-sammadul-haque": {
+          "name": "Syed Sammadul Haque",
+          "role": "会员"
+        },
+        "tahmasp-r-razvi": {
+          "name": "Tahmasp R. Razvi",
+          "role": "会员"
+        },
+        "umaimah-a-rizvi": {
+          "name": "Umaimah A. Rizvi",
+          "role": "会员"
+        },
+        "usman-g-rashid": {
+          "name": "Usman G. Rashid",
+          "role": "会员"
+        },
+        "wajiha-aleem": {
+          "name": "Wajiha Aleem",
+          "role": "会员"
+        },
+        "yousuf-moulvi": {
+          "name": "Yousuf Moulvi",
+          "role": "会员"
+        },
+        "zafar-kalanauri": {
+          "name": "Zafar Kalanauri",
+          "role": "会员"
+        },
+        "zia-makhdoom": {
+          "name": "Zia Makhdoom",
+          "role": "会员"
+        }
+      }
     },
     "resources_page": {
-    "hero": {
-      "image_alt": "服务核心图片",
-      "eyebrow": "资源",
-      "title_line1": "知识。法律。",
-      "title_accent": "变革。",
-      "lead_text": "获取 PMA 出版物、调解法律、机构文件、研究论文、倡导资源以及媒体内容，这些内容支持巴基斯坦替代性纠纷解决机制 (ADR) 的发展与和平化解争端。"
+      "hero": {
+        "image_alt": "服务核心图片",
+        "eyebrow": "资源",
+        "title_line1": "知识。法律。",
+        "title_accent": "变革。",
+        "lead_text": "获取 PMA 出版物、调解法律、机构文件、研究论文、倡导资源以及媒体内容，这些内容支持巴基斯坦替代性纠纷解决机制 (ADR) 的发展与和平化解争端。"
+      },
+      "tabs": {
+        "featured": "精选",
+        "downloads": "下载中心",
+        "mediation_laws": "调解法律",
+        "advocacy": "政策倡导",
+        "press_media": "新闻与媒体",
+        "articles": "文章报告"
+      },
+      "downloads_panel": {
+        "header": {
+          "title": "下载中心",
+          "lead": "可下载的 PDF、表格和出版物。点击文件可在新标签页中打开。",
+          "view_all_text": "查看全部下载"
+        },
+        "global_labels": {
+          "download_btn_text": "下载 PDF",
+          "default_image_alt": "ADR-ACT-2017 PDF 文件"
+        },
+        "items": {
+          "card_1": {
+            "title": "2017年替代性纠纷解决法案 (ADR-ACT-2017)",
+            "file_name": "ADR-ACT-2017.pdf"
+          },
+          "card_2": {
+            "title": "政策倡导与游说 (Advocacy and Lobby)",
+            "file_name": "Advocacy-and-Lobby.pdf"
+          },
+          "card_3": {
+            "title": "注册证书",
+            "file_name": "Certificate.pdf"
+          },
+          "card_4": {
+            "title": "会员申请表",
+            "file_name": "membership-application-form.pdf"
+          },
+          "card_5": {
+            "title": "公司章程最新版 (Memorandum of Association)",
+            "file_name": "MEMORANDUM-OF-ASSOCIATION-UPDATED.pdf"
+          },
+          "card_6": {
+            "title": "提名表",
+            "file_name": "nomination_form.pdf"
+          },
+          "card_7": {
+            "title": "PMA 致辞演讲",
+            "file_name": "pma-speech.pdf"
+          },
+          "card_8": {
+            "title": "为什么加入 PMA",
+            "file_name": "Why-Join-PMA.pdf"
+          }
+        }
+      },
+      "mediation_laws_panel": {
+        "header": {
+          "title": "调解法律与立法",
+          "lead": "与调解相关的核心法规、法案和官方立法文件。",
+          "view_all_text": "查看全部法律"
+        },
+        "global_labels": {
+          "download_btn_text": "下载 PDF",
+          "default_image_alt": "ADR-ACT-2017 PDF 文件"
+        },
+        "items": {
+          "card_1": {
+            "title": "伊斯兰堡争端解决法案 (调解)",
+            "file_name": "Law-Islamabad-Dispute-Resolution-Act-Mediation.pdf"
+          },
+          "card_2": {
+            "title": "1908年《民事诉讼法典》第一附表的修订项",
+            "file_name": "Law-KPK-Mediation-Amendment-No.1523-1622_Amendments-in-Frist-Schedule-of-the-code-of-Civil-Procedure-1908_dt-1.pdf"
+          },
+          "card_3": {
+            "title": "旁遮普邦1908年《民事诉讼法典》修订案 (调解条款)",
+            "file_name": "Law-Punjab-Amendments_civil_procedure_1908_final_Mediation_Provisions.pdf"
+          },
+          "card_4": {
+            "title": "《民事诉讼法典》(信德省修正案) 法案草案，2018年",
+            "file_name": "Law-Sindh-Notification-dt-8-11-2018-The-DRAFT-Code-of-Civil-Procedure-Sindh-Amendment-Bill-2018.pdf"
+          },
+          "card_5": {
+            "title": "关于调解所达成和解协议的《新加坡公约》(正文)",
+            "file_name": "Law-Singapore-Convention-on-Mediated-Settlements-Text.pdf"
+          }
+        }
+      },
+      "advocacy_panel": {
+        "header": {
+          "title": "政策倡导与政策制定",
+          "lead": "支持替代性纠纷解决机制 (ADR) 改革的政策简报、倡导工具包和立场文件。",
+          "view_all_text": "查看全部政策倡导"
+        },
+        "global_labels": {
+          "download_btn_text": "下载 PDF",
+          "default_image_alt": "ADR-ACT-2017 PDF 文件"
+        },
+        "items": {
+          "card_1": {
+            "title": "开伯尔-普赫图赫瓦省 (KPK)",
+            "file_name": "kpk.pdf"
+          },
+          "card_2": {
+            "title": "旁遮普邦",
+            "file_name": "punjab.pdf"
+          },
+          "card_3": {
+            "title": "信德省",
+            "file_name": "sindh.pdf"
+          }
+        }
+      },
+      "press_media_panel": {
+        "header": {
+          "title": "新闻与媒体",
+          "lead": "面向记者的供稿、媒体指南和可下载素材资源。",
+          "view_all_text": "查看媒体素材"
+        },
+        "global_labels": {
+          "download_btn_text": "下载 PDF",
+          "default_image_alt": "PDF 文件"
+        },
+        "items": {
+          "card_1": {
+            "title": "《商业记录报》 (Business Recorder)",
+            "file_name": "BusinessRecorder.pdf"
+          },
+          "card_2": {
+            "title": "《商业记录报》广告 (AD)",
+            "file_name": ""
+          },
+          "card_3": {
+            "title": "《前线邮报》 (Frontier Post)",
+            "file_name": "FrontierPost.pdf"
+          },
+          "card_4": {
+            "title": "《巴基斯坦观察家报》 (Pakistan Observer)",
+            "file_name": "PakistanObserver.pdf"
+          },
+          "card_5": {
+            "title": "PMA 官方新闻稿",
+            "file_name": "PMA_PressRelease.pdf"
+          },
+          "card_6": {
+            "title": "《论坛报》 (Tribune)",
+            "file_name": "Tribune.pdf"
+          }
+        }
+      },
+      "articles_panel": {
+        "header": {
+          "title": "文章与分析",
+          "lead": "关于调解和多元化纠纷解决机制 (ADR) 的研究文章、深度分析与行业前沿洞察。",
+          "view_all_text": "查看全部文章"
+        },
+        "global_labels": {
+          "download_btn_text": "下载 PDF",
+          "author_prefix": "作者："
+        },
+        "items": {
+          "card_1": {
+            "title": "It Really Happened in Frankfurt",
+            "author": "Jawad A. Sarwana",
+            "file_name": "blog-Jawad-Sarwana-It-Happened-in-Frankfurt.pdf",
+            "image_alt": "It Really Happened in Frankfurt PDF 文件"
+          },
+          "card_2": {
+            "title": "Mediation Techniques (调解技巧)",
+            "author": "Jawad A. Sarwana",
+            "file_name": "Blog-Sarwana.pdf",
+            "image_alt": "Mediation Techniques PDF 文件"
+          }
+        }
+      },
+      "search_bar": {
+        "question": "找不到您需要的内容？",
+        "subtext": "使用搜索或按分类浏览，快速找到您需要的资源。",
+        "placeholder": "搜索资源...",
+        "browse_btn_text": "浏览全部资源"
+      }
     },
-    "tabs": {
-      "featured": "精选",
-      "downloads": "下载中心",
-      "mediation_laws": "调解法律",
-      "advocacy": "政策倡导",
-      "press_media": "新闻与媒体",
-      "articles": "文章报告"
+    "events_page": {
+      "hero_section": {
+        "eyebrow": "活动",
+        "title": "最新活动",
+        "lead": "随时获取 PMA 会议、调解倡议、工作坊以及重要公告的最新动态。",
+        "image_alt": "服务主图"
+      },
+      "tab_bar": {
+        "upcoming_events": "即将举办的活动",
+        "past_events": "往期活动",
+        "announcements": "重要公告"
+      },
+      "upcoming_panel": {
+        "title": "敬请期待",
+        "lead": "即将举办的活动、会议和工作坊将在此列出。请稍后回来查看。"
+      },
+      "announcements_panel": {
+        "title": "敬请期待",
+        "lead": "重要公告将在此处显示。敬请关注。"
+      },
+      "past_events": {
+        "training_program_detail": {
+          "global_labels": {
+            "badge_text": "往期活动",
+            "pill_text": "认证培训项目",
+            "view_gallery_btn": "查看活动画册",
+            "about_label": "活动介绍",
+            "highlights_label": "核心培训亮点"
+          },
+          "card": {
+            "title": "第六届认证调解培训项目",
+            "sub": "信德省高等法院",
+            "date": "2026年6月8日 至 2026年6月12日",
+            "location": "卡拉奇信德省高等法院"
+          },
+          "about_paragraphs": [
+            "巴基斯坦调解员协会 (PMA) 在信德省高等法院成功举办了第六届认证调解培训项目。",
+            "该项目旨在加强调解技能，推广多元化纠纷解决机制 (ADR) 实践，并提升法律从业者和调解专业人员的专业能力。",
+            "通过互动环节、实际演练和小组协作讨论，参与者对现代调解技巧和纠纷解决框架有了深入而宝贵的理解。"
+          ],
+          "highlights": [
+            "专业认证调解培训课程",
+            "调解实战模拟演练",
+            "互动式小组专题讨论",
+            "多元化纠纷解决 (ADR) 技巧",
+            "职业岗位能力建设",
+            "协同互助的学习环境"
+          ],
+          "meta": {
+            "objective_label": "培训目标",
+            "objective_text": "强化调解技能，推动高效、妥善化解矛盾纠纷的实际应用。",
+            "organized_label": "主办单位",
+            "organized_text": "巴基斯坦调解员协会 (PMA)",
+            "participants_label": "参训人员",
+            "participants_text": "法律专业人士、ADR 从业人员、调解员及参训学员。",
+            "type_label": "活动类型",
+            "type_text": "认证培训项目"
+          }
+        },
+        "national_conference_detail": {
+          "global_labels": {
+            "badge_text": "往期活动",
+            "about_label": "活动介绍",
+            "highlights_label": "重点阐述的 ADR 进展"
+          },
+          "card": {
+            "title": "调解：前进之路",
+            "sub": "第一届全国调解大会",
+            "date": "2015年3月7日",
+            "location": "卡拉奇万豪酒店",
+            "type": "全国性会议"
+          },
+          "about_paragraphs": [
+            "巴基斯坦调解员协会 (PMA) 是巴基斯坦首个代表海外受训及认证调解员以及其他致力于推动该事业发展专业人士的机构。协会成立于2013年，承接了多项此前由国际金融公司/世界银行集团多元化纠纷解决机制 (ADR) 项目实施的活动。",
+            "鉴于巴基斯坦当前的合同执行指标不容乐观、耗时较长且成本高昂，PMA 致力引导和支持各项干预措施，以协助诉讼各方通过调解等和解程序友好解决争议，并以此配合和补充司法与法院在及时结案方面的努力。"
+          ],
+          "highlights": [
+            "卡拉奇争议解决中心和拉合尔工商会调解中心全面投入运营。",
+            "在巴基斯坦积极推动 ADR/调解法律改革的立法游说。",
+            "巴基斯坦本土开始拥有 CEDR 认证调解员与高级培训师。",
+            "在巴基斯坦国内开展 ADR 专业课程体系建设。",
+            "进一步强化并在巴基斯坦落地交付 ADR 专业培训。",
+            "将 ADR 视为解决包括公司治理在内等多元化纠纷的重要渠道。"
+          ],
+          "meta": {
+            "objective_label": "大会宗旨",
+            "objective_text": "进一步推进 ADR 及调解事业，探讨在巴基斯坦实现调解制度化所面临的进展、挑战与未来干预方向。",
+            "organized_label": "大会主办方",
+            "organized_text": "本届大会由巴基斯坦调解员协会主办，并得到了各大会合作伙伴的大力支持。",
+            "participants_label": "演讲嘉宾",
+            "participants_text": "来自政府、司法界、商界、律师协会、学术界和巴基斯坦各调解中心代表及海外演讲嘉宾。",
+            "type_label": "活动类型",
+            "type_text": "全国性会议"
+          }
+        }
+      }
+    },
+    "privacy_policy": {
+      "hero": {
+        "title_main": "隐私",
+        "title_accent": "政策",
+        "lead_text": "我们致力于保护您的隐私，并确保以安全和负责任的方式处理您的个人信息。"
+      },
+      "sections": {
+        "commitment": {
+          "title": "隐私承诺",
+          "paragraphs": [
+            "巴基斯坦调解员协会 (PMA) 致力于保护您的在线隐私。巴基斯坦调解员协会 (PMA) 创建了本隐私声明，以展示我们对隐私的坚定承诺。以下披露了巴基斯坦调解员协会 (PMA) 的信息收集和传播惯例。",
+            "PMA 保留随时通过通知用户新隐私声明的存在来更改本政策的权利。本声明及其中概述的政策并不旨在且不会在任何一方内部或代表任何一方创建任何合同或其他法律权利。"
+          ]
+        },
+        "respect_data": {
+          "title": "尊重用户数据",
+          "paragraphs": [
+            "巴基斯坦调解员协会 (PMA) 高度重视与客户的牢固关系。巴基斯坦调解员协会 (PMA) 的数据收集工作是在充分、妥善尊重客户隐私的前提下进行的。",
+            "我们收集的数据将以敏感、安全的方式进行处理，并对隐私给予妥善的考虑。巴基斯坦调解员协会 (PMA) 不会向第三方披露、分发或销售我们从客户那里收集的数据。"
+          ]
+        },
+        "collection": {
+          "title": "信息收集",
+          "lead_text": "PMA 收集用于会员注册的信息包括：",
+          "items": [
+            "计算机化全国身份证 (CNIC)",
+            "全名",
+            "住宅地址",
+            "办公地址",
+            "电话号码",
+            "电子邮箱信息",
+            "其他相关的会员信息"
+          ]
+        }
+      }
+    },
+    "complaint_policy": {
+      "hero": {
+        "title_main": "投诉与申诉",
+        "title_accent": "政策",
+        "lead_text": "我们致力于公平、迅速和透明地解决各方关切。"
+      },
+      "intro_card": {
+        "bold_text": "我们拥有一套规范的投诉处理程序，以确保每项投诉都能得到妥善的关切和处理。",
+        "lead_p": "任何使用 PMA 调解认证服务的用户均可提出投诉。PMA 旨在向所有用户提供快速且及时的服务。我们将：",
+        "commitments": [
+          "认真对待并妥善处理所有投诉；",
+          "迅速解决投诉问题；以及",
+          "从投诉中吸取教训，并采取行动不断改进我们的服务。"
+        ]
+      },
+      "steps": [
+        {
+          "text": "然而，我们只能处理针对从培训总监处接受到不良客户服务而提出的相关投诉。"
+        },
+        {
+          "text": "这意味着您的诉求必须致信给培训总监，并通过邮寄和电子邮件的形式发送，同时抄送 (cc) 给 PMA 主席。"
+        },
+        {
+          "text": "对培训总监决定不满意的学生可自由拒绝该决定，在这种情况下，该决定将不具任何约束力。总监有义务在收到投诉后的30天内作出答复。"
+        },
+        {
+          "text": "但是，如果您对投诉的处理结果仍不满意，或者培训总监未作答复，您可以将投诉提交给 PMA 主席，主席将组建一个由两名成员组成的教席仲裁庭来听取您的诉求。"
+        },
+        {
+          "text": "您需要清晰、扼要地说明提出请求的原因，以及您希望通过审查或针对培训总监的不作为达到什么目标。由两名成员组成的仲裁庭将向您致信（并抄送 PMA 主席），且务必在提交升级请求后的30个工作日内以书面形式答复您。"
+        },
+        {
+          "text": "如果您对两名成员组成的仲裁庭就您的投诉所采取的行动或不作为仍不满意，这并不会影响任何一方前往消费者权益法院寻求救济的权利，该渠道对所有人开放。"
+        }
+      ]
+    },
+    "terms_conditions": {
+      "hero": {
+        "title_main": "条款与",
+        "title_accent": "条件",
+        "lead_text": "请仔细阅读这些条款。通过访问和使用我们的网站及服务，即表示您同意遵守以下条款和条件。"
+      },
+      "accordion_items": [
+        {
+          "id": "training",
+          "title": "培训",
+          "preview": "为确认您的预订，您的款项必须在课程开始前提前送达我们的办公室。",
+          "body_paragraphs": [
+            "如果用户逾期付款，将不被允许参加课程。"
+          ]
+        },
+        {
+          "id": "refunds",
+          "title": "培训退款",
+          "preview": "我们理解生活充满变数。如果您无法按时出席，请尽快致电 021-3452-9768 或发送电子邮件至 info@pma.org.pk 与我们联系。",
+          "body_paragraphs": [
+            "我们很乐意为您安排替代人员出席，或安排延期转账或退款，我们始终会根据具体情况个案处理。"
+          ]
+        },
+        {
+          "id": "membership",
+          "title": "会籍取消",
+          "preview": "除特殊情况外，会籍费用一律不予退还。",
+          "body_paragraphs": [
+            "如果您认为您的情况符合特例条件，请与我们联系。每个案例都将由 PMA 会员委员会进行单独审查。"
+          ]
+        },
+        {
+          "id": "copyright",
+          "title": "版权所有",
+          "preview": "本网站及其内容受版权保护。本网站材料的版权归巴基斯坦调解员协会 (PMA) 所有，部分材料的版权归第三方所有。网站的功能和运营版权归 PMA 所有。",
+          "body_paragraphs": [
+            "您可以使用网页浏览器浏览本网站及其内容，并电子复制和打印本网站部分的纸质副本，且仅限于个人非商业用途。严禁任何其他用途，包括对本网站内容进行复制、修改、分发、传播、再版、展示或演播。"
+          ]
+        },
+        {
+          "id": "disclaimer",
+          "title": "免责声明",
+          "preview": "您同意，您访问和使用本网站必须遵守这些条款及所有适用法律，并自担风险。本网站及其内容按“原样”提供，网站可能包含错误、漏洞和不准确之处，且可能不完整或不是最新的。",
+          "body_paragraphs": [
+            "除非适用法律另有规定，巴基斯坦调解员协会 (PMA) 对本网站的运营或本网站包含的信息、内容、材料或产品不作任何形式的明示或暗示的陈述或保证。",
+            "PMA 及其关联公司、董事、管理人员、员工、代理人、承包商、继承人或受让人均不对因使用本网站或链接到本网站的任何其他网站而引起的或与之相关的任何损害承担责任。该限制适用于您或他人可能遭受的直接、间接、间接引起的、特殊、惩罚性或其他损害，以及利润损失、业务中断或数据或信息丢失的损害。"
+          ]
+        },
+        {
+          "id": "translations",
+          "title": "谷歌翻译",
+          "preview": "为了您的方便，本网站使用由 Google Translate™ 支持的翻译程序进行了翻译。Google Translate™ 的翻译是通过自动化电脑程序完成的，而非由获得认证的专业翻译人员进行。",
+          "body_paragraphs": [
+            "因此，翻译结果可能不准确或不可靠。请谨慎使用 Google Translate™ 的翻译。翻译内容按“原样”提供，不提供任何形式的保证。由于翻译软件的局限性，某些内容（如图像、视频、Flash 等）可能无法翻译。",
+            "PMA 对不完整或不准确的翻译不承担责任，也不对用户因使用 Google Translate™ 翻译（或本网站上的任何其他翻译）而引起的任何损害或损失承担责任。",
+            "如果您对 Google™ 翻译有任何疑问，请访问：Google Translate™ 常见问题解答。",
+            "谷歌不对翻译承担任何明示或暗示的保证，包括任何关于准确性、可靠性的保证，以及任何关于适销性、特定用途适用性和非侵权性的暗示保证。"
+          ]
+        }
+      ]
+    },
+    "become_member": {
+      "hero": {
+        "eyebrow": "加入 PMA",
+        "title_main": "成为",
+        "title_accent": "PMA 会员",
+        "lead_text": "加入由调解员、ADR（替代性糾紛解決）专业人士及机构领导者组成的杰出社区，共同致力于和平解决争端。"
+      },
+      "why_join": {
+        "title_main": "为什么",
+        "title_accent": "加入",
+        "title_end": "PMA？",
+        "subtitle": "PMA 会员享有明确的专业优势与发展机遇。",
+        "cards": [
+          {
+            "title": "国际会议",
+            "description": "以优惠的费用和优先报名的特权，参加探讨调解与仲裁最新议题的全球会议。"
+          },
+          {
+            "title": "研讨会与课程",
+            "description": "获得参与高质量教育研讨会和专业职业发展课程的机会。"
+          },
+          {
+            "title": "专业成长",
+            "description": "通过专家的独到见解和优质资源，深化您对调解和 ADR 的理解。"
+          },
+          {
+            "title": "全球网络",
+            "description": "建立并维护具有价值的国内与国际专业人脉关系。"
+          },
+          {
+            "title": "商业机遇",
+            "description": "拓宽您的商业眼界及专业社交圈。"
+          },
+          {
+            "title": "支持行业发展",
+            "description": "在支持和推动调解及和平解决争端的发展中发挥关键作用。"
+          }
+        ]
+      },
+      "benefits": {
+        "title_main": "会员",
+        "title_accent": "权益",
+        "subtitle": "作为 PMA 的注册会员，您将享有广泛的独特优势与优质机会。",
+        "items": [
+          {
+            "title": "社交与拓展机会",
+            "description": "PMA 全年为会员提供各种机会，以增进专业关系并掌握行业动态与趋势。"
+          },
+          {
+            "title": "会员名录",
+            "description": "此名录专供 PMA 会员独享，包含会员及其他全球机构的最新联络详情。提供纸质版和电子版。"
+          },
+          {
+            "title": "会员证书",
+            "description": "会员在申请获批后将获发国际认可的会员证书。证书将在年度会员盛典上颁发。"
+          },
+          {
+            "title": "持续专业发展",
+            "description": "优先参与由调解和 ADR 领域杰出专家主持的独家研讨会及专业发展课程（提供英文和阿拉伯语）。"
+          }
+        ]
+      },
+      "membership_journey": {
+        "title": "会员发展历程",
+        "subtitle": "成为 PMA 尊贵会员的简明流程。",
+        "steps": [
+          {
+            "num": "1",
+            "title": "提交会员申请表",
+            "desc": "填写在线申请表。"
+          },
+          {
+            "num": "2",
+            "title": "资料审核",
+            "desc": "我们的团队将评估您的申请。"
+          },
+          {
+            "num": "3",
+            "title": "会员入会批准",
+            "desc": "您的申请获得批准后，您将收到通知。"
+          },
+          {
+            "num": "4",
+            "title": "欢迎加入 PMA",
+            "desc": "获取您的会员证书并正式加入我们的专业社交网络。"
+          }
+        ]
+      },
+      "membership_application": {
+        "form_header": {
+          "title": "会员申请表",
+          "desc": "请提供准确的信息。所有带有 * 标记的字段均为必填项。"
+        },
+        "sections": {
+          "personal_info": {
+            "title": "个人基本信息",
+            "fields": {
+              "full_name": {
+                "label": "全名",
+                "placeholder": "请输入您的全名"
+              },
+              "father_name": {
+                "label": "父亲姓名",
+                "placeholder": "请输入父亲姓名"
+              },
+              "qualification": {
+                "label": "教育程度/学历",
+                "placeholder": "请输入学历"
+              },
+              "designation": {
+                "label": "职称/职位",
+                "placeholder": "请输入职位"
+              },
+              "cnic": {
+                "label": "身份证/CNIC 号码",
+                "placeholder": "请输入身份证号码"
+              },
+              "chamber_phone": {
+                "label": "办公室/事务所电话",
+                "placeholder": "请输入事务所电话"
+              }
+            }
+          },
+          "contact_info": {
+            "title": "联系方式",
+            "fields": {
+              "office_address": {
+                "label": "办公地址",
+                "placeholder": "请输入办公地址"
+              },
+              "res_address": {
+                "label": "住宅地址",
+                "placeholder": "请输入住宅地址"
+              },
+              "res_phone": {
+                "label": "住宅电话",
+                "placeholder": "请输入住宅电话"
+              },
+              "email": {
+                "label": "电子邮箱",
+                "placeholder": "请输入邮箱地址"
+              },
+              "upload": {
+                "label": "上传证明文件",
+                "text": "选择文件或拖拽文件至此",
+                "hint": "支持 PDF, JPG, PNG 格式 (最大 5MB)"
+              }
+            }
+          },
+          "references": {
+            "title": "专业推荐人/证明人",
+            "fields": {
+              "proposer_name": {
+                "label": "第一推荐人姓名",
+                "placeholder": "请输入推荐人全名"
+              },
+              "proposer_address": {
+                "label": "第一推荐人住宅地址",
+                "placeholder": "请输入地址"
+              },
+              "proposer_phone": {
+                "label": "第一推荐人电话",
+                "placeholder": "请输入电话号码"
+              },
+              "seconder_name": {
+                "label": "第二推荐人姓名",
+                "placeholder": "请输入推荐人全名"
+              },
+              "seconder_address": {
+                "label": "第二推荐人住宅地址",
+                "placeholder": "请输入地址"
+              },
+              "seconder_phone": {
+                "label": "第二推荐人电话",
+                "placeholder": "请输入电话号码"
+              }
+            }
+          }
+        },
+        "declaration": "我特此声明，上述提供的信息均属实且准确无误。",
+        "submit_btn": "提交申请",
+        "sidebar": {
+          "title_main": "成为",
+          "title_accent": "积极变革的一分子",
+          "desc": "加入 PMA，共同为构建对话、理解和和平解决争端的文化做出贡献。",
+          "list": [
+            "专业行业认可",
+            "持续学习与发展",
+            "人脉拓展与合作",
+            "深远的行业贡献"
+          ],
+          "quote": "齐心协力，我们能通过调解创造一个更加和谐与公正的社会。",
+          "author": "- PMA"
+        }
+      }
     }
-  }
   }
 }

@@ -1023,225 +1023,895 @@
             "search_placeholder": "Search by name or expertise..."
           },
           "members": {
-      "member_1": {
-        "name": "Aga Zafar Ahmed",
-        "title": "President",
-        "badges": {
-          "executive_team": "Executive Team",
-          "mediator": "Mediator",
-          "cedr_accredited": "CEDR Accredited Mediator"
-        },
-        "aria_label": "View profile of Aga Zafar Ahmed"
-      },
-      "member_2": {
-        "name": "Saima Amin Khawaja",
-        "title": "Vice President – North",
-        "badges": {
-          "executive_team": "Executive Team",
-          "mediator": "Mediator",
-          "cedr_accredited": "CEDR Accredited Mediator"
-        },
-        "aria_label": "View profile of Saima Amin Khawaja"
-      },
-      "member_3": {
-        "name": "Asfand Yar Ali Khan",
-        "title": "Vice President – North",
-        "badges": {
-          "executive_team": "Executive Team",
-          "mediator": "Mediator",
-          "cedr_accredited": "CEDR Accredited Mediator"
-        },
-        "aria_label": "View profile of Asfand Yar Ali Khan"
-      },
-      "member_4": {
-        "name": "Saeed Habib",
-        "title": "Vice President – South",
-        "badges": {
-          "executive_team": "Executive Team"
-        },
-        "aria_label": "View profile of Saeed Habib"
-      },
-      "member_5": {
-        "name": "Shabana Ali",
-        "title": "Vice President – South",
-        "badges": {
-          "executive_team": "Executive Team",
-          "mediator": "Mediator",
-          "pma_accredited": "PMA Accredited Mediator"
-        },
-        "aria_label": "View profile of Shabana Ali"
-      },
-      "member_6": {
-        "name": "Wajiha Aleem",
-        "title": "Secretary General",
-        "badges": {
-          "executive_team": "Executive Team",
-          "mediator": "Mediator",
-          "cedr_accredited": "CEDR Accredited Mediator"
-        },
-        "aria_label": "View profile of Wajiha Aleem"
-      },
-      "member_7": {
-        "name": "Syed Sammad-ul-Haque",
-        "title": "Finance Secretary",
-        "badges": {
-          "executive_team": "Executive Team"
-        },
-        "aria_label": "View profile of Syed Sammad-ul-Haque"
-      },
-      "member_8": {
-        "name": "Tariq Saeed Rana",
-        "title": "Executive Committee – North",
-        "badges": {
-          "executive_team": "Executive Team",
-          "mediator": "Mediator",
-          "cedr_accredited": "CEDR Accredited Mediator"
-        },
-        "aria_label": "View profile of Tariq Saeed Rana"
-      },
-      "member_9": {
-        "name": "Huma Shah",
-        "title": "Executive Committee – North",
-        "badges": {
-          "executive_team": "Executive Team",
-          "mediator": "Mediator",
-          "cedr_accredited": "CEDR Accredited Mediator"
-        },
-        "aria_label": "View profile of Huma Shah"
-      },
-      "member_10": {
-        "name": "Umaimah Anwar Khan",
-        "title": "Executive Committee – South",
-        "badges": {
-          "executive_team": "Executive Team"
-        },
-        "aria_label": "View profile of Umaimah Anwar Khan"
-      },
-      "member_11": {
-        "name": "Mustansir Zakir",
-        "title": "Executive Committee – South",
-        "badges": {
-          "executive_team": "Executive Team",
-          "mediator": "Mediator",
-          "cedr_accredited": "CEDR Accredited Mediator"
-        },
-        "aria_label": "View profile of Mustansir Zakir"
-      },
-      "member_12": {
-        "name": "Adnan Mufti",
-        "title": "Executive Committee – South",
-        "badges": {
-          "executive_team": "Executive Team",
-          "mediator": "Mediator",
-          "cedr_accredited": "CEDR Accredited Mediator"
-        },
-        "aria_label": "View profile of Adnan Mufti"
-      }
-    },
-    "trainers": {
-    "trainer_1": {
-      "name": "Mustansir Zakir",
-      "title": "Master Trainer",
-      "badges": {
-        "master_trainer": "Master Trainer",
-        "director_training": "Director Training",
-        "ex_president": "Ex-President"
-      },
-      "aria_label": "View profile of Mustansir Zakir"
-    },
-    "trainer_2": {
-      "name": "Anwar Kashif Mumtaz",
-      "title": "Master Trainer",
-      "badges": {
-        "master_trainer": "Master Trainer",
-        "ex_president": "Ex-President",
-        "leadership_trainer": "Leadership Trainer"
-      },
-      "aria_label": "View profile of Anwar Kashif Mumtaz"
-    },
-    "trainer_3": {
-      "name": "Tariq Saeed Rana",
-      "title": "Master Trainer",
-      "badges": {
-        "master_trainer": "Master Trainer",
-        "ex_president": "Ex-President",
-        "executive_committee_north": "Executive Committee – North"
-      },
-      "aria_label": "View profile of Tariq Saeed Rana"
-    },
-    "trainer_4": {
-      "name": "Saima Amin Khawaja",
-      "title": "Master Trainer",
-      "badges": {
-        "master_trainer": "Master Trainer",
-        "executive_member": "Executive Member",
-        "vice_president_north": "Vice President – North"
-      },
-      "aria_label": "View profile of Saima Amin Khawaja"
-    },
-    "trainer_5": {
-      "name": "Huma Shah",
-      "title": "Master Trainer",
-      "badges": {
-        "master_trainer": "Master Trainer",
-        "executive_committee_north": "Executive Committee – North",
-        "training_committee": "Training Committee"
-      },
-      "aria_label": "View profile of Huma Shah"
-    },
-    "trainer_6": {
-      "name": "Usman G. Rashid",
-      "title": "Master Trainer",
-      "badges": {
-        "master_trainer": "Master Trainer",
-        "barrister_at_law": "Barrister-at-Law",
-        "former_secretary_general": "Former Secretary General – PMA"
-      },
-      "aria_label": "View profile of Usman G. Rashid"
-    },
-    "trainer_7": {
-      "name": "Asfand Yar Ali Khan",
-      "title": "Master Trainer",
-      "badges": {
-        "master_trainer": "Master Trainer",
-        "executive_leadership": "Executive Leadership",
-        "vice_president_north": "Vice President – North"
-      },
-      "aria_label": "View profile of Asfand Yar Ali Khan"
-    }
-  },
-  "former_presidents": {
-    "president_1": {
-      "name": "Anwar Kashif Mumtaz",
-      "title": "Former President"
-    },
-    "president_2": {
-      "name": "Mustansir Zakir",
-      "title": "Former President"
-    },
-    "president_3": {
-      "name": "Tariq Saeed Rana",
-      "title": "Former President"
-    }
-  }
+            "member_1": {
+              "name": "Aga Zafar Ahmed",
+              "title": "President",
+              "badges": {
+                "executive_team": "Executive Team",
+                "mediator": "Mediator",
+                "cedr_accredited": "CEDR Accredited Mediator"
+              },
+              "aria_label": "View profile of Aga Zafar Ahmed"
+            },
+            "member_2": {
+              "name": "Saima Amin Khawaja",
+              "title": "Vice President – North",
+              "badges": {
+                "executive_team": "Executive Team",
+                "mediator": "Mediator",
+                "cedr_accredited": "CEDR Accredited Mediator"
+              },
+              "aria_label": "View profile of Saima Amin Khawaja"
+            },
+            "member_3": {
+              "name": "Asfand Yar Ali Khan",
+              "title": "Vice President – North",
+              "badges": {
+                "executive_team": "Executive Team",
+                "mediator": "Mediator",
+                "cedr_accredited": "CEDR Accredited Mediator"
+              },
+              "aria_label": "View profile of Asfand Yar Ali Khan"
+            },
+            "member_4": {
+              "name": "Saeed Habib",
+              "title": "Vice President – South",
+              "badges": {
+                "executive_team": "Executive Team"
+              },
+              "aria_label": "View profile of Saeed Habib"
+            },
+            "member_5": {
+              "name": "Shabana Ali",
+              "title": "Vice President – South",
+              "badges": {
+                "executive_team": "Executive Team",
+                "mediator": "Mediator",
+                "pma_accredited": "PMA Accredited Mediator"
+              },
+              "aria_label": "View profile of Shabana Ali"
+            },
+            "member_6": {
+              "name": "Wajiha Aleem",
+              "title": "Secretary General",
+              "badges": {
+                "executive_team": "Executive Team",
+                "mediator": "Mediator",
+                "cedr_accredited": "CEDR Accredited Mediator"
+              },
+              "aria_label": "View profile of Wajiha Aleem"
+            },
+            "member_7": {
+              "name": "Syed Sammad-ul-Haque",
+              "title": "Finance Secretary",
+              "badges": {
+                "executive_team": "Executive Team"
+              },
+              "aria_label": "View profile of Syed Sammad-ul-Haque"
+            },
+            "member_8": {
+              "name": "Tariq Saeed Rana",
+              "title": "Executive Committee – North",
+              "badges": {
+                "executive_team": "Executive Team",
+                "mediator": "Mediator",
+                "cedr_accredited": "CEDR Accredited Mediator"
+              },
+              "aria_label": "View profile of Tariq Saeed Rana"
+            },
+            "member_9": {
+              "name": "Huma Shah",
+              "title": "Executive Committee – North",
+              "badges": {
+                "executive_team": "Executive Team",
+                "mediator": "Mediator",
+                "cedr_accredited": "CEDR Accredited Mediator"
+              },
+              "aria_label": "View profile of Huma Shah"
+            },
+            "member_10": {
+              "name": "Umaimah Anwar Khan",
+              "title": "Executive Committee – South",
+              "badges": {
+                "executive_team": "Executive Team"
+              },
+              "aria_label": "View profile of Umaimah Anwar Khan"
+            },
+            "member_11": {
+              "name": "Mustansir Zakir",
+              "title": "Executive Committee – South",
+              "badges": {
+                "executive_team": "Executive Team",
+                "mediator": "Mediator",
+                "cedr_accredited": "CEDR Accredited Mediator"
+              },
+              "aria_label": "View profile of Mustansir Zakir"
+            },
+            "member_12": {
+              "name": "Adnan Mufti",
+              "title": "Executive Committee – South",
+              "badges": {
+                "executive_team": "Executive Team",
+                "mediator": "Mediator",
+                "cedr_accredited": "CEDR Accredited Mediator"
+              },
+              "aria_label": "View profile of Adnan Mufti"
+            }
+          },
+          "trainers": {
+            "trainer_1": {
+              "name": "Mustansir Zakir",
+              "title": "Master Trainer",
+              "badges": {
+                "master_trainer": "Master Trainer",
+                "director_training": "Director Training",
+                "ex_president": "Ex-President"
+              },
+              "aria_label": "View profile of Mustansir Zakir"
+            },
+            "trainer_2": {
+              "name": "Anwar Kashif Mumtaz",
+              "title": "Master Trainer",
+              "badges": {
+                "master_trainer": "Master Trainer",
+                "ex_president": "Ex-President",
+                "leadership_trainer": "Leadership Trainer"
+              },
+              "aria_label": "View profile of Anwar Kashif Mumtaz"
+            },
+            "trainer_3": {
+              "name": "Tariq Saeed Rana",
+              "title": "Master Trainer",
+              "badges": {
+                "master_trainer": "Master Trainer",
+                "ex_president": "Ex-President",
+                "executive_committee_north": "Executive Committee – North"
+              },
+              "aria_label": "View profile of Tariq Saeed Rana"
+            },
+            "trainer_4": {
+              "name": "Saima Amin Khawaja",
+              "title": "Master Trainer",
+              "badges": {
+                "master_trainer": "Master Trainer",
+                "executive_member": "Executive Member",
+                "vice_president_north": "Vice President – North"
+              },
+              "aria_label": "View profile of Saima Amin Khawaja"
+            },
+            "trainer_5": {
+              "name": "Huma Shah",
+              "title": "Master Trainer",
+              "badges": {
+                "master_trainer": "Master Trainer",
+                "executive_committee_north": "Executive Committee – North",
+                "training_committee": "Training Committee"
+              },
+              "aria_label": "View profile of Huma Shah"
+            },
+            "trainer_6": {
+              "name": "Usman G. Rashid",
+              "title": "Master Trainer",
+              "badges": {
+                "master_trainer": "Master Trainer",
+                "barrister_at_law": "Barrister-at-Law",
+                "former_secretary_general": "Former Secretary General – PMA"
+              },
+              "aria_label": "View profile of Usman G. Rashid"
+            },
+            "trainer_7": {
+              "name": "Asfand Yar Ali Khan",
+              "title": "Master Trainer",
+              "badges": {
+                "master_trainer": "Master Trainer",
+                "executive_leadership": "Executive Leadership",
+                "vice_president_north": "Vice President – North"
+              },
+              "aria_label": "View profile of Asfand Yar Ali Khan"
+            }
+          },
+          "former_presidents": {
+            "president_1": {
+              "name": "Anwar Kashif Mumtaz",
+              "title": "Former President"
+            },
+            "president_2": {
+              "name": "Mustansir Zakir",
+              "title": "Former President"
+            },
+            "president_3": {
+              "name": "Tariq Saeed Rana",
+              "title": "Former President"
+            }
+          },
+          "subcommittee_panel": {
+            "header": {
+              "title": "Sub Committee",
+              "subtitle": "Our sub committees drive key initiatives and support PMA's mission through expertise, collaboration and dedicated service.",
+              "expand_all": "Expand All"
+            },
+            "labels": {
+              "mandate": "Mandate:",
+              "director": "Director",
+              "convener": "Convener"
+            },
+            "committees": {
+              "training": {
+                "title": "Training Committee",
+                "mandate": "Orientation, Training, Certification/Accreditation/Refresher courses/Train the Trainer (TOT)",
+                "lead_name": "Mustansir Zakir",
+                "members": [
+                  "Anwar Kashif Mumtaz",
+                  "Saima Khawaja",
+                  "Tariq Rana",
+                  "Huma Shah",
+                  "Asfandyar Ali Khan"
+                ]
+              },
+              "conduct": {
+                "title": "Code of Conduct Committee",
+                "mandate": "Drafting a code of conduct for Mediators and lobbing to get it approved from Law Ministry for its implementation across the Country",
+                "lead_name": "Umaima Khan",
+                "members": [
+                  "Anwar Kashif Mumtaz",
+                  "Saima Khawaja",
+                  "Khalid Mehmood",
+                  "Adnan Mufti",
+                  "Tariq Rana",
+                  "Asfandyar Ali Khan"
+                ]
+              },
+              "membership": {
+                "title": "Membership Committee",
+                "mandate": "Retention and activation of old membership, expansion of membership portfolio by inviting the Accredited Mediators of other institutes and also having associate members and honorary members as well.",
+                "lead_name": "Saeed Habib",
+                "members": [
+                  "Khalid Mehmood",
+                  "Saima Khawaja",
+                  "Samad Ul Haq",
+                  "Asfandyar Ali Khan"
+                ]
+              },
+              "bar_south": {
+                "title": "Legal & Academic Coordination – South",
+                "mandate": "Coordination with Bar Association/Bar Council and Law Schools for organizing meetings, seminars, orientations and training/workshops",
+                "lead_name": "Shabana Ali",
+                "members": [
+                  "Saadat Yar Khan",
+                  "Umaima Khan",
+                  "Mrs. Khalid Mehmood",
+                  "Samad Ul Haq",
+                  "Mansoor Meer",
+                  "Naved Ahmed"
+                ]
+              },
+              "bar_north": {
+                "title": "Legal & Academic Coordination – North",
+                "mandate": "Coordination with Bar Association/Bar Council and Law Schools for organizing meetings, seminars, orientations and training/workshops",
+                "lead_name": "Saima Khawaja",
+                "members": [
+                  "Zafar Kalanauri",
+                  "Barrister Tariq Rana",
+                  "Asfandyar Ali Khan"
+                ]
+              },
+              "institutional": {
+                "title": "Institutional Coordination Committee",
+                "mandate": "Coordination with Chambers, Trade bodies, Professional Associations/Institutes",
+                "lead_name": "Adnan Mufti",
+                "members": [
+                  "Mustansir Zakir",
+                  "Saeed Habib",
+                  "Tariq Rana",
+                  "Asfandyar Ali Khan",
+                  "Samad Ul Haq"
+                ]
+              }
+            },
+            "footer_note": "Aga Zafar Ahmed (President) and Wajiha Aleem (Secretary General) are Ex. Officio member of every committee."
+          },
+          "mediators": {
+            "adnan-mufti": { "name": "Adnan Mufti", "role": "Member" },
+            "anwar-kashif-mumtaz": { "name": "Anwar Kashif Mumtaz", "role": "Member" },
+            "ayesha-sarfraz-ali-khan": { "name": "Ayesha Sarfraz Ali Khan", "role": "Member" },
+            "barrister-tariq-saeed-lahore": { "name": "Barrister Tariq Saeed", "role": "Member" },
+            "farrukh-junaidy": { "name": "Farrukh Junaidy", "role": "Member" },
+            "huma-shah": { "name": "Huma Shah", "role": "Member" },
+            "ishtiaq-memon": { "name": "Ishtiaq Memon", "role": "Member" },
+            "isfandyar-ali-khan": { "name": "Isfandyar Ali Khan", "role": "Member" },
+            "khalid-firoz-arfeen": { "name": "Khalid Firoz Arfeen", "role": "Member" },
+            "khalid-mahmood-siddiqui": { "name": "Khalid Mahmood Siddiqui", "role": "Member" },
+            "mohammad-rehan-siddqui": { "name": "Mohammad Rehan Siddqui", "role": "Member" },
+            "mustansir-zakir": { "name": "Mustansir Zakir", "role": "Member" },
+            "nausheen-ahmed": { "name": "Nausheen Ahmed", "role": "Member" },
+            "neelofar-hameed": { "name": "Neelofar Hameed", "role": "Member" },
+            "omair-nisar-khan": { "name": "Omair Nisar Khan", "role": "Member" },
+            "raheem-hasnani": { "name": "Raheem Hasnani", "role": "Member" },
+            "reshma-aftab": { "name": "Reshma Aftab", "role": "Member" },
+            "rubina-virani": { "name": "Rubina Virani", "role": "Member" },
+            "saadat-yar-khan": { "name": "Saadat Yar Khan", "role": "Member" },
+            "saeed-habib": { "name": "Saeed Habib", "role": "Member" },
+            "saima-khawaja": { "name": "Saima Amin Khawaja", "role": "Member" },
+            "salina-khalfan": { "name": "Salina Khalfan", "role": "Member" },
+            "shabana-ali": { "name": "Shabana Ali", "role": "Member" },
+            "shaheen-premani": { "name": "Shaheen Premani", "role": "Member" },
+            "syed-haider-imam-rizvi": { "name": "Syed Haider Imam Rizvi", "role": "Member" },
+            "syed-sammadul-haque": { "name": "Syed Sammadul Haque", "role": "Member" },
+            "tahmasp-r-razvi": { "name": "Tahmasp R. Razvi", "role": "Member" },
+            "umaimah-a-rizvi": { "name": "Umaimah A. Rizvi", "role": "Member" },
+            "usman-g-rashid": { "name": "Usman G. Rashid", "role": "Member" },
+            "wajiha-aleem": { "name": "Wajiha Aleem", "role": "Member" },
+            "yousuf-moulvi": { "name": "Yousuf Moulvi", "role": "Member" },
+            "zafar-kalanauri": { "name": "Zafar Kalanauri", "role": "Member" },
+            "zia-makhdoom": { "name": "Zia Makhdoom", "role": "Member" }
+          }
         },
         "resources_page": {
-    "hero": {
-      "image_alt": "Services Hero",
-      "eyebrow": "RESOURCES",
-      "title_line1": "Knowledge. Law.",
-      "title_accent": "Reform.",
-      "lead_text": "Access PMA publications, mediation laws, institutional documents, research papers, advocacy resources, and media content that support the growth of ADR and peaceful dispute resolution in Pakistan."
-    },
-    "tabs": {
-      "featured": "Featured",
-      "downloads": "Downloads",
-      "mediation_laws": "Mediation Laws",
-      "advocacy": "Advocacy",
-      "press_media": "Press & Media",
-      "articles": "Articles"
-    }
-  }
+          "hero": {
+            "image_alt": "Services Hero",
+            "eyebrow": "RESOURCES",
+            "title_line1": "Knowledge. Law.",
+            "title_accent": "Reform.",
+            "lead_text": "Access PMA publications, mediation laws, institutional documents, research papers, advocacy resources, and media content that support the growth of ADR and peaceful dispute resolution in Pakistan."
+          },
+          "tabs": {
+            "featured": "Featured",
+            "downloads": "Downloads",
+            "mediation_laws": "Mediation Laws",
+            "advocacy": "Advocacy",
+            "press_media": "Press & Media",
+            "articles": "Articles"
+          },
+          "downloads_panel": {
+            "header": {
+              "title": "Downloads",
+              "lead": "Downloadable PDFs, forms and publications. Click a file to open it in a new tab.",
+              "view_all_text": "View All Downloads"
+            },
+            "global_labels": {
+              "download_btn_text": "Download PDF",
+              "default_image_alt": "ADR-ACT-2017 PDF"
+            },
+            "items": {
+              "card_1": {
+                "title": "ADR-ACT-2017",
+                "file_name": "ADR-ACT-2017.pdf"
+              },
+              "card_2": {
+                "title": "Advocacy and Lobby",
+                "file_name": "Advocacy-and-Lobby.pdf"
+              },
+              "card_3": {
+                "title": "Certificate of Registration",
+                "file_name": "Certificate.pdf"
+              },
+              "card_4": {
+                "title": "Membership Application Form",
+                "file_name": "membership-application-form.pdf"
+              },
+              "card_5": {
+                "title": "Memorandum of Association Updated",
+                "file_name": "MEMORANDUM-OF-ASSOCIATION-UPDATED.pdf"
+              },
+              "card_6": {
+                "title": "Nomination",
+                "file_name": "nomination_form.pdf"
+              },
+              "card_7": {
+                "title": "PMA Speech",
+                "file_name": "pma-speech.pdf"
+              },
+              "card_8": {
+                "title": "Why Join PMA",
+                "file_name": "Why-Join-PMA.pdf"
+              }
+            }
+          },
+          "mediation_laws_panel": {
+            "header": {
+              "title": "Mediation Laws & Legislation",
+              "lead": "Key statutes, bills and official legislation documents related to mediation.",
+              "view_all_text": "View All Laws"
+            },
+            "global_labels": {
+              "download_btn_text": "Download PDF",
+              "default_image_alt": "ADR-ACT-2017 PDF"
+            },
+            "items": {
+              "card_1": {
+                "title": "Islamabad Dispute Resolution Act (Mediation)",
+                "file_name": "Law-Islamabad-Dispute-Resolution-Act-Mediation.pdf"
+              },
+              "card_2": {
+                "title": "Amendments in First Schedule of the Code of Civil Procedure, 1908",
+                "file_name": "Law-KPK-Mediation-Amendment-No.1523-1622_Amendments-in-Frist-Schedule-of-the-code-of-Civil-Procedure-1908_dt-1.pdf"
+              },
+              "card_3": {
+                "title": "Punjab Amendments in Code of Civil Procedure, 1908 (Mediation Provisions)",
+                "file_name": "Law-Punjab-Amendments_civil_procedure_1908_final_Mediation_Provisions.pdf"
+              },
+              "card_4": {
+                "title": "Draft Code of Civil Procedure (Sindh Amendment) Bill, 2018",
+                "file_name": "Law-Sindh-Notification-dt-8-11-2018-The-DRAFT-Code-of-Civil-Procedure-Sindh-Amendment-Bill-2018.pdf"
+              },
+              "card_5": {
+                "title": "Singapore Convention on Mediated Settlements (Text)",
+                "file_name": "Law-Singapore-Convention-on-Mediated-Settlements-Text.pdf"
+              }
+            }
+          },
+          "advocacy_panel": {
+            "header": {
+              "title": "Advocacy & Policy",
+              "lead": "Policy briefs, advocacy toolkits and position papers to support ADR reform.",
+              "view_all_text": "View All Advocacy"
+            },
+            "global_labels": {
+              "download_btn_text": "Download PDF",
+              "default_image_alt": "ADR-ACT-2017 PDF"
+            },
+            "items": {
+              "card_1": {
+                "title": "KPK",
+                "file_name": "kpk.pdf"
+              },
+              "card_2": {
+                "title": "Punjab",
+                "file_name": "punjab.pdf"
+              },
+              "card_3": {
+                "title": "Sindh",
+                "file_name": "sindh.pdf"
+              }
+            }
+          },
+          "press_media_panel": {
+            "header": {
+              "title": "Press & Media",
+              "lead": "Press releases, media kits and downloadable assets for journalists.",
+              "view_all_text": "View Media Assets"
+            },
+            "global_labels": {
+              "download_btn_text": "Download PDF",
+              "default_image_alt": "ADR-ACT-2017 PDF"
+            },
+            "items": {
+              "card_1": {
+                "title": "Business Recorder",
+                "file_name": "BusinessRecorder.pdf"
+              },
+              "card_2": {
+                "title": "Business Recorder AD",
+                "file_name": ""
+              },
+              "card_3": {
+                "title": "Frontier Post",
+                "file_name": "FrontierPost.pdf"
+              },
+              "card_4": {
+                "title": "Pakistan Observer",
+                "file_name": "PakistanObserver.pdf"
+              },
+              "card_5": {
+                "title": "PMA Press Release",
+                "file_name": "PMA_PressRelease.pdf"
+              },
+              "card_6": {
+                "title": "Tribune",
+                "file_name": "Tribune.pdf"
+              }
+            }
+          },
+          "articles_panel": {
+            "header": {
+              "title": "Articles & Analysis",
+              "lead": "Research articles, analysis and thought leadership on mediation and ADR.",
+              "view_all_text": "View All Articles"
+            },
+            "global_labels": {
+              "download_btn_text": "Download PDF",
+              "author_prefix": "By"
+            },
+            "items": {
+              "card_1": {
+                "title": "It Really Happened in Frankfurt",
+                "author": "Jawad A. Sarwana",
+                "file_name": "blog-Jawad-Sarwana-It-Happened-in-Frankfurt.pdf",
+                "image_alt": "It Really Happened in Frankfurt PDF"
+              },
+              "card_2": {
+                "title": "Mediation Techniques",
+                "author": "Jawad A. Sarwana",
+                "file_name": "Blog-Sarwana.pdf",
+                "image_alt": "Mediation Techniques PDF"
+              }
+            }
+          },
+          "search_bar": {
+            "question": "Can't find what you're looking for?",
+            "subtext": "Use search or browse by category to quickly find the resources you need.",
+            "placeholder": "Search resources...",
+            "browse_btn_text": "Browse All Resources"
+          }
+        },
+        "events_page": {
+          "hero_section": {
+            "eyebrow": "Events",
+            "title": "Events",
+            "lead": "Stay updated with PMA conferences, mediation initiatives, workshops, and important announcements.",
+            "image_alt": "Events Hero"
+          },
+          "tab_bar": {
+            "upcoming_events": "Upcoming Events",
+            "past_events": "Past Events",
+            "announcements": "Announcements"
+          },
+          "upcoming_panel": {
+            "title": "Coming Soon",
+            "lead": "Upcoming events, conferences, and workshops will be listed here. Check back soon."
+          },
+          "announcements_panel": {
+            "title": "Coming Soon",
+            "lead": "Important announcements will appear here. Stay tuned."
+          },
+          "past_events": {
+            "training_program_detail": {
+              "global_labels": {
+                "badge_text": "PAST EVENT",
+                "pill_text": "Certified Training Program",
+                "view_gallery_btn": "View Event Gallery",
+                "about_label": "About the Event",
+                "highlights_label": "KEY TRAINING HIGHLIGHTS"
+              },
+              "card": {
+                "title": "6th Certified Mediation Training Program",
+                "sub": "Sindh High Court",
+                "date": "08 June 2026 To 12th June 2026",
+                "location": "Sindh High Court, Karachi"
+              },
+              "about_paragraphs": [
+                "Pakistan Mediators Association (PMA) successfully conducted the 6th Certified Mediation Training Program at Sindh High Court.",
+                "The program focused on strengthening mediation skills, promoting alternative dispute resolution practices, and enhancing professional capacity among legal practitioners and mediation professionals.",
+                "Through interactive sessions, practical exercises, and collaborative discussions, participants gained valuable insights into modern mediation techniques and dispute resolution frameworks."
+              ],
+              "highlights": [
+                "Certified Mediation Training Sessions",
+                "Practical Mediation Exercises",
+                "Interactive Group Discussions",
+                "Alternative Dispute Resolution Techniques",
+                "Professional Capacity Building",
+                "Collaborative Learning Environment"
+              ],
+              "meta": {
+                "objective_label": "TRAINING OBJECTIVE",
+                "objective_text": "To strengthen mediation skills and promote effective dispute resolution practices.",
+                "organized_label": "ORGANIZED BY",
+                "organized_text": "Pakistan Mediators Association (PMA)",
+                "participants_label": "PARTICIPANTS",
+                "participants_text": "Legal Professionals, ADR Practitioners, Mediators and Trainee Participants.",
+                "type_label": "Event Type",
+                "type_text": "Certified Training Program"
+              }
+            },
+            "national_conference_detail": {
+              "global_labels": {
+                "badge_text": "Past Event",
+                "about_label": "About the Event",
+                "highlights_label": "Key ADR Developments Highlighted"
+              },
+              "card": {
+                "title": "Mediation A Way Forward",
+                "sub": "1st National Mediation Conference",
+                "date": "7th March, 2015",
+                "location": "Hotel Marriott, Karachi",
+                "type": "National Conference"
+              },
+              "about_paragraphs": [
+                "PMA is Pakistan's first organization representing foreign trained and accredited mediators as well as other professionals who have joined the Association to further the cause of the Association. The Association was formed in 2013 and has taken over number of activities which were earlier implemented by IFC/World Bank Group's Alternative Dispute Resolution (ADR) Project.",
+                "Considering that Pakistan's contract enforcement indicators are not encouraging and it takes number of years and cost of contract enforcement, PMA resolves to lead and support interventions which will enable litigants and disputants to resolve disputes amicably and through mediation process and complement efforts of judiciary and courts in timely resolution of disputes."
+              ],
+              "highlights": [
+                "Operationalization of Karachi Centre for Dispute Resolution in Karachi and Lahore Chamber of Commerce and Industry Mediation Centre in Lahore.",
+                "Lobbying for ADR/mediation law reforms in Pakistan.",
+                "Presence of CEDR Accredited Mediators and Master Trainers in Pakistan.",
+                "ADR Curriculum Development in Pakistan.",
+                "ADR trainings strengthened and delivered in Pakistan.",
+                "ADR considered as means to settle multitude of disputes including corporate governance."
+              ],
+              "meta": {
+                "objective_label": "Conference Objectives",
+                "objective_text": "To further the cause of ADR and mediation and debate developments, challenges and future interventions for institutionalizing mediation in Pakistan.",
+                "organized_label": "Conference Hosts",
+                "organized_text": "This conference is hosted by Pakistan Mediators Association with support of conference partners.",
+                "participants_label": "Speakers & Guests",
+                "participants_text": "Representatives from Government, Judiciary, Business Community, Bar, Academia and Mediation Centers in Pakistan along with foreign speakers.",
+                "type_label": "Event Type",
+                "type_text": "National Conference"
+              }
+            }
+          }
+        },
+        "privacy_policy": {
+          "hero": {
+            "title_main": "Privacy",
+            "title_accent": "Policy",
+            "lead_text": "We are committed to protecting your privacy and ensuring that your personal information is handled securely and responsibly."
+          },
+          "sections": {
+            "commitment": {
+              "title": "Privacy Commitment",
+              "paragraphs": [
+                "Pakistan Mediators Association (PMA) is committed to safeguarding your privacy online. Pakistan Mediators Association (PMA) has created this privacy statement in order to demonstrate our firm commitment to privacy. The following discloses our information gathering and dissemination practices for Pakistan Mediators Association (PMA).",
+                "PMA reserves the right to change this policy at any time by notifying users of the existence of a new privacy statement. This statement and the policies outlined herein are not intended to and do not create any contractual or other legal rights in or on behalf of any party."
+              ]
+            },
+            "respect_data": {
+              "title": "Respect for User Data",
+              "paragraphs": [
+                "Pakistan Mediators Association (PMA) highly values the strong relationships we have with our customers. The collection of data at Pakistan Mediators Association (PMA) is being handled with full and proper respect for the privacy of our customers.",
+                "The data we collect is handled sensitively, securely and with proper regard to privacy. Pakistan Mediators Association (PMA) does not disclose, distribute or sell the data we collect from our clients to third parties."
+              ]
+            },
+            "collection": {
+              "title": "Information Collection",
+              "lead_text": "PMA collects information for membership signup such as:",
+              "items": [
+                "Computerized National Identity Card (CNIC)",
+                "Complete Name",
+                "Residential Address",
+                "Office Address",
+                "Phone Number",
+                "Email Information",
+                "Other related membership information"
+              ]
+            }
+          }
+        },
+        "complaint_policy": {
+          "hero": {
+            "title_main": "Complaint & Appeal",
+            "title_accent": "Policy",
+            "lead_text": "We are committed to addressing concerns fairly, promptly, and transparently."
+          },
+          "intro_card": {
+            "bold_text": "We have a procedure for dealing with complaints that ensure they are given proper care and attention.",
+            "lead_p": "Complaints can be made by any user of PMA's mediation accreditation services. PMA aims to provide a responsive and timely service to all users. We will:",
+            "commitments": [
+              "treat all complaints seriously and deal with them properly;",
+              "address complaints promptly; and",
+              "learn from complaints and take action to improve our service."
+            ]
+          },
+          "steps": [
+            {
+              "text": "We can, however, only deal with complaints that raise concerns about poor customer service received by the Director of Training."
+            },
+            {
+              "text": "This means your case must be addressed to the Director of Training and sent by post and email with cc to the President of PMA."
+            },
+            {
+              "text": "A student who is dissatisfied with the decision of the Director of Training is free to reject the decision, in which case it will have no binding effect. The Director is bound to respond to the Complaint within 30 days of its receipt."
+            },
+            {
+              "text": "If, however, you remain dissatisfied with the handling of your complaint or there is no response from the Director of Training, you may address your complaint to the President of PMA who will set up a two-member Faculty Tribunal to hear your grievance."
+            },
+            {
+              "text": "You will need to be clear and concise about the reasons for your request and what you would like to achieve from the review or non-action by the Director of Training. The two-member Tribunal will write to you with copy to President of PMA and definitely respond to you in writing within 30 working days of the escalation request being made."
+            },
+            {
+              "text": "If you are dissatisfied with the action or inaction on the part of the two-member Tribunal on your Complaint, the same will not affect any party's rights to access the Consumer Court for relief which options are open to all."
+            }
+          ]
+        },
+        "terms_conditions": {
+          "hero": {
+            "title_main": "Terms and",
+            "title_accent": "Conditions",
+            "lead_text": "Please read these terms carefully. By accessing and using our website and services, you agree to comply with the following terms and conditions."
+          },
+          "accordion_items": [
+            {
+              "id": "training",
+              "title": "Training",
+              "preview": "To confirm your booking, your payment must reach our offices in advance; before the start of the courses.",
+              "body_paragraphs": [
+                "If the user is late on payment, they will not be allowed to take the courses."
+              ]
+            },
+            {
+              "id": "refunds",
+              "title": "Training Refunds",
+              "preview": "We understand life can be complex. If you are no longer able to attend, please contact us as soon as possible on 021-3452-9768 or email us at info@pma.org.pk.",
+              "body_paragraphs": [
+                "We are happy to accommodate a substitute attendee in your place, or arrange a credit or refund and we will always consider your case on an individual basis."
+              ]
+            },
+            {
+              "id": "membership",
+              "title": "Membership Cancellations",
+              "preview": "Membership is non-refundable except in special circumstances.",
+              "body_paragraphs": [
+                "Please contact us if you believe your circumstances qualify for an exception. Each case is reviewed individually by the PMA membership committee."
+              ]
+            },
+            {
+              "id": "copyright",
+              "title": "Copyright",
+              "preview": "This site and its contents are subject to copyright. The site material copyright is owned by Pakistan Mediators Association (PMA), or in the case of some material, a third party. The site function and operation copyright is owned by PMA.",
+              "body_paragraphs": [
+                "You may view this site and its contents using your web browser and electronically copy and print hard copies of parts of this site solely for personal, non-commercial use. Any other use, including the reproduction, modification, distribution, transmission, republication, display or performance, of the content of this site is strictly prohibited."
+              ]
+            },
+            {
+              "id": "disclaimer",
+              "title": "Disclaimer",
+              "preview": "You agree that your access to, and use of, this site is subject to these terms and all applicable laws, and is at your own risk. This site and its contents are provided to you on \"as is\" basis, the site may contain errors, faults and inaccuracies and may not be complete and current.",
+              "body_paragraphs": [
+                "Pakistan Mediators Association (PMA) makes no representations or warranties of any kind, express or implied as to the operation of this site or the information, content, materials or products included on this site, except as otherwise provided under applicable laws.",
+                "Neither PMA, nor its affiliates, directors, officers, employees, agents, contractors, successors or assigns will be liable for any damages whatsoever arising out of, or in any way related to, the use of this site and any other site linked to this site. This limitation applies to direct, indirect, consequential, special, punitive or other damages you or others may suffer, as well as damages for loss of profits, business interruption or the loss of data or information."
+              ]
+            },
+            {
+              "id": "translations",
+              "title": "Google Translations",
+              "preview": "This website has been translated for your convenience using a translation process powered by Google Translate™. Google Translate™ translations are done by an automated computer process, not a certified professional translator.",
+              "body_paragraphs": [
+                "For that reason, the translations may be inaccurate or unreliable. Use Google Translate™ translations with caution. The translations are provided \"as is\" without warranties of any kind. Some content (such as images, videos, Flash, etc.) may not be translated due to the limitations of the translation software.",
+                "PMA is not responsible for incomplete or inaccurate translations, nor is it liable for any damages or losses arising out of the user’s use of Google Translate™ translations (or any other translations on this website).",
+                "If you have any questions about Google™ Translate, visit: Google Translate™ FAQs.",
+                "Google disclaims all warranties related to the translations, express or implied, including any warranties of accuracy, reliability, and any implied warranties of merchantability, fitness for a particular purpose and non-infringement."
+              ]
+            }
+          ]
+        },
+        "become_member": {
+          "hero": {
+            "eyebrow": "Join PMA",
+            "title_main": "Become a",
+            "title_accent": "PMA Member",
+            "lead_text": "Join a distinguished community of mediators, ADR professionals and institutional leaders committed to peaceful dispute resolution."
+          },
+          "why_join": {
+            "title_main": "Why",
+            "title_accent": "Join",
+            "title_end": "PMA?",
+            "subtitle": "PMA members enjoy a clear set of professional advantages and opportunities.",
+            "cards": [
+              {
+                "title": "International Conferences",
+                "description": "Attend global conferences on the latest issues in mediation & arbitration with discounted fees and priority registration."
+              },
+              {
+                "title": "Workshops & Courses",
+                "description": "Gain access to top quality educational workshops and professional development courses."
+              },
+              {
+                "title": "Professional Growth",
+                "description": "Increase your understanding of mediation and ADR through expert insights and resources."
+              },
+              {
+                "title": "Global Network",
+                "description": "Establish and maintain valuable national and international professional connections."
+              },
+              {
+                "title": "Business Opportunities",
+                "description": "Widen your circle of business and professional acquaintances."
+              },
+              {
+                "title": "Support the Profession",
+                "description": "Play a key role in the support and development of mediation and peaceful dispute resolution."
+              }
+            ]
+          },
+          "benefits": {
+            "title_main": "Membership",
+            "title_accent": "Benefits",
+            "subtitle": "As a registered member of PMA, you will enjoy a wide range of advantages and opportunities.",
+            "items": [
+              {
+                "title": "Networking Opportunities",
+                "description": "Throughout the year, PMA provides various opportunities for members to enhance professional relationships and keep abreast of industry activities and trends."
+              },
+              {
+                "title": "Membership Directory",
+                "description": "Exclusively available for PMA members, this directory contains updated contact details of members and other global organizations. Available in print and electronic form."
+              },
+              {
+                "title": "Membership Certificate",
+                "description": "Members are issued a globally recognized membership certificate upon acceptance. Certificates are awarded at the Annual Members Gala."
+              },
+              {
+                "title": "Continuous Professional Development",
+                "description": "Priority access to exclusive workshops and professional development courses conducted by leading experts in mediation and ADR, in English and Arabic."
+              }
+            ]
+          },
+          "membership_journey": {
+            "title": "Membership Journey",
+            "subtitle": "A simple process to become a valued member of PMA.",
+            "steps": [
+              {
+                "num": "1",
+                "title": "Submit Membership Form",
+                "desc": "Fill out the online application form."
+              },
+              {
+                "num": "2",
+                "title": "Profile Review",
+                "desc": "Our team will review your application."
+              },
+              {
+                "num": "3",
+                "title": "Membership Approval",
+                "desc": "You will be notified once your application is approved."
+              },
+              {
+                "num": "4",
+                "title": "Welcome to PMA",
+                "desc": "Receive your membership certificate and become a part of our professional network."
+              }
+            ]
+          },
+          "membership_application": {
+            "form_header": {
+              "title": "Membership Application Form",
+              "desc": "Please provide accurate information. All fields marked * are mandatory."
+            },
+            "sections": {
+              "personal_info": {
+                "title": "Personal Information",
+                "fields": {
+                  "full_name": { "label": "Full Name", "placeholder": "Enter your full name" },
+                  "father_name": { "label": "Father Name", "placeholder": "Enter father name" },
+                  "qualification": { "label": "Educational Qualification", "placeholder": "Enter qualification" },
+                  "designation": { "label": "Designation", "placeholder": "Enter designation" },
+                  "cnic": { "label": "CNIC", "placeholder": "Enter CNIC number" },
+                  "chamber_phone": { "label": "Chamber Phone", "placeholder": "Enter chamber phone" }
+                }
+              },
+              "contact_info": {
+                "title": "Contact Information",
+                "fields": {
+                  "office_address": { "label": "Office Address", "placeholder": "Enter office address" },
+                  "res_address": { "label": "Residential Address", "placeholder": "Enter residential address" },
+                  "res_phone": { "label": "Residence Phone", "placeholder": "Enter residence phone" },
+                  "email": { "label": "Email", "placeholder": "Enter email address" },
+                  "upload": {
+                    "label": "Upload Documents",
+                    "text": "Choose File or drag file here",
+                    "hint": "PDF, JPG, PNG (Max 5MB)"
+                  }
+                }
+              },
+              "references": {
+                "title": "Professional References",
+                "fields": {
+                  "proposer_name": { "label": "Proposer Full Name", "placeholder": "Enter proposer full name" },
+                  "proposer_address": { "label": "Proposer Residential Address", "placeholder": "Enter address" },
+                  "proposer_phone": { "label": "Proposer Phone", "placeholder": "Enter phone number" },
+                  "seconder_name": { "label": "Seconder Full Name", "placeholder": "Enter seconder full name" },
+                  "seconder_address": { "label": "Seconder Residential Address", "placeholder": "Enter address" },
+                  "seconder_phone": { "label": "Seconder Phone", "placeholder": "Enter phone number" }
+                }
+              }
+            },
+            "declaration": "I hereby declare that the information provided above is true and accurate.",
+            "submit_btn": "Submit Application",
+            "sidebar": {
+              "title_main": "Be Part of",
+              "title_accent": "Positive Change",
+              "desc": "Join PMA and contribute to building a culture of dialogue, understanding, and peaceful dispute resolution.",
+              "list": [
+                "Professional Recognition",
+                "Learning & Development",
+                "Networking & Collaboration",
+                "Impactful Contribution"
+              ],
+              "quote": "Together, we can create a more harmonious and just society through mediation.",
+              "author": "- PMA"
+            }
+          }
+        }
       }
     },
     ur: {
@@ -2256,226 +2926,896 @@
             "search_placeholder": "نام یا مہارت کے ذریعے تلاش کریں..."
           },
           "members": {
-    "member_1": {
-      "name": "آغا ظفر احمد",
-      "title": "صدر",
-      "badges": {
-        "executive_team": "ایگزیکٹو ٹیم",
-        "mediator": "ثالث (Mediator)",
-        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
-      },
-      "aria_label": "آغا ظفر احمد کا پروفائل دیکھیں"
-    },
-    "member_2": {
-      "name": "صائمہ امین خواجہ",
-      "title": "نائب صدر – نارتھ",
-      "badges": {
-        "executive_team": "ایگزیکٹو ٹیم",
-        "mediator": "ثالث (Mediator)",
-        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
-      },
-      "aria_label": "صائمہ امین خواجہ کا پروفائل دیکھیں"
-    },
-    "member_3": {
-      "name": "اسفند یار علی خان",
-      "title": "نائب صدر – نارتھ",
-      "badges": {
-        "executive_team": "ایگزیکٹو ٹیم",
-        "mediator": "ثالث (Mediator)",
-        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
-      },
-      "aria_label": "اسفند یار علی خان کا پروفائل دیکھیں"
-    },
-    "member_4": {
-      "name": "سعید حبیب",
-      "title": "نائب صدر – ساؤتھ",
-      "badges": {
-        "executive_team": "ایگزیکٹو ٹیم"
-      },
-      "aria_label": "سعید حبیب کا پروفائل دیکھیں"
-    },
-    "member_5": {
-      "name": "شبانہ علی",
-      "title": "نائب صدر – ساؤتھ",
-      "badges": {
-        "executive_team": "ایگزیکٹو ٹیم",
-        "mediator": "ثاث (Mediator)",
-        "pma_accredited": "PMA سے منظور شدہ ثالث"
-      },
-      "aria_label": "شبانہ علی کا پروفائل دیکھیں"
-    },
-    "member_6": {
-      "name": "وجیہہ علیم",
-      "title": "سیکرٹری جنرل",
-      "badges": {
-        "executive_team": "ایگزیکٹو ٹیم",
-        "mediator": "ثالث (Mediator)",
-        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
-      },
-      "aria_label": "وجیہہ علیم کا پروفائل دیکھیں"
-    },
-    "member_7": {
-      "name": "سید صمد الحق",
-      "title": "فنانس سیکرٹری",
-      "badges": {
-        "executive_team": "ایگزیکٹو ٹیم"
-      },
-      "aria_label": "سید صمد الحق کا پروفائل دیکھیں"
-    },
-    "member_8": {
-      "name": "طارق سعید رانا",
-      "title": "ایگزیکٹو کمیٹی – نارتھ",
-      "badges": {
-        "executive_team": "ایگزیکٹو ٹیم",
-        "mediator": "ثالث (Mediator)",
-        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
-      },
-      "aria_label": "طارق سعید رانا کا پروفائل دیکھیں"
-    },
-    "member_9": {
-      "name": "ہما شاہ",
-      "title": "ایگزیکٹو کمیٹی – نارتھ",
-      "badges": {
-        "executive_team": "ایگزیکٹو ٹیم",
-        "mediator": "ثالث (Mediator)",
-        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
-      },
-      "aria_label": "ہما شاہ کا پروفائل دیکھیں"
-    },
-    "member_10": {
-      "name": "امیمہ انور خان",
-      "title": "ایگزیکٹو کمیٹی – ساؤتھ",
-      "badges": {
-        "executive_team": "ایگزیکٹو ٹیم"
-      },
-      "aria_label": "امیمہ انور خان کا پروفائل دیکھیں"
-    },
-    "member_11": {
-      "name": "مستنصر ذاکر",
-      "title": "ایگزیکٹو کمیٹی – ساؤتھ",
-      "badges": {
-        "executive_team": "ایگزیکٹو ٹیم",
-        "mediator": "ثالث (Mediator)",
-        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
-      },
-      "aria_label": "مستنصر ذاکر کا پروفائل دیکھیں"
-    },
-    "member_12": {
-      "name": "عدنان مفتی",
-      "title": "ایگزیکٹو کمیٹی – ساؤتھ",
-      "badges": {
-        "executive_team": "ایگزیکٹو ٹیم",
-        "mediator": "ثالث (Mediator)",
-        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
-      },
-      "aria_label": "عدنان مفتی کا پروفائل دیکھیں"
-    }
-  },
-  "trainers": {
-    "trainer_1": {
-      "name": "مستنصر ذاکر",
-      "title": "ماسٹر ٹرینر",
-      "badges": {
-        "master_trainer": "ماسٹر ٹرینر",
-        "director_training": "ڈائریکٹر ٹریننگ",
-        "ex_president": "سابق صدر"
-      },
-      "aria_label": "مستنصر ذاکر کا پروفائل دیکھیں"
-    },
-    "trainer_2": {
-      "name": "انور کاشف ممتاز",
-      "title": "ماسٹر ٹرینر",
-      "badges": {
-        "master_trainer": "ماسٹر ٹرینر",
-        "ex_president": "سابق صدر",
-        "leadership_trainer": "لیڈرشپ ٹرینر"
-      },
-      "aria_label": "انور کاشف ممتاز کا پروفائل دیکھیں"
-    },
-    "trainer_3": {
-      "name": "طارق سعید رانا",
-      "title": "ماسٹر ٹرینر",
-      "badges": {
-        "master_trainer": "ماسٹر ٹرینر",
-        "ex_president": "سابق صدر",
-        "executive_committee_north": "ایگزیکٹو کمیٹی – نارتھ"
-      },
-      "aria_label": "طارق سعید رانا کا پروفائل دیکھیں"
-    },
-    "trainer_4": {
-      "name": "صائمہ امین خواجہ",
-      "title": "ماسٹر ٹرینر",
-      "badges": {
-        "master_trainer": "ماسٹر ٹرینر",
-        "executive_member": "ایگزیکٹو ممبر",
-        "vice_president_north": "نائب صدر – نارتھ"
-      },
-      "aria_label": "صائمہ امین خواجہ کا پروفائل دیکھیں"
-    },
-    "trainer_5": {
-      "name": "ہما شاہ",
-      "title": "ماسٹر ٹرینر",
-      "badges": {
-        "master_trainer": "ماسٹر ٹرینر",
-        "executive_committee_north": "ایگزیکٹو کمیٹی – نارتھ",
-        "training_committee": "ٹریننگ کمیٹی"
-      },
-      "aria_label": "ہما شاہ کا پروفائل دیکھیں"
-    },
-    "trainer_6": {
-      "name": "عثمان جی راشد",
-      "title": "ماسٹر ٹرینر",
-      "badges": {
-        "master_trainer": "ماسٹر ٹرینر",
-        "barrister_at_law": "بیریسٹر ایٹ لاء",
-        "former_secretary_general": "سابق سیکرٹری جنرل – PMA"
-      },
-      "aria_label": "عثمان جی راشد کا پروفائل دیکھیں"
-    },
-    "trainer_7": {
-      "name": "اسفند یار علی خان",
-      "title": "ماسٹر ٹرینر",
-      "badges": {
-        "master_trainer": "ماسٹر ٹرینر",
-        "executive_leadership": "ایگزیکٹو لیڈرشپ",
-        "vice_president_north": "نائب صدر – نارتھ"
-      },
-      "aria_label": "اسفند یار علی خان کا پروفائل دیکھیں"
-    }
-  },
-  "former_presidents": {
-    "president_1": {
-      "name": "انور کاشف ممتاز",
-      "title": "سابق صدر"
-    },
-    "president_2": {
-      "name": "مستنصر ذاکر",
-      "title": "سابق صدر"
-    },
-    "president_3": {
-      "name": "طارق سعید رانا",
-      "title": "سابق صدر"
-    }
-  }
+            "member_1": {
+              "name": "آغا ظفر احمد",
+              "title": "صدر",
+              "badges": {
+                "executive_team": "ایگزیکٹو ٹیم",
+                "mediator": "ثالث (Mediator)",
+                "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+              },
+              "aria_label": "آغا ظفر احمد کا پروفائل دیکھیں"
+            },
+            "member_2": {
+              "name": "صائمہ امین خواجہ",
+              "title": "نائب صدر – نارتھ",
+              "badges": {
+                "executive_team": "ایگزیکٹو ٹیم",
+                "mediator": "ثالث (Mediator)",
+                "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+              },
+              "aria_label": "صائمہ امین خواجہ کا پروفائل دیکھیں"
+            },
+            "member_3": {
+              "name": "اسفند یار علی خان",
+              "title": "نائب صدر – نارتھ",
+              "badges": {
+                "executive_team": "ایگزیکٹو ٹیم",
+                "mediator": "ثالث (Mediator)",
+                "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+              },
+              "aria_label": "اسفند یار علی خان کا پروفائل دیکھیں"
+            },
+            "member_4": {
+              "name": "سعید حبیب",
+              "title": "نائب صدر – ساؤتھ",
+              "badges": {
+                "executive_team": "ایگزیکٹو ٹیم"
+              },
+              "aria_label": "سعید حبیب کا پروفائل دیکھیں"
+            },
+            "member_5": {
+              "name": "شبانہ علی",
+              "title": "نائب صدر – ساؤتھ",
+              "badges": {
+                "executive_team": "ایگزیکٹو ٹیم",
+                "mediator": "ثاث (Mediator)",
+                "pma_accredited": "PMA سے منظور شدہ ثالث"
+              },
+              "aria_label": "شبانہ علی کا پروفائل دیکھیں"
+            },
+            "member_6": {
+              "name": "وجیہہ علیم",
+              "title": "سیکرٹری جنرل",
+              "badges": {
+                "executive_team": "ایگزیکٹو ٹیم",
+                "mediator": "ثالث (Mediator)",
+                "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+              },
+              "aria_label": "وجیہہ علیم کا پروفائل دیکھیں"
+            },
+            "member_7": {
+              "name": "سید صمد الحق",
+              "title": "فنانس سیکرٹری",
+              "badges": {
+                "executive_team": "ایگزیکٹو ٹیم"
+              },
+              "aria_label": "سید صمد الحق کا پروفائل دیکھیں"
+            },
+            "member_8": {
+              "name": "طارق سعید رانا",
+              "title": "ایگزیکٹو کمیٹی – نارتھ",
+              "badges": {
+                "executive_team": "ایگزیکٹو ٹیم",
+                "mediator": "ثالث (Mediator)",
+                "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+              },
+              "aria_label": "طارق سعید رانا کا پروفائل دیکھیں"
+            },
+            "member_9": {
+              "name": "ہما شاہ",
+              "title": "ایگزیکٹو کمیٹی – نارتھ",
+              "badges": {
+                "executive_team": "ایگزیکٹو ٹیم",
+                "mediator": "ثالث (Mediator)",
+                "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+              },
+              "aria_label": "ہما شاہ کا پروفائل دیکھیں"
+            },
+            "member_10": {
+              "name": "امیمہ انور خان",
+              "title": "ایگزیکٹو کمیٹی – ساؤتھ",
+              "badges": {
+                "executive_team": "ایگزیکٹو ٹیم"
+              },
+              "aria_label": "امیمہ انور خان کا پروفائل دیکھیں"
+            },
+            "member_11": {
+              "name": "مستنصر ذاکر",
+              "title": "ایگزیکٹو کمیٹی – ساؤتھ",
+              "badges": {
+                "executive_team": "ایگزیکٹو ٹیم",
+                "mediator": "ثالث (Mediator)",
+                "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+              },
+              "aria_label": "مستنصر ذاکر کا پروفائل دیکھیں"
+            },
+            "member_12": {
+              "name": "عدنان مفتی",
+              "title": "ایگزیکٹو کمیٹی – ساؤتھ",
+              "badges": {
+                "executive_team": "ایگزیکٹو ٹیم",
+                "mediator": "ثالث (Mediator)",
+                "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+              },
+              "aria_label": "عدنان مفتی کا پروفائل دیکھیں"
+            }
+          },
+          "trainers": {
+            "trainer_1": {
+              "name": "مستنصر ذاکر",
+              "title": "ماسٹر ٹرینر",
+              "badges": {
+                "master_trainer": "ماسٹر ٹرینر",
+                "director_training": "ڈائریکٹر ٹریننگ",
+                "ex_president": "سابق صدر"
+              },
+              "aria_label": "مستنصر ذاکر کا پروفائل دیکھیں"
+            },
+            "trainer_2": {
+              "name": "انور کاشف ممتاز",
+              "title": "ماسٹر ٹرینر",
+              "badges": {
+                "master_trainer": "ماسٹر ٹرینر",
+                "ex_president": "سابق صدر",
+                "leadership_trainer": "لیڈرشپ ٹرینر"
+              },
+              "aria_label": "انور کاشف ممتاز کا پروفائل دیکھیں"
+            },
+            "trainer_3": {
+              "name": "طارق سعید رانا",
+              "title": "ماسٹر ٹرینر",
+              "badges": {
+                "master_trainer": "ماسٹر ٹرینر",
+                "ex_president": "سابق صدر",
+                "executive_committee_north": "ایگزیکٹو کمیٹی – نارتھ"
+              },
+              "aria_label": "طارق سعید رانا کا پروفائل دیکھیں"
+            },
+            "trainer_4": {
+              "name": "صائمہ امین خواجہ",
+              "title": "ماسٹر ٹرینر",
+              "badges": {
+                "master_trainer": "ماسٹر ٹرینر",
+                "executive_member": "ایگزیکٹو ممبر",
+                "vice_president_north": "نائب صدر – نارتھ"
+              },
+              "aria_label": "صائمہ امین خواجہ کا پروفائل دیکھیں"
+            },
+            "trainer_5": {
+              "name": "ہما شاہ",
+              "title": "ماسٹر ٹرینر",
+              "badges": {
+                "master_trainer": "ماسٹر ٹرینر",
+                "executive_committee_north": "ایگزیکٹو کمیٹی – نارتھ",
+                "training_committee": "ٹریننگ کمیٹی"
+              },
+              "aria_label": "ہما شاہ کا پروفائل دیکھیں"
+            },
+            "trainer_6": {
+              "name": "عثمان جی راشد",
+              "title": "ماسٹر ٹرینر",
+              "badges": {
+                "master_trainer": "ماسٹر ٹرینر",
+                "barrister_at_law": "بیریسٹر ایٹ لاء",
+                "former_secretary_general": "سابق سیکرٹری جنرل – PMA"
+              },
+              "aria_label": "عثمان جی راشد کا پروفائل دیکھیں"
+            },
+            "trainer_7": {
+              "name": "اسفند یار علی خان",
+              "title": "ماسٹر ٹرینر",
+              "badges": {
+                "master_trainer": "ماسٹر ٹرینر",
+                "executive_leadership": "ایگزیکٹو لیڈرشپ",
+                "vice_president_north": "نائب صدر – نارتھ"
+              },
+              "aria_label": "اسفند یار علی خان کا پروفائل دیکھیں"
+            }
+          },
+          "former_presidents": {
+            "president_1": {
+              "name": "انور کاشف ممتاز",
+              "title": "سابق صدر"
+            },
+            "president_2": {
+              "name": "مستنصر ذاکر",
+              "title": "سابق صدر"
+            },
+            "president_3": {
+              "name": "طارق سعید رانا",
+              "title": "سابق صدر"
+            }
+          },
+          "subcommittee_panel": {
+            "header": {
+              "title": "ذیلی کمیٹی",
+              "subtitle": "ہماری ذیلی کمیٹیاں مہارت، باہمی تعاون اور انتھک محنت کے ذریعے اہم اقدامات کو آگے بڑھاتی ہیں اور PMA کے مشن کو سپورٹ کرتی ہیں۔",
+              "expand_all": "سب کھولیں"
+            },
+            "labels": {
+              "mandate": "مینڈیٹ:",
+              "director": "ڈائریکٹر",
+              "convener": "کنوینر"
+            },
+            "committees": {
+              "training": {
+                "title": "ٹریننگ کمیٹی",
+                "mandate": "اورینٹیشن، ٹریننگ، سرٹیفیکیشن/ایکرایڈیشن/ریفریشر کورسز/ٹرین دی ٹرینر (TOT)",
+                "lead_name": "مستنصر ذاکر",
+                "members": [
+                  "انور کاشف ممتاز",
+                  "سائمه خواجہ",
+                  "طارق رانا",
+                  "ہما شاہ",
+                  "اسفند یار علی خان"
+                ]
+              },
+              "conduct": {
+                "title": "ضابطہ اخلاق کمیٹی",
+                "mandate": "ثالثوں کے لیے ضابطہ اخلاق کا مسودہ تیار کرنا اور ملک بھر میں اس کے نفاذ کے لیے وزارت قانون سے منظوری حاصل کرنے کی مہم چلانا۔",
+                "lead_name": "امیمہ خان",
+                "members": [
+                  "انور کاشف ممتاز",
+                  "سائمه خواجہ",
+                  "خالد محمود",
+                  "عدنان مفتی",
+                  "طارق رانا",
+                  "اسفند یار علی خان"
+                ]
+              },
+              "membership": {
+                "title": "رکنیت کمیٹی",
+                "mandate": "پرانی رکنیت کو برقرار رکھنا اور فعال کرنا، دوسرے اداروں کے تسلیم شدہ ثالثوں کو مدعو کر کے ممبرشپ پورٹ فولیو کو بڑھانا اور اس کے ساتھ ساتھ ایسوسی ایٹ اور اعزازی ممبران کو شامل کرنا۔",
+                "lead_name": "سعید حبیب",
+                "members": [
+                  "خالد محمود",
+                  "سائمه خواجہ",
+                  "صمد الحق",
+                  "اسفند یار علی خان"
+                ]
+              },
+              "bar_south": {
+                "title": "قانونی اور تعلیمی ہم آہنگی - جنوب",
+                "mandate": "میٹنگز، سیمینارز، اورینٹیشنز اور ٹریننگ/ورکشاپس کے انعقاد کے لیے بار ایسوسی ایشن/بار کونسل اور لاء اسکولوں کے ساتھ ہم آہنگی۔",
+                "lead_name": "شبانہ علی",
+                "members": [
+                  "سعادت یار خان",
+                  "امیمہ خان",
+                  "محترمہ خالد محمود",
+                  "صمد الحق",
+                  "منصور میر",
+                  "نوید احمد"
+                ]
+              },
+              "bar_north": {
+                "title": "قانونی اور تعلیمی ہم آہنگی - شمال",
+                "mandate": "میٹنگز، سیمینارز، اورینٹیشنز اور ٹریننگ/ورکشاپس کے انعقاد کے لیے بار ایسوسی ایشن/بار کونسل اور لاء اسکولوں کے ساتھ ہم آہنگی۔",
+                "lead_name": "سائمه خواجہ",
+                "members": [
+                  "ظفر کلانوری",
+                  "بیرسٹر طارق رانا",
+                  "اسفند یار علی خان"
+                ]
+              },
+              "institutional": {
+                "title": "ادارتی ہم آہنگی کمیٹی",
+                "mandate": "چیمبرز، تجارتی اداروں، پیشہ ورانہ انجمنوں/اداروں کے ساتھ ہم آہنگی۔",
+                "lead_name": "عدنان مفتی",
+                "members": [
+                  "مستنصر ذاکر",
+                  "سعید حبیب",
+                  "طارق رانا",
+                  "اسفند یار علی خان",
+                  "صمد الحق"
+                ]
+              }
+            },
+            "footer_note": "آغا ظفر احمد (صدر) اور وجیہہ علیم (سیکرٹری جنرل) ہر کمیٹی کے ایکس آفیشیو (Ex. Officio) ممبر ہیں۔"
+          },
+          "mediators": {
+            "adnan-mufti": { "name": "عدنان مفتی", "role": "رکن" },
+            "anwar-kashif-mumtaz": { "name": "انور کاشف ممتاز", "role": "رکن" },
+            "ayesha-sarfraz-ali-khan": { "name": "عائشہ سرفراز علی خان", "role": "رکن" },
+            "barrister-tariq-saeed-lahore": { "name": "بیرسٹر طارق سعید", "role": "رکن" },
+            "farrukh-junaidy": { "name": "فرخ جنیدی", "role": "رکن" },
+            "huma-shah": { "name": "ہما شاہ", "role": "رکن" },
+            "ishtiaq-memon": { "name": "اشتیاق میمن", "role": "رکن" },
+            "isfandyar-ali-khan": { "name": "اسفند یار علی خان", "role": "رکن" },
+            "khalid-firoz-arfeen": { "name": "خالد فیروز عارفین", "role": "رکن" },
+            "khalid-mahmood-siddiqui": { "name": "خالد محمود صدیقی", "role": "رکن" },
+            "mohammad-rehan-siddqui": { "name": "محمد ریحان صدیقی", "role": "رکن" },
+            "mustansir-zakir": { "name": "مستنصر ذاکر", "role": "رکن" },
+            "nausheen-ahmed": { "name": "نوشین احمد", "role": "رکن" },
+            "neelofar-hameed": { "name": "نیلوفر حمید", "role": "رکن" },
+            "omair-nisar-khan": { "name": "عمیر نثار خان", "role": "رکن" },
+            "raheem-hasnani": { "name": "رحیم حسنانی", "role": "رکن" },
+            "reshma-aftab": { "name": "ریشما آفتاب", "role": "رکن" },
+            "rubina-virani": { "name": "روبینہ ویرانی", "role": "رکن" },
+            "saadat-yar-khan": { "name": "سعادت یار خان", "role": "رکن" },
+            "saeed-habib": { "name": "سعید حبیب", "role": "رکن" },
+            "saima-khawaja": { "name": "سائمه امین خواجہ", "role": "رکن" },
+            "salina-khalfan": { "name": "سالینہ خلفان", "role": "رکن" },
+            "shabana-ali": { "name": "شبانہ علی", "role": "رکن" },
+            "shaheen-premani": { "name": "شاہین پریمنی", "role": "رکن" },
+            "syed-haider-imam-rizvi": { "name": "سید حیدر امام رضوی", "role": "رکن" },
+            "syed-sammadul-haque": { "name": "سید صمد الحق", "role": "رکن" },
+            "tahmasp-r-razvi": { "name": "طہماسپ آر رضوی", "role": "رکن" },
+            "umaimah-a-rizvi": { "name": "امیمہ اے رضوی", "role": "رکن" },
+            "usman-g-rashid": { "name": "عثمان جی راشد", "role": "رکن" },
+            "wajiha-aleem": { "name": "وجیہہ علیم", "role": "رکن" },
+            "yousuf-moulvi": { "name": "یوسف مولوی", "role": "رکن" },
+            "zafar-kalanauri": { "name": "ظفر کلانوری", "role": "رکن" },
+            "zia-makhdoom": { "name": "ضیاء مخدوم", "role": "رکن" }
+          }
 
         },
         "resources_page": {
-    "hero": {
-      "image_alt": "سروسز ہیرو امیج",
-      "eyebrow": "وسائل (RESOURCES)",
-      "title_line1": "علم۔ قانون۔",
-      "title_accent": "اصلاح۔",
-      "lead_text": "پی ایم اے (PMA) کی مطبوعات، ثالثی کے قوانین، ادارہ جاتی دستاویزات، تحقیقی مقالات، وکالتی وسائل، اور میڈیا مواد تک رسائی حاصل کریں جو پاکستان میں اے ڈی آر (ADR) اور پرامن حلِ تنازعات کے فروغ میں معاون ہیں۔"
-    },
-    "tabs": {
-      "featured": "نمایاں",
-      "downloads": "ڈاؤن لوڈز",
-      "mediation_laws": "ثالثی کے قوانین",
-      "advocacy": "وکالت و حمایت (Advocacy)",
-      "press_media": "پریس اور میڈیا",
-      "articles": "مضامین"
-    }
-  }
+          "hero": {
+            "image_alt": "سروسز ہیرو امیج",
+            "eyebrow": "وسائل (RESOURCES)",
+            "title_line1": "علم۔ قانون۔",
+            "title_accent": "اصلاح۔",
+            "lead_text": "پی ایم اے (PMA) کی مطبوعات، ثالثی کے قوانین، ادارہ جاتی دستاویزات، تحقیقی مقالات، وکالتی وسائل، اور میڈیا مواد تک رسائی حاصل کریں جو پاکستان میں اے ڈی آر (ADR) اور پرامن حلِ تنازعات کے فروغ میں معاون ہیں۔"
+          },
+          "tabs": {
+            "featured": "نمایاں",
+            "downloads": "ڈاؤن لوڈز",
+            "mediation_laws": "ثالثی کے قوانین",
+            "advocacy": "وکالت و حمایت (Advocacy)",
+            "press_media": "پریس اور میڈیا",
+            "articles": "مضامین"
+          },
+          "downloads_panel": {
+            "header": {
+              "title": "ڈاؤن لوڈز",
+              "lead": "ڈاؤن لوڈ کے لیے پی ڈی ایف (PDFs)، فارمز اور مطبوعات۔ فائل کو نئے ٹیب میں کھولنے کے لیے اس پر کلک کریں۔",
+              "view_all_text": "تمام ڈاؤن لوڈز دیکھیں"
+            },
+            "global_labels": {
+              "download_btn_text": "ڈاؤن لوڈ پی ڈی ایف",
+              "default_image_alt": "ADR-ACT-2017 پی ڈی ایف فائل"
+            },
+            "items": {
+              "card_1": {
+                "title": "اے ڈی آر ایکٹ 2017 (ADR-ACT-2017)",
+                "file_name": "ADR-ACT-2017.pdf"
+              },
+              "card_2": {
+                "title": "وکالت اور لابی (Advocacy and Lobby)",
+                "file_name": "Advocacy-and-Lobby.pdf"
+              },
+              "card_3": {
+                "title": "رجسٹریشن کا سرٹیفکیٹ",
+                "file_name": "Certificate.pdf"
+              },
+              "card_4": {
+                "title": "رکنیت کا درخواستی فارم",
+                "file_name": "membership-application-form.pdf"
+              },
+              "card_5": {
+                "title": "مفاہمت نامہ (میمورنڈم آف ایسوسی ایشن) اپڈیٹڈ",
+                "file_name": "MEMORANDUM-OF-ASSOCIATION-UPDATED.pdf"
+              },
+              "card_6": {
+                "title": "نامزدگی (Nomination)",
+                "file_name": "nomination_form.pdf"
+              },
+              "card_7": {
+                "title": "پی ایم اے (PMA) تقریر",
+                "file_name": "pma-speech.pdf"
+              },
+              "card_8": {
+                "title": "پی ایم اے میں کیوں شامل ہوں؟",
+                "file_name": "Why-Join-PMA.pdf"
+              }
+            }
+          },
+          "mediation_laws_panel": {
+            "header": {
+              "title": "ثالثی کے قوانین اور قانون سازی",
+              "lead": "ثالثی سے متعلق اہم قوانین، بل اور سرکاری قانون سازی کی دستاویزات۔",
+              "view_all_text": "تمام قوانین دیکھیں"
+            },
+            "global_labels": {
+              "download_btn_text": "ڈاؤن لوڈ پی ڈی ایف",
+              "default_image_alt": "ADR-ACT-2017 پی ڈی ایف فائل"
+            },
+            "items": {
+              "card_1": {
+                "title": "اسلام آباد ڈسپیوٹ ریزولوشن ایکٹ (ثالثی)",
+                "file_name": "Law-Islamabad-Dispute-Resolution-Act-Mediation.pdf"
+              },
+              "card_2": {
+                "title": "ضابطہ دیوانی 1908 (CPC) کے پہلے شیڈول میں ترامیم",
+                "file_name": "Law-KPK-Mediation-Amendment-No.1523-1622_Amendments-in-Frist-Schedule-of-the-code-of-Civil-Procedure-1908_dt-1.pdf"
+              },
+              "card_3": {
+                "title": "ضابطہ دیوانی 1908 میں پنجاب ترامیم (ثالثی کی شقیں)",
+                "file_name": "Law-Punjab-Amendments_civil_procedure_1908_final_Mediation_Provisions.pdf"
+              },
+              "card_4": {
+                "title": "ڈرافٹ ضابطہ دیوانی (سندھ ترمیم) بل، 2018",
+                "file_name": "Law-Sindh-Notification-dt-8-11-2018-The-DRAFT-Code-of-Civil-Procedure-Sindh-Amendment-Bill-2018.pdf"
+              },
+              "card_5": {
+                "title": "ثالثی کے ذریعے تصفیوں پر سنگاپور کنونشن (متن)",
+                "file_name": "Law-Singapore-Convention-on-Mediated-Settlements-Text.pdf"
+              }
+            }
+          },
+          "advocacy_panel": {
+            "header": {
+              "title": "وکالت اور پالیسی (Advocacy & Policy)",
+              "lead": "اے ڈی آر (ADR) اصلاحات کی حمایت کے لیے پالیسی بریفس، وکالتی ٹول کٹس اور پوزیشن پیپرز۔",
+              "view_all_text": "تمام وکالتی مواد دیکھیں"
+            },
+            "global_labels": {
+              "download_btn_text": "ڈاؤن لوڈ پی ڈی ایف",
+              "default_image_alt": "ADR-ACT-2017 پی ڈی ایف فائل"
+            },
+            "items": {
+              "card_1": {
+                "title": "خیبر پختونخوا (KPK)",
+                "file_name": "kpk.pdf"
+              },
+              "card_2": {
+                "title": "پنجاب",
+                "file_name": "punjab.pdf"
+              },
+              "card_3": {
+                "title": "سندھ",
+                "file_name": "sindh.pdf"
+              }
+            }
+          },
+          "press_media_panel": {
+            "header": {
+              "title": "پریس اور میڈیا",
+              "lead": "صحافیوں کے لیے پریس ریلیز، میڈیا کٹس اور ڈاؤن لوڈ کے قابل مواد۔",
+              "view_all_text": "میڈیا مواد دیکھیں"
+            },
+            "global_labels": {
+              "download_btn_text": "ڈاؤن لوڈ پی ڈی ایف",
+              "default_image_alt": "پی ڈی ایف فائل"
+            },
+            "items": {
+              "card_1": {
+                "title": "بزنس ریکارڈر (Business Recorder)",
+                "file_name": "BusinessRecorder.pdf"
+              },
+              "card_2": {
+                "title": "بزنس ریکارڈر اشتہار (AD)",
+                "file_name": ""
+              },
+              "card_3": {
+                "title": "فرنٹیئر پوسٹ (Frontier Post)",
+                "file_name": "FrontierPost.pdf"
+              },
+              "card_4": {
+                "title": "پاکستان آبزروور (Pakistan Observer)",
+                "file_name": "PakistanObserver.pdf"
+              },
+              "card_5": {
+                "title": "پی ایم اے پریس ریلیز",
+                "file_name": "PMA_PressRelease.pdf"
+              },
+              "card_6": {
+                "title": "ٹریبیون (Tribune)",
+                "file_name": "Tribune.pdf"
+              }
+            }
+          },
+          "articles_panel": {
+            "header": {
+              "title": "مضامین اور تجزیہ",
+              "lead": "ثالثی اور اے ڈی آر (ADR) پر تحقیقی مضامین، تجزیے اور فکری قیادت (Thought Leadership)۔",
+              "view_all_text": "تمام مضامین دیکھیں"
+            },
+            "global_labels": {
+              "download_btn_text": "ڈاؤن لوڈ پی ڈی ایف",
+              "author_prefix": "بذریعہ"
+            },
+            "items": {
+              "card_1": {
+                "title": "It Really Happened in Frankfurt",
+                "author": "جواد اے سروانہ",
+                "file_name": "blog-Jawad-Sarwana-It-Happened-in-Frankfurt.pdf",
+                "image_alt": "It Really Happened in Frankfurt پی ڈی ایف"
+              },
+              "card_2": {
+                "title": "Mediation Techniques (ثالثی کی تکنیکیں)",
+                "author": "جواد اے سروانہ",
+                "file_name": "Blog-Sarwana.pdf",
+                "image_alt": "Mediation Techniques پی ڈی ایف"
+              }
+            }
+          },
+          "search_bar": {
+            "question": "کیا آپ کو اپنی مطلوبہ چیز نہیں مل رہی؟",
+            "subtext": "وسائل کو تیزی سے تلاش کرنے کے لیے سرچ کا استعمال کریں یا کیٹیگری کے لحاظ سے براؤز کریں۔",
+            "placeholder": "وسائل تلاش کریں...",
+            "browse_btn_text": "تمام وسائل براؤز کریں"
+          }
+        },
+        "events_page": {
+          "hero_section": {
+            "eyebrow": "ایونٹس",
+            "title": "ایونٹس و تقاریب",
+            "lead": "پی ایم اے (PMA) کی کانفرنسوں، ثالثی کے اقدامات، ورکشاپس اور اہم اعلانات سے باخبر رہیں۔",
+            "image_alt": "ایونٹس ہیرو"
+          },
+          "tab_bar": {
+            "upcoming_events": "آنے والے ایونٹس",
+            "past_events": "گزشتہ ایونٹس",
+            "announcements": "اعلانات"
+          },
+          "upcoming_panel": {
+            "title": "بہت جلد آرہا ہے",
+            "lead": "آنے والے ایونٹس، کانفرنسیں اور ورکشاپس یہاں درج کی جائیں گی۔ جلد ہی دوبارہ چیک کریں۔"
+          },
+          "announcements_panel": {
+            "title": "بہت جلد آرہا ہے",
+            "lead": "اہم اعلانات یہاں ظاہر کیے جائیں گے۔ ہمارے ساتھ جڑے رہیں۔"
+          },
+          "past_events": {
+            "training_program_detail": {
+              "global_labels": {
+                "badge_text": "گزشتہ ایونٹ",
+                "pill_text": "سرٹیفائیڈ ٹریننگ پروگرام",
+                "view_gallery_btn": "ایونٹ گیلری دیکھیں",
+                "about_label": "ایونٹ کے بارے میں",
+                "highlights_label": "تربیت کی اہم جھلکیاں"
+              },
+              "card": {
+                "title": "چھٹا سرٹیفائیڈ میڈی ایشن ٹریننگ پروگرام",
+                "sub": "سندھ ہائی کورٹ",
+                "date": "08 جون 2026 سے 12 جون 2026",
+                "location": "سندھ ہائی کورٹ، کراچی"
+              },
+              "about_paragraphs": [
+                "پاکستان میڈی ایٹرز ایسوسی ایشن (PMA) نے سندھ ہائی کورٹ میں چھٹے سرٹیفائیڈ میڈی ایشن ٹریننگ پروگرام کا کامیابی سے انعقاد کیا۔",
+                "اس پروگرام کا مقصد ثالثی کی مہارتوں کو مضبوط کرنا، متبادل تنازعات کے حل (ADR) کے طریقوں کو فروغ دینا، اور قانونی ماہرین اور ثالثی کے پیشہ ور افراد میں پیشہ ورانہ صلاحیتوں کو بڑھانا تھا۔",
+                "انٹرایکٹو سیشنز، عملی مشقوں اور باہمی بات چیت کے ذریعے، شرکاء نے جدید ثالثی کی تکنیکوں اور تنازعات کے حل کے فریم ورک کے بارے میں قیمتی معلومات حاصل کیں‌۔"
+              ],
+              "highlights": [
+                "سرٹیفائیڈ ثالثی تربیتی سیشنز",
+                "عملی ثالثی کی مشقیں",
+                "انٹرایکٹو گروپ ڈسکشنز",
+                "متبادل تنازعات کے حل (ADR) کی تکنیکیں",
+                "پیشہ ورانہ صلاحیتوں کی تعمیر",
+                "باہمی سیکھنے کا ماحول"
+              ],
+              "meta": {
+                "objective_label": "تربیت کا مقصد",
+                "objective_text": "ثالثی کی مہارتوں کو مضبوط کرنا اور تنازعات کے موثر حل کے طریقوں کو فروغ دینا۔",
+                "organized_label": "منتظم",
+                "organized_text": "پاکستان میڈی ایٹرز ایسوسی ایشن (PMA)",
+                "participants_label": "شرکاء",
+                "participants_text": "قانونی پیشہ ور افراد، اے ڈی آر (ADR) کے ماہرین، ثالثین اور زیر تربیت شرکاء۔",
+                "type_label": "ایونٹ کی قسم",
+                "type_text": "سرٹیفائیڈ ٹریننگ پروگرام"
+              }
+            },
+            "national_conference_detail": {
+              "global_labels": {
+                "badge_text": "گزشتہ ایونٹ",
+                "about_label": "ایونٹ کے بارے میں",
+                "highlights_label": "نمایاں اے ڈی آر (ADR) پیش رفت"
+              },
+              "card": {
+                "title": "ثالثی: آگے بڑھنے کا راستہ (Mediation A Way Forward)",
+                "sub": "پہلی نیشنل میڈی ایشن کانفرنس",
+                "date": "7 مارچ، 2015",
+                "location": "ہوٹل میریٹ، کراچی",
+                "type": "نیشنل کانفرنس"
+              },
+              "about_paragraphs": [
+                "پی ایم اے (PMA) پاکستان کی پہلی تنظیم ہے جو بیرون ملک سے تربیت یافتہ اور منظور شدہ ثالثوں کے ساتھ ساتھ دیگر پیشہ ور افراد کی نمائندگی کرتی ہے جنہوں نے ایسوسی ایشن کے مقصد کو آگے بڑھانے کے لیے اس میں شمولیت اختیار کی ہے۔ یہ ایسوسی ایشن 2013 میں قائم کی گئی تھی اور اس نے متعدد ایسی سرگرمیاں اپنے ہاتھ میں لی ہیں جو پہلے آئی ایف سی/ورلڈ بینک گروپ کے متبادل تنازعات کے حل (ADR) پروجیکٹ کے تحت نافذ کی جا رہی تھیں۔",
+                "اس بات کو مدنظر رکھتے ہوئے کہ پاکستان میں معاہدوں کے نفاذ کے اشارے حوصلہ افزا نہیں ہیں اور اس میں کئی سال اور بھاری لاگت آتی ہے، پی ایم اے ان اقدامات کی قیادت اور تعاون کا عزم رکھتی ہے جو فریقین کو دوستانہ ماحول اور ثالثی کے عمل کے ذریعے تنازعات کو حل کرنے کے قابل بنائیں گے، اور تنازعات کے بروقت حل میں عدلیہ اور عدالتوں کی کوششوں کا ساتھ دیں گے۔"
+              ],
+              "highlights": [
+                "کراچی میں 'کراچی سینٹر فار ڈسپیوٹ ریزولوشن' اور لاہور میں 'لاہور چیمبر آف کامرس اینڈ انڈسٹری میڈی ایشن سینٹر' کا فعال ہونا۔",
+                "پاکستان میں اے ڈی آر/ثالثی کے قوانین میں اصلاحات کے لیے کوششیں کرنا۔",
+                "پاکستان میں CEDR کے منظور شدہ ثالثوں اور ماسٹر ٹرینرز کی موجودگی۔",
+                "پاکستان میں اے ڈی آر (ADR) کا نصاب تیار کرنا۔",
+                "پاکستان میں اے ڈی آر ٹریننگز کو مضبوط بنانا اور فراہم کرنا۔",
+                "کارپوریٹ گورننس سمیت متعدد تنازعات کو حل کرنے کے لیے اے ڈی آر کو ایک ذریعہ کے طور پر تسلیم کرنا۔"
+              ],
+              "meta": {
+                "objective_label": "کانفرنس کے مقاصد",
+                "objective_text": "اے ڈی آر اور ثالثی کے مقصد کو آگے بڑھانا اور پاکستان میں ثالثی کو ادارہ جاتی شکل دینے کے لیے پیش رفت، چیلنجز اور مستقبل کے اقدامات پر بحث کرنا۔",
+                "organized_label": "کانفرنس کے میزبان",
+                "organized_text": "اس کانفرنس کی میزبانی پاکستان میڈی ایٹرز ایسوسی ایشن کانفرنس پارٹنرز کے تعاون سے کر رہی ہے۔",
+                "participants_label": "مقررین اور مہمان",
+                "participants_text": "حکومت، عدلیہ، کاروباری برادری، بار، تعلیمی اداروں اور پاکستان میں ثالثی کے مراکز کے نمائندے بشمول غیر ملکی مقررین۔",
+                "type_label": "ایونٹ کی قسم",
+                "type_text": "نیشنل کانفرنس"
+              }
+            }
+          }
+        },
+        "privacy_policy": {
+          "hero": {
+            "title_main": "پرائیویسی",
+            "title_accent": "پالیسی",
+            "lead_text": "ہم آپ کی پرائیویسی کی حفاظت کرنے اور یہ یقینی بنانے کے لیے پرعزم ہیں کہ آپ کی ذاتی معلومات کو محفوظ اور ذمہ دارانہ طریقے سے سنبھالا جائے۔"
+          },
+          "sections": {
+            "commitment": {
+              "title": "پرائیویسی کا عزم",
+              "paragraphs": [
+                "پاکستان میڈی ایٹرز ایسوسی ایشن (PMA) آن لائن آپ کی پرائیویسی کے تحفظ کے لیے پرعزم ہے۔ پاکستان میڈی ایٹرز ایسوسی ایشن (PMA) نے پرائیویسی کے لیے اپنے پختہ عزم کا اظہار کرنے کے لیے یہ پرائیویسی بیان تیار کیا ہے۔ درج ذیل میں پاکستان میڈی ایٹرز ایسوسی ایشن (PMA) کے لیے معلومات جمع کرنے اور پھیلانے کے طریقوں کو واضح کیا گیا ہے۔",
+                "پی ایم اے کسی بھی وقت صارفین کو نئے پرائیویسی بیان کی موجودگی کے بارے میں مطلع کر کے اس پالیسی کو تبدیل کرنے کا حق محفوظ رکھتی ہے۔ یہ بیان اور اس میں بیان کردہ پالیسیاں کسی بھی فریق کے حق میں یا اس کی طرف سے کوئی معاہدہ یا دیگر قانونی حقوق پیدا کرنے کے لیے نہیں ہیں اور نہ ہی ایسا کرتی ہیں۔"
+              ]
+            },
+            "respect_data": {
+              "title": "صارف کے ڈیٹا کا احترام",
+              "paragraphs": [
+                "پاکستان میڈی ایٹرز ایسوسی ایشن (PMA) اپنے کلائنٹس کے ساتھ مضبوط تعلقات کو انتہائی اہمیت دیتی ہے۔ پاکستان میڈی ایٹرز ایسوسی ایشن (PMA) میں ڈیٹا جمع کرنے کے عمل کو ہمارے صارفین کی پرائیویسی کے مکمل اور مناسب احترام کے ساتھ سنبھالا جاتا ہے۔",
+                "ہم جو ڈیٹا جمع کرتے ہیں اسے حساسیت، حفاظت اور پرائیویسی کے مناسب خیال کے ساتھ سنبھالا جاتا ہے۔ پاکستان میڈی ایٹرز ایسوسی ایشن (PMA) اپنے کلائنٹس سے جمع کردہ ڈیٹا کو تیسرے فریقوں کے سامنے ظاہر نہیں کرتی، تقسیم نہیں کرتی اور نہ ہی فروخت کرتی ہے۔"
+              ]
+            },
+            "collection": {
+              "title": "معلومات کا حصول (ڈیٹا کلیکشن)",
+              "lead_text": "پی ایم اے ممبرشپ سائن اپ کے لیے درج ذیل معلومات جمع کرتی ہے:",
+              "items": [
+                "کمپیوٹرائزڈ قومی شناختی کارڈ (CNIC)",
+                "مکمل نام",
+                "رہائشی پتہ",
+                "دفتر کا پتہ",
+                "فون نمبر",
+                "ای میل کی معلومات",
+                "رکنیت سے متعلق دیگر متعلقہ معلومات"
+              ]
+            }
+          }
+        },
+        "complaint_policy": {
+          "hero": {
+            "title_main": "شکایات اور اپیل",
+            "title_accent": "پالیسی",
+            "lead_text": "ہم شکایات اور تحفظات کو منصفانہ، فوری اور شفاف طریقے سے حل کرنے کے لیے پرعزم ہیں۔"
+          },
+          "intro_card": {
+            "bold_text": "ہمارے پاس شکایات سے نمٹنے کے لیے ایک باقاعدہ طریقہ کار موجود ہے جو یہ یقینی بناتا ہے کہ ان پر مناسب توجہ اور دیکھ بھال کی جائے۔",
+            "lead_p": "پی ایم اے (PMA) کی ثالثی ایکریڈیٹیشن سروسز کا کوئی بھی صارف شکایت درج کرا سکتا ہے۔ پی ایم اے کا مقصد تمام صارفین کو بروقت اور ذمہ دارانہ خدمات فراہم کرنا ہے۔ ہم:",
+            "commitments": [
+              "تمام شکایات کو سنجیدگی سے لیں گے اور ان سے مناسب طریقے سے نمٹیں گے؛",
+              "شکایات کا فوری ازالہ کریں گے؛ اور",
+              "شکایات سے سیکھیں گے اور اپنی خدمات کو بہتر بنانے کے لیے اقدامات کریں گے۔"
+            ]
+          },
+          "steps": [
+            {
+              "text": "تاہم، ہم صرف ان شکایات پر کارروائی کر سکتے ہیں جو ڈائریکٹر آف ٹریننگ کی طرف سے موصول ہونے والی ناقص کسٹمر سروس کے بارے میں تحفظات پیدا کرتی ہوں۔"
+            },
+            {
+              "text": "اس کا مطلب یہ ہے کہ آپ کا کیس ڈائریکٹر آف ٹریننگ کے نام ہونا چاہیے اور ڈاک اور ای میل کے ذریعے بھیجا جانا چاہیے، جس کی ایک کاپی (cc) صدر پی ایم اے کو بھیجی جائے۔"
+            },
+            {
+              "text": "کوئی بھی طالب علم جو ڈائریکٹر آف ٹریننگ کے فیصلے سے مطمئن نہ ہو، وہ اس فیصلے کو مسترد کرنے کے لیے آزاد ہے، ایسی صورت میں اس کا کوئی لازم و ملزوم اثر نہیں ہوگا۔ ڈائریکٹر شکایت موصول ہونے کے 30 دنوں کے اندر جواب دینے کا پابند ہے۔"
+            },
+            {
+              "text": "اگر، تاہم، آپ اپنی شکایت کے حل سے غیر مطمئن رہتے ہیں یا ڈائریکٹر آف ٹریننگ کی طرف سے کوئی جواب نہیں ملتا ہے، تو آپ اپنی شکایت صدر پی ایم اے کو بھیج سکتے ہیں جو آپ کی شکایت کی سماعت کے لیے دو رکنی فیکلٹی ٹریبونل قائم کریں گے۔"
+            },
+            {
+              "text": "آپ کو اپنی درخواست کی وجوہات اور ڈائریکٹر آف ٹریننگ کے جائزے یا عدم کارروائی سے آپ کیا حاصل کرنا چاہتے ہیں، اس کے بارے میں واضح اور جامع ہونا پڑے گا۔ دو رکنی ٹریبونل صدر پی ایم اے کو کاپی کے ساتھ آپ کو تحریر کرے گا اور شکایت منتقلی کی درخواست کے 30 کاروباری دنوں کے اندر آپ کو تحریری طور پر یقینی جواب دے گا۔"
+            },
+            {
+              "text": "اگر آپ اپنی شکایت پر دو رکنی ٹریبونل کی کارروائی یا عدم کارروائی سے مطمئن نہیں ہیں، تو اس سے کسی بھی فریق کے ریلیف کے لیے کنزیومر کورٹ (صارفین کی عدالت) سے رجوع کرنے کے حقوق متاثر نہیں ہوں گے، اور یہ آپشن سب کے لیے کھلا ہے۔"
+            }
+          ]
+        },
+        "terms_conditions": {
+          "hero": {
+            "title_main": "شرائط و",
+            "title_accent": "ضوابط",
+            "lead_text": "براہ کرم ان شرائط کو غور سے پڑھیں۔ ہماری ویب سائٹ اور خدمات تک رسائی حاصل کرنے اور استعمال کرنے سے، آپ درج ذیل شرائط و ضوابط کی تعمیل کرنے سے اتفاق کرتے ہیں۔"
+          },
+          "accordion_items": [
+            {
+              "id": "training",
+              "title": "ٹریننگ (تربیت)",
+              "preview": "اپنی بکنگ کی تصدیق کے لیے، آپ کی ادائیگی کورسز شروع ہونے سے پہلے؛ پیشگی ہمارے دفاتر تک پہنچنی چاہیے۔",
+              "body_paragraphs": [
+                "اگر صارف ادائیگی میں تاخیر کرتا ہے، تو اسے کورسز میں بیٹھنے کی اجازت نہیں دی جائے گی۔"
+              ]
+            },
+            {
+              "id": "refunds",
+              "title": "ٹریننگ ریفنڈز (رقم کی واپسی)",
+              "preview": "ہم سمجھتے ہیں کہ زندگی پیچیدہ ہو سکتی ہے۔ اگر آپ شرکت کرنے کے قابل نہیں ہیں، تو براہ کرم جلد از جلد ہم سے 9768-3452-021 پر رابطہ کریں یا ہمیں info@pma.org.pk پر ای میل کریں۔",
+              "body_paragraphs": [
+                "ہمیں آپ کی جگہ کسی متبادل شریک کو شامل کرنے، یا کریڈٹ یا ریفنڈ کا انتظام کرنے میں خوشی ہوگی اور ہم ہمیشہ انفرادی بنیادوں پر آپ کے کیس پر غور کریں گے۔"
+              ]
+            },
+            {
+              "id": "membership",
+              "title": "رکنیت کی منسوخی",
+              "preview": "خاص حالات کے علاوہ رکنیت کی فیس ناقابل واپسی ہے۔",
+              "body_paragraphs": [
+                "اگر آپ سمجھتے ہیں کہ آپ کے حالات استثنیٰ کے معیار پر پورا اترتے ہیں تو براہ کرم ہم سے رابطہ کریں۔ ہر کیس کا جائزہ انفرادی طور پر پی ایم اے کی ممبرشپ کمیٹی لیتی ہے۔"
+              ]
+            },
+            {
+              "id": "copyright",
+              "title": "کاپی رائٹ (جملہ حقوق)",
+              "preview": "یہ سائٹ اور اس کے مندرجات کاپی رائٹ کے تابع ہیں۔ سائٹ کے مواد کے کاپی رائٹ کی مالک پاکستان میڈی ایٹرز ایسوسی ایشن (PMA) ہے، یا کچھ مواد کی صورت میں، کوئی تیسرا فریق ہے۔ سائٹ کے افعال اور آپریشنل کاپی رائٹ کی مالک پی ایم اے ہے۔",
+              "body_paragraphs": [
+                "آپ اپنے ویب براؤزر کا استعمال کرتے ہوئے اس سائٹ اور اس کے مندرجات کو دیکھ سکتے ہیں اور صرف ذاتی، غیر تجارتی استعمال کے لیے اس سائٹ کے حصوں کی الیکٹرانک کاپی اور ہارڈ کاپیاں پرنٹ کر سکتے ہیں۔ اس سائٹ کے مواد کا کوئی بھی دوسرا استعمال، بشمول دوبارہ تخلیق، ترمیم، تقسیم، منتقلی، دوبارہ اشاعت، نمائش یا کارکردگی، سختی سے ممنوع ہے۔"
+              ]
+            },
+            {
+              "id": "disclaimer",
+              "title": "دستبرداری (Disclaimer)",
+              "preview": "آپ اتفاق کرتے ہیں کہ اس سائٹ تک آپ کی رسائی اور استعمال ان شرائط اور تمام لاگو قوانین کے تابع ہے، اور یہ آپ کے اپنے خطرے پر ہے۔ یہ سائٹ اور اس کے مندرجات آپ کو \"جیسا ہے\" کی بنیاد پر فراہم کیے گئے ہیں، سائٹ میں غلطیاں، خامیاں اور خامیاں ہو سکتی ہیں اور ہو سکتا ہے کہ یہ مکمل اور موجودہ نہ ہو۔",
+              "body_paragraphs": [
+                "پاکستان میڈی ایٹرز ایسوسی ایشن (PMA) لاگو قوانین کے تحت فراہم کردہ سہولیات کے علاوہ، اس سائٹ کے آپریشن یا اس سائٹ پر شامل معلومات، مواد یا مصنوعات کے حوالے سے کسی بھی قسم کی صریح یا ضمنی ضمانت یا نمائندگی نہیں کرتی۔",
+                "نہ تو پی ایم اے اور نہ ہی اس سے وابستہ ادارے، ڈائریکٹرز، افسران، ملازمین، ایجنٹ، ٹھیکیدار، جانشین یا تفویض کردہ افراد اس سائٹ اور اس سائٹ سے منسلک کسی دوسری سائٹ کے استعمال سے پیدا ہونے والے یا کسی بھی طرح سے متعلقہ نقصانات کے ذمہ دار ہوں گے۔ یہ حد براہ راست، بالواسطہ، نتیجہ خیز، خصوصی، تعزیری یا دیگر نقصانات پر لاگو ہوتی ہے جو آپ کو یا دوسروں کو پہنچ سکتے ہیں، نیز منافع کے نقصان، کاروبار میں رکاوٹ یا ڈیٹا یا معلومات کے نقصان کے نقصانات پر بھی لاگو ہوتی ہے۔"
+              ]
+            },
+            {
+              "id": "translations",
+              "title": "گوگل تراجم (Google Translations)",
+              "preview": "یہ ویب سائٹ آپ کی سہولت کے لیے گوگل ٹرانسلیٹ™ کے ذریعے ترجمہ کی گئی ہے۔ گوگل ٹرانسلیٹ™ کے تراجم ایک خودکار کمپیوٹرائزڈ عمل کے ذریعے کیے جاتے ہیں، کسی تصدیق شدہ پیشہ ور مترجم کے ذریعے نہیں۔",
+              "body_paragraphs": [
+                "اس وجہ سے، تراجم غلط یا ناقابل بھروسہ ہو سکتے ہیں۔ گوگل ٹرانسلیٹ™ کے تراجم احتیاط کے ساتھ استعمال کریں۔ تراجم کسی بھی قسم کی وارنٹی کے بغیر \"جیسا ہے\" کی بنیاد پر فراہم کیے جاتے ہیں۔ کچھ مواد (جیسے تصاویر، ویڈیوز، فلیش وغیرہ) ترجمے کے سافٹ ویئر کی حدود کی وجہ سے ترجمہ نہیں ہو پاتا۔",
+                "پی ایم اے نامکمل یا غلط تراجم کی ذمہ دار نہیں ہے، اور نہ ہی وہ صارف کی طرف سے گوگل ٹرانسلیٹ™ کے تراجم (یا اس ویب سائٹ پر موجود کسی دوسرے ترجمے) کے استعمال سے پیدا ہونے والے کسی نقصان یا نقصان کی ذمہ دار ہے۔",
+                "اگر آپ کے پاس گوگل ٹرانسلیٹ™ کے بارے میں کوئی سوالات ہیں، تو ملاحظہ کریں: Google Translate™ FAQs۔",
+                "گوگل ترجمے سے متعلق تمام وارنٹیوں سے دستبردار ہوتا ہے، خواہ وہ صریح ہوں یا ضمنی، بشمول درستگی، قابل اعتمادی کی کوئی بھی وارنٹی، اور تجارتی قابلیت، کسی خاص مقصد کے لیے موزونیت اور خلاف ورزی نہ کرنے کی کوئی بھی ضمنی وارنٹی۔"
+              ]
+            }
+          ]
+        },
+        "become_member": {
+          "hero": {
+            "eyebrow": "پی ایم اے جوائن کریں",
+            "title_main": "بنیں ایک",
+            "title_accent": "پی ایم اے ممبر",
+            "lead_text": "ثالثوں (mediators)، اے ڈی آر (ADR) کے پیشہ ور افراد اور ادارہ جاتی رہنماؤں کی ایک مقتدر کمیونٹی میں شامل ہوں جو پرامن طریقے سے تنازعات کے حل کے لیے پرعزم ہیں۔"
+          },
+          "why_join": {
+            "title_main": "پی ایم اے کیوں",
+            "title_accent": "جوائن",
+            "title_end": "کریں؟",
+            "subtitle": "پی ایم اے کے ممبران پیشہ ورانہ فوائد اور مواقع کے ایک واضح سلسلے سے لطف اندوز ہوتے ہیں۔",
+            "cards": [
+              {
+                "title": "بین الاقوامی کانفرنسیں",
+                "description": "رعایتی فیس اور ترجیحی رجسٹریشن کے ساتھ ثالثی (mediation) اور پنچائیت (arbitration) کے جدید ترین مسائل پر عالمی کانفرنسوں میں شرکت کریں۔"
+              },
+              {
+                "title": "ورکشاپس اور کورسز",
+                "description": "اعلیٰ ترین تعلیمی ورکشاپس اور پیشہ ورانہ ترقی کے کورسز تک رسائی حاصل کریں۔"
+              },
+              {
+                "title": "پیشہ ورانہ ترقی",
+                "description": "ماہرین کی بصیرت اور وسائل کے ذریعے ثالثی (mediation) اور اے ڈی آر (ADR) کے بارے میں اپنی سمجھ کو بڑھائیں۔"
+              },
+              {
+                "title": "عالمی نیٹ ورک",
+                "description": "قیمتی قومی اور بین الاقوامی پیشہ ورانہ روابط قائم کریں اور انہیں برقرار رکھیں۔"
+              },
+              {
+                "title": "کاروباری مواقع",
+                "description": "اپنے کاروباری اور پیشہ ورانہ واقف کاروں کے حلقے کو وسیع کریں۔"
+              },
+              {
+                "title": "پیشہ ورانہ تعاون",
+                "description": "ثالثی اور پرامن تنازعات کے حل کی حمایت اور ترقی میں کلیدی کردار ادا کریں۔"
+              }
+            ]
+          },
+          "benefits": {
+            "title_main": "رکنیت کے",
+            "title_accent": "فوائد",
+            "subtitle": "پی ایم اے کے ایک رجسٹرڈ ممبر کے طور پر، آپ فوائد اور مواقع کی ایک وسیع رینج سے لطف اندوز ہوں گے۔",
+            "items": [
+              {
+                "title": "نیٹ ورکنگ کے مواقع",
+                "description": "پورا سال، پی ایم اے ممبران کو پیشہ ورانہ تعلقات بڑھانے اور انڈسٹری کی سرگرمیوں اور رجحانات سے باخبر رہنے کے لیے مختلف مواقع فراہم کرتا ہے۔"
+              },
+              {
+                "title": "ممبرشپ ڈائریکٹری",
+                "description": "خصوصی طور پر پی ایم اے ممبران کے لیے دستیاب، اس ڈائریکٹری میں ممبران اور دیگر عالمی تنظیموں کے اپ ڈیٹ شدہ رابطے کی تفصیلات موجود ہیں۔ یہ پرنٹ اور الیکٹرانک دونوں صورتوں میں دستیاب ہے۔"
+              },
+              {
+                "title": "ممبرشپ سرٹیفکیٹ",
+                "description": "ممبران کو منظوری کے بعد عالمی سطح پر تسلیم شدہ ممبرشپ سرٹیفکیٹ جاری کیا جاتا ہے۔ سرٹیفکیٹس سالانہ ممبرز گالا میں دیے جاتے ہیں۔"
+              },
+              {
+                "title": "مسلسل پیشہ ورانہ ترقی",
+                "description": "ثالثی اور اے ڈی آر کے معروف ماہرین کی جانب سے انگریزی اور عربی میں منعقد کیے جانے والے خصوصی ورکشاپس اور پیشہ ورانہ ترقی کے کورسز تک ترجیحی رسائی۔"
+              }
+            ]
+          },
+          "membership_journey": {
+            "title": "رکنیت کا سفر",
+            "subtitle": "پی ایم اے کا ایک معزز رکن بننے کا ایک آسان عمل۔",
+            "steps": [
+              {
+                "num": "1",
+                "title": "رکنیت کا فارم جمع کروائیں",
+                "desc": "آن لائن درخواست فارم پُر کریں۔"
+              },
+              {
+                "num": "2",
+                "title": "پروفائل کا جائزہ",
+                "desc": "ہماری ٹیم آپ کی درخواست کا جائزہ لے گی۔"
+              },
+              {
+                "num": "3",
+                "title": "رکنیت کی منظوری",
+                "desc": "آپ کی درخواست منظور ہونے کے بعد آپ کو مطلع کر دیا جائے گا۔"
+              },
+              {
+                "num": "4",
+                "title": "پی ایم اے میں خوش آمدید",
+                "desc": "اپنا ممبرشپ سرٹیفکیٹ حاصل کریں اور ہمارے پیشہ ورانہ نیٹ ورک کا حصہ بنیں۔"
+              }
+            ]
+          },
+          "membership_application": {
+            "form_header": {
+              "title": "رکنیت کا فارم (درخواست)",
+              "desc": "براہ کرم درست معلومات فراہم کریں۔ وہ تمام فیلڈز جن پر * کا نشان ہے لازمی ہیں۔"
+            },
+            "sections": {
+              "personal_info": {
+                "title": "ذاتی معلومات",
+                "fields": {
+                  "full_name": { "label": "پورا نام", "placeholder": "اپنا پورا نام درج کریں" },
+                  "father_name": { "label": "والد کا نام", "placeholder": "والد کا نام درج کریں" },
+                  "qualification": { "label": "تعلیمی قابلیت", "placeholder": "تعلیمی قابلیت درج کریں" },
+                  "designation": { "label": "عہدہ", "placeholder": "عہدہ درج کریں" },
+                  "cnic": { "label": "شناختی کارڈ نمبر (CNIC)", "placeholder": "شناختی کارڈ نمبر درج کریں" },
+                  "chamber_phone": { "label": "چیمبر فون", "placeholder": "چیمبر کا فون نمبر درج کریں" }
+                }
+              },
+              "contact_info": {
+                "title": "رابطے کی معلومات",
+                "fields": {
+                  "office_address": { "label": "دفتر کا پتہ", "placeholder": "دفتر کا پتہ درج کریں" },
+                  "res_address": { "label": "رہائشی پتہ", "placeholder": "رہائشی پتہ درج کریں" },
+                  "res_phone": { "label": "گھر کا فون", "placeholder": "گھر کا فون نمبر درج کریں" },
+                  "email": { "label": "ای میل", "placeholder": "ای میل ایڈریس درج کریں" },
+                  "upload": {
+                    "label": "دستاویزات اپ لوڈ کریں",
+                    "text": "فائل منتخب کریں یا یہاں ڈریگ کریں",
+                    "hint": "PDF, JPG, PNG (زیادہ سے زیادہ 5MB)"
+                  }
+                }
+              },
+              "references": {
+                "title": "پیشہ ورانہ حوالہ جات (References)",
+                "fields": {
+                  "proposer_name": { "label": "تجوید کنندہ (Proposer) کا پورا نام", "placeholder": "پروپوزر کا پورا نام درج کریں" },
+                  "proposer_address": { "label": "تجوید کنندہ کا رہائشی پتہ", "placeholder": "پتہ درج کریں" },
+                  "proposer_phone": { "label": "تجوید کنندہ کا فون", "placeholder": "فون نمبر درج کریں" },
+                  "seconder_name": { "label": "تائید کنندہ (Seconder) کا پورا نام", "placeholder": "سیکنڈر کا پورا نام درج کریں" },
+                  "seconder_address": { "label": "تائید کنندہ کا رہائشی پتہ", "placeholder": "پتہ درج کریں" },
+                  "seconder_phone": { "label": "تائید کنندہ کا فون", "placeholder": "فون نمبر درج کریں" }
+                }
+              }
+            },
+            "declaration": "میں اس بات کا اعلان کرتا/کرتی ہوں کہ اوپر فراہم کردہ معلومات سچی اور درست ہیں۔",
+            "submit_btn": "درخواست جمع کروائیں",
+            "sidebar": {
+              "title_main": "مثبت تبدیلی کا",
+              "title_accent": "حصہ بنیں",
+              "desc": "پی ایم اے میں شامل ہوں اور مکالمے، افہام و تفہیم اور پرامن تنازعات کے حل کی ثقافت کو فروغ دینے میں اپنا کردار ادا کریں۔",
+              "list": [
+                "پیشہ ورانہ شناخت",
+                "سیکھنا اور ترقی",
+                "نیٹ ورکنگ اور تعاون",
+                "اثر انگیز شراکت داری"
+              ],
+              "quote": "ہم مل کر ثالثی کے ذریعے ایک زیادہ ہم آہنگ اور انصاف پسند معاشرہ تشکیل دے سکتے ہیں۔",
+              "author": "- پی ایم اے"
+            }
+          }
+        }
       }
     },
     ar: {
@@ -3489,225 +4829,895 @@
             "search_placeholder": "ابحث بالاسم أو التخصص..."
           },
           "members": {
-    "member_1": {
-      "name": "آغا ظفر أحمد",
-      "title": "الرئيس",
-      "badges": {
-        "executive_team": "الفريق التنفيذي",
-        "mediator": "وسيط",
-        "cedr_accredited": "وسيط معتمد من CEDR"
-      },
-      "aria_label": "عرض الملف الشخصي لـ آغا ظفر أحمد"
-    },
-    "member_2": {
-      "name": "صائمة أمين خواجة",
-      "title": "نائب الرئيس – الشمال",
-      "badges": {
-        "executive_team": "الفريق التنفيذي",
-        "mediator": "وسيط",
-        "cedr_accredited": "وسيط معتمد من CEDR"
-      },
-      "aria_label": "عرض الملف الشخصي لـ صائمة أمين خواجة"
-    },
-    "member_3": {
-      "name": "أسفند يار علي خان",
-      "title": "نائب الرئيس – الشمال",
-      "badges": {
-        "executive_team": "الفريق التنفيذي",
-        "mediator": "وسيط",
-        "cedr_accredited": "وسيط معتمد من CEDR"
-      },
-      "aria_label": "عرض الملف الشخصي لـ أسفند يار علي خان"
-    },
-    "member_4": {
-      "name": "سعيد حبيب",
-      "title": "نائب الرئيس – الجنوب",
-      "badges": {
-        "executive_team": "الفريق التنفيذي"
-      },
-      "aria_label": "عرض الملف الشخصي لـ سعيد حبيب"
-    },
-    "member_5": {
-      "name": "شبانة علي",
-      "title": "نائب الرئيس – الجنوب",
-      "badges": {
-        "executive_team": "الفريق التنفيذي",
-        "mediator": "وسيط",
-        "pma_accredited": "وسيط معتمد من PMA"
-      },
-      "aria_label": "عرض الملف الشخصي لـ شبانة علي"
-    },
-    "member_6": {
-      "name": "وجيهة عليم",
-      "title": "الأمين العام",
-      "badges": {
-        "executive_team": "الفريق التنفيذي",
-        "mediator": "وسيط",
-        "cedr_accredited": "وسيط معتمد من CEDR"
-      },
-      "aria_label": "عرض الملف الشخصي لـ وجيهة عليم"
-    },
-    "member_7": {
-      "name": "سيد صمد الحق",
-      "title": "الأمين المالي",
-      "badges": {
-        "executive_team": "الفريق التنفيذي"
-      },
-      "aria_label": "عرض الملف الشخصي لـ سيد صمد الحق"
-    },
-    "member_8": {
-      "name": "طارق سعيد رانا",
-      "title": "اللجنة التنفيذية – الشمال",
-      "badges": {
-        "executive_team": "الفريق التنفيذي",
-        "mediator": "وسيط",
-        "cedr_accredited": "وسيط معتمد من CEDR"
-      },
-      "aria_label": "عرض الملف الشخصي لـ طارق سعيد رانا"
-    },
-    "member_9": {
-      "name": "هما شاه",
-      "title": "اللجنة التنفيذية – الشمال",
-      "badges": {
-        "executive_team": "الفريق التنفيذي",
-        "mediator": "وسيط",
-        "cedr_accredited": "وسيط معتمد من CEDR"
-      },
-      "aria_label": "عرض الملف الشخصي لـ هما شاه"
-    },
-    "member_10": {
-      "name": "أميمة أنور خان",
-      "title": "اللجنة التنفيذية – الجنوب",
-      "badges": {
-        "executive_team": "الفريق التنفيذي"
-      },
-      "aria_label": "عرض الملف الشخصي لـ أميمة أنور خان"
-    },
-    "member_11": {
-      "name": "مستنصر ذاكر",
-      "title": "اللجنة التنفيذية – الجنوب",
-      "badges": {
-        "executive_team": "الفريق التنفيذي",
-        "mediator": "وسيط",
-        "cedr_accredited": "وسيط معتمد من CEDR"
-      },
-      "aria_label": "عرض الملف الشخصي لـ مستنصر ذاكر"
-    },
-    "member_12": {
-      "name": "عدنان مفتي",
-      "title": "اللجنة التنفيذية – الجنوب",
-      "badges": {
-        "executive_team": "الفريق التنفيذي",
-        "mediator": "وسيط",
-        "cedr_accredited": "وسيط معتمد من CEDR"
-      },
-      "aria_label": "عرض الملف الشخصي لـ عدنان مفتي"
-    }
-  },
-  "trainers": {
-    "trainer_1": {
-      "name": "مستنصر ذاكر",
-      "title": "مدرب رئيسي",
-      "badges": {
-        "master_trainer": "مدرب رئيسي",
-        "director_training": "مدير التدريب",
-        "ex_president": "الرئيس السابق"
-      },
-      "aria_label": "عرض الملف الشخصي لـ مستنصر ذاكر"
-    },
-    "trainer_2": {
-      "name": "أنور كاشف ممتاز",
-      "title": "مدرب رئيسي",
-      "badges": {
-        "master_trainer": "مدرب رئيسي",
-        "ex_president": "الرئيس السابق",
-        "leadership_trainer": "مدرب القيادة"
-      },
-      "aria_label": "عرض الملف الشخصي لـ أنور كاشف ممتاز"
-    },
-    "trainer_3": {
-      "name": "طارق سعيد رانا",
-      "title": "مدرب رئيسي",
-      "badges": {
-        "master_trainer": "مدرب رئيسي",
-        "ex_president": "الرئيس السابق",
-        "executive_committee_north": "اللجنة التنفيذية – الشمال"
-      },
-      "aria_label": "عرض الملف الشخصي لـ طارق سعيد رانا"
-    },
-    "trainer_4": {
-      "name": "صائمة أمين خواجة",
-      "title": "مدرب رئيسي",
-      "badges": {
-        "master_trainer": "مدرب رئيسي",
-        "executive_member": "عضو تنفيذي",
-        "vice_president_north": "نائب الرئيس – الشمال"
-      },
-      "aria_label": "عرض الملف الشخصي لـ صائمة أمين خواجة"
-    },
-    "trainer_5": {
-      "name": "هما شاه",
-      "title": "مدرب رئيسي",
-      "badges": {
-        "master_trainer": "مدرب رئيسي",
-        "executive_committee_north": "اللجنة التنفيذية – الشمال",
-        "training_committee": "لجنة التدريب"
-      },
-      "aria_label": "عرض الملف الشخصي لـ هما شاه"
-    },
-    "trainer_6": {
-      "name": "عثمان جي راشد",
-      "title": "مدرب رئيسي",
-      "badges": {
-        "master_trainer": "مدرب رئيسي",
-        "barrister_at_law": "محامٍ مستشار (باريسر)",
-        "former_secretary_general": "الأمين العام السابق – PMA"
-      },
-      "aria_label": "عرض الملف الشخصي لـ عثمان جي راشد"
-    },
-    "trainer_7": {
-      "name": "أسفند يار علي خان",
-      "title": "مدرب رئيسي",
-      "badges": {
-        "master_trainer": "مدرب رئيسي",
-        "executive_leadership": "القيادة التنفيذية",
-        "vice_president_north": "نائب الرئيس – الشمال"
-      },
-      "aria_label": "عرض الملف الشخصي لـ أسفند يار علي خان"
-    }
-  },
-  "former_presidents": {
-    "president_1": {
-      "name": "أنور كاشف ممتاز",
-      "title": "الرئيس السابق"
-    },
-    "president_2": {
-      "name": "مستنصر ذاكر",
-      "title": "الرئيس السابق"
-    },
-    "president_3": {
-      "name": "طارق سعيد رانا",
-      "title": "الرئيس السابق"
-    }
-  }
+            "member_1": {
+              "name": "آغا ظفر أحمد",
+              "title": "الرئيس",
+              "badges": {
+                "executive_team": "الفريق التنفيذي",
+                "mediator": "وسيط",
+                "cedr_accredited": "وسيط معتمد من CEDR"
+              },
+              "aria_label": "عرض الملف الشخصي لـ آغا ظفر أحمد"
+            },
+            "member_2": {
+              "name": "صائمة أمين خواجة",
+              "title": "نائب الرئيس – الشمال",
+              "badges": {
+                "executive_team": "الفريق التنفيذي",
+                "mediator": "وسيط",
+                "cedr_accredited": "وسيط معتمد من CEDR"
+              },
+              "aria_label": "عرض الملف الشخصي لـ صائمة أمين خواجة"
+            },
+            "member_3": {
+              "name": "أسفند يار علي خان",
+              "title": "نائب الرئيس – الشمال",
+              "badges": {
+                "executive_team": "الفريق التنفيذي",
+                "mediator": "وسيط",
+                "cedr_accredited": "وسيط معتمد من CEDR"
+              },
+              "aria_label": "عرض الملف الشخصي لـ أسفند يار علي خان"
+            },
+            "member_4": {
+              "name": "سعيد حبيب",
+              "title": "نائب الرئيس – الجنوب",
+              "badges": {
+                "executive_team": "الفريق التنفيذي"
+              },
+              "aria_label": "عرض الملف الشخصي لـ سعيد حبيب"
+            },
+            "member_5": {
+              "name": "شبانة علي",
+              "title": "نائب الرئيس – الجنوب",
+              "badges": {
+                "executive_team": "الفريق التنفيذي",
+                "mediator": "وسيط",
+                "pma_accredited": "وسيط معتمد من PMA"
+              },
+              "aria_label": "عرض الملف الشخصي لـ شبانة علي"
+            },
+            "member_6": {
+              "name": "وجيهة عليم",
+              "title": "الأمين العام",
+              "badges": {
+                "executive_team": "الفريق التنفيذي",
+                "mediator": "وسيط",
+                "cedr_accredited": "وسيط معتمد من CEDR"
+              },
+              "aria_label": "عرض الملف الشخصي لـ وجيهة عليم"
+            },
+            "member_7": {
+              "name": "سيد صمد الحق",
+              "title": "الأمين المالي",
+              "badges": {
+                "executive_team": "الفريق التنفيذي"
+              },
+              "aria_label": "عرض الملف الشخصي لـ سيد صمد الحق"
+            },
+            "member_8": {
+              "name": "طارق سعيد رانا",
+              "title": "اللجنة التنفيذية – الشمال",
+              "badges": {
+                "executive_team": "الفريق التنفيذي",
+                "mediator": "وسيط",
+                "cedr_accredited": "وسيط معتمد من CEDR"
+              },
+              "aria_label": "عرض الملف الشخصي لـ طارق سعيد رانا"
+            },
+            "member_9": {
+              "name": "هما شاه",
+              "title": "اللجنة التنفيذية – الشمال",
+              "badges": {
+                "executive_team": "الفريق التنفيذي",
+                "mediator": "وسيط",
+                "cedr_accredited": "وسيط معتمد من CEDR"
+              },
+              "aria_label": "عرض الملف الشخصي لـ هما شاه"
+            },
+            "member_10": {
+              "name": "أميمة أنور خان",
+              "title": "اللجنة التنفيذية – الجنوب",
+              "badges": {
+                "executive_team": "الفريق التنفيذي"
+              },
+              "aria_label": "عرض الملف الشخصي لـ أميمة أنور خان"
+            },
+            "member_11": {
+              "name": "مستنصر ذاكر",
+              "title": "اللجنة التنفيذية – الجنوب",
+              "badges": {
+                "executive_team": "الفريق التنفيذي",
+                "mediator": "وسيط",
+                "cedr_accredited": "وسيط معتمد من CEDR"
+              },
+              "aria_label": "عرض الملف الشخصي لـ مستنصر ذاكر"
+            },
+            "member_12": {
+              "name": "عدنان مفتي",
+              "title": "اللجنة التنفيذية – الجنوب",
+              "badges": {
+                "executive_team": "الفريق التنفيذي",
+                "mediator": "وسيط",
+                "cedr_accredited": "وسيط معتمد من CEDR"
+              },
+              "aria_label": "عرض الملف الشخصي لـ عدنان مفتي"
+            }
+          },
+          "trainers": {
+            "trainer_1": {
+              "name": "مستنصر ذاكر",
+              "title": "مدرب رئيسي",
+              "badges": {
+                "master_trainer": "مدرب رئيسي",
+                "director_training": "مدير التدريب",
+                "ex_president": "الرئيس السابق"
+              },
+              "aria_label": "عرض الملف الشخصي لـ مستنصر ذاكر"
+            },
+            "trainer_2": {
+              "name": "أنور كاشف ممتاز",
+              "title": "مدرب رئيسي",
+              "badges": {
+                "master_trainer": "مدرب رئيسي",
+                "ex_president": "الرئيس السابق",
+                "leadership_trainer": "مدرب القيادة"
+              },
+              "aria_label": "عرض الملف الشخصي لـ أنور كاشف ممتاز"
+            },
+            "trainer_3": {
+              "name": "طارق سعيد رانا",
+              "title": "مدرب رئيسي",
+              "badges": {
+                "master_trainer": "مدرب رئيسي",
+                "ex_president": "الرئيس السابق",
+                "executive_committee_north": "اللجنة التنفيذية – الشمال"
+              },
+              "aria_label": "عرض الملف الشخصي لـ طارق سعيد رانا"
+            },
+            "trainer_4": {
+              "name": "صائمة أمين خواجة",
+              "title": "مدرب رئيسي",
+              "badges": {
+                "master_trainer": "مدرب رئيسي",
+                "executive_member": "عضو تنفيذي",
+                "vice_president_north": "نائب الرئيس – الشمال"
+              },
+              "aria_label": "عرض الملف الشخصي لـ صائمة أمين خواجة"
+            },
+            "trainer_5": {
+              "name": "هما شاه",
+              "title": "مدرب رئيسي",
+              "badges": {
+                "master_trainer": "مدرب رئيسي",
+                "executive_committee_north": "اللجنة التنفيذية – الشمال",
+                "training_committee": "لجنة التدريب"
+              },
+              "aria_label": "عرض الملف الشخصي لـ هما شاه"
+            },
+            "trainer_6": {
+              "name": "عثمان جي راشد",
+              "title": "مدرب رئيسي",
+              "badges": {
+                "master_trainer": "مدرب رئيسي",
+                "barrister_at_law": "محامٍ مستشار (باريسر)",
+                "former_secretary_general": "الأمين العام السابق – PMA"
+              },
+              "aria_label": "عرض الملف الشخصي لـ عثمان جي راشد"
+            },
+            "trainer_7": {
+              "name": "أسفند يار علي خان",
+              "title": "مدرب رئيسي",
+              "badges": {
+                "master_trainer": "مدرب رئيسي",
+                "executive_leadership": "القيادة التنفيذية",
+                "vice_president_north": "نائب الرئيس – الشمال"
+              },
+              "aria_label": "عرض الملف الشخصي لـ أسفند يار علي خان"
+            }
+          },
+          "former_presidents": {
+            "president_1": {
+              "name": "أنور كاشف ممتاز",
+              "title": "الرئيس السابق"
+            },
+            "president_2": {
+              "name": "مستنصر ذاكر",
+              "title": "الرئيس السابق"
+            },
+            "president_3": {
+              "name": "طارق سعيد رانا",
+              "title": "الرئيس السابق"
+            }
+          },
+          "subcommittee_panel": {
+            "header": {
+              "title": "اللجنة الفرعية",
+              "subtitle": "تقود لجاننا الفرعية المبادرات الرئيسية وتدعم مهمة PMA من خلال الخبرة والتعاون والخدمة المخصصة.",
+              "expand_all": "توسيع الكل"
+            },
+            "labels": {
+              "mandate": "الولاية / المهام:",
+              "director": "مدير",
+              "convener": "منسق"
+            },
+            "committees": {
+              "training": {
+                "title": "لجنة التدريب",
+                "mandate": "التوجيه، التدريب، الشهادات/الاعتماد/الدورات التنشيطية/تدريب المدربين (TOT)",
+                "lead_name": "مستنصر ذاكر",
+                "members": [
+                  "أنور كاشف ممتاز",
+                  "صائمة خواجة",
+                  "طارق رانا",
+                  "هما شاه",
+                  "اسفنديار علي خان"
+                ]
+              },
+              "conduct": {
+                "title": "لجنة قواعد السلوك",
+                "mandate": "صياغة قواعد السلوك للمصالحين والسعي للحصول على موافقة وزارة العدل لتطبيقها في جميع أنحاء البلاد",
+                "lead_name": "أميمة خان",
+                "members": [
+                  "أنور كاشف ممتاز",
+                  "صائمة خواجة",
+                  "خالد محمود",
+                  "عدنان مفتي",
+                  "طارق رانا",
+                  "اسفنديار علي خان"
+                ]
+              },
+              "membership": {
+                "title": "لجنة العضوية",
+                "mandate": "الاحتفاظ بالعضوية القديمة وتنشيطها، وتوسيع محفظة العضوية من خلال دعوة المصالحين المعتمدين من المعاهد الأخرى وأيضاً ضم أعضاء منتسبين وأعضاء شرفيين.",
+                "lead_name": "سعيد حبيب",
+                "members": [
+                  "خالد محمود",
+                  "صائمة خواجة",
+                  "صمد الحق",
+                  "اسفنديار علي خان"
+                ]
+              },
+              "bar_south": {
+                "title": "التنسيق القانوني والأكاديمي – الجنوب",
+                "mandate": "التنسيق مع نقابة المحامين/مجلس المحامين وكليات الحقوق لتنظيم الاجتماعات والندوات واللقاءات التوجيهية والدورات التدريبية/ورش العمل",
+                "lead_name": "شبانه علي",
+                "members": [
+                  "سعادة يار خان",
+                  "أميمة خان",
+                  "السيدة خالد محمود",
+                  "صمد الحق",
+                  "منصور مير",
+                  "نويد أحمد"
+                ]
+              },
+              "bar_north": {
+                "title": "التنسيق القانوني والأكاديمي – الشمال",
+                "mandate": "التنسيق مع نقابة المحامين/مجلس المحامين وكليات الحقوق لتنظيم الاجتماعات والندوات واللقاءات التوجيهية والدورات التدريبية/ورش العمل",
+                "lead_name": "صائمة خواجة",
+                "members": [
+                  "ظفر كالاناوري",
+                  "المحامي طارق رانا",
+                  "اسفنديار علي خان"
+                ]
+              },
+              "institutional": {
+                "title": "لجنة التنسيق المؤسسي",
+                "mandate": "التنسيق مع الغرف التجارية والكيانات التجارية والجمعيات/المعاهد المهنية",
+                "lead_name": "عدنان مفتي",
+                "members": [
+                  "مستنصر ذاكر",
+                  "سعيد حبيب",
+                  "طارق رانا",
+                  "اسفنديار علي خان",
+                  "صمد الحق"
+                ]
+              }
+            },
+            "footer_note": "آغا ظفر أحمد (الرئيس) ووجيهة عليم (الأمين العام) هما عضوان بحكم المنصب في كل لجنة."
+          },
+          "mediators": {
+            "adnan-mufti": { "name": "عدنان مفتي", "role": "عضو" },
+            "anwar-kashif-mumtaz": { "name": "أنور كاشف ممتاز", "role": "عضو" },
+            "ayesha-sarfraz-ali-khan": { "name": "عائشة سرفراز علي خان", "role": "عضو" },
+            "barrister-tariq-saeed-lahore": { "name": "المحامي طارق سعيد", "role": "عضو" },
+            "farrukh-junaidy": { "name": "فرخ جنيدي", "role": "عضو" },
+            "huma-shah": { "name": "هما شاه", "role": "عضو" },
+            "ishtiaq-memon": { "name": "اشتياق ميمون", "role": "عضو" },
+            "isfandyar-ali-khan": { "name": "اسفنديار علي خان", "role": "عضو" },
+            "khalid-firoz-arfeen": { "name": "خالد فيروز عارفين", "role": "عضو" },
+            "khalid-mahmood-siddiqui": { "name": "خالد محمود صديقي", "role": "عضو" },
+            "mohammad-rehan-siddqui": { "name": "محمد ريحان صديقي", "role": "عضو" },
+            "mustansir-zakir": { "name": "مستنصر ذاكر", "role": "عضو" },
+            "nausheen-ahmed": { "name": "نوشين أحمد", "role": "عضو" },
+            "neelofar-hameed": { "name": "نيلوفر حميد", "role": "عضو" },
+            "omair-nisar-khan": { "name": "عمير نثار خان", "role": "عضو" },
+            "raheem-hasnani": { "name": "رحيم حسناني", "role": "عضو" },
+            "reshma-aftab": { "name": "ريشما آفتاب", "role": "عضو" },
+            "rubina-virani": { "name": "روبينا فيراني", "role": "عضو" },
+            "saadat-yar-khan": { "name": "سعادة يار خان", "role": "عضو" },
+            "saeed-habib": { "name": "سعيد حبيب", "role": "عضو" },
+            "saima-khawaja": { "name": "صائمة أمين خواجة", "role": "عضو" },
+            "salina-khalfan": { "name": "سالينا خلفان", "role": "عضو" },
+            "shabana-ali": { "name": "شبانه علي", "role": "عضو" },
+            "shaheen-premani": { "name": "شاهين بريماني", "role": "عضو" },
+            "syed-haider-imam-rizvi": { "name": "سيد حيدر إمام رضوي", "role": "عضو" },
+            "syed-sammadul-haque": { "name": "سيد صمد الحق", "role": "عضو" },
+            "tahmasp-r-razvi": { "name": "طهمسب آر رضوي", "role": "عضو" },
+            "umaimah-a-rizvi": { "name": "أميمة أ رضوي", "role": "عضو" },
+            "usman-g-rashid": { "name": "عثمان جي راشد", "role": "عضو" },
+            "wajiha-aleem": { "name": "وجيهة عليم", "role": "عضو" },
+            "yousuf-moulvi": { "name": "يوسف مولوي", "role": "عضو" },
+            "zafar-kalanauri": { "name": "ظفر كالاناوري", "role": "عضو" },
+            "zia-makhdoom": { "name": "ضياء مخدوم", "role": "عضو" }
+          }
         },
         "resources_page": {
-    "hero": {
-      "image_alt": "صورة بطل الخدمات",
-      "eyebrow": "المصادر",
-      "title_line1": "المعرفة. القانون.",
-      "title_accent": "الإصلاح.",
-      "lead_text": "يمكنك الوصول إلى منشورات PMA، وقوانين الوساطة، والوثائق المؤسسية، والأوراق البحثية، ومصادر كسب التأييد، والمحتوى الإعلامي الذي يدعم نمو الحلول البديلة لفض المنازعات (ADR) والتسوية السلمية للنزاعات في باكستان."
-    },
-    "tabs": {
-      "featured": "مميز",
-      "downloads": "التنزيلات",
-      "mediation_laws": "قوانين الوساطة",
-      "advocacy": "المناصرة والتأييد",
-      "press_media": "الصحافة والإعلام",
-      "articles": "المقالات"
-    }
-  }
+          "hero": {
+            "image_alt": "صورة بطل الخدمات",
+            "eyebrow": "المصادر",
+            "title_line1": "المعرفة. القانون.",
+            "title_accent": "الإصلاح.",
+            "lead_text": "يمكنك الوصول إلى منشورات PMA، وقوانين الوساطة، والوثائق المؤسسية، والأوراق البحثية، ومصادر كسب التأييد، والمحتوى الإعلامي الذي يدعم نمو الحلول البديلة لفض المنازعات (ADR) والتسوية السلمية للنزاعات في باكستان."
+          },
+          "tabs": {
+            "featured": "مميز",
+            "downloads": "التنزيلات",
+            "mediation_laws": "قوانين الوساطة",
+            "advocacy": "المناصرة والتأييد",
+            "press_media": "الصحافة والإعلام",
+            "articles": "المقالات"
+          },
+          "downloads_panel": {
+            "header": {
+              "title": "التنزيلات",
+              "lead": "ملفات PDF، ونماذج، ومنشورات قابلة للتنزيل. انقر فوق الملف لفتحه في علامة تبويب جديدة.",
+              "view_all_text": "عرض جميع التنزيلات"
+            },
+            "global_labels": {
+              "download_btn_text": "تنزيل PDF",
+              "default_image_alt": "ملف ADR-ACT-2017 PDF"
+            },
+            "items": {
+              "card_1": {
+                "title": "قانون الحلول البديلة لفض النزاعات 2017 (ADR-ACT-2017)",
+                "file_name": "ADR-ACT-2017.pdf"
+              },
+              "card_2": {
+                "title": "المناصرة والضغط (Advocacy and Lobby)",
+                "file_name": "Advocacy-and-Lobby.pdf"
+              },
+              "card_3": {
+                "title": "شهادة التسجيل",
+                "file_name": "Certificate.pdf"
+              },
+              "card_4": {
+                "title": "نموذج طلب العضوية",
+                "file_name": "membership-application-form.pdf"
+              },
+              "card_5": {
+                "title": "عقد التأسيس المحدث (Memorandum of Association)",
+                "file_name": "MEMORANDUM-OF-ASSOCIATION-UPDATED.pdf"
+              },
+              "card_6": {
+                "title": "الترشيح",
+                "file_name": "nomination_form.pdf"
+              },
+              "card_7": {
+                "title": "خطاب PMA",
+                "file_name": "pma-speech.pdf"
+              },
+              "card_8": {
+                "title": "لماذا تنضم إلى PMA؟",
+                "file_name": "Why-Join-PMA.pdf"
+              }
+            }
+          },
+          "mediation_laws_panel": {
+            "header": {
+              "title": "قوانين وتطوير تشريعات الوساطة",
+              "lead": "القوانين والتشريعات الرئيسية، ومشاريع القوانين، والوثائق التشريعية الرسمية المتعلقة بالوساطة.",
+              "view_all_text": "عرض جميع القوانين"
+            },
+            "global_labels": {
+              "download_btn_text": "تنزيل PDF",
+              "default_image_alt": "ملف ADR-ACT-2017 PDF"
+            },
+            "items": {
+              "card_1": {
+                "title": "قانون إسلام آباد لفض النزاعات (الوساطة)",
+                "file_name": "Law-Islamabad-Dispute-Resolution-Act-Mediation.pdf"
+              },
+              "card_2": {
+                "title": "تعديلات في الجدول الأول من قانون الإجراءات المدنية لعام 1908",
+                "file_name": "Law-KPK-Mediation-Amendment-No.1523-1622_Amendments-in-Frist-Schedule-of-the-code-of-Civil-Procedure-1908_dt-1.pdf"
+              },
+              "card_3": {
+                "title": "تعديلات البنجاب في قانون الإجراءات المدنية لعام 1908 (أحكام الوساطة)",
+                "file_name": "Law-Punjab-Amendments_civil_procedure_1908_final_Mediation_Provisions.pdf"
+              },
+              "card_4": {
+                "title": "مشروع قانون الإجراءات المدنية (تعديل السند) لعام 2018",
+                "file_name": "Law-Sindh-Notification-dt-8-11-2018-The-DRAFT-Code-of-Civil-Procedure-Sindh-Amendment-Bill-2018.pdf"
+              },
+              "card_5": {
+                "title": "اتفاقية سنغافورة بشأن التسويات المنبثقة عن الوساطة (النص الكامل)",
+                "file_name": "Law-Singapore-Convention-on-Mediated-Settlements-Text.pdf"
+              }
+            }
+          },
+          "advocacy_panel": {
+            "header": {
+              "title": "المناصرة والسياسات",
+              "lead": "موجزات السياسات، ومجموعات أدوات المناصرة، وأوراق الموقف لدعم إصلاح الحلول البديلة لفض النزاعات.",
+              "view_all_text": "عرض جميع مواد المناصرة"
+            },
+            "global_labels": {
+              "download_btn_text": "تنزيل PDF",
+              "default_image_alt": "ملف ADR-ACT-2017 PDF"
+            },
+            "items": {
+              "card_1": {
+                "title": "خيبر بختونخوا (KPK)",
+                "file_name": "kpk.pdf"
+              },
+              "card_2": {
+                "title": "البنجاب",
+                "file_name": "punjab.pdf"
+              },
+              "card_3": {
+                "title": "السند",
+                "file_name": "sindh.pdf"
+              }
+            }
+          },
+          "press_media_panel": {
+            "header": {
+              "title": "الصحافة والإعلام",
+              "lead": "البيانات الصحفية، والملفات الإعلامية، والمواد القابلة للتنزيل للصحفيين.",
+              "view_all_text": "عرض المواد الإعلامية"
+            },
+            "global_labels": {
+              "download_btn_text": "تنزيل PDF",
+              "default_image_alt": "ملف PDF"
+            },
+            "items": {
+              "card_1": {
+                "title": "بيزنس ريكوردر (Business Recorder)",
+                "file_name": "BusinessRecorder.pdf"
+              },
+              "card_2": {
+                "title": "إعلان بيزنس ريكوردر (AD)",
+                "file_name": ""
+              },
+              "card_3": {
+                "title": "فرونتير بوست (Frontier Post)",
+                "file_name": "FrontierPost.pdf"
+              },
+              "card_4": {
+                "title": "باكستان أوبسيرفر (Pakistan Observer)",
+                "file_name": "PakistanObserver.pdf"
+              },
+              "card_5": {
+                "title": "البيان الصحفي لـ PMA",
+                "file_name": "PMA_PressRelease.pdf"
+              },
+              "card_6": {
+                "title": "صحيفة التريبيون (Tribune)",
+                "file_name": "Tribune.pdf"
+              }
+            }
+          },
+          "articles_panel": {
+            "header": {
+              "title": "المقالات والتحليلات",
+              "lead": "المقالات البحثية والتحليلات والرؤى القيادية الفكرية حول الوساطة والحلول البديلة لفض النزاعات.",
+              "view_all_text": "عرض جميع المقالات"
+            },
+            "global_labels": {
+              "download_btn_text": "تنزيل PDF",
+              "author_prefix": "بقلم"
+            },
+            "items": {
+              "card_1": {
+                "title": "It Really Happened in Frankfurt",
+                "author": "جواد أ. سرونة",
+                "file_name": "blog-Jawad-Sarwana-It-Happened-in-Frankfurt.pdf",
+                "image_alt": "ملف It Really Happened in Frankfurt PDF"
+              },
+              "card_2": {
+                "title": "Mediation Techniques (تقنيات الوساطة)",
+                "author": "جواد أ. سرونة",
+                "file_name": "Blog-Sarwana.pdf",
+                "image_alt": "ملف Mediation Techniques PDF"
+              }
+            }
+          },
+          "search_bar": {
+            "question": "لم تجد ما تبحث عنه؟",
+            "subtext": "استخدم البحث أو التصفح حسب الفئة للعثور بسرعة على الموارد التي تحتاجها.",
+            "placeholder": "ابحث في المصادر...",
+            "browse_btn_text": "تصفح جميع المصادر"
+          }
+        },
+        "events_page": {
+          "hero_section": {
+            "eyebrow": "الفعاليات",
+            "title": "الفعاليات والمؤتمرات",
+            "lead": "ابقَ على اطلاع دائم بمؤتمرات PMA، ومبادرات الوساطة، وورش العمل، والإعلانات الهامة.",
+            "image_alt": "صورة هيرو للخدمات"
+          },
+          "tab_bar": {
+            "upcoming_events": "الفعاليات القادمة",
+            "past_events": "الفعاليات السابقة",
+            "announcements": "الإعلانات"
+          },
+          "upcoming_panel": {
+            "title": "قريباً جداً",
+            "lead": "سيتم إدراج الفعاليات والمؤتمرات وورش العمل القادمة هنا. يرجى المراجعة قريباً."
+          },
+          "announcements_panel": {
+            "title": "قريباً جداً",
+            "lead": "ستظهر الإعلانات الهامة هنا. ابقوا معنا للاطلاع على الجديد."
+          },
+          "past_events": {
+            "training_program_detail": {
+              "global_labels": {
+                "badge_text": "فعالية سابقة",
+                "pill_text": "برنامج تدريبي معتمد",
+                "view_gallery_btn": "عرض معرض صور الفعالية",
+                "about_label": "حول الفعالية",
+                "highlights_label": "أبرز نقاط التدريب"
+              },
+              "card": {
+                "title": "البرنامج التدريبي السادس المعتمد للوساطة",
+                "sub": "محكمة السند العليا",
+                "date": "من 08 يونيو 2026 إلى 12 يونيو 2026",
+                "location": "محكمة السند العليا، كراتشي"
+              },
+              "about_paragraphs": [
+                "نجحت جمعية الموفقين الباكستانية (PMA) في تنظيم البرنامج التدريبي السادس المعتمد للوساطة في محكمة السند العليا.",
+                "ركز البرنامج على تعزيز مهارات الوساطة، وتشجيع ممارسات الحلول البديلة لفض النزاعات، وتعزيز القدرات المهنية بين الممارسين القانونيين ومحترفي الوساطة.",
+                "من خلال الجلسات التفاعلية والتمارين العملية والمناقشات التعاونية، اكتسب المشاركون رؤى قيمة حول تقنيات الوساطة الحديثة وأطر حل النزاعات."
+              ],
+              "highlights": [
+                "جلسات تدريب معتمدة على الوساطة",
+                "تمارين عملية على الوساطة",
+                "مناقشات مجموعات تفاعلية",
+                "تقنيات الحلول البديلة لفض النزاعات",
+                "بناء القدرات المهنية",
+                "بيئة تعليمية تعاونية"
+              ],
+              "meta": {
+                "objective_label": "الهدف من التدريب",
+                "objective_text": "تعزيز مهارات الوساطة وتشجيع ممارسات الفعالة لحل النزاعات.",
+                "organized_label": "الجهة المنظمة",
+                "organized_text": "جمعية الموفقين الباكستانية (PMA)",
+                "participants_label": "المشاركون",
+                "participants_text": "المتخصصون القانونيون، ممارسو الحلول البديلة لفض النزاعات، الوسيطون والمشاركون المتدربون.",
+                "type_label": "نوع الفعالية",
+                "type_text": "برنامج تدريبي معتمد"
+              }
+            },
+            "national_conference_detail": {
+              "global_labels": {
+                "badge_text": "فعالية سابقة",
+                "about_label": "حول الفعالية",
+                "highlights_label": "تطورات رئيسية تم تسليط الضوء عليها في الـ ADR"
+              },
+              "card": {
+                "title": "الوساطة: الطريق إلى الأمام",
+                "sub": "المؤتمر الوطني الأول للوساطة",
+                "date": "7 مارس 2015",
+                "location": "فندق ماريوت، كراتشي",
+                "type": "مؤتمر وطني"
+              },
+              "about_paragraphs": [
+                "تعتبر PMA أول منظمة في باكستان تمثل الموفقين المدربين والمعتمدين دولياً بالإضافة إلى المهنيين الآخرين الذين انضموا للجمعية لتعزيز أهدافها. تأسست الجمعية في عام 2013 وتولت عدداً من الأنشطة التي كانت تُنفذ سابقاً من قبل مشروع الحلول البديلة لفض النزاعات (ADR) التابع لمؤسسة التمويل الدولية/مجموعة البنك الدولي.",
+                "بالنظر إلى أن مؤشرات إنفاذ العقود في باكستان ليست مشجعة وتستغرق سنوات عديدة وتكاليف باهظة، فإن PMA عازمة على قيادة ودعم التدخلات التي تمكن المتقاضين والمتنازعين من تسوية النزاعات ودياً ومن خلال عملية الوساطة، وتكملة جهود القضاء والمحاكم في حل النزاعات في الوقت المناسب."
+              ],
+              "highlights": [
+                "تفعيل مركز كراتشي لفض النزاعات في كراتشي ومركز وساطة غرفة تجارة وصناعة لاهور في لاهور.",
+                "المطالبة بإصلاحات قوانين الوساطة والحلول البديلة لفض النزاعات في باكستان.",
+                "وجود وسطاء ومدربين معتمدين من CEDR في باكستان.",
+                "تطوير مناهج الحلول البديلة لفض النزاعات (ADR) في باكستان.",
+                "تعزيز وتقديم التدريبات الخاصة بالحلول البديلة لفض النزاعات في باكستان.",
+                "اعتبار الـ ADR وسيلة لتسوية مجموعة واسعة من النزاعات بما في ذلك حوكمة الشركات."
+              ],
+              "meta": {
+                "objective_label": "أهداف المؤتمر",
+                "objective_text": "تعزيز قضية الحلول البديلة لفض النزاعات والوساطة ومناقشة التطورات والتحديات والتدخلات المستقبلية لمأسسة الوساطة في باكستان.",
+                "organized_label": "مستضيفو المؤتمر",
+                "organized_text": "تستضيف هذا المؤتمر جمعية الموفقين الباكستانية بدعم من شركاء المؤتمر.",
+                "participants_label": "المتحدثون والضيوف",
+                "participants_text": "ممثلون عن الحكومة والقضاء ومجتمع الأعمال والملتقى القانوني والأكاديميين ومراكز الوساطة في باكستان إلى جانب متحدثين أجانب.",
+                "type_label": "نوع الفعالية",
+                "type_text": "مؤتمر وطني"
+              }
+            }
+          }
+        },
+        "privacy_policy": {
+          "hero": {
+            "title_main": "سياسة",
+            "title_accent": "الخصوصية",
+            "lead_text": "نحن ملتزمون بحماية خصوصيتك وضمان التعامل مع معلوماتك الشخصية بشكل آمن ومسؤول."
+          },
+          "sections": {
+            "commitment": {
+              "title": "الالتزام بالخصوصية",
+              "paragraphs": [
+                "تلتزم جمعية الموفقين الباكستانية (PMA) بحماية خصوصيتك على الإنترنت. وقد أنشأت جمعية الموفقين الباكستانية (PMA) بيان الخصوصية هذا لإثبات التزامنا الراسخ بالخصوصية. يوضح ما يلي ممارسات جمع المعلومات ونشرها لجمعية الموفقين الباكستانية (PMA).",
+                "تحتفظ PMA بالحق في تغيير هذه السياسة في أي وقت عن طريق إخطار المستخدمين بوجود بيان خصوصية جديد. إن هذا البيان والسياسات الموضحة فيه لا يُقصد منها ولا تنشئ أي حقوق تعاقدية أو حقوق قانونية أخرى في أو نيابة عن أي طرف."
+              ]
+            },
+            "respect_data": {
+              "title": "احترام بيانات المستخدم",
+              "paragraphs": [
+                "تقدر جمعية الموفقين الباكستانية (PMA) عالياً العلاقات القوية التي تربطنا بعملائنا. ويتم التعامل مع جمع البيانات في جمعية الموفقين الباكستانية (PMA) باحترام كامل وسليم لخصوصية عملائنا.",
+                "يتم التعامل مع البيانات التي نجمعها بحساسية وأمان ومع المراعاة التامة للخصوصية. لا تقوم جمعية الموفقين الباكستانية (PMA) بالإفصاح عن البيانات التي نجمعها من عملائنا أو توزيعها أو بيعها لأطراف ثالثة."
+              ]
+            },
+            "collection": {
+              "title": "جمع المعلومات",
+              "lead_text": "تقوم PMA بجمع معلومات للتسجيل في العضوية مثل:",
+              "items": [
+                "بطاقة الهوية الوطنية المحوسبة (CNIC)",
+                "الاسم الكامل",
+                "عنوان السكن",
+                "عنوان المكتب",
+                "رقم الهاتف",
+                "معلومات البريد الإلكتروني",
+                "معلومات العضوية الأخرى ذات الصلة"
+              ]
+            }
+          }
+        },
+        "complaint_policy": {
+          "hero": {
+            "title_main": "سياسة الشكاوى",
+            "title_accent": "والاستئناف",
+            "lead_text": "نحن ملتزمون بمعالجة المخاوف والشكاوى بشكل عادل وفوري وشفاف."
+          },
+          "intro_card": {
+            "bold_text": "لدينا إجراءات واضحة للتعامل مع الشكاوى تضمن منحها الرعاية والاهتمام اللازمين.",
+            "lead_p": "يمكن تقديم الشكاوى من قبل أي مستخدم لخدمات اعتماد الوساطة الخاصة بـ PMA. تهدف الجمعية إلى تقديم خدمة سريعة وموقوتة لجميع المستخدمين. نحن سوف:",
+            "commitments": [
+              "نتعامل مع جميع الشكاوى بجدية ونعالجها بشكل صحيح؛",
+              "ننظر في الشكاوى ونحلها على الفور؛ و",
+              "نتعلم من الشكاوى ونتخذ الإجراءات اللازمة لتحسين خدماتنا."
+            ]
+          },
+          "steps": [
+            {
+              "text": "ومع ذلك، لا يمكننا التعامل إلا مع الشكاوى التي تثير مخاوف بشأن سوء خدمة العملاء التي يتم تلقيها من قبل مدير التدريب."
+            },
+            {
+              "text": "هذا يعني أنه يجب توجيه حالتك إلى مدير التدريب وإرسالها بالبريد العادي والبريد الإلكتروني مع إرسال نسخة (cc) إلى رئيس PMA."
+            },
+            {
+              "text": "الطالب الذي لا يرضى عن قرار مدير التدريب حر في رفض القرار، وفي هذه الحالة لن يكون له أي أثر ملزم. يلتزم المدير بالرد على الشكوى خلال 30 يوماً من تاريخ استلامها."
+            },
+            {
+              "text": "إذا ظللت، مع ذلك، غير راضٍ عن طريقة التعامل مع شكواك أو لم يكن هناك رد من مدير التدريب، يمكنك توجيه شكواك إلى رئيس PMA الذي سيقوم بتشكيل لجنة تحكيم أعضاء هيئة التدريس مكونة من عضوين لسماع تظلمك."
+            },
+            {
+              "text": "ستحتاج إلى أن تكون واضحاً وموجزاً بشأن أسباب طلبك وما تود تحقيقه من المراجعة أو عدم اتخاذ إجراء من قبل مدير التدريب. ستقوم لجنة التحكيم المكونة من عضوين بالكتابة إليك مع إرسال نسخة إلى رئيس PMA والرد عليك خطياً بالتأكيد في غضون 30 يوم عمل من تقديم طلب التصعيد."
+            },
+            {
+              "text": "إذا كنت غير راضٍ عن الإجراء أو عدم اتخاذ إجراء من جانب لجنة التحكيم المكونة من عضوين بشأن شكواك، فإن ذلك لن يؤثر على حقوق أي طرف في اللجوء إلى محكمة حماية المستهلك للحصول على الإغاثة، وهي الخيارات المتاحة للجميع."
+            }
+          ]
+        },
+        "terms_conditions": {
+          "hero": {
+            "title_main": "الشروط و",
+            "title_accent": "الأحكام",
+            "lead_text": "يرجى قراءة هذه الشروط بعناية. بدخولك واستخدامك لموقعنا وخدماتنا، فإنك توافق على الالتزام بالشروط والأحكام التالية."
+          },
+          "accordion_items": [
+            {
+              "id": "training",
+              "title": "التدريب",
+              "preview": "لتأكيد حجزك، يجب أن تصل دفعتك إلى مكاتبنا مسبقاً؛ قبل بدء الدورات التدريبية.",
+              "body_paragraphs": [
+                "إذا تأخر المستخدم في السداد، فلن يُسمح له بحضور الدورات التدريبية."
+              ]
+            },
+            {
+              "id": "refunds",
+              "title": "استرداد رسوم التدريب",
+              "preview": "نحن نتفهم أن الحياة قد تكون معقدة. إذا لم تعد قادراً على الحضور، يرجى الاتصال بنا في أقرب وقت ممكن على 9768-3452-021 أو مراسلتنا عبر البريد الإلكتروني على info@pma.org.pk.",
+              "body_paragraphs": [
+                "يسعدنا قبول حضور مشارك بديل مكانك، أو الترتيب لرصيد مستقبلي أو استرداد أموال، وسوف ننظر دائماً في حالتك بناءً على أساس فردي."
+              ]
+            },
+            {
+              "id": "membership",
+              "title": "إلغاء العضوية",
+              "preview": "رسوم العضوية غير قابلة للاسترداد إلا في ظروف خاصة.",
+              "body_paragraphs": [
+                "يرجى الاتصال بنا إذا كنت تعتقد أن ظروفك تؤهلك لاستثناء. تتم مراجعة كل حالة على حدة من قبل لجنة العضوية في PMA."
+              ]
+            },
+            {
+              "id": "copyright",
+              "title": "حقوق الطبع والنشر",
+              "preview": "يخضع هذا الموقع ومحتوياته لحقوق الطبع والنشر. تعود ملكية حقوق طبع ونشر مواد الموقع لجمعية الموفقين الباكستانية (PMA)، أو لطرف ثالث في حالة بعض المواد. تعود ملكية حقوق طبع ونشر وظائف الموقع وتشغيله لـ PMA.",
+              "body_paragraphs": [
+                "يجوز لك عرض هذا الموقع ومحتوياته باستخدام متصفح الويب الخاص بك ونسخ وطباعة نسخ ورقية من أجزاء من هذا الموقع إلكترونياً فقط للاستخدام الشخصي غير التجاري. ويحظر تماماً أي استخدام آخر، بما في ذلك إعادة إنتاج محتوى هذا الموقع أو تعديله أو توزيعه أو نقله أو إعادة نشره أو عرضه أو أداؤه."
+              ]
+            },
+            {
+              "id": "disclaimer",
+              "title": "إخلاء المسؤولية",
+              "preview": "أنت توافق على أن دخولك إلى هذا الموقع واستخدامه يخضع لهذه الشروط وجميع القوانين المعمول بها، ويكون على مسؤوليتك الخاصة. يتم تقديم هذا الموقع ومحتوياته إليك على أساس \"كما هو\"، وقد يحتوي الموقع على أخطاء وعيوب وعدم دقة وقد لا يكون كاملاً وحديثاً.",
+              "body_paragraphs": [
+                "لا تقدم جمعية الموفقين الباكستانية (PMA) أي تمثيلات أو ضمانات من أي نوع، صريحة أو ضمنية بشأن تشغيل هذا الموقع أو المعلومات أو المحتوى أو المواد أو المنتجات المدرجة في هذا الموقع، باستثناء ما هو منصوص عليه خلاف ذلك بموجب القوانين المعمول بها.",
+                "لن تكون PMA ولا الشركات التابعة لها أو مديروها أو مسؤولوها أو موظفوها أو وكلاؤها أو مقاولوها أو خلفاؤها أو المحال إليهم مسؤوليين عن أي أضرار تنشأ عن أو تتعلق بأي شكل من الأشكال باستخدام هذا الموقع وأي موقع آخر مرتبط به. ينطبق هذا القيد على الأضرار المباشرة أو غير المباشرة أو التبعية أو الخاصة أو العقابية أو غيرها من الأضرار التي قد تلحق بك أو بالآخرين، بالإضافة إلى الأضرار الناجمة عن خسارة الأرباح أو انقطاع الأعمال أو فقدان البيانات أو المعلومات."
+              ]
+            },
+            {
+              "id": "translations",
+              "title": "ترجمات جوجل",
+              "preview": "تمت ترجمة هذا الموقع لراحتك باستخدام عملية ترجمة مدعومة من Google Translate™. يتم إجراء ترجمات Google Translate™ بواسطة عملية كمبيوتر آلية، وليس بواسطة مترجم محترف معتمد.",
+              "body_paragraphs": [
+                "ولهذا السبب، قد تكون الترجمات غير دقيقة أو غير موثوقة. استخدم ترجمات Google Translate™ بحذر. يتم توفير الترجمات \"كما هي\" دون ضمانات من أي نوع. قد لا يتم ترجمة بعض المحتويات (مثل الصور ومقاطع الفيديو والفلاش وما إلى ذلك) بسبب قيود برنامج الترجمة.",
+                "إن PMA ليست مسؤولة عن الترجمات غير الكاملة أو غير الدقيقة، كما أنها ليست مسؤولة عن أي أضرار أو خسائر تنشأ عن استخدام المستخدم لترجمات Google Translate™ (أو أي ترجمات أخرى على هذا الموقع).",
+                "إذا كان لديك أي أسئلة حول Google™ Translate، تفضل بزيارة: الأسئلة الشائعة حول Google Translate™.",
+                "تخلي Google مسؤوليتها عن جميع الضمانات المتعلقة بالترجمات، الصريحة أو الضمنية، بما في ذلك أي ضمانات للدقة والموثوقية، وأي ضمانات ضمنية للرواج والصلاحية لغرض معين وعدم الانتهاك."
+              ]
+            }
+          ]
+        },
+        "become_member": {
+          "hero": {
+            "eyebrow": "انضم إلى PMA",
+            "title_main": "كن",
+            "title_accent": "عضواً في PMA",
+            "lead_text": "انضم إلى مجتمع متميز من الوسطاء، ومحترفي تسوية المنازعات بالطرق البديلة (ADR)، والقادة المؤسسيين الملتزمين بالحل السلمي للنزاعات."
+          },
+          "why_join": {
+            "title_main": "لماذا",
+            "title_accent": "تنضم",
+            "title_end": "إلى PMA؟",
+            "subtitle": "يتمتع أعضاء PMA بمجموعة واضحة من المزايا والفرص المهنية.",
+            "cards": [
+              {
+                "title": "المؤتمرات الدولية",
+                "description": "حضور المؤتمرات العالمية حول أحدث القضايا في الوساطة والتحكيم برسوم مخفضة وتسجيل ذي أولوية."
+              },
+              {
+                "title": "ورش العمل والدورات",
+                "description": "الحصول على فرصة الوصول إلى ورش عمل تعليمية ودورات تطوير مهني عالية الجودة."
+              },
+              {
+                "title": "النمو المهني",
+                "description": "زيادة فهمك للوساطة والحلول البديلة لفض المنازعات (ADR) من خلال رؤى وموارد الخبراء."
+              },
+              {
+                "title": "شبكة عالمية",
+                "description": "بناء وتطوير علاقات مهنية قيمة على المستويين الوطني والدولي."
+              },
+              {
+                "title": "فرص تجارية",
+                "description": "توسيع دائرة معارفك التجارية والمهنية."
+              },
+              {
+                "title": "دعم المهنة",
+                "description": "لعب دور رئيسي في دعم وتطوير الوساطة والحلول السلمية للنزاعات."
+              }
+            ]
+          },
+          "benefits": {
+            "title_main": "مزايا",
+            "title_accent": "العضوية",
+            "subtitle": "بصفتك عضواً مسجلاً في PMA، سوف تستمتع بمجموعة واسعة من المزايا والفرص.",
+            "items": [
+              {
+                "title": "فرص التواصل وبناء العلاقات",
+                "description": "على مدار العام، توفر PMA فرصاً متنوعة للأعضاء لتعزيز العلاقات المهنية ومواكبة أنشطة واتجاهات القطاع."
+              },
+              {
+                "title": "دليل العضوية",
+                "description": "متاح حصرياً لأعضاء PMA، ويحتوي هذا الدليل على تفاصيل اتصال محدثة للأعضاء والمنظمات العالمية الأخرى. متوفر بنسختين مطبوعة وإلكترونية."
+              },
+              {
+                "title": "شهادة العضوية",
+                "description": "يتم منح الأعضاء شهادة عضوية معترف بها عالمياً فور قبولهم. وتُوزع الشهادات في الحفل السنوي للأعضاء."
+              },
+              {
+                "title": "التطوير المهني المستمر",
+                "description": "أولوية الوصول إلى ورش عمل حصرية ودورات تطوير مهني يقدمها خبراء بارزون في الوساطة والحلول البديلة لفض المنازعات (ADR)، باللغتين الإنجليزية والعربية."
+              }
+            ]
+          },
+          "membership_journey": {
+            "title": "رحلة العضوية",
+            "subtitle": "عملية بسيطة لتصبح عضواً قيماً في جمعية الموفقين الباكستانية (PMA).",
+            "steps": [
+              {
+                "num": "1",
+                "title": "تقديم نموذج العضوية",
+                "desc": "املأ نموذج الطلب عبر الإنترنت."
+              },
+              {
+                "num": "2",
+                "title": "مراجعة الملف الشخصي",
+                "desc": "سيقوم فريقنا بمراجعة طلبك."
+              },
+              {
+                "num": "3",
+                "title": "الموافقة على العضوية",
+                "desc": "سيتم إخطارك بمجرد الموافقة على طلبك."
+              },
+              {
+                "num": "4",
+                "title": "مرحباً بك في PMA",
+                "desc": "احصل على شهادة العضوية الخاصة بك وتصبح جزءاً من شبكتنا المهنية."
+              }
+            ]
+          },
+          "membership_application": {
+            "form_header": {
+              "title": "نموذج طلب العضوية",
+              "desc": "يرجى تقديم معلومات دقيقة. جميع الحقول المادية التي تحمل علامة * إلزامية."
+            },
+            "sections": {
+              "personal_info": {
+                "title": "معلومات شخصية",
+                "fields": {
+                  "full_name": { "label": "الاسم الكامل", "placeholder": "أدخل اسمك الكامل" },
+                  "father_name": { "label": "اسم الأب", "placeholder": "أدخل اسم الأب" },
+                  "qualification": { "label": "المؤهل التعليمي", "placeholder": "أدخل المؤهل" },
+                  "designation": { "label": "المسمى الوظيفي", "placeholder": "أدخل المسمى الوظيفي" },
+                  "cnic": { "label": "رقم الهوية الوطنية (CNIC)", "placeholder": "أدخل رقم الهوية" },
+                  "chamber_phone": { "label": "هاتف المكتب/الغرفة", "placeholder": "أدخل هاتف المكتب" }
+                }
+              },
+              "contact_info": {
+                "title": "معلومات الاتصال",
+                "fields": {
+                  "office_address": { "label": "عنوان المكتب", "placeholder": "أدخل عنوان المكتب" },
+                  "res_address": { "label": "عنوان السكن", "placeholder": "أدخل عنوان السكن" },
+                  "res_phone": { "label": "هاتف المنزل", "placeholder": "أدخل هاتف المنزل" },
+                  "email": { "label": "البريد الإلكتروني", "placeholder": "أدخل البريد الإلكتروني" },
+                  "upload": {
+                    "label": "تحميل المستندات",
+                    "text": "اختر ملفاً أو اسحبه هنا",
+                    "hint": "PDF, JPG, PNG (الحد الأقصى 5 ميجابايت)"
+                  }
+                }
+              },
+              "references": {
+                "title": "المراجع المهنية",
+                "fields": {
+                  "proposer_name": { "label": "الاسم الكامل للمقترح (المزكي الأول)", "placeholder": "أدخل الاسم الكامل للمقترح" },
+                  "proposer_address": { "label": "العنوان السكني للمقترح", "placeholder": "أدخل العنوان" },
+                  "proposer_phone": { "label": "هاتف المقترح", "placeholder": "أدخل رقم الهاتف" },
+                  "seconder_name": { "label": "الاسم الكامل للمؤيد (المزكي الثاني)", "placeholder": "أدخل الاسم الكامل للمؤيد" },
+                  "seconder_address": { "label": "العنوان السكني للمؤيد", "placeholder": "أدخل العنوان" },
+                  "seconder_phone": { "label": "هاتف المؤيد", "placeholder": "أدخل رقم الهاتف" }
+                }
+              }
+            },
+            "declaration": "أقر بموجب هذا بأن المعلومات المقدمة أعلاه صحيحة ودقيقة.",
+            "submit_btn": "تقديم الطلب",
+            "sidebar": {
+              "title_main": "كن جزءاً من",
+              "title_accent": "التغيير الإيجابي",
+              "desc": "انضم إلى PMA وساهم في بناء ثقافة الحوار والتفاهم والحل السلمي للنزاعات.",
+              "list": [
+                "الاعتراف المهني",
+                "التعلم والتطوير",
+                "التواصل والتعاون",
+                "المساهمة المؤثرة"
+              ],
+              "quote": "معاً، يمكننا خلق مجتمع أكثر انسجاماً وعدلاً من خلال الوساطة.",
+              "author": "- PMA"
+            }
+          }
+        }
       }
     },
     ch: {
@@ -4720,225 +6730,895 @@
             "search_placeholder": "按姓名或专业领域搜索..."
           },
           "members": {
-    "member_1": {
-      "name": "阿加·扎法尔·艾哈迈德 (Aga Zafar Ahmed)",
-      "title": "主席",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
-      },
-      "aria_label": "查看 阿加·扎法尔·艾哈迈德 的个人资料"
-    },
-    "member_2": {
-      "name": "赛玛·阿敏·卡瓦贾 (Saima Amin Khawaja)",
-      "title": "副主席 – 北区",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
-      },
-      "aria_label": "查看 赛玛·阿敏·卡瓦贾 的个人资料"
-    },
-    "member_3": {
-      "name": "阿斯凡德·亚尔·阿里·汗 (Asfand Yar Ali Khan)",
-      "title": "副主席 – 北区",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
-      },
-      "aria_label": "查看 阿斯凡德·亚尔·阿里·汗 的个人资料"
-    },
-    "member_4": {
-      "name": "赛义德·哈比卜 (Saeed Habib)",
-      "title": "副主席 – 南区",
-      "badges": {
-        "executive_team": "执行团队"
-      },
-      "aria_label": "查看 赛义德·哈比卜 的个人资料"
-    },
-    "member_5": {
-      "name": "沙巴娜·阿里 (Shabana Ali)",
-      "title": "副主席 – 南区",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "pma_accredited": "PMA 认证调解员"
-      },
-      "aria_label": "查看 沙巴娜·阿里 的个人资料"
-    },
-    "member_6": {
-      "name": "瓦吉哈·阿利姆 (Wajiha Aleem)",
-      "title": "秘书长",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
-      },
-      "aria_label": "查看 瓦吉哈·阿利姆 的个人资料"
-    },
-    "member_7": {
-      "name": "赛义德·萨马德·乌尔·哈克 (Syed Sammad-ul-Haque)",
-      "title": "财务秘书",
-      "badges": {
-        "executive_team": "执行团队"
-      },
-      "aria_label": "查看 赛义德·萨马德·乌尔·哈克 的个人资料"
-    },
-    "member_8": {
-      "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
-      "title": "执行委员会 – 北区",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
-      },
-      "aria_label": "查看 塔里克·赛义德·拉纳 的个人资料"
-    },
-    "member_9": {
-      "name": "胡玛·沙阿 (Huma Shah)",
-      "title": "执行委员会 – 北区",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
-      },
-      "aria_label": "查看 胡玛·沙阿 的个人资料"
-    },
-    "member_10": {
-      "name": "乌迈玛·安瓦尔·汗 (Umaimah Anwar Khan)",
-      "title": "执行委员会 – 南区",
-      "badges": {
-        "executive_team": "执行团队"
-      },
-      "aria_label": "查看 乌迈玛·安瓦尔·汗 的个人资料"
-    },
-    "member_11": {
-      "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
-      "title": "执行委员会 – 南区",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
-      },
-      "aria_label": "查看 穆斯坦西尔·扎基尔 的个人资料"
-    },
-    "member_12": {
-      "name": "阿德南·穆夫蒂 (Adnan Mufti)",
-      "title": "执行委员会 – 南区",
-      "badges": {
-        "executive_team": "执行团队",
-        "mediator": "调解员",
-        "cedr_accredited": "CEDR 认证调解员"
-      },
-      "aria_label": "查看 阿德南·穆夫蒂 的个人资料"
-    }
-  },
-  "trainers": {
-    "trainer_1": {
-      "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
-      "title": "高级培训师",
-      "badges": {
-        "master_trainer": "高级培训师",
-        "director_training": "培训总监",
-        "ex_president": "前任主席"
-      },
-      "aria_label": "查看 穆斯坦西尔·扎基尔 的个人资料"
-    },
-    "trainer_2": {
-      "name": "安瓦尔·卡西夫· ممتاز (Anwar Kashif Mumtaz)",
-      "title": "高级培训师",
-      "badges": {
-        "master_trainer": "高级培训师",
-        "ex_president": "前任主席",
-        "leadership_trainer": "领导力培训师"
-      },
-      "aria_label": "查看 安瓦尔·卡西夫· ممتاز 的个人资料"
-    },
-    "trainer_3": {
-      "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
-      "title": "高级培训师",
-      "badges": {
-        "master_trainer": "高级培训师",
-        "ex_president": "前任主席",
-        "executive_committee_north": "执行委员会 – 北区"
-      },
-      "aria_label": "查看 塔里克·赛义德·拉纳 的个人资料"
-    },
-    "trainer_4": {
-      "name": "赛玛·阿敏·卡瓦贾 (Saima Amin Khawaja)",
-      "title": "高级培训师",
-      "badges": {
-        "master_trainer": "高级培训师",
-        "executive_member": "执行委员",
-        "vice_president_north": "副主席 – 北区"
-      },
-      "aria_label": "查看 赛玛·阿敏·卡瓦贾 的个人资料"
-    },
-    "trainer_5": {
-      "name": "胡玛·沙阿 (Huma Shah)",
-      "title": "高级培训师",
-      "badges": {
-        "master_trainer": "高级培训师",
-        "executive_committee_north": "执行委员会 – 北区",
-        "training_committee": "培训委员会"
-      },
-      "aria_label": "查看 胡玛·沙阿 的个人资料"
-    },
-    "trainer_6": {
-      "name": "乌斯曼·G·拉希德 (Usman G. Rashid)",
-      "title": "高级培训师",
-      "badges": {
-        "master_trainer": "高级培训师",
-        "barrister_at_law": "出庭律师 (Barrister)",
-        "former_secretary_general": "前任秘书长 – PMA"
-      },
-      "aria_label": "查看 乌斯曼·G·拉希德 的个人资料"
-    },
-    "trainer_7": {
-      "name": "阿斯凡德·亚尔·阿里·汗 (Asfand Yar Ali Khan)",
-      "title": "高级培训师",
-      "badges": {
-        "master_trainer": "高级培训师",
-        "executive_leadership": "高管领导力",
-        "vice_president_north": "副主席 – 北区"
-      },
-      "aria_label": "查看 阿斯凡德·亚尔·阿里·汗 的个人资料"
-    }
-  },
-  "former_presidents": {
-    "president_1": {
-      "name": "安瓦尔·卡西夫· ممتاز (Anwar Kashif Mumtaz)",
-      "title": "前任主席"
-    },
-    "president_2": {
-      "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
-      "title": "前任主席"
-    },
-    "president_3": {
-      "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
-      "title": "前任主席"
-    }
-  }
+            "member_1": {
+              "name": "阿加·扎法尔·艾哈迈德 (Aga Zafar Ahmed)",
+              "title": "主席",
+              "badges": {
+                "executive_team": "执行团队",
+                "mediator": "调解员",
+                "cedr_accredited": "CEDR 认证调解员"
+              },
+              "aria_label": "查看 阿加·扎法尔·艾哈迈德 的个人资料"
+            },
+            "member_2": {
+              "name": "赛玛·阿敏·卡瓦贾 (Saima Amin Khawaja)",
+              "title": "副主席 – 北区",
+              "badges": {
+                "executive_team": "执行团队",
+                "mediator": "调解员",
+                "cedr_accredited": "CEDR 认证调解员"
+              },
+              "aria_label": "查看 赛玛·阿敏·卡瓦贾 的个人资料"
+            },
+            "member_3": {
+              "name": "阿斯凡德·亚尔·阿里·汗 (Asfand Yar Ali Khan)",
+              "title": "副主席 – 北区",
+              "badges": {
+                "executive_team": "执行团队",
+                "mediator": "调解员",
+                "cedr_accredited": "CEDR 认证调解员"
+              },
+              "aria_label": "查看 阿斯凡德·亚尔·阿里·汗 的个人资料"
+            },
+            "member_4": {
+              "name": "赛义德·哈比卜 (Saeed Habib)",
+              "title": "副主席 – 南区",
+              "badges": {
+                "executive_team": "执行团队"
+              },
+              "aria_label": "查看 赛义德·哈比卜 的个人资料"
+            },
+            "member_5": {
+              "name": "沙巴娜·阿里 (Shabana Ali)",
+              "title": "副主席 – 南区",
+              "badges": {
+                "executive_team": "执行团队",
+                "mediator": "调解员",
+                "pma_accredited": "PMA 认证调解员"
+              },
+              "aria_label": "查看 沙巴娜·阿里 的个人资料"
+            },
+            "member_6": {
+              "name": "瓦吉哈·阿利姆 (Wajiha Aleem)",
+              "title": "秘书长",
+              "badges": {
+                "executive_team": "执行团队",
+                "mediator": "调解员",
+                "cedr_accredited": "CEDR 认证调解员"
+              },
+              "aria_label": "查看 瓦吉哈·阿利姆 的个人资料"
+            },
+            "member_7": {
+              "name": "赛义德·萨马德·乌尔·哈克 (Syed Sammad-ul-Haque)",
+              "title": "财务秘书",
+              "badges": {
+                "executive_team": "执行团队"
+              },
+              "aria_label": "查看 赛义德·萨马德·乌尔·哈克 的个人资料"
+            },
+            "member_8": {
+              "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
+              "title": "执行委员会 – 北区",
+              "badges": {
+                "executive_team": "执行团队",
+                "mediator": "调解员",
+                "cedr_accredited": "CEDR 认证调解员"
+              },
+              "aria_label": "查看 塔里克·赛义德·拉纳 的个人资料"
+            },
+            "member_9": {
+              "name": "胡玛·沙阿 (Huma Shah)",
+              "title": "执行委员会 – 北区",
+              "badges": {
+                "executive_team": "执行团队",
+                "mediator": "调解员",
+                "cedr_accredited": "CEDR 认证调解员"
+              },
+              "aria_label": "查看 胡玛·沙阿 的个人资料"
+            },
+            "member_10": {
+              "name": "乌迈玛·安瓦尔·汗 (Umaimah Anwar Khan)",
+              "title": "执行委员会 – 南区",
+              "badges": {
+                "executive_team": "执行团队"
+              },
+              "aria_label": "查看 乌迈玛·安瓦尔·汗 的个人资料"
+            },
+            "member_11": {
+              "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
+              "title": "执行委员会 – 南区",
+              "badges": {
+                "executive_team": "执行团队",
+                "mediator": "调解员",
+                "cedr_accredited": "CEDR 认证调解员"
+              },
+              "aria_label": "查看 穆斯坦西尔·扎基尔 的个人资料"
+            },
+            "member_12": {
+              "name": "阿德南·穆夫蒂 (Adnan Mufti)",
+              "title": "执行委员会 – 南区",
+              "badges": {
+                "executive_team": "执行团队",
+                "mediator": "调解员",
+                "cedr_accredited": "CEDR 认证调解员"
+              },
+              "aria_label": "查看 阿德南·穆夫蒂 的个人资料"
+            }
+          },
+          "trainers": {
+            "trainer_1": {
+              "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
+              "title": "高级培训师",
+              "badges": {
+                "master_trainer": "高级培训师",
+                "director_training": "培训总监",
+                "ex_president": "前任主席"
+              },
+              "aria_label": "查看 穆斯坦西尔·扎基尔 的个人资料"
+            },
+            "trainer_2": {
+              "name": "安瓦尔·卡西夫· ممتاز (Anwar Kashif Mumtaz)",
+              "title": "高级培训师",
+              "badges": {
+                "master_trainer": "高级培训师",
+                "ex_president": "前任主席",
+                "leadership_trainer": "领导力培训师"
+              },
+              "aria_label": "查看 安瓦尔·卡西夫· ممتاز 的个人资料"
+            },
+            "trainer_3": {
+              "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
+              "title": "高级培训师",
+              "badges": {
+                "master_trainer": "高级培训师",
+                "ex_president": "前任主席",
+                "executive_committee_north": "执行委员会 – 北区"
+              },
+              "aria_label": "查看 塔里克·赛义德·拉纳 的个人资料"
+            },
+            "trainer_4": {
+              "name": "赛玛·阿敏·卡瓦贾 (Saima Amin Khawaja)",
+              "title": "高级培训师",
+              "badges": {
+                "master_trainer": "高级培训师",
+                "executive_member": "执行委员",
+                "vice_president_north": "副主席 – 北区"
+              },
+              "aria_label": "查看 赛玛·阿敏·卡瓦贾 的个人资料"
+            },
+            "trainer_5": {
+              "name": "胡玛·沙阿 (Huma Shah)",
+              "title": "高级培训师",
+              "badges": {
+                "master_trainer": "高级培训师",
+                "executive_committee_north": "执行委员会 – 北区",
+                "training_committee": "培训委员会"
+              },
+              "aria_label": "查看 胡玛·沙阿 的个人资料"
+            },
+            "trainer_6": {
+              "name": "乌斯曼·G·拉希德 (Usman G. Rashid)",
+              "title": "高级培训师",
+              "badges": {
+                "master_trainer": "高级培训师",
+                "barrister_at_law": "出庭律师 (Barrister)",
+                "former_secretary_general": "前任秘书长 – PMA"
+              },
+              "aria_label": "查看 乌斯曼·G·拉希德 的个人资料"
+            },
+            "trainer_7": {
+              "name": "阿斯凡德·亚尔·阿里·汗 (Asfand Yar Ali Khan)",
+              "title": "高级培训师",
+              "badges": {
+                "master_trainer": "高级培训师",
+                "executive_leadership": "高管领导力",
+                "vice_president_north": "副主席 – 北区"
+              },
+              "aria_label": "查看 阿斯凡德·亚尔·阿里·汗 的个人资料"
+            }
+          },
+          "former_presidents": {
+            "president_1": {
+              "name": "安瓦尔·卡西夫· ممتاز (Anwar Kashif Mumtaz)",
+              "title": "前任主席"
+            },
+            "president_2": {
+              "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
+              "title": "前任主席"
+            },
+            "president_3": {
+              "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
+              "title": "前任主席"
+            }
+          },
+          "subcommittee_panel": {
+            "header": {
+              "title": "小组委员会",
+              "subtitle": "我们的小组委员会通过专业知识、协同合作和奉献服务，推动关键举措并支持 PMA 的使命。",
+              "expand_all": "展开全部"
+            },
+            "labels": {
+              "mandate": "职责:",
+              "director": "总监",
+              "convener": "召集人"
+            },
+            "committees": {
+              "training": {
+                "title": "培训委员会",
+                "mandate": "迎新、培训、认证/认可/进修课程/培训讲师 (TOT)",
+                "lead_name": "Mustansir Zakir",
+                "members": [
+                  "Anwar Kashif Mumtaz",
+                  "Saima Khawaja",
+                  "Tariq Rana",
+                  "Huma Shah",
+                  "Asfandyar Ali Khan"
+                ]
+              },
+              "conduct": {
+                "title": "行为准则委员会",
+                "mandate": "为调解员起草行为准则，并争取获得法律部的批准以在全国范围内实施",
+                "lead_name": "Umaima Khan",
+                "members": [
+                  "Anwar Kashif Mumtaz",
+                  "Saima Khawaja",
+                  "Khalid Mehmood",
+                  "Adnan Mufti",
+                  "Tariq Rana",
+                  "Asfandyar Ali Khan"
+                ]
+              },
+              "membership": {
+                "title": "会员 committee",
+                "mandate": "保留和激活老会员，通过邀请其他机构的认可调解员来扩大联合会员组合，并接纳准会员和名誉会员。",
+                "lead_name": "Saeed Habib",
+                "members": [
+                  "Khalid Mehmood",
+                  "Saima Khawaja",
+                  "Samad Ul Haq",
+                  "Asfandyar Ali Khan"
+                ]
+              },
+              "bar_south": {
+                "title": "法律与学术协调 – 南部",
+                "mandate": "与律师协会/律师公会及法学院协调，组织会议、研讨会、宣讲会和培训/工作坊",
+                "lead_name": "Shabana Ali",
+                "members": [
+                  "Saadat Yar Khan",
+                  "Umaima Khan",
+                  "Mrs. Khalid Mehmood",
+                  "Samad Ul Haq",
+                  "Mansoor Meer",
+                  "Naved Ahmed"
+                ]
+              },
+              "bar_north": {
+                "title": "法律与学术协调 – 北部",
+                "mandate": "与律师协会/律师公会及法学院协调，组织会议、研讨会、宣讲会和培训/工作坊",
+                "lead_name": "Saima Khawaja",
+                "members": [
+                  "Zafar Kalanauri",
+                  "Barrister Tariq Rana",
+                  "Asfandyar Ali Khan"
+                ]
+              },
+              "institutional": {
+                "title": "机构协调委员会",
+                "mandate": "与商会、行业团体、专业协会/机构进行协调",
+                "lead_name": "Adnan Mufti",
+                "members": [
+                  "Mustansir Zakir",
+                  "Saeed Habib",
+                  "Tariq Rana",
+                  "Asfandyar Ali Khan",
+                  "Samad Ul Haq"
+                ]
+              }
+            },
+            "footer_note": "Aga Zafar Ahmed（主席）和 Wajiha Aleem（秘书长）是每个委员会的当然成员。"
+          },
+          "mediators": {
+            "adnan-mufti": { "name": "Adnan Mufti", "role": "会员" },
+            "anwar-kashif-mumtaz": { "name": "Anwar Kashif Mumtaz", "role": "会员" },
+            "ayesha-sarfraz-ali-khan": { "name": "Ayesha Sarfraz Ali Khan", "role": "会员" },
+            "barrister-tariq-saeed-lahore": { "name": "Barrister Tariq Saeed", "role": "会员" },
+            "farrukh-junaidy": { "name": "Farrukh Junaidy", "role": "会员" },
+            "huma-shah": { "name": "Huma Shah", "role": "会员" },
+            "ishtiaq-memon": { "name": "Ishtiaq Memon", "role": "会员" },
+            "isfandyar-ali-khan": { "name": "Isfandyar Ali Khan", "role": "会员" },
+            "khalid-firoz-arfeen": { "name": "Khalid Firoz Arfeen", "role": "会员" },
+            "khalid-mahmood-siddiqui": { "name": "Khalid Mahmood Siddiqui", "role": "会员" },
+            "mohammad-rehan-siddqui": { "name": "Mohammad Rehan Siddqui", "role": "会员" },
+            "mustansir-zakir": { "name": "Mustansir Zakir", "role": "会员" },
+            "nausheen-ahmed": { "name": "Nausheen Ahmed", "role": "会员" },
+            "neelofar-hameed": { "name": "Neelofar Hameed", "role": "会员" },
+            "omair-nisar-khan": { "name": "Omair Nisar Khan", "role": "会员" },
+            "raheem-hasnani": { "name": "Raheem Hasnani", "role": "会员" },
+            "reshma-aftab": { "name": "Reshma Aftab", "role": "会员" },
+            "rubina-virani": { "name": "Rubina Virani", "role": "会员" },
+            "saadat-yar-khan": { "name": "Saadat Yar Khan", "role": "会员" },
+            "saeed-habib": { "name": "Saeed Habib", "role": "会员" },
+            "saima-khawaja": { "name": "Saima Amin Khawaja", "role": "会员" },
+            "salina-khalfan": { "name": "Salina Khalfan", "role": "会员" },
+            "shabana-ali": { "name": "Shabana Ali", "role": "会员" },
+            "shaheen-premani": { "name": "Shaheen Premani", "role": "会员" },
+            "syed-haider-imam-rizvi": { "name": "Syed Haider Imam Rizvi", "role": "会员" },
+            "syed-sammadul-haque": { "name": "Syed Sammadul Haque", "role": "会员" },
+            "tahmasp-r-razvi": { "name": "Tahmasp R. Razvi", "role": "会员" },
+            "umaimah-a-rizvi": { "name": "Umaimah A. Rizvi", "role": "会员" },
+            "usman-g-rashid": { "name": "Usman G. Rashid", "role": "会员" },
+            "wajiha-aleem": { "name": "Wajiha Aleem", "role": "会员" },
+            "yousuf-moulvi": { "name": "Yousuf Moulvi", "role": "会员" },
+            "zafar-kalanauri": { "name": "Zafar Kalanauri", "role": "会员" },
+            "zia-makhdoom": { "name": "Zia Makhdoom", "role": "会员" }
+          }
         },
         "resources_page": {
-    "hero": {
-      "image_alt": "服务核心图片",
-      "eyebrow": "资源",
-      "title_line1": "知识。法律。",
-      "title_accent": "变革。",
-      "lead_text": "获取 PMA 出版物、调解法律、机构文件、研究论文、倡导资源以及媒体内容，这些内容支持巴基斯坦替代性纠纷解决机制 (ADR) 的发展与和平化解争端。"
-    },
-    "tabs": {
-      "featured": "精选",
-      "downloads": "下载中心",
-      "mediation_laws": "调解法律",
-      "advocacy": "政策倡导",
-      "press_media": "新闻与媒体",
-      "articles": "文章报告"
-    }
-  }
+          "hero": {
+            "image_alt": "服务核心图片",
+            "eyebrow": "资源",
+            "title_line1": "知识。法律。",
+            "title_accent": "变革。",
+            "lead_text": "获取 PMA 出版物、调解法律、机构文件、研究论文、倡导资源以及媒体内容，这些内容支持巴基斯坦替代性纠纷解决机制 (ADR) 的发展与和平化解争端。"
+          },
+          "tabs": {
+            "featured": "精选",
+            "downloads": "下载中心",
+            "mediation_laws": "调解法律",
+            "advocacy": "政策倡导",
+            "press_media": "新闻与媒体",
+            "articles": "文章报告"
+          },
+          "downloads_panel": {
+            "header": {
+              "title": "下载中心",
+              "lead": "可下载的 PDF、表格和出版物。点击文件可在新标签页中打开。",
+              "view_all_text": "查看全部下载"
+            },
+            "global_labels": {
+              "download_btn_text": "下载 PDF",
+              "default_image_alt": "ADR-ACT-2017 PDF 文件"
+            },
+            "items": {
+              "card_1": {
+                "title": "2017年替代性纠纷解决法案 (ADR-ACT-2017)",
+                "file_name": "ADR-ACT-2017.pdf"
+              },
+              "card_2": {
+                "title": "政策倡导与游说 (Advocacy and Lobby)",
+                "file_name": "Advocacy-and-Lobby.pdf"
+              },
+              "card_3": {
+                "title": "注册证书",
+                "file_name": "Certificate.pdf"
+              },
+              "card_4": {
+                "title": "会员申请表",
+                "file_name": "membership-application-form.pdf"
+              },
+              "card_5": {
+                "title": "公司章程最新版 (Memorandum of Association)",
+                "file_name": "MEMORANDUM-OF-ASSOCIATION-UPDATED.pdf"
+              },
+              "card_6": {
+                "title": "提名表",
+                "file_name": "nomination_form.pdf"
+              },
+              "card_7": {
+                "title": "PMA 致辞演讲",
+                "file_name": "pma-speech.pdf"
+              },
+              "card_8": {
+                "title": "为什么加入 PMA",
+                "file_name": "Why-Join-PMA.pdf"
+              }
+            }
+          },
+          "mediation_laws_panel": {
+            "header": {
+              "title": "调解法律与立法",
+              "lead": "与调解相关的核心法规、法案和官方立法文件。",
+              "view_all_text": "查看全部法律"
+            },
+            "global_labels": {
+              "download_btn_text": "下载 PDF",
+              "default_image_alt": "ADR-ACT-2017 PDF 文件"
+            },
+            "items": {
+              "card_1": {
+                "title": "伊斯兰堡争端解决法案 (调解)",
+                "file_name": "Law-Islamabad-Dispute-Resolution-Act-Mediation.pdf"
+              },
+              "card_2": {
+                "title": "1908年《民事诉讼法典》第一附表的修订项",
+                "file_name": "Law-KPK-Mediation-Amendment-No.1523-1622_Amendments-in-Frist-Schedule-of-the-code-of-Civil-Procedure-1908_dt-1.pdf"
+              },
+              "card_3": {
+                "title": "旁遮普邦1908年《民事诉讼法典》修订案 (调解条款)",
+                "file_name": "Law-Punjab-Amendments_civil_procedure_1908_final_Mediation_Provisions.pdf"
+              },
+              "card_4": {
+                "title": "《民事诉讼法典》(信德省修正案) 法案草案，2018年",
+                "file_name": "Law-Sindh-Notification-dt-8-11-2018-The-DRAFT-Code-of-Civil-Procedure-Sindh-Amendment-Bill-2018.pdf"
+              },
+              "card_5": {
+                "title": "关于调解所达成和解协议的《新加坡公约》(正文)",
+                "file_name": "Law-Singapore-Convention-on-Mediated-Settlements-Text.pdf"
+              }
+            }
+          },
+          "advocacy_panel": {
+            "header": {
+              "title": "政策倡导与政策制定",
+              "lead": "支持替代性纠纷解决机制 (ADR) 改革的政策简报、倡导工具包和立场文件。",
+              "view_all_text": "查看全部政策倡导"
+            },
+            "global_labels": {
+              "download_btn_text": "下载 PDF",
+              "default_image_alt": "ADR-ACT-2017 PDF 文件"
+            },
+            "items": {
+              "card_1": {
+                "title": "开伯尔-普赫图赫瓦省 (KPK)",
+                "file_name": "kpk.pdf"
+              },
+              "card_2": {
+                "title": "旁遮普邦",
+                "file_name": "punjab.pdf"
+              },
+              "card_3": {
+                "title": "信德省",
+                "file_name": "sindh.pdf"
+              }
+            }
+          },
+          "press_media_panel": {
+            "header": {
+              "title": "新闻与媒体",
+              "lead": "面向记者的供稿、媒体指南和可下载素材资源。",
+              "view_all_text": "查看媒体素材"
+            },
+            "global_labels": {
+              "download_btn_text": "下载 PDF",
+              "default_image_alt": "PDF 文件"
+            },
+            "items": {
+              "card_1": {
+                "title": "《商业记录报》 (Business Recorder)",
+                "file_name": "BusinessRecorder.pdf"
+              },
+              "card_2": {
+                "title": "《商业记录报》广告 (AD)",
+                "file_name": ""
+              },
+              "card_3": {
+                "title": "《前线邮报》 (Frontier Post)",
+                "file_name": "FrontierPost.pdf"
+              },
+              "card_4": {
+                "title": "《巴基斯坦观察家报》 (Pakistan Observer)",
+                "file_name": "PakistanObserver.pdf"
+              },
+              "card_5": {
+                "title": "PMA 官方新闻稿",
+                "file_name": "PMA_PressRelease.pdf"
+              },
+              "card_6": {
+                "title": "《论坛报》 (Tribune)",
+                "file_name": "Tribune.pdf"
+              }
+            }
+          },
+          "articles_panel": {
+            "header": {
+              "title": "文章与分析",
+              "lead": "关于调解和多元化纠纷解决机制 (ADR) 的研究文章、深度分析与行业前沿洞察。",
+              "view_all_text": "查看全部文章"
+            },
+            "global_labels": {
+              "download_btn_text": "下载 PDF",
+              "author_prefix": "作者："
+            },
+            "items": {
+              "card_1": {
+                "title": "It Really Happened in Frankfurt",
+                "author": "Jawad A. Sarwana",
+                "file_name": "blog-Jawad-Sarwana-It-Happened-in-Frankfurt.pdf",
+                "image_alt": "It Really Happened in Frankfurt PDF 文件"
+              },
+              "card_2": {
+                "title": "Mediation Techniques (调解技巧)",
+                "author": "Jawad A. Sarwana",
+                "file_name": "Blog-Sarwana.pdf",
+                "image_alt": "Mediation Techniques PDF 文件"
+              }
+            }
+          },
+          "search_bar": {
+            "question": "找不到您需要的内容？",
+            "subtext": "使用搜索或按分类浏览，快速找到您需要的资源。",
+            "placeholder": "搜索资源...",
+            "browse_btn_text": "浏览全部资源"
+          }
+        },
+        "events_page": {
+          "hero_section": {
+            "eyebrow": "活动",
+            "title": "最新活动",
+            "lead": "随时获取 PMA 会议、调解倡议、工作坊以及重要公告的最新动态。",
+            "image_alt": "服务主图"
+          },
+          "tab_bar": {
+            "upcoming_events": "即将举办的活动",
+            "past_events": "往期活动",
+            "announcements": "重要公告"
+          },
+          "upcoming_panel": {
+            "title": "敬请期待",
+            "lead": "即将举办的活动、会议和工作坊将在此列出。请稍后回来查看。"
+          },
+          "announcements_panel": {
+            "title": "敬请期待",
+            "lead": "重要公告将在此处显示。敬请关注。"
+          },
+          "past_events": {
+            "training_program_detail": {
+              "global_labels": {
+                "badge_text": "往期活动",
+                "pill_text": "认证培训项目",
+                "view_gallery_btn": "查看活动画册",
+                "about_label": "活动介绍",
+                "highlights_label": "核心培训亮点"
+              },
+              "card": {
+                "title": "第六届认证调解培训项目",
+                "sub": "信德省高等法院",
+                "date": "2026年6月8日 至 2026年6月12日",
+                "location": "卡拉奇信德省高等法院"
+              },
+              "about_paragraphs": [
+                "巴基斯坦调解员协会 (PMA) 在信德省高等法院成功举办了第六届认证调解培训项目。",
+                "该项目旨在加强调解技能，推广多元化纠纷解决机制 (ADR) 实践，并提升法律从业者和调解专业人员的专业能力。",
+                "通过互动环节、实际演练和小组协作讨论，参与者对现代调解技巧和纠纷解决框架有了深入而宝贵的理解。"
+              ],
+              "highlights": [
+                "专业认证调解培训课程",
+                "调解实战模拟演练",
+                "互动式小组专题讨论",
+                "多元化纠纷解决 (ADR) 技巧",
+                "职业岗位能力建设",
+                "协同互助的学习环境"
+              ],
+              "meta": {
+                "objective_label": "培训目标",
+                "objective_text": "强化调解技能，推动高效、妥善化解矛盾纠纷的实际应用。",
+                "organized_label": "主办单位",
+                "organized_text": "巴基斯坦调解员协会 (PMA)",
+                "participants_label": "参训人员",
+                "participants_text": "法律专业人士、ADR 从业人员、调解员及参训学员。",
+                "type_label": "活动类型",
+                "type_text": "认证培训项目"
+              }
+            },
+            "national_conference_detail": {
+              "global_labels": {
+                "badge_text": "往期活动",
+                "about_label": "活动介绍",
+                "highlights_label": "重点阐述的 ADR 进展"
+              },
+              "card": {
+                "title": "调解：前进之路",
+                "sub": "第一届全国调解大会",
+                "date": "2015年3月7日",
+                "location": "卡拉奇万豪酒店",
+                "type": "全国性会议"
+              },
+              "about_paragraphs": [
+                "巴基斯坦调解员协会 (PMA) 是巴基斯坦首个代表海外受训及认证调解员以及其他致力于推动该事业发展专业人士的机构。协会成立于2013年，承接了多项此前由国际金融公司/世界银行集团多元化纠纷解决机制 (ADR) 项目实施的活动。",
+                "鉴于巴基斯坦当前的合同执行指标不容乐观、耗时较长且成本高昂，PMA 致力引导和支持各项干预措施，以协助诉讼各方通过调解等和解程序友好解决争议，并以此配合和补充司法与法院在及时结案方面的努力。"
+              ],
+              "highlights": [
+                "卡拉奇争议解决中心和拉合尔工商会调解中心全面投入运营。",
+                "在巴基斯坦积极推动 ADR/调解法律改革的立法游说。",
+                "巴基斯坦本土开始拥有 CEDR 认证调解员与高级培训师。",
+                "在巴基斯坦国内开展 ADR 专业课程体系建设。",
+                "进一步强化并在巴基斯坦落地交付 ADR 专业培训。",
+                "将 ADR 视为解决包括公司治理在内等多元化纠纷的重要渠道。"
+              ],
+              "meta": {
+                "objective_label": "大会宗旨",
+                "objective_text": "进一步推进 ADR 及调解事业，探讨在巴基斯坦实现调解制度化所面临的进展、挑战与未来干预方向。",
+                "organized_label": "大会主办方",
+                "organized_text": "本届大会由巴基斯坦调解员协会主办，并得到了各大会合作伙伴的大力支持。",
+                "participants_label": "演讲嘉宾",
+                "participants_text": "来自政府、司法界、商界、律师协会、学术界和巴基斯坦各调解中心代表及海外演讲嘉宾。",
+                "type_label": "活动类型",
+                "type_text": "全国性会议"
+              }
+            }
+          }
+        },
+        "privacy_policy": {
+          "hero": {
+            "title_main": "隐私",
+            "title_accent": "政策",
+            "lead_text": "我们致力于保护您的隐私，并确保以安全和负责任的方式处理您的个人信息。"
+          },
+          "sections": {
+            "commitment": {
+              "title": "隐私承诺",
+              "paragraphs": [
+                "巴基斯坦调解员协会 (PMA) 致力于保护您的在线隐私。巴基斯坦调解员协会 (PMA) 创建了本隐私声明，以展示我们对隐私的坚定承诺。以下披露了巴基斯坦调解员协会 (PMA) 的信息收集和传播惯例。",
+                "PMA 保留随时通过通知用户新隐私声明的存在来更改本政策的权利。本声明及其中概述的政策并不旨在且不会在任何一方内部或代表任何一方创建任何合同或其他法律权利。"
+              ]
+            },
+            "respect_data": {
+              "title": "尊重用户数据",
+              "paragraphs": [
+                "巴基斯坦调解员协会 (PMA) 高度重视与客户的牢固关系。巴基斯坦调解员协会 (PMA) 的数据收集工作是在充分、妥善尊重客户隐私的前提下进行的。",
+                "我们收集的数据将以敏感、安全的方式进行处理，并对隐私给予妥善的考虑。巴基斯坦调解员协会 (PMA) 不会向第三方披露、分发或销售我们从客户那里收集的数据。"
+              ]
+            },
+            "collection": {
+              "title": "信息收集",
+              "lead_text": "PMA 收集用于会员注册的信息包括：",
+              "items": [
+                "计算机化全国身份证 (CNIC)",
+                "全名",
+                "住宅地址",
+                "办公地址",
+                "电话号码",
+                "电子邮箱信息",
+                "其他相关的会员信息"
+              ]
+            }
+          }
+        },
+        "complaint_policy": {
+          "hero": {
+            "title_main": "投诉与申诉",
+            "title_accent": "政策",
+            "lead_text": "我们致力于公平、迅速和透明地解决各方关切。"
+          },
+          "intro_card": {
+            "bold_text": "我们拥有一套规范的投诉处理程序，以确保每项投诉都能得到妥善的关切和处理。",
+            "lead_p": "任何使用 PMA 调解认证服务的用户均可提出投诉。PMA 旨在向所有用户提供快速且及时的服务。我们将：",
+            "commitments": [
+              "认真对待并妥善处理所有投诉；",
+              "迅速解决投诉问题；以及",
+              "从投诉中吸取教训，并采取行动不断改进我们的服务。"
+            ]
+          },
+          "steps": [
+            {
+              "text": "然而，我们只能处理针对从培训总监处接受到不良客户服务而提出的相关投诉。"
+            },
+            {
+              "text": "这意味着您的诉求必须致信给培训总监，并通过邮寄和电子邮件的形式发送，同时抄送 (cc) 给 PMA 主席。"
+            },
+            {
+              "text": "对培训总监决定不满意的学生可自由拒绝该决定，在这种情况下，该决定将不具任何约束力。总监有义务在收到投诉后的30天内作出答复。"
+            },
+            {
+              "text": "但是，如果您对投诉的处理结果仍不满意，或者培训总监未作答复，您可以将投诉提交给 PMA 主席，主席将组建一个由两名成员组成的教席仲裁庭来听取您的诉求。"
+            },
+            {
+              "text": "您需要清晰、扼要地说明提出请求的原因，以及您希望通过审查或针对培训总监的不作为达到什么目标。由两名成员组成的仲裁庭将向您致信（并抄送 PMA 主席），且务必在提交升级请求后的30个工作日内以书面形式答复您。"
+            },
+            {
+              "text": "如果您对两名成员组成的仲裁庭就您的投诉所采取的行动或不作为仍不满意，这并不会影响任何一方前往消费者权益法院寻求救济的权利，该渠道对所有人开放。"
+            }
+          ]
+        },
+        "terms_conditions": {
+          "hero": {
+            "title_main": "条款与",
+            "title_accent": "条件",
+            "lead_text": "请仔细阅读这些条款。通过访问和使用我们的网站及服务，即表示您同意遵守以下条款和条件。"
+          },
+          "accordion_items": [
+            {
+              "id": "training",
+              "title": "培训",
+              "preview": "为确认您的预订，您的款项必须在课程开始前提前送达我们的办公室。",
+              "body_paragraphs": [
+                "如果用户逾期付款，将不被允许参加课程。"
+              ]
+            },
+            {
+              "id": "refunds",
+              "title": "培训退款",
+              "preview": "我们理解生活充满变数。如果您无法按时出席，请尽快致电 021-3452-9768 或发送电子邮件至 info@pma.org.pk 与我们联系。",
+              "body_paragraphs": [
+                "我们很乐意为您安排替代人员出席，或安排延期转账或退款，我们始终会根据具体情况个案处理。"
+              ]
+            },
+            {
+              "id": "membership",
+              "title": "会籍取消",
+              "preview": "除特殊情况外，会籍费用一律不予退还。",
+              "body_paragraphs": [
+                "如果您认为您的情况符合特例条件，请与我们联系。每个案例都将由 PMA 会员委员会进行单独审查。"
+              ]
+            },
+            {
+              "id": "copyright",
+              "title": "版权所有",
+              "preview": "本网站及其内容受版权保护。本网站材料的版权归巴基斯坦调解员协会 (PMA) 所有，部分材料的版权归第三方所有。网站的功能和运营版权归 PMA 所有。",
+              "body_paragraphs": [
+                "您可以使用网页浏览器浏览本网站及其内容，并电子复制和打印本网站部分的纸质副本，且仅限于个人非商业用途。严禁任何其他用途，包括对本网站内容进行复制、修改、分发、传播、再版、展示或演播。"
+              ]
+            },
+            {
+              "id": "disclaimer",
+              "title": "免责声明",
+              "preview": "您同意，您访问和使用本网站必须遵守这些条款及所有适用法律，并自担风险。本网站及其内容按“原样”提供，网站可能包含错误、漏洞和不准确之处，且可能不完整或不是最新的。",
+              "body_paragraphs": [
+                "除非适用法律另有规定，巴基斯坦调解员协会 (PMA) 对本网站的运营或本网站包含的信息、内容、材料或产品不作任何形式的明示或暗示的陈述或保证。",
+                "PMA 及其关联公司、董事、管理人员、员工、代理人、承包商、继承人或受让人均不对因使用本网站或链接到本网站的任何其他网站而引起的或与之相关的任何损害承担责任。该限制适用于您或他人可能遭受的直接、间接、间接引起的、特殊、惩罚性或其他损害，以及利润损失、业务中断或数据或信息丢失的损害。"
+              ]
+            },
+            {
+              "id": "translations",
+              "title": "谷歌翻译",
+              "preview": "为了您的方便，本网站使用由 Google Translate™ 支持的翻译程序进行了翻译。Google Translate™ 的翻译是通过自动化电脑程序完成的，而非由获得认证的专业翻译人员进行。",
+              "body_paragraphs": [
+                "因此，翻译结果可能不准确或不可靠。请谨慎使用 Google Translate™ 的翻译。翻译内容按“原样”提供，不提供任何形式的保证。由于翻译软件的局限性，某些内容（如图像、视频、Flash 等）可能无法翻译。",
+                "PMA 对不完整或不准确的翻译不承担责任，也不对用户因使用 Google Translate™ 翻译（或本网站上的任何其他翻译）而引起的任何损害或损失承担责任。",
+                "如果您对 Google™ 翻译有任何疑问，请访问：Google Translate™ 常见问题解答。",
+                "谷歌不对翻译承担任何明示或暗示的保证，包括任何关于准确性、可靠性的保证，以及任何关于适销性、特定用途适用性和非侵权性的暗示保证。"
+              ]
+            }
+          ]
+        },
+        "become_member": {
+          "hero": {
+            "eyebrow": "加入 PMA",
+            "title_main": "成为",
+            "title_accent": "PMA 会员",
+            "lead_text": "加入由调解员、ADR（替代性糾紛解決）专业人士及机构领导者组成的杰出社区，共同致力于和平解决争端。"
+          },
+          "why_join": {
+            "title_main": "为什么",
+            "title_accent": "加入",
+            "title_end": "PMA？",
+            "subtitle": "PMA 会员享有明确的专业优势与发展机遇。",
+            "cards": [
+              {
+                "title": "国际会议",
+                "description": "以优惠的费用和优先报名的特权，参加探讨调解与仲裁最新议题的全球会议。"
+              },
+              {
+                "title": "研讨会与课程",
+                "description": "获得参与高质量教育研讨会和专业职业发展课程的机会。"
+              },
+              {
+                "title": "专业成长",
+                "description": "通过专家的独到见解和优质资源，深化您对调解和 ADR 的理解。"
+              },
+              {
+                "title": "全球网络",
+                "description": "建立并维护具有价值的国内与国际专业人脉关系。"
+              },
+              {
+                "title": "商业机遇",
+                "description": "拓宽您的商业眼界及专业社交圈。"
+              },
+              {
+                "title": "支持行业发展",
+                "description": "在支持和推动调解及和平解决争端的发展中发挥关键作用。"
+              }
+            ]
+          },
+          "benefits": {
+            "title_main": "会员",
+            "title_accent": "权益",
+            "subtitle": "作为 PMA 的注册会员，您将享有广泛的独特优势与优质机会。",
+            "items": [
+              {
+                "title": "社交与拓展机会",
+                "description": "PMA 全年为会员提供各种机会，以增进专业关系并掌握行业动态与趋势。"
+              },
+              {
+                "title": "会员名录",
+                "description": "此名录专供 PMA 会员独享，包含会员及其他全球机构的最新联络详情。提供纸质版和电子版。"
+              },
+              {
+                "title": "会员证书",
+                "description": "会员在申请获批后将获发国际认可的会员证书。证书将在年度会员盛典上颁发。"
+              },
+              {
+                "title": "持续专业发展",
+                "description": "优先参与由调解和 ADR 领域杰出专家主持的独家研讨会及专业发展课程（提供英文和阿拉伯语）。"
+              }
+            ]
+          },
+          "membership_journey": {
+            "title": "会员发展历程",
+            "subtitle": "成为 PMA 尊贵会员的简明流程。",
+            "steps": [
+              {
+                "num": "1",
+                "title": "提交会员申请表",
+                "desc": "填写在线申请表。"
+              },
+              {
+                "num": "2",
+                "title": "资料审核",
+                "desc": "我们的团队将评估您的申请。"
+              },
+              {
+                "num": "3",
+                "title": "会员入会批准",
+                "desc": "您的申请获得批准后，您将收到通知。"
+              },
+              {
+                "num": "4",
+                "title": "欢迎加入 PMA",
+                "desc": "获取您的会员证书并正式加入我们的专业社交网络。"
+              }
+            ]
+          },
+          "membership_application": {
+            "form_header": {
+              "title": "会员申请表",
+              "desc": "请提供准确的信息。所有带有 * 标记的字段均为必填项。"
+            },
+            "sections": {
+              "personal_info": {
+                "title": "个人基本信息",
+                "fields": {
+                  "full_name": { "label": "全名", "placeholder": "请输入您的全名" },
+                  "father_name": { "label": "父亲姓名", "placeholder": "请输入父亲姓名" },
+                  "qualification": { "label": "教育程度/学历", "placeholder": "请输入学历" },
+                  "designation": { "label": "职称/职位", "placeholder": "请输入职位" },
+                  "cnic": { "label": "身份证/CNIC 号码", "placeholder": "请输入身份证号码" },
+                  "chamber_phone": { "label": "办公室/事务所电话", "placeholder": "请输入事务所电话" }
+                }
+              },
+              "contact_info": {
+                "title": "联系方式",
+                "fields": {
+                  "office_address": { "label": "办公地址", "placeholder": "请输入办公地址" },
+                  "res_address": { "label": "住宅地址", "placeholder": "请输入住宅地址" },
+                  "res_phone": { "label": "住宅电话", "placeholder": "请输入住宅电话" },
+                  "email": { "label": "电子邮箱", "placeholder": "请输入邮箱地址" },
+                  "upload": {
+                    "label": "上传证明文件",
+                    "text": "选择文件或拖拽文件至此",
+                    "hint": "支持 PDF, JPG, PNG 格式 (最大 5MB)"
+                  }
+                }
+              },
+              "references": {
+                "title": "专业推荐人/证明人",
+                "fields": {
+                  "proposer_name": { "label": "第一推荐人姓名", "placeholder": "请输入推荐人全名" },
+                  "proposer_address": { "label": "第一推荐人住宅地址", "placeholder": "请输入地址" },
+                  "proposer_phone": { "label": "第一推荐人电话", "placeholder": "请输入电话号码" },
+                  "seconder_name": { "label": "第二推荐人姓名", "placeholder": "请输入推荐人全名" },
+                  "seconder_address": { "label": "第二推荐人住宅地址", "placeholder": "请输入地址" },
+                  "seconder_phone": { "label": "第二推荐人电话", "placeholder": "请输入电话号码" }
+                }
+              }
+            },
+            "declaration": "我特此声明，上述提供的信息均属实且准确无误。",
+            "submit_btn": "提交申请",
+            "sidebar": {
+              "title_main": "成为",
+              "title_accent": "积极变革的一分子",
+              "desc": "加入 PMA，共同为构建对话、理解和和平解决争端的文化做出贡献。",
+              "list": [
+                "专业行业认可",
+                "持续学习与发展",
+                "人脉拓展与合作",
+                "深远的行业贡献"
+              ],
+              "quote": "齐心协力，我们能通过调解创造一个更加和谐与公正的社会。",
+              "author": "- PMA"
+            }
+          }
+        }
       }
     },
     psh: {
@@ -5945,226 +8625,896 @@
             "search_placeholder": "د نوم یا تخصص له لارې لټون وکړئ..."
           },
           "members": {
-    "member_1": {
-      "name": "آغا ظفر احمد",
-      "title": "مشر (صدر)",
-      "badges": {
-        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
-        "mediator": "منځګړی (ثالث)",
-        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
-      },
-      "aria_label": "د آغا ظفر احمد پروفایل کتل"
-    },
-    "member_2": {
-      "name": "صائمه امين خواجه",
-      "title": "مرستیال مشر – شمال",
-      "badges": {
-        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
-        "mediator": "منځګړی (ثالث)",
-        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
-      },
-      "aria_label": "د صائمه امين خواجه پروفایل کتل"
-    },
-    "member_3": {
-      "name": "اسفند يار علي خان",
-      "title": "مرستیال مشر – شمال",
-      "badges": {
-        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
-        "mediator": "منځګړی (ثالث)",
-        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
-      },
-      "aria_label": "د اسفند يار علي خان پروفایل کتل"
-    },
-    "member_4": {
-      "name": "سعید حبیب",
-      "title": "مرستیال مشر – سویل (جنوب)",
-      "badges": {
-        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)"
-      },
-      "aria_label": "د سعید حبیب پروفایل کتل"
-    },
-    "member_5": {
-      "name": "شبانه علي",
-      "title": "مرستیال مشر – سویل (جنوب)",
-      "badges": {
-        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
-        "mediator": "منځګړی (ثالث)",
-        "pma_accredited": "د PMA لخوا منل شوی منځګړی"
-      },
-      "aria_label": "د شبانه علي پروفایل کتل"
-    },
-    "member_6": {
-      "name": "وجيهه عليم",
-      "title": "عمومي سکرتر (سیکرټري جنرل)",
-      "badges": {
-        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
-        "mediator": "منځګړی (ثالث)",
-        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
-      },
-      "aria_label": "د وجيهه عليم پروفایل کتل"
-    },
-    "member_7": {
-      "name": "سيد صمد الحق",
-      "title": "مالي سکرتر",
-      "badges": {
-        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)"
-      },
-      "aria_label": "د سيد صمد الحق پروفایل کتل"
-    },
-    "member_8": {
-      "name": "طارق سعيد رانا",
-      "title": "اجرائيوي کمیټه – شمال",
-      "badges": {
-        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
-        "mediator": "منځګړی (ثالث)",
-        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
-      },
-      "aria_label": "د طارق سعيد رانا پروفایل کتل"
-    },
-    "member_9": {
-      "name": "ہما شاه",
-      "title": "اجرائيوي کمیټه – شمال",
-      "badges": {
-        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
-        "mediator": "منځګړی (ثالث)",
-        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
-      },
-      "aria_label": "د ہما شاه پروفایل کتل"
-    },
-    "member_10": {
-      "name": "امیمہ انور خان",
-      "title": "اجرائيوي کمیټه – سویل (جنوب)",
-      "badges": {
-        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)"
-      },
-      "aria_label": "د امیمہ انور خان پروفایل کتل"
-    },
-    "member_11": {
-      "name": "مستنصر ذاکر",
-      "title": "اجرائيوي کمیټه – سویل (جنوب)",
-      "badges": {
-        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
-        "mediator": "منځګړی (ثالث)",
-        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
-      },
-      "aria_label": "د مستنصر ذاکر پروفایل کتل"
-    },
-    "member_12": {
-      "name": "عدنان مفتی",
-      "title": "اجرائيوي کمیټه – سویل (جنوب)",
-      "badges": {
-        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
-        "mediator": "منځګړی (ثالث)",
-        "cedr_accredited": "د CEDR لخوا منل شوی منځړی"
-      },
-      "aria_label": "د عدنان مفتی پروفایل کتل"
-    }
-  },
-  "trainers": {
-    "trainer_1": {
-      "name": "مستنصر ذاکر",
-      "title": "ماسټر ټرینر",
-      "badges": {
-        "master_trainer": "ماسټر ټرینر",
-        "director_training": "د روزنې مشر (ډايريکټر ټريننګ)",
-        "ex_president": "پخوانی مشر (سابق صدر)"
-      },
-      "aria_label": "د مستنصر ذاکر پروفایل کتل"
-    },
-    "trainer_2": {
-      "name": "انور کاشف ممتاز",
-      "title": "ماسټر ټرینر",
-      "badges": {
-        "master_trainer": "ماسټر ټرینر",
-        "ex_president": "پخوانی مشر (سابق صدر)",
-        "leadership_trainer": "د مشرتابه روزونکی (ليډرشپ ټرينر)"
-      },
-      "aria_label": "د انور کاشف ممتاز پروفایل کتل"
-    },
-    "trainer_3": {
-      "name": "طارق سعید رانا",
-      "title": "ماسټر ټرینر",
-      "badges": {
-        "master_trainer": "ماسټر ټرینر",
-        "ex_president": "پخوانی مشر (سابق صدر)",
-        "executive_committee_north": "اجرائيوي کمیټه – شمال"
-      },
-      "aria_label": "د طارق سعید رانا پروفایل کتل"
-    },
-    "trainer_4": {
-      "name": "صائمه امين خواجه",
-      "title": "ماسټر ټرینر",
-      "badges": {
-        "master_trainer": "ماسټر ټرینر",
-        "executive_member": "اجرائيوي غړی",
-        "vice_president_north": "مرستیال مشر – شمال"
-      },
-      "aria_label": "د صائمه امين خواجه پروفایل کتل"
-    },
-    "trainer_5": {
-      "name": "ہما شاه",
-      "title": "ماسټر ټرینر",
-      "badges": {
-        "master_trainer": "ماسټر ټرینر",
-        "executive_committee_north": "اجرائيوي کمیټه – شمال",
-        "training_committee": "د روزنې کمیټه"
-      },
-      "aria_label": "د ہما شاه پروفایل کتل"
-    },
-    "trainer_6": {
-      "name": "عثمان جي راشد",
-      "title": "ماسټر ټرینر",
-      "badges": {
-        "master_trainer": "ماسټر ټرینر",
-        "barrister_at_law": "بېریسټر (قانون پوه)",
-        "former_secretary_general": "پخوانی عمومي سکرتر – PMA"
-      },
-      "aria_label": "د عثمان جي راشد پروفایل کتل"
-    },
-    "trainer_7": {
-      "name": "اسفند يار علي خان",
-      "title": "ماسټر ټرینر",
-      "badges": {
-        "master_trainer": "ماسټر ټرینر",
-        "executive_leadership": "اجرائيوي مشرتابه",
-        "vice_president_north": "مرستیال مشر – شمال"
-      },
-      "aria_label": "د اسفند يار علي خان پروفایل کتل"
-    }
-  },
-  "former_presidents": {
-    "president_1": {
-      "name": "انور کاشف ممتاز",
-      "title": "پخوانی مشر (سابق صدر)"
-    },
-    "president_2": {
-      "name": "مستنصر ذاکر",
-      "title": "پخوانی مشر (سابق صدر)"
-    },
-    "president_3": {
-      "name": "طارق سعید رانا",
-      "title": "پخوانی مشر (سابق صدر)"
-    }
-  }
-          
+            "member_1": {
+              "name": "آغا ظفر احمد",
+              "title": "مشر (صدر)",
+              "badges": {
+                "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+                "mediator": "منځګړی (ثالث)",
+                "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+              },
+              "aria_label": "د آغا ظفر احمد پروفایل کتل"
+            },
+            "member_2": {
+              "name": "صائمه امين خواجه",
+              "title": "مرستیال مشر – شمال",
+              "badges": {
+                "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+                "mediator": "منځګړی (ثالث)",
+                "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+              },
+              "aria_label": "د صائمه امين خواجه پروفایل کتل"
+            },
+            "member_3": {
+              "name": "اسفند يار علي خان",
+              "title": "مرستیال مشر – شمال",
+              "badges": {
+                "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+                "mediator": "منځګړی (ثالث)",
+                "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+              },
+              "aria_label": "د اسفند يار علي خان پروفایل کتل"
+            },
+            "member_4": {
+              "name": "سعید حبیب",
+              "title": "مرستیال مشر – سویل (جنوب)",
+              "badges": {
+                "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)"
+              },
+              "aria_label": "د سعید حبیب پروفایل کتل"
+            },
+            "member_5": {
+              "name": "شبانه علي",
+              "title": "مرستیال مشر – سویل (جنوب)",
+              "badges": {
+                "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+                "mediator": "منځګړی (ثالث)",
+                "pma_accredited": "د PMA لخوا منل شوی منځګړی"
+              },
+              "aria_label": "د شبانه علي پروفایل کتل"
+            },
+            "member_6": {
+              "name": "وجيهه عليم",
+              "title": "عمومي سکرتر (سیکرټري جنرل)",
+              "badges": {
+                "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+                "mediator": "منځګړی (ثالث)",
+                "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+              },
+              "aria_label": "د وجيهه عليم پروفایل کتل"
+            },
+            "member_7": {
+              "name": "سيد صمد الحق",
+              "title": "مالي سکرتر",
+              "badges": {
+                "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)"
+              },
+              "aria_label": "د سيد صمد الحق پروفایل کتل"
+            },
+            "member_8": {
+              "name": "طارق سعيد رانا",
+              "title": "اجرائيوي کمیټه – شمال",
+              "badges": {
+                "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+                "mediator": "منځګړی (ثالث)",
+                "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+              },
+              "aria_label": "د طارق سعيد رانا پروفایل کتل"
+            },
+            "member_9": {
+              "name": "ہما شاه",
+              "title": "اجرائيوي کمیټه – شمال",
+              "badges": {
+                "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+                "mediator": "منځګړی (ثالث)",
+                "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+              },
+              "aria_label": "د ہما شاه پروفایل کتل"
+            },
+            "member_10": {
+              "name": "امیمہ انور خان",
+              "title": "اجرائيوي کمیټه – سویل (جنوب)",
+              "badges": {
+                "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)"
+              },
+              "aria_label": "د امیمہ انور خان پروفایل کتل"
+            },
+            "member_11": {
+              "name": "مستنصر ذاکر",
+              "title": "اجرائيوي کمیټه – سویل (جنوب)",
+              "badges": {
+                "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+                "mediator": "منځګړی (ثالث)",
+                "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+              },
+              "aria_label": "د مستنصر ذاکر پروفایل کتل"
+            },
+            "member_12": {
+              "name": "عدنان مفتی",
+              "title": "اجرائيوي کمیټه – سویل (جنوب)",
+              "badges": {
+                "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+                "mediator": "منځګړی (ثالث)",
+                "cedr_accredited": "د CEDR لخوا منل شوی منځړی"
+              },
+              "aria_label": "د عدنان مفتی پروفایل کتل"
+            }
+          },
+          "trainers": {
+            "trainer_1": {
+              "name": "مستنصر ذاکر",
+              "title": "ماسټر ټرینر",
+              "badges": {
+                "master_trainer": "ماسټر ټرینر",
+                "director_training": "د روزنې مشر (ډايريکټر ټريننګ)",
+                "ex_president": "پخوانی مشر (سابق صدر)"
+              },
+              "aria_label": "د مستنصر ذاکر پروفایل کتل"
+            },
+            "trainer_2": {
+              "name": "انور کاشف ممتاز",
+              "title": "ماسټر ټرینر",
+              "badges": {
+                "master_trainer": "ماسټر ټرینر",
+                "ex_president": "پخوانی مشر (سابق صدر)",
+                "leadership_trainer": "د مشرتابه روزونکی (ليډرشپ ټرينر)"
+              },
+              "aria_label": "د انور کاشف ممتاز پروفایل کتل"
+            },
+            "trainer_3": {
+              "name": "طارق سعید رانا",
+              "title": "ماسټر ټرینر",
+              "badges": {
+                "master_trainer": "ماسټر ټرینر",
+                "ex_president": "پخوانی مشر (سابق صدر)",
+                "executive_committee_north": "اجرائيوي کمیټه – شمال"
+              },
+              "aria_label": "د طارق سعید رانا پروفایل کتل"
+            },
+            "trainer_4": {
+              "name": "صائمه امين خواجه",
+              "title": "ماسټر ټرینر",
+              "badges": {
+                "master_trainer": "ماسټر ټرینر",
+                "executive_member": "اجرائيوي غړی",
+                "vice_president_north": "مرستیال مشر – شمال"
+              },
+              "aria_label": "د صائمه امين خواجه پروفایل کتل"
+            },
+            "trainer_5": {
+              "name": "ہما شاه",
+              "title": "ماسټر ټرینر",
+              "badges": {
+                "master_trainer": "ماسټر ټرینر",
+                "executive_committee_north": "اجرائيوي کمیټه – شمال",
+                "training_committee": "د روزنې کمیټه"
+              },
+              "aria_label": "د ہما شاه پروفایل کتل"
+            },
+            "trainer_6": {
+              "name": "عثمان جي راشد",
+              "title": "ماسټر ټرینر",
+              "badges": {
+                "master_trainer": "ماسټر ټرینر",
+                "barrister_at_law": "بېریسټر (قانون پوه)",
+                "former_secretary_general": "پخوانی عمومي سکرتر – PMA"
+              },
+              "aria_label": "د عثمان جي راشد پروفایل کتل"
+            },
+            "trainer_7": {
+              "name": "اسفند يار علي خان",
+              "title": "ماسټر ټرینر",
+              "badges": {
+                "master_trainer": "ماسټر ټرینر",
+                "executive_leadership": "اجرائيوي مشرتابه",
+                "vice_president_north": "مرستیال مشر – شمال"
+              },
+              "aria_label": "د اسفند يار علي خان پروفایل کتل"
+            }
+          },
+          "former_presidents": {
+            "president_1": {
+              "name": "انور کاشف ممتاز",
+              "title": "پخوانی مشر (سابق صدر)"
+            },
+            "president_2": {
+              "name": "مستنصر ذاکر",
+              "title": "پخوانی مشر (سابق صدر)"
+            },
+            "president_3": {
+              "name": "طارق سعید رانا",
+              "title": "پخوانی مشر (سابق صدر)"
+            }
+          },
+          "subcommittee_panel": {
+            "header": {
+              "title": "د ننه کمېټه (ذیلي کمیټه)",
+              "subtitle": "زموږ فرعي کمېټې د تخصص، همکارۍ او وقف شوي خدمت له لارې کلیدي نوښتونه پرمخ وړي او د PMA د ماموریت ملاتړ کوي.",
+              "expand_all": "ټول خلاصول"
+            },
+            "labels": {
+              "mandate": "واک / ماموریت:",
+              "director": "ډایرکټر",
+              "convener": "کنوینر"
+            },
+            "committees": {
+              "training": {
+                "title": "د روزنې کمېټه",
+                "mandate": "لارښود، روزنه، تصدیق/اعتبار ورکول/د بیا کتنې کورسونه/د روزونکو روزنه (TOT)",
+                "lead_name": "مستنصر ذاکر",
+                "members": [
+                  "انور کاشف ممتاز",
+                  "سائمه خواجه",
+                  "طارق رانا",
+                  "هما شاه",
+                  "اسفندیار علي خان"
+                ]
+              },
+              "conduct": {
+                "title": "د چلند د اصولو کمېټه",
+                "mandate": "د روغې جوړې کونکو (ثالثانو) لپاره د چلند اصول چمتو کول او په ټول هیواد کې د هغې د پلي کولو لپاره د عدلیې وزارت څخه د تصویب ترلاسه کولو هڅه کول",
+                "lead_name": "امیمه خان",
+                "members": [
+                  "انور کاشف ممتاز",
+                  "سائمه خواجه",
+                  "خالد محمود",
+                  "عدنان مفتي",
+                  "طارق رانا",
+                  "اسفندیار علي خان"
+                ]
+              },
+              "membership": {
+                "title": "د غړیتوب کمېټه",
+                "mandate": "د زوړ غړیتوب ساتل او فعالول، د نورو موسسو د منل شویو ثالثانو په بللو سره د غړیتوب پورټ فولیو پراخول او همدارنګه د همکارو او افتخاري غړو درلودل.",
+                "lead_name": "سعید حبیب",
+                "members": [
+                  "خالد محمود",
+                  "سائمه خواجه",
+                  "صمد الحق",
+                  "اسفندیار علي خان"
+                ]
+              },
+              "bar_south": {
+                "title": "قانوني او اکاډمیک همغږي – سویل",
+                "mandate": "د غونډو، سیمینارونو، لارښوونو او روزنیزو ورکشاپونو د تنظیم کولو لپاره د بار ایسوسی ایشن / بار کونسل او د قانون د ښوونځیو سره همغږي",
+                "lead_name": "شبانه علي",
+                "members": [
+                  "سعادت یار خان",
+                  "امیمه خان",
+                  "اغلې خالد محمود",
+                  "صمد الحق",
+                  "منصور میر",
+                  "نوید احمد"
+                ]
+              },
+              "bar_north": {
+                "title": "قانوني او اکاډمیک همغږي – شمال",
+                "mandate": "د غونډو، سیمینارونو、لارښوونو او روزنیزو ورکشاپونو د تنظیم کولو لپاره د بار ایسوسی ایشن / بار کونسل او د قانون د ښوونځیو سره همغږي",
+                "lead_name": "سائمه خواجه",
+                "members": [
+                  "ظفر کلانوري",
+                  "بېریسټر طارق رانا",
+                  "اسفندیار علي خان"
+                ]
+              },
+              "institutional": {
+                "title": "د اداري همغږۍ کمېټه",
+                "mandate": "د سوداګرۍ خونو، سوداګریزو ارګانونو، مسلکي اتحادیو / موسسو سره همغږي",
+                "lead_name": "عدنان مفتي",
+                "members": [
+                  "مستنصر ذاکر",
+                  "سعید حبیب",
+                  "طارق رانا",
+                  "اسفندیار علي خان",
+                  "صمد الحق"
+                ]
+              }
+            },
+            "footer_note": "آغا ظفر احمد (ولسمشر) او وجیهه علیم (عمومي منشي) د هرې کمېټې د رسمي غړو (Ex. Officio) په توګه دندې ترسره کوي."
+          },
+          "mediators": {
+            "adnan-mufti": { "name": "عدنان مفتي", "role": "غړی" },
+            "anwar-kashif-mumtaz": { "name": "انور کاشف ممتاز", "role": "غړی" },
+            "ayesha-sarfraz-ali-khan": { "name": "عایشه سرفراز علي خان", "role": "غړی" },
+            "barrister-tariq-saeed-lahore": { "name": "بېریسټر طارق سعید", "role": "غړی" },
+            "farrukh-junaidy": { "name": "فرخ جنیدي", "role": "غړی" },
+            "huma-shah": { "name": "هما شاه", "role": "غړی" },
+            "ishtiaq-memon": { "name": "اشتیاق میمن", "role": "غړی" },
+            "isfandyar-ali-khan": { "name": "اسفندیار علي خان", "role": "غړی" },
+            "khalid-firoz-arfeen": { "name": "خالد فیروز عارفين", "role": "غړی" },
+            "khalid-mahmood-siddiqui": { "name": "خالد محمود صدیقي", "role": "غړی" },
+            "mohammad-rehan-siddqui": { "name": "محمد ریحان صدیقي", "role": "غړی" },
+            "mustansir-zakir": { "name": "مستنصر ذاکر", "role": "غړی" },
+            "nausheen-ahmed": { "name": "نوشین احمد", "role": "غړی" },
+            "neelofar-hameed": { "name": "نیلوفر حمید", "role": "غړی" },
+            "omair-nisar-khan": { "name": "عمیر نثار خان", "role": "غړی" },
+            "raheem-hasnani": { "name": "رحیم حسناني", "role": "غړی" },
+            "reshma-aftab": { "name": "ریشما آفتاب", "role": "غړی" },
+            "rubina-virani": { "name": "روبینا ویراني", "role": "غړی" },
+            "saadat-yar-khan": { "name": "سعادت یار خان", "role": "غړی" },
+            "saeed-habib": { "name": "سعید حبیب", "role": "غړی" },
+            "saima-khawaja": { "name": "سائمه امین خواجه", "role": "غړی" },
+            "salina-khalfan": { "name": "سالینا خلفان", "role": "غړی" },
+            "shabana-ali": { "name": "شبانه علي", "role": "غړی" },
+            "shaheen-premani": { "name": "شاهین برېمني", "role": "غړی" },
+            "syed-haider-imam-rizvi": { "name": "سید حیدر امام رضوي", "role": "غړی" },
+            "syed-sammadul-haque": { "name": "سید صمد الحق", "role": "غړی" },
+            "tahmasp-r-razvi": { "name": "طهمسپ آر رضوي", "role": "غړی" },
+            "umaimah-a-rizvi": { "name": "امیمه اې رضوي", "role": "غړی" },
+            "usman-g-rashid": { "name": "عثمان جي راشد", "role": "غړی" },
+            "wajiha-aleem": { "name": "وجیهه علیم", "role": "غړی" },
+            "yousuf-moulvi": { "name": "یوسف مولوي", "role": "غړی" },
+            "zafar-kalanauri": { "name": "ظفر کلانوري", "role": "غړی" },
+            "zia-makhdoom": { "name": "ضیاء مخدوم", "role": "غړی" }
+          }
+
         },
         "resources_page": {
-    "hero": {
-      "image_alt": "د خدماتو هیرو عکس",
-      "eyebrow": "سرچينې (RESOURCES)",
-      "title_line1": "پوهه. قانون.",
-      "title_accent": "اصلاح.",
-      "lead_text": "د PMA خپرونو، د منځګړیتوب قوانین، اداري اسناد، څیړنیزې مقالې، د مدافع وکالت سرچینې، او میډیا منځپانګې ته لاسرسی ومومئ کوم چې په پاکستان کې د ADR (د شخړو د بدیل حل) او د شخړو سوله ایز حل ملاتړ کوي."
-    },
-    "tabs": {
-      "featured": "غوره (نمایاں)",
-      "downloads": "ډاونلوډونه",
-      "mediation_laws": "د منځګړیتوب قوانین",
-      "advocacy": "مدافعت (Advocacy)",
-      "press_media": "مطبوعات او رسنۍ",
-      "articles": "مقالې"
-    }
-  }
+          "hero": {
+            "image_alt": "د خدماتو هیرو عکس",
+            "eyebrow": "سرچينې (RESOURCES)",
+            "title_line1": "پوهه. قانون.",
+            "title_accent": "اصلاح.",
+            "lead_text": "د PMA خپرونو، د منځګړیتوب قوانین، اداري اسناد، څیړنیزې مقالې، د مدافع وکالت سرچینې، او میډیا منځپانګې ته لاسرسی ومومئ کوم چې په پاکستان کې د ADR (د شخړو د بدیل حل) او د شخړو سوله ایز حل ملاتړ کوي."
+          },
+          "tabs": {
+            "featured": "غوره (نمایاں)",
+            "downloads": "ډاونلوډونه",
+            "mediation_laws": "د منځګړیتوب قوانین",
+            "advocacy": "مدافعت (Advocacy)",
+            "press_media": "مطبوعات او رسنۍ",
+            "articles": "مقالې"
+          },
+          "downloads_panel": {
+            "header": {
+              "title": "ډاونلوډونه",
+              "lead": "د ډاونلوډ وړ PDFs، فارمونه او خپرونې. په نوي ټب کې د فایل خلاصولو لپاره په هغې کلیک وکړئ.",
+              "view_all_text": "ټول ډاونلوډونه کتل"
+            },
+            "global_labels": {
+              "download_btn_text": "پی ډي ایف ډاونلوډ کړئ",
+              "default_image_alt": "د ADR-ACT-2017 پی ډي ایف فایل"
+            },
+            "items": {
+              "card_1": {
+                "title": "د ADR قانون 2017 (ADR-ACT-2017)",
+                "file_name": "ADR-ACT-2017.pdf"
+              },
+              "card_2": {
+                "title": "مدافعت او لابي (Advocacy and Lobby)",
+                "file_name": "Advocacy-and-Lobby.pdf"
+              },
+              "card_3": {
+                "title": "د راجستر کولو سند (Certificate)",
+                "file_name": "Certificate.pdf"
+              },
+              "card_4": {
+                "title": "د غړیتوب غوښتنلیک فارم",
+                "file_name": "membership-application-form.pdf"
+              },
+              "card_5": {
+                "title": "د اتحادیې یادداشت / تګلاره (اپډیټ شوی)",
+                "file_name": "MEMORANDUM-OF-ASSOCIATION-UPDATED.pdf"
+              },
+              "card_6": {
+                "title": "نوماندي (Nomination)",
+                "file_name": "nomination_form.pdf"
+              },
+              "card_7": {
+                "title": "د PMA وینا (Speech)",
+                "file_name": "pma-speech.pdf"
+              },
+              "card_8": {
+                "title": "ولې له PMA سره یوځای شو؟",
+                "file_name": "Why-Join-PMA.pdf"
+              }
+            }
+          },
+          "mediation_laws_panel": {
+            "header": {
+              "title": "د منځګړیتوب قوانین او قانون جوړونه",
+              "lead": "د منځګړیتوب اړوند مهم قوانین، بلونه او رسمي تقنیني اسناد.",
+              "view_all_text": "ټول قوانین کتل"
+            },
+            "global_labels": {
+              "download_btn_text": "پی ډي ایف ډاونلوډ کړئ",
+              "default_image_alt": "د ADR-ACT-2017 پی ډي ایف فایل"
+            },
+            "items": {
+              "card_1": {
+                "title": "د اسلام آباد د شخړو د حل قانون (منځګړیتوب)",
+                "file_name": "Law-Islamabad-Dispute-Resolution-Act-Mediation.pdf"
+              },
+              "card_2": {
+                "title": "د ۱۹۰۸ کال د ملکي اجراآتو د قانون په لومړي جدول کې تعدیلات",
+                "file_name": "Law-KPK-Mediation-Amendment-No.1523-1622_Amendments-in-Frist-Schedule-of-the-code-of-Civil-Procedure-1908_dt-1.pdf"
+              },
+              "card_3": {
+                "title": "د ملکي اجراآتو په قانون ۱۹۰۸ کې د پنجاب تعدیلات (د منځګړیتوب مادې)",
+                "file_name": "Law-Punjab-Amendments_civil_procedure_1908_final_Mediation_Provisions.pdf"
+              },
+              "card_4": {
+                "title": "د ملکي اجراآتو د قانون د تعدیل (سندھ) مسوده، ۲۰۱۸",
+                "file_name": "Law-Sindh-Notification-dt-8-11-2018-The-DRAFT-Code-of-Civil-Procedure-Sindh-Amendment-Bill-2018.pdf"
+              },
+              "card_5": {
+                "title": "د منځګړیتوب له لارې د شخړو په هواري د سنګاپور کنوانسیون (متن)",
+                "file_name": "Law-Singapore-Convention-on-Mediated-Settlements-Text.pdf"
+              }
+            }
+          },
+          "advocacy_panel": {
+            "header": {
+              "title": "مدافعت او تګلاره (Advocacy & Policy)",
+              "lead": "د ADR اصلاحاتو د ملاتړ لپاره د پالیسۍ لنډیزونه، د مدافعت اوزار او د دریځ پاڼې.",
+              "view_all_text": "ټول مدافعتي مواد کتل"
+            },
+            "global_labels": {
+              "download_btn_text": "پی ډي ایف ډاونلوډ کړئ",
+              "default_image_alt": "د ADR-ACT-2017 پی ډي ایف فایل"
+            },
+            "items": {
+              "card_1": {
+                "title": "خیبر پښتونخوا (KPK)",
+                "file_name": "kpk.pdf"
+              },
+              "card_2": {
+                "title": "پنجاب",
+                "file_name": "punjab.pdf"
+              },
+              "card_3": {
+                "title": "سندھ",
+                "file_name": "sindh.pdf"
+              }
+            }
+          },
+          "press_media_panel": {
+            "header": {
+              "title": "مطبوعات او رسنۍ",
+              "lead": "د خبریالانو لپاره مطبوعاتي اعلامیې، د رسنیو کټونه او د ډاونلوډ وړ توکي.",
+              "view_all_text": "ميډيايي مواد کتل"
+            },
+            "global_labels": {
+              "download_btn_text": "پی ډي ایف ډاونلوډ کړئ",
+              "default_image_alt": "پی ډي ایف فایل"
+            },
+            "items": {
+              "card_1": {
+                "title": "بزنس ريکارډر (Business Recorder)",
+                "file_name": "BusinessRecorder.pdf"
+              },
+              "card_2": {
+                "title": "بزنس ريکارډر اعلان (AD)",
+                "file_name": ""
+              },
+              "card_3": {
+                "title": "فرنټيئر پوسټ (Frontier Post)",
+                "file_name": "FrontierPost.pdf"
+              },
+              "card_4": {
+                "title": "پاکستان آبزرور (Pakistan Observer)",
+                "file_name": "PakistanObserver.pdf"
+              },
+              "card_5": {
+                "title": "د PMA مطبوعاتي اعلامیه (Press Release)",
+                "file_name": "PMA_PressRelease.pdf"
+              },
+              "card_6": {
+                "title": "ټریبیون (Tribune)",
+                "file_name": "Tribune.pdf"
+              }
+            }
+          },
+          "articles_panel": {
+            "header": {
+              "title": "مقالې او تحلیلونه",
+              "lead": "د منځګړیتوب او ADR په اړه څیړنیزې مقالې، تحلیلونه او فکري لیدلوري.",
+              "view_all_text": "ټولې مقالې کتل"
+            },
+            "global_labels": {
+              "download_btn_text": "پی ډي ایف ډاونلوډ کړئ",
+              "author_prefix": "لیکوال"
+            },
+            "items": {
+              "card_1": {
+                "title": "It Really Happened in Frankfurt",
+                "author": "جواد اې سرواڼه",
+                "file_name": "blog-Jawad-Sarwana-It-Happened-in-Frankfurt.pdf",
+                "image_alt": "د It Really Happened in Frankfurt پی ډي ایف"
+              },
+              "card_2": {
+                "title": "Mediation Techniques",
+                "author": "جواد اې سرواڼه",
+                "file_name": "Blog-Sarwana.pdf",
+                "image_alt": "د Mediation Techniques پی ډي ایف"
+              }
+            }
+          },
+          "search_bar": {
+            "question": "هغه څه چې تاسو یې لبلوئ نه موندل کیږي؟",
+            "subtext": "د اړتیا وړ سرچینو ګړندي موندلو لپاره له لټون (سرچ) څخه ګټه واخلئ یا په کټګورۍ کې لټون وکړئ.",
+            "placeholder": "سرچینې وپلټئ...",
+            "browse_btn_text": "ټولې سرچینې کتل"
+          }
+        },
+        "events_page": {
+          "hero_section": {
+            "eyebrow": "پیښې او پروګرامونه",
+            "title": "پروګرامونه او پیښې",
+            "lead": "د PMA کنفرانسونو، د منځګړیتوب نوښتونو، ورکشاپونو او مهمو اعلاناتو سره تازه پاتې شئ.",
+            "image_alt": "د خدماتو هیرو تصویر"
+          },
+          "tab_bar": {
+            "upcoming_events": "راتلونکي پروګرامونه",
+            "past_events": "تیر شوي پروګرامونه",
+            "announcements": "اعلانونه"
+          },
+          "upcoming_panel": {
+            "title": "ډیر ژر ماتیږي",
+            "lead": "راتلونکي پروګرامونه، کنفرانسونه او ورکشاپونه به دلته لیست شي. ژر بیرته وګورئ."
+          },
+          "announcements_panel": {
+            "title": "ډیر ژر ماتیږي",
+            "lead": "مهم اعلانونه به دلته ښکاره شي. زموږ سره پاتې شئ."
+          },
+          "past_events": {
+            "training_program_detail": {
+              "global_labels": {
+                "badge_text": "تیر شوی پروګرام",
+                "pill_text": "تصدیق شوی روزنیز پروګرام",
+                "view_gallery_btn": "د پروګرام ګالري کتل",
+                "about_label": "د پروګرام په اړه",
+                "highlights_label": "د روزنې مهم ټکي"
+              },
+              "card": {
+                "title": "شپږم تصدیق شوی د منځګړیتوب روزنیز پروګرام",
+                "sub": "د سند عالي محکمه",
+                "date": "د 2026 کال د جون له 08 څخه تر 12 پورې",
+                "location": "د سند عالي محکمه، کراچۍ"
+              },
+              "about_paragraphs": [
+                "د پاکستان د منځګړو ټولنې (PMA) په بریالیتوب سره د سند په عالي محکمه کې شپږم تصدیق شوی د منځګړیتوب روزنیز پروګرام ترسره کړ.",
+                "دغه پروګرام د منځګړیتوب د مهارتونو پر پیاوړتیا، د شخړو د بدیل حل (ADR) د کړنو پر دودولو، او د قانوني متخصصینو او منځګړیتوب مسلکي کسانو ترمنځ د مسلکي وړتیا پر لوړولو تمرکز درلود.",
+                "د متقابلو ناستو, عملي تمرینونو او ګډو بحثونو له لارې، ګډونوالو د منځګړیتوب د عصري تخنیکونو او د شخړو د حل اډانو په اړه ارزښتناک معلومات ترلاسه کړل."
+              ],
+              "highlights": [
+                "تصدیق شوي د منځګړیتوب روزنیز سیشنونه",
+                "عملي د منځګړیتوب تمرینونه",
+                "متقابل ګروپي بحثونه",
+                "د شخړو د بدیل حل (ADR) تخنیکونه",
+                "د مسلکي وړتیاوو لوړول",
+                "د ګډې زده کړې چاپیریال"
+              ],
+              "meta": {
+                "objective_label": "د روزنې موخه",
+                "objective_text": "د منځګړیتوب مهارتونو پیاوړتیا او د شخړو د اغیزمن حل لارو چارو دودول.",
+                "organized_label": "تنظیم کونکی",
+                "organized_text": "د پاکستان د منځګړو ټولنه (PMA)",
+                "participants_label": "ګډونوال",
+                "participants_text": "قانوني مسلکي کسان، د ADR متخصصین، منځګړي او تر روزنې لاندې ګډونوال.",
+                "type_label": "د پروګرام ډول",
+                "type_text": "تصدیق شوی روزنیز پروګرام"
+              }
+            },
+            "national_conference_detail": {
+              "global_labels": {
+                "badge_text": "تیر شوی پروګرام",
+                "about_label": "د پروګرام په اړه",
+                "highlights_label": "د ADR په برخه کې رامنځته شوي مهم پرمختګونه"
+              },
+              "card": {
+                "title": "منځګړیتوب: پر وړاندې تګ لاره (Mediation A Way Forward)",
+                "sub": "لومړی ملي منځګړیتوب کنفرانس",
+                "date": "7 مارچ، 2015",
+                "location": "ماریوټ هوټل، کراچۍ",
+                "type": "ملي کنفرانس"
+              },
+              "about_paragraphs": [
+                "PMA په پاکستان کې لومړی سازمان دی چې د بهرنیو روزل شویو او اعتبار لرونکو منځګړو او همدارنګه د نورو مسلکي کسانو استازیتوب کوي چې د ټولنې د موخو د پرمختګ لپاره ورسره یوځای شوي دي. دغه ټولنه په 2013 کې جوړه شوې او یو شمیر فعالیتونه یې په غاړه اخیستي چې پخوا د IFC/نړیوال بانک ګروپ د شخړو د بدیل حل (ADR) پروژې لخوا پلي کیدل.",
+                "د دې په پام کې نیولو سره چې په پاکستان کې د قراردادونو د پلي کولو شاخصونه هڅوونکي ندي او دا ډیری کلونه او دروند لګښت غواړي، PMA هوډ لري چې د داسې مداخلو مشري او ملاتړ وکړي چې د دعوا کونکو غاړو ته دا وړتیا ورکړي چې شخړې په دوستانه توګه او د منځګړیتوب پروسې له لارې حل کړي او په خپل وخت د شخړو په حل کې د قضاییه قوې او محکمو د هڅو ملاتړ وکړي."
+              ],
+              "highlights": [
+                "په کراچۍ کې د شخړو د حل د کراچۍ مرکز او په لاهور کې د لاهور د سوداګرۍ او صنایعو خونې د منځګړیتوب مرکز فعالول.",
+                "په پاکستان کې د ADR/منځګړیتوب قوانینو کې د اصالحاتو لپاره هڅې کول.",
+                "په پاکستان کې د CEDR اعتبار لرونکو منځګړو او ماسټر ټرینرانو شتون.",
+                "په پاکستان کې د ADR درسي نصاب چمتو کول.",
+                "په پاکستان کې د ADR روزنو پیاوړي کول او وړاندې کول.",
+                "د کارپوریټ حکومتولۍ په ګډون د ډیری شخړو د حل لپاره د یوې وسیلې په توګه د ADR پیژندل."
+              ],
+              "meta": {
+                "objective_label": "د کنفرانس موخې",
+                "objective_text": "د ADR او منځګړیتوب د موخو پرمخ وړل او په پاکستان کې د منځګړیتوب د بنسټیز کولو لپاره پر پرمختګونو, ننګونو او راتلونکو مداخلو بحث کول.",
+                "organized_label": "د کنفرانس کوربانه",
+                "organized_text": "د دغه کنفرانس کوربه توب د پاکستان د منځګړو ټولنه د کنفرانس د ملګرو په همکارۍ کوي.",
+                "participants_label": "ویناوال او مېلمانه",
+                "participants_text": "د حکومت، قضاییه قوې، سوداګریزې ټولنې، بار، اکاډمۍ او په پاکستان کې د منځګړیتوب مرکزونو استازي د بهرنیو ویناوالو سره یوځای.",
+                "type_label": "د پروګرام ډول",
+                "type_text": "ملي کنفرانس"
+              }
+            }
+          }
+        },
+        "privacy_policy": {
+          "hero": {
+            "title_main": "د محرمیت",
+            "title_accent": "پالیسي",
+            "lead_text": "موږ ستاسو د محرمیت ساتلو او ډاډ ترلاسه کولو ته ژمن یو چې ستاسو شخصي معلومات په خوندي او مسؤلانه ډول اداره شي."
+          },
+          "sections": {
+            "commitment": {
+              "title": "د محرمیت ژمنه",
+              "paragraphs": [
+                "د پاکستان د منځګړو ټولنه (PMA) آنلاین ستاسو د محرمیت ساتلو ته ژمنه ده. د پاکستان د منځګړو ټولنې (PMA) د محرمیت په اړه د خپلې کلکې ژمنې د څرګندولو لپاره د محرمیت دا بیانیه چمتو کړې ده. لاندې متن د پاکستان د منځګړو ټولنې (PMA) لپاره زموږ د معلوماتو راټولولو او خپرولو طریقې په ګوته کوي.",
+                "PMA حق لري چې هر وخت کاروونکو ته د نوي محرمیت بیانیې د شتون په اړه د خبر ورکولو له لارې دا پالیسي بدله کړي. دا بیانیه او دلته ذکر شوې پالیسۍ د هیڅ لوري په ګټه یا د هغه لخوا کوم تړون یا نور قانوني حقونه نه رامینځته کوي او نه یې هدف دی."
+              ]
+            },
+            "respect_data": {
+              "title": "د کارونکي ډیټا ته درناوی",
+              "paragraphs": [
+                "د پاکستان د منځګړو ټولنه (PMA) له خپلو پیرودونکو سره قوي اړیکو ته خورا ارزښت ورکوي. په دغه ټولنه (PMA) کې د ډیټا راټولول زموږ د پیرودونکو محرمیت ته په بشپړ او مناسب درناوي سره ترسره کیږي.",
+                "کوم معلومات چې موږ یې راټولوو په حساس، خوندي او محرمیت ته په سمه توګه په پام کې نیولو سره اداره کیږي. د پاکستان د منځګړو ټولنه (PMA) هغه معلومات چې موږ یې له خپلو پیرودونکو څخه راټولوو دریمې ډلې ته نه افشا کوي، نه یې ویشي او نه یې پلوري."
+              ]
+            },
+            "collection": {
+              "title": "د معلوماتو راټولول",
+              "lead_text": "PMA د غړیتوب ثبتولو لپاره داسې معلومات راټولوي لکه:",
+              "items": [
+                "کمپیوټري ملي شناختي کارت (CNIC)",
+                "بشپړ نوم",
+                "د اوسیدو پته",
+                "د دفتر پته",
+                "د تلیفون شمیره",
+                "د بریښنالیک معلومات",
+                "د غړیتوب اړوند نور معلومات"
+              ]
+            }
+          }
+        },
+        "complaint_policy": {
+          "hero": {
+            "title_main": "شکایات او اپیل",
+            "title_accent": "پالیسي",
+            "lead_text": "موږ د اندیښنو او شکایتونو په عادلانه، سمدستي او روڼ ډول حل کولو ته ژمن یو."
+          },
+          "intro_card": {
+            "bold_text": "موږ د شکایتونو د حل لپاره یو منظم طرزالعمل لرو چې دا ډاډ رامنځته کوي چې هغوی ته پوره پاملرنه او پام وشي.",
+            "lead_p": "شکایتونه د PMA د منځګړیتوب اعتبار ورکولو خدماتو هر کارونکي لخوا کیدی شي. PMA موخه لري چې ټولو کاروونکو ته ګړندي او پر وخت خدمات وړاندې کړي. موږ به:",
+            "commitments": [
+              "ټول شکایتونه په جدي توګه واخلو او په سمه توګه به ورسره چلند وکړو؛",
+              "شکایتونو ته به په سمدستي توګه رسیدګي وکړو؛ او",
+              "له شکایتونو څخه به زده کړه وکړو او د خپلو خدماتو د ښه کولو لپاره به اقدامات وکړو."
+            ]
+          },
+          "steps": [
+            {
+              "text": "خو په هرصورت، موږ یوازې هغه شکایتونه حل کولی شو چې د روزنې رییس (Director of Training) لخوا د ترلاسه شوي کمزوري پیرودونکي خدمت په اړه اندیښنې راپورته کوي."
+            },
+            {
+              "text": "دا پدې مانا ده چې ستاسو قضیه باید د روزنې رییس ته راجع شي او د پوسټ او بریښنالیک له لارې واستول شي، او کاپي (cc) یې د PMA ولسمشر ته واستول شي."
+            },
+            {
+              "text": "هغه زده کونکی چې د روزنې د رییس په پریکړه راضي نه وي د پریکړې په ردولو کې آزاد دی، په دې حالت کې به دا پریکړه هیڅ لازمي اغیزه ونلري. رییس مکلف دی چې د شکایت د ترلاسه کولو څخه وروسته په 30 ورځو کې دننه ځواب ووایی."
+            },
+            {
+              "text": "که چیرې، په هرصورت، تاسو د خپل شکایت د حل څخه ناخوښه پاتې شئ یا د روزنې د رییس لخوا هیڅ ځواب شتون ونلري، تاسو کولی شئ خپل شکایت د PMA ولسمشر ته راجع کړئ چې ستاسو د شکایت د اوریدو لپاره به دوه کسیزه پوهنځي محکمه (Faculty Tribunal) جوړه کړي."
+            },
+            {
+              "text": "تاسو اړتیا لرئ د خپلې غوښتنې د لاملونو په اړه روښانه او لنډ اوسئ او دا چې تاسو د روزنې د رییس لخوا د بیاکتنې یا عدم اقدام څخه څه ترلاسه کول غواړئ. دوه کسیزه محکمه به تاسو ته د PMA ولسمشر ته د کاپي په لیږلو سره لیک واستوي او په یقیني ډول به د غوښتنې د پورته کیدو څخه وروسته په 30 کاري ورځو کې دننه تاسو ته په لیکلي بڼه ځواب ووایی."
+            },
+            {
+              "text": "که تاسو د خپل شکایت په اړه د دوه کسیزې محکمې لخوا د شوي اقدام یا نه اقدام څخه راضي نه یاست، دا به د کومې ډلې په حقونو اغیزه ونکړي چې د مرستې لپاره د مصرف کونکي محکمې (Consumer Court) ته لاسرسی ومومي، کوم چې اختیارونه د ټولو لپاره خلاص دي."
+            }
+          ]
+        },
+        "terms_conditions": {
+          "hero": {
+            "title_main": "شرایط او",
+            "title_accent": "مقررات",
+            "lead_text": "مهرباني وکړئ دا شرایط په غور سره ولولئ. زموږ ویب پاڼې او خدماتو ته په لاسرسي او کارولو سره، تاسو موافقه کوئ چې د لاندې شرایطو او مقرراتو اطاعت وکړئ."
+          },
+          "accordion_items": [
+            {
+              "id": "training",
+              "title": "روزنه (Training)",
+              "preview": "ستاسو د بکینګ تصدیق کولو لپاره، ستاسو تادیه باید د کورسونو پیل کیدو څخه دمخه؛ دمخه زموږ دفترونو ته ورسیږي.",
+              "body_paragraphs": [
+                "که چیرې کاروونکی په تادیه کې ناوخته شي، هغوی ته به په کورسونو کې د ګډون اجازه ورنکړل شي."
+              ]
+            },
+            {
+              "id": "refunds",
+              "title": "د روزنې د پیسو بیرته ورکول",
+              "preview": "موږ پوهیږو چې ژوند پیچلی کیدی شي. که تاسو نور نشئ کولی ګډون وکړئ، مهرباني وکړئ ژر تر ژره موږ سره په 9768-3452-021 اړیکه ونیسئ یا موږ ته په info@pma.org.pk بریښنالیک واستوئ.",
+              "body_paragraphs": [
+                "موږ خوښ یو چې ستاسو په ځای کې د یو بدیل ګډون کونکي تنظیم کړو، یا د کریډیټ یا د پیسو بیرته ورکولو تنظیم وکړو او موږ به تل ستاسو قضیه په انفرادي توګه په پام کې ونیسو."
+              ]
+            },
+            {
+              "id": "membership",
+              "title": "د غړیتوب لغوه کول",
+              "preview": "د غړیتوب فیس د ځانګړو شرایطو پرته د بیرته ورکولو وړ ندی.",
+              "body_paragraphs": [
+                "مهرباني وکړئ موږ سره اړیکه ونیسئ که تاسو باور لرئ چې ستاسو شرایط د استثنا لپاره وړ دي. هره قضیه د PMA د غړیتوب کمیټې لخوا په انفرادي ډول بیاکتنه کیږي."
+              ]
+            },
+            {
+              "id": "copyright",
+              "title": "د کاپي حق (Copyright)",
+              "preview": "دا سایټ او د هغې مینځپانګې د کاپي حق تابع دي. د سایټ د موادو کاپي حق د پاکستان د منځګړو ټولنې (PMA) ملکیت دی، یا د ځینو موادو په حالت کې، د دریمې ډلې ملکیت دی. د سایټ د فعالیت او عملیاتو کاپي حق د PMA ملکیت دی.",
+              "body_paragraphs": [
+                "تاسو کولی شئ دا سایټ او د هغې مینځپانګې د خپل ویب براوزر په کارولو سره وګورئ او په بریښنایی ډول د دې سایټ برخې کاپي او هارډ کاپي چاپ کړئ یوازې د شخصي ، غیر سوداګریز کارونې لپاره. هر ډول بل کارول، په شمول د دې سایټ د مینځپانګې بیا تولید، ترمیم، ویش، لیږد، بیا خپرول، ښودل یا اجرا کول په کلکه منع دي."
+              ]
+            },
+            {
+              "id": "disclaimer",
+              "title": "ادعا ردول (Disclaimer)",
+              "preview": "تاسو موافقه کوئ چې د دې سایټ کارول او لاسرسی د دې شرایطو او ټولو پلي کیدونکو قوانینو تابع دی، او ستاسو په خپل خطر دی. دا سایټ او د هغې مینځپانګې تاسو ته د \"شکل په توګه\" چمتو شوي، سایټ ممکن غلطۍ، نیمګړتیاوې او ناڅرګندتیاوې ولري او ممکن بشپړ او تازه نه وي.",
+              "body_paragraphs": [
+                "د پاکستان د منځګړو ټولنه (PMA) د دې سایټ د فعالیت یا د معلوماتو، مینځپانګې، موادو یا محصولاتو په اړه چې پدې سایټ کې شامل دي د هر ډول څرګند یا ضمیمه شوي تضمین یا استازیتوب نه کوي، پرته له هغه چې د پلي کیدونکو قوانینو سره سم چمتو شوي وي.",
+                "نه PMA، او نه د هغې پورې تړلي کسان، رییسان، افسران، کارمندان، استازي، قراردادیان، ځای ناستي یا ټاکل شوي کسان د هر ډول زیانونو مسؤل دي چې د دې سایټ او پدې سایټ پورې تړلي هر بل سایټ کارولو څخه رامینځته کیږي یا په کوم ډول پورې اړه لري. دا محدودیت په مستقیم، غیر مستقیم، پایله لرونکي، ځانګړي، جزا ورکوونکي یا نورو زیانونو باندې پلي کیږي چې تاسو یا نور ورسره مخ کیدی شي، او همدارنګه د ګټې له لاسه ورکولو، د سوداګرۍ مداخلې یا د ډیټا یا معلوماتو له لاسه ورکولو زیانونو باندې پلي کیږي."
+              ]
+            },
+            {
+              "id": "translations",
+              "title": "د ګوګل ژباړې (Google Translations)",
+              "preview": "دا ویب پاڼه ستاسو د اسانتیا لپاره د Google Translate™ لخوا په کارولو سره ژباړل شوې ده. د Google Translate™ ژباړې د یو اتوماتیک کمپیوټري پروسې لخوا ترسره کیږي، نه د تصدیق شوي مسلکي ژباړونکي لخوا.",
+              "body_paragraphs": [
+                "د همدې امله، ژباړې ممکن ناسمې یا د اعتماد وړ نه وي. د Google Translate™ ژباړې په احتیاط سره وکاروئ. ژباړې د هر ډول تضمین پرته د \"شکل په توګه\" چمتو شوي. ځینې مینځپانګې (نه لکه عکسونه، ویډیوګانې، فلش او داسې نور) ممکن د ژباړې سافټویر د محدودیتونو له امله ونه ژباړل شي.",
+                "PMA د نیمګړتیاوو یا ناسمو ژباړو مسؤلیت نلري، او نه هم د کارونکي لخوا د Google Translate™ ژباړو (یا پدې ویب پاڼه کې د هرې بلې ژباړې) کارولو څخه د رامینځته شوي زیانونو یا زیانونو مسؤل دی.",
+                "که تاسو د Google™ Translate په اړه کومه پوښتنه لرئ، لیدنه وکړئ: Google Translate™ FAQs.",
+                "ګوګل د ژباړې اړوند ټول تضمینونه ردوي، که څرګند وي یا ضمیمه، په شمول د دقت، اعتبار، او د سوداګریزې وړتیا، د یو ځانګړي هدف لپاره د مناسبوالي او د سرغړونې نشتوالي هر ډول ضمیمه تضمینونه."
+              ]
+            }
+          ]
+        },
+        "become_member": {
+          "hero": {
+            "eyebrow": "له PMA سره یوځای شئ",
+            "title_main": "شئ یو",
+            "title_accent": "د PMA غړی",
+            "lead_text": "د منځګړو، د ADR پوهانو او اداري مشرانو له یوې نامتو ټولنې سره یوځای شئ چې د شخړو پرامن حل ته ژمن دي."
+          },
+          "why_join": {
+            "title_main": "ولې له PMA سره",
+            "title_accent": "یوځای",
+            "title_end": "شئ؟",
+            "subtitle": "د PMA غړي د مسلکي ګټو او فرصتونو له یو روښانه لړۍ څخه ګټه پورته کوي.",
+            "cards": [
+              {
+                "title": "نړیوال کنفرانسونه",
+                "description": "په منځګړیتوب او بې پرې پریکړو (arbitration) کې د وروستیو مسلو په اړه په نړیوالو کنفرانسونو کې د تخفیف او لومړیتوب لرونکي نوم لیکنې سره ګډون وکړئ."
+              },
+              {
+                "title": "ورکشاپونه او کورسونه",
+                "description": "د لوړ کیفیت تعلیمي ورکشاپونو او مسلکي پرمختیا کورسونو ته لاسرسی ومومئ."
+              },
+              {
+                "title": "مسلکي وده",
+                "description": "د کارپوهانو د لیدونو او سرچینو له لارې د منځګړیتوب او ADR په اړه خپل پوهاوی زیات کړئ."
+              },
+              {
+                "title": "نړیوال شبکه",
+                "description": "ارزښت لرونکي ملي او نړیوال مسلکي اړیکې رامینځته او وساتئ."
+              },
+              {
+                "title": "سوداګریز فرصتونه",
+                "description": "د خپلو سوداګریزو او مسلکي پیژندګلو دایره پراخه کړئ."
+              },
+              {
+                "title": "د مسلک ملاتړ کول",
+                "description": "د منځګړیتوب او د شخړو د پرامن حل په ملاتړ او پراختیا کې کلیدي رول ولوبوئ."
+              }
+            ]
+          },
+          "benefits": {
+            "title_main": "د غړیتوب",
+            "title_accent": "ګټې",
+            "subtitle": "د PMA د راجستر شوي غړي په توګه، تاسو به د پراخو ګټو او فرصتونو څخه برخمن شئ.",
+            "items": [
+              {
+                "title": "د شبکې جوړولو فرصتونه",
+                "description": "د کال په اوږدو کې، PMA غړو ته بیلابیل فرصتونه چمتو کوي ترڅو مسلکي اړیکې پیاوړې کړي او د صنعت د فعالیتونو او تمایلاتو څخه خبر پاتې شي."
+              },
+              {
+                "title": "د غړیتوب لارښود (Directory)",
+                "description": "په ځانګړې توګه د PMA غړو لپاره شتون لري، دا لارښود د غړو او نورو نړیوالو سازمانونو تازه شوي د اړیکو معلومات لري. په چاپي او بریښنایی بڼه کې شتون لري."
+              },
+              {
+                "title": "د غړیتوب سند (Certificate)",
+                "description": "غړو ته د منل کیدو وروسته په نړیواله کچه پیژندل شوی د غړیتوب سند ورکول کیږي. سندونه په کلنۍ غونډه (Members Gala) کې ویشل کیږي."
+              },
+              {
+                "title": "دوامداره مسلکي پرمختګ",
+                "description": "په منځګړیتوب او ADR کې د مخکښو کارپوهانو لخوا په انګلیسي او عربي ژبو د ځانګړو ورکشاپونو او مسلکي پرمختیا کورسونو ته لومړیتوب لرونکی لاسرسی."
+              }
+            ]
+          },
+          "membership_journey": {
+            "title": "د غړیتوب سفر",
+            "subtitle": "د PMA د یو ارزښتمن غړي کیدو لپاره یو ساده بهیر.",
+            "steps": [
+              {
+                "num": "1",
+                "title": "د غړیتوب فورمه وسپارئ",
+                "desc": "آنلاین د غوښتنلیک فورمه ډکه کړئ."
+              },
+              {
+                "num": "2",
+                "title": "د پروفایل بیاکتنه",
+                "desc": "زموږ ټیم به ستاسو غوښتنلیک وڅیړي."
+              },
+              {
+                "num": "3",
+                "title": "د غړیتوب تایید",
+                "desc": "کله چې ستاسو غوښتنلیک تایید شي، تاسو ته به خبر درکړل شي."
+              },
+              {
+                "num": "4",
+                "title": "PMA ته ښه راغلاست",
+                "desc": "د خپل غړیتوب سند ترلاسه کړئ او زموږ د مسلکي شبکې برخه شئ."
+              }
+            ]
+          },
+          "membership_application": {
+            "form_header": {
+              "title": "د غړیتوب غوښتنلیک فورمه",
+              "desc": "مهرباني وکړئ دقیق معلومات چمتو کړئ. ټول هغه ځایونه چې د * نښه لري لازمي دي."
+            },
+            "sections": {
+              "personal_info": {
+                "title": "شخصي معلومات",
+                "fields": {
+                  "full_name": { "label": "بشپړ نوم", "placeholder": "خپل بشپړ نوم دننه کړئ" },
+                  "father_name": { "label": "د پلار نوم", "placeholder": "د پلار نوم دننه کړئ" },
+                  "qualification": { "label": "تعليمي وړتيا", "placeholder": "خپله وړتیا دننه کړئ" },
+                  "designation": { "label": "دنده/عهرده", "placeholder": "خپله دنده دننه کړئ" },
+                  "cnic": { "label": "د پیژندپاڼې شمیره (CNIC)", "placeholder": "د پیژندپاڼې شمیره دننه کړئ" },
+                  "chamber_phone": { "label": "د دفتر/چیمبر فون", "placeholder": "د دفتر تلیفون دننه کړئ" }
+                }
+              },
+              "contact_info": {
+                "title": "د اړیکو معلومات",
+                "fields": {
+                  "office_address": { "label": "د دفتر پته", "placeholder": "د دفتر پته دننه کړئ" },
+                  "res_address": { "label": "د اوسیدو پته", "placeholder": "د اوسیدو پته دننه کړئ" },
+                  "res_phone": { "label": "د کور تلیفون", "placeholder": "د کور تلیفون شمیره دننه کړئ" },
+                  "email": { "label": "بریښنالیک", "placeholder": "خپل بریښنالیک دننه کړئ" },
+                  "upload": {
+                    "label": "اسناد اپلوډ کړئ",
+                    "text": "فایل غوره کړئ یا یې دلته کش کړئ (Drag)",
+                    "hint": "PDF, JPG, PNG (تر ټولو زیات 5MB)"
+                  }
+                }
+              },
+              "references": {
+                "title": "مسلکي حوالې (References)",
+                "fields": {
+                  "proposer_name": { "label": "د وړاندیز کونکي (Proposer) بشپړ نوم", "placeholder": "د وړاندیز کونکي نوم دننه کړئ" },
+                  "proposer_address": { "label": "د وړاندیز کونکي د اوسیدو پته", "placeholder": "پته دننه کړئ" },
+                  "proposer_phone": { "label": "د وړاندیز کونکي تلیفون", "placeholder": "د تلیفون شمیره دننه کړئ" },
+                  "seconder_name": { "label": "د تایید کونکي (Seconder) بشپړ نوم", "placeholder": "د تایید کونکي نوم دننه کړئ" },
+                  "seconder_address": { "label": "د تایید کونکي د اوسیدو پته", "placeholder": "پته دننه کړئ" },
+                  "seconder_phone": { "label": "د تایید کونکي تلیفون", "placeholder": "د تلیفون شمیره دننه کړئ" }
+                }
+              }
+            },
+            "declaration": "زه په دې توګه اعلان کوم چې پورته ورکړل شوي معلومات ریښتیني او دقیق دي.",
+            "submit_btn": "غوښتنلیک وسپارئ",
+            "sidebar": {
+              "title_main": "د مثبت بدلون",
+              "title_accent": "برخه شئ",
+              "desc": "له PMA سره یوځای شئ او د خبرو اترو، تفاهم او د شخړو د پرامن حل کلتور په جوړولو کې مرسته وکړئ.",
+              "list": [
+                "مسلکي پیژندنه",
+                "زده کړه او پرمختګ",
+                "شبکه جوړول او همکاري",
+                "اغیزمنه ونډه اخیستنه"
+              ],
+              "quote": "یوځای موږ کولی شو د منځګړیتوب له لارې یوه ډیره همغږې او عادله ټولنه رامینځته کړو.",
+              "author": "- PMA"
+            }
+          }
+        }
       }
     },
     sd: {
@@ -7178,225 +10528,895 @@
             "search_placeholder": "نالي يا مهارت ذريعي ڳولھيو..."
           },
           "members": {
-    "member_1": {
-      "name": "آغا ظفر احمد",
-      "title": "صدرسپريم",
-      "badges": {
-        "executive_team": "ايگزيڪيوٽو ٽيم",
-        "mediator": "ثالث (ميڊيئيٽر)",
-        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
-      },
-      "aria_label": "آغا ظفر احمد جو پروفائيل ڏسو"
-    },
-    "member_2": {
-      "name": "صائمه امين خواجه",
-      "title": "نائب صدر – اتر (نارٿ)",
-      "badges": {
-        "executive_team": "ايگزيڪيوٽو ٽيم",
-        "mediator": "ثالث (ميڊيئيٽر)",
-        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
-      },
-      "aria_label": "صائمه امين خواجه جو پروفائيل ڏسو"
-    },
-    "member_3": {
-      "name": "اسفند يار علي خان",
-      "title": "نائب صدر – اتر (نارٿ)",
-      "badges": {
-        "executive_team": "ايگزيڪيوٽو ٽيم",
-        "mediator": "ثالث (ميڊيئيٽر)",
-        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
-      },
-      "aria_label": "اسفند يار علي خان جو پروفائيل ڏسو"
-    },
-    "member_4": {
-      "name": "سعيد حبيب",
-      "title": "نائب صدر – ڏکڻ (سائوٿ)",
-      "badges": {
-        "executive_team": "ايگزيڪيوٽو ٽيم"
-      },
-      "aria_label": "سعيد حبيب جو پروفائيل ڏسو"
-    },
-    "member_5": {
-      "name": "شبانه علي",
-      "title": "نائب صدر – ڏکڻ (سائوٿ)",
-      "badges": {
-        "executive_team": "ايگزيڪيوٽو ٽيم",
-        "mediator": "ثالث (ميڊيئيٽر)",
-        "pma_accredited": "PMA پاران منظور ٿيل ثالث"
-      },
-      "aria_label": "شبانه علي جو پروفائيل ڏسو"
-    },
-    "member_6": {
-      "name": "وجيهه عليم",
-      "title": "سڪريٽري جنرل",
-      "badges": {
-        "executive_team": "ايگزيڪيوٽو ٽيم",
-        "mediator": "ثالث (ميڊيئيٽر)",
-        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
-      },
-      "aria_label": "وجيهه عليم جو پروفائيل ڏسو"
-    },
-    "member_7": {
-      "name": "سيد صمد الحق",
-      "title": "فنانس سڪريٽري",
-      "badges": {
-        "executive_team": "ايگزيڪيوٽو ٽيم"
-      },
-      "aria_label": "سيد صمد الحق جو پروفائيل ڏسو"
-    },
-    "member_8": {
-      "name": "طارق سعيد رانا",
-      "title": "ايگزيڪيوٽو ڪميٽي – اتر (نارٿ)",
-      "badges": {
-        "executive_team": "ايگزيڪيوٽو ٽيم",
-        "mediator": "ثالث (ميڊيئيٽر)",
-        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
-      },
-      "aria_label": "طارق سعيد رانا جو پروفائيل ڏسو"
-    },
-    "member_9": {
-      "name": "هما شاهه",
-      "title": "ايگزيڪيوٽو ڪميٽي – اتر (نارٿ)",
-      "badges": {
-        "executive_team": "ايگزيڪيوٽو ٽيم",
-        "mediator": "ثالث (ميڊيئيٽر)",
-        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
-      },
-      "aria_label": "هما شاهه جو پروفائيل ڏسو"
-    },
-    "member_10": {
-      "name": "اميمه انور خان",
-      "title": "ايگزيڪيوٽو ڪميٽي – ڏکڻ (سائوٿ)",
-      "badges": {
-        "executive_team": "ايگزيڪيوٽو ٽيم"
-      },
-      "aria_label": "اميمه انور خان جو پروفائيل ڏسو"
-    },
-    "member_11": {
-      "name": "مستنصر ذاڪر",
-      "title": "ايگزيڪيوٽو ڪميٽي – ڏکڻ (سائوٿ)",
-      "badges": {
-        "executive_team": "ايگزيڪيوٽو ٽيم",
-        "mediator": "ثالث (ميڊيئيٽر)",
-        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
-      },
-      "aria_label": "مستنصر ذاڪر جو پروفائيل ڏسو"
-    },
-    "member_12": {
-      "name": "عدنان مفتي",
-      "title": "ايگزيڪيوٽو ڪميٽي – ڏکڻ (سائوٿ)",
-      "badges": {
-        "executive_team": "ايگزيڪيوٽو ٽيم",
-        "mediator": "ثالث (ميڊيئيٽر)",
-        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
-      },
-      "aria_label": "عدنان مفتي جو پروفائيل ڏسو"
-    }
-  },
-  "trainers": {
-    "trainer_1": {
-      "name": "مستنصر ذاڪر",
-      "title": "ماستر ٽرينر",
-      "badges": {
-        "master_trainer": "ماستر ٽرينر",
-        "director_training": "ڊائريڪٽر ٽريننگ",
-        "ex_president": "سابق صدر"
-      },
-      "aria_label": "مستنصر ذاڪر جو پروفائيل ڏسو"
-    },
-    "trainer_2": {
-      "name": "انور ڪاشف ممتاز",
-      "title": "ماستر ٽرينر",
-      "badges": {
-        "master_trainer": "ماستر ٽرينر",
-        "ex_president": "سابق صدر",
-        "leadership_trainer": "ليڊرشپ ٽرينر"
-      },
-      "aria_label": "انور ڪاشف ممتاز جو پروفائيل ڏسو"
-    },
-    "trainer_3": {
-      "name": "ٽارق سعيد رانا",
-      "title": "ماستر ٽرينر",
-      "badges": {
-        "master_trainer": "ماستر ٽرينر",
-        "ex_president": "سابق صدر",
-        "executive_committee_north": "ايگزيڪيوٽو ڪميٽي – اتر"
-      },
-      "aria_label": "ٽارق سعيد رانا جو پروفائيل ڏسو"
-    },
-    "trainer_4": {
-      "name": "صائمه امين خواجه",
-      "title": "ماستر ٽرينر",
-      "badges": {
-        "master_trainer": "ماستر ٽرينر",
-        "executive_member": "ايگزيڪيوٽو ميمبر",
-        "vice_president_north": "نائب صدر – اتر"
-      },
-      "aria_label": "صائمه امين خواجه جو پروفائيل ڏسو"
-    },
-    "trainer_5": {
-      "name": "هما شاهه",
-      "title": "ماستر ٽرينر",
-      "badges": {
-        "master_trainer": "ماستر ٽرينر",
-        "executive_committee_north": "ايگزيڪيوٽو ڪميٽي – اتر",
-        "training_committee": "ٽريننگ ڪميٽي"
-      },
-      "aria_label": "هما شاهه جو پروفائيل ڏسو"
-    },
-    "trainer_6": {
-      "name": "عثمان جي راشد",
-      "title": "ماستر ٽرينر",
-      "badges": {
-        "master_trainer": "ماستر ٽرينر",
-        "barrister_at_law": "بئريسٽر ايٽ لا",
-        "former_secretary_general": "سابق سڪريٽري جنرل – PMA"
-      },
-      "aria_label": "عثمان جي راشد جو پروفائيل ڏسو"
-    },
-    "trainer_7": {
-      "name": "اسفند يار علي خان",
-      "title": "ماستر ٽرينر",
-      "badges": {
-        "master_trainer": "ماستر ٽرينر",
-        "executive_leadership": "ايگزيڪيوٽو ليڊرشپ",
-        "vice_president_north": "نائب صدر – اتر"
-      },
-      "aria_label": "اسفند يار علي خان جو پروفائيل ڏسو"
-    }
-  },
-  "former_presidents": {
-    "president_1": {
-      "name": "انور ڪاشف ممتاز",
-      "title": "سابق صدر"
-    },
-    "president_2": {
-      "name": "مستنصر ذاڪر",
-      "title": "سابق صدر"
-    },
-    "president_3": {
-      "name": "ٽارق سعيد رانا",
-      "title": "سابق صدر"
-    }
-  }
+            "member_1": {
+              "name": "آغا ظفر احمد",
+              "title": "صدرسپريم",
+              "badges": {
+                "executive_team": "ايگزيڪيوٽو ٽيم",
+                "mediator": "ثالث (ميڊيئيٽر)",
+                "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+              },
+              "aria_label": "آغا ظفر احمد جو پروفائيل ڏسو"
+            },
+            "member_2": {
+              "name": "صائمه امين خواجه",
+              "title": "نائب صدر – اتر (نارٿ)",
+              "badges": {
+                "executive_team": "ايگزيڪيوٽو ٽيم",
+                "mediator": "ثالث (ميڊيئيٽر)",
+                "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+              },
+              "aria_label": "صائمه امين خواجه جو پروفائيل ڏسو"
+            },
+            "member_3": {
+              "name": "اسفند يار علي خان",
+              "title": "نائب صدر – اتر (نارٿ)",
+              "badges": {
+                "executive_team": "ايگزيڪيوٽو ٽيم",
+                "mediator": "ثالث (ميڊيئيٽر)",
+                "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+              },
+              "aria_label": "اسفند يار علي خان جو پروفائيل ڏسو"
+            },
+            "member_4": {
+              "name": "سعيد حبيب",
+              "title": "نائب صدر – ڏکڻ (سائوٿ)",
+              "badges": {
+                "executive_team": "ايگزيڪيوٽو ٽيم"
+              },
+              "aria_label": "سعيد حبيب جو پروفائيل ڏسو"
+            },
+            "member_5": {
+              "name": "شبانه علي",
+              "title": "نائب صدر – ڏکڻ (سائوٿ)",
+              "badges": {
+                "executive_team": "ايگزيڪيوٽو ٽيم",
+                "mediator": "ثالث (ميڊيئيٽر)",
+                "pma_accredited": "PMA پاران منظور ٿيل ثالث"
+              },
+              "aria_label": "شبانه علي جو پروفائيل ڏسو"
+            },
+            "member_6": {
+              "name": "وجيهه عليم",
+              "title": "سڪريٽري جنرل",
+              "badges": {
+                "executive_team": "ايگزيڪيوٽو ٽيم",
+                "mediator": "ثالث (ميڊيئيٽر)",
+                "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+              },
+              "aria_label": "وجيهه عليم جو پروفائيل ڏسو"
+            },
+            "member_7": {
+              "name": "سيد صمد الحق",
+              "title": "فنانس سڪريٽري",
+              "badges": {
+                "executive_team": "ايگزيڪيوٽو ٽيم"
+              },
+              "aria_label": "سيد صمد الحق جو پروفائيل ڏسو"
+            },
+            "member_8": {
+              "name": "طارق سعيد رانا",
+              "title": "ايگزيڪيوٽو ڪميٽي – اتر (نارٿ)",
+              "badges": {
+                "executive_team": "ايگزيڪيوٽو ٽيم",
+                "mediator": "ثالث (ميڊيئيٽر)",
+                "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+              },
+              "aria_label": "طارق سعيد رانا جو پروفائيل ڏسو"
+            },
+            "member_9": {
+              "name": "هما شاهه",
+              "title": "ايگزيڪيوٽو ڪميٽي – اتر (نارٿ)",
+              "badges": {
+                "executive_team": "ايگزيڪيوٽو ٽيم",
+                "mediator": "ثالث (ميڊيئيٽر)",
+                "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+              },
+              "aria_label": "هما شاهه جو پروفائيل ڏسو"
+            },
+            "member_10": {
+              "name": "اميمه انور خان",
+              "title": "ايگزيڪيوٽو ڪميٽي – ڏکڻ (سائوٿ)",
+              "badges": {
+                "executive_team": "ايگزيڪيوٽو ٽيم"
+              },
+              "aria_label": "اميمه انور خان جو پروفائيل ڏسو"
+            },
+            "member_11": {
+              "name": "مستنصر ذاڪر",
+              "title": "ايگزيڪيوٽو ڪميٽي – ڏکڻ (سائوٿ)",
+              "badges": {
+                "executive_team": "ايگزيڪيوٽو ٽيم",
+                "mediator": "ثالث (ميڊيئيٽر)",
+                "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+              },
+              "aria_label": "مستنصر ذاڪر جو پروفائيل ڏسو"
+            },
+            "member_12": {
+              "name": "عدنان مفتي",
+              "title": "ايگزيڪيوٽو ڪميٽي – ڏکڻ (سائوٿ)",
+              "badges": {
+                "executive_team": "ايگزيڪيوٽو ٽيم",
+                "mediator": "ثالث (ميڊيئيٽر)",
+                "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+              },
+              "aria_label": "عدنان مفتي جو پروفائيل ڏسو"
+            }
+          },
+          "trainers": {
+            "trainer_1": {
+              "name": "مستنصر ذاڪر",
+              "title": "ماستر ٽرينر",
+              "badges": {
+                "master_trainer": "ماستر ٽرينر",
+                "director_training": "ڊائريڪٽر ٽريننگ",
+                "ex_president": "سابق صدر"
+              },
+              "aria_label": "مستنصر ذاڪر جو پروفائيل ڏسو"
+            },
+            "trainer_2": {
+              "name": "انور ڪاشف ممتاز",
+              "title": "ماستر ٽرينر",
+              "badges": {
+                "master_trainer": "ماستر ٽرينر",
+                "ex_president": "سابق صدر",
+                "leadership_trainer": "ليڊرشپ ٽرينر"
+              },
+              "aria_label": "انور ڪاشف ممتاز جو پروفائيل ڏسو"
+            },
+            "trainer_3": {
+              "name": "ٽارق سعيد رانا",
+              "title": "ماستر ٽرينر",
+              "badges": {
+                "master_trainer": "ماستر ٽرينر",
+                "ex_president": "سابق صدر",
+                "executive_committee_north": "ايگزيڪيوٽو ڪميٽي – اتر"
+              },
+              "aria_label": "ٽارق سعيد رانا جو پروفائيل ڏسو"
+            },
+            "trainer_4": {
+              "name": "صائمه امين خواجه",
+              "title": "ماستر ٽرينر",
+              "badges": {
+                "master_trainer": "ماستر ٽرينر",
+                "executive_member": "ايگزيڪيوٽو ميمبر",
+                "vice_president_north": "نائب صدر – اتر"
+              },
+              "aria_label": "صائمه امين خواجه جو پروفائيل ڏسو"
+            },
+            "trainer_5": {
+              "name": "هما شاهه",
+              "title": "ماستر ٽرينر",
+              "badges": {
+                "master_trainer": "ماستر ٽرينر",
+                "executive_committee_north": "ايگزيڪيوٽو ڪميٽي – اتر",
+                "training_committee": "ٽريننگ ڪميٽي"
+              },
+              "aria_label": "هما شاهه جو پروفائيل ڏسو"
+            },
+            "trainer_6": {
+              "name": "عثمان جي راشد",
+              "title": "ماستر ٽرينر",
+              "badges": {
+                "master_trainer": "ماستر ٽرينر",
+                "barrister_at_law": "بئريسٽر ايٽ لا",
+                "former_secretary_general": "سابق سڪريٽري جنرل – PMA"
+              },
+              "aria_label": "عثمان جي راشد جو پروفائيل ڏسو"
+            },
+            "trainer_7": {
+              "name": "اسفند يار علي خان",
+              "title": "ماستر ٽرينر",
+              "badges": {
+                "master_trainer": "ماستر ٽرينر",
+                "executive_leadership": "ايگزيڪيوٽو ليڊرشپ",
+                "vice_president_north": "نائب صدر – اتر"
+              },
+              "aria_label": "اسفند يار علي خان جو پروفائيل ڏسو"
+            }
+          },
+          "former_presidents": {
+            "president_1": {
+              "name": "انور ڪاشف ممتاز",
+              "title": "سابق صدر"
+            },
+            "president_2": {
+              "name": "مستنصر ذاڪر",
+              "title": "سابق صدر"
+            },
+            "president_3": {
+              "name": "ٽارق سعيد رانا",
+              "title": "سابق صدر"
+            }
+          },
+          "subcommittee_panel": {
+            "header": {
+              "title": "ذيلي ڪميٽي",
+              "subtitle": "اسان جون ذيلي ڪميٽيون مهارت، گڏيل تعاون ۽ انتھڪ خدمت ذريعي اهم قدمن کي اڳتي وڌائين ٿيون ۽ PMA جي مشن کي سپورٽ ڪن ٿيون.",
+              "expand_all": "سڀ کوليو"
+            },
+            "labels": {
+              "mandate": "مينڊيٽ:",
+              "director": "ڊائريڪٽر",
+              "convener": "ڪنوينر"
+            },
+            "committees": {
+              "training": {
+                "title": "ٽريننگ ڪميٽي",
+                "mandate": "اورينٽيشن، ٽريننگ، سرٽيفڪيشن/ايڪريڊيشن/ريفريشر ڪورسز/ٽرين دي ٽرينر (TOT)",
+                "lead_name": "مستنصر ذاڪر",
+                "members": [
+                  "انور ڪاشف ممتاز",
+                  "سائمه خواجه",
+                  "طارق رانا",
+                  "هما شاه",
+                  "اسفنڊ يار علي خان"
+                ]
+              },
+              "conduct": {
+                "title": "ضابطه اخلاق ڪميٽي",
+                "mandate": "ثالثن لاءِ ضابطه اخلاق جو مسودو تيار ڪرڻ ۽ سڄي ملڪ ۾ ان جي نفاذ لاءِ قانون واري وزارت کان منظوري حاصل ڪرڻ جي ڪوشش ڪرڻ",
+                "lead_name": "اميمه خان",
+                "members": [
+                  "انور ڪاشف ممتاز",
+                  "سائمه خواجه",
+                  "خالد محمود",
+                  "عدنان مفتي",
+                  "طارق رانا",
+                  "اسفنڊ يار علي خان"
+                ]
+              },
+              "membership": {
+                "title": "رڪنيت ڪميٽي",
+                "mandate": "پراڻي رڪنيت کي برقرار رکڻ ۽ فعال ڪرڻ، ٻين ادارن جي تسليم ٿيل ثالثن کي دعوت ڏئي ممبرشپ پورٽ فوليو کي وڌائڻ ۽ ان سان گڏ ايسوسيئيٽ ۽ اعزازي ميمبرن کي شامل ڪرڻ.",
+                "lead_name": "سعيد حبيب",
+                "members": [
+                  "خالد محمود",
+                  "سائمه خواجه",
+                  "صمد الحق",
+                  "اسفنڊ يار علي خان"
+                ]
+              },
+              "bar_south": {
+                "title": "قانوني ۽ تعليمي هم آهنگي – ڏکڻ",
+                "mandate": "گڏجاڻيون، سيمينار، اورينٽيشنز ۽ ٽريننگ/ورڪشاپس منعقد ڪرڻ لاءِ بار ايسوسيئيشن/بار ڪائونسل ۽ لا اسڪولن سان هم آهنگي",
+                "lead_name": "شبانه علي",
+                "members": [
+                  "سعادت يار خان",
+                  "اميمه خان",
+                  "محترمه خالد محمود",
+                  "صمد الحق",
+                  "منصور مير",
+                  "نويد احمد"
+                ]
+              },
+              "bar_north": {
+                "title": "قانوني ۽ تعليمي هم آهنگي – اتر",
+                "mandate": "گڏجاڻيون, سيمينار، اورينٽيشنز ۽ ٽريننگ/ورڪشاپس منعقد ڪرڻ لاءِ بار ايسوسيئيشن/بار ڪائونسل ۽ لا اسڪولن سان هم آهنگي",
+                "lead_name": "سائمه خواجه",
+                "members": [
+                  "ظفر ڪلانوري",
+                  "بيرسٽر طارق رانا",
+                  "اسفنڊ يار علي خان"
+                ]
+              },
+              "institutional": {
+                "title": "ادارتي هم آهنگي ڪميٽي",
+                "mandate": "چيمبرز، تجارتي ادارن، پيشه ورانه انجمنن/ادارن سان هم آهنگي",
+                "lead_name": "عدنان مفتي",
+                "members": [
+                  "مستنصر ذاڪر",
+                  "سعيد حبيب",
+                  "طارق رانا",
+                  "اسفنڊ يار علي خان",
+                  "صمد الحق"
+                ]
+              }
+            },
+            "footer_note": "آغا ظفر احمد (صدر) ۽ وجيهه عليم (سيڪريٽري جنرل) هر ڪميٽي جا ايڪس آفيشيو (Ex. Officio) ميمبر آهن."
+          },
+          "mediators": {
+            "adnan-mufti": { "name": "عدنان مفتي", "role": "ميمبر" },
+            "anwar-kashif-mumtaz": { "name": "انور ڪاشف ممتاز", "role": "ميمبر" },
+            "ayesha-sarfraz-ali-khan": { "name": "عائشه سرفراز علي خان", "role": "ميمبر" },
+            "barrister-tariq-saeed-lahore": { "name": "بيرسٽر طارق سعيد", "role": "ميمبر" },
+            "farrukh-junaidy": { "name": "فرخ جنيدي", "role": "ميمبر" },
+            "huma-shah": { "name": "هما شاه", "role": "ميمبر" },
+            "ishtiaq-memon": { "name": "اشتياق ميمڻ", "role": "ميمبر" },
+            "isfandyar-ali-khan": { "name": "اسفنڊ يار علي خان", "role": "ميمبر" },
+            "khalid-firoz-arfeen": { "name": "خالد فيروز عارفين", "role": "ميمبر" },
+            "khalid-mahmood-siddiqui": { "name": "خالد محمود صديقي", "role": "ميمبر" },
+            "mohammad-rehan-siddqui": { "name": "محمد ريحان صديقي", "role": "ميمبر" },
+            "mustansir-zakir": { "name": "مستنصر ذاڪر", "role": "ميمبر" },
+            "nausheen-ahmed": { "name": "نوشين احمد", "role": "ميمبر" },
+            "neelofar-hameed": { "name": "نيلوفر حميد", "role": "ميمبر" },
+            "omair-nisar-khan": { "name": "عمير نثار خان", "role": "ميمبر" },
+            "raheem-hasnani": { "name": "رحيم حسناني", "role": "ميمبر" },
+            "reshma-aftab": { "name": "ريشما آفتاب", "role": "ميمبر" },
+            "rubina-virani": { "name": "روبينا ويراني", "role": "ميمبر" },
+            "saadat-yar-khan": { "name": "سعادت يار خان", "role": "ميمبر" },
+            "saeed-habib": { "name": "سعيد حبيب", "role": "ميمبر" },
+            "saima-khawaja": { "name": "سائمه امين خواجه", "role": "ميمبر" },
+            "salina-khalfan": { "name": "سالينا خلفان", "role": "ميمبر" },
+            "shabana-ali": { "name": "شبانه علي", "role": "ميمبر" },
+            "shaheen-premani": { "name": "شاهين بريمڻي", "role": "ميمبر" },
+            "syed-haider-imam-rizvi": { "name": "سيد حيدر امام رضوي", "role": "ميمبر" },
+            "syed-sammadul-haque": { "name": "سيد صمد الحق", "role": "ميمبر" },
+            "tahmasp-r-razvi": { "name": "طهمسپ آر رضوي", "role": "ميمبر" },
+            "umaimah-a-rizvi": { "name": "اميمه اي رضوي", "role": "ميمبر" },
+            "usman-g-rashid": { "name": "عثمان جي راشد", "role": "ميمبر" },
+            "wajiha-aleem": { "name": "وجيهه عليم", "role": "ميمبر" },
+            "yousuf-moulvi": { "name": "يوسف مولوي", "role": "ميمبر" },
+            "zafar-kalanauri": { "name": "ظفر ڪلانوري", "role": "ميمبر" },
+            "zia-makhdoom": { "name": "ضياء مخدوم", "role": "ميمبر" }
+          }
         },
         "resources_page": {
-    "hero": {
-      "image_alt": "سروسز هيرو تصوير",
-      "eyebrow": "وسيلا (RESOURCES)",
-      "title_line1": "علم. قانون.",
-      "title_accent": "اصلاح.",
-      "lead_text": "پي ايم اي (PMA) جي اشاعتن، ثالثي جي قانونن، ادارتي دستاويزن، تحقيقي مقالن، وڪالتي وسيلن، ۽ ميڊيا مواد تائين رسائي حاصل ڪريو جيڪي پاڪستان ۾ اي ڊي آر (ADR) ۽ پرامن طريقي سان تڪرارن جي حل کي هٿي ڏين ٿا."
-    },
-    "tabs": {
-      "featured": "نمایاں (خاص)",
-      "downloads": "ڊائون لوڊز",
-      "mediation_laws": "ثالثي جا قانون",
-      "advocacy": "وڪالت ۽ حمايت (Advocacy)",
-      "press_media": "پريس ۽ ميڊيا",
-      "articles": "مضمون"
-    }
-  }
+          "hero": {
+            "image_alt": "سروسز هيرو تصوير",
+            "eyebrow": "وسيلا (RESOURCES)",
+            "title_line1": "علم. قانون.",
+            "title_accent": "اصلاح.",
+            "lead_text": "پي ايم اي (PMA) جي اشاعتن، ثالثي جي قانونن، ادارتي دستاويزن، تحقيقي مقالن، وڪالتي وسيلن، ۽ ميڊيا مواد تائين رسائي حاصل ڪريو جيڪي پاڪستان ۾ اي ڊي آر (ADR) ۽ پرامن طريقي سان تڪرارن جي حل کي هٿي ڏين ٿا."
+          },
+          "tabs": {
+            "featured": "نمایاں (خاص)",
+            "downloads": "ڊائون لوڊز",
+            "mediation_laws": "ثالثي جا قانون",
+            "advocacy": "وڪالت ۽ حمايت (Advocacy)",
+            "press_media": "پريس ۽ ميڊيا",
+            "articles": "مضمون"
+          },
+          "downloads_panel": {
+            "header": {
+              "title": "ڊائون لوڊز",
+              "lead": "ڊائون لوڊ ڪرڻ جوڳا PDFs، فارم ۽ اشاعتون. فائل کي نئين ٽيب ۾ کولڻ لاءِ ان تي ڪلڪ ڪريو.",
+              "view_all_text": "سڀ ڊائون لوڊز ڏسو"
+            },
+            "global_labels": {
+              "download_btn_text": "پي ڊي ايف ڊائون لوڊ ڪريو",
+              "default_image_alt": "ADR-ACT-2017 پي ڊي ايف"
+            },
+            "items": {
+              "card_1": {
+                "title": "اي ڊي آر ائڪٽ 2017 (ADR-ACT-2017)",
+                "file_name": "ADR-ACT-2017.pdf"
+              },
+              "card_2": {
+                "title": "وڪالت ۽ لابي (Advocacy and Lobby)",
+                "file_name": "Advocacy-and-Lobby.pdf"
+              },
+              "card_3": {
+                "title": "رجسٽريشن جو سرٽيفڪيٽ",
+                "file_name": "Certificate.pdf"
+              },
+              "card_4": {
+                "title": "ميمبرشپ فارم (رڪنيت جو درخواستي فارم)",
+                "file_name": "membership-application-form.pdf"
+              },
+              "card_5": {
+                "title": "ميمورنڊم آف ائسوسيئيشن (اپڊيٽ ٿيل)",
+                "file_name": "MEMORANDUM-OF-ASSOCIATION-UPDATED.pdf"
+              },
+              "card_6": {
+                "title": "نامزدگي فارم (Nomination)",
+                "file_name": "nomination_form.pdf"
+              },
+              "card_7": {
+                "title": "پي ايم اي (PMA) تقرير",
+                "file_name": "pma-speech.pdf"
+              },
+              "card_8": {
+                "title": "پي ايم اي ۾ ڇو شامل ٿجي؟",
+                "file_name": "Why-Join-PMA.pdf"
+              }
+            }
+          },
+          "mediation_laws_panel": {
+            "header": {
+              "title": "ثالثي جا قانون ۽ قانون سازي",
+              "lead": "ثالثي سان لاڳاپيل اهم قانون، بل ۽ سرڪاري قانون سازي جا دستاويز.",
+              "view_all_text": "سڀ قانون ڏسو"
+            },
+            "global_labels": {
+              "download_btn_text": "پي ڊي ايف ڊائون لوڊ ڪريو",
+              "default_image_alt": "ADR-ACT-2017 پي ڊي ايف"
+            },
+            "items": {
+              "card_1": {
+                "title": "اسلام آباد ڊسپيوٽ ريزوليوشن ائڪٽ (ثالثي)",
+                "file_name": "Law-Islamabad-Dispute-Resolution-Act-Mediation.pdf"
+              },
+              "card_2": {
+                "title": "ضابطہ ديواني 1908 (CPC) جي پهرين شيڊول ۾ ترميمون",
+                "file_name": "Law-KPK-Mediation-Amendment-No.1523-1622_Amendments-in-Frist-Schedule-of-the-code-of-Civil-Procedure-1908_dt-1.pdf"
+              },
+              "card_3": {
+                "title": "ضابطہ ديواني 1908 ۾ پنجاب ترميمون (ثالثي جون شقون)",
+                "file_name": "Law-Punjab-Amendments_civil_procedure_1908_final_Mediation_Provisions.pdf"
+              },
+              "card_4": {
+                "title": "ڊرافٽ ضابطہ ديواني (سنڌ ترميم) بل، 2018",
+                "file_name": "Law-Sindh-Notification-dt-8-11-2018-The-DRAFT-Code-of-Civil-Procedure-Sindh-Amendment-Bill-2018.pdf"
+              },
+              "card_5": {
+                "title": "ثالثي جي ذريعي فيصلن تي سنگاپور ڪنوينشن (متن)",
+                "file_name": "Law-Singapore-Convention-on-Mediated-Settlements-Text.pdf"
+              }
+            }
+          },
+          "advocacy_panel": {
+            "header": {
+              "title": "وڪالت ۽ پاليسي",
+              "lead": "اي ڊي آر (ADR) سڌارن جي حمايت لاءِ پاليسي بريفس، وڪالتي ٽول ڪٽس ۽ پوزيشن پيپرز.",
+              "view_all_text": "سڀ وڪالتي مواد ڏسو"
+            },
+            "global_labels": {
+              "download_btn_text": "پي ڊي ايف ڊائون لوڊ ڪريو",
+              "default_image_alt": "ADR-ACT-2017 پي ڊي ايف"
+            },
+            "items": {
+              "card_1": {
+                "title": "خيبر پختونخوا (KPK)",
+                "file_name": "kpk.pdf"
+              },
+              "card_2": {
+                "title": "پنجاب",
+                "file_name": "punjab.pdf"
+              },
+              "card_3": {
+                "title": "سنڌ",
+                "file_name": "sindh.pdf"
+              }
+            }
+          },
+          "press_media_panel": {
+            "header": {
+              "title": "پريس ۽ ميڊيا",
+              "lead": "صحافين لاءِ پريس رليز، ميڊيا ڪٽس ۽ ڊائون لوڊ ڪرڻ جوڳو مواد.",
+              "view_all_text": "ميڊيا مواد ڏسو"
+            },
+            "global_labels": {
+              "download_btn_text": "پي ڊي ايف ڊائون لوڊ ڪريو",
+              "default_image_alt": "پي ڊي ايف"
+            },
+            "items": {
+              "card_1": {
+                "title": "بزنس رڪارڊر (Business Recorder)",
+                "file_name": "BusinessRecorder.pdf"
+              },
+              "card_2": {
+                "title": "بزنس رڪارڊر اشتهار (AD)",
+                "file_name": ""
+              },
+              "card_3": {
+                "title": "فرنٽيئر پوسٽ (Frontier Post)",
+                "file_name": "FrontierPost.pdf"
+              },
+              "card_4": {
+                "title": "پاڪستان آبزرور (Pakistan Observer)",
+                "file_name": "PakistanObserver.pdf"
+              },
+              "card_5": {
+                "title": "پي ايم اي (PMA) پريس رليز",
+                "file_name": "PMA_PressRelease.pdf"
+              },
+              "card_6": {
+                "title": "ٽريبون (Tribune)",
+                "file_name": "Tribune.pdf"
+              }
+            }
+          },
+          "articles_panel": {
+            "header": {
+              "title": "مضمون ۽ تجزيو",
+              "lead": "ثالثي ۽ اي ڊي آر (ADR) تي تحقيقي مضمون، تجزيا ۽ فڪري اڳواڻي.",
+              "view_all_text": "سڀ مضمون ڏسو"
+            },
+            "global_labels": {
+              "download_btn_text": "پي ڊي ايف ڊائون لوڊ ڪريو",
+              "author_prefix": "طرفان"
+            },
+            "items": {
+              "card_1": {
+                "title": "It Really Happened in Frankfurt",
+                "author": "جواد اي سرواڻا",
+                "file_name": "blog-Jawad-Sarwana-It-Happened-in-Frankfurt.pdf",
+                "image_alt": "It Really Happened in Frankfurt پي ڊي ايف"
+              },
+              "card_2": {
+                "title": "Mediation Techniques",
+                "author": "جواد اي سرواڻا",
+                "file_name": "Blog-Sarwana.pdf",
+                "image_alt": "Mediation Techniques پي ڊي ايف"
+              }
+            }
+          },
+          "search_bar": {
+            "question": "ڇا توهان کي پنهنجي گهربل شيءِ نه پئي ملي؟",
+            "subtext": "وسيلا تيزي سان ڳولهڻ لاءِ سرچ استعمال ڪريو يا ڪيٽيگري جي حساب سان برائوز ڪريو.",
+            "placeholder": "وسيلا ڳوليو...",
+            "browse_btn_text": "سڀ وسيلا برائوز ڪريو"
+          }
+        },
+        "events_page": {
+          "hero_section": {
+            "eyebrow": "ايونٽس",
+            "title": "ايونٽس ۽ تقريبون",
+            "lead": "پي ايم اي (PMA) جي ڪانفرنسن، ثالثي جي قدمن، ورڪشاپس ۽ اهم اعلانن کان باخبر رهو.",
+            "image_alt": "ايونٽس هيرو تصوير"
+          },
+          "tab_bar": {
+            "upcoming_events": "ايندڙ ايونٽس",
+            "past_events": "گذريل ايونٽس",
+            "announcements": "اعلان ۽ نوٽيس"
+          },
+          "upcoming_panel": {
+            "title": "جلد اچي رهيو آهي",
+            "lead": "ايندڙ ايونٽس، ڪانفرنسون ۽ ورڪشاپون هتي ڏيکاريون وينديون. جلد ئي ٻيهر چيڪ ڪريو."
+          },
+          "announcements_panel": {
+            "title": "جلد اچي رهيو آهي",
+            "lead": "اهم اعلان هتي ڏيکاريا ويندا. اسان سان گڏ جڙيل رهو."
+          },
+          "past_events": {
+            "training_program_detail": {
+              "global_labels": {
+                "badge_text": "گذريل ايونٽ",
+                "pill_text": "سرٽيفائيڊ ٽريننگ پروگرام",
+                "view_gallery_btn": "ايونٽ گيلري ڏسو",
+                "about_label": "ايونٽ بابت",
+                "highlights_label": "ٽريننگ جون اهم جھلڪيون"
+              },
+              "card": {
+                "title": "6 هون سرٽيفائيڊ ميڊيائيشن ٽريننگ پروگرام",
+                "sub": "سنڌ هاءِ ڪورٽ",
+                "date": "08 جون 2026 کان 12 جون 2026",
+                "location": "سنڌ هاءِ ڪورٽ، ڪراچي"
+              },
+              "about_paragraphs": [
+                "پاڪستان ميڊيائيٽرز ايسوسيئيشن (PMA) سنڌ هاءِ ڪورٽ ۾ 6 هون سرٽيفائيڊ ميڊيائيشن ٽريننگ پروگرام ڪاميابي سان منعقد ڪرايو.",
+                "هن پروگرام جو مقصد ثالثي جي مهارتن کي مضبوط ڪرڻ، متبادل تڪرارن جي حل (ADR) جي طريقن کي هٿي ڏيڻ، ۽ قانوني ماهرن توڙي ثالثي جي پيشيورن ۾ پيشيورانه صلاحيتن کي وڌائڻ هو.",
+                "انٽرايڪٽو سيشنز، عملي مشقن ۽ گڏيل ڳالهين ذريعي، شركت ڪندڙن جديد ثالثي جي طريقن ۽ تڪرارن جي حل واري فريم ورڪ بابت قيمتي ڄاڻ حاصل ڪئي."
+              ],
+              "highlights": [
+                "سرٽيفائيڊ ثالثي تربيتي سيشن",
+                "عملي ثالثي جون مشقون",
+                "انٽرايڪٽو گروپ بحث",
+                "متبادل تڪرارن جي حل (ADR) جون ٽيڪنيڪون",
+                "پيشيورانه صلاحيتن جي اڏاوت",
+                "گڏجي سکڻ جو ماحول"
+              ],
+              "meta": {
+                "objective_label": "ٽريننگ جو مقصد",
+                "objective_text": "ثالثي جي مهارتن کي مضبوط ڪرڻ ۽ تڪرارن جي اثرائتي حل وارن طريقن کي فروغ ڏيڻ.",
+                "organized_label": "منتظم",
+                "organized_text": "پاڪستان ميڊيائيٽرز ايسوسيئيشن (PMA)",
+                "participants_label": "شركت ڪندڙ",
+                "participants_text": "قانوني پيشيور ماهر، اي ڊي آر (ADR) جا ماهر، ثالث ۽ زير تربيت شركت ڪندڙ.",
+                "type_label": "ايونٽ جو قسم",
+                "type_text": "سرٽيفائيڊ ٽريننگ پروگرام"
+              }
+            },
+            "national_conference_detail": {
+              "global_labels": {
+                "badge_text": "گذريل ايونٽ",
+                "about_label": "ايونٽ بابت",
+                "highlights_label": "نمايان اي ڊي آر (ADR) ترقيون"
+              },
+              "card": {
+                "title": "ثالثي: اڳتي وڌڻ جو رستو (Mediation A Way Forward)",
+                "sub": "پهرين نيشنل ميڊيائيشن ڪانفرنس",
+                "date": "7 مارچ، 2015",
+                "location": "هوتل ميريٽ، ڪراچي",
+                "type": "نيشنل ڪانفرنس"
+              },
+              "about_paragraphs": [
+                "پي ايم اي (PMA) پاڪستان جي پهرين تنظيم آهي جيڪا ٻاهرين ملڪن مان تربيت يافته ۽ منظور ٿيل ثالثن سان گڏوگڏ ٻين پيشيورن جي نمائندگي ڪري ٿي، جن ايسوسيئيشن جي مقصدن کي اڳتي وڌائڻ لاءِ ان ۾ شموليت اختيار ڪئي آهي. اها ايسوسيئيشن 2013 ۾ قائم ٿي هئي ۽ ان ڪيتريون ئي سرگرميون پنهنجي ذمي کنيون آهن جيڪي اڳ ۾ آئي ايف سي/ورلڊ بئنڪ گروپ جي متبادل تڪرارن جي حل (ADR) پروجيڪٽ تحت هلي رهيون هيون.",
+                "ان ڳالهه کي نظر ۾ رکندي ته پاڪستان ۾ معاهدن جي نفاذ جا اشارا حوصلا افزا نه آهن ۽ ان ۾ ڪيترا ئي سال ۽ وڏي لاڳت اچي ٿي، پي ايم اي انهن قدمن جي اڳواڻي ۽ تعاون جو عزم رکي ٿي جيڪي ڌرين کي دوستاڻي ماحول ۽ ثالثي عمل ذريعي تڪرار حل ڪرڻ جي قابل بڻائيندا، ۽ تڪرارن جي وقتائتي حل ۾ ڪورٽن ۽ عدليه جي ڪوششن جو ساٿ ڏيندا."
+              ],
+              "highlights": [
+                "ڪراچي ۾ 'ڪراچي سينٽر فار ڊسپيوٽ ريزوليوشن' ۽ لاهور ۾ 'لاهور چيمبر آف ڪامرس اينڊ انڊسٽري ميڊيائيشن سينٽر' جو فعال ٿيڻ.",
+                "پاڪستان ۾ اي ڊي آر/ثالثي جي قانونن ۾ سڌارن لاءِ ڪوششون ڪرڻ.",
+                "پاڪستان ۾ CEDR جي منظور ٿيل ثالثن ۽ ماسٽر ٽرينرز جي موجودگي.",
+                "پاڪستان ۾ اي ڊي آر (ADR) جو نصاب تيار ڪرڻ.",
+                "پاڪستان ۾ اي ڊي آر ٽريننگز کي مضبوط بڻائڻ ۽ فراهم ڪرڻ.",
+                "ڪارپوريٽ گورننس سميت ڪيترن ئي تڪرارن کي حل ڪرڻ لاءِ اي ڊي آر کي هڪ ذريعو طور مڃڻ."
+              ],
+              "meta": {
+                "objective_label": "ڪانفرنس جا مقصد",
+                "objective_text": "اي ڊي آر ۽ ثالثي جي مقصد کي اڳتي وڌائڻ ۽ پاڪستان ۾ ثالثي کي ادارتي شڪل ڏيڻ لاءِ اڳڀرائي، چئلينجن ۽ مستقبل جي قدمن تي بحث ڪرڻ.",
+                "organized_label": "ڪانفرنس جا ميزبان",
+                "organized_text": "هن ڪانفرنس جي ميزباني پاڪستان ميڊيائيٽرز ايسوسيئيشن ڪانفرنس پارٽنرز جي سهڪار سان ڪري رهي آهي.",
+                "participants_label": "مقرر ۽ مھمان",
+                "participants_text": "حڪومت، عدليه، واپاري برادري، بار، تعليمي ادارن ۽ پاڪستان ۾ ثالثي جي مرڪزن جا نمائندا بشمول پرڏيهي مقرر.",
+                "type_label": "ايونٽ جو قسم",
+                "type_text": "نيشنل ڪانفرنس"
+              }
+            }
+          }
+        },
+        "privacy_policy": {
+          "hero": {
+            "title_main": "پرائيويسي",
+            "title_accent": "پاليسي",
+            "lead_text": "اسان توهان جي پرائيويسي جي حفاظت ڪرڻ ۽ اهو يقيني بڻائڻ لاءِ پرعزم آهيون ته توهان جي ذاتي معلومات کي محفوظ ۽ ذميواراڻي طريقي سان سنڀاليو وڃي."
+          },
+          "sections": {
+            "commitment": {
+              "title": "پرائيويسي جو عزم",
+              "paragraphs": [
+                "پاڪستان ميڊيائيٽرز ايسوسيئيشن (PMA) آن لائن توهان جي پرائيويسي جي تحفظ لاءِ پرعزم آهي. پاڪستان ميڊيائيٽرز ايسوسيئيشن (PMA) پرائيويسي لاءِ پنهنجي پختي عزم کي ظاهر ڪرڻ لاءِ هي پرائيويسي بيان تيار ڪيو آهي. هيٺ ڏنل بيان پاڪستان ميڊيائيٽرز ايسوسيئيشن (PMA) لاءِ معلومات گڏ ڪرڻ ۽ پکيڙڻ جي طريقيڪار کي واضح ڪري ٿو.",
+                "PMA کي ڪنهن به وقت صارفين کي نئين پرائيويسي بيان جي باري ۾ آگاهي ڏئي هن پاليسي کي تبديل ڪرڻ جو حق حاصل آهي. هي بيان ۽ هتي بيان ڪيل پاليسيون ڪنهن به ڌر جي حق ۾ يا ان جي طرفان ڪو معاهدو يا ٻيا قانوني حق پيدا ڪرڻ لاءِ نه آهن ۽ نه ئي ائين ڪن ٿيون."
+              ]
+            },
+            "respect_data": {
+              "title": "صارف جي ڊيٽا جو احترام",
+              "paragraphs": [
+                "پاڪستان ميڊيائيٽرز ايسوسيئيشن (PMA) پنهنجي ڪسٽمرن سان مضبوط لاڳاپن کي وڏي اهميت ڏئي ٿي. پاڪستان ميڊيائيٽرز ايسوسيئيشن (PMA) ۾ ڊيٽا گڏ ڪرڻ جي عمل کي اسان جي گراهڪن جي پرائيويسي جي مڪمل ۽ مناسب احترام سان سنڀاليو وڃي ٿو.",
+                "اسان جيڪا ڊيٽا گڏ ڪريون ٿا تنهن کي حساسيت، حفاظت ۽ پرائيويسي جي مناسب خيال سان سنڀاليو وڃي ٿو. پاڪستان ميڊيائيٽرز ايسوسيئيشن (PMA) پنهنجي ڪلائنٽس کان گڏ ڪيل ڊيٽا کي ڪنهن به ٽئين ڌر آڏو ظاهر، ورهاست يا وڪرو نٿي ڪري."
+              ]
+            },
+            "collection": {
+              "title": "معلومات گڏ ڪرڻ",
+              "lead_text": "PMA ممبرشپ سائن اپ لاءِ هيٺ ڏنل معلومات گڏ ڪري ٿي:",
+              "items": [
+                "ڪمپيوٽرائيزڊ قومي سڃاڻپ ڪارڊ (CNIC)",
+                "مڪمل نالو",
+                "رهائشي پتو",
+                "آفس جو پتو",
+                "فون نمبر",
+                "اي ميل معلومات",
+                "ميبرشپ بابت ٻي لاڳاپيل معلومات"
+              ]
+            }
+          }
+        },
+        "complaint_policy": {
+          "hero": {
+            "title_main": "شڪايتون ۽ اپيل",
+            "title_accent": "پاليسي",
+            "lead_text": "اسان شڪايتن ۽ تحفظن کي منصفاڻي، فوري ۽ شفاف طريقي سان حل ڪرڻ لاءِ پرعزم آهيون."
+          },
+          "intro_card": {
+            "bold_text": "اسان وٽ شڪايتن سان نمٽڻ لاءِ هڪ باقاعده طريقيڪار موجود آهي جيڪو اهو يقيني بڻائي ٿو ته انهن تي مناسب ڌيان ۽ سنڀال ڪئي وڃي.",
+            "lead_p": "PMA جي ثالثي اڪريڊيٽيشن سروسز جو ڪو به واپرائيندڙ (صارف) شڪايت درج ڪرائي سگهي ٿو. PMA جو مقصد سڀني صارفين کي وقتائتيون ۽ ذميواراڻيون خدمتون فراهم ڪرڻ آهي. اسان:",
+            "commitments": [
+              "سڀني شڪايتن کي سنجيدگيءَ سان وٺنداسين ۽ انهن سان مناسب طريقي سان نمٽنداسين؛",
+              "شڪايتن جو فوري ازالو ڪنداسين؛ ۽",
+              "شڪايتن مان سکنداسين ۽ پنهنجي خدمتن کي بهتر بڻائڻ لاءِ قدم کڻنداسين."
+            ]
+          },
+          "steps": [
+            {
+              "text": "تنهن هوندي، اسان صرف انهن شڪايتن تي ڪارروائي ڪري سگهون ٿا جيڪي ڊائريڪٽر آف ٽريننگ پاران مليل ناقص ڪسٽمر سروس بابت تحفظات پيدا ڪن ٿيون."
+            },
+            {
+              "text": "ان جو مطلب اهو آهي ته توهان جو ڪيس ڊائريڪٽر آف ٽريننگ جي نالي هجڻ گهرجي ۽ ڊاڪ توڙي اي ميل ذريعي موڪليو وڃي، جنهن جي هڪ ڪاپي (cc) صدر PMA کي موڪلي وڃي."
+            },
+            {
+              "text": "ڪو به شاگرد جيڪو ڊائريڪٽر آف ٽريننگ جي فيصلي مان مطمئن نه هجي، اهو فيصلي کي رد ڪرڻ لاءِ آزاد آهي، اهڙي صورت ۾ ان جو ڪو به لازمي اثر نه ٿيندو. ڊائريڪٽر شڪايت ملڻ جي 30 ڏينهن اندر جواب ڏيڻ جو پابند آهي."
+            },
+            {
+              "text": "جيڪڏهن، تنهن هوندي، توهان پنهنجي شڪايت جي حل مان مطمئن نٿا ٿيو يا ڊائريڪٽر آف ٽريننگ پاران ڪو جواب نٿو ملي، ته توهان پنهنجي شڪايت صدر PMA کي موڪلي سگهو ٿا جيڪو توهان جي شڪايت جي ٻڌڻي لاءِ ٻن ميمبرن تي ٻڌل فيڪلٽي ٽريبونل قائم ڪندو."
+            },
+            {
+              "text": "توهان کي پنهنجي درخواست جي سببن ۽ ڊائريڪٽر آف ٽريننگ جي جائزي يا عدم ڪارروائي مان توهان ڇا حاصل ڪرڻ چاهيو ٿا، ان بابت واضح ۽ مختصر ٿيڻو پوندو. ٻن ميمبرن وارو ٽريبونل صدر PMA کي ڪاپي سان گڏ توهان کي لکندو ۽ شڪايت وڌائڻ جي درخواست جي 30 ڪم وارن ڏينهن اندر توهان کي تحريري طور يقيني جواب ڏيندو."
+            },
+            {
+              "text": "جيڪڏهن توهان پنهنجي شڪايت تي ٻن ميمبرن واري ٽريبونل جي ڪارروائي يا عدم ڪارروائي مان مطمئن ناهيو، ته ان سان ڪنهن به ڌر جي رليف لاءِ ڪنزيومر ڪورٽ (صارفين جي عدالت) سان رجوع ڪرڻ وارا حق متاثر نه ٿيندا، ۽ اهو اختيار سڀني لاءِ کليل آهي."
+            }
+          ]
+        },
+        "terms_conditions": {
+          "hero": {
+            "title_main": "شرطون ۽",
+            "title_accent": "ضابطا",
+            "lead_text": "برائي مهرباني انهن شرطن کي غور سان پڙهو. اسان جي ويب سائيٽ ۽ خدمتن تائين رسائي حاصل ڪرڻ ۽ استعمال ڪرڻ سان، توهان هيٺ ڏنل شرطن ۽ ضابطن جي تعميل ڪرڻ سان اتفاق ڪريو ٿا."
+          },
+          "accordion_items": [
+            {
+              "id": "training",
+              "title": "ٽريننگ (تربيت)",
+              "preview": "پنهنجي بڪنگ جي تصديق لاءِ، توهان جي ادائگي ڪورسز شروع ٿيڻ کان اڳ؛ اڳواٽ اسان جي آفيسن تائين پهچڻ گهرجي.",
+              "body_paragraphs": [
+                "جيڪڏهن واپرائيندڙ (صارف) ادائگي ۾ دير ڪندو، ته کيس ڪورسز ۾ ويهڻ جي اجازت نه ڏني ويندي."
+              ]
+            },
+            {
+              "id": "refunds",
+              "title": "ٽريننگ ريفنڊز (رقم جي واپسي)",
+              "preview": "اسان سمجهون ٿا ته زندگي پيچيده ٿي سگهي ٿي. جيڪڏهن توهان شرڪت ڪرڻ جي قابل ناهيو، ته برائي مهرباني جلد کان جلد اسان سان 9768-3452-021 تي رابطو ڪريو يا اسان کي info@pma.org.pk تي اي ميل ڪريو.",
+              "body_paragraphs": [
+                "اسان کي توهان جي جاءِ تي ڪنهن متبادل شرڪت ڪندڙ کي شامل ڪرڻ، يا ڪريڊٽ يا ريفنڊ جو بندوبست ڪرڻ ۾ خوشي ٿيندي ۽ اسان هميشه انفرادي بنيادن تي توهان جي ڪيس تي غور ڪنداسين."
+              ]
+            },
+            {
+              "id": "membership",
+              "title": "ميمبرشپ جي منسوخي",
+              "preview": "خاص حالتن کان علاوه ميمبرشپ فيس واپس نه ٿيڻ جوڳي (ناقابل واپسي) آهي.",
+              "body_paragraphs": [
+                "برائي مهرباني اسان سان رابطو ڪريو جيڪڏهن توهان سمجهو ٿا ته توهان جا حالات استثنيٰ جي معيار تي پورو لهن ٿا. هر ڪيس جو جائزو انفرادي طور تي PMA جي ميمبرشپ ڪميٽي وٺندي آهي."
+              ]
+            },
+            {
+              "id": "copyright",
+              "title": "ڪاپي رائيٽ (جملي حق)",
+              "preview": "هي سائيٽ ۽ ان جا مواد ڪاپي رائيٽ جي تابع آهن. سائيٽ جي مواد جي ڪاپي رائيٽ جي مالڪ پاڪستان ميڊيائيٽرز ايسوسيئيشن (PMA) آهي، يا ڪجهه مواد جي صورت ۾، ڪا ٽئين ڌر آهي. سائيٽ جي ڪارڪردگي ۽ آپريشنل ڪاپي رائيٽ جي مالڪ پي ايم اي آهي.",
+              "body_paragraphs": [
+                "توهان پنهنجي ويب برائوزر کي استعمال ڪندي هن سائيٽ ۽ ان جي مواد کي ڏسي سگهو ٿا ۽ صرف ذاتي، غير تجارتي استعمال لاءِ هن سائيٽ جي حصن جي اليڪٽرانڪ ڪاپي ۽ هاريڊ ڪاپيون پرنٽ ڪري سگهو ٿا. هن سائيٽ جي مواد جو ڪو به ٻيو استعمال، بشمول ٻيهر تخليق، ترميم، ورهاست، منتقلي، ٻيهر اشاعت، نمائش يا ڪارڪردگي، سختي سان ممنوع آهي."
+              ]
+            },
+            {
+              "id": "disclaimer",
+              "title": "دستبرداري (Disclaimer)",
+              "preview": "توهان اتفاق ڪريو ٿا ته هن سائيٽ تائين توهان جي رسائي ۽ استعمال انهن شرطن ۽ سڀني لاڳو قانونن جي تابع آهي، ۽ اهو توهان جي پنهنجي خطرن تي آهي. هي سائيٽ ۽ ان جا مواد توهان کي \"جيئن آهي\" جي بنياد تي فراهم ڪيا ويا آهن، سائيٽ ۾ غلطيون، خاميون ۽ گھٽتائيون ٿي سگهن ٿيون ۽ ٿي سگهي ٿو ته اها مڪمل ۽ موجوده نه هجي.",
+              "body_paragraphs": [
+                "پاڪستان ميڊيائيٽرز ايسوسيئيشن (PMA) لاڳو قانونن تحت فراهم ڪيل سهولتن کان علاوه، هن سائيٽ جي آپريشن يا هن سائيٽ تي شامل معلومات، مواد يا شين جي حوالي سان ڪنهن به قسم جي صريح يا ضمني ضمانت يا نمائندگي نٿي ڪري.",
+                "نه پي ايم اي ۽ نه ئي ان سان لاڳاپيل ادارا، ڊائريڪٽر، آفيسر، ملازم، ايجنٽ، ٺيڪيدار، جانشين يا تفويض ٿيل ماڻهو هن سائيٽ ۽ هن سائيٽ سان ڳنڍيل ڪنهن ٻي سائيٽ جي استعمال مان پيدا ٿيندڙ يا ڪنهن به طريقي سان لاڳاپيل نقصانن جا ذميوار هوندا. هي حد سڌي، بالواسطه، نتيجي طور، خاص، تعزيري يا ٻين نقصانن تي لاڳو ٿئي ٿي جيڪي توهان کي يا ٻين کي پهچي سگهن ٿا، گڏوگڏ منافعي جي نقصان، ڪاروبار ۾ رڪاوٽ يا ڊيٽا يا معلومات جي نقصان جي نقصانن تي پڻ لاڳو ٿئي ٿي."
+              ]
+            },
+            {
+              "id": "translations",
+              "title": "گوگل تڪرار (Google Translations)",
+              "preview": "هي ويب سائيٽ توهان جي سهولت لاءِ گوگل ٽرانسليٽ™ جي مدد سان ترجمو ڪئي وئي آهي. گوگل ٽرانسليٽ™ جا ترجمان هڪ خودڪار ڪمپيوٽرائيزڊ عمل جي ذريعي ڪيا ويندا آهن، ڪنهن تصديق ٿيل پيشيور مترجم جي ذريعي نه.",
+              "body_paragraphs": [
+                "ان ڪري، اهي ترجمو غلط يا ناقابل ڀروسو ٿي سگهن ٿا. گوگل ٽرانسليٽ™ جا ترجمو احتياط سان استعمال ڪريو. ترجمو ڪنهن به قسم جي وارنٽي کان سواءِ \"جيئن آهي\" جي بنياد تي مهيا ڪيا ويا آهن. ڪجهه مواد (جهڙوڪ تصويرون، وڊيوز، فليش وغيره) ترجمي جي سافٽ ويئر جي حدن جي ڪري ترجمو نه ٿي سگهندو آهي.",
+                "پي ايم اي نامڪمل يا غلط ترجمي جي ذميوار ناهي، ۽ نه ئي هوءَ صارف پاران گوگل ٽرانسليٽ™ جي ترجمي (يا هن ويب سائيٽ تي موجود ڪنهن ٻئي ترجمي) جي استعمال مان پيدا ٿيندڙ ڪنهن نقصان يا زيان جي ذميوار آهي.",
+                "جيڪڏهن توهان وٽ گوگل ٽرانسليٽ™ بابت ڪي سوال آهن، ته ڏسو: Google Translate™ FAQs.",
+                "گوگل ترجمي سان لاڳاپيل سڀني وارنٽين کان دستبردار ٿئي ٿو، چاهي اهي صريح هجن يا ضمني، بشمول درستگي، قابل اعتماد هجڻ جي ڪا به وارنٽي، ۽ تجارتي قابليت، ڪنهن خاص مقصد لاءِ موزونيت ۽ ڀڃڪڙي نه ڪرڻ جي ڪا به ضمني وارنٽي."
+              ]
+            }
+          ]
+        },
+        "become_member": {
+          "hero": {
+            "eyebrow": "PMA جوائن ڪريو",
+            "title_main": "بڻجو هڪ",
+            "title_accent": "PMA ميمبر",
+            "lead_text": "ثالثن، ADR جي پيشيور ماهرن ۽ ادارتي اڳواڻن جي هڪ معزز برادري ۾ شامل ٿيو جيڪي پرامن طريقي سان تڪرارن جي حل لاءِ پرعزم آهن."
+          },
+          "why_join": {
+            "title_main": "PMA ڇو",
+            "title_accent": "جوائن",
+            "title_end": "ڪجي؟",
+            "subtitle": "PMA جا ميمبر پيشيورانه فائدن ۽ موقعن جي هڪ واضح سلسلي مان لطف اندوز ٿين ٿا.",
+            "cards": [
+              {
+                "title": "بين الاقوامي ڪانفرنسون",
+                "description": "رعايتي فيس ۽ ترجيحي رجسٽريشن سان ثالثي (mediation) ۽ پنچائيت (arbitration) جي جديد مسئلن تي عالمي ڪانفرنسن ۾ شرڪت ڪريو."
+              },
+              {
+                "title": "ورڪشاپون ۽ ڪورسز",
+                "description": "اعليٰ معيار جي تعليمي ورڪشاپن ۽ پيشيورانه ترقي جي ڪورسز تائين رسائي حاصل ڪريو."
+              },
+              {
+                "title": "پيشيورانه واڌارو",
+                "description": "ماهرن جي بصيرت ۽ وسيلن جي ذريعي ثالثي ۽ ADR جي باري ۾ پنهنجي سمجھ کي وڌايو."
+              },
+              {
+                "title": "عالمي نيٽ ورڪ",
+                "description": "قيمتي قومي ۽ بين الاقوامي پيشيورانه لاڳاپا قائم ڪريو ۽ انهن کي برقرار رکو."
+              },
+              {
+                "title": "ڪاروباري موقعا",
+                "description": "پنهنجي ڪاروباري ۽ پيشيورانه واقفڪارن جي دائري کي وسيع ڪريو."
+              },
+              {
+                "title": "پيشي جي حمايت",
+                "description": "ثالثي ۽ پرامن تڪرارن جي حل جي حمايت ۽ ترقي ۾ اهم ڪردار ادا ڪريو."
+              }
+            ]
+          },
+          "benefits": {
+            "title_main": "ميمبرشپ جا",
+            "title_accent": "فائدا",
+            "subtitle": "PMA جي هڪ رجسٽرڊ ميمبر جي حيثيت ۾، توهان فائدن ۽ موقعن جي هڪ وسيع رينج مان لطف اندوز ٿيندؤ.",
+            "items": [
+              {
+                "title": "نيٽ ورڪنگ جا موقعا",
+                "description": "سڄو سال، PMA ميمبرن کي پيشيورانه لاڳاپا وڌائڻ ۽ انڊسٽري جي سرگرمين ۽ لاڙن کان باخبر رهڻ لاءِ مختلف موقعا فراهم ڪري ٿي."
+              },
+              {
+                "title": "ميمبرشپ ڊائريڪٽري",
+                "description": "خاص طور تي PMA ميمبرن لاءِ دستياب، هن ڊائريڪٽري ۾ ميمبرن ۽ ٻين عالمي تنظيمن جا اپڊيٽ ٿيل رابطي جا تفصيل موجود آهن. هي ڇپيل ۽ اليڪٽرانڪ ٻنهي صورتن ۾ دستياب آهي."
+              },
+              {
+                "title": "ميمبرشپ سرٽيفڪيٽ",
+                "description": "ميمبرن کي منظوري کان پوءِ عالمي سطح تي مڃيل ميمبرشپ سرٽيفڪيٽ جاري ڪيو ويندو آهي. سرٽيفڪيٽ سالياني ميمبرز گالا ۾ ڏنا ويندا آهن."
+              },
+              {
+                "title": "مسلسل پيشيورانه ترقي",
+                "description": "ثالثي ۽ ADR جي نامور ماهرن پاران انگريزي ۽ عربي ۾ ورتل خاص ورڪشاپن ۽ پيشيورانه ترقي جي ڪورسز تائين ترجيحي رسائي."
+              }
+            ]
+          },
+          "membership_journey": {
+            "title": "ميمبرشپ جو سفر",
+            "subtitle": "PMA جو هڪ معزز رڪن بڻجڻ جو هڪ سادو طريقو.",
+            "steps": [
+              {
+                "num": "1",
+                "title": "ميمبرشپ فارم جمع ڪرايو",
+                "desc": "آن لائن درخواست فارم پُر ڪريو."
+              },
+              {
+                "num": "2",
+                "title": "پروفائل جو جائزو",
+                "desc": "اسان جي ٽيم توهان جي درخواست جو جائزو وٺندي."
+              },
+              {
+                "num": "3",
+                "title": "ميمبرشپ جي منظوري",
+                "desc": "توهان جي درخواست منظور ٿيڻ بعد توهان کي آگاهه ڪيو ويندو."
+              },
+              {
+                "num": "4",
+                "title": "PMA ۾ ڀليڪار",
+                "desc": "پنهنجو ميمبرشپ سرٽيفڪيٽ حاصل ڪريو ۽ اسان جي پيشيور نيٽ ورڪ جو حصو بڻجو."
+              }
+            ]
+          },
+          "membership_application": {
+            "form_header": {
+              "title": "ميمبرشپ درخواست فارم",
+              "desc": "برائي مھرباني درست معلومات فراهم ڪريو. اهي سڀ فيلڊز جن تي * جو نشان آهي لازمي آهن."
+            },
+            "sections": {
+              "personal_info": {
+                "title": "ذاتي معلومات",
+                "fields": {
+                  "full_name": { "label": "پورو نالو", "placeholder": "پنهنجو پورو نالو درج ڪريو" },
+                  "father_name": { "label": "پيءُ جو نالو", "placeholder": "پيءُ جو نالو درج ڪريو" },
+                  "qualification": { "label": "تعليمي قابليت", "placeholder": "تعليمي قابليت درج ڪريو" },
+                  "designation": { "label": "عهدو", "placeholder": "عهدو درج ڪريو" },
+                  "cnic": { "label": "سڃاڻپ ڪارڊ نمبر (CNIC)", "placeholder": "سڃاڻپ ڪارڊ نمبر درج ڪريو" },
+                  "chamber_phone": { "label": "چيمبر فون", "placeholder": "چيمبر جو فون نمبر درج ڪريو" }
+                }
+              },
+              "contact_info": {
+                "title": "رابطي جي معلومات",
+                "fields": {
+                  "office_address": { "label": "دفتر جو پتو", "placeholder": "دفتر جو پتو درج ڪريو" },
+                  "res_address": { "label": "رهاڪو پتو", "placeholder": "رهائشي پتو درج ڪريو" },
+                  "res_phone": { "label": "گھر جو فون", "placeholder": "گھر جو فون نمبر درج ڪريو" },
+                  "email": { "label": "اي ميل", "placeholder": "اي ميل ايڊريس درج ڪريو" },
+                  "upload": {
+                    "label": "دستاويز اپ لوڊ ڪريو",
+                    "text": "فائل چونڊيو يا هتي ڇڪي اچو (Drag)",
+                    "hint": "PDF, JPG, PNG (وڌ ۾ وڌ 5MB)"
+                  }
+                }
+              },
+              "references": {
+                "title": "پيشيورانه حوالا (References)",
+                "fields": {
+                  "proposer_name": { "label": "تجويز ڪندڙ جو پورو نالو", "placeholder": "پروپوزر جو پورو نالو درج ڪريو" },
+                  "proposer_address": { "label": "تجويز ڪندڙ جو رهاڪو پتو", "placeholder": "پتو درج ڪريو" },
+                  "proposer_phone": { "label": "تجويز ڪندڙ جو فون", "placeholder": "فون نمبر درج ڪريو" },
+                  "seconder_name": { "label": "تائيد ڪندڙ جو پورو نالو", "placeholder": "سيڪنڊر جو پورو نالو درج ڪريو" },
+                  "seconder_address": { "label": "تائيد ڪندڙ جو رهاڪو پتو", "placeholder": "پتو درج ڪريو" },
+                  "seconder_phone": { "label": "تائيد ڪندڙ جو فون", "placeholder": "فون نمبر درج ڪريو" }
+                }
+              }
+            },
+            "declaration": "مان اقرار ڪريان ٿو/ٿي ته مٿي ڏنل معلومات سچي ۽ درست آهي.",
+            "submit_btn": "درخواست جمع ڪرايو",
+            "sidebar": {
+              "title_main": "مثبت تبديليءَ جو",
+              "title_accent": "حصو بڻجو",
+              "desc": "PMA ۾ شامل ٿيو ۽ ڳالهه ٻولهه، افهام و تفهيم ۽ پرامن تڪرارن جي حل جي ثقافت کي هٿي ڏيارڻ ۾ پنهنجو ڪردار ادا ڪريو.",
+              "list": [
+                "پيشيورانه سڃاڻپ",
+                "سکن ۽ واڌارو",
+                "نيٽ ورڪنگ ۽ تعاون",
+                "اثرائتي ڀاڱيداري"
+              ],
+              "quote": "اسان گڏجي ثالثي جي ذريعي هڪ وڌيڪ هماهنگ ۽ انصاف واري سماج کي جوڙي سگهون ٿا.",
+              "author": "- PMA"
+            }
+          }
+        }
       }
     }
   };
