@@ -1204,7 +1204,226 @@
           "former_president": "الرؤساء السابقون"
         },
         "search_placeholder": "ابحث بالاسم أو التخصص..."
-      }
+      },
+      "members": {
+    "member_1": {
+      "name": "آغا ظفر أحمد",
+      "title": "الرئيس",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ آغا ظفر أحمد"
+    },
+    "member_2": {
+      "name": "صائمة أمين خواجة",
+      "title": "نائب الرئيس – الشمال",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ صائمة أمين خواجة"
+    },
+    "member_3": {
+      "name": "أسفند يار علي خان",
+      "title": "نائب الرئيس – الشمال",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ أسفند يار علي خان"
+    },
+    "member_4": {
+      "name": "سعيد حبيب",
+      "title": "نائب الرئيس – الجنوب",
+      "badges": {
+        "executive_team": "الفريق التنفيذي"
+      },
+      "aria_label": "عرض الملف الشخصي لـ سعيد حبيب"
+    },
+    "member_5": {
+      "name": "شبانة علي",
+      "title": "نائب الرئيس – الجنوب",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "pma_accredited": "وسيط معتمد من PMA"
+      },
+      "aria_label": "عرض الملف الشخصي لـ شبانة علي"
+    },
+    "member_6": {
+      "name": "وجيهة عليم",
+      "title": "الأمين العام",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ وجيهة عليم"
+    },
+    "member_7": {
+      "name": "سيد صمد الحق",
+      "title": "الأمين المالي",
+      "badges": {
+        "executive_team": "الفريق التنفيذي"
+      },
+      "aria_label": "عرض الملف الشخصي لـ سيد صمد الحق"
+    },
+    "member_8": {
+      "name": "طارق سعيد رانا",
+      "title": "اللجنة التنفيذية – الشمال",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ طارق سعيد رانا"
+    },
+    "member_9": {
+      "name": "هما شاه",
+      "title": "اللجنة التنفيذية – الشمال",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ هما شاه"
+    },
+    "member_10": {
+      "name": "أميمة أنور خان",
+      "title": "اللجنة التنفيذية – الجنوب",
+      "badges": {
+        "executive_team": "الفريق التنفيذي"
+      },
+      "aria_label": "عرض الملف الشخصي لـ أميمة أنور خان"
+    },
+    "member_11": {
+      "name": "مستنصر ذاكر",
+      "title": "اللجنة التنفيذية – الجنوب",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ مستنصر ذاكر"
+    },
+    "member_12": {
+      "name": "عدنان مفتي",
+      "title": "اللجنة التنفيذية – الجنوب",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ عدنان مفتي"
     }
+  },
+  "trainers": {
+    "trainer_1": {
+      "name": "مستنصر ذاكر",
+      "title": "مدرب رئيسي",
+      "badges": {
+        "master_trainer": "مدرب رئيسي",
+        "director_training": "مدير التدريب",
+        "ex_president": "الرئيس السابق"
+      },
+      "aria_label": "عرض الملف الشخصي لـ مستنصر ذاكر"
+    },
+    "trainer_2": {
+      "name": "أنور كاشف ممتاز",
+      "title": "مدرب رئيسي",
+      "badges": {
+        "master_trainer": "مدرب رئيسي",
+        "ex_president": "الرئيس السابق",
+        "leadership_trainer": "مدرب القيادة"
+      },
+      "aria_label": "عرض الملف الشخصي لـ أنور كاشف ممتاز"
+    },
+    "trainer_3": {
+      "name": "طارق سعيد رانا",
+      "title": "مدرب رئيسي",
+      "badges": {
+        "master_trainer": "مدرب رئيسي",
+        "ex_president": "الرئيس السابق",
+        "executive_committee_north": "اللجنة التنفيذية – الشمال"
+      },
+      "aria_label": "عرض الملف الشخصي لـ طارق سعيد رانا"
+    },
+    "trainer_4": {
+      "name": "صائمة أمين خواجة",
+      "title": "مدرب رئيسي",
+      "badges": {
+        "master_trainer": "مدرب رئيسي",
+        "executive_member": "عضو تنفيذي",
+        "vice_president_north": "نائب الرئيس – الشمال"
+      },
+      "aria_label": "عرض الملف الشخصي لـ صائمة أمين خواجة"
+    },
+    "trainer_5": {
+      "name": "هما شاه",
+      "title": "مدرب رئيسي",
+      "badges": {
+        "master_trainer": "مدرب رئيسي",
+        "executive_committee_north": "اللجنة التنفيذية – الشمال",
+        "training_committee": "لجنة التدريب"
+      },
+      "aria_label": "عرض الملف الشخصي لـ هما شاه"
+    },
+    "trainer_6": {
+      "name": "عثمان جي راشد",
+      "title": "مدرب رئيسي",
+      "badges": {
+        "master_trainer": "مدرب رئيسي",
+        "barrister_at_law": "محامٍ مستشار (باريسر)",
+        "former_secretary_general": "الأمين العام السابق – PMA"
+      },
+      "aria_label": "عرض الملف الشخصي لـ عثمان جي راشد"
+    },
+    "trainer_7": {
+      "name": "أسفند يار علي خان",
+      "title": "مدرب رئيسي",
+      "badges": {
+        "master_trainer": "مدرب رئيسي",
+        "executive_leadership": "القيادة التنفيذية",
+        "vice_president_north": "نائب الرئيس – الشمال"
+      },
+      "aria_label": "عرض الملف الشخصي لـ أسفند يار علي خان"
+    }
+  },
+  "former_presidents": {
+    "president_1": {
+      "name": "أنور كاشف ممتاز",
+      "title": "الرئيس السابق"
+    },
+    "president_2": {
+      "name": "مستنصر ذاكر",
+      "title": "الرئيس السابق"
+    },
+    "president_3": {
+      "name": "طارق سعيد رانا",
+      "title": "الرئيس السابق"
+    }
+  }
+    },
+    "resources_page": {
+    "hero": {
+      "image_alt": "صورة بطل الخدمات",
+      "eyebrow": "المصادر",
+      "title_line1": "المعرفة. القانون.",
+      "title_accent": "الإصلاح.",
+      "lead_text": "يمكنك الوصول إلى منشورات PMA، وقوانين الوساطة، والوثائق المؤسسية، والأوراق البحثية، ومصادر كسب التأييد، والمحتوى الإعلامي الذي يدعم نمو الحلول البديلة لفض المنازعات (ADR) والتسوية السلمية للنزاعات في باكستان."
+    },
+    "tabs": {
+      "featured": "مميز",
+      "downloads": "التنزيلات",
+      "mediation_laws": "قوانين الوساطة",
+      "advocacy": "المناصرة والتأييد",
+      "press_media": "الصحافة والإعلام",
+      "articles": "المقالات"
+    }
+  }
   }
 }

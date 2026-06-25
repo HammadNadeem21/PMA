@@ -1204,7 +1204,226 @@
           "former_president": "历任主席"
         },
         "search_placeholder": "按姓名或专业领域搜索..."
-      }
+      },
+      "members": {
+    "member_1": {
+      "name": "阿加·扎法尔·艾哈迈德 (Aga Zafar Ahmed)",
+      "title": "主席",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 阿加·扎法尔·艾哈迈德 的个人资料"
+    },
+    "member_2": {
+      "name": "赛玛·阿敏·卡瓦贾 (Saima Amin Khawaja)",
+      "title": "副主席 – 北区",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 赛玛·阿敏·卡瓦贾 的个人资料"
+    },
+    "member_3": {
+      "name": "阿斯凡德·亚尔·阿里·汗 (Asfand Yar Ali Khan)",
+      "title": "副主席 – 北区",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 阿斯凡德·亚尔·阿里·汗 的个人资料"
+    },
+    "member_4": {
+      "name": "赛义德·哈比卜 (Saeed Habib)",
+      "title": "副主席 – 南区",
+      "badges": {
+        "executive_team": "执行团队"
+      },
+      "aria_label": "查看 赛义德·哈比卜 的个人资料"
+    },
+    "member_5": {
+      "name": "沙巴娜·阿里 (Shabana Ali)",
+      "title": "副主席 – 南区",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "pma_accredited": "PMA 认证调解员"
+      },
+      "aria_label": "查看 沙巴娜·阿里 的个人资料"
+    },
+    "member_6": {
+      "name": "瓦吉哈·阿利姆 (Wajiha Aleem)",
+      "title": "秘书长",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 瓦吉哈·阿利姆 的个人资料"
+    },
+    "member_7": {
+      "name": "赛义德·萨马德·乌尔·哈克 (Syed Sammad-ul-Haque)",
+      "title": "财务秘书",
+      "badges": {
+        "executive_team": "执行团队"
+      },
+      "aria_label": "查看 赛义德·萨马德·乌尔·哈克 的个人资料"
+    },
+    "member_8": {
+      "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
+      "title": "执行委员会 – 北区",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 塔里克·赛义德·拉纳 的个人资料"
+    },
+    "member_9": {
+      "name": "胡玛·沙阿 (Huma Shah)",
+      "title": "执行委员会 – 北区",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 胡玛·沙阿 的个人资料"
+    },
+    "member_10": {
+      "name": "乌迈玛·安瓦尔·汗 (Umaimah Anwar Khan)",
+      "title": "执行委员会 – 南区",
+      "badges": {
+        "executive_team": "执行团队"
+      },
+      "aria_label": "查看 乌迈玛·安瓦尔·汗 的个人资料"
+    },
+    "member_11": {
+      "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
+      "title": "执行委员会 – 南区",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 穆斯坦西尔·扎基尔 的个人资料"
+    },
+    "member_12": {
+      "name": "阿德南·穆夫蒂 (Adnan Mufti)",
+      "title": "执行委员会 – 南区",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 阿德南·穆夫蒂 的个人资料"
     }
+  },
+  "trainers": {
+    "trainer_1": {
+      "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
+      "title": "高级培训师",
+      "badges": {
+        "master_trainer": "高级培训师",
+        "director_training": "培训总监",
+        "ex_president": "前任主席"
+      },
+      "aria_label": "查看 穆斯坦西尔·扎基尔 的个人资料"
+    },
+    "trainer_2": {
+      "name": "安瓦尔·卡西夫· ممتاز (Anwar Kashif Mumtaz)",
+      "title": "高级培训师",
+      "badges": {
+        "master_trainer": "高级培训师",
+        "ex_president": "前任主席",
+        "leadership_trainer": "领导力培训师"
+      },
+      "aria_label": "查看 安瓦尔·卡西夫· ممتاز 的个人资料"
+    },
+    "trainer_3": {
+      "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
+      "title": "高级培训师",
+      "badges": {
+        "master_trainer": "高级培训师",
+        "ex_president": "前任主席",
+        "executive_committee_north": "执行委员会 – 北区"
+      },
+      "aria_label": "查看 塔里克·赛义德·拉纳 的个人资料"
+    },
+    "trainer_4": {
+      "name": "赛玛·阿敏·卡瓦贾 (Saima Amin Khawaja)",
+      "title": "高级培训师",
+      "badges": {
+        "master_trainer": "高级培训师",
+        "executive_member": "执行委员",
+        "vice_president_north": "副主席 – 北区"
+      },
+      "aria_label": "查看 赛玛·阿敏·卡瓦贾 的个人资料"
+    },
+    "trainer_5": {
+      "name": "胡玛·沙阿 (Huma Shah)",
+      "title": "高级培训师",
+      "badges": {
+        "master_trainer": "高级培训师",
+        "executive_committee_north": "执行委员会 – 北区",
+        "training_committee": "培训委员会"
+      },
+      "aria_label": "查看 胡玛·沙阿 的个人资料"
+    },
+    "trainer_6": {
+      "name": "乌斯曼·G·拉希德 (Usman G. Rashid)",
+      "title": "高级培训师",
+      "badges": {
+        "master_trainer": "高级培训师",
+        "barrister_at_law": "出庭律师 (Barrister)",
+        "former_secretary_general": "前任秘书长 – PMA"
+      },
+      "aria_label": "查看 乌斯曼·G·拉希德 的个人资料"
+    },
+    "trainer_7": {
+      "name": "阿斯凡德·亚尔·阿里·汗 (Asfand Yar Ali Khan)",
+      "title": "高级培训师",
+      "badges": {
+        "master_trainer": "高级培训师",
+        "executive_leadership": "高管领导力",
+        "vice_president_north": "副主席 – 北区"
+      },
+      "aria_label": "查看 阿斯凡德·亚尔·阿里·汗 的个人资料"
+    }
+  },
+  "former_presidents": {
+    "president_1": {
+      "name": "安瓦尔·卡西夫· ممتاز (Anwar Kashif Mumtaz)",
+      "title": "前任主席"
+    },
+    "president_2": {
+      "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
+      "title": "前任主席"
+    },
+    "president_3": {
+      "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
+      "title": "前任主席"
+    }
+  }
+    },
+    "resources_page": {
+    "hero": {
+      "image_alt": "服务核心图片",
+      "eyebrow": "资源",
+      "title_line1": "知识。法律。",
+      "title_accent": "变革。",
+      "lead_text": "获取 PMA 出版物、调解法律、机构文件、研究论文、倡导资源以及媒体内容，这些内容支持巴基斯坦替代性纠纷解决机制 (ADR) 的发展与和平化解争端。"
+    },
+    "tabs": {
+      "featured": "精选",
+      "downloads": "下载中心",
+      "mediation_laws": "调解法律",
+      "advocacy": "政策倡导",
+      "press_media": "新闻与媒体",
+      "articles": "文章报告"
+    }
+  }
   }
 }

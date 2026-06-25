@@ -1204,7 +1204,226 @@
           "former_president": "سابق صدر"
         },
         "search_placeholder": "نالي يا مهارت ذريعي ڳولھيو..."
-      }
+      },
+      "members": {
+    "member_1": {
+      "name": "آغا ظفر احمد",
+      "title": "صدرسپريم",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "آغا ظفر احمد جو پروفائيل ڏسو"
+    },
+    "member_2": {
+      "name": "صائمه امين خواجه",
+      "title": "نائب صدر – اتر (نارٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "صائمه امين خواجه جو پروفائيل ڏسو"
+    },
+    "member_3": {
+      "name": "اسفند يار علي خان",
+      "title": "نائب صدر – اتر (نارٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "اسفند يار علي خان جو پروفائيل ڏسو"
+    },
+    "member_4": {
+      "name": "سعيد حبيب",
+      "title": "نائب صدر – ڏکڻ (سائوٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم"
+      },
+      "aria_label": "سعيد حبيب جو پروفائيل ڏسو"
+    },
+    "member_5": {
+      "name": "شبانه علي",
+      "title": "نائب صدر – ڏکڻ (سائوٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "pma_accredited": "PMA پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "شبانه علي جو پروفائيل ڏسو"
+    },
+    "member_6": {
+      "name": "وجيهه عليم",
+      "title": "سڪريٽري جنرل",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "وجيهه عليم جو پروفائيل ڏسو"
+    },
+    "member_7": {
+      "name": "سيد صمد الحق",
+      "title": "فنانس سڪريٽري",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم"
+      },
+      "aria_label": "سيد صمد الحق جو پروفائيل ڏسو"
+    },
+    "member_8": {
+      "name": "طارق سعيد رانا",
+      "title": "ايگزيڪيوٽو ڪميٽي – اتر (نارٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "طارق سعيد رانا جو پروفائيل ڏسو"
+    },
+    "member_9": {
+      "name": "هما شاهه",
+      "title": "ايگزيڪيوٽو ڪميٽي – اتر (نارٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "هما شاهه جو پروفائيل ڏسو"
+    },
+    "member_10": {
+      "name": "اميمه انور خان",
+      "title": "ايگزيڪيوٽو ڪميٽي – ڏکڻ (سائوٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم"
+      },
+      "aria_label": "اميمه انور خان جو پروفائيل ڏسو"
+    },
+    "member_11": {
+      "name": "مستنصر ذاڪر",
+      "title": "ايگزيڪيوٽو ڪميٽي – ڏکڻ (سائوٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "مستنصر ذاڪر جو پروفائيل ڏسو"
+    },
+    "member_12": {
+      "name": "عدنان مفتي",
+      "title": "ايگزيڪيوٽو ڪميٽي – ڏکڻ (سائوٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "عدنان مفتي جو پروفائيل ڏسو"
     }
+  },
+  "trainers": {
+    "trainer_1": {
+      "name": "مستنصر ذاڪر",
+      "title": "ماستر ٽرينر",
+      "badges": {
+        "master_trainer": "ماستر ٽرينر",
+        "director_training": "ڊائريڪٽر ٽريننگ",
+        "ex_president": "سابق صدر"
+      },
+      "aria_label": "مستنصر ذاڪر جو پروفائيل ڏسو"
+    },
+    "trainer_2": {
+      "name": "انور ڪاشف ممتاز",
+      "title": "ماستر ٽرينر",
+      "badges": {
+        "master_trainer": "ماستر ٽرينر",
+        "ex_president": "سابق صدر",
+        "leadership_trainer": "ليڊرشپ ٽرينر"
+      },
+      "aria_label": "انور ڪاشف ممتاز جو پروفائيل ڏسو"
+    },
+    "trainer_3": {
+      "name": "ٽارق سعيد رانا",
+      "title": "ماستر ٽرينر",
+      "badges": {
+        "master_trainer": "ماستر ٽرينر",
+        "ex_president": "سابق صدر",
+        "executive_committee_north": "ايگزيڪيوٽو ڪميٽي – اتر"
+      },
+      "aria_label": "ٽارق سعيد رانا جو پروفائيل ڏسو"
+    },
+    "trainer_4": {
+      "name": "صائمه امين خواجه",
+      "title": "ماستر ٽرينر",
+      "badges": {
+        "master_trainer": "ماستر ٽرينر",
+        "executive_member": "ايگزيڪيوٽو ميمبر",
+        "vice_president_north": "نائب صدر – اتر"
+      },
+      "aria_label": "صائمه امين خواجه جو پروفائيل ڏسو"
+    },
+    "trainer_5": {
+      "name": "هما شاهه",
+      "title": "ماستر ٽرينر",
+      "badges": {
+        "master_trainer": "ماستر ٽرينر",
+        "executive_committee_north": "ايگزيڪيوٽو ڪميٽي – اتر",
+        "training_committee": "ٽريننگ ڪميٽي"
+      },
+      "aria_label": "هما شاهه جو پروفائيل ڏسو"
+    },
+    "trainer_6": {
+      "name": "عثمان جي راشد",
+      "title": "ماستر ٽرينر",
+      "badges": {
+        "master_trainer": "ماستر ٽرينر",
+        "barrister_at_law": "بئريسٽر ايٽ لا",
+        "former_secretary_general": "سابق سڪريٽري جنرل – PMA"
+      },
+      "aria_label": "عثمان جي راشد جو پروفائيل ڏسو"
+    },
+    "trainer_7": {
+      "name": "اسفند يار علي خان",
+      "title": "ماستر ٽرينر",
+      "badges": {
+        "master_trainer": "ماستر ٽرينر",
+        "executive_leadership": "ايگزيڪيوٽو ليڊرشپ",
+        "vice_president_north": "نائب صدر – اتر"
+      },
+      "aria_label": "اسفند يار علي خان جو پروفائيل ڏسو"
+    }
+  },
+  "former_presidents": {
+    "president_1": {
+      "name": "انور ڪاشف ممتاز",
+      "title": "سابق صدر"
+    },
+    "president_2": {
+      "name": "مستنصر ذاڪر",
+      "title": "سابق صدر"
+    },
+    "president_3": {
+      "name": "ٽارق سعيد رانا",
+      "title": "سابق صدر"
+    }
+  }
+    },
+    "resources_page": {
+    "hero": {
+      "image_alt": "سروسز هيرو تصوير",
+      "eyebrow": "وسيلا (RESOURCES)",
+      "title_line1": "علم. قانون.",
+      "title_accent": "اصلاح.",
+      "lead_text": "پي ايم اي (PMA) جي اشاعتن، ثالثي جي قانونن، ادارتي دستاويزن، تحقيقي مقالن، وڪالتي وسيلن، ۽ ميڊيا مواد تائين رسائي حاصل ڪريو جيڪي پاڪستان ۾ اي ڊي آر (ADR) ۽ پرامن طريقي سان تڪرارن جي حل کي هٿي ڏين ٿا."
+    },
+    "tabs": {
+      "featured": "نمایاں (خاص)",
+      "downloads": "ڊائون لوڊز",
+      "mediation_laws": "ثالثي جا قانون",
+      "advocacy": "وڪالت ۽ حمايت (Advocacy)",
+      "press_media": "پريس ۽ ميڊيا",
+      "articles": "مضمون"
+    }
+  }
   }
 }

@@ -1204,7 +1204,227 @@
           "former_president": "Former Presidents"
         },
         "search_placeholder": "Search by name or expertise..."
+      },
+      "members": {
+      "member_1": {
+        "name": "Aga Zafar Ahmed",
+        "title": "President",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Aga Zafar Ahmed"
+      },
+      "member_2": {
+        "name": "Saima Amin Khawaja",
+        "title": "Vice President – North",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Saima Amin Khawaja"
+      },
+      "member_3": {
+        "name": "Asfand Yar Ali Khan",
+        "title": "Vice President – North",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Asfand Yar Ali Khan"
+      },
+      "member_4": {
+        "name": "Saeed Habib",
+        "title": "Vice President – South",
+        "badges": {
+          "executive_team": "Executive Team"
+        },
+        "aria_label": "View profile of Saeed Habib"
+      },
+      "member_5": {
+        "name": "Shabana Ali",
+        "title": "Vice President – South",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "pma_accredited": "PMA Accredited Mediator"
+        },
+        "aria_label": "View profile of Shabana Ali"
+      },
+      "member_6": {
+        "name": "Wajiha Aleem",
+        "title": "Secretary General",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Wajiha Aleem"
+      },
+      "member_7": {
+        "name": "Syed Sammad-ul-Haque",
+        "title": "Finance Secretary",
+        "badges": {
+          "executive_team": "Executive Team"
+        },
+        "aria_label": "View profile of Syed Sammad-ul-Haque"
+      },
+      "member_8": {
+        "name": "Tariq Saeed Rana",
+        "title": "Executive Committee – North",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Tariq Saeed Rana"
+      },
+      "member_9": {
+        "name": "Huma Shah",
+        "title": "Executive Committee – North",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Huma Shah"
+      },
+      "member_10": {
+        "name": "Umaimah Anwar Khan",
+        "title": "Executive Committee – South",
+        "badges": {
+          "executive_team": "Executive Team"
+        },
+        "aria_label": "View profile of Umaimah Anwar Khan"
+      },
+      "member_11": {
+        "name": "Mustansir Zakir",
+        "title": "Executive Committee – South",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Mustansir Zakir"
+      },
+      "member_12": {
+        "name": "Adnan Mufti",
+        "title": "Executive Committee – South",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Adnan Mufti"
       }
+    },
+    "trainers": {
+    "trainer_1": {
+      "name": "Mustansir Zakir",
+      "title": "Master Trainer",
+      "badges": {
+        "master_trainer": "Master Trainer",
+        "director_training": "Director Training",
+        "ex_president": "Ex-President"
+      },
+      "aria_label": "View profile of Mustansir Zakir"
+    },
+    "trainer_2": {
+      "name": "Anwar Kashif Mumtaz",
+      "title": "Master Trainer",
+      "badges": {
+        "master_trainer": "Master Trainer",
+        "ex_president": "Ex-President",
+        "leadership_trainer": "Leadership Trainer"
+      },
+      "aria_label": "View profile of Anwar Kashif Mumtaz"
+    },
+    "trainer_3": {
+      "name": "Tariq Saeed Rana",
+      "title": "Master Trainer",
+      "badges": {
+        "master_trainer": "Master Trainer",
+        "ex_president": "Ex-President",
+        "executive_committee_north": "Executive Committee – North"
+      },
+      "aria_label": "View profile of Tariq Saeed Rana"
+    },
+    "trainer_4": {
+      "name": "Saima Amin Khawaja",
+      "title": "Master Trainer",
+      "badges": {
+        "master_trainer": "Master Trainer",
+        "executive_member": "Executive Member",
+        "vice_president_north": "Vice President – North"
+      },
+      "aria_label": "View profile of Saima Amin Khawaja"
+    },
+    "trainer_5": {
+      "name": "Huma Shah",
+      "title": "Master Trainer",
+      "badges": {
+        "master_trainer": "Master Trainer",
+        "executive_committee_north": "Executive Committee – North",
+        "training_committee": "Training Committee"
+      },
+      "aria_label": "View profile of Huma Shah"
+    },
+    "trainer_6": {
+      "name": "Usman G. Rashid",
+      "title": "Master Trainer",
+      "badges": {
+        "master_trainer": "Master Trainer",
+        "barrister_at_law": "Barrister-at-Law",
+        "former_secretary_general": "Former Secretary General – PMA"
+      },
+      "aria_label": "View profile of Usman G. Rashid"
+    },
+    "trainer_7": {
+      "name": "Asfand Yar Ali Khan",
+      "title": "Master Trainer",
+      "badges": {
+        "master_trainer": "Master Trainer",
+        "executive_leadership": "Executive Leadership",
+        "vice_president_north": "Vice President – North"
+      },
+      "aria_label": "View profile of Asfand Yar Ali Khan"
     }
+  },
+  "former_presidents": {
+    "president_1": {
+      "name": "Anwar Kashif Mumtaz",
+      "title": "Former President"
+    },
+    "president_2": {
+      "name": "Mustansir Zakir",
+      "title": "Former President"
+    },
+    "president_3": {
+      "name": "Tariq Saeed Rana",
+      "title": "Former President"
+    }
+  }
+    },
+    "resources_page": {
+    "hero": {
+      "image_alt": "Services Hero",
+      "eyebrow": "RESOURCES",
+      "title_line1": "Knowledge. Law.",
+      "title_accent": "Reform.",
+      "lead_text": "Access PMA publications, mediation laws, institutional documents, research papers, advocacy resources, and media content that support the growth of ADR and peaceful dispute resolution in Pakistan."
+    },
+    "tabs": {
+      "featured": "Featured",
+      "downloads": "Downloads",
+      "mediation_laws": "Mediation Laws",
+      "advocacy": "Advocacy",
+      "press_media": "Press & Media",
+      "articles": "Articles"
+    }
+  }
+    
   }
 }

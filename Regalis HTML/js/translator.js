@@ -1021,8 +1021,227 @@
               "former_president": "Former Presidents"
             },
             "search_placeholder": "Search by name or expertise..."
-          }
-        }
+          },
+          "members": {
+      "member_1": {
+        "name": "Aga Zafar Ahmed",
+        "title": "President",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Aga Zafar Ahmed"
+      },
+      "member_2": {
+        "name": "Saima Amin Khawaja",
+        "title": "Vice President – North",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Saima Amin Khawaja"
+      },
+      "member_3": {
+        "name": "Asfand Yar Ali Khan",
+        "title": "Vice President – North",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Asfand Yar Ali Khan"
+      },
+      "member_4": {
+        "name": "Saeed Habib",
+        "title": "Vice President – South",
+        "badges": {
+          "executive_team": "Executive Team"
+        },
+        "aria_label": "View profile of Saeed Habib"
+      },
+      "member_5": {
+        "name": "Shabana Ali",
+        "title": "Vice President – South",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "pma_accredited": "PMA Accredited Mediator"
+        },
+        "aria_label": "View profile of Shabana Ali"
+      },
+      "member_6": {
+        "name": "Wajiha Aleem",
+        "title": "Secretary General",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Wajiha Aleem"
+      },
+      "member_7": {
+        "name": "Syed Sammad-ul-Haque",
+        "title": "Finance Secretary",
+        "badges": {
+          "executive_team": "Executive Team"
+        },
+        "aria_label": "View profile of Syed Sammad-ul-Haque"
+      },
+      "member_8": {
+        "name": "Tariq Saeed Rana",
+        "title": "Executive Committee – North",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Tariq Saeed Rana"
+      },
+      "member_9": {
+        "name": "Huma Shah",
+        "title": "Executive Committee – North",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Huma Shah"
+      },
+      "member_10": {
+        "name": "Umaimah Anwar Khan",
+        "title": "Executive Committee – South",
+        "badges": {
+          "executive_team": "Executive Team"
+        },
+        "aria_label": "View profile of Umaimah Anwar Khan"
+      },
+      "member_11": {
+        "name": "Mustansir Zakir",
+        "title": "Executive Committee – South",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Mustansir Zakir"
+      },
+      "member_12": {
+        "name": "Adnan Mufti",
+        "title": "Executive Committee – South",
+        "badges": {
+          "executive_team": "Executive Team",
+          "mediator": "Mediator",
+          "cedr_accredited": "CEDR Accredited Mediator"
+        },
+        "aria_label": "View profile of Adnan Mufti"
+      }
+    },
+    "trainers": {
+    "trainer_1": {
+      "name": "Mustansir Zakir",
+      "title": "Master Trainer",
+      "badges": {
+        "master_trainer": "Master Trainer",
+        "director_training": "Director Training",
+        "ex_president": "Ex-President"
+      },
+      "aria_label": "View profile of Mustansir Zakir"
+    },
+    "trainer_2": {
+      "name": "Anwar Kashif Mumtaz",
+      "title": "Master Trainer",
+      "badges": {
+        "master_trainer": "Master Trainer",
+        "ex_president": "Ex-President",
+        "leadership_trainer": "Leadership Trainer"
+      },
+      "aria_label": "View profile of Anwar Kashif Mumtaz"
+    },
+    "trainer_3": {
+      "name": "Tariq Saeed Rana",
+      "title": "Master Trainer",
+      "badges": {
+        "master_trainer": "Master Trainer",
+        "ex_president": "Ex-President",
+        "executive_committee_north": "Executive Committee – North"
+      },
+      "aria_label": "View profile of Tariq Saeed Rana"
+    },
+    "trainer_4": {
+      "name": "Saima Amin Khawaja",
+      "title": "Master Trainer",
+      "badges": {
+        "master_trainer": "Master Trainer",
+        "executive_member": "Executive Member",
+        "vice_president_north": "Vice President – North"
+      },
+      "aria_label": "View profile of Saima Amin Khawaja"
+    },
+    "trainer_5": {
+      "name": "Huma Shah",
+      "title": "Master Trainer",
+      "badges": {
+        "master_trainer": "Master Trainer",
+        "executive_committee_north": "Executive Committee – North",
+        "training_committee": "Training Committee"
+      },
+      "aria_label": "View profile of Huma Shah"
+    },
+    "trainer_6": {
+      "name": "Usman G. Rashid",
+      "title": "Master Trainer",
+      "badges": {
+        "master_trainer": "Master Trainer",
+        "barrister_at_law": "Barrister-at-Law",
+        "former_secretary_general": "Former Secretary General – PMA"
+      },
+      "aria_label": "View profile of Usman G. Rashid"
+    },
+    "trainer_7": {
+      "name": "Asfand Yar Ali Khan",
+      "title": "Master Trainer",
+      "badges": {
+        "master_trainer": "Master Trainer",
+        "executive_leadership": "Executive Leadership",
+        "vice_president_north": "Vice President – North"
+      },
+      "aria_label": "View profile of Asfand Yar Ali Khan"
+    }
+  },
+  "former_presidents": {
+    "president_1": {
+      "name": "Anwar Kashif Mumtaz",
+      "title": "Former President"
+    },
+    "president_2": {
+      "name": "Mustansir Zakir",
+      "title": "Former President"
+    },
+    "president_3": {
+      "name": "Tariq Saeed Rana",
+      "title": "Former President"
+    }
+  }
+        },
+        "resources_page": {
+    "hero": {
+      "image_alt": "Services Hero",
+      "eyebrow": "RESOURCES",
+      "title_line1": "Knowledge. Law.",
+      "title_accent": "Reform.",
+      "lead_text": "Access PMA publications, mediation laws, institutional documents, research papers, advocacy resources, and media content that support the growth of ADR and peaceful dispute resolution in Pakistan."
+    },
+    "tabs": {
+      "featured": "Featured",
+      "downloads": "Downloads",
+      "mediation_laws": "Mediation Laws",
+      "advocacy": "Advocacy",
+      "press_media": "Press & Media",
+      "articles": "Articles"
+    }
+  }
       }
     },
     ur: {
@@ -2035,8 +2254,228 @@
               "former_president": "سابق صدور"
             },
             "search_placeholder": "نام یا مہارت کے ذریعے تلاش کریں..."
-          }
-        }
+          },
+          "members": {
+    "member_1": {
+      "name": "آغا ظفر احمد",
+      "title": "صدر",
+      "badges": {
+        "executive_team": "ایگزیکٹو ٹیم",
+        "mediator": "ثالث (Mediator)",
+        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+      },
+      "aria_label": "آغا ظفر احمد کا پروفائل دیکھیں"
+    },
+    "member_2": {
+      "name": "صائمہ امین خواجہ",
+      "title": "نائب صدر – نارتھ",
+      "badges": {
+        "executive_team": "ایگزیکٹو ٹیم",
+        "mediator": "ثالث (Mediator)",
+        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+      },
+      "aria_label": "صائمہ امین خواجہ کا پروفائل دیکھیں"
+    },
+    "member_3": {
+      "name": "اسفند یار علی خان",
+      "title": "نائب صدر – نارتھ",
+      "badges": {
+        "executive_team": "ایگزیکٹو ٹیم",
+        "mediator": "ثالث (Mediator)",
+        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+      },
+      "aria_label": "اسفند یار علی خان کا پروفائل دیکھیں"
+    },
+    "member_4": {
+      "name": "سعید حبیب",
+      "title": "نائب صدر – ساؤتھ",
+      "badges": {
+        "executive_team": "ایگزیکٹو ٹیم"
+      },
+      "aria_label": "سعید حبیب کا پروفائل دیکھیں"
+    },
+    "member_5": {
+      "name": "شبانہ علی",
+      "title": "نائب صدر – ساؤتھ",
+      "badges": {
+        "executive_team": "ایگزیکٹو ٹیم",
+        "mediator": "ثاث (Mediator)",
+        "pma_accredited": "PMA سے منظور شدہ ثالث"
+      },
+      "aria_label": "شبانہ علی کا پروفائل دیکھیں"
+    },
+    "member_6": {
+      "name": "وجیہہ علیم",
+      "title": "سیکرٹری جنرل",
+      "badges": {
+        "executive_team": "ایگزیکٹو ٹیم",
+        "mediator": "ثالث (Mediator)",
+        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+      },
+      "aria_label": "وجیہہ علیم کا پروفائل دیکھیں"
+    },
+    "member_7": {
+      "name": "سید صمد الحق",
+      "title": "فنانس سیکرٹری",
+      "badges": {
+        "executive_team": "ایگزیکٹو ٹیم"
+      },
+      "aria_label": "سید صمد الحق کا پروفائل دیکھیں"
+    },
+    "member_8": {
+      "name": "طارق سعید رانا",
+      "title": "ایگزیکٹو کمیٹی – نارتھ",
+      "badges": {
+        "executive_team": "ایگزیکٹو ٹیم",
+        "mediator": "ثالث (Mediator)",
+        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+      },
+      "aria_label": "طارق سعید رانا کا پروفائل دیکھیں"
+    },
+    "member_9": {
+      "name": "ہما شاہ",
+      "title": "ایگزیکٹو کمیٹی – نارتھ",
+      "badges": {
+        "executive_team": "ایگزیکٹو ٹیم",
+        "mediator": "ثالث (Mediator)",
+        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+      },
+      "aria_label": "ہما شاہ کا پروفائل دیکھیں"
+    },
+    "member_10": {
+      "name": "امیمہ انور خان",
+      "title": "ایگزیکٹو کمیٹی – ساؤتھ",
+      "badges": {
+        "executive_team": "ایگزیکٹو ٹیم"
+      },
+      "aria_label": "امیمہ انور خان کا پروفائل دیکھیں"
+    },
+    "member_11": {
+      "name": "مستنصر ذاکر",
+      "title": "ایگزیکٹو کمیٹی – ساؤتھ",
+      "badges": {
+        "executive_team": "ایگزیکٹو ٹیم",
+        "mediator": "ثالث (Mediator)",
+        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+      },
+      "aria_label": "مستنصر ذاکر کا پروفائل دیکھیں"
+    },
+    "member_12": {
+      "name": "عدنان مفتی",
+      "title": "ایگزیکٹو کمیٹی – ساؤتھ",
+      "badges": {
+        "executive_team": "ایگزیکٹو ٹیم",
+        "mediator": "ثالث (Mediator)",
+        "cedr_accredited": "CEDR سے منظور شدہ ثالث"
+      },
+      "aria_label": "عدنان مفتی کا پروفائل دیکھیں"
+    }
+  },
+  "trainers": {
+    "trainer_1": {
+      "name": "مستنصر ذاکر",
+      "title": "ماسٹر ٹرینر",
+      "badges": {
+        "master_trainer": "ماسٹر ٹرینر",
+        "director_training": "ڈائریکٹر ٹریننگ",
+        "ex_president": "سابق صدر"
+      },
+      "aria_label": "مستنصر ذاکر کا پروفائل دیکھیں"
+    },
+    "trainer_2": {
+      "name": "انور کاشف ممتاز",
+      "title": "ماسٹر ٹرینر",
+      "badges": {
+        "master_trainer": "ماسٹر ٹرینر",
+        "ex_president": "سابق صدر",
+        "leadership_trainer": "لیڈرشپ ٹرینر"
+      },
+      "aria_label": "انور کاشف ممتاز کا پروفائل دیکھیں"
+    },
+    "trainer_3": {
+      "name": "طارق سعید رانا",
+      "title": "ماسٹر ٹرینر",
+      "badges": {
+        "master_trainer": "ماسٹر ٹرینر",
+        "ex_president": "سابق صدر",
+        "executive_committee_north": "ایگزیکٹو کمیٹی – نارتھ"
+      },
+      "aria_label": "طارق سعید رانا کا پروفائل دیکھیں"
+    },
+    "trainer_4": {
+      "name": "صائمہ امین خواجہ",
+      "title": "ماسٹر ٹرینر",
+      "badges": {
+        "master_trainer": "ماسٹر ٹرینر",
+        "executive_member": "ایگزیکٹو ممبر",
+        "vice_president_north": "نائب صدر – نارتھ"
+      },
+      "aria_label": "صائمہ امین خواجہ کا پروفائل دیکھیں"
+    },
+    "trainer_5": {
+      "name": "ہما شاہ",
+      "title": "ماسٹر ٹرینر",
+      "badges": {
+        "master_trainer": "ماسٹر ٹرینر",
+        "executive_committee_north": "ایگزیکٹو کمیٹی – نارتھ",
+        "training_committee": "ٹریننگ کمیٹی"
+      },
+      "aria_label": "ہما شاہ کا پروفائل دیکھیں"
+    },
+    "trainer_6": {
+      "name": "عثمان جی راشد",
+      "title": "ماسٹر ٹرینر",
+      "badges": {
+        "master_trainer": "ماسٹر ٹرینر",
+        "barrister_at_law": "بیریسٹر ایٹ لاء",
+        "former_secretary_general": "سابق سیکرٹری جنرل – PMA"
+      },
+      "aria_label": "عثمان جی راشد کا پروفائل دیکھیں"
+    },
+    "trainer_7": {
+      "name": "اسفند یار علی خان",
+      "title": "ماسٹر ٹرینر",
+      "badges": {
+        "master_trainer": "ماسٹر ٹرینر",
+        "executive_leadership": "ایگزیکٹو لیڈرشپ",
+        "vice_president_north": "نائب صدر – نارتھ"
+      },
+      "aria_label": "اسفند یار علی خان کا پروفائل دیکھیں"
+    }
+  },
+  "former_presidents": {
+    "president_1": {
+      "name": "انور کاشف ممتاز",
+      "title": "سابق صدر"
+    },
+    "president_2": {
+      "name": "مستنصر ذاکر",
+      "title": "سابق صدر"
+    },
+    "president_3": {
+      "name": "طارق سعید رانا",
+      "title": "سابق صدر"
+    }
+  }
+
+        },
+        "resources_page": {
+    "hero": {
+      "image_alt": "سروسز ہیرو امیج",
+      "eyebrow": "وسائل (RESOURCES)",
+      "title_line1": "علم۔ قانون۔",
+      "title_accent": "اصلاح۔",
+      "lead_text": "پی ایم اے (PMA) کی مطبوعات، ثالثی کے قوانین، ادارہ جاتی دستاویزات، تحقیقی مقالات، وکالتی وسائل، اور میڈیا مواد تک رسائی حاصل کریں جو پاکستان میں اے ڈی آر (ADR) اور پرامن حلِ تنازعات کے فروغ میں معاون ہیں۔"
+    },
+    "tabs": {
+      "featured": "نمایاں",
+      "downloads": "ڈاؤن لوڈز",
+      "mediation_laws": "ثالثی کے قوانین",
+      "advocacy": "وکالت و حمایت (Advocacy)",
+      "press_media": "پریس اور میڈیا",
+      "articles": "مضامین"
+    }
+  }
       }
     },
     ar: {
@@ -3048,8 +3487,227 @@
               "former_president": "الرؤساء السابقون"
             },
             "search_placeholder": "ابحث بالاسم أو التخصص..."
-          }
-        }
+          },
+          "members": {
+    "member_1": {
+      "name": "آغا ظفر أحمد",
+      "title": "الرئيس",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ آغا ظفر أحمد"
+    },
+    "member_2": {
+      "name": "صائمة أمين خواجة",
+      "title": "نائب الرئيس – الشمال",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ صائمة أمين خواجة"
+    },
+    "member_3": {
+      "name": "أسفند يار علي خان",
+      "title": "نائب الرئيس – الشمال",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ أسفند يار علي خان"
+    },
+    "member_4": {
+      "name": "سعيد حبيب",
+      "title": "نائب الرئيس – الجنوب",
+      "badges": {
+        "executive_team": "الفريق التنفيذي"
+      },
+      "aria_label": "عرض الملف الشخصي لـ سعيد حبيب"
+    },
+    "member_5": {
+      "name": "شبانة علي",
+      "title": "نائب الرئيس – الجنوب",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "pma_accredited": "وسيط معتمد من PMA"
+      },
+      "aria_label": "عرض الملف الشخصي لـ شبانة علي"
+    },
+    "member_6": {
+      "name": "وجيهة عليم",
+      "title": "الأمين العام",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ وجيهة عليم"
+    },
+    "member_7": {
+      "name": "سيد صمد الحق",
+      "title": "الأمين المالي",
+      "badges": {
+        "executive_team": "الفريق التنفيذي"
+      },
+      "aria_label": "عرض الملف الشخصي لـ سيد صمد الحق"
+    },
+    "member_8": {
+      "name": "طارق سعيد رانا",
+      "title": "اللجنة التنفيذية – الشمال",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ طارق سعيد رانا"
+    },
+    "member_9": {
+      "name": "هما شاه",
+      "title": "اللجنة التنفيذية – الشمال",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ هما شاه"
+    },
+    "member_10": {
+      "name": "أميمة أنور خان",
+      "title": "اللجنة التنفيذية – الجنوب",
+      "badges": {
+        "executive_team": "الفريق التنفيذي"
+      },
+      "aria_label": "عرض الملف الشخصي لـ أميمة أنور خان"
+    },
+    "member_11": {
+      "name": "مستنصر ذاكر",
+      "title": "اللجنة التنفيذية – الجنوب",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ مستنصر ذاكر"
+    },
+    "member_12": {
+      "name": "عدنان مفتي",
+      "title": "اللجنة التنفيذية – الجنوب",
+      "badges": {
+        "executive_team": "الفريق التنفيذي",
+        "mediator": "وسيط",
+        "cedr_accredited": "وسيط معتمد من CEDR"
+      },
+      "aria_label": "عرض الملف الشخصي لـ عدنان مفتي"
+    }
+  },
+  "trainers": {
+    "trainer_1": {
+      "name": "مستنصر ذاكر",
+      "title": "مدرب رئيسي",
+      "badges": {
+        "master_trainer": "مدرب رئيسي",
+        "director_training": "مدير التدريب",
+        "ex_president": "الرئيس السابق"
+      },
+      "aria_label": "عرض الملف الشخصي لـ مستنصر ذاكر"
+    },
+    "trainer_2": {
+      "name": "أنور كاشف ممتاز",
+      "title": "مدرب رئيسي",
+      "badges": {
+        "master_trainer": "مدرب رئيسي",
+        "ex_president": "الرئيس السابق",
+        "leadership_trainer": "مدرب القيادة"
+      },
+      "aria_label": "عرض الملف الشخصي لـ أنور كاشف ممتاز"
+    },
+    "trainer_3": {
+      "name": "طارق سعيد رانا",
+      "title": "مدرب رئيسي",
+      "badges": {
+        "master_trainer": "مدرب رئيسي",
+        "ex_president": "الرئيس السابق",
+        "executive_committee_north": "اللجنة التنفيذية – الشمال"
+      },
+      "aria_label": "عرض الملف الشخصي لـ طارق سعيد رانا"
+    },
+    "trainer_4": {
+      "name": "صائمة أمين خواجة",
+      "title": "مدرب رئيسي",
+      "badges": {
+        "master_trainer": "مدرب رئيسي",
+        "executive_member": "عضو تنفيذي",
+        "vice_president_north": "نائب الرئيس – الشمال"
+      },
+      "aria_label": "عرض الملف الشخصي لـ صائمة أمين خواجة"
+    },
+    "trainer_5": {
+      "name": "هما شاه",
+      "title": "مدرب رئيسي",
+      "badges": {
+        "master_trainer": "مدرب رئيسي",
+        "executive_committee_north": "اللجنة التنفيذية – الشمال",
+        "training_committee": "لجنة التدريب"
+      },
+      "aria_label": "عرض الملف الشخصي لـ هما شاه"
+    },
+    "trainer_6": {
+      "name": "عثمان جي راشد",
+      "title": "مدرب رئيسي",
+      "badges": {
+        "master_trainer": "مدرب رئيسي",
+        "barrister_at_law": "محامٍ مستشار (باريسر)",
+        "former_secretary_general": "الأمين العام السابق – PMA"
+      },
+      "aria_label": "عرض الملف الشخصي لـ عثمان جي راشد"
+    },
+    "trainer_7": {
+      "name": "أسفند يار علي خان",
+      "title": "مدرب رئيسي",
+      "badges": {
+        "master_trainer": "مدرب رئيسي",
+        "executive_leadership": "القيادة التنفيذية",
+        "vice_president_north": "نائب الرئيس – الشمال"
+      },
+      "aria_label": "عرض الملف الشخصي لـ أسفند يار علي خان"
+    }
+  },
+  "former_presidents": {
+    "president_1": {
+      "name": "أنور كاشف ممتاز",
+      "title": "الرئيس السابق"
+    },
+    "president_2": {
+      "name": "مستنصر ذاكر",
+      "title": "الرئيس السابق"
+    },
+    "president_3": {
+      "name": "طارق سعيد رانا",
+      "title": "الرئيس السابق"
+    }
+  }
+        },
+        "resources_page": {
+    "hero": {
+      "image_alt": "صورة بطل الخدمات",
+      "eyebrow": "المصادر",
+      "title_line1": "المعرفة. القانون.",
+      "title_accent": "الإصلاح.",
+      "lead_text": "يمكنك الوصول إلى منشورات PMA، وقوانين الوساطة، والوثائق المؤسسية، والأوراق البحثية، ومصادر كسب التأييد، والمحتوى الإعلامي الذي يدعم نمو الحلول البديلة لفض المنازعات (ADR) والتسوية السلمية للنزاعات في باكستان."
+    },
+    "tabs": {
+      "featured": "مميز",
+      "downloads": "التنزيلات",
+      "mediation_laws": "قوانين الوساطة",
+      "advocacy": "المناصرة والتأييد",
+      "press_media": "الصحافة والإعلام",
+      "articles": "المقالات"
+    }
+  }
       }
     },
     ch: {
@@ -4060,8 +4718,227 @@
               "former_president": "历任主席"
             },
             "search_placeholder": "按姓名或专业领域搜索..."
-          }
-        }
+          },
+          "members": {
+    "member_1": {
+      "name": "阿加·扎法尔·艾哈迈德 (Aga Zafar Ahmed)",
+      "title": "主席",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 阿加·扎法尔·艾哈迈德 的个人资料"
+    },
+    "member_2": {
+      "name": "赛玛·阿敏·卡瓦贾 (Saima Amin Khawaja)",
+      "title": "副主席 – 北区",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 赛玛·阿敏·卡瓦贾 的个人资料"
+    },
+    "member_3": {
+      "name": "阿斯凡德·亚尔·阿里·汗 (Asfand Yar Ali Khan)",
+      "title": "副主席 – 北区",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 阿斯凡德·亚尔·阿里·汗 的个人资料"
+    },
+    "member_4": {
+      "name": "赛义德·哈比卜 (Saeed Habib)",
+      "title": "副主席 – 南区",
+      "badges": {
+        "executive_team": "执行团队"
+      },
+      "aria_label": "查看 赛义德·哈比卜 的个人资料"
+    },
+    "member_5": {
+      "name": "沙巴娜·阿里 (Shabana Ali)",
+      "title": "副主席 – 南区",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "pma_accredited": "PMA 认证调解员"
+      },
+      "aria_label": "查看 沙巴娜·阿里 的个人资料"
+    },
+    "member_6": {
+      "name": "瓦吉哈·阿利姆 (Wajiha Aleem)",
+      "title": "秘书长",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 瓦吉哈·阿利姆 的个人资料"
+    },
+    "member_7": {
+      "name": "赛义德·萨马德·乌尔·哈克 (Syed Sammad-ul-Haque)",
+      "title": "财务秘书",
+      "badges": {
+        "executive_team": "执行团队"
+      },
+      "aria_label": "查看 赛义德·萨马德·乌尔·哈克 的个人资料"
+    },
+    "member_8": {
+      "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
+      "title": "执行委员会 – 北区",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 塔里克·赛义德·拉纳 的个人资料"
+    },
+    "member_9": {
+      "name": "胡玛·沙阿 (Huma Shah)",
+      "title": "执行委员会 – 北区",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 胡玛·沙阿 的个人资料"
+    },
+    "member_10": {
+      "name": "乌迈玛·安瓦尔·汗 (Umaimah Anwar Khan)",
+      "title": "执行委员会 – 南区",
+      "badges": {
+        "executive_team": "执行团队"
+      },
+      "aria_label": "查看 乌迈玛·安瓦尔·汗 的个人资料"
+    },
+    "member_11": {
+      "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
+      "title": "执行委员会 – 南区",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 穆斯坦西尔·扎基尔 的个人资料"
+    },
+    "member_12": {
+      "name": "阿德南·穆夫蒂 (Adnan Mufti)",
+      "title": "执行委员会 – 南区",
+      "badges": {
+        "executive_team": "执行团队",
+        "mediator": "调解员",
+        "cedr_accredited": "CEDR 认证调解员"
+      },
+      "aria_label": "查看 阿德南·穆夫蒂 的个人资料"
+    }
+  },
+  "trainers": {
+    "trainer_1": {
+      "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
+      "title": "高级培训师",
+      "badges": {
+        "master_trainer": "高级培训师",
+        "director_training": "培训总监",
+        "ex_president": "前任主席"
+      },
+      "aria_label": "查看 穆斯坦西尔·扎基尔 的个人资料"
+    },
+    "trainer_2": {
+      "name": "安瓦尔·卡西夫· ممتاز (Anwar Kashif Mumtaz)",
+      "title": "高级培训师",
+      "badges": {
+        "master_trainer": "高级培训师",
+        "ex_president": "前任主席",
+        "leadership_trainer": "领导力培训师"
+      },
+      "aria_label": "查看 安瓦尔·卡西夫· ممتاز 的个人资料"
+    },
+    "trainer_3": {
+      "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
+      "title": "高级培训师",
+      "badges": {
+        "master_trainer": "高级培训师",
+        "ex_president": "前任主席",
+        "executive_committee_north": "执行委员会 – 北区"
+      },
+      "aria_label": "查看 塔里克·赛义德·拉纳 的个人资料"
+    },
+    "trainer_4": {
+      "name": "赛玛·阿敏·卡瓦贾 (Saima Amin Khawaja)",
+      "title": "高级培训师",
+      "badges": {
+        "master_trainer": "高级培训师",
+        "executive_member": "执行委员",
+        "vice_president_north": "副主席 – 北区"
+      },
+      "aria_label": "查看 赛玛·阿敏·卡瓦贾 的个人资料"
+    },
+    "trainer_5": {
+      "name": "胡玛·沙阿 (Huma Shah)",
+      "title": "高级培训师",
+      "badges": {
+        "master_trainer": "高级培训师",
+        "executive_committee_north": "执行委员会 – 北区",
+        "training_committee": "培训委员会"
+      },
+      "aria_label": "查看 胡玛·沙阿 的个人资料"
+    },
+    "trainer_6": {
+      "name": "乌斯曼·G·拉希德 (Usman G. Rashid)",
+      "title": "高级培训师",
+      "badges": {
+        "master_trainer": "高级培训师",
+        "barrister_at_law": "出庭律师 (Barrister)",
+        "former_secretary_general": "前任秘书长 – PMA"
+      },
+      "aria_label": "查看 乌斯曼·G·拉希德 的个人资料"
+    },
+    "trainer_7": {
+      "name": "阿斯凡德·亚尔·阿里·汗 (Asfand Yar Ali Khan)",
+      "title": "高级培训师",
+      "badges": {
+        "master_trainer": "高级培训师",
+        "executive_leadership": "高管领导力",
+        "vice_president_north": "副主席 – 北区"
+      },
+      "aria_label": "查看 阿斯凡德·亚尔·阿里·汗 的个人资料"
+    }
+  },
+  "former_presidents": {
+    "president_1": {
+      "name": "安瓦尔·卡西夫· ممتاز (Anwar Kashif Mumtaz)",
+      "title": "前任主席"
+    },
+    "president_2": {
+      "name": "穆斯坦西尔·扎基尔 (Mustansir Zakir)",
+      "title": "前任主席"
+    },
+    "president_3": {
+      "name": "塔里克·赛义德·拉纳 (Tariq Saeed Rana)",
+      "title": "前任主席"
+    }
+  }
+        },
+        "resources_page": {
+    "hero": {
+      "image_alt": "服务核心图片",
+      "eyebrow": "资源",
+      "title_line1": "知识。法律。",
+      "title_accent": "变革。",
+      "lead_text": "获取 PMA 出版物、调解法律、机构文件、研究论文、倡导资源以及媒体内容，这些内容支持巴基斯坦替代性纠纷解决机制 (ADR) 的发展与和平化解争端。"
+    },
+    "tabs": {
+      "featured": "精选",
+      "downloads": "下载中心",
+      "mediation_laws": "调解法律",
+      "advocacy": "政策倡导",
+      "press_media": "新闻与媒体",
+      "articles": "文章报告"
+    }
+  }
       }
     },
     psh: {
@@ -5066,8 +5943,228 @@
               "former_president": "پخواني ولسمشران / مشران"
             },
             "search_placeholder": "د نوم یا تخصص له لارې لټون وکړئ..."
-          }
-        }
+          },
+          "members": {
+    "member_1": {
+      "name": "آغا ظفر احمد",
+      "title": "مشر (صدر)",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د آغا ظفر احمد پروفایل کتل"
+    },
+    "member_2": {
+      "name": "صائمه امين خواجه",
+      "title": "مرستیال مشر – شمال",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د صائمه امين خواجه پروفایل کتل"
+    },
+    "member_3": {
+      "name": "اسفند يار علي خان",
+      "title": "مرستیال مشر – شمال",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د اسفند يار علي خان پروفایل کتل"
+    },
+    "member_4": {
+      "name": "سعید حبیب",
+      "title": "مرستیال مشر – سویل (جنوب)",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)"
+      },
+      "aria_label": "د سعید حبیب پروفایل کتل"
+    },
+    "member_5": {
+      "name": "شبانه علي",
+      "title": "مرستیال مشر – سویل (جنوب)",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "pma_accredited": "د PMA لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د شبانه علي پروفایل کتل"
+    },
+    "member_6": {
+      "name": "وجيهه عليم",
+      "title": "عمومي سکرتر (سیکرټري جنرل)",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د وجيهه عليم پروفایل کتل"
+    },
+    "member_7": {
+      "name": "سيد صمد الحق",
+      "title": "مالي سکرتر",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)"
+      },
+      "aria_label": "د سيد صمد الحق پروفایل کتل"
+    },
+    "member_8": {
+      "name": "طارق سعيد رانا",
+      "title": "اجرائيوي کمیټه – شمال",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د طارق سعيد رانا پروفایل کتل"
+    },
+    "member_9": {
+      "name": "ہما شاه",
+      "title": "اجرائيوي کمیټه – شمال",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د ہما شاه پروفایل کتل"
+    },
+    "member_10": {
+      "name": "امیمہ انور خان",
+      "title": "اجرائيوي کمیټه – سویل (جنوب)",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)"
+      },
+      "aria_label": "د امیمہ انور خان پروفایل کتل"
+    },
+    "member_11": {
+      "name": "مستنصر ذاکر",
+      "title": "اجرائيوي کمیټه – سویل (جنوب)",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د مستنصر ذاکر پروفایل کتل"
+    },
+    "member_12": {
+      "name": "عدنان مفتی",
+      "title": "اجرائيوي کمیټه – سویل (جنوب)",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځړی"
+      },
+      "aria_label": "د عدنان مفتی پروفایل کتل"
+    }
+  },
+  "trainers": {
+    "trainer_1": {
+      "name": "مستنصر ذاکر",
+      "title": "ماسټر ټرینر",
+      "badges": {
+        "master_trainer": "ماسټر ټرینر",
+        "director_training": "د روزنې مشر (ډايريکټر ټريننګ)",
+        "ex_president": "پخوانی مشر (سابق صدر)"
+      },
+      "aria_label": "د مستنصر ذاکر پروفایل کتل"
+    },
+    "trainer_2": {
+      "name": "انور کاشف ممتاز",
+      "title": "ماسټر ټرینر",
+      "badges": {
+        "master_trainer": "ماسټر ټرینر",
+        "ex_president": "پخوانی مشر (سابق صدر)",
+        "leadership_trainer": "د مشرتابه روزونکی (ليډرشپ ټرينر)"
+      },
+      "aria_label": "د انور کاشف ممتاز پروفایل کتل"
+    },
+    "trainer_3": {
+      "name": "طارق سعید رانا",
+      "title": "ماسټر ټرینر",
+      "badges": {
+        "master_trainer": "ماسټر ټرینر",
+        "ex_president": "پخوانی مشر (سابق صدر)",
+        "executive_committee_north": "اجرائيوي کمیټه – شمال"
+      },
+      "aria_label": "د طارق سعید رانا پروفایل کتل"
+    },
+    "trainer_4": {
+      "name": "صائمه امين خواجه",
+      "title": "ماسټر ټرینر",
+      "badges": {
+        "master_trainer": "ماسټر ټرینر",
+        "executive_member": "اجرائيوي غړی",
+        "vice_president_north": "مرستیال مشر – شمال"
+      },
+      "aria_label": "د صائمه امين خواجه پروفایل کتل"
+    },
+    "trainer_5": {
+      "name": "ہما شاه",
+      "title": "ماسټر ټرینر",
+      "badges": {
+        "master_trainer": "ماسټر ټرینر",
+        "executive_committee_north": "اجرائيوي کمیټه – شمال",
+        "training_committee": "د روزنې کمیټه"
+      },
+      "aria_label": "د ہما شاه پروفایل کتل"
+    },
+    "trainer_6": {
+      "name": "عثمان جي راشد",
+      "title": "ماسټر ټرینر",
+      "badges": {
+        "master_trainer": "ماسټر ټرینر",
+        "barrister_at_law": "بېریسټر (قانون پوه)",
+        "former_secretary_general": "پخوانی عمومي سکرتر – PMA"
+      },
+      "aria_label": "د عثمان جي راشد پروفایل کتل"
+    },
+    "trainer_7": {
+      "name": "اسفند يار علي خان",
+      "title": "ماسټر ټرینر",
+      "badges": {
+        "master_trainer": "ماسټر ټرینر",
+        "executive_leadership": "اجرائيوي مشرتابه",
+        "vice_president_north": "مرستیال مشر – شمال"
+      },
+      "aria_label": "د اسفند يار علي خان پروفایل کتل"
+    }
+  },
+  "former_presidents": {
+    "president_1": {
+      "name": "انور کاشف ممتاز",
+      "title": "پخوانی مشر (سابق صدر)"
+    },
+    "president_2": {
+      "name": "مستنصر ذاکر",
+      "title": "پخوانی مشر (سابق صدر)"
+    },
+    "president_3": {
+      "name": "طارق سعید رانا",
+      "title": "پخوانی مشر (سابق صدر)"
+    }
+  }
+          
+        },
+        "resources_page": {
+    "hero": {
+      "image_alt": "د خدماتو هیرو عکس",
+      "eyebrow": "سرچينې (RESOURCES)",
+      "title_line1": "پوهه. قانون.",
+      "title_accent": "اصلاح.",
+      "lead_text": "د PMA خپرونو، د منځګړیتوب قوانین، اداري اسناد، څیړنیزې مقالې، د مدافع وکالت سرچینې، او میډیا منځپانګې ته لاسرسی ومومئ کوم چې په پاکستان کې د ADR (د شخړو د بدیل حل) او د شخړو سوله ایز حل ملاتړ کوي."
+    },
+    "tabs": {
+      "featured": "غوره (نمایاں)",
+      "downloads": "ډاونلوډونه",
+      "mediation_laws": "د منځګړیتوب قوانین",
+      "advocacy": "مدافعت (Advocacy)",
+      "press_media": "مطبوعات او رسنۍ",
+      "articles": "مقالې"
+    }
+  }
       }
     },
     sd: {
@@ -6079,8 +7176,227 @@
               "former_president": "سابق صدر"
             },
             "search_placeholder": "نالي يا مهارت ذريعي ڳولھيو..."
-          }
-        }
+          },
+          "members": {
+    "member_1": {
+      "name": "آغا ظفر احمد",
+      "title": "صدرسپريم",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "آغا ظفر احمد جو پروفائيل ڏسو"
+    },
+    "member_2": {
+      "name": "صائمه امين خواجه",
+      "title": "نائب صدر – اتر (نارٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "صائمه امين خواجه جو پروفائيل ڏسو"
+    },
+    "member_3": {
+      "name": "اسفند يار علي خان",
+      "title": "نائب صدر – اتر (نارٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "اسفند يار علي خان جو پروفائيل ڏسو"
+    },
+    "member_4": {
+      "name": "سعيد حبيب",
+      "title": "نائب صدر – ڏکڻ (سائوٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم"
+      },
+      "aria_label": "سعيد حبيب جو پروفائيل ڏسو"
+    },
+    "member_5": {
+      "name": "شبانه علي",
+      "title": "نائب صدر – ڏکڻ (سائوٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "pma_accredited": "PMA پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "شبانه علي جو پروفائيل ڏسو"
+    },
+    "member_6": {
+      "name": "وجيهه عليم",
+      "title": "سڪريٽري جنرل",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "وجيهه عليم جو پروفائيل ڏسو"
+    },
+    "member_7": {
+      "name": "سيد صمد الحق",
+      "title": "فنانس سڪريٽري",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم"
+      },
+      "aria_label": "سيد صمد الحق جو پروفائيل ڏسو"
+    },
+    "member_8": {
+      "name": "طارق سعيد رانا",
+      "title": "ايگزيڪيوٽو ڪميٽي – اتر (نارٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "طارق سعيد رانا جو پروفائيل ڏسو"
+    },
+    "member_9": {
+      "name": "هما شاهه",
+      "title": "ايگزيڪيوٽو ڪميٽي – اتر (نارٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "هما شاهه جو پروفائيل ڏسو"
+    },
+    "member_10": {
+      "name": "اميمه انور خان",
+      "title": "ايگزيڪيوٽو ڪميٽي – ڏکڻ (سائوٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم"
+      },
+      "aria_label": "اميمه انور خان جو پروفائيل ڏسو"
+    },
+    "member_11": {
+      "name": "مستنصر ذاڪر",
+      "title": "ايگزيڪيوٽو ڪميٽي – ڏکڻ (سائوٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "مستنصر ذاڪر جو پروفائيل ڏسو"
+    },
+    "member_12": {
+      "name": "عدنان مفتي",
+      "title": "ايگزيڪيوٽو ڪميٽي – ڏکڻ (سائوٿ)",
+      "badges": {
+        "executive_team": "ايگزيڪيوٽو ٽيم",
+        "mediator": "ثالث (ميڊيئيٽر)",
+        "cedr_accredited": "CEDR پاران منظور ٿيل ثالث"
+      },
+      "aria_label": "عدنان مفتي جو پروفائيل ڏسو"
+    }
+  },
+  "trainers": {
+    "trainer_1": {
+      "name": "مستنصر ذاڪر",
+      "title": "ماستر ٽرينر",
+      "badges": {
+        "master_trainer": "ماستر ٽرينر",
+        "director_training": "ڊائريڪٽر ٽريننگ",
+        "ex_president": "سابق صدر"
+      },
+      "aria_label": "مستنصر ذاڪر جو پروفائيل ڏسو"
+    },
+    "trainer_2": {
+      "name": "انور ڪاشف ممتاز",
+      "title": "ماستر ٽرينر",
+      "badges": {
+        "master_trainer": "ماستر ٽرينر",
+        "ex_president": "سابق صدر",
+        "leadership_trainer": "ليڊرشپ ٽرينر"
+      },
+      "aria_label": "انور ڪاشف ممتاز جو پروفائيل ڏسو"
+    },
+    "trainer_3": {
+      "name": "ٽارق سعيد رانا",
+      "title": "ماستر ٽرينر",
+      "badges": {
+        "master_trainer": "ماستر ٽرينر",
+        "ex_president": "سابق صدر",
+        "executive_committee_north": "ايگزيڪيوٽو ڪميٽي – اتر"
+      },
+      "aria_label": "ٽارق سعيد رانا جو پروفائيل ڏسو"
+    },
+    "trainer_4": {
+      "name": "صائمه امين خواجه",
+      "title": "ماستر ٽرينر",
+      "badges": {
+        "master_trainer": "ماستر ٽرينر",
+        "executive_member": "ايگزيڪيوٽو ميمبر",
+        "vice_president_north": "نائب صدر – اتر"
+      },
+      "aria_label": "صائمه امين خواجه جو پروفائيل ڏسو"
+    },
+    "trainer_5": {
+      "name": "هما شاهه",
+      "title": "ماستر ٽرينر",
+      "badges": {
+        "master_trainer": "ماستر ٽرينر",
+        "executive_committee_north": "ايگزيڪيوٽو ڪميٽي – اتر",
+        "training_committee": "ٽريننگ ڪميٽي"
+      },
+      "aria_label": "هما شاهه جو پروفائيل ڏسو"
+    },
+    "trainer_6": {
+      "name": "عثمان جي راشد",
+      "title": "ماستر ٽرينر",
+      "badges": {
+        "master_trainer": "ماستر ٽرينر",
+        "barrister_at_law": "بئريسٽر ايٽ لا",
+        "former_secretary_general": "سابق سڪريٽري جنرل – PMA"
+      },
+      "aria_label": "عثمان جي راشد جو پروفائيل ڏسو"
+    },
+    "trainer_7": {
+      "name": "اسفند يار علي خان",
+      "title": "ماستر ٽرينر",
+      "badges": {
+        "master_trainer": "ماستر ٽرينر",
+        "executive_leadership": "ايگزيڪيوٽو ليڊرشپ",
+        "vice_president_north": "نائب صدر – اتر"
+      },
+      "aria_label": "اسفند يار علي خان جو پروفائيل ڏسو"
+    }
+  },
+  "former_presidents": {
+    "president_1": {
+      "name": "انور ڪاشف ممتاز",
+      "title": "سابق صدر"
+    },
+    "president_2": {
+      "name": "مستنصر ذاڪر",
+      "title": "سابق صدر"
+    },
+    "president_3": {
+      "name": "ٽارق سعيد رانا",
+      "title": "سابق صدر"
+    }
+  }
+        },
+        "resources_page": {
+    "hero": {
+      "image_alt": "سروسز هيرو تصوير",
+      "eyebrow": "وسيلا (RESOURCES)",
+      "title_line1": "علم. قانون.",
+      "title_accent": "اصلاح.",
+      "lead_text": "پي ايم اي (PMA) جي اشاعتن، ثالثي جي قانونن، ادارتي دستاويزن، تحقيقي مقالن، وڪالتي وسيلن، ۽ ميڊيا مواد تائين رسائي حاصل ڪريو جيڪي پاڪستان ۾ اي ڊي آر (ADR) ۽ پرامن طريقي سان تڪرارن جي حل کي هٿي ڏين ٿا."
+    },
+    "tabs": {
+      "featured": "نمایاں (خاص)",
+      "downloads": "ڊائون لوڊز",
+      "mediation_laws": "ثالثي جا قانون",
+      "advocacy": "وڪالت ۽ حمايت (Advocacy)",
+      "press_media": "پريس ۽ ميڊيا",
+      "articles": "مضمون"
+    }
+  }
       }
     }
   };

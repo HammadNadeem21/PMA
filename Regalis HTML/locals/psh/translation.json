@@ -1204,7 +1204,226 @@
           "former_president": "پخواني ولسمشران / مشران"
         },
         "search_placeholder": "د نوم یا تخصص له لارې لټون وکړئ..."
-      }
+      },
+      "members": {
+    "member_1": {
+      "name": "آغا ظفر احمد",
+      "title": "مشر (صدر)",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د آغا ظفر احمد پروفایل کتل"
+    },
+    "member_2": {
+      "name": "صائمه امين خواجه",
+      "title": "مرستیال مشر – شمال",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د صائمه امين خواجه پروفایل کتل"
+    },
+    "member_3": {
+      "name": "اسفند يار علي خان",
+      "title": "مرستیال مشر – شمال",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د اسفند يار علي خان پروفایل کتل"
+    },
+    "member_4": {
+      "name": "سعید حبیب",
+      "title": "مرستیال مشر – سویل (جنوب)",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)"
+      },
+      "aria_label": "د سعید حبیب پروفایل کتل"
+    },
+    "member_5": {
+      "name": "شبانه علي",
+      "title": "مرستیال مشر – سویل (جنوب)",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "pma_accredited": "د PMA لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د شبانه علي پروفایل کتل"
+    },
+    "member_6": {
+      "name": "وجيهه عليم",
+      "title": "عمومي سکرتر (سیکرټري جنرل)",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د وجيهه عليم پروفایل کتل"
+    },
+    "member_7": {
+      "name": "سيد صمد الحق",
+      "title": "مالي سکرتر",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)"
+      },
+      "aria_label": "د سيد صمد الحق پروفایل کتل"
+    },
+    "member_8": {
+      "name": "طارق سعيد رانا",
+      "title": "اجرائيوي کمیټه – شمال",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د طارق سعيد رانا پروفایل کتل"
+    },
+    "member_9": {
+      "name": "ہما شاه",
+      "title": "اجرائيوي کمیټه – شمال",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د ہما شاه پروفایل کتل"
+    },
+    "member_10": {
+      "name": "امیمہ انور خان",
+      "title": "اجرائيوي کمیټه – سویل (جنوب)",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)"
+      },
+      "aria_label": "د امیمہ انور خان پروفایل کتل"
+    },
+    "member_11": {
+      "name": "مستنصر ذاکر",
+      "title": "اجرائيوي کمیټه – سویل (جنوب)",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځګړی"
+      },
+      "aria_label": "د مستنصر ذاکر پروفایل کتل"
+    },
+    "member_12": {
+      "name": "عدنان مفتی",
+      "title": "اجرائيوي کمیټه – سویل (جنوب)",
+      "badges": {
+        "executive_team": "اجرائيوي ډله (ايګزيڪيوټو ټيم)",
+        "mediator": "منځګړی (ثالث)",
+        "cedr_accredited": "د CEDR لخوا منل شوی منځړی"
+      },
+      "aria_label": "د عدنان مفتی پروفایل کتل"
     }
+  },
+  "trainers": {
+    "trainer_1": {
+      "name": "مستنصر ذاکر",
+      "title": "ماسټر ټرینر",
+      "badges": {
+        "master_trainer": "ماسټر ټرینر",
+        "director_training": "د روزنې مشر (ډايريکټر ټريننګ)",
+        "ex_president": "پخوانی مشر (سابق صدر)"
+      },
+      "aria_label": "د مستنصر ذاکر پروفایل کتل"
+    },
+    "trainer_2": {
+      "name": "انور کاشف ممتاز",
+      "title": "ماسټر ټرینر",
+      "badges": {
+        "master_trainer": "ماسټر ټرینر",
+        "ex_president": "پخوانی مشر (سابق صدر)",
+        "leadership_trainer": "د مشرتابه روزونکی (ليډرشپ ټرينر)"
+      },
+      "aria_label": "د انور کاشف ممتاز پروفایل کتل"
+    },
+    "trainer_3": {
+      "name": "طارق سعید رانا",
+      "title": "ماسټر ټرینر",
+      "badges": {
+        "master_trainer": "ماسټر ټرینر",
+        "ex_president": "پخوانی مشر (سابق صدر)",
+        "executive_committee_north": "اجرائيوي کمیټه – شمال"
+      },
+      "aria_label": "د طارق سعید رانا پروفایل کتل"
+    },
+    "trainer_4": {
+      "name": "صائمه امين خواجه",
+      "title": "ماسټر ټرینر",
+      "badges": {
+        "master_trainer": "ماسټر ټرینر",
+        "executive_member": "اجرائيوي غړی",
+        "vice_president_north": "مرستیال مشر – شمال"
+      },
+      "aria_label": "د صائمه امين خواجه پروفایل کتل"
+    },
+    "trainer_5": {
+      "name": "ہما شاه",
+      "title": "ماسټر ټرینر",
+      "badges": {
+        "master_trainer": "ماسټر ټرینر",
+        "executive_committee_north": "اجرائيوي کمیټه – شمال",
+        "training_committee": "د روزنې کمیټه"
+      },
+      "aria_label": "د ہما شاه پروفایل کتل"
+    },
+    "trainer_6": {
+      "name": "عثمان جي راشد",
+      "title": "ماسټر ټرینر",
+      "badges": {
+        "master_trainer": "ماسټر ټرینر",
+        "barrister_at_law": "بېریسټر (قانون پوه)",
+        "former_secretary_general": "پخوانی عمومي سکرتر – PMA"
+      },
+      "aria_label": "د عثمان جي راشد پروفایل کتل"
+    },
+    "trainer_7": {
+      "name": "اسفند يار علي خان",
+      "title": "ماسټر ټرینر",
+      "badges": {
+        "master_trainer": "ماسټر ټرینر",
+        "executive_leadership": "اجرائيوي مشرتابه",
+        "vice_president_north": "مرستیال مشر – شمال"
+      },
+      "aria_label": "د اسفند يار علي خان پروفایل کتل"
+    }
+  },
+  "former_presidents": {
+    "president_1": {
+      "name": "انور کاشف ممتاز",
+      "title": "پخوانی مشر (سابق صدر)"
+    },
+    "president_2": {
+      "name": "مستنصر ذاکر",
+      "title": "پخوانی مشر (سابق صدر)"
+    },
+    "president_3": {
+      "name": "طارق سعید رانا",
+      "title": "پخوانی مشر (سابق صدر)"
+    }
+  }
+    },
+    "resources_page": {
+    "hero": {
+      "image_alt": "د خدماتو هیرو عکس",
+      "eyebrow": "سرچينې (RESOURCES)",
+      "title_line1": "پوهه. قانون.",
+      "title_accent": "اصلاح.",
+      "lead_text": "د PMA خپرونو، د منځګړیتوب قوانین، اداري اسناد، څیړنیزې مقالې، د مدافع وکالت سرچینې، او میډیا منځپانګې ته لاسرسی ومومئ کوم چې په پاکستان کې د ADR (د شخړو د بدیل حل) او د شخړو سوله ایز حل ملاتړ کوي."
+    },
+    "tabs": {
+      "featured": "غوره (نمایاں)",
+      "downloads": "ډاونلوډونه",
+      "mediation_laws": "د منځګړیتوب قوانین",
+      "advocacy": "مدافعت (Advocacy)",
+      "press_media": "مطبوعات او رسنۍ",
+      "articles": "مقالې"
+    }
+  }
   }
 }
