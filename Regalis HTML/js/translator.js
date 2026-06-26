@@ -11,6 +11,115 @@
   const SUPPORTED_LANGS = ['en', 'ur', 'ar', 'ch', 'psh', 'sd'];
   const STORAGE_KEY = 'pma-lang';
 
+  // Normalize profile keys from memberData for translation key generation.
+  function normalizeProfileKey(key) {
+    if (!key) return '';
+    return key.toString().trim().toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+  }
+
+  // Build a fallback translation resource for profile modal content from the page's memberData.
+  function buildProfileModalResources(profileData) {
+    if (!profileData || typeof profileData !== 'object') return null;
+
+    const modalResources = {};
+    Object.entries(profileData).forEach(([memberKey, data]) => {
+      const normalizedKey = normalizeProfileKey(memberKey);
+      const rawKey = (memberKey || '').toString().trim().toLowerCase();
+      if (!normalizedKey) return;
+
+      const profileEntry = {
+        name: data.name || '',
+        role: data.role || '',
+        highlight: data.highlight || '',
+        about: data.about || '',
+        badges: Array.isArray(data.badges) ? data.badges : [],
+        expertise: Array.isArray(data.expertise) ? data.expertise : [],
+        experience: {
+          years: data.experience && data.experience.years ? data.experience.years : '',
+          label: data.experience && data.experience.label ? data.experience.label : ''
+        },
+        accreditations: Array.isArray(data.accreditations) ? data.accreditations : [],
+        education: Array.isArray(data.education) ? data.education : [],
+        affiliations: Array.isArray(data.affiliations) ? data.affiliations : [],
+        media: Array.isArray(data.media) ? data.media : []
+      };
+
+      modalResources[normalizedKey] = profileEntry;
+      if (rawKey && rawKey !== normalizedKey) {
+        modalResources[rawKey] = Object.assign({}, profileEntry);
+      }
+    });
+
+    return { leadership_page: { profile_modal: modalResources } };
+  }
+
+  function mergeProfileModalResources(existingModal, fallbackModal) {
+    if (!fallbackModal || typeof fallbackModal !== 'object') return existingModal || {};
+    if (!existingModal || typeof existingModal !== 'object') return fallbackModal;
+
+    const merged = {};
+    Object.keys(fallbackModal).forEach(memberKey => {
+      merged[memberKey] = Object.assign({}, fallbackModal[memberKey], existingModal[memberKey] || {});
+    });
+    Object.keys(existingModal).forEach(memberKey => {
+      if (!merged.hasOwnProperty(memberKey)) {
+        merged[memberKey] = existingModal[memberKey];
+      }
+    });
+    return merged;
+  }
+
+  // Merge profile modal resources into the resource bundles for fallback translation.
+  // This function will retry for a short period if the page's `window.pmaLeadershipMemberData`
+  // hasn't been attached yet (leadership page may register it after translator loads).
+  async function injectProfileModalResources(resources) {
+    if (!resources || typeof resources !== 'object') return;
+
+    // Try to obtain the member data, retrying briefly if not present yet.
+    const MAX_ATTEMPTS = 12; // ~12 * 200ms = 2.4s
+    const RETRY_MS = 200;
+    let attempts = 0;
+    let profileData = window.pmaLeadershipMemberData;
+
+    while ((!profileData || typeof profileData !== 'object') && attempts < MAX_ATTEMPTS) {
+      await new Promise(res => setTimeout(res, RETRY_MS));
+      attempts += 1;
+      profileData = window.pmaLeadershipMemberData;
+    }
+
+    const profileResources = buildProfileModalResources(profileData);
+    if (!profileResources) return;
+
+    // Merge into every loaded language's translation object so i18next can find them
+    Object.keys(resources).forEach(lang => {
+      resources[lang] = resources[lang] || { translation: {} };
+      resources[lang].translation = resources[lang].translation || {};
+      resources[lang].translation.leadership_page = resources[lang].translation.leadership_page || {};
+      resources[lang].translation.leadership_page.profile_modal = mergeProfileModalResources(
+        resources[lang].translation.leadership_page.profile_modal || {},
+        profileResources.leadership_page.profile_modal
+      );
+    });
+
+    // If i18next already initialized (in cases where injection ran after init), add resource bundle dynamically
+    if (window.i18next && typeof window.i18next.addResourceBundle === 'function') {
+      Object.keys(resources).forEach(lang => {
+        try {
+          // Merge into i18next resource store for this language namespace
+          window.i18next.addResourceBundle(lang, 'translation', {
+            leadership_page: window.i18next.getResource(lang, 'translation', 'leadership_page') || {}
+          }, true, true);
+          // Now ensure profile_modal exists
+          const existing = window.i18next.getResource(lang, 'translation', 'leadership_page') || {};
+          existing.profile_modal = mergeProfileModalResources(existing.profile_modal || {}, profileResources.leadership_page.profile_modal);
+          window.i18next.addResourceBundle(lang, 'translation', { leadership_page: existing }, true, true);
+        } catch (e) {
+          // ignore addBundle failures
+        }
+      });
+    }
+  }
+
   // Fallback translations in case of offline usage or CORS file:// errors
   const fallbackResources = {
     en: {
@@ -1021,6 +1130,294 @@
               "former_president": "Former Presidents"
             },
             "search_placeholder": "Search by name or expertise..."
+          },
+          "modal": {
+            "about_label": "About",
+            "expertise_title": "Expertise",
+            "training_expertise_title": "Training Expertise",
+            "accreditations_title": "Accreditations",
+            "education_title": "Education",
+            "affiliations_title": "Professional Affiliations",
+            "media_title": "Media & Public Engagement",
+            "coming_soon": "Coming Soon",
+            "profile_close_label": "Close profile"
+          },
+          "profile_modal": {
+            "aga_zafar_ahmed": {
+    "name": "Aga Zafar Ahmed",
+    "role": "President",
+    "highlight": "\"Advancing mediation and international dispute resolution through leadership, advocacy, and ADR excellence.\"",
+    "about": "Mr. Aga Zafar Ahmed is the President of Pakistan Mediators Association (PMA) and a distinguished Advocate of the Supreme Court of Pakistan with more than 21 years of legal practice. He is widely recognized for his expertise in Admiralty & Maritime Law, commercial disputes, international trade matters, and Alternative Dispute Resolution (ADR). As a Founding Member of PMA, he continues to play a leading role in advancing mediation and peaceful dispute resolution practices across Pakistan.",
+    "badges": ["Executive Team", "Mediator", "CEDR Accredited Mediator", "Master Trainer", "Executive Leadership"],
+    "expertise": ["Commercial Disputes", "Maritime & Admiralty Law", "International Trade Disputes", "Corporate Mediation", "Civil Litigation", "Alternative Dispute Resolution (ADR)"],
+    "experience": { "years": "21+ Years", "label": "Legal Practice & Dispute Resolution" },
+    "accreditations": ["CEDR Accredited Mediator (London)", "MICADR Empaneled Mediator", "PMA Accredited Mediator", "Diploma in International Arbitration Law"],
+    "education": ["Diploma in International Arbitration Law – College of Law, England & Wales"],
+    "affiliations": ["Supreme Court Bar Association of Pakistan", "Sindh High Court Bar Association", "Pakistan Mediators Association (Founding Member)", "Bahria University (Former Visiting Faculty)"],
+    "media": []
+  },
+  "saima_amin_khawaja": {
+    "name": "Saima Amin Khawaja",
+    "role": "Vice President – North",
+    "highlight": "\"Promoting legal reform, mediation excellence, and sustainable dispute resolution through education and institutional leadership.\"",
+    "about": "Ms. Saima Amin Khawaja is the Vice President – North of Pakistan Mediators Association (PMA) and an accomplished legal professional with extensive experience in corporate litigation, constitutional law, transactional advisory, and legal reform consultancy. She is an internationally trained mediator and Master Trainer with a strong commitment to advancing ADR, environmental law, and professional legal education in Pakistan.",
+    "badges": ["Executive Team", "Mediator", "CEDR Accredited Mediator", "Master Trainer", "Training Committee"],
+    "expertise": ["Corporate Litigation", "Constitutional Law", "Legal Reforms & Consultancy", "Environmental Law", "Mediation & ADR Training", "Climate Change Policy"],
+    "experience": { "years": "20+ Years", "label": "Legal Practice, Training & Consultancy" },
+    "accreditations": ["CEDR Accredited Mediator", "CEDR Master Trainer", "PMA Accredited Mediator", "Environmental Law Training – M.C. Mehta Foundation, India"],
+    "education": ["LL.M – King's College London"],
+    "affiliations": ["Pakistan Mediators Association", "Climate Change Commission – Lahore High Court", "Civil Services Academy", "Judicial Academy", "Lahore University of Management Sciences (LUMS)", "University College Lahore (UCL)", "The Institute of Legal Studies (TILS)"],
+    "media": []
+  },
+  "asfand_yar_ali_khan": {
+    "name": "Asfand Yar Ali Khan",
+    "role": "Vice President – North",
+    "highlight": "\"Advancing mediation, arbitration, and legal reform through leadership, training, and institutional expertise.\"",
+    "about": "Barrister Asfand Yar Ali Khan is the Vice President – North of Pakistan Mediators Association (PMA) and a Founding Member of the organization. Called to the Bar by The Honorable Society of Lincoln's Inn, he is an accomplished law and development practitioner with extensive expertise in mediation, arbitration, environmental law, and regulatory matters. He actively contributes to strengthening ADR practices and legal reform initiatives across Pakistan.",
+    "badges": ["Executive Team", "Mediator", "CEDR Accredited Mediator", "Master Trainer", "Code of Conduct"],
+    "expertise": ["Arbitration & ADR", "Labor & Employment Law", "Environmental Law", "Family & Land Disputes", "Regulatory Matters", "Mediation Training"],
+    "experience": { "years": "20+ Years", "label": "Legal Practice, ADR & Tribunal Leadership" },
+    "accreditations": ["CEDR Accredited Mediator", "CEDR Master Trainer", "Member – Chartered Institute of Arbitrators (MCIArb), London", "PMA Accredited Mediator"],
+    "education": ["Post-Graduate Diploma in Professional Legal Skills – The City St. Georges, UK", "LL.B (Hons) – University of Hull, UK", "M.Phil – Pakistan", "M.A – Pakistan", "B.A – Pakistan"],
+    "affiliations": ["Pakistan Mediators Association (Founding Member)", "Chartered Institute of Arbitrators, London", "Khyber Pakhtunkhwa Environmental Protection Tribunal", "Lincoln's Inn, London"],
+    "media": []
+  },
+  "wajiha_aleem": {
+    "name": "Wajiha Aleem",
+    "role": "Secretary General",
+    "highlight": "\"Advancing mediation through leadership, innovation, and international collaboration for a stronger ADR framework in Pakistan.\"",
+    "about": "Ms. Wajiha Aleem serves as the Secretary General of Pakistan Mediators Association (PMA), leading strategic initiatives focused on strengthening mediation and institutionalizing Alternative Dispute Resolution (ADR) across Pakistan. With over 17 years of corporate and legal experience, she is committed to advancing mediation as a credible, accessible, and globally aligned dispute resolution mechanism through innovation, policy reform, judicial collaboration, and international partnerships.",
+    "badges": ["Executive Team", "Mediator", "CEDR Accredited Mediator", "Master Trainer", "Executive Leadership"],
+    "expertise": ["Alternative Dispute Resolution (ADR)", "Corporate & Legal Advisory", "Mediation Training", "Institutional Development", "Policy Reform", "International ADR Collaboration"],
+    "experience": { "years": "17+ Years", "label": "Corporate, Legal & ADR Leadership" },
+    "accreditations": ["CEDR UK Certified Mediator", "PMA Accredited Mediator", "International ADR Practitioner"],
+    "education": ["LL.M – United Kingdom", "B.A. LL.B. (Hons.) – University of Karachi"],
+    "affiliations": ["Pakistan Mediators Association", "International ADR & Mediation Networks", "Judicial & Institutional ADR Initiatives"],
+    "media": []
+  },
+  "trainer_aga_zafar_ahmed": {
+    "name": "Aga Zafar Ahmed",
+    "role": "Master Trainer",
+    "highlight": "\"Advancing mediation and international dispute resolution through leadership, advocacy, and ADR excellence.\"",
+    "about": "Aga Zafar Ahmed is a distinguished Advocate of the Supreme Court of Pakistan, accredited mediator, and senior ADR professional with extensive expertise in Admiralty & Maritime Law, civil litigation, commercial disputes, and international trade matters. As President of the Pakistan Mediators Association (PMA), he continues to play a key role in strengthening mediation practices and promoting institutional dispute resolution frameworks in Pakistan.\n\nHe is a CEDR UK Accredited Mediator and serves on the panel of the High Court of Sindh as a Mediator while also being associated with the Musaliha International Centre for ADR (MICADR). In addition to his legal practice, he has contributed to legal education and professional development as a visiting faculty member and institutional leader.",
+    "badges": ["Master Trainer", "President", "Executive Leadership"],
+    "expertise": ["ADR & Mediation Training", "Commercial Dispute Resolution", "Admiralty & Maritime Law", "International Trade Disputes", "Arbitration & Conflict Resolution", "Civil & Corporate Litigation", "Train the Trainer (TOT)"],
+    "experience": { "years": "21+ Years", "label": "Legal Practice & Dispute Resolution" },
+    "accreditations": ["CEDR UK Accredited Mediator", "Panel Mediator – High Court of Sindh", "Member – Musaliha International Centre for ADR (MICADR)", "Diploma in International Arbitration Law – England & Wales"],
+    "education": ["Diploma in International Arbitration Law – College of Law, England & Wales"],
+    "affiliations": ["Pakistan Mediators Association (PMA)", "CEDR UK", "Musaliha International Centre for ADR (MICADR)", "High Court of Sindh", "Supreme Court Bar Association of Pakistan", "Sindh High Court Bar Association", "Bahria University"],
+    "media": []
+  },
+  "trainer_mustansir_zakir": {
+    "name": "Mustansir Zakir",
+    "role": "Master Trainer",
+    "highlight": "\"Leading corporate governance and mediation training initiatives through strategic leadership and ADR excellence.\"",
+    "about": "Mustansir Zakir is a senior corporate leader, accredited mediator, and internationally recognized ADR trainer with extensive experience in strategic management, corporate governance, and dispute resolution. He serves as Director Training and Executive Member of the Pakistan Mediators Association (PMA) and has played a significant role in promoting mediation and ADR awareness across Pakistan.\n\nA Fellow Member of ICAP, ICMAP, and ICSP, he currently works with the Hashoo Group as Chief Executive. He has completed Strategic Management Certification from Cornell University, USA, and Certified Director Education from the Pakistan Institute of Corporate Governance. As a CEDR UK Accredited Mediator and Master Trainer, he has contributed extensively to professional mediation training, leadership development, and institutional ADR initiatives in Pakistan.",
+    "badges": ["Master Trainer", "Director Training", "Executive Committee – South", "Ex-President"],
+    "expertise": ["ADR & Mediation Training", "Corporate Governance", "Strategic Management", "Executive Leadership Development", "Commercial Dispute Resolution", "Train the Trainer (TOT)", "Institutional Capacity Building"],
+    "experience": { "years": "20+ Years", "label": "Executive Leadership & ADR Training" },
+    "accreditations": ["CEDR UK Accredited Mediator", "CEDR UK Master Trainer", "Certified Director – Pakistan Institute of Corporate Governance", "Strategic Management Certification – Cornell University, USA"],
+    "education": ["Fellow – Institute of Chartered Accountants of Pakistan (ICAP)", "Fellow – Institute of Cost & Management Accountants of Pakistan (ICMAP)", "Fellow – Institute of Corporate Secretaries of Pakistan (ICSP)"],
+    "affiliations": ["Pakistan Mediators Association (PMA)", "CEDR UK", "Hashoo Group", "Pakistan Hotels Association (PHA)", "Association of Builders and Developers of Pakistan (ABAD)", "Institute of Chartered Accountants of Pakistan (ICAP)", "Pakistan Institute of Corporate Governance", "Karachi Sea Scout Council Trust"],
+    "media": []
+  },
+  "trainer_wajiha_aleem": {
+    "name": "Wajiha Aleem",
+    "role": "Master Trainer",
+    "highlight": "\"Advancing mediation through leadership, innovation, and international collaboration for a stronger ADR framework in Pakistan.\"",
+    "about": "Wajiha Aleem is an Advocate of the High Court, accredited mediator, and legal professional with extensive experience in corporate operations, legal advisory, and Alternative Dispute Resolution (ADR). She currently serves as Secretary General of the Pakistan Mediators Association (PMA) while also holding the position of General Manager (Operations & Legal) at Hashoo Group.\n\nShe holds an LL.M. in International Commercial Law & Alternative Dispute Resolution from the United Kingdom and is a CEDR Accredited Mediator with international affiliations including the Thailand Arbitration Centre (THAC). She is empaneled as a Mediator with the High Court of Sindh and remains actively involved with leading legal and professional associations nationally and internationally.",
+    "badges": ["Master Trainer", "Secretary General", "Executive Leadership"],
+    "expertise": ["ADR & Mediation Training", "International Commercial Law", "Corporate Legal Advisory", "Commercial Dispute Resolution", "Institutional ADR Development", "Professional Skills Training", "Conflict Resolution"],
+    "experience": { "years": "17+ Years", "label": "Corporate, Legal & ADR Leadership" },
+    "accreditations": ["CEDR Accredited Mediator", "Panel Mediator – High Court of Sindh", "Associate Trainer – PMA", "THAC Chapter Affiliation – Thailand Arbitration Centre"],
+    "education": ["LL.M. in International Commercial Law & ADR – United Kingdom", "B.A. LL.B. (Hons.) – Pakistan"],
+    "affiliations": ["Pakistan Mediators Association (PMA)", "CEDR UK", "Thailand Arbitration Centre (THAC)", "High Court of Sindh", "Sindh Bar Council", "Karachi Bar Association", "International Bar Association", "Hashoo Group"],
+    "media": []
+  },
+  "trainer_huma_shah": {
+    "name": "Huma Shah",
+    "role": "Master Trainer",
+    "highlight": "\"Advancing corporate legal excellence and mediation training through leadership, advocacy, and professional mentorship.\"",
+    "about": "Huma Shah is a highly experienced legal professional, corporate consultant, and accredited ADR trainer with over three decades of legal practice. Since 1993, she has worked with some of Pakistan's most prominent legal institutions including AGHS Legal Aid Cell, AGHS Law Associates under Mrs. Asma Jehangir and Ms. Hina Jilani, and M/s Surridge & Beecheno.\n\nShe has served as Managing Partner at M/s Sheikh Shah Rana & Ijaz (SSR&I) and currently serves as Legal Head – North at HBL. She is an Accredited Trainer of the Advocacy Training Programme Pakistan under the Inns of Court Advocacy Committee (IATC) of the Bar Council of England & Wales, and a CEDR UK Accredited Mediator & Master Trainer.",
+    "badges": ["Master Trainer", "Executive Committee – North", "Training Committee"],
+    "expertise": ["ADR & Mediation Training", "Corporate & Commercial Law", "Advocacy & Legal Skills Training", "Contract Drafting & Vetting", "Banking & Corporate Legal Advisory", "Conflict Resolution", "Train the Trainer (TOT)"],
+    "experience": { "years": "30+ Years", "label": "Legal Practice, Corporate Advisory & ADR Training" },
+    "accreditations": ["CEDR UK Accredited Mediator", "CEDR UK Master Trainer", "Accredited Trainer – Advocacy Training Programme Pakistan (IATC)"],
+    "education": ["Punjab Law College – Twice Awarded Gold Medals for Academic Merit"],
+    "affiliations": ["Pakistan Mediators Association (PMA)", "CEDR UK", "Inns of Court Advocacy Committee (IATC)", "Bar Council of England & Wales", "Habib Bank Limited (HBL)", "Punjab Bar Associations", "AGHS Legal Aid Cell", "M/s Surridge & Beecheno"],
+    "media": []
+  },
+  "trainer_usman_g_rashid": {
+    "name": "Usman G. Rashid",
+    "role": "Master Trainer",
+    "highlight": "\"Combining legal advocacy, mediation expertise, and training leadership to build ADR capacity across Pakistan.\"",
+    "about": "Usman G. Rashid is a Barrister-at-Law, Advocate of the High Courts, CEDR Accredited Mediator, and Master Trainer with extensive experience in legal practice, advocacy training, mediation, and legal education. He holds an LL.B. (Hons.) from the University of London, an LL.M. from King's College London, and completed the Bar Vocational Course from the University of the West of England, Bristol, U.K. He was called to the Bar by the Hon'ble Society of Lincoln's Inn.\n\nHe previously served as Secretary General of the Pakistan Mediators Association (PMA) and has actively contributed to mediation awareness, ADR capacity building, and professional legal training initiatives in Pakistan. Alongside his legal practice, he is engaged in legal education and advocacy training, particularly in Company Law and Law of Evidence for the University of London External Programme.\n\nUsman began his professional career with Umar Bandial & Associates and currently manages his legal practice through Inayatullah Chambers, Advocates & Legal Consultants. His combined expertise in litigation, ADR, legal education, and advocacy training enables him to contribute effectively toward institutional ADR development and professional mediation practices.",
+    "badges": ["Master Trainer", "Barrister-at-Law", "Former Secretary General – PMA"],
+    "expertise": ["ADR & Mediation Training", "Advocacy Skills Training", "Company Law", "Law of Evidence", "Commercial & Civil Litigation", "Legal Education & Professional Development", "Conflict Resolution"],
+    "experience": { "years": "15+ Years", "label": "CEDR Accredited Master Trainer, Advocacy & Legal Education" },
+    "accreditations": ["CEDR Accredited Mediator & Master Trainer – UK", "Barrister-at-Law – Lincoln's Inn", "Certified Advocacy Trainer"],
+    "education": ["LL.M. – King's College, University of London", "LL.B. (Hons.) – University of London", "Bar Vocational Course – University of the West of England, Bristol, U.K."],
+    "affiliations": ["Pakistan Mediators Association (PMA)", "CEDR UK", "Hon'ble Society of Lincoln's Inn", "University College Lahore", "University of London External Programme", "Inayatullah Chambers, Advocates & Legal Consultants"],
+    "media": []
+  },
+  "trainer_asfand_yar_ali_khan": {
+    "name": "Asfand Yar Ali Khan",
+    "role": "Master Trainer",
+    "highlight": "\"Advancing mediation, arbitration, and legal reform through leadership, training, and institutional expertise.\"",
+    "about": "Asfand Yar Ali Khan is a senior legal practitioner, accredited mediator, and internationally trained ADR expert with extensive experience in legal consultancy, arbitration, institutional development, and mediation training. As Senior Partner at S&K Partnership and Vice President of Pakistan Mediators Association (PMA), he actively contributes to strengthening mediation and alternative dispute resolution frameworks in Pakistan.\n\nCalled to the Bar by Lincoln's Inn, London, he is a CEDR UK Accredited Mediator & Master Trainer and a Member of the Chartered Institute of Arbitrators (MCIArb), London. His professional background spans legal practice, international development initiatives, policy engagement, and institutional advisory roles including work with the United Nations and UNDP projects.",
+    "badges": ["Master Trainer", "Executive Leadership", "Vice President – North"],
+    "expertise": ["ADR & Mediation Training", "Arbitration & Conflict Resolution", "Commercial & Civil Disputes", "Legal Skills Development", "Institutional ADR Capacity Building", "Professional Development Programs", "Train the Trainer (TOT)"],
+    "experience": { "years": "20+ Years", "label": "Legal Practice, ADR & Tribunal Leadership" },
+    "accreditations": ["CEDR UK Accredited Mediator", "CEDR UK Master Trainer", "Member – Chartered Institute of Arbitrators (MCIArb), London", "Barrister-at-Law – Lincoln's Inn, London"],
+    "education": ["Post-Graduate Diploma in Professional Legal Skills – UK", "LL.B (Hons) – UK", "M.A – Pakistan", "B.A – Pakistan"],
+    "affiliations": ["Pakistan Mediators Association (PMA)", "CEDR UK", "Chartered Institute of Arbitrators, London", "Lincoln's Inn, London", "Pakistan Red Crescent Society (PRCS)", "Pakistan Environmental Law Association", "British Alumni Association", "United Nations Development Initiatives"],
+    "media": []
+  },
+ "trainer_saima_amin_khawaja": {
+    "name": "Saima Amin Khawaja",
+    "role": "Master Trainer",
+    "highlight": "\"Promoting legal reform, mediation excellence, and sustainable dispute resolution through education and institutional leadership.\"",
+    "about": "Saima Amin Khawaja is an accomplished legal professional, accredited mediator, and internationally trained ADR expert with extensive experience in corporate litigation, constitutional law, legal consultancy, and institutional reform. She has played a key role in advancing mediation awareness, ADR training, and legal development initiatives in Pakistan.\n\nShe holds an LL.M from King's College London and has received specialized training in Environmental Laws from the M.C. Mehta Foundation, India. As a CEDR UK Accredited Mediator & Master Trainer, she has actively contributed to professional mediation training and capacity-building programs. She has taught at LUMS, Civil Services Academy, Judicial Academy, TILS, and UCL, while also serving on the Climate Change Commission constituted by the Lahore High Court.",
+    "badges": ["Master Trainer", "Executive Member", "Vice President – North"],
+    "expertise": ["ADR & Mediation Training", "Corporate & Constitutional Law", "Legal Reforms & Policy Development", "Environmental Law", "Judicial & Professional Training", "Conflict Resolution", "Train the Trainer (TOT)"],
+    "experience": { "years": "20+ Years", "label": "Legal Practice, Training & Consultancy" },
+    "accreditations": ["CEDR UK Accredited Mediator", "CEDR UK Master Trainer", "Specialized Environmental Law Training – M.C. Mehta Foundation, India"],
+    "education": ["LL.M – King's College London"],
+    "affiliations": ["Pakistan Mediators Association (PMA)", "CEDR UK", "Lahore High Court", "Lahore University of Management Sciences (LUMS)", "Civil Services Academy", "Judicial Academy", "TILS", "UCL", "M.C. Mehta Foundation, India"]
+  },
+  "trainer_tariq_saeed_rana": {
+    "name": "Tariq Saeed Rana",
+    "role": "Master Trainer",
+    "highlight": "\"Leading corporate legal practice and mediation excellence through international expertise, professional training, and ADR leadership.\"",
+    "about": "Tariq Saeed Rana is a senior legal consultant, accredited mediator, and internationally recognized ADR trainer with extensive expertise in corporate and commercial law. Called to the Bar by the Society of Lincoln's Inn, UK, he currently heads the Corporate & Commercial Law division at Surridge & Beecheno and continues to contribute significantly to mediation training, legal consultancy, and institutional ADR development in Pakistan.\n\nHe is a CEDR UK Accredited Mediator & Master Trainer with extensive experience in corporate governance, legal advisory, and professional capacity building. He actively conducts professional and directors' training programs while maintaining leadership roles within legal and business institutions.",
+    "badges": ["Master Trainer", "Ex-President", "Executive Committee – North"],
+    "expertise": ["ADR & Mediation Training", "Corporate & Commercial Law", "Directors' Training Programs", "Corporate Governance", "Commercial Dispute Resolution", "Professional Legal Development", "Train the Trainer (TOT)"],
+    "experience": { "years": "25+ Years", "label": "Legal Practice, ADR & Corporate Advisory" },
+    "accreditations": ["CEDR UK Accredited Mediator", "CEDR UK Master Trainer", "Called to the Bar – Lincoln's Inn, UK"],
+    "education": ["LL.M. in Commercial Laws – United Kingdom", "Post Graduate Diploma in Law – United Kingdom", "LL.B – Pakistan", "Associate Engineering (Mechanical) – Pakistan"],
+    "affiliations": ["Pakistan Mediators Association (PMA)", "CEDR UK", "Society of Lincoln's Inn, London", "General Council of the Bar of England & Wales", "Lahore High Court Bar Association", "Punjab Bar Council", "Lahore Chamber of Commerce & Industry", "Surridge & Beecheno"]
+  },
+  "saeed_habib": {
+    "name": "Saeed Habib",
+    "role": "Vice President – South",
+    "highlight": "",
+    "about": "",
+    "badges": ["Membership Committee", "Institutional Coordination"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": []
+  },
+  "shabana_ali": {
+    "name": "Shabana Ali",
+    "role": "Vice President – South",
+    "highlight": "\"Promoting mediation, legal awareness, and social justice through advocacy, education, and dispute resolution.\"",
+    "about": "Ms. Shabana Ali is the Vice President – South of Pakistan Mediators Association (PMA) and an experienced civil, tax, and corporate lawyer with a strong background in litigation, advisory services, and dispute resolution. She is actively involved in advancing mediation practices in Pakistan and is widely recognized for her commitment to legal empowerment, social justice, and the protection of women and children's rights.",
+    "badges": ["Executive Team", "Mediator", "PMA Accredited Mediator", "Bar Coordination – South", "Leadership"],
+    "expertise": ["Civil Law", "Corporate Law", "Family Disputes", "Tax Law", "Mediation & ADR", "Women & Child Rights Advocacy"],
+    "experience": { "years": "20+ Years", "label": "Legal Practice, Mediation & Public Advocacy" },
+    "accreditations": ["PMA Accredited Mediator", "Certified Mediation Practitioner"],
+    "education": ["Legal & Professional Studies in Civil, Corporate & Tax Law"],
+    "affiliations": ["Pakistan Mediators Association", "Pakistan Institute of Public Finance Accountants (PIPFA)", "Executive Committee – PMA", "Media Legal Analyst & Speaker"]
+  },
+  "syed_sammad_ul_haque": {
+    "name": "Syed Sammad-ul-Haque",
+    "role": "Finance Secretary",
+    "highlight": "",
+    "about": "",
+    "badges": ["Membership Committee", "Executive Leadership"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": []
+  },
+  "tariq_saeed_rana": {
+  "name": "Tariq Saeed Rana",
+  "role": "Executive Committee – North",
+  "highlight": "\"Leading corporate legal practice and mediation excellence through international expertise, professional training, and ADR leadership.\"",
+  "about": "Barrister Tariq Saeed Rana is a senior legal professional, Accredited Mediator, and Master Trainer with extensive expertise in corporate and commercial law. Called to the Bar by the Society of Lincoln's Inn, UK, he currently heads the Corporate & Commercial Law division at Surridge & Beecheno. With decades of experience in legal consultancy, ADR, and professional training, he continues to play a significant leadership role in advancing mediation and institutional legal development in Pakistan.",
+  "badges": ["Executive Team", "Mediator", "CEDR Accredited Mediator", "Master Trainer", "Ex-President"],
+  "expertise": ["Corporate & Commercial Law", "Mediation & ADR", "International Commercial Disputes", "Legal Consultancy", "Corporate Governance", "Professional Training"],
+  "experience": { "years": "25+ Years", "label": "Legal Practice, ADR & Corporate Advisory" },
+  "accreditations": ["CEDR Accredited Mediator", "CEDR Master Trainer", "Called to the Bar – Lincoln's Inn, UK", "PMA Accredited Mediator"],
+  "education": ["LL.M. (Commercial Laws) – United Kingdom", "Post Graduate Diploma in Law – United Kingdom", "LL.B. – Pakistan", "Associate Engineering (Mechanical) – Pakistan"],
+  "affiliations": ["General Council of the Bar of England & Wales", "Society of Lincoln's Inn, London", "Pakistan Mediators Association", "Lahore High Court Bar Association", "Punjab Bar Council", "Lahore Chamber of Commerce & Industry"],
+  "media": []
+},
+  "huma_shah": {
+    "name": "Huma Shah",
+    "role": "Executive Committee – North",
+    "highlight": "\"Advancing corporate legal excellence and mediation training through leadership, advocacy, and professional mentorship.\"",
+    "about": "Ms. Huma Shah is a senior legal professional with extensive experience in corporate law, legal consultancy, commercial drafting, and dispute resolution. Practicing since 1993, she has worked with leading legal institutions and law firms including AGHS Legal Aid Cell, AGHS Law Associates, and Surridge & Beecheno. She currently serves as Legal Head – North at HBL and continues to contribute significantly to mediation training and ADR development in Pakistan.",
+    "badges": ["Executive Team", "Mediator", "CEDR Accredited Mediator", "Master Trainer", "Training Committee"],
+    "expertise": ["Corporate & Commercial Law", "Legal Consultancy", "Commercial Drafting & Vetting", "Banking & Financial Legal Affairs", "Mediation & ADR", "Advocacy Training"],
+    "experience": { "years": "30+ Years", "label": "Legal Practice, Corporate Advisory & ADR Training" },
+    "accreditations": ["CEDR Accredited Mediator", "CEDR Master Trainer", "Accredited Advocacy Trainer – IATC (Bar Council of England & Wales)", "PMA Accredited Mediator"],
+    "education": ["Punjab Law College – Gold Medalist (Twice Awarded for Academic Merit)"],
+    "affiliations": ["Pakistan Mediators Association", "Inns of Court Advocacy Training Programme Pakistan", "Punjab Bar Associations", "HBL – Legal Head North"]
+  },
+  "umaimah_anwar_khan": {
+    "name": "Umaimah Anwar Khan",
+    "role": "Executive Committee – South",
+    "highlight": "",
+    "about": "",
+    "badges": ["Code of Conduct", "Bar Coordination – South"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": []
+  },
+  "mustansir_zakir": {
+    "name": "Mustansir Zakir",
+    "role": "Executive Committee – South",
+    "highlight": "\"Leading corporate governance and mediation training initiatives through strategic leadership and ADR excellence.\"",
+    "about": "Mr. Mustansir Zakir is a senior corporate executive, Accredited Mediator, and Master Trainer with extensive leadership experience in corporate governance, hospitality, finance, and Alternative Dispute Resolution (ADR). Currently serving as Chief Executive at Hashoo Group, he has played a significant role in advancing mediation awareness and professional training initiatives in Pakistan through his leadership within the Pakistan Mediators Association (PMA).",
+    "badges": ["Executive Team", "Mediator", "CEDR Accredited Mediator", "Director Training", "Master Trainer", "Ex-President"],
+    "expertise": ["Corporate Governance", "Strategic Management", "Mediation & ADR Training", "Hospitality & Business Leadership", "Financial Management", "Institutional Development"],
+    "experience": { "years": "30+ Years", "label": "Corporate Leadership, Governance & ADR" },
+    "accreditations": ["CEDR Accredited Mediator", "CEDR Master Trainer", "Certified Director Education – PICG", "Strategic Management Certification – Cornell University, USA"],
+    "education": ["Fellow – Institute of Chartered Accountants of Pakistan (ICAP)", "Fellow – Institute of Cost & Management Accountants of Pakistan (ICMAP)", "Fellow – Institute of Corporate Secretaries of Pakistan (ICSP)"],
+    "affiliations": ["Pakistan Mediators Association (Ex-President & Director Training)", "Hashoo Group – Chief Executive", "Pakistan Hotels Association (Former Chairman)", "Association of Builders & Developers of Pakistan (ABAD)", "Karachi Sea Scout Council Trust – Managing Trustee"]
+  },
+  "usman_g_rashid": {
+    "name": "Usman G. Rashid",
+    "role": "Member",
+    "highlight": "\"Combining legal advocacy, mediation expertise, and training leadership to build ADR capacity across Pakistan.\"",
+    "about": "Usman G. Rashid is a Barrister-at-Law, Advocate of the High Courts, CEDR Accredited Mediator, and Master Trainer with extensive experience in legal practice, advocacy training, mediation, and legal education. He holds an LL.B. (Hons.) from the University of London, an LL.M. from King's College London, and completed the Bar Vocational Course from the University of the West of England, Bristol, U.K. He was called to the Bar by the Hon'ble Society of Lincoln's Inn.\n\nHe previously served as Secretary General of the Pakistan Mediators Association (PMA) and has actively contributed to mediation awareness, ADR capacity building, and professional legal training initiatives in Pakistan. Alongside his legal practice, he is engaged in legal education and advocacy training, particularly in Company Law and Law of Evidence for the University of London External Programme.\n\nUsman began his professional career with Umar Bandial & Associates and currently manages his legal practice through Inayatullah Chambers, Advocates & Legal Consultants. His combined expertise in litigation, ADR, legal education, and advocacy training enables him to contribute effectively toward institutional ADR development and professional mediation practices.",
+    "badges": ["Mediator", "Master Trainer", "Barrister-at-Law"],
+    "expertise": ["ADR & Mediation Training", "Advocacy Skills Training", "Company Law", "Law of Evidence", "Commercial & Civil Litigation", "Legal Education & Professional Development", "Conflict Resolution"],
+    "experience": { "years": "", "label": "CEDR Accredited Mediator & Master Trainer" },
+    "accreditations": ["CEDR Accredited Mediator & Master Trainer – UK", "Barrister-at-Law – Lincoln's Inn", "Certified Advocacy Trainer"],
+    "education": ["LL.M. – King's College, University of London", "LL.B. (Hons.) – University of London", "Bar Vocational Course – University of the West of England, Bristol, U.K."],
+    "affiliations": ["Pakistan Mediators Association (PMA)", "CEDR UK", "Hon'ble Society of Lincoln's Inn", "University College Lahore", "University of London External Programme", "Inayatullah Chambers, Advocates & Legal Consultants"]
+  },
+  "adnan_mufti": {
+    "name": "Adnan Mufti",
+    "role": "Executive Committee – South",
+    "highlight": "",
+    "about": "",
+    "badges": ["Institutional Coordination", "Leadership"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": []
+  },
+  "anwar_kashif_mumtaz": {
+    "name": "Anwar Kashif Mumtaz",
+    "role": "Master Trainer",
+    "highlight": "",
+    "about": "Anwar Kashif Mumtaz is a senior legal professional, leadership trainer, and accredited mediator with extensive experience in corporate, tax, and dispute resolution practice. As an Advocate of the High Court and Senior Partner at M/s. Saiduddin & Co., he has built a strong reputation in tax and corporate law advisory in Pakistan.\n\nHe is an internationally certified trainer in Leadership & Personal Development and a CEDR UK Accredited Mediator & Master Trainer. He has contributed significantly to leadership development, mediation awareness, and professional capacity building within legal and corporate sectors. He has also held prominent leadership positions including Secretary General, Vice President, and President of Pakistan Tax Bar and Karachi Tax Bar.",
+    "badges": ["Master Trainer", "Ex-President", "Leadership Trainer"],
+    "expertise": ["Leadership & Personal Development", "ADR & Mediation Training", "Corporate Law", "Tax Law & Advisory", "Professional Development Programs", "Conflict Resolution", "Train the Trainer (TOT)"],
+    "experience": { "years": "", "label": "" },
+    "accreditations": ["CEDR UK Accredited Mediator", "CEDR UK Master Trainer", "Certified International Trainer – Leadership & Personal Development"],
+    "education": ["Advocate, High Court of Pakistan"],
+    "affiliations": ["Pakistan Mediators Association (PMA)", "CEDR UK", "Pakistan Tax Bar", "Karachi Tax Bar", "Public Interest Law Association of Pakistan (PILAP)", "M/s. Saiduddin & Co."]
+  }
           },
           "members": {
             "member_1": {
@@ -3113,6 +3510,295 @@
               "aria_label": "اسفند یار علی خان کا پروفائل دیکھیں"
             }
           },
+          "modal": {
+    "about_label": "تعارف",
+    "expertise_title": "مہارت",
+    "training_expertise_title": "تربیتی مہارت",
+    "accreditations_title": "اعتمادیات / اسناد",
+    "education_title": "تعلیم",
+    "affiliations_title": "پیشہ ورانہ الحاق",
+    "media_title": "میڈیا اور عوامی شمولیت",
+    "coming_soon": "عنقریب",
+    "profile_close_label": "پروفائل بند کریں"
+  },
+  "profile_modal": {
+    "aga_zafar_ahmed": {
+    "name": "آغا ظفر احمد",
+    "role": "صدر",
+    "highlight": "\"قیادت، وکالت اور اے ڈی آر (ADR) کی مہارت کے ذریعے ثالثی اور بین الاقوامی تنازعات کے حل کو فروغ دینا۔\"",
+    "about": "جناب آغا ظفر احمد پاکستان میڈیٹرز ایسوسی ایشن (PMA) کے صدر اور سپریم کورٹ آف پاکستان کے ایک ممتاز وکیل ہیں جن کا قانون کا تجربہ 21 سال سے زائد پر محیط ہے۔ وہ ایڈمرلٹی اور میری ٹائم لاء، تجارتی تنازعات، بین الاقوامی تجارت کے معاملات اور متبادل حلِ تنازعات (ADR) میں اپنی مہارت کے لیے بڑے پیمانے پر جانے جاتے ہیں۔ پی ایم اے کے بانی رکن کی حیثیت سے، وہ پاکستان بھر میں ثالثی اور پرامن حلِ تنازعات کے طریقوں کو آگے بڑھانے میں اہم کردار ادا کر رہے ہیں۔",
+    "badges": ["ایگزیکٹو ٹیم", "ثالث (میڈیٹر)", "سی ای ڈی آر (CEDR) تسلیم شدہ ثالث", "ماسٹر ٹرینر", "ایگزیکٹو لیڈرشپ"],
+    "expertise": ["تجارتی تنازعات", "میری ٹائم اور ایڈمرلٹی لاء", "بین الاقوامی تجارتی تنازعات", "کارپوریٹ ثالثی", "سول قانونی چارہ جوئی", "متبادل حلِ تنازعات (ADR)"],
+    "experience": { "years": "21+ سال", "label": "قانون کی پریکٹس اور تنازعات کا حل" },
+    "accreditations": ["سی ای ڈی آر تسلیم شدہ ثالث (لندن)", "ایم آئی سی اے ڈی آر (MICADR) پینل ثالث", "پی ایم اے تسلیم شدہ ثالث", "بین الاقوامی ثالثی قانون میں ڈپلومہ"],
+    "education": ["بین الاقوامی ثالثی قانون میں ڈپلومہ – کالج آف لاء، انگلینڈ اور ویلز"],
+    "affiliations": ["SUPREME COURT BAR ASSOCIATION OF PAKISTAN", "SINDH HIGH COURT BAR ASSOCIATION", "پاکستان میڈیٹرز ایسوسی ایشن (بانی رکن)", "بحریہ یونیورسٹی (سابق وزٹنگ فیکلٹی)"],
+    "media": []
+  },
+  "saima_amin_khawaja": {
+    "name": "سائمہ امین خواجہ",
+    "role": "نائب صدر – نارتھ",
+    "highlight": "\"تعلیم اور ادارہ جاتی قیادت کے ذریعے قانونی اصلاحات، ثالثی کی فضیلت، اور پائیدار حلِ تنازعات کو فروغ دینا۔\"",
+    "about": "محترمہ سائمہ امین خواجہ پاکستان میڈیٹرز ایسوسی ایشن (PMA) کی نائب صدر (نارتھ) اور ایک مایہ ناز قانونی پیشہ ور ہیں جنہیں کارپوریٹ قانونی چارہ جوئی، آئینی قانون، اور قانونی اصلاحات کی مشاورت کا وسیع تجربہ حاصل ہے۔ وہ ایک بین الاقوامی سطح پر تربیت یافتہ ثالث اور ماسٹر ٹرینر ہیں جو پاکستان میں اے ڈی آر، ماحولیاتی قانون اور پیشہ ورانہ قانونی تعلیم کو آگے بڑھانے کے لیے پرعزم ہیں۔",
+    "badges": ["ایگزیکٹو ٹیم", "ثالث (میڈیٹر)", "سی ای ڈی آر (CEDR) تسلیم شدہ ثالث", "ماسٹر ٹرینر", "ٹریننگ کمیٹی"],
+    "expertise": ["کارپوریٹ قانونی چارہ جوئی", "آئینی قانون", "قانونی اصلاحات اور مشاورت", "ماحولیاتی قانون", "ثالثی اور اے ڈی آر ٹریننگ", "کلائمیٹ چینج پالیسی"],
+    "experience": { "years": "20+ سال", "label": "قانون کی پریکٹس، ٹریننگ اور کنسلٹنسی" },
+    "accreditations": ["سی ای ڈی آر (CEDR) تسلیم شدہ ثالث", "سی ای ڈی آر ماسٹر ٹرینر", "پی ایم اے تسلیم شدہ ثالث", "ماحولیاتی قانون کی تربیت – ایم سی مہتا فاؤنڈیشن، انڈیا"],
+    "education": ["ایل ایل ایم (LL.M) – کنگز کالج لندن"],
+    "affiliations": ["پاکستان میڈیٹرز ایسوسی ایشن", "کلائمیٹ چینج کمیشن – لاہور ہائی کورٹ", "سول سروسز اکیڈمی", "جوڈیشل اکیڈمی", "LAHORE UNIVERSITY OF MANAGEMENT SCIENCES (LUMS)", "یونیورسٹی کالج لاہور (UCL)", "دی انسٹی ٹیوٹ آف لیگل اسٹڈیز (TILS)"],
+    "media": []
+  },
+  "asfand_yar_ali_khan": {
+    "name": "اسفند یار علی خان",
+    "role": "نائب صدر – نارتھ",
+    "highlight": "\"قیادت، تربیت اور ادارہ جاتی مہارت کے ذریعے ثالثی، ثالثی (آربٹریشن) اور قانونی اصلاحات کو آگے بڑھانا۔\"",
+    "about": "بیریسٹر اسفند یار علی خان پاکستان میڈیٹرز ایسوسی ایشن (PMA) کے نائب صدر (نارتھ) اور اس تنظیم کے بانی رکن ہیں۔ لنکنز ان کی معزز سوسائٹی کی طرف سے بار میں بلائے گئے، وہ قانون اور ترقی کے ایک ماہر پیشہ ور ہیں جنہیں ثالثی، آربٹریشن، ماحولیاتی قانون اور ریگولیٹری معاملات میں وسیع مہارت حاصل ہے۔ وہ پاکستان بھر میں اے ڈی آر کے طریقوں اور قانونی اصلاحات کے اقدامات کو مضبوط بنانے میں بڑھ چڑھ کر حصہ لیتے ہیں۔",
+    "badges": ["ایگزیکٹو ٹیم", "ثالث (میڈیٹر)", "سی ای ڈی آر (CEDR) تسلیم شدہ ثالث", "ماسٹر ٹرینر", "ضابطہ اخلاق کمیٹی"],
+    "expertise": ["آربٹریشن اور اے ڈی آر", "لیبر اور ایمپلائمنٹ لاء", "ماحولیاتی قانون", "خاندانی اور اراضی کے تنازعات", "ریگولیٹری امور", "ثالثی کی تربیت"],
+    "experience": { "years": "20+ سال", "label": "قانون کی پریکٹس، اے ڈی آر اور ٹریبیونل قیادت" },
+    "accreditations": ["سی ای ڈی آر (CEDR) تسلیم شدہ ثالث", "سی ای ڈی آر ماسٹر ٹرینر", "ممبر – چارٹرڈ انسٹی ٹیوٹ آف آربٹریٹرز (MCIArb)، لندن", "پی ایم اے تسلیم شدہ ثالث"],
+    "education": ["پوسٹ گریجویٹ ڈپلومہ ان پروفیشنل لیگل اسکلز – یوکے", "ایل ایل بی (Hons) – یوکے", "ایم فل – پاکستان", "ایم اے – پاکستان", "بی اے – پاکستان"],
+    "affiliations": ["پاکستان میڈیٹرز ایسوسی ایشن (بانی رکن)", "چارٹرڈ انسٹی ٹیوٹ آف آربٹریٹرز، لندن", "خیبر پختونخوا انوائرنمنٹل پروٹیکشن ٹریبیونل", "لنکنز ان، لندن"],
+    "media": []
+  },
+  "wajiha_aleem": {
+    "name": "وجیہہ علیم",
+    "role": "سیکرٹری جنرل",
+    "highlight": "\"پاکستان میں ایک مضبوط اے ڈی آر فریم ورک کے لیے قیادت، جدت طرازی، اور بین الاقوامی تعاون کے ذریعے ثالثی کو آگے بڑھانا۔\"",
+    "about": "محترمہ وجیہہ علیم پاکستان میڈیٹرز ایسوسی ایشن (PMA) کی سیکرٹری جنرل کے طور پر خدمات انجام دے رہی ہیں، اور پاکستان بھر میں ثالثی کو مضبوط بنانے اور متبادل حلِ تنازعات (ADR) کو ادارہ جاتی شکل دینے پر مرکوز اسٹریٹجک اقدامات کی قیادت کر رہی ہیں۔ 17 سال سے زائد کارپوریٹ اور قانونی تجربے کے ساتھ، وہ جدت، پالیسی اصلاحات، عدالتی تعاون اور بین الاقوامی شراکت داری کے ذریعے ثالثی کو ایک معتبر، قابل رسائی اور عالمی سطح پر ہم آہنگ طریقہ کار بنانے کے لیے کوشاں ہیں۔",
+    "badges": ["ایگزیکٹو ٹیم", "ثالث (میڈیٹر)", "سی ای ڈی آر (CEDR) تسلیم شدہ ثالث", "ماسٹر ٹرینر", "ایگزیکٹو لیڈرشپ"],
+    "expertise": ["متبادل حلِ تنازعات (ADR)", "کارپوریٹ اور قانونی مشاورت", "ثالثی کی تربیت", "ادارہ جاتی ترقی", "پالیسی اصلاحات", "بین الاقوامی اے ڈی آر تعاون"],
+    "experience": { "years": "17+ سال", "label": "کارپوریٹ، قانونی اور اے ڈی آر لیڈرشپ" },
+    "accreditations": ["سی ای ڈی آر یوکے تصدیق شدہ ثالث", "پی ایم اے تسلیم شدہ ثالث", "بین الاقوامی اے ڈی آر پریکٹیشنر"],
+    "education": ["ایل ایل ایم (LL.M) – یونائیٹڈ کنگڈم", "بی اے، ایل ایل بی (Hons) – جامعہ کراچی"],
+    "affiliations": ["پاکستان میڈیٹرز ایسوسی ایشن", "بین الاقوامی اے ڈی آر اور میڈی ایشن نیٹ ورکس", "عدالتی اور ادارہ جاتی اے ڈی آر اقدامات"],
+    "media": []
+  },
+  "trainer_aga_zafar_ahmed": {
+    "name": "آغا ظفر احمد",
+    "role": "ماسٹر ٹرینر",
+    "highlight": "\"قیادت، وکالت اور اے ڈی آر کی مہارت کے ذریعے ثالثی اور بین الاقوامی تنازعات کے حل کو آگے بڑھانا۔\"",
+    "about": "آغا ظفر احمد سپریم کورٹ آف پاکستان کے ایک ممتاز وکیل، تسلیم شدہ ثالث، اور سینئر اے ڈی آر پیشہ ور ہیں جنہیں ایڈمرلٹی اور میری ٹائم لاء، سول قانونی چارہ جوئی، تجارتی تنازعات، اور بین الاقوامی تجارتی امور میں وسیع مہارت حاصل ہے۔ پاکستان میڈیٹرز ایسوسی ایشن (PMA) کے صدر کی حیثیت سے، وہ ثالثی کے طریقوں کو مضبوط بنانے اور پاکستان میں ادارہ جاتی تنازعات کے حل کے فریم ورک کو فروغ دینے میں کلیدی کردار ادا کر رہے ہیں۔\n\nوہ ایک سی ای ڈی آر (CEDR UK) تسلیم شدہ ثالث ہیں اور ہائی کورٹ آف سندھ کے پینل پر بطور ثالث خدمات انجام دیتے ہیں جبکہ مصالحہ انٹرنیشنل سینٹر فار اے ڈی آر (MICADR) سے بھی وابستہ ہیں۔ اپنی قانونی پریکٹس کے علاوہ، انہوں نے ایک وزٹنگ فیکلٹی ممبر اور ادارہ جاتی رہنما کے طور پر قانونی تعلیم اور پیشہ ورانہ ترقی میں حصہ ڈالا ہے۔",
+    "badges": ["ماسٹر ٹرینر", "صدر", "ایگزیکٹو لیڈرشپ"],
+    "expertise": ["اے ڈی آر اور ثالثی کی تربیت", "تجارتی تنازعات کا حل", "ایڈمرلٹی اور میری ٹائم لاء", "بین الاقوامی تجارتی تنازعات", "آربٹریشن اور تنازعات کا حل", "سول اور کارپوریٹ قانونی چارہ جوئی", "ٹرین دی ٹرینر (TOT)"],
+    "experience": { "years": "21+ سال", "label": "قانون کی پریکٹس اور تنازعات کا حل" },
+    "accreditations": ["سی ای ڈی آر یوکے تسلیم شدہ ثالث", "پینل میڈیٹر – ہائی کورٹ آف سندھ", "ممبر – مصالحہ انٹرنیشنل سینٹر فار اے ڈی آر (MICADR)", "بین الاقوامی ثالثی قانون میں ڈپلومہ – انگلینڈ اور ویلز"],
+    "education": ["بین الاقوامی ثالثی قانون میں ڈپلومہ – کالج آف لاء، انگلینڈ اور ویلز"],
+    "affiliations": ["پاکستان میڈیٹرز ایسوسی ایشن (PMA)", "سی ای ڈی آر یوکے", "مصالحہ انٹرنیشنل سینٹر فار اے ڈی آر (MICADR)", "ہائی کورٹ آف سندھ", "سپریم کورٹ بار ایسوسی ایشن آف پاکستان", "سندھ ہائی کورٹ بار ایسوسی ایشن", "بحریہ یونیورسٹی"],
+    "media": []
+  },
+  "trainer_mustansir_zakir": {
+    "name": "مستنصر ذاکر",
+    "role": "ماسٹر ٹرینر",
+    "highlight": "\"اسٹریٹجک قیادت اور اے ڈی آر کی فضیلت کے ذریعے کارپوریٹ گورننس اور ثالثی کی تربیت کے اقدامات کی قیادت کرنا۔\"",
+    "about": "مستنصر ذاکر ایک سینئر کارپوریٹ رہنما، تسلیم شدہ ثالث، اور بین الاقوامی سطح پر تسلیم شدہ اے ڈی آر ٹرینر ہیں جنہیں اسٹریٹجک مینجمنٹ, کارپوریٹ گورننس اور تنازعات کے حل کا وسیع تجربہ حاصل ہے۔ وہ پاکستان میڈیٹرز ایسوسی ایشن (PMA) کے ڈائریکٹر ٹریننگ اور ایگزیکٹو ممبر کے طور پر خدمات انجام دیتے ہیں اور انہوں نے پاکستان بھر میں ثالثی اور اے ڈی آر کی آگاہی کو فروغ دینے میں نمایاں کردار ادا کیا ہے۔\n\nوہ آئی سی اے پی (ICAP)، آئی سی ایم اے پی (ICMAP)، اور آئی سی ایس پی (ICSP) کے فیلو ممبر ہیں، اور اس وقت ہاشو گروپ کے ساتھ بطور چیف ایگزیکٹو کام کر رہے ہیں۔ انہوں نے کارنیل یونیورسٹی، امریکہ سے اسٹریٹجک مینجمنٹ سرٹیفیکیشن اور پاکستان انسٹی ٹیوٹ آف کارپوریٹ گورننس سے سرٹیفائیڈ ڈائریکٹر ایجوکیشن مکمل کی ہے۔ ایک سی ای ڈی آر یوکے تسلیم شدہ ثالث اور ماسٹر ٹرینر کی حیثیت سے، انہوں نے پاکستان میں پیشہ ورانہ ثالثی کی تربیت، قیادت کی ترقی، اور ادارہ جاتی اے ڈی آر اقدامات میں بڑے پیمانے پر تعاون کیا ہے۔",
+    "badges": ["ماسٹر ٹرینر", "ڈائریکٹر ٹریننگ", "ایگزیکٹو کمیٹی – ساؤتھ", "سابق صدر"],
+    "expertise": ["اے ڈی آر اور ثالثی کی تربیت", "کارپوریٹ گورننس", "اسٹریٹجک مینجمنٹ", "ایگزیکٹو لیڈرشپ ڈویلپمنٹ", "تجارتی تنازعات کا حل", "ٹرین دی ٹرینر (TOT)", "ادارہ جاتی صلاحیتوں کی تعمیر"],
+    "experience": { "years": "20+ سال", "label": "ایگزیکٹو لیڈرشپ اور اے ڈی آر ٹریننگ" },
+    "accreditations": ["سی ای ڈی آر یوکے تسلیم شدہ ثالث", "سی ای ڈی آر یوکے ماسٹر ٹرینر", "سرٹیفائیڈ ڈائریکٹر – پاکستان انسٹی ٹیوٹ آف کارپوریٹ گورننس", "اسٹریٹجک مینجمنٹ سرٹیفیکیشن – کارنیل یونیورسٹی، امریکہ"],
+    "education": ["فیلو – انسٹی ٹیوٹ آف چارٹرڈ اکاؤنٹنٹس آف پاکستان (ICAP)", "فیلو – انسٹی ٹیوٹ آف کاسٹ اینڈ مینجمنٹ اکاؤنٹنٹس آف پاکستان (ICMAP)", "فیلو – انسٹی ٹیوٹ آف کارپوریٹ سیکرٹریز آف پاکستان (ICSP)"],
+    "affiliations": ["پاکستان میڈیٹرز ایسوسی ایشن (PMA)", "سی ای ڈی آر یوکے", "ہاشو گروپ", "پاکستان ہوٹلز ایسوسی ایشن (PHA)", "ایسوسی ایشن آف بلڈرز اینڈ ڈویلپرز آف پاکستان (ABAD)", "انسٹی ٹیوٹ آف چارٹرڈ اکاؤنٹنٹس آف پاکستان (ICAP)", "پاکستان انسٹی ٹیوٹ آف کارپوریٹ گورننس", "کراچی سی اسکاؤٹ کونسل ٹرسٹ"],
+    "media": []
+  },
+  "trainer_wajiha_aleem": {
+    "name": "وجیہہ علیم",
+    "role": "ماسٹر ٹرینر",
+    "highlight": "\"پاکستان میں ایک مضبوط اے ڈی آر فریم ورک کے لیے قیادت، جدت طرازی، اور بین الاقوامی تعاون کے ذریعے ثالثی کو آگے بڑھانا۔\"",
+    "about": "وجیہہ علیم ہائی کورٹ کی وکیل، تسلیم شدہ ثالث، اور قانونی پیشہ ور ہیں جنہیں کارپوریٹ آپریشنز، قانونی مشاورت، اور متبادل حلِ تنازعات (ADR) کا وسیع تجربہ حاصل ہے۔ وہ اس وقت پاکستان میڈیٹرز ایسوسی ایشن (PMA) کی سیکرٹری جنرل کے طور پر خدمات انجام دے رہی ہیں اور ساتھ ہی ہاشو گروپ میں جنرل مینیجر (آپریشنز اور لیگل) کے عہدے پر فائز ہیں۔\n\nانہوں نے یونائیٹڈ کنگڈم سے انٹرنیشنل کمرشل لاء اینڈ متبادل حلِ تنازعات (ADR) میں ایل ایل ایم کیا ہے اور وہ ایک سی ای ڈی آر تسلیم شدہ ثالث ہیں جن کی بین الاقوامی وابستگیوں میں تھائی لینڈ آربٹریشن سینٹر (THAC) شامل ہے۔ وہ ہائی کورٹ آف سندھ میں بطور ثالث پینل میں شامل ہیں اور قومی اور بین الاقوامی سطح پر معروف قانونی اور پیشہ ورانہ تنظیموں کے ساتھ سرگرم عمل ہیں۔",
+    "badges": ["ماسٹر ٹرینر", "سیکرٹری جنرل", "ایگزیکٹو لیڈرشپ"],
+    "expertise": ["اے ڈی آر اور ثالثی کی تربیت", "بین الاقوامی تجارتی قانون", "کارپوریٹ قانونی مشاورت", "تجارتی تنازعات کا حل", "ادارہ جاتی اے ڈی آر ترقی", "پیشہ ورانہ مہارتوں کی تربیت", "تنازعات کا حل"],
+    "experience": { "years": "17+ سال", "label": "کارپوریٹ، قانونی اور اے ڈی آر لیڈرشپ" },
+    "accreditations": ["سی ای ڈی آر تسلیم شدہ ثالث", "پینل میڈیٹر – ہائی کورٹ آف سندھ", "ایسوسی ایٹ ٹرینر – پی ایم اے", "ٹی ایچ اے سی (THAC) چیپٹر وابستگی – تھائی لینڈ آربٹریشن سینٹر"],
+    "education": ["انٹرنیشنل کمرشل لاء اور اے ڈی آر میں ایل ایل ایم – یونائیٹڈ کنگڈم", "بی اے، ایل ایل بی (Hons) – پاکستان"],
+    "affiliations": ["پاکستان میڈیٹرز ایسوسی ایشن (PMA)", "سی ای ڈی آر یوکے", "ثائی لینڈ آربٹریشن سینٹر (THAC)", "ہائی کورٹ آف سندھ", "سندھ بار کونسل", "کراچی بار ایسوسی ایشن", "INTERNATIONAL BAR ASSOCIATION", "ہاشو گروپ"],
+    "media": []
+  },
+  "trainer_huma_shah": {
+    "name": "ہما شاہ",
+    "role": "ماسٹر ٹرینر",
+    "highlight": "\"قیادت، وکالت اور پیشہ ورانہ رہنمائی کے ذریعے کارپوریٹ قانونی فضیلت اور ثالثی کی تربیت کو آگے بڑھانا۔\"",
+    "about": "ہما شاہ ایک انتہائی تجربہ کار قانونی پیشہ ور، کارپوریٹ مشیر، اور تسلیم شدہ اے ڈی آر ٹرینر ہیں جن کی قانونی پریکٹس تین دہائیوں سے زیادہ پر محیط ہے۔ 1993 سے، انہوں نے پاکستان کے چند ممتاز ترین قانونی اداروں بشمول اے جی ایچ ایس (AGHS) لیگل ایڈ سیل، محترمہ عاصمہ جہانگیر اور محترمہ ہنا جیلانی کے ماتحت اے جی ایچ ایس لاء ایسوسی ایٹس، اور میسرز سروج اینڈ بیچینو کے ساتھ کام کیا ہے۔\n\nوہ میسرز شیخ شاہ رانا اینڈ اعجاز (SSR&I) میں مینیجنگ پارٹنر کے طور پر خدمات انجام دے چکی ہیں اور اس وقت ایچ بی ایل (HBL) میں لیگل ہیڈ – نارتھ کے طور پر خدمات انجام دے رہی ہیں۔ وہ بار کونسل آف انگلینڈ اینڈ ویلز کی انز آف کورٹ ایڈوکیسی کمیٹی (IATC) کے تحت ایڈوکیسی ٹریننگ پروگرام پاکستان کی ایک تسلیم شدہ ٹرینر ہیں، اور ایک سی ای ڈی آر یوکے تسلیم شدہ ثالث اور ماسٹر ٹرینر ہیں۔",
+    "badges": ["ماسٹر ٹرینر", "ایگزیکٹو کمیٹی – نارتھ", "ٹریننگ کمیٹی"],
+    "expertise": ["اے ڈی آر اور ثالثی کی تربیت", "کارپوریٹ اور تجارتی قانون", "ایڈوکیسی اور قانونی مہارتوں کی تربیت", "معاہدہ کی ڈرافٹنگ اور ویٹنگ", "بینکنگ اور کارپوریٹ قانونی مشاورت", "تنازعات کا حل", "ٹرین دی ٹرینر (TOT)"],
+    "experience": { "years": "30+ سال", "label": "قانونی پریکٹس، کارپوریٹ ایڈوائزری اور اے ڈی آر ٹریننگ" },
+    "accreditations": ["سی ای ڈی آر یوکے تسلیم شدہ ثالث", "سی ای ڈی آر یوکے ماسٹر ٹرینر", "تسلیم شدہ ٹرینر – ایڈوکیسی ٹریننگ پروگرام پاکستان (IATC)"],
+    "education": ["پنجاب لاء کالج – تعلیمی میرٹ کے لیے دو بار گولڈ میڈل سے نوازا گیا"],
+    "affiliations": ["پاکستان میڈیٹرز ایسوسی ایشن (PMA)", "سی ای ڈی آر یوکے", "انز آف کورٹ ایڈوکیسی کمیٹی (IATC)", "بار کونسل آف انگلینڈ اینڈ ویلز", "حبیب بینک لمیٹڈ (HBL)", "پنجاب بار ایسوسی ایشنز", "اے جی ایچ ایس لیگل ایڈ سیل", "میسرز سروج اینڈ بیچینو"],
+    "media": []
+  },
+  "trainer_usman_g_rashid": {
+    "name": "عثمان جی راشد",
+    "role": "ماسٹر ٹرینر",
+    "highlight": "\"پاکستان بھر میں اے ڈی آر کی صلاحیت پیدا کرنے کے لیے قانونی وکالت، ثالثی کی مہارت، اور تربیتی leadership کو یکجا کرنا۔\"",
+    "about": "عثمان جی راشد ایک بیرسٹر ایٹ لاء، ہائی کورٹس کے وکیل، سی ای ڈی آر تسلیم شدہ ثالث، اور ماسٹر ٹرینر ہیں جنہیں قانونی پریکٹس، ایڈوکیسی ٹریننگ، ثالثی اور قانونی تعلیم کا وسیع تجربہ حاصل ہے۔ انہوں نے یونیورسٹی آف لندن سے ایل ایل بی (Hons)، کنگز کالج لندن سے ایل ایل ایم کیا، اور یونیورسٹی آف دی ویسٹ آف انگلینڈ، برسٹل، یوکے سے بار ووکیشنل کورس مکمل کیا۔ انہیں آنرایبل سوسائٹی آف لنکنز ان کی طرف سے بار میں بلایا گیا تھا۔\n\nوہ اس سے قبل پاکستان میڈیٹرز ایسوسی ایشن (PMA) کے سیکرٹری جنرل کے طور پر خدمات انجام دے چکے ہیں اور انہوں نے پاکستان میں ثالثی کی آگاہی، اے ڈی آر کی صلاحیت سازی، اور پیشہ ورانہ قانونی تربیت کے اقدامات میں بڑھ چڑھ کر حصہ لیا ہے۔ اپنی قانونی پریکٹس کے ساتھ ساتھ، وہ قانونی تعلیم اور وکالت کی تربیت سے واسطہ رکھتے ہیں، خاص طور پر یونیورسٹی آف لندن کے ایکسٹرنل پروگرام کے لیے کمپنی لاء اور لاء آف ایویڈنس پڑھاتے ہیں۔\n\nعثمان نے اپنے پیشہ ورانہ کیریئر کا آغاز عمر بندیال اینڈ ایسوسی ایٹس سے کیا اور اس وقت عنایت اللہ چیمبرز، ایڈووکیٹس اینڈ لیگل کنسلٹنٹس کے ذریعے اپنی قانونی پریکٹس کا انتظام سنبھالتے ہیں۔ قانونی چارہ جوئی، اے ڈی آر، قانونی تعلیم، اور ایڈوکیسی ٹریننگ میں ان کی مشترکہ مہارت انہیں ادارہ جاتی اے ڈی آر کی ترقی اور پیشہ ورانہ ثالثی کے طریقوں میں مؤثر طریقے سے تعاون کرنے کے قابل بناتی ہے۔",
+    "badges": ["ماسٹر ٹرینر", "بیرسٹر ایٹ لاء", "سابق سیکرٹری جنرل – پی ایم اے"],
+    "expertise": ["اے ڈی آر اور ثالثی کی تربیت", "ایڈوکیسی اسکلز ٹریننگ", "کمپنی لاء", "قانونِ شہادت (Law of Evidence)", "تجارتی اور سول قانونی چارہ جوئی", "قانونی تعلیم اور پیشہ ورانہ ترقی", "تنازعات کا حل"],
+    "experience": { "years": "15+ سال", "label": "سی ای ڈی آر تسلیم شدہ ماسٹر ٹرینر، ایڈوکیسی اور قانونی تعلیم" },
+    "accreditations": ["سی ای ڈی آر تسلیم شدہ ثالث اور ماسٹر ٹرینر – یوکے", "بیرسٹر ایٹ لاء – لنکنز ان", "سرٹیفائیڈ ایڈوکیسی ٹرینر"],
+    "education": ["ایل ایل ایم – کنگز کالج، یونیورسٹی آف لندن", "ایل ایل بی (Hons) – یونیورسٹی آف لندن", "بار ووکیشنل کورس – یونیورسٹی آف دی ویسٹ آف انگلینڈ، برسٹل، یوکے۔"],
+    "affiliations": ["پاکستان میڈیٹرز ایسوسی ایشن (PMA)", "سی ای ڈی آر یوکے", "معزز سوسائٹی آف لنکنز ان", "یونیورسٹی کالج لاہور", "یونیورسٹی آف لندن ایکسٹرنل پروگرام", "عنایت اللہ چیمبرز، ایڈووکیٹس اینڈ لیگل کنسلٹنٹس"],
+    "media": []
+  },
+  "trainer_asfand_yar_ali_khan": {
+    "name": "اسفند یار علی خان",
+    "role": "ماسٹر ٹرینر",
+    "highlight": "\"قیادت، تربیت اور ادارہ جاتی مہارت کے ذریعے ثالثی، آربٹریشن اور قانونی اصلاحات کو آگے بڑھانا۔\"",
+    "about": "اسفند یار علی خان ایک سینئر قانونی پریکٹیشنر، تسلیم شدہ ثالث، اور بین الاقوامی سطح پر تربیت یافتہ اے ڈی آر ماہر ہیں جنہیں قانونی مشاورت، آربٹریشن، ادارہ جاتی ترقی، اور ثالثی کی تربیت کا وسیع تجربہ حاصل ہے۔ ایس اینڈ کے پارٹنرشپ میں سینئر پارٹنر اور پاکستان میڈیٹرز ایسوسی ایشن (PMA) کے نائب صدر کی حیثیت سے، وہ پاکستان میں ثالثی اور متبادل حلِ تنازعات کے فریم ورک کو مضبوط بنانے میں فعال طور پر حصہ لیتے ہیں۔\n\nلنکنز ان، لندن کی طرف سے بار میں بلائے گئے، وہ ایک سی ای ڈی آر یوکے تسلیم شدہ ثالث اور ماسٹر ٹرینر ہیں اور چارٹرڈ انسٹی ٹیوٹ آف آربٹریٹرز (MCIArb)، لندن کے ممبر ہیں۔ ان کا پیشہ ورانہ پس منظر قانونی پریکٹس، بین الاقوامی ترقیاتی اقدامات، پالیسی روابط، اور ادارہ جاتی مشاورتی کرداروں پر محیط ہے بشمول اقوام متحدہ اور یو این ڈی پی (UNDP) کے منصوبوں کے ساتھ کام۔",
+    "badges": ["ماسٹر ٹرینر", "ایگزیکٹو لیڈرشپ", "نائب صدر – نارتھ"],
+    "expertise": ["اے ڈی آر اور ثالثی کی تربیت", "آربٹریشن اور تنازعات کا حل", "تجارتی اور سول تنازعات", "قانونی مہارتوں کی ترقی", "ادارہ جاتی اے ڈی آر صلاحیت سازی", "پیشہ ورانہ ترقی کے پروگرام", "ٹرین دی ٹرینر (TOT)"],
+    "experience": { "years": "20+ سال", "label": "قانون کی پریکٹس، اے ڈی آر اور ٹریبیونل قیادت" },
+    "accreditations": ["سی ای ڈی آر یوکے تسلیم شدہ ثالث", "سی ای ڈی آر یوکے ماسٹر ٹرینر", "ممبر – چارٹرڈ انسٹی ٹیوٹ آف آربٹریٹرز (MCIArb)، لندن", "بیرسٹر ایٹ لاء – لنکنز ان، لندن"],
+    "education": ["پوسٹ گریجویٹ ڈپلومہ ان پروفیشنل لیگل اسکلز – یوکے", "ایل ایل بی (Hons) – یوکے", "ایم اے – پاکستان", "بی اے – پاکستان"],
+    "affiliations": ["پاکستان میڈیٹرز ایسوسی ایشن (PMA)", "سی ای ڈی آر یوکے", "چارٹرڈ انسٹی ٹیوٹ آف آربٹریٹرز, لندن", "لنکنز ان، لندن", "پاکستان ریڈ کریسنٹ سوسائٹی (PRCS)", "پاکستان انوائرنمنٹل لاء ایسوسی ایشن", "برٹش ایلومنائی ایسوسی ایشن", "اقوام متحدہ کے ترقیاتی اقدامات"],
+    "media": []
+  },
+   "trainer_saima_amin_khawaja": {
+    "name": "سائمہ امین خواجہ",
+    "role": "ماسٹر ٹرینر",
+    "highlight": "\"تعلیم اور ادارہ جاتی قیادت کے ذریعے قانونی اصلاحات، ثالثی کی فضیلت، اور پائیدار تنازعات کے حل کو فروغ دینا۔\"",
+    "about": "سائمہ امین خواجہ ایک مایہ ناز قانونی پیشہ ور، منظور شدہ ثالث (میڈی ایٹر)، اور بین الاقوامی سطح پر تربیت یافتہ ADR ماہر ہیں جو کارپوریٹ قانونی چارہ جوئی، آئینی قانون، قانونی مشاورت، اور ادارہ جاتی اصلاحات میں وسیع تجربہ رکھتی ہیں۔ انہوں نے پاکستان میں ثالثی کی آگاہی، ADR ٹریننگ، اور قانونی ترقی کے اقدامات کو آگے بڑھانے میں اہم کردار ادا کیا ہے۔\n\nانہوں نے کنگز کالج لندن سے LL.M کیا ہے اور ایم سی مہتا فاؤنڈیشن، انڈیا سے ماحولیاتی قوانین میں خصوصی تربیت حاصل کی ہے۔ ایک CEDR UK تسلیم شدہ ثالث اور ماسٹر ٹرینر کے طور پر، انہوں نے پیشہ ورانہ ثالثی کی تربیت اور صلاحیتوں کو بڑھانے کے پروگراموں میں بڑھ چڑھ کر حصہ لیا ہے۔ انہوں نے لمز (LUMS)، سول سروسز اکیڈمی، جوڈیشل اکیڈمی، TILS اور UCL میں پڑھایا ہے، جبکہ لاہور ہائی کورٹ کی جانب سے قائم کردہ کلائمیٹ چینج کمیشن میں بھی خدمات انجام دی ہیں۔",
+    "badges": ["ماسٹر ٹرینر", "ایگزیکٹو ممبر", "وائس پریسیڈنٹ – نارتھ"],
+    "expertise": ["ADR اور ثالثی کی تربیت", "کارپوریٹ اور آئینی قانون", "قانونی اصلاحات اور پالیسی کی ترقی", "ماحولیاتی قانون", "جوڈیشل اور پیشہ ورانہ تربیت", "تنازعات کا حل", "ٹرینر کی ٹریننگ (TOT)"],
+    "experience": { "years": "20+ سال", "label": "قانونی پریکٹس، ٹریننگ اور کنسلٹنسی" },
+    "accreditations": ["CEDR UK منظور شدہ ثالث", "CEDR UK ماسٹر ٹرینر", "خصوصی ماحولیاتی قانون کی تربیت – ایم سی مہتا فاؤنڈیشن، انڈیا"],
+    "education": ["LL.M – کنگز کالج لندن"],
+    "affiliations": ["پاکستان میڈی ایٹرز ایسوسی ایشن (PMA)", "CEDR UK", "لاہور ہائی کورٹ", "لاہور یونیورسٹی آف مینجمنٹ سائنسز (LUMS)", "سول سروسز اکیڈمی", "جوڈیشل اکیڈمی", "TILS", "UCL", "ایم سی مہتا فاؤنڈیشن، انڈیا"]
+  },
+  "trainer_tariq_saeed_rana": {
+    "name": "طارق سعید رانا",
+    "role": "ماسٹر ٹرینر",
+    "highlight": "\"بین الاقوامی مہارت، پیشہ ورانہ تربیت، اور ADR قیادت کے ذریعے کارپوریٹ قانونی پریکٹس اور ثالثی کی فضیلت کی قیادت کرنا۔\"",
+    "about": "طارق سعید رانا ایک سینئر قانونی مشیر، منظور شدہ ثالث، اور کارپوریٹ اور کمرشل قانون میں وسیع مہارت رکھنے والے بین الاقوامی سطح پر تسلیم شدہ ADR ٹرینر ہیں۔ سوسائٹی آف لنکنز ان، یوکے کی جانب سے بار میں بلائے جانے کے بعد، وہ اس وقت Surridge & Beecheno میں کارپوریٹ اور کمرشل لا ڈویژن کے سربراہ ہیں اور پاکستان میں ثالثی کی تربیت، قانونی مشاورت، اور ادارہ جاتی ADR کی ترقی میں نمایاں کردار ادا کر رہے ہیں۔\n\nوہ ایک CEDR UK تسلیم شدہ ثالث اور ماسٹر ٹرینر ہیں جنہیں کارپوریٹ گورننس، قانونی مشاورت، اور پیشہ ورانہ صلاحیتوں کی تعمیر میں وسیع تجربہ ہے۔ وہ قانونی اور تجارتی اداروں میں قائدانہ کردار برقرار رکھتے ہوئے پیشہ ورانہ اور ڈائریکٹرز کے تربیتی پروگراموں کو فعال طور پر چلاتے ہیں۔",
+    "badges": ["ماسٹر ٹرینر", "سابق صدر", "ایگزیکٹو کمیٹی – نارتھ"],
+    "expertise": ["ADR اور ثالثی کی تربیت", "کارپوریٹ اور کمرشل قانون", "ڈائریکٹرز کے تربیتی پروگرام", "کارپوریٹ گورننس", "تجارتی تنازعات کا حل", "پیشہ ورانہ قانونی ترقی", "ٹرینر کی ٹریننگ (TOT)"],
+    "experience": { "years": "25+ سال", "label": "قانونی پریکٹس، ADR اور کارپوریٹ ایڈوائزری" },
+    "accreditations": ["CEDR UK منظور شدہ ثالث", "CEDR UK ماسٹر ٹرینر", "کالڈ ٹو دی بار – لنکنز ان، یوکے"],
+    "education": ["LL.M. ان کمرشل لاز – برطانیہ", "پوسٹ گریجویٹ ڈپلومہ ان لا – برطانیہ", "LL.B – پاکستان", "ایسوسی ایٹ انجینئرنگ (مکینیکل) – پاکستان"],
+    "affiliations": ["پاکستان میڈی ایٹرز ایسوسی ایشن (PMA)", "CEDR UK", "سوسائٹی آف لنکنز ان، لندن", "جنرل کونسل آف دی بار آف انگلینڈ اینڈ ویلز", "لاہور ہائی کورٹ بار ایسوسی ایشن", "پنجاب بار کونسل", "لاہور چیمبر آف کامرس اینڈ انڈسٹری", "Surridge & Beecheno"]
+  },
+  "saeed_habib": {
+    "name": "سعید حبیب",
+    "role": "وائس پریسیڈنٹ – ساؤتھ",
+    "highlight": "",
+    "about": "",
+    "badges": ["ممبرشپ کمیٹی", "ادارہ جاتی ہم آہنگی"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": []
+  },
+  "shabana_ali": {
+    "name": "شبانہ علی",
+    "role": "وائس پریسیڈنٹ – ساؤتھ",
+    "highlight": "\"وکالت، تعلیم اور تنازعات کے حل کے ذریعے ثالثی، قانونی بیداری اور سماجی انصاف کو فروغ دینا۔\"",
+    "about": "محترمہ شبانہ علی پاکستان میڈی ایٹرز ایسوسی ایشن (PMA) کی وائس پریسیڈنٹ - ساؤتھ ہیں اور ایک تجربہ کار سول، ٹیکس اور کارپوریٹ وکیل ہیں جو قانونی چارہ جوئی، مشاورتی خدمات اور تنازعات کے حل میں مضبوط پس منظر رکھتی ہیں۔ وہ پاکستان میں ثالثی کے طریقوں کو آگے بڑھانے میں سرگرم عمل ہیں اور قانونی بااختیار بنانے، سماجی انصاف اور خواتین و بچوں کے حقوق کے تحفظ کے لیے اپنے عزم کی وجہ سے بڑے پیمانے پر جانی جاتی ہیں۔",
+    "badges": ["ایگزیکٹو ٹیم", "ثالث (میڈی ایٹر)", "PMA منظور شدہ ثالث", "بار کوآرڈینیشن – ساؤتھ", "قیادت"],
+    "expertise": ["سول لا", "کارپوریٹ لا", "خاندانی تنازعات", "ٹیکس لا", "ثالثی اور ADR", "خواتین اور بچوں کے حقوق کی وکالت"],
+    "experience": { "years": "20+ سال", "label": "قانونی پریکٹس، ثالثی اور عوامی وکالت" },
+    "accreditations": ["PMA منظور شدہ ثالث", "سرٹیفائیڈ میڈیشن پریکٹیشنر"],
+    "education": ["سول، کارپوریٹ اور ٹیکس قانون میں قانونی اور پیشہ ورانہ تعلیم"],
+    "affiliations": ["پاکستان میڈی ایٹرز ایسوسی ایشن", "پاکستان انسٹی ٹیوٹ آف پبلک فنانس اکاؤنٹنٹس (PIPFA)", "ایگزیکٹو کمیٹی – PMA", "میڈیا لیگل اینالسٹ اور اسپیکر"]
+  },
+  "syed_sammad_ul_haque": {
+    "name": "سید صمد الحق",
+    "role": "فنانس سیکریٹری",
+    "highlight": "",
+    "about": "",
+    "badges": ["ممبرشپ کمیٹی", "ایگزیکٹو قیادت"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": []
+  },
+  "tariq_saeed_rana": {
+  "name": "طارق سعید رانا",
+  "role": "ایگزیکٹو کمیٹی – نارتھ",
+  "highlight": "\"بین الاقوامی مہارت، پیشہ ورانہ تربیت، اور ADR قیادت کے ذریعے کارپوریٹ قانونی پریکٹس اور ثالثی کی فضیلت کی قیادت کرنا۔\"",
+  "about": "بیرسٹر طارق سعید رانا ایک سینئر قانونی پیشہ ور، منظور شدہ ثالث (میڈی ایٹر)، اور کارپوریٹ اور کمرشل قانون میں وسیع مہارت رکھنے والے ماسٹر ٹرینر ہیں۔ سوسائٹی آف لنکنز ان، یوکے کی جانب سے بار میں بلائے جانے کے بعد، وہ اس وقت Surridge & Beecheno میں کارپوریٹ اور کمرشل لا ڈویژن کے سربراہ ہیں۔ قانونی مشاورت، ADR، اور پیشہ ورانہ تربیت میں دہائیوں کے تجربے کے ساتھ، وہ پاکستان میں ثالثی اور ادارہ جاتی قانونی ترقی کو آگے بڑھانے میں اہم قائدانہ کردار ادا کر رہے ہیں۔",
+  "badges": ["ایگزیکٹو ٹیم", "ثالث (میڈی ایٹر)", "CEDR منظور شدہ ثالث", "ماسٹر ٹرینر", "سابق صدر"],
+  "expertise": ["کارپوریٹ اور کمرشل قانون", "ثالثی اور ADR", "بین الاقوامی تجارتی تنازعات", "قانونی مشاورت", "کارپوریٹ governance", "پیشہ ورانہ تربیت"],
+  "experience": { "years": "25+ سال", "label": "قانونی پریکٹس، ADR اور کارپوریٹ ایڈوائزری" },
+  "accreditations": ["CEDR منظور شدہ ثالث", "CEDR ماسٹر ٹرینر", "کالڈ ٹو دی بار – لنکنز ان، یوکے", "PMA منظور شدہ ثالث"],
+  "education": ["LL.M. (کمرشل لاز) – برطانیہ", "پوسٹ گریجویٹ ڈپلومہ ان لا – برطانیہ", "LL.B. – پاکستان", "ایسوسی ایٹ انجینئرنگ (مکینیکل) – پاکستان"],
+  "affiliations": ["جنرل کونسل آف دی بار آف انگلینڈ اینڈ ویلز", "سوسائٹی آف لنکنز ان، لندن", "پاکستان میڈی ایٹرز ایسوسی ایشن", "لاہور ہائی کورٹ بار ایسوسی ایشن", "پنجاب bar کونسل", "لاہور چیمبر آف کامرس اینڈ انڈسٹری"],
+  "media": []
+},
+  "huma_shah": {
+    "name": "ہما شاہ",
+    "role": "ایگزیکٹو کمیٹی – نارتھ",
+    "highlight": "\"قیادت، وکالت اور پیشہ ورانہ رہنمائی کے ذریعے کارپوریٹ قانونی عمدگی اور ثالثی کی تربیت کو فروغ دینا۔\"",
+    "about": "محترمہ ہما شاہ ایک سینئر قانونی پیشہ ور ہیں جو کارپوریٹ قانون، قانونی مشاورت، تجارتی ڈرافٹنگ، اور تنازعات کے حل میں وسیع تجربہ رکھتی ہیں۔ 1993 سے پریکٹس کرتے ہوئے، انہوں نے نامور قانونی اداروں اور لاء فرموں بشمول AGHS لیگل ایڈ سیل, AGHS لا ایسوسی ایٹس، اور Surridge & Beecheno کے ساتھ کام کیا ہے۔ وہ اس وقت HBL میں لیگل ہیڈ - نارتھ کے طور پر خدمات انجام دے رہی ہیں اور پاکستان میں ثالثی کی تربیت اور ADR کی ترقی میں نمایاں کردار ادا کر رہی ہیں۔",
+    "badges": ["ایگزیکٹو ٹیم", "ثالث (میڈی ایٹر)", "CEDR منظور شدہ ثالث", "ماسٹر ٹرینر", "ٹریننگ کمیٹی"],
+    "expertise": ["کارپوریٹ اور کمرشل قانون", "قانونی مشاورت", "تجارتی ڈرافٹنگ اور ویٹنگ", "بینکنگ اور مالیاتی قانونی امور", "ثالثی اور ADR", "وکالت کی تربیت"],
+    "experience": { "years": "30+ سال", "label": "قانونی پریکٹس، کارپوریٹ ایڈوائزری اور ADR ٹریننگ" },
+    "accreditations": ["CEDR منظور شدہ ثالث", "CEDR ماسٹر ٹرینر", "منظور شدہ ایڈووکیسی ٹرینر – IATC (بار کونسل آف انگلینڈ اینڈ ویلز)", "PMA منظور شدہ ثالث"],
+    "education": ["پنجاب لا کالج - گولڈ میڈلسٹ (تعلیمی میرٹ کے لیے دو بار ایوارڈ یافتہ)"],
+    "affiliations": ["پاکستان میڈی ایٹرز ایسوسی ایشن", "انز آف کورٹ ایڈووکیسی ٹریننگ پروگرام پاکستان", "پنجاب بار ایسوسی ایشنز", "HBL – لیگل ہیڈ نارتھ"]
+  },
+  "umaimah_anwar_khan": {
+    "name": "امیمہ انور خان",
+    "role": "ایگزیکٹو کمیٹی – ساؤتھ",
+    "highlight": "",
+    "about": "",
+    "badges": ["ضابطہ اخلاق", "بار کوآرڈینیشن – ساؤتھ"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": []
+  },
+  "mustansir_zakir": {
+    "name": "مستنصر ذاکر",
+    "role": "ایگزیکٹو کمیٹی – ساؤتھ",
+    "highlight": "\"اسٹریٹجک قیادت اور ADR کی فضیلت کے ذریعے کارپوریٹ گورننس اور ثالثی کے تربیتی اقدامات کی قیادت کرنا۔\"",
+    "about": "جناب مستنصر ذاکر ایک سینئر کارپئیوٹ ایگزیکٹو، منظور شدہ ثالث، اور ماسٹر ٹرینر ہیں جنہیں کارپوریٹ گورننس، ہاسپیٹلٹی، فنانس، اور متبادل تنازعات کے حل (ADR) میں وسیع قائدانہ تجربہ حاصل ہے۔ فی الوقت ہاشو گروپ میں چیف ایگزیکٹو کے طور پر خدمات انجام دے رہے ہیں، انہوں نے پاکستان میڈی ایٹرز ایسوسی ایشن (PMA) کے اندر اپنی قیادت کے ذریعے پاکستان میں ثالثی کی آگاہی اور پیشہ ورانہ تربیتی اقدامات کو آگے بڑھانے میں اہم کردار ادا کیا ہے۔",
+    "badges": ["ایگزیکٹو ٹیم", "ثالث (میڈی ایٹر)", "CEDR منظور شدہ ثالث", "ڈائریکٹر ٹریننگ", "ماسٹر ٹرینر", "سابق صدر"],
+    "expertise": ["کارپوریٹ گورننس", "اسٹریٹجک مینجمنٹ", "ثالثی اور ADR ٹریننگ", "ہاسپیٹلٹی اور کاروباری قیادت", "مالیاتی انتظام", "ادارہ جاتی ترقی"],
+    "experience": { "years": "30+ سال", "label": "کارپوریٹ قیادت، گورننس اور ADR" },
+    "accreditations": ["CEDR منظور شدہ ثالث", "CEDR ماسٹر ٹرینر", "سرٹیفائیڈ ڈائریکٹر ایجوکیشن – PICG", "اسٹریٹجک مینجمنٹ سرٹیفیکیشن – کارنیل یونیورسٹی، امریکہ"],
+    "education": ["فیلو – انسٹی ٹیوٹ آف چارٹرڈ اکاؤنٹنٹس آف پاکستان (ICAP)", "فیلو – انسٹی ٹیوٹ آف کاسٹ اینڈ مینجمنٹ اکاؤنٹنٹس آف پاکستان (ICMAP)", "فیلو – انسٹی ٹیوٹ آف کارپوریٹ سیکریٹریز آف پاکستان (ICSP)"],
+    "affiliations": ["پاکستان میڈی ایٹرز ایسوسی ایشن (سابق صدر اور ڈائریکٹر ٹریننگ)", "ہاشو گروپ – چیف ایگزیکٹو", "پاکستان ہوٹلز ایسوسی ایشن (سابق چیئرمین)", "ایسوسی ایشن آف بلڈرز اینڈ ڈویلپرز آف پاکستان (ABAD)", "کراچی سی اسکاؤٹ کونسل ٹرسٹ – منیجنگ ٹرسٹی"]
+  },
+  "usman_g_rashid": {
+    "name": "عثمان جی راشد",
+    "role": "ممبر",
+    "highlight": "\"پاکستان بھر میں ADR کی صلاحیت پیدا کرنے کے لیے قانونی وکالت، ثالثی کی مہارت، اور تربیتی قیادت کو یکجا کرنا۔\"",
+    "about": "عثمان جی راشد ایک بیرسٹر ایٹ لا، ہائی کورٹس کے ایڈوکیٹ، CEDR منظور شدہ ثالث، اور ماسٹر ٹرینر ہیں جنہیں قانونی پریکٹس، وکالت کی تربیت، ثالثی اور قانونی تعلیم میں وسیع تجربہ ہے۔ انہوں نے یونیورسٹی آف لندن سے LL.B (Hons)، کنگز کالج لندن سے LL.M کیا، اور یونیورسٹی آف دی ویسٹ آف انگلینڈ، برسٹل، یوکے سے بار ووکیشنل کورس مکمل کیا۔ انہیں آنریبل سوسائٹی آف لنکنز ان کی جانب سے بار میں بلایا گیا تھا۔\n\nوہ اس سے قبل پاکستان میڈی ایٹرز ایسوسی ایشن (PMA) کے سیکرٹری جنرل کے طور پر خدمات انجام دے چکے ہیں اور انہوں نے پاکستان میں ثالثی کی آگاہی، ADR کی صلاحیتوں کی تعمیر، اور پیشہ ورانہ قانونی تربیت کے اقدامات میں فعال کردار ادا کیا ہے۔ اپنی قانونی پریکٹس کے ساتھ ساتھ، وہ قانونی تعلیم اور وکالت کی تربیت، خاص طور پر یونیورسٹی آف لندن ایکسٹرنل پروگرام کے لیے کمپنی لا اور لا آف ایویڈنس سے وابستہ ہیں۔\n\nعثمان نے اپنے پیشہ ورانہ کیریئر کا آغاز عمر بندیال اینڈ ایسوسی ایشنز سے کیا اور فی الوقت عنایت اللہ چیمبرز، ایڈووکیٹس اینڈ لیگل کنسلٹنٹس کے ذریعے اپنی قانونی پریکٹس چلا رہے ہیں۔",
+    "badges": ["ثالث (میڈی ایٹر)", "ماسٹر ٹرینر", "بیرسٹر ایٹ لا"],
+    "expertise": ["ADR اور ثالثی کی تربیت", "وکالت کی مہارت کی تربیت", "کمپنی لا", "قانونِ شہادت (Law of Evidence)", "تجارتی اور سول قانونی چارہ جوئی", "قانونی تعلیم اور پیشہ ورانہ ترقی", "تنازعات کا حل"],
+    "experience": { "years": "", "label": "CEDR منظور شدہ ثالث اور ماسٹر ٹرینر" },
+    "accreditations": ["CEDR منظور شدہ ثالث اور ماسٹر ٹرینر – یوکے", "بیرسٹر ایٹ لا – لنکنز ان", "سرٹیفائیڈ ایڈووکیسی ٹرینر"],
+    "education": ["LL.M. – کنگز کالج، یونیورسٹی آف لندن", "LL.B. (Hons.) – یونیورسٹی آف لندن", "بار ووکیشنل کورس – یونیورسٹی آف دی ویسٹ آف انگلینڈ، برسٹل، یوکے"],
+    "affiliations": ["پاکستان میڈی ایٹرز ایسوسی ایشن (PMA)", "CEDR UK", "آنریبل سوسائٹی آف لنکنز ان", "یونیورسٹی کالج لاہور", "یونیورسٹی آف لندن ایکسٹرنل پروگرام", "عنایت اللہ چیمبرز، ایڈووکیٹس اینڈ لیگل کنسلٹنٹس"]
+  },
+  "adnan_mufti": {
+    "name": "عدنان مفتی",
+    "role": "ایگزیکٹو کمیٹی – ساؤتھ",
+    "highlight": "",
+    "about": "",
+    "badges": ["ادارہ جاتی ہم آہنگی", "قیادت"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": []
+  },
+  "anwar_kashif_mumtaz": {
+    "name": "انور کاشف ممتاز",
+    "role": "ماسٹر ٹرینر",
+    "highlight": "",
+    "about": "انور کاشف ممتاز ایک سینئر قانونی پیشہ ور، لیڈرشپ ٹرینر، اور منظور شدہ ثالث ہیں جنہیں کارپوریٹ، ٹیکس، اور تنازعات کے حل کی پریکٹس میں وسیع تجربہ حاصل ہے۔ ہائی کورٹ کے ایڈوکیٹ اور میسرز سید الدین اینڈ کمپنی میں سینئر پارٹنر کے طور پر، انہوں نے پاکستان میں ٹیکس اور کارپوریٹ لا ایڈوائزری میں ایک مضبوط ساکھ بنائی ہے۔\n\nوہ لیڈرشپ اور پرسنل ڈویلپمنٹ میں بین الاقوامی سطح پر سرٹیفائیڈ ٹرینر اور CEDR UK کے منظور شدہ ثالث اور ماسٹر ٹرینر ہیں۔ انہوں نے قانونی اور کارپوریٹ سیکٹرز میں لیڈرشپ کی ترقی، ثالثی کی آگاہی، اور پیشہ ورانہ صلاحیتوں کی تعمیر میں نمایاں کردار ادا کیا ہے۔ انہوں نے پاکستان ٹیکس بار اور کراچی ٹیکس بار کے سیکرٹری جنرل، نائب صدر اور صدر سمیت اہم قائدانہ عہدوں پر بھی خدمات انجام دی ہیں۔",
+    "badges": ["ماسٹر ٹرینر", "سابق صدر", "لیڈرشپ ٹرینر"],
+    "expertise": ["لیڈرشپ اور پرسنل ڈویلپمنٹ", "ADR اور ثالثی کی تربیت", "کارپوریٹ لا", "ٹیکس لا اور ایڈوائزری", "پیشہ ورانہ ترقی کے پروگرام", "تنازعات کا حل", "ٹرینر کی ٹریننگ (TOT)"],
+    "experience": { "years": "", "label": "" },
+    "accreditations": ["CEDR UK منظور شدہ ثالث", "CEDR UK ماسٹر ٹرینر", "سرٹیفائیڈ انٹرنیشنل ٹرینر – لیڈرشپ اور پرسنل ڈویلپمنٹ"],
+    "education": ["ایڈوکیٹ، ہائی کورٹ آف پاکستان"],
+    "affiliations": ["پاکستان میڈی ایٹرز ایسوسی ایشن (PMA)", "CEDR UK", "پاکستان ٹیکس بار", "کراچی ٹیکس بار", "پبلک انٹرسٹ لا ایسوسی ایشن آف پاکستان (PILAP)", "میسرز سید الدین اینڈ کمپنی"]
+  }
+  },
+          
           "former_presidents": {
             "president_1": {
               "name": "انور کاشف ممتاز",
@@ -5016,6 +5702,305 @@
               "aria_label": "عرض الملف الشخصي لـ أسفند يار علي خان"
             }
           },
+          "modal": {
+    "about_label": "نبذة عن",
+    "expertise_title": "الخبرة",
+    "training_expertise_title": "خبرات التدريب",
+    "accreditations_title": "الاعتمادات",
+    "education_title": "التعليم",
+    "affiliations_title": "الانتماءات المهنية",
+    "media_title": "الإعلام والمشاركة العامة",
+    "coming_soon": "قريباً",
+    "profile_close_label": "إغلاق الملف الشخصي"
+  },
+  "profile_modal": {
+    "aga_zafar_ahmed": {
+    "name": "آغا ظفر أحمد",
+    "role": "الرئيس",
+    "highlight": "\"النهوض بالوساطة وتسوية النزاعات الدولية من خلال القيادة والمناصرة والتميز في الوسائل البديلة لتسوية النزاعات.\"",
+    "about": "السيد آغا ظفر أحمد هو رئيس جمعية المصلحين والوسطاء الباكستانية (PMA) ومحامٍ بارز لدى المحكمة العليا في باكستان مع أكثر من 21 عاماً من الممارسة القانونية. وهو معروف على نطاق واسع بخبرته في القانون البحري والنزاعات التجارية وشؤون التجارة الدولية والوسائل البديلة لتسوية النزاعات (ADR). وبصفته عضواً مؤسساً في جمعية PMA، فإنه يستمر في لعب دور رائد في تطوير ممارسات الوساطة والتسوية السلمية للنزاعات في جميع أنحاء باكستان.",
+    "badges": ["الفريق التنفيذي", "وسيط", "وسيط معتمد من CEDR", "مدرب ماستر", "القيادة التنفيذية"],
+    "expertise": ["النزاعات التجارية", "القانون البحري", "نزاعات التجارة الدولية", "الوساطة في الشركات", "التقاضي المدني", "الوسائل البديلة لتسوية النزاعات (ADR)"],
+    "experience": { "years": "21+ عاماً", "label": "الممارسة القانونية وتسوية النزاعات" },
+    "accreditations": ["وسيط معتمد من CEDR (لندن)", "وسيط معتمد لدى MICADR", "وسيط معتمد من PMA", "دبلوم في قانون التحكيم الدولي"],
+    "education": ["دبلوم في قانون التحكيم الدولي – كلية الحقوق، إنجلترا وويلز"],
+    "affiliations": ["جمعية نقابة المحامين بالمحكمة العليا في باكستان", "جمعية نقابة محامي المحكمة العليا في السند", "جمعية المصلحين والوسطاء الباكستانية (عضو مؤسس)", "جامعة بحرية (أستاذ زائر سابق)"],
+    "media": []
+  },
+  "saima_amin_khawaja": {
+    "name": "صائمة أمين خواجة",
+    "role": "نائب الرئيس – الشمال",
+    "highlight": "\"تعزيز الإصلاح القانوني والتميز في الوساطة وتسوية النزاعات المستدامة من خلال التعليم والقيادة المؤسسية.\"",
+    "about": "السيدة صائمة أمين خواجة هي نائب الرئيس – الشمال لجمعية المصلحين والوسطاء الباكستانية (PMA) ومحترفة قانونية بارعة تتمتع بخبرة واسعة في تقاضي الشركات والقانون الدستوري والاستشارات التعاقدية واستشارات الإصلاح القانوني. وهي وسيطة مدربة دولياً ومدربة ماستر مع التزام قوي بتطوير الوسائل البديلة لتسوية النزاعات والقانون البيئي والتعليم القانوني المهني في باكستان.",
+    "badges": ["الفريق التنفيذي", "وسيط", "وسيط معتمد من CEDR", "مدرب ماستر", "لجنة التدريب"],
+    "expertise": ["تقاضي الشركات", "القانون الدستوري", "الإصلاحات القانونية والاستشارات", "القانون البيئي", "التدريب على الوساطة وADR", "سياسة تغير المناخ"],
+    "experience": { "years": "20+ عاماً", "label": "الممارسة القانونية والتدريب والاستشارات" },
+    "accreditations": ["وسيط معتمد من CEDR", "مدرب ماستر معتمد من CEDR", "وسيط معتمد من PMA", "تدريب القانون البيئي – مؤسسة م. ج. ميهتا، الهند"],
+    "education": ["ماجستير في القانون (LL.M) – كينجز كوليدج لندن"],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية", "لجنة تغير المناخ – محكمة لاهور العليا", "أكاديمية الخدمة المدنية", "الأكاديمية القضائية", "جامعة لاهور للعلوم الإدارية (LUMS)", "كلية جامعة لاهور (UCL)", "معهد الدراسات القانونية (TILS)"],
+    "media": []
+  },
+  "asfand_yar_ali_khan": {
+    "name": "أسفند يار علي خان",
+    "role": "نائب الرئيس – الشمال",
+    "highlight": "\"تطوير الوساطة والتحكيم والإصلاح القانوني من خلال القيادة والتدريب والخبرة المؤسسية.\"",
+    "about": "الباريسير أسفند يار علي خان هو نائب الرئيس – الشمال لجمعية المصلحين والوسطاء الباكستانية (PMA) وعضو مؤسس في الجمعية. تم استدعاؤه إلى نقابة المحامين من قبل جمعية لينكون الموقرة، وهو ممارس بارع في القانون والتنمية وذو خبرة واسعة في الوساطة والتحكيم والقانون البيئي والمسائل التنظيمية. يساهم بنشاط في تعزيز ممارسات ADR ومبادرات الإصلاح القانوني في جميع أنحاء باكستان.",
+    "badges": ["الفريق التنفيذي", "وسيط", "وسيط معتمد من CEDR", "مدرب ماستر", "لجنة قواعد السلوك"],
+    "expertise": ["التحكيم وADR", "قانون العمل والتوظيف", "القانون البيئي", "النزاعات العائلية والعقارية", "المسائل التنظيمية", "التدريب على الوساطة"],
+    "experience": { "years": "20+ عاماً", "label": "الممارسة القانونية، ADR وقيادة اللجان القضائية" },
+    "accreditations": ["وسيط معتمد من CEDR", "مدرب ماستر معتمد من CEDR", "عضو – المعهد المعتمد للمحكمين (MCIArb)، لندن", "وسيط معتمد من PMA"],
+    "education": ["دبلوم الدراسات العليا في المهارات القانونية المهنية – ذا سيتي سانت جورج، المملكة المتحدة", "بكالوريوس في القانون (Hons) – جامعة هال، المملكة المتحدة", "ماجستير فلسفة – باكستان", "ماجستير – باكستان", "بكالوريوس – باكستان"],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية (عضو مؤسس)", "المعهد المعتمد للمحكمين، لندن", "محكمة حماية البيئة في خيبر بختونخوا", "جمعية لينكون، لندن"],
+    "media": []
+  },
+  "wajiha_aleem": {
+    "name": "وجيهة عليم",
+    "role": "الأمين العام",
+    "highlight": "\"النهوض بالوساطة من خلال القيادة والابتكار والتعاون الدولي من أجل إطار عمل أقوى للوسائل البديلة لتسوية النزاعات في باكستان.\"",
+    "about": "تشغل السيدة وجيهة عليم منصب الأمين العام لجمعية المصلحين والوسطاء الباكستانية (PMA)، حيث تقود المبادرات الاستراتيجية التي تركز على تعزيز الوساطة ومأسسة الوسائل البديلة لتسوية النزاعات (ADR) في جميع أنحاء باكستان. مع أكثر من 17 عاماً من الخبرة في الشركات والمجال القانوني، فإنها تلتزم بتطوير الوساطة كآلية موثوقة وسهلة الوصول ومتوافقة عالمياً لتسوية النزاعات من خلال الابتكار وإصلاح السياسات والتعاون القضائي والشراكات الدولية.",
+    "badges": ["الفريق التنفيذي", "وسيط", "وسيط معتمد من CEDR", "مدرب ماستر", "القيادة التنفيذية"],
+    "expertise": ["الوسائل البديلة لتسوية النزاعات (ADR)", "الاستشارات القانونية وللشركات", "التدريب على الوساطة", "التطوير المؤسسي", "إصلاح السياسات", "التعاون الدولي في ADR"],
+    "experience": { "years": "17+ عاماً", "label": "قيادة الشركات والمجال القانوني وADR" },
+    "accreditations": ["وسيط معتمد من CEDR في المملكة المتحدة", "وسيط معتمد من PMA", "ممارس دولي في ADR"],
+    "education": ["ماجستير في القانون – المملكة المتحدة", "بكالوريوس في القانون (Hons) – جامعة كراتشي"],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية", "شبكات الوساطة وADR الدولية", "المبادرات القضائية والمؤسسية لـ ADR"],
+    "media": []
+  },
+  "trainer_aga_zafar_ahmed": {
+    "name": "آغا ظفر أحمد",
+    "role": "مدرب ماستر",
+    "highlight": "\"النهوض بالوساطة وتسمية النزاعات الدولية من خلال القيادة والمناصرة والتميز في الوسائل البديلة لتسوية النزاعات.\"",
+    "about": "آغا ظفر أحمد محامٍ بارز لدى المحكمة العليا في باكستان، ووسيط معتمد، ومحترف رفيع المستوى في الوسائل البديلة لتسوية النزاعات (ADR) ويتمتع بخبرة واسعة في القانون البحري والتقاضي المدني والنزاعات التجارية وشؤون التجارة الدولية. وبصفته رئيساً لجمعية المصلحين والوسطاء الباكستانية (PMA)، فإنه يواصل لعب دور رئيسي في تعزيز ممارسات الوساطة وتعزيز أطر تسوية النزاعات المؤسسية في باكستان.\n\nوهو وسيط معتمد من CEDR في المملكة المتحدة ويخدم في لجنة المحكمة العليا في السند كوسيط بينما يرتبط أيضاً بالمركز الدولي لمصالح والوسائل البديلة لتسوية النزاعات (MICADR). وبالإضافة إلى ممارسته القانونية، فقد ساهم في التعليم القانوني والتطوير المهني كعضو هيئة تدريس زائر وقائد مؤسسي.",
+    "badges": ["مدرب ماستر", "الرئيس", "القيادة التنفيذية"],
+    "expertise": ["التدريب على الوساطة وADR", "تسوية النزاعات التجارية", "القانون البحري", "نزاعات التجارة الدولية", "التحكيم وحل النزاعات", "التقاضي المدني وتقاضي الشركات", "تدريب المدربين (TOT)"],
+    "experience": { "years": "21+ عاماً", "label": "الممارسة القانونية وتسوية النزاعات" },
+    "accreditations": ["وسيط معتمد من CEDR في المملكة المتحدة", "وسيط لجنة – محكمة السند العليا", "عضو – المركز الدولي لمصالح وADR (MICADR)", "دبلوم في قانون التحكيم الدولي – إنجلترا وويلز"],
+    "education": ["دبلوم في قانون التحكيم الدولي – كلية الحقوق، إنجلترا وويلز"],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية (PMA)", "CEDR المملكة المتحدة", "المركز الدولي لمصالح وADR (MICADR)", "المحكمة العليا في السند", "جمعية نقابة المحامين بالمحكمة العليا في باكستان", "جمعية نقابة محامي المحكمة العليا في السند", "جامعة بحرية"],
+    "media": []
+  },
+  "trainer_mustansir_zakir": {
+    "name": "مستنصر ذاكر",
+    "role": "مدرب ماستر",
+    "highlight": "\"قيادة حوكمة الشركات ومبادرات التدريب على الوساطة من خلال القيادة الاستراتيجية والتميز في ADR.\"",
+    "about": "مستنصر ذاكر قائد مؤسسي رفيع المستوى، ووسيط معتمد، ومدرب ADR معترف به دولياً ويتمتع بخبرة واسعة في الإدارة الاستراتيجية وحوكمة الشركات وتسوية النزاعات. يشغل منصب مدير التدريب والعضو التنفيذي لجمعية المصلحين والوسطاء الباكستانية (PMA) ولعب دوراً مهماً في تعزيز الوساطة والتوعية بـ ADR في جميع أنحاء باكستان.\n\nوهو عضو زميل في ICAP وICMAP وICSP، ويعمل حالياً مع مجموعة هاشو كأول رئيس تنفيذي. وقد أكمل شهادة الإدارة الاستراتيجية من جامعة كورنيل بالولايات المتحدة الأمريكية، وتعليم المديرين المعتمدين من المعهد الباكستاني لحوكمة الشركات. وبصفته وسيطاً معتمداً من CEDR ومدرباً ماستر في المملكة المتحدة، فقد ساهم بشكل مكثف في التدريب المهني على الوساطة وتطوير القيادة ومبادرات ADR المؤسسية في باكستان.",
+    "badges": ["مدرب ماستر", "مدير التدريب", "اللجنة التنفيذية – الجنوب", "الرئيس السابق"],
+    "expertise": ["التدريب على الوساطة وADR", "حوكمة الشركات", "الإدارة الاستراتيجية", "تطوير القيادة التنفيذية", "تسوية النزاعات التجارية", "تدريب المدربين (TOT)", "بناء القدرات المؤسسية"],
+    "experience": { "years": "20+ عاماً", "label": "القيادة التنفيذية والتدريب على ADR" },
+    "accreditations": ["وسيط معتمد من CEDR في المملكة المتحدة", "مدرب ماستر معتمد من CEDR في المملكة المتحدة", "مدير معتمد – المعهد الباكستاني لحوكمة الشركات", "شهادة الإدارة الاستراتيجية – جامعة كورنيل، الولايات المتحدة الأمريكية"],
+    "education": ["زميل – معهد المحاسبين القانونيين في باكستان (ICAP)", "زميل – معهد محاسبي التكاليف والإدارة في باكستان (ICMAP)", "زميل – معهد سكرتيري الشركات في باكستان (ICSP)"],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية (PMA)", "CEDR المملكة المتحدة", "مجموعة هاشو", "جمعية الفنادق الباكستانية (PHA)", "جمعية البنائين والمطورين الباكستانية (ABAD)", "معهد المحاسبين القانونيين في باكستان (ICAP)", "المعهد الباكستاني لحوكمة الشركات", "صندوق مجلس كراتشي لكشافة البحر"],
+    "media": []
+  },
+  "trainer_wajiha_aleem": {
+    "name": "وجيهة عليم",
+    "role": "مدرب ماستر",
+    "highlight": "\"النهوض بالوساطة من خلال القيادة والابتكار والتعاون الدولي من أجل إطار عمل أقوى للوسائل البديلة لتسوية النزاعات في باكستان.\"",
+    "about": "وجيهة عليم محامية لدى المحكمة العليا، ووسيطة معتمدة، ومحترفة قانونية تتمتع بخبرة واسعة في عمليات الشركات والاستشارات القانونية والوسائل البديلة لتسوية النزاعات (ADR). تشغل حالياً منصب الأمين العام لجمعية المصلحين والوسطاء الباكستانية (PMA) بينما تشغل أيضاً منصب المدير العام (العمليات والقانونية) في مجموعة هاشو.\n\nوهي حاصلة على ماجستير القانون في القانون التجاري الدولي والوسائل البديلة لتسوية النزاعات من المملكة المتحدة، وهي وسيطة معتمدة من CEDR ولها انتماءات دولية بما في ذلك مركز تايلاند للتحكيم (THAC). وهي مدرجة كـوسيطة لدى المحكمة العليا في السند وتظل مشاركة بنشاط مع الجمعيات القانونية والمهنية الرائدة محلياً ودولياً.",
+    "badges": ["مدرب ماستر", "الأمين العام", "القيادة التنفيذية"],
+    "expertise": ["التدريب على الوساطة وADR", "القانون التجاري الدولي", "الاستشارات القانونية للشركات", "تسوية النزاعات التجارية", "تطوير ADR المؤسسي", "التدريب على المهارات المهنية", "حل النزاعات"],
+    "experience": { "years": "17+ عاماً", "label": "قيادة الشركات والمجال القانوني وADR" },
+    "accreditations": ["وسيط معتمد من CEDR", "وسيط لجنة – محكمة السند العليا", "مدرب مشارك – PMA", "عضوية فصل THAC – مركز تايلاند للتحكيم"],
+    "education": ["ماجستير في القانون التجاري الدولي وADR – المملكة المتحدة", "بكالوريوس في القانون (Hons) – باكستان"],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية (PMA)", "CEDR المملكة المتحدة", "مركز تايلاند للتحكيم (THAC)", "المحكمة العليا في السند", "مجلس نقابة محامي السند", "نقابة محامي كراتشي", "نقابة المحامين الدولية", "مجموعة هاشو"],
+    "media": []
+  },
+  "trainer_huma_shah": {
+    "name": "هما شاه",
+    "role": "مدرب ماستر",
+    "highlight": "\"تطوير التميز القانوني للشركات والتدريب على الوساطة من خلال القيادة والمناصرة والتوجيه المهني.\"",
+    "about": "هما شاه محترفة قانونية ذات خبرة عالية، ومستشارة شركات، ومدربة ADR معتمدة تتمتع بأكثر من ثلاثة عقود من الممارسة القانونية. منذ عام 1993، عملت مع بعض أبرز المؤسسات القانونية في باكستان بما في ذلك خلية المساعدة القانونية AGHS، ومؤسسة AGHS للمحاماة تحت إشراف السيدة أسماء جهانجير والسيدة هنا جيلاني، ومؤسسة Surridge & Beecheno.\n\nوقد شغلت منصب شريك إداري في SSR&I وتشغل حالياً منصب رئيس الشؤون القانونية – الشمال في بنك حبيب المحدود (HBL). وهي مدربة معتمدة لبرنامج التدريب على المناصرة في باكستان تحت رعاية لجنة الدفاع التابعة لمجلس نقابة المحامين في إنجلترا وويلز (IATC)، ووسيطة ومدربة ماستر معتمدة من CEDR في المملكة المتحدة.",
+    "badges": ["مدرب ماستر", "اللجنة التنفيذية – الشمال", "لجنة التدريب"],
+    "expertise": ["التدريب على الوساطة وADR", "قانون الشركات والقانون التجاري", "التدريب على المناصرة والمهارات القانونية", "صياغة وتدقيق العقود", "الاستشارات القانونية المصرفية وللشركات", "حل النزاعات", "تدريب المدربين (TOT)"],
+    "experience": { "years": "30+ عاماً", "label": "الممارسة القانونية واستشارات الشركات والتدريب على ADR" },
+    "accreditations": ["وسيط معتمد من CEDR في المملكة المتحدة", "مدرب ماستر معتمد من CEDR في المملكة المتحدة", "مدرب معتمد – برنامج التدريب على المناصرة في باكستان (IATC)"],
+    "education": ["كلية البنجاب للحقوق – حصلت على ميداليات ذهبية مرتين للتفوق الأكاديمي"],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية (PMA)", "CEDR المملكة المتحدة", "لجنة الدفاع التابعة لمجلس نقابة المحامين (IATC)", "مجلس نقابة المحامين في إنجلترا وويلز", "بنك حبيب المحدود (HBL)", "نقابات محامي البنجاب", "خلية المساعدة القانونية AGHS", "مؤسسة Surridge & Beecheno"],
+    "media": []
+  },
+  "trainer_usman_g_rashid": {
+    "name": "عثمان ج. راشد",
+    "role": "مدرب ماستر",
+    "highlight": "\"الجمع بين الدفاع القانوني وخبرة الوساطة وقيادة التدريب لبناء قدرات ADR في جميع أنحاء باكستان.\"",
+    "about": "عثمان ج. راشد باريسر في القانون، ومحامٍ لدى المحاكم العليا، ووسيط معتمد من CEDR، ومدرب ماستر يتمتع بخبرة واسعة في الممارسة القانونية، والتدريب على الدفاع، والوساطة، والتعليم القانوني. وهو حاصل على بكالوريوس في القانون (Hons) من جامعة لندن، وماجستير في القانون من كينجز كوليدج لندن، وأكمل الدورة المهنية للمحاماة من جامعة غرب إنجلترا، بريستول، المملكة المتحدة. تم استدعاؤه إلى نقابة المحامين من قبل جمعية لينكون الموقرة.\n\nوقد شغل سابقاً منصب الأمين العام لجمعية المصلحين والوسطاء الباكستانية (PMA) وساهم بنشاط في نشر الوعي بالوساطة، وبناء قدرات ADR، ومبادرات التدريب القانوني المهني في باكستان. وإلى جانب ممارسته القانونية، فهو يشارك في التعليم القانوني والتدريب على الدفاع، وخاصة في قانون الشركات وقانون الأدلة للبرنامج الخارجي لجامعة لندن.\n\nبدأ عثمان مسيرته المهنية مع عمر بانديال وشركائه ويدير حالياً ممارسته القانونية من خلال غرف عناية الله والمحامين والمستشارين القانونيين. تمكنه خبرته المشتركة في التقاضي، وADR، والتعليم القانوني، والتدريب على الدفاع من المساهمين بشكل فعال في تطوير ADR المؤسسي وممارسات الوساطة المهنية.",
+    "badges": ["مدرب ماستر", "باريسر في القانون", "الأمين العام السابق – PMA"],
+    "expertise": ["التدريب على الوساطة وADR", "التدريب على مهارات الدفاع", "قانون الشركات", "قانون الأدلة", "التقاضي التجاري والمدني", "التعليم القانوني والتطوير المهني", "حل النزاعات"],
+    "experience": { "years": "15+ عاماً", "label": "مدرب ماستر معتمد من CEDR، الدفاع والتعليم القانوني" },
+    "accreditations": ["وسيط ومدرب ماستر معتمد من CEDR – المملكة المتحدة", "باريسر في القانون – جمعية لينكون", "مدرب دفاع معتمد"],
+    "education": ["ماجستير في القانون – كينجز كوليدج، جامعة لندن", "بكالوريوس في القانون (Hons) – جامعة لندن", "الدورة المهنية للمحاماة – جامعة غرب إنجلترا، بريستول، المملكة المتحدة."],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية (PMA)", "CEDR المملكة المتحدة", "جمعية لينكون الموقرة", "كلية جامعة لاهور", "البرنامج الخارجي لجامعة لندن", "غرف عناية الله والمحامين والمستشارين القانونيين"],
+    "media": []
+  },
+  "trainer_asfand_yar_ali_khan": {
+    "name": "أسفند يار علي خان",
+    "role": "مدرب ماستر",
+    "highlight": "\"تطوير الوساطة والتحكيم والإصلاح القانوني من خلال القيادة والتدريب والخبرة المؤسسية.\"",
+    "about": "أسفند يار علي خان ممارس قانوني رفيع المستوى، ووسيط معتمد، وخبير ADR مدرب دولياً يتمتع بخبرة واسعة في الاستشارات القانونية، والتحكيم، والتطوير المؤسسي، والتدريب على الوساطة. وبصفته شريكاً أول في شراكة S&K ونائب رئيس جمعية المصلحين والوسطاء الباكستانية (PMA)، فإنه يساهم بنشاط في تعزيز أطر الوساطة والوسائل البديلة لتسوية النزاعات في باكستان.\n\nتم استدعاؤه إلى نقابة المحامين من قبل جمعية لينكون في لندن، وهو وسيط ومدرب ماستر معتمد من CEDR في المملكة المتحدة وعضو في المعهد المعتمد للمحكمين (MCIArb) في لندن. تمتد خلفيته المهنية عبر الممارسة القانونية، ومبادرات التنمية الدولية، والمشاركة في السياسات، والأدوار الاستشارية المؤسسية بما في ذلك العمل مع الأمم المتحدة ومشاريع برنامج الأمم المتحدة الإنمائي (UNDP).",
+    "badges": ["مدرب ماستر", "القيادة التنفيذية", "نائب الرئيس – الشمال"],
+    "expertise": ["التدريب على الوساطة وADR", "التحكيم وحل النزاعات", "النزاعات التجارية والمدنية", "تطوير المهارات القانونية", "بناء قدرات ADR المؤسسية", "برامج التطوير المهني", "تدريب المدربين (TOT)"],
+    "experience": { "years": "20+ عاماً", "label": "الممارسة القانونية، ADR وقيادة اللجان القضائية" },
+    "accreditations": ["وسيط معتمد من CEDR في المملكة المتحدة", "مدرب ماستر معتمد من CEDR في المملكة المتحدة", "عضو – المعهد المعتمد للمحكمين (MCIArb)، لندن", "باريسر في القانون – جمعية لينكون، لندن"],
+    "education": ["دبلوم الدراسات العليا في المهارات القانونية المهنية – المملكة المتحدة", "بكالوريوس في القانون (Hons) – المملكة المتحدة", "ماجستير – باكستان", "بكالوريوس – باكستان"],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية (PMA)", "CEDR المملكة المتحدة", "المعهد المعتمد للمحكمين، لندن", "جمعية لينكون، لندن", "جمعية الهلال الأحمر الباكستاني (PRCS)", "الجمعية الباكستانية للقانون البيئي", "جمعية الخريجين البريطانيين", "مبادرات التنمية التابعة للأمم المتحدة"],
+    "media": []
+  },
+    "trainer_saima_amin_khawaja": {
+    "name": "صائمة أمين خواجة",
+    "role": "مدرب ماستر",
+    "highlight": "\"تعزيز الإصلاح القانوني والتميز في الوساطة وتسوية النزاعات المستدامة من خلال التعليم والقيادة المؤسسية.\"",
+    "about": "الصائمة أمين خواجة هي محترفة قانونية بارعة، ووسيطة معتمدة، وخبيرة في الوسائل البديلة لتسوية النزاعات (ADR) مدربة دولياً وتتمتع بخبرة واسعة في تقاضي الشركات، والقانون الدستوري، والاستشارات القانونية، والإصلاح المؤسسي. وقد لعبت دوراً رئيسياً في تعزيز الوعي بالوساطة، والتدريب على ADR، ومبادرات التطوير القانوني في باكستان.\n\nوهي حاصلة على ماجستير في القانون (LL.M) من كينجز كوليدج لندن وتلقت تدريباً متخصصاً في القوانين البيئية من مؤسسة م. ج. ميهتا في الهند. وبصفتها وسيطة معتمدة ومدربة ماستر من CEDR في المملكة المتحدة، فقد ساهمت بنشاط في التدريب المهني على الوساطة وبرامج بناء القدرات. وقد قامت بالتدريس في جامعة لاهور للعلوم الإدارية (LUMS)، وأكاديمية الخدمة المدنية، والأكاديمية القضائية، ومعهد الدراسات القانونية (TILS)، وكلية جامعة لاهور (UCL)، بالإضافة إلى عملها في لجنة تغير المناخ التي شكلتها محكمة لاهور العليا.",
+    "badges": ["مدرب ماستر", "عضو تنفيذي", "نائب الرئيس – الشمال"],
+    "expertise": ["التدريب على الوساطة وADR", "قانون الشركات والقانون الدستوري", "الإصلاحات القانونية وتطوير السياسات", "القانون البيئي", "التدريب القضائي والمهني", "حل النزاعات", "تدريب المدربين (TOT)"],
+    "experience": { "years": "20+ عاماً", "label": "الممارسة القانونية والتدريب والاستشارات" },
+    "accreditations": ["وسيط معتمد من CEDR في المملكة المتحدة", "مدرب ماستر معتمد من CEDR في المملكة المتحدة", "تدريب متخصص في القانون البيئي – مؤسسة م. ج. ميهتا، الهند"],
+    "education": ["ماجستير في القانون (LL.M) – كينجز كوليدج لندن"],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية (PMA)", "CEDR المملكة المتحدة", "محكمة لاهور العليا", "جامعة لاهور للعلوم الإدارية (LUMS)", "أكاديمية الخدمة المدنية", "الأكاديمية القضائية", "معهد الدراسات القانونية (TILS)", "كلية جامعة لاهور (UCL)", "مؤسسة م. ج. ميهتا، الهند"],
+    "media": []
+  },
+  "trainer_tariq_saeed_rana": {
+    "name": "طارق سعيد رانا",
+    "role": "مدرب ماستر",
+    "highlight": "\"قيادة ممارسة قانون الشركات والتميز في الوساطة من خلال الخبرة الدولية والتدريب المهني وقيادة ADR.\"",
+    "about": "طارق سعيد رانا هو مستشار قانوني رفيع المستوى، ووسيط معتمد، ومدرب ADR معترف به دولياً ويتمتع بخبرة واسعة في قانون الشركات والقانون التجاري. تم استدعاؤه إلى نقابة المحامين من قبل جمعية لينكون الموقرة في المملكة المتحدة، وهو يترأس حالياً قسم قانون الشركات والقانون التجاري في مؤسسة Surridge & Beecheno ويواصل المساهمة بشكل كبير في التدريب على الوساطة والاستشارات القانونية والتطوير المؤسسي لـ ADR في باكستان.\n\nوهو وسيط معتمد ومدرب ماستر من CEDR في المملكة المتحدة وله خبرة واسعة في حوكمة الشركات والاستشارات القانونية وبناء القدرات المهنية. يقود بنشاط برامج تدريب المهن وتدريب أعضاء مجالس الإدارة مع الحفاظ على أدوار قيادية داخل المؤسسات القانونية والتجارية.",
+    "badges": ["مدرب ماستر", "رئيس سابق", "اللجنة التنفيذية – الشمال"],
+    "expertise": ["التدريب على الوساطة وADR", "قانون الشركات والقانون التجاري", "برامج تدريب أعضاء مجالس الإدارة", "حوكمة الشركات", "تسوية النزاعات التجارية", "التطوير القانوني المهني", "تدريب المدربين (TOT)"],
+    "experience": { "years": "25+ عاماً", "label": "الممارسة القانونية، ADR والاستشارات الشركاتية" },
+    "accreditations": ["وسيط معتمد من CEDR في المملكة المتحدة", "مدرب ماستر معتمد من CEDR في المملكة المتحدة", "مستدعى إلى نقابة المحامين – جمعية لينكون، المملكة المتحدة"],
+    "education": ["ماجستير في القوانين التجارية – المملكة المتحدة", "دبلوم الدراسات العليا في القانون – المملكة المتحدة", "بكالوريوس في القانون – باكستان", "دبلوم في الهندسة الميكانيكية – باكستان"],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية (PMA)", "CEDR المملكة المتحدة", "جمعية لينكون الموقرة، لندن", "المجلس العام لنقابة المحامين في إنجلترا وويلز", "جمعية نقابة محامي محكمة لاهور العليا", "مجلس نقابة محامي البنجاب", "غرفة تجارة وصناعة لاهور", "مؤسسة Surridge & Beecheno"],
+    "media": []
+  },
+  "saeed_habib": {
+    "name": "سعيد حبيب",
+    "role": "نائب الرئيس – الجنوب",
+    "highlight": "",
+    "about": "",
+    "badges": ["لجنة العضوية", "التنسيق المؤسسي"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "shabana_ali": {
+    "name": "شبانة علي",
+    "role": "نائب الرئيس – الجنوب",
+    "highlight": "\"تعزيز الوساطة والوعي القانوني والعدالة الاجتماعية من خلال المناصرة والتعليم وحل النزاعات.\"",
+    "about": "السيدة شبانة علي هي نائب الرئيس – الجنوب لجمعية المصلحين والوسطاء الباكستانية (PMA) ومحامية متمرسة في القانون المدني والضريبي وقانون الشركات وتتمتع بخلفية قوية في التقاضي والخدمات الاستشارية وتسوية النزاعات. وهي تشارك بنشاط في تطوير ممارسات الوساطة في باكستان ومعترف بها على نطاق واسع لالتزامها بالتمكين القانوني والعدالة الاجتماعية وحماية حقوق المرأة والطفل.",
+    "badges": ["الفريق التنفيذي", "وسيط", "وسيط معتمد من PMA", "تنسيق نقابة المحامين – الجنوب", "القيادة"],
+    "expertise": ["القانون المدني", "قانون الشركات", "النزاعات العائلية", "قانون الضرائب", "الوساطة وADR", "المناصرة لحقوق المرأة والطفل"],
+    "experience": { "years": "20+ عاماً", "label": "الممارسة القانونية والوساطة والمناصرة العامة" },
+    "accreditations": ["وسيط معتمد من PMA", "ممارس وساطة معتمد"],
+    "education": ["الدراسات القانونية والمهنية في القانون المدني والشركات والضرائب"],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية", "المعهد الباكستاني لمحاسبي التمويل العام (PIPFA)", "اللجنة التنفيذية – PMA", "محللة قانونية ومتحدثة في وسائل الإعلام"],
+    "media": ["تلفزيون باكستان (PTV)", "آج نيوز", "تي في ون", "مترو نيوز"]
+  },
+  "syed_sammad_ul_haque": {
+    "name": "سيد صمد الحق",
+    "role": "الأمين المالي",
+    "highlight": "",
+    "about": "",
+    "badges": ["لجنة العضوية", "القيادة التنفيذية"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "tariq_saeed_rana": {
+    "name": "طارق سعيد رانا",
+    "role": "اللجنة التنفيذية – الشمال",
+    "highlight": "\"قيادة ممارسة قانون الشركات والتميز في الوساطة من خلال الخبرة الدولية والتدريب المهني وقيادة ADR.\"",
+    "about": "الباريسير طارق سعيد رانا هو محترف قانوني رفيع المستوى، ووسيط معتمد، ومدرب ماستر يتمتع بخبرة واسعة في قانون الشركات والقانون التجاري. تم استدعاؤه إلى نقابة المحامين من قبل جمعية لينكون الموقرة في المملكة المتحدة، ويترأس حالياً قسم قانون الشركات والقانون التجاري في مؤسسة Surridge & Beecheno. مع عقود من الخبرة في الاستشارات القانونية، وADR، والتدريب المهني، يواصل لعب دور قيادي هام في تطوير الوساطة والتطوير القانوني المؤسسي في باكستان.",
+    "badges": ["الفريق التنفيذي", "وسيط", "وسيط معتمد من CEDR", "مدرب ماستر", "رئيس سابق"],
+    "expertise": ["قانون الشركات والقانون التجاري", "الوساطة وADR", "النزاعات التجارية الدولية", "الاستشارات القانونية", "حوكمة الشركات", "التدريب المهني"],
+    "experience": { "years": "25+ عاماً", "label": "الممارسة القانونية، ADR والاستشارات الشركاتية" },
+    "accreditations": ["وسيط معتمد من CEDR", "مدرب ماستر معتمد من CEDR", "مستدعى إلى نقابة المحامين – جمعية لينكون، المملكة المتحدة", "وسيط معتمد من PMA"],
+    "education": ["ماجستير في القانون (القوانين التجارية) – المملكة المتحدة", "دبلوم الدراسات العليا في القانون – المملكة المتحدة", "بكالوريوس في القانون – باكستان", "دبلوم في الهندسة الميكانيكية – باكستان"],
+    "affiliations": ["المجلس العام لنقابة المحامين في إنجلترا وويلز", "جمعية لينكون الموقرة، لندن", "جمعية المصلحين والوسطاء الباكستانية", "جمعية نقابة محامي محكمة لاهور العليا", "مجلس نقابة محامي البنجاب", "غرفة تجارة وصناعة لاهور"],
+    "media": []
+  },
+  "huma_shah": {
+    "name": "هما شاه",
+    "role": "اللجنة التنفيذية – الشمال",
+    "highlight": "\"تطوير التميز القانوني للشركات والتدريب على الوساطة من خلال القيادة والمناصرة والتوجيه المهني.\"",
+    "about": "السيدة هما شاه هي محترفة قانونية رفيعة المستوى تتمتع بخبرة واسعة في قانون الشركات والاستشارات القانونية والصياغة التجارية وحل النزاعات. تمارس المهنة منذ عام 1993، وعملت مع مؤسسات قانونية ومكاتب محاماة رائدة بما في ذلك خلية المساعدة القانونية AGHS， ومؤسسة AGHS للمحاماة， وSurridge & Beecheno. تشغل حالياً منصب رئيس الشؤون القانونية – الشمال في بنك HBL وتواصل المساهمة بشكل كبير في التدريب على الوساطة وتطوير ADR في باكستان.",
+    "badges": ["الفريق التنفيذي", "وسيط", "وسيط معتمد من CEDR", "مدرب ماستر", "لجنة التدريب"],
+    "expertise": ["قانون الشركات والقانون التجاري", "الاستشارات القانونية", "الصياغة والتدقيق التجاري", "الشؤون القانونية المصرفية والمالية", "الوساطة وADR", "التدريب على المناصرة"],
+    "experience": { "years": "30+ عاماً", "label": "الممارسة القانونية واستشارات الشركات والتدريب على ADR" },
+    "accreditations": ["وسيط معتمد من CEDR", "مدرب ماستر معتمد من CEDR", "مدرب دفاع معتمد – IATC (مجلس نقابة المحامين في إنجلترا وويلز)", "وسيط معتمد من PMA"],
+    "education": ["كلية البنجاب للحقوق – حصلت على ميداليات ذهبية مرتين للتفوق الأكاديمي"],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية", "برنامج التدريب على المناصرة التابع لجمعيات المحامين في باكستان", "نقابات محامي البنجاب", "بنك HBL – رئيس الشؤون القانونية في الشمال"],
+    "media": []
+  },
+  "umaimah_anwar_khan": {
+    "name": "أميمة أنور خان",
+    "role": "اللجنة التنفيذية – الجنوب",
+    "highlight": "",
+    "about": "",
+    "badges": ["قواعد السلوك", "تنسيق نقابة المحامين – الجنوب"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "mustansir_zakir": {
+    "name": "مستنصر ذاكر",
+    "role": "اللجنة التنفيذية – الجنوب",
+    "highlight": "\"قيادة حوكمة الشركات ومبادرات التدريب على الوساطة من خلال القيادة الاستراتيجية والتميز في ADR.\"",
+    "about": "السيد مستنصر ذاكر هو قائد مؤسسي رفيع المستوى، ووسيط معتمد، ومدرب ماستر يتمتع بخبرة قيادية واسعة في حوكمة الشركات، والضيافة، والتمويل، والوسائل البديلة لتسوية النزاعات (ADR). يشغل حالياً منصب الرئيس التنفيذي لمجموعة هاشو، ولعب دوراً مهماً في تعزيز الوعي بالوساطة ومبادرات التدريب المهني في باكستان من خلال قيادته داخل جمعية المصلحين والوسطاء الباكستانية (PMA).",
+    "badges": ["الفريق التنفيذي", "وسيط", "وسيط معتمد من CEDR", "مدير التدريب", "مدرب ماستر", "رئيس سابق"],
+    "expertise": ["حوكمة الشركات", "الإدارة الاستراتيجية", "التدريب على الوساطة وADR", "الضيافة وقيادة الأعمال", "الإدارة المالية", "التطوير المؤسسي"],
+    "experience": { "years": "30+ عاماً", "label": "القيادة التنفيذية والحوكمة وADR" },
+    "accreditations": ["وسيط معتمد من CEDR", "مدرب ماستر معتمد من CEDR", "تعليم المديرين المعتمدين – PICG", "شهادة الإدارة الاستراتيجية – جامعة كورنيل، الولايات المتحدة الأمريكية"],
+    "education": ["زميل – معهد المحاسبين القانونيين في باكستان (ICAP)", "زميل – معهد محاسبي التكاليف والإدارة في باكستان (ICMAP)", "زميل – معهد سكرتيري الشركات في باكستان (ICSP)"],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية (رئيس سابق ومدير التدريب)", "مجموعة هاشو – الرئيس التنفيذي", "جمعية الفنادق الباكستانية (رئيس سابق)", "جمعية البنائين والمطورين الباكستانية (ABAD)", "صندوق مجلس كراتشي لكشافة البحر – متولي إداري"],
+    "media": []
+  },
+  "usman_g_rashid": {
+    "name": "عثمان ج. راشد",
+    "role": "عضو",
+    "highlight": "\"الجمع بين الدفاع القانوني وخبرة الوساطة وقيادة التدريب لبناء قدرات ADR في جميع أنحاء باكستان.\"",
+    "about": "عثمان ج. راشد باريسر في القانون، ومحامٍ لدى المحاكم العليا، ووسيط معتمد من CEDR، ومدرب ماستر يتمتع بخبرة واسعة في الممارسة القانونية، والتدريب على الدفاع، والوساطة، والتعليم القانوني. وهو حاصل على بكالوريوس في القانون (Hons) من جامعة لندن، وماجستير في القانون من كينجز كوليدج لندن، وأكمل الدورة المهنية للمحاماة من جامعة غرب إنجلترا، بريستول، المملكة المتحدة. تم استدعاؤه إلى نقابة المحامين من قبل جمعية لينكون الموقرة.\n\nوقد شغل سابقاً منصب الأمين العام لجمعية المصلحين والوسطاء الباكستانية (PMA) وساهم بنشاط في نشر الوعي بالوساطة، وبناء قدرات ADR، ومبادرات التدريب القانوني المهني في باكستان. وإلى جانب ممارسته القانونية، فهو يشارك في التعليم القانوني والتدريب على الدفاع، وخاصة في قانون الشركات وقانون الأدلة للبرنامج الخارجي لجامعة لندن.\n\nبدأ عثمان مسيرته المهنية مع عمر بانديال وشركائه ويدير حالياً ممارسته القانونية من خلال غرف عناية الله والمحامين والمستشارين القانونيين. تمكنه خبرته المشتركة في التقاضي، وADR، والتعليم القانوني، والتدريب على الدفاع من المساهمين بشكل فعال في تطوير ADR المؤسسي وممارسات الوساطة المهنية.",
+    "badges": ["وسيط", "مدرب ماستر", "باريسر في القانون"],
+    "expertise": ["التدريب على الوساطة وADR", "التدريب على مهارات الدفاع", "قانون الشركات", "قانون الأدلة", "التقاضي التجاري والمدني", "التعليم القانوني والتطوير المهني", "حل النزاعات"],
+    "experience": { "years": "", "label": "وسيط ومدرب ماستر معتمد من CEDR" },
+    "accreditations": ["وسيط ومدرب ماستر معتمد من CEDR – المملكة المتحدة", "باريسر في القانون – جمعية لينكون", "مدرب دفاع معتمد"],
+    "education": ["ماجستير في القانون – كينجز كوليدج، جامعة لندن", "بكالوريوس في القانون (Hons) – جامعة لندن", "الدورة المهنية للمحاماة – جامعة غرب إنجلترا، بريستول، المملكة المتحدة."],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية (PMA)", "CEDR المملكة المتحدة", "جمعية لينكون الموقرة", "كلية جامعة لاهور", "البرنامج الخارجي لجامعة لندن", "غرف عناية الله والمحامين والمستشارين القانونيين"],
+    "media": []
+  },
+  "adnan_mufti": {
+    "name": "عدنان مفتي",
+    "role": "اللجنة التنفيذية – الجنوب",
+    "highlight": "",
+    "about": "",
+    "badges": ["التنسيق المؤسسي", "القيادة"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "anwar_kashif_mumtaz": {
+    "name": "أنور كاشف ممتاز",
+    "role": "مدرب ماستر",
+    "highlight": "",
+    "about": "أنور كاشف ممتاز هو محترف قانوني رفيع المستوى، ومدرب قيادة، ووسيط معتمد يتمتع بخبرة واسعة في ممارسات الشركات والضرائب وحل النزاعات. وبصفته محامياً لدى المحكمة العليا وشريكاً أول في مؤسسة Saiduddin & Co.، فقد بنى سمعة قوية في تقديم الاستشارات في قانون الضرائب والشركات في باكستان.\n\nوهو مدرب معتمد دولياً في القيادة والتطوير الشخصي ووسيط ومدرب ماستر معتمد من CEDR في المملكة المتحدة. وقد ساهم بشكل كبير في تطوير القيادة، والوعي بالوساطة، وبناء القدرات المهنية في القطاعات القانونية والمؤسسية. كما شغل مناصب قيادية بارزة بما في ذلك الأمين العام ونائب الرئيس ورئيس نقابة محامين الضرائب في باكستان ونقابة محامين الضرائب في كراتشي.",
+    "badges": ["مدرب ماستر", "رئيس سابق", "مدرب قيادة"],
+    "expertise": ["القيادة والتطوير الشخصي", "التدريب على الوساطة وADR", "قانون الشركات", "قانون الضرائب والاستشارات", "برامج التطوير المهني", "حل النزاعات", "تدريب المدربين (TOT)"],
+    "experience": { "years": "", "label": "" },
+    "accreditations": ["وسيط معتمد من CEDR في المملكة المتحدة", "مدرب ماستر معتمد من CEDR في المملكة المتحدة", "مدرب دولي معتمد – القيادة والتطوير الشخصي"],
+    "education": ["محامٍ، المحكمة العليا في باكستان"],
+    "affiliations": ["جمعية المصلحين والوسطاء الباكستانية (PMA)", "CEDR المملكة المتحدة", "نقابة محامين الضرائب في باكستان", "نقابة محامين الضرائب في كراتشي", "جمعية المصلحة العامة القانونية الباكستانية (PILAP)", "مؤسسة ميسرز سعيد الدين وشركائه"],
+    "media": []
+  }
+  },
           "former_presidents": {
             "president_1": {
               "name": "أنور كاشف ممتاز",
@@ -6917,6 +7902,305 @@
               "aria_label": "查看 阿斯凡德·亚尔·阿里·汗 的个人资料"
             }
           },
+          "modal": {
+    "about_label": "关于",
+    "expertise_title": "专业领域",
+    "training_expertise_title": "培训专长",
+    "accreditations_title": "认证资格",
+    "education_title": "教育背景",
+    "affiliations_title": "专业协会会员",
+    "media_title": "媒体与公众参与",
+    "coming_soon": "即将推出",
+    "profile_close_label": "关闭个人资料"
+  },
+  "profile_modal": {
+"aga_zafar_ahmed": {
+    "name": "阿加·扎法尔·艾哈迈德",
+    "role": "主席",
+    "highlight": "“通过领导力、倡导和卓越的ADR，推进调解与国际争议解决。”",
+    "about": "阿加·扎法尔·艾哈迈德先生是巴基斯坦调解员协会（PMA）主席，也是巴基斯坦最高法院的杰出律师，拥有超过21年的法律执业经验。他在海事法、商业争议、国际贸易事务以及替代性争议解决（ADR）领域的专业知识广受认可。作为PMA的创始成员，他继续在巴基斯坦全境推动调解和和平争议解决实践中发挥领导作用。",
+    "badges": ["执行团队", "调解员", "CEDR认证调解员", "高级培训师", "执行领导力"],
+    "expertise": ["商业争议", "海事法", "国际贸易争议", "企业调解", "民事诉讼", "替代性争议解决 (ADR)"],
+    "experience": { "years": "21年以上", "label": "法律执业与争议解决" },
+    "accreditations": ["伦敦CEDR认证调解员", "MICADR名册调解员", "PMA认证调解员", "国际仲裁法文凭"],
+    "education": ["国际仲裁法文凭 – 英格兰和威尔士法学院"],
+    "affiliations": ["巴基斯坦最高法院律师协会", "信德省高等法院律师协会", "巴基斯坦调解员协会 (创始成员)", "巴利亚大学 (前客座教授)"],
+    "media": []
+  },
+  "saima_amin_khawaja": {
+    "name": "赛玛·阿明·哈瓦贾",
+    "role": "副主席 – 北区",
+    "highlight": "“通过教育和机构领导力，促进法律改革、卓越调解和可持续争议解决。”",
+    "about": "赛玛·阿明·哈瓦贾女士是巴基斯坦调解员协会（PMA）北区副主席，也是一位资深的法律专业人士，在企业诉讼、宪法、交易咨询和法律改革咨询方面拥有广泛的经验。她是一位接受过国际培训的调解员和高级培训师，致力于推进巴基斯坦的ADR、环境法和专业法律教育。",
+    "badges": ["执行团队", "调解员", "CEDR认证调解员", "高级培训师", "培训委员会"],
+    "expertise": ["企业诉讼", "宪法", "法律改革与咨询", "环境法", "调解与ADR培训", "气候变化政策"],
+    "experience": { "years": "20年以上", "label": "法律执业、培训与咨询" },
+    "accreditations": ["CEDR认证调解员", "CEDR高级培训师", "PMA认证调解员", "环境法培训 – 印度M.C. Mehta基金会"],
+    "education": ["法学硕士 (LL.M) – 伦敦国王学院"],
+    "affiliations": ["巴基斯坦调解员协会", "气候变化委员会 – 拉合尔高等法院", "公务员学院", "司法学院", "拉合尔管理科学大学 (LUMS)", "拉合尔大学学院 (UCL)", "法律研究机构 (TILS)"],
+    "media": []
+  },
+  "asfand_yar_ali_khan": {
+    "name": "阿斯凡德·亚尔·阿里·汗",
+    "role": "副主席 – 北区",
+    "highlight": "“通过领导力、培训和机构专业知识，推进调解、仲裁和法律改革。”",
+    "about": "出庭律师阿斯凡德·亚尔·阿里·汗是巴基斯坦调解员协会（PMA）北区副主席，也是该组织的创始成员。他由伦敦林肯法学会授予出庭律师资格，是一位资深的法律与发展从业者，在调解、仲裁、环境法和监管事务方面拥有广泛的专业知识。他积极为加强巴基斯坦各地的ADR实践和法律改革倡议做出贡献。",
+    "badges": ["执行团队", "调解员", "CEDR认证调解员", "高级培训师", "行为准则委员会"],
+    "expertise": ["仲裁与ADR", "劳工与就业法", "环境法", "家庭与土地争议", "监管事务", "调解培训"],
+    "experience": { "years": "20年以上", "label": "法律执业、ADR与仲裁庭领导经验" },
+    "accreditations": ["CEDR认证调解员", "CEDR高级培训师", "伦敦特许仲裁员协会会员 (MCIArb)", "PMA认证调解员"],
+    "education": ["专业法律技能研究生文凭 – 英国伦敦城市圣乔治学院", "法学学士 (荣誉) – 英国赫尔大学", "哲学硕士 – 巴基斯坦", "硕士 – 巴基斯坦", "学士 – 巴基斯坦"],
+    "affiliations": ["巴基斯坦调解员协会 (创始成员)", "伦敦特许仲裁员协会", "开伯尔-普赫图赫瓦省环境保护仲裁庭", "伦敦林肯法学会"],
+    "media": []
+  },
+  "wajiha_aleem": {
+    "name": "瓦吉哈·阿利姆",
+    "role": "秘书长",
+    "highlight": "“通过领导力、创新和国际合作推进调解，为巴基斯坦建立更强大的ADR框架。”",
+    "about": "瓦吉哈·阿利姆女士担任巴基斯坦调解员协会（PMA）秘书长，领导旨在加强调解并在巴基斯坦全境将替代性争议解决（ADR）制度化的战略倡议。她拥有超过17年的企业和法律经验，致力于通过创新、政策改革、司法合作和国际伙伴关系，将调解推进为一种可靠、可及且符合国际标准的争议解决机制。",
+    "badges": ["执行团队", "调解员", "CEDR认证调解员", "高级培训师", "执行领导力"],
+    "expertise": ["替代性争议解决 (ADR)", "企业与法律咨询", "调解培训", "机构发展", "政策改革", "国际ADR合作"],
+    "experience": { "years": "17年以上", "label": "企业、法律与ADR领导经验" },
+    "accreditations": ["英国CEDR认证调解员", "PMA认证调解员", "国际ADR执业者"],
+    "education": ["法学硕士 – 英国", "法学学士 (荣誉) – 卡拉奇大学"],
+    "affiliations": ["巴基斯坦调解员协会", "国际ADR与调解网络", "司法与机构ADR倡议"],
+    "media": []
+  },
+  "trainer_aga_zafar_ahmed": {
+    "name": "阿加·扎法尔·艾哈迈德",
+    "role": "高级培训师",
+    "highlight": "“通过领导力、倡导和卓越的ADR，推进调解与国际争议解决。”",
+    "about": "阿加·扎法尔·艾哈迈德是巴基斯坦最高法院的杰出律师、认证调解员和资深ADR专家，在海事法、民事诉讼、商业争议和国际贸易事务中拥有广泛的专业知识。作为巴基斯坦调解员协会（PMA）主席，他继续在巴基斯坦强化调解实践和促进机构争议解决框架方面发挥关键作用。\n\n他是英国CEDR认证调解员，并在信德省高等法院担任调解员，同时还与穆萨利哈国际ADR中心（MICADR）保持合作。除法律执业外，他还作为客座教授和机构领导者为法律教育和专业发展做出了贡献。",
+    "badges": ["高级培训师", "主席", "执行领导力"],
+    "expertise": ["ADR与调解培训", "商业争议解决", "海事法", "国际贸易争议", "仲裁与冲突解决", "民事与企业诉讼", "培训讲师 (TOT)"],
+    "experience": { "years": "21年以上", "label": "法律执业与争议解决" },
+    "accreditations": ["英国CEDR认证调解员", "名册调解员 – 信德省高等法院", "成员 – 穆萨利哈国际ADR中心 (MICADR)", "国际仲裁法文凭 – 英格兰和威尔士"],
+    "education": ["国际仲裁法文凭 – 英格兰和威尔士法学院"],
+    "affiliations": ["巴基斯坦调解员协会 (PMA)", "英国CEDR", "穆萨利哈国际ADR中心 (MICADR)", "信德省高等法院", "巴基斯坦最高法院律师协会", "信德省高等法院律师协会", "巴利亚大学"],
+    "media": []
+  },
+  "trainer_mustansir_zakir": {
+    "name": "穆斯坦西尔·扎基尔",
+    "role": "高级培训师",
+    "highlight": "“通过战略领导力和卓越的ADR，引领企业治理和调解培训倡议。”",
+    "about": "穆斯坦西尔·扎基尔是一位资深企业领导人、认证调解员和国际公认的ADR培训师，在战略管理、公司治理和争议解决方面拥有丰富的经验。他担任巴基斯坦调解员协会（PMA）的培训总监和执行成员，在巴基斯坦全境推广调解和提高ADR意识方面发挥了重要作用。\n\n他是巴基斯坦特许会计师协会（ICAP）、成本与管理会计师协会（ICMAP）和公司秘书协会（ICSP）的资深会员，目前担任Hashoo集团的首席执行官。他获得了美国康奈尔大学的战略管理认证，以及巴基斯坦公司治理机构的认证董事教育。作为英国CEDR认证调解员和高级培训师，他为巴基斯坦的专业调解培训、领导力发展和机构ADR倡议做出了广泛贡献。",
+    "badges": ["高级培训师", "培训总监", "执行委员会 – 南区", "前主席"],
+    "expertise": ["ADR与调解培训", "公司治理", "战略管理", "高管领导力发展", "商业争议解决", "培训讲师 (TOT)", "机构能力建设"],
+    "experience": { "years": "20年以上", "label": "执行 leadership 与 ADR 培训" },
+    "accreditations": ["英国CEDR认证调解员", "英国CEDR认证高级培训师", "认证董事 – 巴基斯坦公司治理机构", "战略管理认证 – 美国康奈尔大学"],
+    "education": ["巴基斯坦特许会计师协会资深会员 (ICAP)", "巴基斯坦成本与管理会计师协会资深会员 (ICMAP)", "巴基斯坦公司秘书协会资深会员 (ICSP)"],
+    "affiliations": ["巴基斯坦调解员协会 (PMA)", "英国CEDR", "Hashoo集团", "巴基斯坦酒店协会 (PHA)", "巴基斯坦建筑商与开发商协会 (ABAD)", "巴基斯坦特许会计师协会 (ICAP)", "巴基斯坦公司治理机构", "卡拉奇海童军总会信托"],
+    "media": []
+  },
+  "trainer_wajiha_aleem": {
+    "name": "瓦吉哈·阿利姆",
+    "role": "高级培训师",
+    "highlight": "“通过领导力、创新和国际合作推进调解，为巴基斯坦建立更强大的ADR框架。”",
+    "about": "瓦吉哈·阿利姆是巴基斯坦高等法院律师、认证调解员和法律专业人士，在企业运营、法律咨询和替代性争议解决（ADR）方面拥有丰富的经验。她目前担任巴基斯坦调解员协会（PMA）秘书长，同时担任Hashoo集团的总经理（运营与法律）。\n\n她拥有英国国际商业法与替代性争议解决硕士学位，是CEDR认证调解员，并在泰国仲裁中心（THAC）等国际机构拥有兼职身份。她在信德省高等法院注册为调解员，并积极参与国内外领先的法律和专业协会。",
+    "badges": ["高级培训师", "秘书长", "执行领导力"],
+    "expertise": ["ADR与调解培训", "国际商业法", "企业法律咨询", "商业争议解决", "机构ADR发展", "专业技能培训", "冲突解决"],
+    "experience": { "years": "17年以上", "label": "企业、法律与ADR领导经验" },
+    "accreditations": ["CEDR认证调解员", "名册调解员 – 信德省高等法院", "助理培训师 – PMA", "THAC分会成员 – 泰国仲裁中心"],
+    "education": ["国际商业法与ADR硕士 – 英国", "法学学士 (荣誉) – 巴基斯坦"],
+    "affiliations": ["巴基斯坦调解员协会 (PMA)", "英国CEDR", "泰国仲裁中心 (THAC)", "信德省高等法院", "信德省律师理事会", "卡拉奇律师协会", "国际律师协会", "Hashoo集团"],
+    "media": []
+  },
+  "trainer_huma_shah": {
+    "name": "胡玛·沙阿",
+    "role": "高级培训师",
+    "highlight": "“通过领导力、倡导和专业导师制度，推进企业法律卓越与调解培训。”",
+    "about": "胡玛·沙阿是一位经验丰富的法律专业人士、企业顾问和获得认证的ADR培训师，拥有超过三十年的法律执业经验。自1993年以来，她曾与巴基斯坦一些最著名的法律机构合作，包括阿斯玛·杰汉吉尔夫人和希纳·吉拉尼女士领导下的AGHS法律援助中心、AGHS法律事务所，以及Surridge & Beecheno律师事务所。\n\n她曾担任SSR&I律师事务所的管理合伙人，目前担任巴基斯坦哈比卜银行（HBL）北区法律负责人。她是巴基斯坦倡导培训计划（由英国英格兰和威尔士律师理事会出庭律师倡导委员会IATC主办）的认证培训师，也是英国CEDR认证的调解员和高级培训师。",
+    "badges": ["高级培训师", "执行委员会 – 北区", "培训委员会"],
+    "expertise": ["ADR与调解培训", "公司法与商业法", "倡导与法律技能培训", "合同起草与审查", "银行与企业法律咨询", "冲突解决", "培训讲师 (TOT)"],
+    "experience": { "years": "30年以上", "label": "法律执业、企业咨询与ADR培训" },
+    "accreditations": ["英国CEDR认证调解员", "英国CEDR认证高级培训师", "巴基斯坦倡导培训计划认证培训师 (IATC)"],
+    "education": ["旁遮普法学院 – 因学术优异两次获得金牌"],
+    "affiliations": ["巴基斯坦调解员协会 (PMA)", "英国CEDR", "出庭律师倡导委员会 (IATC)", "英格兰和威尔士律师理事会", "哈比卜银行 (HBL)", "旁遮普省律师协会", "AGHS法律援助中心", "Surridge & Beecheno"],
+    "media": []
+  },
+  "trainer_usman_g_rashid": {
+    "name": "乌斯曼·G·拉希德",
+    "role": "高级培训师",
+    "highlight": "“将法律倡导、调解专业知识和培训领导力相结合，在巴基斯坦全境建设ADR能力。”",
+    "about": "乌斯曼·G·拉希德是英国出庭律师、巴基斯坦高等法院律师、CEDR认证调解员和高级培训师，在法律执业、倡导培训、调解和法律教育方面拥有丰富的经验。他拥有伦敦大学法学学士（荣誉）学位、伦敦国王学院法学硕士学位，并在英国布里斯托的西英格兰大学完成了律师职业课程。他由伦敦林肯法学会授予出庭律师资格。\n\n他曾担任巴基斯坦调解员协会（PMA）秘书长，并在巴基斯坦积极致力于调解意识推广、ADR能力建设和专业法律培训倡议。在法律执业之余，他还参与法律教育和倡议技能培训，特别是为伦敦大学国际课程教授公司法和证据法。\n\n乌斯曼的职业生涯始于Umar Bandial律师事务所，目前通过Inayatullah Chambers独立开展执业。他在诉讼、ADR、法律教育和倡导培训方面的综合专业知识，使他能够有效推动机构ADR发展和专业调解实践。",
+    "badges": ["高级培训师", "出庭律师", "PMA前秘书长"],
+    "expertise": ["ADR与调解培训", "倡导技能培训", "公司法", "证据法", "商业与民事诉讼", "法律教育与专业发展", "冲突解决"],
+    "experience": { "years": "15年以上", "label": "CEDR认证高级培训师、倡导与法律教育专家" },
+    "accreditations": ["英国CEDR认证调解员及高级培训师", "林肯法学会出庭律师", "认证倡导培训师"],
+    "education": ["法学硕士 – 伦敦大学国王学院", "法学学士 (荣誉) – 伦敦大学", "律师职业课程 – 英国布里斯托西英格兰大学"],
+    "affiliations": ["巴基斯坦调解员协会 (PMA)", "英国CEDR", "林肯法学会", "拉合尔大学学院", "伦敦大学国际课程", "Inayatullah Chambers 律师事务所"],
+    "media": []
+  },
+  "trainer_asfand_yar_ali_khan": {
+    "name": "阿斯凡德·亚尔·阿里·汗",
+    "role": "高级培训师",
+    "highlight": "\"通过领导力、培训和机构专业知识，推进调解、仲裁和法律改革。\"",
+    "about": "阿斯凡德·亚尔·阿里·汗是一位资深的法律从业者、认证调解员和接受过国际培训的ADR专家，在法律咨询、仲裁、机构发展和调解培训方面拥有丰富的经验。作为S&K合伙人事务所的高级合伙人和巴基斯坦调解员协会（PMA）副主席，他积极致力于加强巴基斯坦的调解与替代性争议解决框架。\n\n他由伦敦林肯法学会授予出庭律师资格，是英国CEDR认证调解员和高级培训师，同时也是伦敦特许仲裁员协会（MCIArb）会员。他的专业背景涵盖法律执业、国际发展倡议、政策参与以及机构咨询，包括与联合国和联合国开发计划署（UNDP）项目的合作。",
+    "badges": ["高级培训师", "执行领导力", "副主席 – 北区"],
+    "expertise": ["ADR与调解培训", "仲裁与冲突解决", "商业与民事争议", "法律技能发展", "机构ADR能力建设", "专业发展课程", "培训讲师 (TOT)"],
+    "experience": { "years": "20+ 年", "label": "法律执业、ADR与仲裁庭领导经验" },
+    "accreditations": ["英国CEDR认证调解员", "英国CEDR认证高级培训师", "伦敦特许仲裁员协会会员 (MCIArb)", "出庭律师 – 伦敦林肯法学会"],
+    "education": ["专业法律技能研究生文凭 – 英国", "法学学士 (荣誉) – 英国", "硕士 – 巴基斯坦", "学士 – 巴基斯坦"],
+    "affiliations": ["巴基斯坦调解员协会 (PMA)", "英国CEDR", "伦敦特许仲裁员协会", "林肯法学会", "巴基斯坦红新月会 (PRCS)", "巴基斯坦环境法协会", "英国校友会", "联合国发展倡议"],
+    "media": []
+  },
+  "trainer_saima_amin_khawaja": {
+    "name": "赛玛·阿明·哈瓦贾",
+    "role": "高级培训师",
+    "highlight": "“通过教育和机构领导力，促进法律改革、卓越调解和可持续争议解决。”",
+    "about": "赛玛·阿明·哈瓦贾女士是一位资深的法律专业人士、认证调解员和接受过国际培训的ADR专家，在企业诉讼、宪法、法律咨询和机构改革方面拥有广泛的经验。她在巴基斯坦推广调解意识、ADR培训和法律发展倡议中发挥了关键 historical 作用。\n\n她拥有伦敦国王学院的法学硕士（LL.M）学位，并在印度M.C. Mehta基金会接受了环境法方面的专业培训。作为英国CEDR认证的调解员和高级培训师，她积极投身于专业调解培训和能力建设项目。她曾在拉合尔管理科学大学（LUMS）、公务员学院、司法学院、法律研究机构（TILS）和拉合尔大学学院（UCL）任教，同时还担任由拉合尔高等法院组建的气候变化委员会委员。",
+    "badges": ["高级培训师", "执行成员", "副主席 – 北区"],
+    "expertise": ["ADR与调解培训", "企业与宪法", "法律改革与政策发展", "环境法", "司法与专业培训", "冲突解决", "培训讲师 (TOT)"],
+    "experience": { "years": "20年以上", "label": "法律执业、培训与咨询" },
+    "accreditations": ["英国CEDR认证调解员", "英国CEDR认证高级培训师", "专业环境法培训 – 印度M.C. Mehta基金会"],
+    "education": ["法学硕士 (LL.M) – 伦敦国王学院"],
+    "affiliations": ["巴基斯坦调解员协会 (PMA)", "英国CEDR", "拉合尔高等法院", "拉合尔管理科学大学 (LUMS)", "公务员学院", "司法学院", "法律研究机构 (TILS)", "拉合尔大学学院 (UCL)", "印度M.C. Mehta基金会"],
+    "media": []
+  },
+  "trainer_tariq_saeed_rana": {
+    "name": "塔里克·赛义德·拉纳",
+    "role": "高级培训师",
+    "highlight": "“通过国际专业知识、专业培训和ADR领导力，引领企业法律执业和卓越调解。”",
+    "about": "塔里克·赛义德·拉纳先生是一位高级法律顾问、认证调解员和国际公认的ADR培训师，在公司法和商业法方面拥有丰富的专业知识。他由英国林肯法学会授予出庭律师资格，目前担任Surridge & Beecheno律师事务所公司与商业法部门的主管，并继续为巴基斯坦的调解培训、法律咨询和机构ADR发展做出重大贡献。\n\n他是英国CEDR认证的调解员和高级培训师，在公司治理、法律咨询和专业能力建设方面拥有广泛的经验。他积极开展专业和董事培训课程，同时在法律和商业机构中保持领导地位。",
+    "badges": ["高级培训师", "前主席", "执行委员会 – 北区"],
+    "expertise": ["ADR与调解培训", "公司法与商业法", "董事培训计划", "公司治理", "商业争议解决", "专业法律发展", "培训讲师 (TOT)"],
+    "experience": { "years": "25年以上", "label": "法律执业、ADR与企业顾问" },
+    "accreditations": ["英国CEDR认证调解员", "英国CEDR认证高级培训师", "林肯法学会出庭律师 – 英国"],
+    "education": ["商法法学硕士 – 英国", "法律研究生文凭 – 英国", "法学学士 – 巴基斯坦", "机械工程副学士 – 巴基斯坦"],
+    "affiliations": ["巴基斯坦调解员协会 (PMA)", "英国CEDR", "伦敦林肯法学会", "英格兰和威尔士律师理事会", "拉合尔高等法院律师协会", "旁遮普省律师理事会", "拉合尔工商会", "Surridge & Beecheno 律师事务所"],
+    "media": []
+  },
+  "saeed_habib": {
+    "name": "赛义德·哈比卜",
+    "role": "副主席 – 南区",
+    "highlight": "",
+    "about": "",
+    "badges": ["会员委员会", "机构协调"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "shabana_ali": {
+    "name": "沙巴娜·阿里",
+    "role": "副主席 – 南区",
+    "highlight": "“通过倡导、教育和争议解决，促进调解、法律意识和社会正义。”",
+    "about": "沙巴娜·阿里女士是巴基斯坦调解员协会（PMA）南区副主席，也是一位在诉讼、咨询服务和争议解决方面拥有深厚背景的资深民事、税务及公司法律师。她积极参与推进巴基斯坦的调解实践，并因其致力于法律赋权、社会正义以及保护妇女和儿童权利而受到广泛认可。",
+    "badges": ["执行团队", "调解员", "PMA认证调解员", "律师协调 – 南区", "领导力"],
+    "expertise": ["民法", "公司法", "家庭争议", "税务法", "调解与ADR", "妇女与儿童权利倡导"],
+    "experience": { "years": "20年以上", "label": "法律执业、调解与公众倡导" },
+    "accreditations": ["PMA认证调解员", "注册调解执业者"],
+    "education": ["民法、公司法及税务法专业与法律研究"],
+    "affiliations": ["巴基斯坦调解员协会", "巴基斯坦公共财政会计师协会 (PIPFA)", "PMA执行委员会", "媒体法律分析师兼演讲嘉宾"],
+    "media": ["巴基斯坦电视公司 (PTV)", "Aaj News", "TV One", "Metro News"]
+  },
+  "syed_sammad_ul_haque": {
+    "name": "赛义德·萨马德·哈克",
+    "role": "财务秘书",
+    "highlight": "",
+    "about": "",
+    "badges": ["会员委员会", "执行领导力"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "tariq_saeed_rana": {
+    "name": "塔里克·赛义德·拉纳",
+    "role": "执行委员会 – 北区",
+    "highlight": "“通过国际专业知识、专业培训和ADR领导力，引领企业法律执业和卓越调解。”",
+    "about": "出庭律师塔里克·赛义德·拉纳是一位高级法律专业人士、认证调解员和高级培训师，在公司法和商业法方面拥有广泛的专业知识。他由英国林肯法学会授予出庭律师资格，目前担任Surridge & Beecheno律师事务所公司与商业法部门的主管。凭借在法律咨询、ADR和专业培训领域数十年的经验，他在推进巴基斯坦调解和机构法律发展中继续发挥着重要的领导作用。",
+    "badges": ["执行团队", "调解员", "CEDR认证调解员", "高级培训师", "前主席"],
+    "expertise": ["公司法与商业法", "调解与ADR", "国际商业争议", "法律咨询", "公司治理", "专业培训"],
+    "experience": { "years": "25年以上", "label": "法律执业、ADR与企业顾问" },
+    "accreditations": ["CEDR认证调解员", "CEDR高级培训师", "出庭律师 – 英国林肯法学会", "PMA认证调解员"],
+    "education": ["商法法学硕士 – 英国", "法律研究生文凭 – 英国", "法学学士 – 巴基斯坦", "机械工程副学士 – 巴基斯坦"],
+    "affiliations": ["英格兰和威尔士律师理事会", "伦敦林肯法学会", "巴基斯坦调解员协会", "拉合尔高等法院律师协会", "旁遮普省律师理事会", "拉合尔工商会"],
+    "media": []
+  },
+  "huma_shah": {
+    "name": "胡玛·沙阿",
+    "role": "执行委员会 – 北区",
+    "highlight": "“通过领导力、倡导和专业导师制度，推进企业法律卓越与调解培训。”",
+    "about": "胡玛·沙阿女士是一位高级法律专业人士，在公司法、法律咨询、商业合同起草与审查以及争议解决方面拥有丰富的经验。自1993年执业以来，她曾与包括AGHS法律援助中心、AGHS法律事务所以及Surridge & Beecheno在内的领先法律机构和律师事务所合作。她目前担任巴基斯坦哈比卜银行（HBL）北区法律负责人，并继续为巴基斯坦的调解培训和ADR发展做出重大贡献。",
+    "badges": ["执行团队", "调解员", "CEDR认证调解员", "高级培训师", "培训委员会"],
+    "expertise": ["公司法与商业法", "法律咨询", "商业起草与审查", "银行与金融法律事务", "调解与ADR", "倡导培训"],
+    "experience": { "years": "30年以上", "label": "法律执业、企业咨询与ADR培训" },
+    "accreditations": ["CEDR认证调解员", "CEDR高级培训师", "认证倡导培训师 – IATC (英格兰和威尔士律师理事会)", "PMA认证调解员"],
+    "education": ["旁遮普法学院 – 因学术优异两次获得金牌"],
+    "affiliations": ["巴基斯坦调解员协会", "英国校阅倡导培训计划（巴基斯坦）", "旁遮普省律师协会", "哈比卜银行 (HBL) – 北区法律负责人"],
+    "media": []
+  },
+  "umaimah_anwar_khan": {
+    "name": "乌迈玛·安瓦尔·汗",
+    "role": "执行委员会 – 南区",
+    "highlight": "",
+    "about": "",
+    "badges": ["行为准则", "律师协调 – 南区"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "mustansir_zakir": {
+    "name": "穆斯坦西尔·扎基尔",
+    "role": "执行委员会 – 南区",
+    "highlight": "“通过战略领导力和卓越的ADR，引领企业治理和调解培训倡议。”",
+    "about": "穆斯坦西尔·扎基尔先生是一位高级企业高管、认证调解员和高级培训师，在公司治理、酒店业、金融和替代性争议解决（ADR）方面拥有丰富的领导经验。目前担任Hashoo集团的首席执行官，他通过在巴基斯坦调解员协会（PMA）内的领导工作，在推动巴基斯坦的调解意识和专业培训倡议方面发挥了重要作用。",
+    "badges": ["执行团队", "调解员", "CEDR认证调解员", "培训总监", "高级培训师", "前主席"],
+    "expertise": ["公司治理", "战略管理", "调解与ADR培训", "酒店与商业领导力", "财务管理", "机构发展"],
+    "experience": { "years": "30年以上", "label": "企业领导力、公司治理与ADR" },
+    "accreditations": ["CEDR认证调解员", "CEDR高级培训师", "认证董事教育 – PICG", "战略管理认证 – 美国康奈尔大学"],
+    "education": ["巴基斯坦特许会计师协会资深会员 (ICAP)", "巴基斯坦成本与管理会计师协会资深会员 (ICMAP)", "巴基斯坦公司秘书协会资深会员 (ICSP)"],
+    "affiliations": ["巴基斯坦调解员协会 (前主席及培训总监)", "Hashoo集团 – 首席执行官", "巴基斯坦酒店协会 (前主席)", "巴基斯坦建筑商与开发商协会 (ABAD)", "卡拉奇海童军总会信托 – 常务受托人"],
+    "media": []
+  },
+  "usman_g_rashid": {
+    "name": "乌斯曼·G·拉希德",
+    "role": "成员",
+    "highlight": "“将法律倡导、调解专业知识和培训领导力相结合，在巴基斯坦全境建设ADR能力。”",
+    "about": "乌斯曼·G·拉希德是英国出庭律师、巴基斯坦高等法院律师、CEDR认证调解员和高级培训师，在法律执业、倡导培训、调解和法律教育方面拥有丰富的经验。他拥有伦敦大学法学学士（荣誉）学位、伦敦国王学院法学硕士学位，并在英国布里斯托的西英格兰大学完成了律师职业课程。他由伦敦林肯法学会授予出庭律师资格。\n\n他曾担任巴基斯坦调解员协会（PMA）秘书长，并在巴基斯坦积极致力于调解意识推广、ADR能力建设和专业法律培训倡议。在法律执业之余，他还参与法律教育和倡议技能培训，特别是为伦敦大学国际课程教授公司法和证据法。\n\n乌斯曼的职业生涯始于Umar Bandial律师事务所，目前通过Inayatullah Chambers独立开展执业。他在诉讼、ADR、法律教育和倡导培训方面的综合专业知识，使他能够有效推动机构ADR发展和专业调解实践。",
+    "badges": ["调解员", "高级培训师", "出庭律师"],
+    "expertise": ["ADR与调解培训", "倡导技能培训", "公司法", "证据法", "商业与民事诉讼", "法律教育与专业发展", "冲突解决"],
+    "experience": { "years": "", "label": "CEDR认证调解员及高级培训师" },
+    "accreditations": ["英国CEDR认证调解员及高级培训师 – 英国", "林肯法学会出庭律师", "认证倡导培训师"],
+    "education": ["法学硕士 – 伦敦大学国王学院", "法学学士 (荣誉) – 伦敦大学", "律师职业课程 – 英国布里斯托西英格兰大学"],
+    "affiliations": ["巴基斯坦调解员协会 (PMA)", "英国CEDR", "林肯法学会", "拉合尔大学学院", "伦敦大学国际课程", "Inayatullah Chambers 律师事务所"],
+    "media": []
+  },
+  "adnan_mufti": {
+    "name": "阿德南·穆夫蒂",
+    "role": "执行委员会 – 南区",
+    "highlight": "",
+    "about": "",
+    "badges": ["机构协调", "领导力"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "anwar_kashif_mumtaz": {
+    "name": "安瓦尔·卡希夫·穆姆塔兹",
+    "role": "高级培训师",
+    "highlight": "",
+    "about": "安瓦尔·卡希夫·穆姆塔兹先生是一位资深法律专业人士、领导力培训师和认证调解员，在公司法、税务法和争议解决执业方面拥有广泛的经验。作为高等法院律师以及M/s. Saiduddin & Co.律师事务所的高级合伙人，他在巴基斯坦税务与公司法咨询领域建立了极高的声誉。\n\n他是领导力与个人发展领域的国际认证培训师，也是英国CEDR认证调解员及高级培训师。他为法律和企业界的领导力发展、调解意识提升以及专业能力建设做出了显著贡献。他还曾担任巴基斯坦税务律师协会及卡拉奇税务律师协会的秘书长、副主席和主席等重要领导职务。",
+    "badges": ["高级培训师", "前主席", "领导力培训师"],
+    "expertise": ["领导力与个人发展", "ADR与调解培训", "公司法", "税务法与咨询", "专业发展课程", "冲突解决", "培训讲师 (TOT)"],
+    "experience": { "years": "", "label": "" },
+    "accreditations": ["英国CEDR认证调解员", "英国CEDR认证高级培训师", "国际认证培训师 – 领导力与个人发展"],
+    "education": ["巴基斯坦高等法院律师"],
+    "affiliations": ["巴基斯坦调解员协会 (PMA)", "英国CEDR", "巴基斯坦税务律师协会", "卡拉奇税务律师协会", "巴基斯坦公共利益法律协会 (PILAP)", "M/s. Saiduddin & Co. 律师事务所"],
+    "media": []
+  }
+  },
           "former_presidents": {
             "president_1": {
               "name": "安瓦尔·卡西夫· ممتاز (Anwar Kashif Mumtaz)",
@@ -8812,6 +10096,305 @@
               "aria_label": "د اسفند يار علي خان پروفایل کتل"
             }
           },
+          "modal": {
+    "about_label": "په اړه",
+    "expertise_title": "تخصص / مهارت",
+    "training_expertise_title": "د روزنې تخصص",
+    "accreditations_title": "اعتبارنامې / اسناد",
+    "education_title": "زده کړې",
+    "affiliations_title": "مسلکي تړاوونه",
+    "media_title": "میډیا او عامه ښکیلتیا",
+    "coming_soon": "ډېر ژر",
+    "profile_close_label": "پروفایل بند کړئ"
+  },
+  "profile_modal": {
+"aga_zafar_ahmed": {
+    "name": "آغا ظفر احمد",
+    "role": "مشر (صداقت)",
+    "highlight": "\"د مشرتابه، وکالت او ADR د لارې ثالثي او د نړیوالو شخړو هوارولو کلتور ته وده ورکول.\"",
+    "about": "ښاغلی آغا ظفر احمد د پاکستان میډیټرز ایسوسی ایشن (PMA) صدر او د پاکستان د سپریم کورټ یو وتلی وکیل دی چې د ۲۱ کالو څخه زیات د وکالت تجربه لري. هغه د سمندري قانون، تجارتي شخړو، نړیوالې سوداګرۍ او د شخړو متبادل حل (ADR) کې په خپله مهارت پېژندل شوی دی. د PMA د بنسټ اېښودونکي په توګه، هغه په پاکستان کې د دریمګړیتوب یا ثالثي د لارې د شخړو سوله ایز حل لپاره هڅې کوي.",
+    "badges": ["اجرایوي ټیم", "ثالث (میډیټر)", "د CEDR لخوا منل شوی ثالث", "ماسټر ټرینر", "اجرایوي مشرتابه"],
+    "expertise": ["تجارتي شخړې", "سمندري قانون (Maritime Law)", "د نړیوالې سوداګرۍ شخړې", "کارپوریټ ثالثي", "سول قضایاوې", "د شخړو متبادل حل (ADR)"],
+    "experience": { "years": "۲۱+ کاله", "label": "د وکالت او د شخړو حل تجربه" },
+    "accreditations": ["د CEDR لندن لخوا منل شوی ثالث", "د MICADR د پینل ثالث", "د PMA لخوا منل شوی ثالث", "په نړیواله کچه د ثالثي قانون ډیپلوما"],
+    "education": ["په نړیواله کچه د ثالثي قانون ډیپلوما – د انګلستان او ویلز د قانون کالج"],
+    "affiliations": ["د سپریم کورټ بار ایسوسی ایشن پاکستان", "د سند د عالي محکمې بار ایسوسی ایشن", "د پاکستان میډیټرز ایسوسی ایشن (بنسټ اېښودونکی غړی)", "بحریه پوهنتون (سابق وزټنګ فیکلټي)"],
+    "media": []
+  },
+  "saima_amin_khawaja": {
+    "name": "سایمه امین خواجه",
+    "role": "مرستیاله مشره – شمال",
+    "highlight": "\"د تعلیم او اداري مشرتابه له لارې په قانون کې اصلاحات، د ثالثي غوره والی او د شخړو پایداره حل رامنځته کول.\"",
+    "about": "آغلې سایمه امین خواجه د پاکستان میډیټرز ایسوسی ایشن (PMA) د شمالي برخې مرستیاله مشره ده. هغې ته په کارپوریټ قضایاوو، د هېواد په اساسي قانون او د قانون په اصلاحاتو کې پراخه تجربه حاصله ده. هغه په نړیواله کچه روزل شوې ثالثه او ماسټر ټرینره ده چې په پاکستان کې د ADR او د چاپیریال د قانون د ودې لپاره کار کوي.",
+    "badges": ["اجرایوي ټیم", "ثالثه", "د CEDR لخوا منل شوې ثالثه", "ماسټر ٹرینره", "د روزنې کمیټه"],
+    "expertise": ["کارپوریټ قضایاوې", "آئیني قانون", "قانوني اصلاحات او مشورې", "د چاپیریال قانون", "د ثالثي او ADR روزنه", "د چاپیریال بدلون پالیسي"],
+    "experience": { "years": "۲۰+ کاله", "label": "د وکالت، روزنې او مشورې ورکولو تجربه" },
+    "accreditations": ["د CEDR لخوا منل شوې ثالثه", "د CEDR ماسټر ټرینره", "د PMA لخوا منل شوې ثالثه", "د چاپیریال قانون روزنه – ایم سي مهتا فاونډیشن، هندوستان"],
+    "education": ["ایل ایل ایم (LL.M) – کینګز کالج لندن"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن", "د چاپیریال بدلون کمیسیون – لاهور هایکورټ", "سول سروسز اکاډمي", "جوډیشل اکاډمي", "د لاهور د مدیریت علومو پوهنتون (LUMS)", "یونیورسیټي کالج لاهور (UCL)", "د قانوني مطالعاتو انسټیټیوټ (TILS)"],
+    "media": []
+  },
+  "asfand_yar_ali_khan": {
+    "name": "اسفند یار علي خان",
+    "role": "مرستیال مشر – شمال",
+    "highlight": "\"د مشرتابه، روزنې او اداري تجربې له لارې ثالثي، آربټریشن او قانوني اصلاحاتو ته کار کول.\"",
+    "about": "بیریسټر اسفند یار علي خان د پاکستان میډیټرز ایسوسی ایشن (PMA) د شمالي برخې مرستیال مشر او د دې د بنسټ اېښودونکو غړو څخه دی. هغه ته د لنکنز ان د معززې ټولنې لخوا د بار غړیتوب ورکړل شوی دی. هغه د قانون او پرمختګ یو ماهر دی چې په ثالثي، آربټریشن، او د چاپیریال په قوانینو کې پوهه لري او په پاکستان کې د قانوني اصلاحاتو لپاره کار کوي.",
+    "badges": ["اجرایوي ټیم", "ثالث", "د CEDR لخوا منل شوی ثالث", "ماسټر ټرینر", "د ضابطه اخلاقو کمیټه"],
+    "expertise": ["آربټریشن او ADR", "د کار او روزګار قانون", "د چاپیریال قانون", "د کورنۍ او ځمکې شخړې", "ریګولیټري چارې", "د ثالثي روزنه"],
+    "experience": { "years": "۲۰+ کاله", "label": "قانوني پریکټس، ADR او د ټریبیونل مشرتابه" },
+    "accreditations": ["د CEDR لخوا منل شوی ثالث", "د CEDR ماسټر ټرینر", "غړی – چارټرډ انسټیټیوټ آف آربټریټرز لندن (MCIArb)", "د PMA لخوا منل شوی ثالث"],
+    "education": ["په مسلکي قانوني مهارتونو کې د پوسټ ګریجویټ ډیپلوما – انګلستان", "ایل ایل بي (Hons) – انګلستان", "ایم فل – پاکستان", "ایم اې – پاکستان", "بي اې – پاکستان"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن (بنسټ اېښودونکی غړی)", "چارټرډ انسټیټیوټ آف آربټریټرز، لندن", "د خیبر پښتونخوا د چاپیریال ساتنې ټریبیونل", "لنکنز ان، لندن"],
+    "media": []
+  },
+  "wajiha_aleem": {
+    "name": "وجیهه علیم",
+    "role": "سیکرټري جنرل",
+    "highlight": "\"په پاکستان کې د یو قوي ADR فریم ورک لپاره د مشرتابه، نوښت او نړیوالې همکارۍ له لارې د ثالثي وده.\"",
+    "about": "آغلې وجیهه علیم د پاکستان میډیټرز ایسوسی ایشن (PMA) د سیکرټري جنرل په توګه کار کوي. هغه په ټول هېواد کې د ثالثي د پیاوړتیا او د شخړو د متبادل حل (ADR) د قانوني کولو لپاره د سټراټیژیکو پروګرامونو مشري کوي. هغې ته د ۱۷ کالو څخه زیات د کارپوریټ او قانوني چارو تجربه ده او د ثالثي د یو معتبر او نړیوال معیار لرونکي نظام په توګه د ودې لپاره هڅې کوي.",
+    "badges": ["اجرایوي ټیم", "ثالثه", "د CEDR لخوا منل شوې ثالثه", "ماسټر ټرینره", "اجرایوي مشرتابه"],
+    "expertise": ["د شخړو متبادل حل (ADR)", "کارپوریټ او قانوني مشورې", "د ثالثي روزنه", "اداري پرمختګ", "د پالیسیو اصلاحات", "په ADR کې نړیواله همکاري"],
+    "experience": { "years": "۱۷+ کاله", "label": "کارپوریټ، قانوني او د ADR مشرتابه" },
+    "accreditations": ["د انګلستان د CEDR لخوا منل شوې ثالثه", "د PMA لخوا منل شوې ثالثه", "نړیواله ADR پریکټیشنره"],
+    "education": ["ایل ایل ایم (LL.M) – انګلستان", "بي اې، ایل ایل بي (Hons) – د کراچۍ پوهنتون"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن", "نړیوال د ثالثي او ADR شبکې", "عدلي او اداري ADR نوښتونه"],
+    "media": []
+  },
+  "trainer_aga_zafar_ahmed": {
+    "name": "آغا ظفر احمد",
+    "role": "ماسټر ٹرینر",
+    "highlight": "\"د مشرتابه، وکالت او ADR د لارې ثالثي او د نړیوالو شخړو هوارولو کلتور ته وده ورکول.\"",
+    "about": "آغا ظفر احمد د پاکستان د سپریم کورټ یو وتلی وکیل، د قانون ماهر او د ADR د برخې مشر دی. هغه د بحري قوانینو، سول قضایاوو، او د نړیوال تجارت په شخړو کې لوی لاس لري. د پاکستان میډیټرز ایسوسی ایشن د مشر په توګه، هغه په پاکستان کې د ثالثي د طریقو د پیاوړتیا لپاره کار کوي.\n\nهغه د CEDR انګلستان لخوا منل شوی ثالث دی او د سند هایکورټ د پینل د ثالث په توګه هم کار کوي. له وکالت سره سره، هغه د پوهنتونونو د وزټنګ ښوونکي په توګه هم د قانون په برخه کې خپل خدمات وړاندې کړي دي.",
+    "badges": ["ماسټر ٹرینر", "مشر (PMA)", "اجرایوي مشرتابه"],
+    "expertise": ["د ADR او ثالثي روزنه", "د تجارتي شخړو حل", "سمندري قانون (Maritime Law)", "د نړیوال تجارت شخړې", "آربټریشن او د شخړو حل", "سول او کارپوریټ قضایاوې", "د ټرینرانو روزنه (TOT)"],
+    "experience": { "years": "۲۱+ کاله", "label": "د وکالت او د شخړو حل" },
+    "accreditations": ["د CEDR یوکے منل شوی ثالث", "د سند هایکورټ پینل ثالث", "غړی – مصالحه نړیوال مرکز فار ADR (MICADR)", "د نړیوال آربټریشن قانون ډیپلوما – انګلستان"],
+    "education": ["د نړیوال آربټریشن قانون ډیپلوما – د انګلستان د قانون کالج"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن (PMA)", "CEDR انګلستان", "د مصالحه نړیوال مرکز فار ADR", "د سند هایکورټ", "د سپریم کورټ بار ایسوسی ایشن", "د سند هایکورټ بار ایسوسی ایشن", "بحریه پوهنتون"],
+    "media": []
+  },
+  "trainer_mustansir_zakir": {
+    "name": "مستنصر ذاکر",
+    "role": "ماسټر ٹرینر",
+    "highlight": "\"د سټراټیژیک مشرتابه او د ADR د غوره والي له لارې د کارپوریټ ګورننس او د ثالثي د روزنې د پروګرامونو مشري کول.\"",
+    "about": "مستنصر ذاکر د کارپوریټ یو تکړه مشر، منل شوی ثالث او د ADR نړیوال روزونکی دی چې د مدیریت او کارپوریټ ګورننس په برخه کې پراخه تجربه لري. هغه د پاکستان میډیټرز ایسوسی ایشن (PMA) د روزنې ډائیرکټر دی او په ټول هېواد کې د ثالثي د شعور د بیدارولو لپاره کار کوي.\n\nهغه د ICAP، ICMAP او ICSP فیلو غړی دی او دا مهال په هاشو ګروپ کې د چیف ایګزیکټیو په توګه دندې ترسره کوي. هغه د امریکا د کارنیل پوهنتون څخه د سټراټیژیک مدیریت تصدیق پاڼه اخیستې ده او د یو ماسټر ټرینر په توګه یې په پاکستان کې د قانوني او اداري پرمختګونو لپاره ډېر کار کړی دی.",
+    "badges": ["ماسټر ٹرینر", "د روزنې ډائریکټر", "اجرایوي کمیټه – سویل", "سابق صدر"],
+    "expertise": ["د ADR او ثالثي روزنه", "کارپوریټ ګورننس", "سټراټیژیک مدیریت", "د مشرتابه پرمختګ", "د تجارتي شخړو حل", "د ټرینرانو روزنه (TOT)", "اداري وړتیا رامنځته کول"],
+    "experience": { "years": "۲۰+ کاله", "label": "اجرایوي مشرتابه او د ADR روزنه" },
+    "accreditations": ["د CEDR یوکے منل شوی ثالث", "د CEDR یوکے ماسټر ټرینر", "منل شوی ډائریکټر – د کارپوریټ ګورننس انسټیټیوټ پاکستان", "د سټراټیژیک مدیریت سرټیفیکیشن – کارنیل پوهنتون، امریکا"],
+    "education": ["فیلو – د چارټرډ اکاونټنټس انسټیټیوټ پاکستان (ICAP)", "فیلو – د کاسټ او مدیریت اکاونټنټس انسټیټیوټ پاکستان (ICMAP)", "فیلو – د کارپوریټ سیکرټریانو انسټیټیوټ پاکستان (ICSP)"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن (PMA)", "CEDR انګلستان", "هاشو ګروپ", "د پاکستان د هوټلونو ټولنه (PHA)", "د ودانیو جوړونکو ټولنه (ABAD)", "د چارټرډ اکاونټنټس انسټیټیوټ پاکستان", "د پاکستان د کارپوریټ ګورننس انسټیټیوټ", "د کراچۍ سی سکاوټ کونسل ټرسټ"],
+    "media": []
+  },
+  "trainer_wajiha_aleem": {
+    "name": "وجیهه علیم",
+    "role": "ماسټر ٹرینره",
+    "highlight": "\"په پاکستان کې د یو قوي ADR فریم ورک لپاره د مشرتابه، نوښت او نړیوالې همکارۍ له لارې د ثالثي وده.\"",
+    "about": "وجیهه علیم د هایکورټ وکیله، منل شوې ثالثه او د قانون ماهره ده چې په کارپوریټ چارو او د شخړو په متبادل حل (ADR) کې تجربه لري. هغه دا مهال د پاکستان میډیټرز ایسوسی ایشن (PMA) سیکرټري جنرال ده او همدا رنګ په هاشو ګروپ کې د جنرال مدیرې (قانوني او عملیاتي) په توګه کار کوي.\n\nهغې د انګلستان څخه په نړیوال تجارتي قانون او ADR کې ایل ایل ایم کړی دی او د تایلینډ د آربټریشن مرکز (THAC) غړیتوب هم لري. هغه د سند په عالي محکمه کې د ثالثې په توګه راجستر ده.",
+    "badges": ["ماسټر ٹرینره", "سیکرټري جنرال", "اجرایوي مشرتابه"],
+    "expertise": ["د ADR او ثالثي روزنه", "نړیوال تجارتي قانون", "کارپوریټ قانوني مشورې", "د تجارتي شخړو حل", "اداري ADR پرمختګ", "د مسلکي مهارتونو روزنه", "د شخړو حل"],
+    "experience": { "years": "۱۷+ کاله", "label": "کارپوریټ، قانوني او د ADR مشرتابه" },
+    "accreditations": ["د CEDR لخوا منل شوې ثالثه", "د سند هایکورټ پینل ثالثه", "اسوسی ایټ ټرینره – PMA", "د THAC غړیتوب – د تایلینډ آربټریشن مرکز"],
+    "education": ["په نړیوال تجارتي قانون او ADR کې ایل ایل ایم – انګلستان", "بي اې، ایل ایل بي (Hons) – پاکستان"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن (PMA)", "CEDR انګلستان", "د تایلینډ آربټریشن مرکز (THAC)", "د سند هایکورټ", "د سند بار کونسل", "د کراچۍ بار ایسوسی ایشن", "نړیوال بار ایسوسی ایشن", "هاشو ګروپ"],
+    "media": []
+  },
+  "trainer_huma_shah": {
+    "name": "هما شاه",
+    "role": "ماسټر ٹرینره",
+    "highlight": "\"د مشرتابه، وکالت او مسلکي لارښوونې له لارې د کارپوریټ قانوني غوره والي او د ثالثي روزنې وده.\"",
+    "about": "هما شاه د قانون په برخه کې یوه خورا تجربه کاره مسلمه مشره ده چې د قانوني پریکټس موده یې له دېرش کالو زیاته ده. له ۱۹child کال راهیسې هغې د پاکستان د مشهورو قانوني ادارو لکه د عاصمې جهانګیر او هنا جیلاني تر مشرۍ لاندې د AGHS لیګل ایډ سیل او Surridge & Beecheno سره کار کړی دی.\n\nهغه په SSR&I کې مینیجنګ پارټنر پاتې شوې او دا مهال په HBL بانک کې د شمالي برخې د قانوني چارو مشره ده. هغه د انګلستان د بار کونسل تر لاندې د پاکستان د ایډوکیسي روزنې پروګرام یوه منل شوې ټرینره ده.",
+    "badges": ["ماسټر ٹرینره", "اجرایوي کمیټه – شمال", "د روزنې کمیټه"],
+    "expertise": ["د ADR او ثالثي روزنه", "کارپوریټ او تجارتي قانون", "د وکالت او قانوني مهارتونو روزنه", "د معاهدو لیکل او کتنه", "د بانکي او کارپوریټ چارو مشورې", "د شخړو حل", "د ټرینرانو روزنه (TOT)"],
+    "experience": { "years": "۳۰+ کاله", "label": "قانوني پریکټس، کارپوریټ مشورې او د ADR روزنه" },
+    "accreditations": ["د CEDR یوکے منل شوې ثالثه", "د CEDR یوکے ماسټر ٹرینره", "منل شوې ټرینره – د پاکستان ایډوکیسي روزنې پروګرام (IATC)"],
+    "education": ["پنجاب لاء کالج – د عالي تعلیمي رتبې له کبله دوه ځله د سرو زرو مډال ګټونکې"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن (PMA)", "CEDR انګلستان", "د انګلستان د بار کونسل (IATC)", "حبیب بانک لمیټډ (HBL)", "د پنجاب بار ایسوسی ایشنونه", "د AGHS لیګل ایډ سیل", "میسرز سروج او بیچینو"],
+    "media": []
+  },
+  "trainer_usman_g_rashid": {
+    "name": "عثمان جي راشد",
+    "role": "ماسټر ٹرینر",
+    "highlight": "\"په ټول پاکستان کې د ADR د وړتیا لوړولو لپاره د قانوني وکالت، د ثالثي پوهې او د روزنې د مشرتابه یوځای کول.\"",
+    "about": "عثمان جي راشد بیرسټر ایټ لاء او د هایکورټونو وکیل دی. هغه د لندن پوهنتون څخه ایل ایل بي او د کینګز کالج لندن څخه ایل ایل ایم کړی دی او د لنکنز ان د ټولنې لخوا بار ته رابلل شوی دی. هغه د پاکستان میډیټرز ایسوسی ایشن پخوانی سیکرټري جنرال پاتې شوی او په هېواد کې د قانوني زده کړو او روزنې لپاره کار کوي. هغه د لندن پوهنتون د بهرني پروګرام لپاره د کمپنیو قانون او د شواهدو قانون (Law of Evidence) هم لولي.",
+    "badges": ["ماسټر ٹرینر", "بیرسټر ایټ لاء", "پخوانی سیکرټري جنرال – PMA"],
+    "expertise": ["د ADR او ثالثي روزنه", "د وکالت د مهارتونو روزنه", "د کمپنیو قانون", "د شواهدو قانون", "تجارتي او سول قضایاوې", "قانوني تعلیم او مسلکي پرمختګ", "د شخړو حل"],
+    "experience": { "years": "۱۵+ کاله", "label": "د CEDR لخوا منل شوی ماسټر ټرینر او قانوني ښوونکی" },
+    "accreditations": ["د CEDR منل شوی ثالث او ماسټر ټرینر – انګلستان", "بیرسټر ایټ لاء – لنکنز ان", "منل شوی د ایډوکیسي ټرینر"],
+    "education": ["ایل ایل ایم – کینګز کالج، د لندن پوهنتون", "ایل ایل بي (Hons) – د لندن پوهنتون", "بار ووکیشنل کورس – د ویسټ آف انګلستان پوهنتون، برسټل۔"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن (PMA)", "CEDR انګلستان", "د لنکنز ان معززه ټولنه", "یونیورسیټي کالج لاهور", "د لندن پوهنتون ایکسټرنل پروګرام", "عنایت الله چیمبرز، قانوني مشاورین"],
+    "media": []
+  },
+  "trainer_asfand_yar_ali_khan": {
+    "name": "اسفند یار علي خان",
+    "role": "ماسټر ٹرینر",
+    "highlight": "\"د مشرتابه، روزنې او اداري تجربې له لارې ثالثي، آربټریشن او قانوني اصلاحاتو ته کار کول.\"",
+    "about": "اسفند یار علي خان د قانون یو سینئر پریکټیشنر او د ثالثي د برخې نړیوال ماهر دی. هغه په S&K پارټنرشپ کې سینئر پارټنر او د پاکستان میډیټرز ایسوسی ایشن نائب صدر دی. هغه د لنکنز ان لندن لخوا د بار غړی دی او د ملګرو ملتونو (UN) او UNDP د بیلا بیلو پرمختیایي پروژو سره یې د قانوني مشاور په توګه کار کړی دی.",
+    "badges": ["ماسټر ٹرینر", "اداري مشرتابه", "نائب صدر – شمال"],
+    "expertise": ["د ADR او ثالثي روزنه", "آربټریشن او د شخړو حل", "تجارتي او سول شخړې", "قانوني مهارتونو پرمختګ", "اداري ADR وړتیا لوړول", "د مسلکي پرمختګ پروګرامونه", "د ټرینرانو روزنه (TOT)"],
+    "experience": { "years": "۲۰+ کاله", "label": "قانوني پریکټس، ADR او د ټریبیونل مشرتابه" },
+    "accreditations": ["د CEDR یوکے منل شوی ثالث", "د CEDR یوکے ماسټر ټرینر", "غړی – چارټرډ انسټیټیوټ آف آربټریټرز (MCIArb) لندن", "بیرسټر ایټ لاء – لنکنز ان، لندن"],
+    "education": ["مسلکي قانوني مهارتونو کې ډیپلوما – انګلستان", "ایل ایل بي (Hons) – انګلستان", "ایم اې – پاکستان", "بي اې – پاکستان"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن (PMA)", "CEDR انګلستان", "چارټرډ انسٹی تیوت آف آربټریټرز، لندن", "لنکنز ان، لندن", "پاکستان ریډ کریسنټ سوسایټي (PRCS)", "د چاپیریال د قوانینو ټولنه", "برټش ایلومنایي ایسوسی ایشن", "د ملګرو ملتونو پرمختیایي پروژې"],
+    "media": []
+  },
+  "trainer_saima_amin_khawaja": {
+    "name": "سایمه امین خواجه",
+    "role": "ماسټر ٹرینره",
+    "highlight": "\"د تعلیم او اداري مشرتابه له لارې د قانوني اصلاحاتو، ثالثي د غوره والي او د شخړو پایداره حل رامنځته کول.\"",
+    "about": "سایمه امین خواجه د قانون په برخه کې یوه خورا تکړه مسلكي مسلمه مشره ده، منل شوې ثالثه او په نړیواله کچه د ADR ماهره ده، چې په کارپوریټ قضایاوو، آئیني قانون، قانوني مشورو او اداري اصلاحاتو کې پراخه تجربه لري. هغې په پاکستان کې د ثالثي د بیدارۍ، د ADR د روزنې او د قانوني پرمختګ په پروګرامونو کې مهم رول لوبولی دی.\n\nهغې د کینګز کالج لندن څخه ایل ایل ایم (LL.M) کړی او د هندوستان د ایم سي مهتا فاونډيشن څخه یې په چاپیریالي قوانینو کې تخصصي روزنه ترلاسه کړې ده. د CEDR انګلستان د منل شوې ثالثې او ماسټر ټرینر په توګه، هغې د مسلکي ثالثي د وړتیا لوړولو پروګرامونو کې فعاله برخه اخیستې ده. هغې په LUMS پوهنتون، د سول سروسز اکاډمۍ، جوډیشل اکاډمۍ، TILS او UCL کې تدریس کړی دی، او د لاهور هایکورټ لخوا جوړ شوي د چاپیریال بدلون کمیسیون غړې هم پاتې شوې ده.",
+    "badges": ["ماسټر ٹرینره", "اجرایوي غړې", "نائب صدر – شمال"],
+    "expertise": ["د ADR او ثالثي روزنه", "کارپوریټ او آئیني قانون", "قانوني اصلاحات او پالیسي جوړونه", "د چاپیریال قانون", "عدلي او مسلکي روزنه", "د شخړو حل", "د ٹرینرانو روزنه (TOT)"],
+    "experience": { "years": "۲۰+ کاله", "label": "قانوني پریکټس، روزنه او مشورتي خدمات" },
+    "accreditations": ["د CEDR انګلستان منل شوې ثالثه", "د CEDR انګلستان ماسټر ټرینره", "د چاپیریال قانون تخصصي روزنه – ایم سي مهتا فاونډيشن، هندوستان"],
+    "education": ["ایل ایل ایم (LL.M) – کینګز کالج لندن"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن (PMA)", "CEDR انګلستان", "لاهور هایکورټ", "د لاهور د مدیریت علومو پوهنتون (LUMS)", "سول سروسز اکاډمي", "جوډیشل اکاډمي", "TILS", "UCL", "ایم سي مهتا فاونډيشن، هندوستان"],
+    "media": []
+  },
+  "trainer_tariq_saeed_rana": {
+    "name": "طارق سعید رانا",
+    "role": "ماسټر ٹرینر",
+    "highlight": "\"د نړیوال مهارت، مسلکي روزنې او ADR مشرتابه له لارې د کارپوریټ قانوني پریکټس او د ثالثي غوره والي مشري کول.\"",
+    "about": "طارق سعید رانا یو سینئر قانوني مشاور، منل شوی ثالث، او په نړیواله کچه پیژندل شوی د ADR ټرینر دی چې په کارپوریټ او تجارتي قوانینو کې پراخه تجربه لري. هغه ته د انګلستان د لنکنز ان د معززې ټولنې لخوا د بار غړیتوب ورکړل شوی دی. هغه دا مهال په Surridge & Beecheno کې د کارپوریټ او کمرشل لاء د برخې مشري کوي او په پاکستان کې د ثالثي د روزنې، قانوني مشورو او د اداري ADR ودې لپاره کار کوي.\n\nهغه د CEDR انګلستان منل شوی ثالث او ماسټر ټرینر دی چې د کارپوریټ ګورننس، قانوني مشورې او د مسلکي وړتیا لوړولو په برخه کې کار کوي. هغه په فعاله توګه د ډائریکټرانو د روزنې پروګرامونه پرمخ وړي او په قانوني او سوداګریزو ادارو کې د مشرتابه دندې ترسره کوي.",
+    "badges": ["ماسټر ٹرینر", "سابق صدر", "اجرایوي کمیټه – شمال"],
+    "expertise": ["د ADR او ثالثي روزنه", "کارپوریټ او تجارتي قانون", "د ډائریکټرانو د روزنې پروګرامونه", "کارپوریټ ګورننس", "د تجارتي شخړو حل", "مسلکي قانوني پرمختګ", "د ٹرینرانو روزنه (TOT)"],
+    "experience": { "years": "۲۵+ کاله", "label": "قانوني پریکټس، ADR او کارپوریټ مشورتي خدمات" },
+    "accreditations": ["د CEDR انګلستان منل شوی ثالث", "د CEDR انګلستان ماسټر ټرینر", "مستدعی بار – لنکنز ان، انګلستان"],
+    "education": ["په تجارتي قوانینو کې ایل ایل ایم – انګلستان", "په قانون کې پوسټ ګریجویټ ډیپلوما – انګلستان", "ایل ایل بي – پاکستان", "ایسوسی ایټ انجینرنګ (میخانیکل) – پاکستان"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن (PMA)", "CEDR انګلستان", "د لنکنز ان معززه ټولنه، لندن", "د انګلستان او ویلز د بار عمومي کونسل", "د لاهور هایکورټ بار ایسوسی ایشن", "پنجاب بار کونسل", "د لاهور چیمبر آف کامرس او انډسټري", "Surridge & Beecheno"],
+    "media": []
+  },
+  "saeed_habib": {
+    "name": "سعید حبیب",
+    "role": "نائب صدر – سویل",
+    "highlight": "",
+    "about": "",
+    "badges": ["د غړیتوب کمیټه", "اداري همغږي"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "shabana_ali": {
+    "name": "شبانة علي",
+    "role": "نائب صدر – سویل",
+    "highlight": "\"د وکالت، تعلیم او د شخړو د حل له لارې د ثالثي، قانوني بیدارۍ او ټولنیز عدالت وده.\"",
+    "about": "آغلې شبانه علي د پاکستان میډیټرز ایسوسی ایشن (PMA) د سویل د برخې مرستیاله مشره ده. هغه د سول، ټیکس او کارپوریټ قوانینو تجربه لرونکې وکیله ده چې په قضایاوو، قانوني مشورو او د شخړو په حل کې کار کوي. هغه په پاکستان کې د ثالثي د ودې لپاره کار کوي او د ټولنیز عدالت او د ښځو او ماشومانو د حقونو د ساتنې لپاره پیژندل شوې ده.",
+    "badges": ["اجرایوي ټیم", "ثالثه", "د PMA منل شوې ثالثه", "بار همغږي – سویل", "مشرتابه"],
+    "expertise": ["سول قانون", "کارپوریټ قانون", "د کورنۍ شخړې", "د مالیاتو (ټیکس) قانون", "ثالثي او ADR", "د ښځو او ماشومانو د حقونو وکالت"],
+    "experience": { "years": "۲۰+ کاله", "label": "قانوني پریکټس، ثالثي او د عامه حقونو وکالت" },
+    "accreditations": ["د PMA منل شوې ثالثه", "منل شوې د ثالثي پریکټیشنره"],
+    "education": ["په سول، کارپوریټ او ټیکس قانون کې قانوني او مسلکي زده کړې"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن", "د پاکستان انسټیټیوټ آف پبلک فینانس اکاونټنټس (PIPFA)", "اجرایوي کمیټه – PMA", "په میډیا کې قانوني څیړونکې او ویناواله"],
+    "media": ["پاکستان ټیلیویژن کارپوریشن (PTV)", "آج نیوز", "ټي وي ون", "میټرو نیوز"]
+  },
+  "syed_sammad_ul_haque": {
+    "name": "سید صمد الحق",
+    "role": "مالي سیکرټري",
+    "highlight": "",
+    "about": "",
+    "badges": ["د غړیتوب کمیټه", "اجرایوي مشرتابه"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "tariq_saeed_rana": {
+    "name": "طارق سعید رانا",
+    "role": "اجرایوي کمیټه – شمال",
+    "highlight": "\"د نړیوال مهارت، مسلکي روزنې او ADR مشرتابه له لارې د کارپوریټ قانوني پریکټس او د ثالثي غوره والي مشري کول.\"",
+    "about": "بیریسټر طارق سعید رانا د قانون یو سینئر پریکټیشنر، منل شوی ثالث، او ماسټر ټرینر دی چې په کارپوریټ او تجارتي قوانینو کې مهارت لري. هغه ته د انګلستان د لنکنز ان لخوا د بار غړیتوب ورکړل شوی دی او دا مهال په Surridge & Beecheno کې د کارپوریټ او کمرشل لاء د برخې مشري کوي. د قانوني مشورو، ADR او مسلکي روزنې په برخه کې د لسیزو تجربې سره، هغه په پاکستان کې د ثالثي د ودې لپاره کار کوي.",
+    "badges": ["اجرایوي ټیم", "ثالث", "د CEDR منل شوی ثالث", "ماسټر ټرینر", "سابق صدر"],
+    "expertise": ["کارپوریټ او تجارتي قانون", "ثالثي او ADR", "نړیوالې تجارتي شخړې", "قانوني مشورې", "کارپوریټ ګورننس", "مسلکي روزنه"],
+    "experience": { "years": "۲۵+ کاله", "label": "قانوني پریکټس، ADR او کارپوریټ مشورتي خدمات" },
+    "accreditations": ["د CEDR منل شوی ثالث", "د CEDR ماسټر ټرینر", "مستدعي بار – لنکنز ان، انګلستان", "د PMA منل شوی ثالث"],
+    "education": ["ایل ایل ایم (تجارتي قوانين) – انګلستان", "په قانون کې پوسټ ګریجویټ ډیپلوما – انګلستان", "ایل ایل بي – Pakistan", "ایسوسی ایټ انجینرنګ (میخانیکل) – پاکستان"],
+    "affiliations": ["د انګلستان او ویلز د بار عمومي کونسل", "د لنکنز ان معززه ټولنه، لندن", "د پاکستان میډیټرز ایسوسی ایشن", "د لاهور هایکورټ بار ایسوسی ایشن", "پنجاب بار کونسل", "د لاهور چیمبر آف کامرس او انډسټري"],
+    "media": []
+  },
+  "huma_shah": {
+    "name": "هما شاه",
+    "role": "اجرایوي کمیټه – شمال",
+    "highlight": "\"د مشرتابه، وکالت او مسلکي لارښوونې له لارې د کارپوریټ قانوني غوره والي او د ثالثي روزنې وده.\"",
+    "about": "آغلې هما شاه د کارپوریټ قوانینو، قانوني مشورو، تجارتي ډرافټینګ او د شخړو په حل کې پراخه تجربه لري. هغه له ۱۹۹۳ کال راهیسې د قانون په برخه کې پریکټس کوي او د پاکستان د مشهورو قانوني ادارو لکه د عاصمې جهانګیر تر مشرۍ لاندې د AGHS او Surridge & Beecheno سره یې کار کړی دی. هغه دا مهال په HBL بانک کې د شمالي برخې د قانوني چارو مشره ده.",
+    "badges": ["اجرایوي ټیم", "ثالثه", "د CEDR منل شوې ثالثه", "ماسټر ټرینره", "د روزنې کمیټه"],
+    "expertise": ["کارپوریټ او تجارتي قانون", "قانوني مشورې", "تجارتي ډرافټینګ او کتنه", "د بانکي او مالي چارو قانون", "ثالثي او ADR", "د وکالت روزنه"],
+    "experience": { "years": "۳۰+ کاله", "label": "قانوني پریکټس، کارپوریټ مشورې او د ADR روزنه" },
+    "accreditations": ["د CEDR منل شوې ثالثه", "د CEDR ماسټر ټرینره", "منل شوې د وکالت ټرینره – IATC (د انګلستان او ویلز بار کونسل)", "د PMA منل شوې ثالثه"],
+    "education": ["پنجاب لاء کالج – د سرو زرو مډال ګټونکې (د عالي تعلیمي رتبې له کبله دوه ځله)"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن", "انز آف کورټ ایډوکیسی ټریننګ پروګرام پاکستان", "د پنجاب بار ایسوسی ایشنونه", "HBL – لیګل هیډ نارتھ"],
+    "media": []
+  },
+  "umaimah_anwar_khan": {
+    "name": "أميمة أنور خان",
+    "role": "اجرایوي کمیټه – سویل",
+    "highlight": "",
+    "about": "",
+    "badges": ["ضابطه اخلاق", "بار همغږي – سویل"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "mustansir_zakir": {
+    "name": "مستنصر ذاکر",
+    "role": "اجرایوي کمیټه – سویل",
+    "highlight": "\"د سټراټیژیک مشرتابه او د ADR د غوره والي له لارې د کارپوریټ ګورننس او د ثالثي د روزنې د پروګرامونو مشري کول.\"",
+    "about": "ښاغلی مستنصر ذاکر د کارپوریټ یو سینئر مشر، منل شوی ثالث، او ماسټر ټرینر دی چې د کارپوریټ ګورننس، هوسپیټلیټي، فینانس او د شخړو متبادل حل (ADR) کې د مشرتابه تجربه لري. هغه دا مهال په هاشو ګروپ کې د چیف ایګزیکټیو په توګه کار کوي او د پاکستان میډیټرز ایسوسی ایشن (PMA) د لارې یې په هیواد کې د ثالثي د بیدارۍ لپاره ډیر خدمات وړاندې کړي دي.",
+    "badges": ["اجرایوي ټیم", "ثالث", "د CEDR منل شوی ثالث", "د روزنې ډائریکټر", "ماسټر ټرینر", "سابق صدر"],
+    "expertise": ["کارپوریټ ګورننس", "سټراټیژیک مدیریت", "د ثالثي او ADR روزنه", "هوسپیټلیټي او د سوداګرۍ مشرتابه", "مالي مدیریت", "اداري پرمختګ"],
+    "experience": { "years": "۳۰+ کاله", "label": "کارپوریټ مشرتابه، ګورننس او ADR" },
+    "accreditations": ["د CEDR منل شوی ثالث", "د CEDR ماسټر ټرینر", "سرټیفایډ ډائریکټر ایجوکیشن – PICG", "د سټراټیژیک مدیریت سرټیفیکیشن – کارنیل پوهنتون، امریکا"],
+    "education": ["فیلو – د چارټرډ اکاونټنټس انسټیټیوټ پاکستان (ICAP)", "فیلو – د کاسټ او مدیریت اکاونټنټس انسټیټیوټ پاکستان (ICMAP)", "فیلو – د کارپوریټ سیکرټریانو انسټیټیوټ پاکستان (ICSP)"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن (سابق صدر او د روزنې ډائریکټر)", "هاشو ګروپ – چیف ایګزیکټیو", "د پاکستان هوټلونو ټولنه (پخوانی چیئرمین)", "د ودانیو جوړونکو ټولنه (ABAD)", "د کراچۍ سی سکاوټ کونسل ټرسټ – مینیجنګ ټرسټي"],
+    "media": []
+  },
+  "usman_g_rashid": {
+    "name": "عثمان جي راشد",
+    "role": "غړی",
+    "highlight": "\"په ټول پاکستان کې د ADR د وړتیا لوړولو لپاره د قانوني وکالت، د ثالثي پوهې او د روزنې د مشرتابه یوځای کول.\"",
+    "about": "عثمان جي راشد بیرسټر ایټ لاء او د عالي محکمو (هایکورټونو) وکیل دی، د CEDR منل شوی ثالث او ماسټر ټرینر دی چې د قانون په برخه کې پراخه تجربه لري. هغه د لندن پوهنتون څخه ایل ایل بي او د کینګز کالج لندن څخه ایل ایل ایم کړی دی او د لنکنز ان د ټولنې لخوا بار ته رابلل شوی دی. هغه د پاکستان میډیټرز ایسوسی ایشن پخوانی سیکرټري جنرال پاتې شوی او په هېواد کې د قانوني زده کړو او روزنې لپاره کار کوي. هغه د لندن پوهنتون د بهرني پروګرام لپاره د کمپنیو قانون او د شواهدو قانون هم لولي.\n\nعثمان خپل کانیز کلو پیل له عمر بنديال او همکارانو سره کړی او اوس مهال د عنايت الله چيمبرز له لارې خپل کارونه پرمخ وړي.",
+    "badges": ["ثالث", "ماسټر ټرینر", "بیرسټر ایټ لاء"],
+    "expertise": ["د ADR او ثالثي روزنه", "د وکالت د مهارتونو روزنه", "د کمپنیو قانون", "د شواهدو قانون", "تجارتي او سول قضایاوې", "قانوني تعلیم او مسلکي پرمختګ", "د شخړو حل"],
+    "experience": { "years": "", "label": "د CEDR لخوا منل شوی ثالث او ماسټر ټرینر" },
+    "accreditations": ["د CEDR منل شوی ثالث او ماسټر ټرینر – انګلستان", "بیرسټر ایټ لاء – لنکنز ان", "منل شوی د ایډوکیسي ټرینر"],
+    "education": ["ایل ایل ایم – کینګز کالج، د لندن پوهنتون", "ایل ایل بي (Hons) – د لندن پوهنتون", "بار ووکیشنل کورس – د ویسټ آف انګلستان پوهنتون، برسټل۔"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن (PMA)", "CEDR انګلستان", "د لنکنز ان معززه ټولنه", "یونیورسیټي کالج لاهور", "د لندن پوهنتون ایکسټرنل پروګرام", "عنایت الله چیمبرز، وکیلان او قانوني مشاورین"],
+    "media": []
+  },
+  "adnan_mufti": {
+    "name": "عدنان مفتي",
+    "role": "اجرایوي کمیټه – سویل",
+    "highlight": "",
+    "about": "",
+    "badges": ["اداري همغږي", "مشرتابه"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "anwar_kashif_mumtaz": {
+    "name": "أنور كاشف ممتاز",
+    "role": "ماسټر ٹرینر",
+    "highlight": "",
+    "about": "أنور کاشف ممتاز د قانون یو سینئر پریکټیشنر، د مشرتابه روزونکی او منل شوی ثالث دی چې په کارپوریټ، مالیاتو (ټیکس) او د شخړو په حل کې کار کوي. د هایکورټ د وکیل او په Saiduddin & Co. کې د سینئر ملګري په توګه، هغه په هیواد کې د مالیاتو او کارپوریټ مشورو په برخه کې ښه نوم لري.\n\nهغه د مشرتابه او شخصي پرمختګ یو نړیوال منل شوی ټرینر دی او د CEDR انګلستان لخوا منل شوی ثالث دی. هغه د پاکستان ټیکس بار او کراچۍ ټیکس بار د پخواني مشر او سیکرټري په توګه هم دندې ترسره کړې دي.",
+    "badges": ["ماسټر ٹرینر", "سابق صدر", "د مشرتابه روزونکی"],
+    "expertise": ["مشرتابه او شخصي پرمختګ", "د ADR او ثالثي روزنه", "کارپوریټ قانون", "د ټیکس قانون او مشورې", "د مسلکي پرمختګ پروګرامونه", "د شخړو حل", "د ٹرینرانو روزنه (TOT)"],
+    "experience": { "years": "", "label": "" },
+    "accreditations": ["د CEDR انګلستان منل شوی ثالث", "د CEDR انګلستان ماسټر ټرینر", "منل شوی نړیوال ټرینر – مشرتابه او شخصي پرمختګ"],
+    "education": ["وکیل، د پاکستان عالي محکمه (هایکورټ)"],
+    "affiliations": ["د پاکستان میډیټرز ایسوسی ایشن (PMA)", "CEDR انګلستان", "پاکستان ټیکس بار", "کراچۍ ټیکس بار", "پبلک انټرسټ لاء ایسوسی ایشن پاکستان (PILAP)", "میسرز سید الدین او همکاران"],
+    "media": []
+  }
+  },
           "former_presidents": {
             "president_1": {
               "name": "انور کاشف ممتاز",
@@ -10715,6 +12298,306 @@
               "aria_label": "اسفند يار علي خان جو پروفائيل ڏسو"
             }
           },
+          "modal": {
+    "about_label": "بابت",
+    "expertise_title": "مهارت",
+    "training_expertise_title": "تربيت جي مهارت",
+    "accreditations_title": "تصديقون / اسناد",
+    "education_title": "تعليم",
+    "affiliations_title": "پيشيورانه لاڳاپا",
+    "media_title": "ميڊيا ۽ عوامي شموليت",
+    "coming_soon": "جلد اچي رهيو آهي",
+    "profile_close_label": "پروفائل بند ڪريو"
+  },
+  "profile_modal": {
+"aga_zafar_ahmed": {
+    "name": "آغا ظفر احمد",
+    "role": "صدر",
+    "highlight": "\"اڳواڻي، وڪالت ۽ ADR جي مهارت ذريعي ثالثي ۽ بين الاقوامي تڪرارن جي حل کي فروغ ڏيڻ.\"",
+    "about": "جناب آغا ظفر احمد پاڪستان ميڊيئيٽرز ايسوسييشن (PMA) جو صدر ۽ سپريم ڪورٽ آف پاڪستان جو هڪ نالي ماتر وڪيل آهي، جنهن جو قانوني تجربو 21 سالن کان وڌيڪ آهي. هو ايڊمرلٽي ۽ ميري ٽائيم لا، تجارتي تڪرارن، بين الاقوامي واپار جي معاملن ۽ متبادل حلِ تڪرار (ADR) ۾ پنهنجي مهارت جي ڪري سڃاتو وڃي ٿو. پي ايم اي جي باني ميمبر جي حيثيت سان، هو سڄي پاڪستان ۾ ثالثي ۽ پرامن حلِ تڪرار جي طريقن کي اڳتي وڌائڻ ۾ اهم ڪردار ادا ڪري رهيو آهي.",
+    "badges": ["ايگزیکٽو ٽيم", "ثالث (ميڊيئيٽر)", "سي اي ڊي آر (CEDR) تسليم ٿيل ثالث", "ماسٽر ٽرينر", "ايگزیکٽو ليڊرشپ"],
+    "expertise": ["تجارتي تڪرار", "ميري ٽائيم ۽ ايڊمرلٽي لا", "بين الاقوامي واپاري تڪرار", "ڪارپوريٽ ثالثي", "سول قانوني چارا جوئي", "متبادل حلِ تڪرار (ADR)"],
+    "experience": { "years": "21+ سال", "label": "قانون جي پريڪٽس ۽ تڪرارن جو حل" },
+    "accreditations": ["سي اي ڊي آر تسليم ٿيل ثالث (لنڊن)", "ايم آئي سي اي ڊي آر (MICADR) پينل ثالث", "پي ايم اي تسليم ٿيل ثالث", "بين الاقوامي ثالثي قانون ۾ ڊپلوما"],
+    "education": ["بين الاقوامي ثالثي قانون ۾ ڊپلوما – ڪالج آف لا، انگلينڊ ۽ ويلز"],
+    "affiliations": ["سپريم ڪورٽ بار ايسوسييشن آف پاڪستان", "سنڌ هاءِ ڪورٽ بار ايسوسييشن", "پاڪستان ميڊيئيٽرز ايسوسييشن (باني ميمبر)", "بحريا يونيورسٽي (سابق وزٽنگ فيڪلٽي)"],
+    "media": []
+  },
+  "saima_amin_khawaja": {
+    "name": "سائمه امين خواجه",
+    "role": "نائب صدر – نارتھ",
+    "highlight": "\"تعليم ۽ ادارتي قيادت ذريعي قانوني سڌارن، ثالثي جي فضيلت، ۽ پائيدار حلِ تڪرار کي فروغ ڏيڻ.\"",
+    "about": "محترمه سائمه امين خواجه پاڪستان ميڊيئيٽرز ايسوسييشن (PMA) جي نائب صدر (نارتھ) ۽ هڪ ماهر قانوني پيشيور آهي، جنهن کي ڪارپوريٽ قانوني چارا جوئي، آئيني قانون، ۽ قانوني سڌارن جي مشاورت جو وسيع تجربو آهي. هوءَ هڪ بين الاقوامي سطح تي تربيت يافته ثالث ۽ ماسٽر ٽرينر آهي، جيڪا پاڪستان ۾ ADR، ماحولياتي قانون ۽ پيشيورانه قانوني تعليم کي اڳتي وڌائڻ لاءِ پرعزم آهي.",
+    "badges": ["ايگزیکٽو ٽيم", "ثالث (ميڊيئيٽر)", "سي اي ڊي آر (CEDR) تسليم ٿيل ثالث", "ماسٽر ٽرينر", "ٽريننگ ڪميٽي"],
+    "expertise": ["ڪارپوريٽ قانوني چارا جوئي", "آئيني قانون", "قانوني سڌارا ۽ مشاورت", "ماحولياتي قانون", "ثالثي ۽ ADR ٽريننگ", "ڪلائميٽ چينج پاليسي"],
+    "experience": { "years": "20+ سال", "label": "قانون جي پريڪٽس, ٽريننگ ۽ ڪنسلٽنسي" },
+    "accreditations": ["سي اي ڊي آر (CEDR) تسليم ٿيل ثالث", "سي اي ڊي آر ماسٽر ٽرينر", "پي ايم اي تسليم ٿيل ثالث", "ماحولياتي قانون جي تربيت – ايم سي مهتا فائونڊيشن، انڊيا"],
+    "education": ["ايل ايل ايم (LL.M) – ڪنگز ڪالج لنڊن"],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن", "ڪلائميٽ چينج ڪميشن – لاھور ھاءِ ڪورٽ", "سول سروسز اڪيڊمي", "جوڊيشل اڪيڊمي", "لاهور يونيورسٽي آف مينيجمينٽ سائنسز (LUMS)", "يونيورسٽي ڪالج لاهور (UCL)", "دي انسٽيٽيوٽ آف ليگل اسٽڊيز (TILS)"],
+    "media": []
+  },
+  "asfand_yar_ali_khan": {
+    "name": "اسفند يار علي خان",
+    "role": "نائب صدر – نارتھ",
+    "highlight": "\"قيادت، تربيت ۽ ادارتي مهارت ذريعي ثالثي، ثالثي (آربٽريشن) ۽ قانوني سڌارن کي اڳتي وڌائڻ.\"",
+    "about": "بيرسٽر اسفند يار علي خان پاڪستان ميڊيئيٽرز ايسوسييشن (PMA) جو نائب صدر (نارتھ) ۽ ان تنظيم جو باني ميمبر آهي. لنڪنز ان جي معزز سوسائٽي پاران بار ۾ گهرايو ويو، هو قانون ۽ ترقيءَ جو هڪ ماهر پيشيور آهي، جنهن کي ثالثي، آربٽريشن، ماحولياتي قانون ۽ ريگيوليٽري معاملن ۾ وسيع مهارت حاصل آهي. هو پاڪستان ۾ اي ڊي آر جي طريقن ۽ قانوني سڌارن کي مضبوط ڪرڻ ۾ سرگرميءَ سان حصو وٺندو آهي.",
+    "badges": ["ايگزیکٽو ٽيم", "ثالث (ميڊيئيٽر)", "سي اي ڊي آر (CEDR) تسليم ٿيل ثالث", "ماسٽر ٽرينر", "ضابطه اخلاق ڪميٽي"],
+    "expertise": ["آربٽريشن ۽ ADR", "ليبر ۽ ايمپلائمينٽ لا", "ماحولياتي قانون", "خانداني ۽ زمين جا تڪرار", "ريگيوليٽري معاملا", "ثالثي جي تربيت"],
+    "experience": { "years": "20+ سال", "label": "قانون جي پريڪٽس، ADR ۽ ٽريبيونل قيادت" },
+    "accreditations": ["سي اي ڊي آر (CEDR) تسليم ٿيل ثالث", "سي اي ڊي آر ماسٽر ٽرينر", "ميمبر – چارٽرڊ انسٽيٽيوٽ آف آربٽريٽرز (MCIArb)، لنڊن", "پي ايم اي تسليم ٿيل ثالث"],
+    "education": ["پوسٽ گريجوئيٽ ڊپلوما ان پروفيشنل ليگل اسڪلز – يوڪي", "ايل ايل بي (Hons) – يوڪي", "ایم فل – پاڪستان", "ایم اي – پاڪستان", "بي اي – پاڪستان"],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن (باني ميمبر)", "چارٽرڊ انسٽيٽيوٽ آف آربٽريٽرز، لنڊن", "خيبر پختونخوا انوائرنمينٽل پروٽيڪشن ٽريبيونل", "لنڪنز ان، لنڊن"],
+    "media": []
+  },
+  "wajiha_aleem": {
+    "name": "وجيهه عليم",
+    "role": "سڪريٽري جنرل",
+    "highlight": "\"پاڪستان ۾ هڪ مضبوط ADR فريم ورڪ لاءِ قيادت، جدت، ۽ بين الاقوامي تعاون ذريعي ثالثي کي اڳتي وڌائڻ.\"",
+    "about": "محترمه وجيهه عليم پاڪستان ميڊيئيٽرز ايسوسييشن (PMA) جي سڪريٽري جنرل طور خدمتون سرانجام ڏئي رهي آهي، ۽ پاڪستان ۾ ثالثي کي مضبوط ڪرڻ ۽ متبادل حلِ تڪرار (ADR) کي ادارتي شڪل ڏيڻ تي ڌيان ڏيندڙ حڪمت عملين جي قيادت ڪري رهي آهي. 17 سالن کان وڌيڪ ڪارپوريٽ ۽ قانوني تجربي سان، هوءَ جدت، پاليسي سڌارن، عدالتي تعاون ۽ بين الاقوامي ڀائيواريءَ ذريعي ثالثي کي هڪ معتبر ۽ عالمي سطح تي هم آهنگ طريقو بڻائڻ لاءِ ڪوششان آهي.",
+    "badges": ["ايگزیکٽو ٽيم", "ثالث (ميڊيئيٽر)", "سي اي ڊي آر (CEDR) تسليم ٿيل ثالث", "ماسٽر ٽرينر", "ايگزیکٽو ليڊرشپ"],
+    "expertise": ["متبادل حلِ تڪرار (ADR)", "ڪارپوريٽ ۽ قانوني مشاورت", "ثالثي جي تربيت", "ادارو ورتا ترقي", "پاليسي سڌارا", "بين الاقوامي ADR تعاون"],
+    "experience": { "years": "17+ سال", "label": "ڪارپوريٽ، قانوني ۽ ADR ليڊرشپ" },
+    "accreditations": ["سي اي ڊي آر يوڪي تصديق ٿيل ثالث", "پي ايم اي تسليم ٿيل ثالث", "بين الاقوامي ADR پريڪٽيشنر"],
+    "education": ["ايل ايل ايم (LL.M) – يونائيٽيڊ ڪنگڊم", "بي اي، ايل ايل بي (Hons) – ڪراچي يونيورسٽي"],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن", "بين الاقوامي ثالثي ۽ ميڊيئيشن نيٽ ورڪ", "عدالتي ۽ ادارتي ADR قدم"],
+    "media": []
+  },
+  "trainer_aga_zafar_ahmed": {
+    "name": "آغا ظفر احمد",
+    "role": "ماسٽر ٽرينر",
+    "highlight": "\"اڳواڻي، وڪالت ۽ ADR جي مهارت ذريعي ثالثي ۽ بين الاقوامي تڪرارن جي حل کي اڳتي وڌائڻ.\"",
+    "about": "آغا ظفر احمد سپريم ڪورٽ آف پاڪستان جو هڪ نمايان وڪيل، تسليم ٿيل ثالث، ۽ سينيئر ADR پيشيور آهي، جنهن کي ايڊمرلٽي ۽ ميري ٽائيم لا، سول قانوني چارا جوئي، تجارتي تڪرارن، ۽ بين الاقوامي واپاري معاملن ۾ وسيع مهارت حاصل آهي. پاڪستان ميڊيئيٽرز ايسوسييشن (PMA) جي صدر جي حيثيت سان، هو ثالثي جي طريقن کي مضبوط ڪرڻ ۽ پاڪستان ۾ ادارتي تڪرارن جي حل جي فريم ورڪ کي فروغ ڏيڻ ۾ اهم ڪردار ادا ڪري رهيو آهي.\n\nهو هڪ سي اي ڊي آر (CEDR UK) تسليم ٿيل ثالث آهي ۽ هاءِ ڪورٽ آف سنڌ جي پينل تي بطور ثالث خدمتون سرانجام ڏيندو آهي، جڏهن ته مصالحه انٽرنيشنل سينٽر فار ADR (MICADR) سان پڻ وابسته آهي. پنهنجي قانوني پريڪٽس کان علاوه، هن هڪ وزٽنگ فيڪلٽي ميمبر ۽ ادارتي اڳواڻ طور قانوني تعليم ۽ پيشيورانه ترقيءَ ۾ حصو ورتو آهي.",
+    "badges": ["ماسٽر ٽرينر", "صدر", "ايگزیکٽو ليڊرشپ"],
+    "expertise": ["ADR ۽ ثالثي جي تربيت", "تجارتي تڪرارن جو حل", "ايڊمرلٽي ۽ ميري ٽائيم لا", "بين الاقوامي واپاري تڪرار", "آربٽريشن ۽ تڪرارن جو حل", "سول ۽ ڪارپوريٽ قانوني چارا جوئي", "ٽرين دي ٽرينر (TOT)"],
+    "experience": { "years": "21+ سال", "label": "قانون جي پريڪٽس ۽ تڪرارن جو حل" },
+    "accreditations": ["سي اي ڊي آر يوڪي تسليم ٿيل ثالث", "پينل ميڊيئيٽر – هاءِ ڪورٽ آف سنڌ", "ميمبر – مصالحه انٽرنيشنل سينٽر فار ADR (MICADR)", "بين الاقوامي ثالثي قانون ۾ ڊپلوما – انگلينڊ ۽ ويلز"],
+    "education": ["بين الاقوامي ثالثي قانون ۾ ڊپلوما – ڪالج آف لا، انگلينڊ ۽ ويلز"],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن (PMA)", "سي اي ڊي آر يوڪي", "مصلحه انٽرنيشنل سينٽر فار ADR (MICADR)", "هاءِ ڪورٽ آف سنڌ", "سپريم ڪورٽ بار ايسوسييشن آف پاڪستان", "سنڌ هاءِ ڪورٽ بار ايسوسييشن", "بحريا يونيورسٽي"],
+    "media": []
+  },
+  "trainer_mustansir_zakir": {
+    "name": "مستنصر ذاڪر",
+    "role": "ماسٽر ٽرينر",
+    "highlight": "\"اسٽريٽجڪ قيادت ۽ ADR جي فضيلت ذريعي ڪارپوريٽ گورننس ۽ ثالثي جي تربيت جي قدمن جي قيادت ڪرڻ.\"",
+    "about": "مستنصر ذاڪر هڪ سينيئر ڪارپوريٽ اڳواڻ، تسليم ٿيل ثالث، ۽ بين الاقوامي سطح تي تسليم ٿيل ADR ٽرينر آهي، جنهن کي اسٽريٽجڪ مينيجمينٽ، ڪارپوريٽ گورننس ۽ تڪرارن جي حل جو وسيع تجربو حاصل آهي. هو پاڪستان ميڊيئيٽرز ايسوسييشن (PMA) جو ڊائريڪٽر ٽريننگ ۽ ايگزیکٽو ميمبر طور خدمتون سرانجام ڏيندو آهي ۽ پاڪستان ۾ ثالثي ۽ ADR جي آگاهي کي فروغ ڏيڻ ۾ اهم ڪردار ادا ڪيو اٿس.\n\nهو ICAP، ICMAP، ۽ ICSP جو فيلو ميمبر آهي، ۽ هن وقت ه thoseو گروپ سان بطور چيف ايگزیکٽو ڪم ڪري رهيو آهي. هن ڪارنيل يونيورسٽي، آمريڪا مان اسٽريٽجڪ مينيجمينٽ سرٽيفڪيشن ۽ پاڪستان انسٽيٽيوٽ آف ڪارپوريٽ گورننس مان سرٽيفائيڊ ڊائريڪٽر ايجوڪيشن مڪمل ڪئي آهي. هڪ سي اي ڊي آر يوڪي تسليم ٿيل ثالث ۽ ماسٽر ٽرينر جي حيثيت سان، هن پاڪستان ۾ پيشيورانه ثالثي جي تربيت، قيادت جي ترقي، ۽ ادارتي ADR قدمن ۾ وڏي پيماني تي تعاون ڪيو آهي.",
+    "badges": ["ماسٽر ٽرينر", "ڊائريڪٽر ٽريننگ", "ايگزیکٽو ڪميٽي – سائوٿ", "سابق صدر"],
+    "expertise": ["ADR ۽ ثالثي جي تربيت", "ڪارپوريٽ گورننس", "اسٽريٽجڪ مينيجمينٽ", "ايگزیکٽو ليڊرشپ ڊيولپمينٽ", "تجارتي تڪرارن جو حل", "ٽرين دي ٽرينر (TOT)", "ادارو ورتا صلاحيتن جي تعمير"],
+    "experience": { "years": "20+ سال", "label": "ايگزیکٽو ليڊرشپ ۽ ADR ٽريننگ" },
+    "accreditations": ["سي اي ڊي آر يوڪي تسليم ٿيل ثالث", "سي اي ڊي آر يوڪي ماسٽر ٽرينر", "سرٽيفائيڊ ڊائريڪٽر – پاڪستان انسٽيٽيوٽ آف ڪارپوريٽ گورننس", "اسٽريٽجڪ مينيجمينٽ سرٽيفڪيشن – ڪارنيل يونيورسٽي، آمريڪا"],
+    "education": ["فيلو – انسٽيٽيوٽ آف چارٽرڊ اڪائونٽنٽس آف پاڪستان (ICAP)", "فيلو – انسٽيٽيوٽ آف ڪاسٽ اينڊ مينيجمينٽ اڪائونٽنٽس آف پاڪستان (ICMAP)", "فيلو – انسٽيٽيوٽ آف ڪارپوريٽ سيڪريٽريز آف پاڪستان (ICSP)"],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن (PMA)", "سي اي ڊي آر يوڪي", "هاشو گروپ", "پاڪستان هوٽلز ايسوسييشن (PHA)", "ايسوسييشن آف بلڊرز اينڊ ڊيولپرز آف پاڪستان (ABAD)", "انسٽيٽيوٽ آف چارٽرڊ اڪائونٽنٽس آف پاڪستان (ICAP)", "پاڪستان انسٽيٽيوٽ آف ڪارپوريٽ گورننس", "ڪراچي سي اسڪائوٽ ڪائونسل ٽرسٽ"],
+    "media": []
+  },
+  "trainer_wajiha_aleem": {
+    "name": "وجيهه عليم",
+    "role": "ماسٽر ٽرينر",
+    "highlight": "\"پاڪستان ۾ هڪ مضبوط ADR فريم ورڪ لاءِ قيادت, جدت، ۽ بين الاقوامي تعاون ذريعي ثالثي کي اڳتي وڌائڻ.\"",
+    "about": "وجيهه عليم هاءِ ڪورٽ جي وڪيل، تسليم ٿيل ثالث، ۽ قانوني پيشيور آهي، جنهن کي ڪارپوريٽ آپريشنز، قانوني مشاورت، ۽ متبادل حلِ تڪرار (ADR) جو وسيع تجربو آهي. هوءَ هن وقت پاڪستان ميڊيئيٽرز ايسوسييشن (PMA) جي سڪريٽري جنرل طور خدمتون سرانجام ڏئي رهي آهي ۽ گڏوگڏ هاشو گروپ ۾ جنرل مينيجر (آپريشنز ۽ ليگل) جي عهدي تي فائز آهي.\n\nهن يونائيٽيڊ ڪنگڊم مان انٽرنيشنل ڪمرشل لا اينڊ متبادل حلِ تڪرار (ADR) ۾ ايل ايل ايم ڪيو آهي ۽ هوءَ هڪ سي اي ڊي آر تسليم ٿيل ثالث آهي، جنهن جي بين الاقوامي وابستگين ۾ ٿائلينڊ آربٽريشن سينٽر (THAC) شامل آهي. هوءَ هاءِ ڪورٽ آف سنڌ ۾ بطور ثالث پينل ۾ شامل آهي ۽ قومي توڙي بين الاقوامي سطح تي معروف قانوني ۽ پيشيورانه تنظيمن سان سرگرم عمل آهي.",
+    "badges": ["ماسٽر ٽرينر", "سڪريٽري جنرل", "ايگزیکٽو ليڊرشپ"],
+    "expertise": ["ADR ۽ ثالثي جي تربيت", "بين الاقوامي تجارتي قانون", "ڪارپوريٽ قانوني مشاورت", "تجارتي تڪرارن جو حل", "ادارو ورتا ADR ترقي", "پيشيورانه مهارتن جي تربيت", "تڪرارن جو حل"],
+    "experience": { "years": "17+ سال", "label": "ڪارپوريٽ، قانوني ۽ ADR ليڊرشپ" },
+    "accreditations": ["سي اي ڊي آر تسليم ٿيل ثالث", "پينل ميڊيئيٽر – هاءِ ڪورٽ آف سنڌ", "ايسوسيئيٽ ٽرينر – پي ايم اي", "ٽي ايڇ اي سي (THAC) چيپٽر وابستگي – ٿائلينڊ آربٽريشن سينٽer"],
+    "education": ["انٽرنيشنل ڪمرشل لا ۽ ADR ۾ ايل ايل ايم – يونائيٽيڊ ڪنگڊم", "بي اي، ايل ايل بي (Hons) – پاڪستان"],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن (PMA)", "سي اي ڊي آر يوڪي", "ٿائلينڊ آربٽريشن سينٽر (THAC)", "هاءِ ڪورٽ آف سنڌ", "سنڌ بار ڪائونسل", "ڪراچي بار ايسوسييشن", "انٽرنيشنل بار ايسوسييشن", "هاشو گروپ"],
+    "media": []
+  },
+  "trainer_huma_shah": {
+    "name": "هما شاه",
+    "role": "ماسٽر ٽرينر",
+    "highlight": "\"قيادت، وکالت ۽ پيشيورانه رهنمائي ذريعي ڪارپوريٽ قانوني فضيلت ۽ ثالثي جي تربيت کي اڳتي وڌائڻ.\"",
+    "about": "هما شاه هڪ انتهائي تجربيڪار قانوني پيشيور، ڪارپوريٽ مشير، ۽ تسليم ٿيل ADR ٽرينر آهي، جنهن جي قانوني پريڪٽس ٽن ڏهاڪن کان وڌيڪ آهي. 1993 کان، هن پاڪستان جي ڪجهه نمايان قانوني ادارن بشمول اي جي ايڇ ايس (AGHS) ليگل ائڊ سيل، محترمه عاصما جهانگير ۽ محترمه حنا جيلاني جي ماتحت اي جي ايڇ ايس لا ايسوسيئيٽس، ۽ ميسرز سريج اينڊ بيچينو سان ڪم ڪيو آهي.\n\nهوءَ ميسرز شيخ شاه رانا اينڊ اعجاز (SSR&I) ۾ مينيجنگ پارٽنر طور خدمتون سرانجام ڏئي چڪي آهي ۽ هن وقت ايڇ بي ايل (HBL) ۾ ليگل هيڊ – نارتھ طور خدمتون سرانجام ڏئي رهي آهي. هوءَ بار ڪائونسل آف انگلينڊ اينڊ ويلز جي انز آف ڪورٽ ايڊوڪيسي ڪميٽي (IATC) جي تحت ايڊوڪيسي ٽريننگ پروگرام پاڪستان جي هڪ تسليم ٿيل ٽرينر آهي، ۽ هڪ سي اي ڊي آر يوڪي تسليم ٿيل ثالث ۽ ماسٽر ٽرينر آهي.",
+    "badges": ["ماسٽر ٽرينر", "ايگزیکٽو ڪميٽي – نارتھ", "ٽريننگ ڪميٽي"],
+    "expertise": ["ADR ۽ ثالثي جي تربيت", "ڪارپوريٽ ۽ تجارتي قانون", "ايڊوڪيسي ۽ قانوني مهارتن جي تربيت", "معاهدي جي ڊرافٽنگ ۽ ويٽنگ", "بينڪنگ ۽ ڪارپوريٽ قانوني مشاورت", "تڪرارن جو حل", "ٽرين دي ٽرينر (TOT)"],
+    "experience": { "years": "30+ سال", "label": "قانوني پريڪٽس، ڪارپوريٽ ايڊوائزري ۽ ADR ٽريننگ" },
+    "accreditations": ["سي اي ڊي آر يوڪي تسليم ٿيل ثالث", "سي اي ڊي آر يوڪي ماسٽر ٽرينر", "تسليم ٿيل ٽرينر – ايڊوڪيسي ٽريننگ پروگرام پاڪستان (IATC)"],
+    "education": ["پنجاب لا ڪاليج – تعليمي ميرٽ لاءِ ٻه ڀيرا گولڊ ميڊل سان نوازيو ويو"],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن (PMA)", "سي اي ڊي آر يوڪي", "انز آف ڪورٽ ايڊوڪيسي ڪميٽي (IATC)", "بار ڪائونسل آف انگلينڊ اينڊ ويلز", "حبيب بئنڪ لميٽيڊ (HBL)", "پنجاب بار ايسوسييشنز", "اي جي ايڇ ايس ليگل ائڊ سيل", "ميسرز سريج اينڊ بيچينو"],
+    "media": []
+  },
+  "trainer_usman_g_rashid": {
+    "name": "عثمان جي راشد",
+    "role": "ماسٽر ٽرينر",
+    "highlight": "\"پاڪستان ۾ اي ڊي آر جي صلاحيت پيدا ڪرڻ لاءِ قانوني وڪالت، ثالثي جي مهارت، ۽ تربيتي قيادت کي گڏ ڪرڻ.\"",
+    "about": "عثمان جي راشد هڪ بيرسٽر ايٽ لا، هاءِ ڪورٽس جو وڪيل، سي اي ڊي آر تسليم ٿيل ثالث، ۽ ماسٽر ٽرينر آهي، جنهن کي قانوني پريڪٽس، ايڊوڪيسي ٽريننگ، ثالثي ۽ قانوني تعليم جو وسيع تجربو آهي. هن يونيورسٽي آف لنڊن مان ايل ايل بي (Hons)، ڪنگز ڪاليج لنڊن مان ايل ايل ايم ڪيو، ۽ يونيورسٽي آف دي ويسٽ آف انگلينڊ، برسٽل، يوڪي مان بار ووڪيشنل ڪورس مڪمل ڪيو. کيس آنريبيل سوسائٽي آف لنękiز ان پاران بار ۾ گهرايو ويو هو.\n\nهو ان کان اڳ پا Malkanstan ميڊيئيٽرز ايسوسييشن (PMA) جو نائب صدر ۽ ايگزيڪيوٽو ڪميٽي جو ميمبر رهيو آهي، ۽ هن وقت ايڊوڪيسي ٽريننگ پروگرام پاڪستان (IATC) جي تحت ايڊوڪيسي ٽريننگ پروگرام لاءِ تسليم ٿيل ٽرينر آهي. هو پاڪستان ۾ ثالثي جي تربيت، قانوني تعليم، ۽ پيشيورانه ترقيءَ کي اڳتي وڌائڻ لاءِ سرگرم آهي.",
+    "badges": ["ماسٽر ٽرينر", "ايگزيڪيوٽو ڪميٽي – سائوٿ", "ٽريننگ ڪميٽي", "ايڊوڪيسي ٽريننگ پروگرام پاڪستان (IATC) جي تسليم ٿيل ٽرينر"],
+
+    "expertise": ["ADR ۽ ثالثي جي تربيت", "ايڊوڪيسي اسڪلز ٽريننگ", "ڪمپني لا", "قانونِ شهادت (Law of Evidence)", "تجارتي ۽ سول قانوني چارا جوئي", "قانوني تعليم ۽ پيشيورانه ترقي", "تڪرارن جو حل"],
+    "experience": { "years": "15+ سال", "label": "سي اي ڊي آر تسليم ٿيل ماسٽر ٽرينر، ايڊوڪيسي ۽ قانوني تعليم" },
+    "accreditations": ["سي اي ڊي آر تسليم ٿيل ثالث ۽ ماسٽر ٽرينر – يوڪي", "بيرسٽر ايٽ لا – لنڪنز ان", "سرٽيفائيڊ ايڊوڪيسي ٽرينر"],
+    "education": ["ايل ايل ايم – ڪنگز ڪاليج، يونيورسٽي آف لنڊن", "ايل ايل بي (Hons) – يونيورسٽي آف لنڊن", "بار ووڪيشنل ڪورس – يونيورسٽي آف دي ويسٽ آف انگلينڊ، برسٽل، يوڪي."],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن (PMA)", "سي اي ڊي آر يوٿكی", "معزز سوسائٽي آف لنڬنز ان", "يونиورسٽي ڪاليج لاهور", "يونиورسٽי آف لنڬن ايڬسٽرنل پروگرام", "عنايت الله چيمبرز، ايڊووڌتس اينڊ ليگل ڪنسلٽنٽس"],
+    "media": []
+  },
+  "trainer_asfand_yar_ali_khan": {
+    "name": "اسفند يار علي خان",
+    "role": "ماسٽر ٽرينر",
+    "highlight": "\"قيادت، تربيت ۽ ادارتي مهارت ذريعي ثالثي، آربٽريشن ۽ قانوني سڌارن کي اڳتي وڌائڻ.\"",
+    "about": "اسفند يار علي خان هڪ سينيئر قانوني پريڪٽيشنر، تسليم ٿيل ثالث، ۽ بين الاقوامي سطح تي تربيت يافته ADR ماهر آهي، جنهن کي قانوني مشاورت, آربٽريشن، ادارتي ترقي، ۽ ثالثي جي تربيت جو وسيع تجربو حاصل آهي. ايس اينڊ ڪي پارٽنرشپ ۾ سينيئر پارٽنر ۽ پاڪستان ميڊيئيٽرز ايسوسييشن (PMA) جي نائب صدر جي حيثيت سان، هو پاڪستان ۾ ثالثي ۽ متبادل حلِ تڪرار جي فريم ورڪ کي مضبوط ڪرڻ ۾ سرگرم حصو وٺندو آهي.\n\nلنڪنز ان، لنڊن پاران بار ۾ گهرايو ويو، هو هڪ سي اي ڊي آر يوڪي تسليم ٿيل ثالث ۽ ماسٽر ٽرينر آهي ۽ چارٽرڊ انسٽيٽيوٽ آف آربٽريٽرز (MCIArb)، لنڊن جو ميمبر آهي. هن جو پيشيورانه پس منظر قانوني پريڪٽس، بين الاقوامي ترقياتي قدمن، پاليسي لاڳاپن، ۽ ادارتي مشورتي ڪردارن تي مشتمل آهي، جنهن ۾ گڏيل قومن ۽ يو اين ڊي پي (UNDP) جي منصوبن سان ڪم شامل آهي.",
+    "badges": ["ماسٽر ٽرينر", "ايگزیکٽو ليڊرشپ", "نائب صدر – نارتھ"],
+    "expertise": ["ADR ۽ ثالثي جي تربيت", "آربٽريشن ۽ تڪرارن جو حل", "تجارتي ۽ سول تڪرار", "قانوني مهارتن جي ترقي", "ادارو ورتا ADR صلاحيت سازي", "پيشيورانه ترقي جا پروگرام", "ٽرين دي ٽرينر (TOT)"],
+    "experience": { "years": "20+ سال", "label": "قانون جي پريڪٽس، ADR ۽ ٽريبيونل قيادت" },
+    "accreditations": ["سي اي ڊي آر يوڪي تسليم ٿيل ثالث", "سي اي ڊي آر يوڪي ماسٽر ٽرينر", "ميمبر – چارٽرڊ انسٽيٽيوٽ آف آربٽريٽرز (MCIArb)، لنڊن", "بيرسٽر ايٽ لا – لنڪنز ان، لنڊن"],
+    "education": ["پوسٽ گريجوئيٽ ڊپلوما ان پروفيشنل ليگل اسڪلز – يوڪي", "ايل ايل بي (Hons) – يوڪي", "ایم اي – پاڪستان", "بي اي – پاڪستان"],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن (PMA)", "سي اي ڊي آر يوڪي", "چارٽرڊ انسٽيٽيوٽ آف آربٽريٽرز، لنڊن", "لنڪنز ان، لنڊن", "پاڪستان ريڊ ڪريسينٽ سوسائٽي (PRCS)", "پاڪستان انوائرنمينٽل لا ايسوسييشن", "برٽش ايلومنائي ايسوسييشن", "گڏيل قومن جا ترقياتي قدم"],
+    "media": []
+  },
+  "trainer_saima_amin_khawaja": {
+    "name": "سائمه امين خواجه",
+    "role": "ماسٽر ٽرينر",
+    "highlight": "\"تعليم ۽ ادارتي قيادت ذريعي قانوني سڌارن، ثالثي جي فضيلت، ۽ پائيدار حلِ تڪرار کي فروغ ڏيڻ.\"",
+    "about": "سائمه امين خواجه هڪ ماهر قانوني پيشيور، تسليم ٿيل ثالث، ۽ بين الاقوامي سطح تي تربيت يافته ADR ماهر آهي، جنهن کي ڪارپوريٽ قانوني چارا جوئي، آئيني قانون، قانوني مشاورت، ۽ ادارتي سڌارن جو وسيع تجربو حاصل آهي. هن پاڪستان ۾ ثالثي جي آگاهي، اي ڊي آر جي تربيت، ۽ قانوني ترقيءَ جي قدمن کي اڳتي وڌائڻ ۾ اهم ڪردار ادا ڪيو آهي.\n\nهن ڪنگز ڪاليج لنڊن مان ايل ايل ايم (LL.M) ڪيو آهي ۽ ايم سي مهتا فائونڊيشن، انڊيا مان ماحولياتي قوانين ۾ خاص تربيت حاصل ڪئي اٿس. سي اي ڊي آر يوڪي (CEDR UK) تسليم ٿيل ثالث ۽ ماسٽر ٽرينر جي حيثيت سان، هن پيشيورانه ثالثي جي تربيت ۽ صلاحيت سازي جي پروگرامن ۾ سرگرميءَ سان حصو ورتو آهي. هن لمز (LUMS)، سول سروسز اڪيڊمي، جوڊيشل اڪيڊمي، ٽيلز (TILS)، ۽ يو سي ايل (UCL) ۾ پڙهايو آهي، جڏهن ته لاهور هاءِ ڪورٽ پاران جوڙيل ڪلائميٽ چينج ڪميشن جي ميمبر طور پڻ خدمتون سرانجام ڏنيون اٿس.",
+    "badges": ["ماسٽر ٽرينر", "ايگزیکٽو ميمبر", "نائب صدر – نارتھ"],
+    "expertise": ["ADR ۽ ثالثي جي تربيت", "ڪارپوريٽ ۽ آئيني قانون", "قانوني سڌارا ۽ پاليسي ترقي", "ماحولياتي قانون", "عدالتي ۽ پيشيورانه تربيت", "تڪرارن جو حل", "ٽرين دي ٽرينر (TOT)"],
+    "experience": { "years": "20+ سال", "label": "قانون جي پريڪٽس, ٽريننگ ۽ ڪنسلٽنسي" },
+    "accreditations": ["سي اي ڊي آر يوڪي تسليم ٿيل ثالث", "سي اي ڊي آر يوڪي ماسٽر ٽرينر", "ماحولياتي قانون جي خاص تربيت – ايم سي مهتا فائونڊيشن، انڊيا"],
+    "education": ["ايل ايل ايم (LL.M) – ڪنگز ڪاليج لنڊن"],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن (PMA)", "سي اي ڊي آر يوڪي", "لاهور هاءِ ڪورٽ", "لاهور يونيورسٽي آف مينيجمينٽ سائنسز (LUMS)", "سول سروسز اڪيڊمي", "جوڊيشل اڪيڊمي", "ٽيلز (TILS)", "يونيورسٽي ڪاليج لاهور (UCL)", "ايم سي مهتا فائونڊيشن، انڊيا"],
+    "media": []
+  },
+  "trainer_tariq_saeed_rana": {
+    "name": "طارق سعيد رانا",
+    "role": "ماسٽر ٽرينر",
+    "highlight": "\"بين الاقوامي مهارت، پيشيورانه تربيت ۽ ADR قيادت ذريعي ڪارپوريٽ قانوني پريڪٽس ۽ ثالثي جي فضيلت جي اڳواڻي ڪرڻ.\"",
+    "about": "طارق سعيد رانا هڪ سينيئر قانوني مشير، تسليم ٿيل ثالث، ۽ بين الاقوامي سطح تي مڃيل ADR ٽرينر آهي، جنهن کي ڪارپوريٽ ۽ تجارتي قانون ۾ وسيع مهارت حاصل آهي. سوسائٽي آف لنڪنز ان، يوڪي پاران بار ۾ گهرايو ويو، هو هن وقت سريج اينڊ بيچينو ۾ ڪارپوريٽ ۽ ڪمرشل لا ڊويزن جو سربراهه آهي ۽ پاڪستان ۾ ثالثي جي تربيت، قانوني مشاورت، ۽ ادارتي ADR جي ترقيءَ ۾ اهم حصو وجهي رهيو آهي.\n\nهو هڪ سي اي ڊي آر يوڪي تسليم ٿيل ثالث ۽ ماسٽر ٽرينر آهي، جنهن کي ڪارپوريٽ گورننس، قانوني مشاورت، ۽ پيشيورانه صلاحيت سازي جو وسيع تجربو آهي. هو سرگرميءَ سان پيشيورانه ۽ ڊائريڪٽرز جي ٽريننگ پروگرامن جي اڳواڻي ڪندو آهي.",
+    "badges": ["ماسٽر ٽرينر", "سابق صدر", "ايگزیکٽو ڪميٽي – نارتھ"],
+    "expertise": ["ADR ۽ ثالثي جي تربيت", "ڪارپوريٽ ۽ تجارتي قانون", "ڊائريڪٽرز ٽريننگ پروگرام", "ڪارپوريٽ گورننس", "تجارتي تڪرارن جو حل", "پيشيورانه قانوني ترقي", "ٽرين دي ٽرينر (TOT)"],
+    "experience": { "years": "25+ سال", "label": "قانون جي پريڪٽس، ADR ۽ ڪارپوريٽ ايڊوائزري" },
+    "accreditations": ["سي اي ڊي آر يوڪي تسليم ٿيل ثالث", "سي اي ڊي آر يوڪي ماسٽر ٽرينر", "بار ۾ گهرايو ويو – لنڪنز ان، يوڪي"],
+    "education": ["ڪمرشل لاز ۾ ايل ايل ايم – يونائيٽيڊ ڪنگڊم", "پوسٽ گريجوئيٽ ڊپلوما ان لا – يونائيٽيڊ ڪنگڊم", "ايل ايل بي – پاڪستان", "ايسوسيئيٽ انجنيئرنگ (ميڪانائيڪل) – پاڪستان"],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن (PMA)", "سي اي ڊي آر يوڪي", "معزز سوسائٽي آف لنڪنز ان، لنڊن", "جنرل ڪائونسل آف دي بار آف انگلينڊ اينڊ ويلز", "لاهور هاءِ ڪورٽ بار ايسوسييشن", "پنجاب بار ڪائونسل", "لاهور چيمبر آف ڪامرس اينڊ انڊسٽري", "ميسرز سريج اينڊ بيچينو"],
+    "media": []
+  },
+  "saeed_habib": {
+    "name": "سعيد حبيب",
+    "role": "نائب صدر – سائوٿ",
+    "highlight": "",
+    "about": "",
+    "badges": ["ميمبرشپ ڪميٽي", "ادارو ورتا هم آهنگي"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "shabana_ali": {
+    "name": "شبانو علي",
+    "role": "نائب صدر – سائوٿ",
+    "highlight": "\"وڪالت، تعليم ۽ تڪرارن جي حل ذريعي ثالثي، قانوني آگاهي ۽ سماجي انصاف کي فروغ ڏيڻ.\"",
+    "about": "محترمه شبانو علي پاڪستان ميڊيئيٽرز ايسوسييشن (PMA) جي نائب صدر (سائوٿ) آهي ۽ سول، ٽيڪس، ۽ ڪارپوريٽ معاملن جي هڪ تجربيڪار وڪيل آهي، جنهن کي قانوني چارا جوئي، مشاورتي خدمتن ۽ تڪرارن جي حل جو مضبوط پس منظر حاصل آهي. هوءَ پاڪستان ۾ ثالثي جي طريقن کي مضبوط ڪرڻ ۾ سرگرم آهي ۽ قانوني بااختياريءَ، سماجي انصاف ۽ عورتن توڙي ٻارن جي حقن جي تحفظ لاءِ سڃاتي وڃي ٿي.",
+    "badges": ["ايگزیکٽو ٽيم", "ثالث (ميڊيئيٽر)", "پي ايم اي تسليم ٿيل ثالث", "بار ڪوآرڊينيشن – سائوٿ", "ليڊرشپ"],
+    "expertise": ["سول لا", "ڪارپوريٽ لا", "خانداني تڪرار", "ٽيڪس لا", "ثالثي ۽ ADR", "عورتن ۽ ٻارن جي حقن جي وڪالت"],
+    "experience": { "years": "20+ سال", "label": "قانون جي پريڪٽس، ثالثي ۽ عوامي وڪالت" },
+    "accreditations": ["پي ايم اي تسليم ٿيل ثالث", "سرٽيفائيڊ ميڊيئيشن پريڪٽيشنر"],
+    "education": ["سول، ڪارپوريٽ ۽ ٽيڪس لا ۾ قانوني ۽ پيشيورانه تعليم"],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن", "پاڪستان انسٽيٽيوٽ آف پبلڪ فنانس اڪائونٽنٽس (PIPFA)", "ايگزیکٽو ڪميٽي – PMA", "ميڊيا ليگل اينالسٽ ۽ اسپيڪر"],
+    "media": ["پاڪستان ٽيليويزن ڪارپوريشن (PTV)", "آج نيوز", "ٽي وي ون", "ميٽرو نيوز"]
+  },
+  "syed_sammad_ul_haque": {
+    "name": "سيد صمد الحق",
+    "role": "فنانس سڪريٽري",
+    "highlight": "",
+    "about": "",
+    "badges": ["ميمبرشپ ڪميٽي", "ايگزیکٽو ليڊرشپ"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "tariq_saeed_rana": {
+    "name": "طارق سعيد رانا",
+    "role": "ايگزیکٽو ڪميٽي – نارتھ",
+    "highlight": "\"بين الاقوامي مهارت، پيشيورانه تربيت ۽ ADR قيادت ذريعي ڪارپوريٽ قانوني پريڪٽس ۽ ثالثي جي فضيلت جي اڳواڻي ڪرڻ.\"",
+    "about": "بيرسٽر طارق سعيد رانا هڪ سينيئر قانوني پيشيور، تسليم ٿيل ثالث، ۽ ماسٽر ٽرينر آهي، جنهن کي ڪارپوريٽ ۽ تجارتي قانون ۾ وسيع مهارت حاصل آهي. سوسائٽي آف لنڪنز ان، يوڪي پاران بار ۾ گهرايو ويو، هو هن وقت سريج اينڊ بيچينو ۾ ڪارپوريٽ ۽ ڪمرشل لا ڊويزن جو سربراهه آهي. قانوني مشاورت، اي ڊي آر، ۽ پيشيورانه تربيت ۾ ڏهاڪن جي تجربي سان، هو پاڪستان ۾ ثالثي ۽ ادارتي قانوني ترقيءَ کي اڳتي وڌائڻ ۾ اهم ڪردار ادا ڪري رهيو آهي.",
+    "badges": ["ايگزیکٽو ٽيم", "ثالث (ميڊيئيٽر)", "سي اي ڊي آر تسليم ٿيل ثالث", "ماسٽر ٽرينر", "سابق صدر"],
+    "expertise": ["Kارپوريٽ ۽ تجارتي قانون", "ثالثي ۽ ADR", "بين الاقوامي تجارتي تڪرار", "قانوني مشاورت", "ڪارپوريٽ گورننس", "پيشيورانه تربيت"],
+    "experience": { "years": "25+ سال", "label": "قانون جي پريڪٽس، ADR ۽ ڪارپوريٽ ايڊوائزري" },
+    "accreditations": ["سي اي ڊي آر تسليم ٿيل ثالث", "سي اي ڊي آر ماسٽر ٽرينر", "بار ۾ گهرايو ويو – لنڪنز ان، يوڪي", "پي ايم اي تسليم ٿيل ثالث"],
+    "education": ["ايل ايل ايم (ڪمرشل لاز) – يونائيٽيڊ ڪنگڊم", "پوسٽ گريجوئيٽ ڊپلوما ان لا – يونائيٽيڊ ڪنگڊم", "ايل ايل بي – پاڪستان", "ايسوسيئيٽ انجنيئرنگ (ميڪانائيڪل) – پاڪستان"],
+    "affiliations": ["جنرل ڪائونسل آف دي بار آف انگلينڊ اينڊ ويلز", "معزز سوسائٽي آف لنڪنز ان، لنڊن", "پاڪستان ميڊيئيٽرز ايسوسييشن", "لاهور هاءِ ڪورٽ بار ايسوسييشن", "پنجاب بار ڪائونسل", "لاهور چيمبر آف ڪامرس اينڊ انڊسٽري"],
+    "media": []
+  },
+  "huma_shah": {
+    "name": "هما شاه",
+    "role": "ايگزیکٽو ڪميٽي – نارتھ",
+    "highlight": "\"قيادت، وکالت ۽ پيشيورانه رهنمائي ذريعي ڪارپوريٽ قانوني فضيلت ۽ ثالثي جي تربيت کي اڳتي وڌائڻ.\"",
+    "about": "محترمه هما شاه هڪ سينيئر قانوني پيشيور آهي، جنهن کي ڪارپوريٽ لا، قانوني مشاورت، تجارتي معاهدن جي ڊرافٽنگ ۽ تڪرارن جي حل جو وسيع تجربو حاصل آهي. 1993 کان پريڪٽس ڪندڙ، هن معروف قانوني ادارن بشمول اي جي ايڇ ايس (AGHS) ليگل ائڊ سيل، اي جي ايڇ ايس لا ايسوسيئيٽس، ۽ سريج اينڊ بيچينو سان ڪم ڪيو آهي. هوءَ هن وقت ايڇ بي ايل (HBL) ۾ ليگل هيڊ – نارتھ طور خدمتون سرانجام ڏئي رهي آهي ۽ پاڪستان ۾ ثالثي جي تربيت ۽ اي ڊي آر جي ترقيءَ ۾ اهم حصو وجهي رهي آهي.",
+    "badges": ["ايگزیکٽو ٽيم", "ثالث (ميڊيئيٽر)", "سي اي ڊي آر تسليم ٿيل ثالث", "ماسٽر ٽرينر", "ٽريننگ ڪميٽي"],
+    "expertise": ["ڪارپوريٽ ۽ تجارتي قانون", "قانوني مشاورت", "تجارتي ڊرافٽنگ ۽ ويٽنگ", "بينڪنگ ۽ مالي قانوني معاملا", "ثالثي ۽ ADR", "ايڊوڪيسي ٽريننگ"],
+    "experience": { "years": "30+ سال", "label": "قانون جي پريڪٽس، ڪارپوريٽ ايڊوائزري ۽ ADR ٽريننگ" },
+    "accreditations": ["سي اي ڊي آر تسليم ٿيل ثالث", "سي اي ڊي آر ماسٽر ٽرينر", "تسليم ٿيل ايڊوڪيسي ٽرينر – IATC (بار ڪائونسل آف انگلينڊ اينڊ ويلز)", "پي ايم اي تسليم ٿيل ثالث"],
+    "education": ["پنجاب لا ڪاليج – تعليمي ميرٽ لاءِ ٻه ڀيرا گولڊ ميڊل سان نوازيو ويو"],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن", "انز آف ڪورٽ ايڊوڪيسي ٽريننگ پروگرام پاڪستان", "پنجاب بار ايسوسييشنز", "ايڇ بي ايل – ليگل هيڊ نارتھ"],
+    "media": []
+  },
+  "umaimah_anwar_khan": {
+    "name": "اميمه انور خان",
+    "role": "ايگزیکٽو ڪميٽي – سائوٿ",
+    "highlight": "",
+    "about": "",
+    "badges": ["ضابطه اخلاق", "بار ڪوآرڊينيشن – سائوٿ"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "mustansir_zakir": {
+    "name": "مستنصر ذاڪر",
+    "role": "ايگزیکٽو ڪميٽي – سائوٿ",
+    "highlight": "\"اسٽريٽجڪ قيادت ۽ ADR جي فضيلت ذريعي ڪارپوريٽ governance ۽ ثالثي جي تربيت جي قدمن جي قيادت ڪرڻ.\"",
+    "about": "جناب مستنصر ذاڪر هڪ سينيئر ڪارپوريٽ اڳواڻ، تسليم ٿيل ثالث، ۽ ماسٽر ٽرينر آهي، جنهن کي ڪارپوريٽ گورننس، هاسپيٽلٽي، فنانس، ۽ متبادل حلِ تڪرار (ADR) ۾ وسيع قيادتي تجربو آهي. هن وقت هاشو گروپ ۾ بطور چيف ايگزیکٽو خدمتون سرانجام ڏئي رهيو آهي، هن پاڪستان ميڊيئيٽرز ايسوسييشن (PMA) جي پليٽ فارم تان پاڪستان ۾ ثالثي جي آگاهي ۽ پيشيورانه تربيت کي فروغ ڏيڻ ۾ اهم ڪردار ادا ڪيو آهي.",
+    "badges": ["ايگزیکٽو ٽيم", "ثالث (ميڊيئيٽر)", "سي اي ڊي آر تسليم ٿيل ثالث", "ڊائريڪٽر ٽريننگ", "ماسٽر ٽرينر", "سابق صدر"],
+    "expertise": ["ڪارپوريٽ گورننس", "اسٽريٽجڪ مينيجمينٽ", "ثالثي ۽ ADR ٽريننگ", "هاسپيٽلٽي ۽ بزنس ليڊرشپ", "مالي مينيجمينٽ", "ادارو ورتا ترقي"],
+    "experience": { "years": "30+ سال", "label": "ڪارپوريٽ ليڊرشپ، گورننس ۽ ADR" },
+    "accreditations": ["سي اي ڊي آر تسليم ٿيل ثالث", "سي اي ڊي آر ماسٽر ٽرينر", "سرٽيفائيڊ ڊائريڪٽر ايجوڪيشن – PICG", "اسٽريٽجڪ مينيجمينٽ سرٽيفڪيشن – ڪارنيل يونيورسٽي، آمريڪا"],
+    "education": ["فيلو – انسٽيٽيوٽ آف چارٽرڊ اڪائونٽنٽس آف پاڪستان (ICAP)", "فيلو – انسٽيٽيوٽ آف ڪاسٽ اينڊ مينيجمينٽ اڪائونٽنٽس آف پاڪستان (ICMAP)", "فيلو – انسٽيٽيوٽ آف ڪارپوريٽ سيڪريٽريز آف پاڪستان (ICSP)"],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن (سابق صدر ۽ ڊائريڪٽر ٽريننگ)", "هاشو گروپ – چيف ايگزیکٽو", "پاڪستان هوٽلز ايسوسييشن (سابق چيئرمين)", "ايسوسييشن آف بلڊرز اينڊ ڊيولپرز آف پاڪستان (ABAD)", "ڪراچي سي اسڪائوٽ ڪائونسل ٽرسٽ – مينيجنج ٽرسٽي"],
+    "media": []
+  },
+  "usman_g_rashid": {
+    "name": "عثمان جي راشد",
+    "role": "ميمبر",
+    "highlight": "\"پاڪستان ۾ اي ڊي آر جي صلاحيت پيدا ڪرڻ لاءِ قانوني وڪالت، ثالثي جي مهارت، ۽ تربيتي قيادت کي گڏ ڪرڻ.\"",
+    "about": "عثمان جي راشد هڪ بيرسٽر ايٽ لا، هاءِ ڪورٽس جو وڪيل، سي اي ڊي آر تسليم ٿيل ثالث، ۽ ماسٽر ٽرينر آهي، جنهن کي قانوني پريڪٽس، ايڊوڪيسي ٽريننگ، ثالثي ۽ قانوني تعليم جو وسيع تجربو آهي. هن يونيورسٽي آف لنڊن مان ايل ايل بي (Hons)، ڪنگز ڪاليج لنڊن مان ايل ايل م ڪيو، ۽ يونيورسٽي آف دي ويسٽ آف انگلينڊ، برسٽل، يوڪي مان بار ووڪيشنل ڪورس مڪمل ڪيو. کيس آنريبيل سوسائٽي آف لنڪنز ان پاران بار ۾ گهرايو ويو هو.\n\nهو ان کان اڳ پاڪستان ميڊيئيٽرز ايسوسييشن (PMA) جو سڪريٽري جنرل طور خدمتون سرانجام ڏئي چڪو آهي ۽ هن پاڪستان ۾ ثالثي جي آگاهي، اي ڊي آر جي صلاحيت سازي، ۽ پيشيورانه قانوني تربيت جي قدمن ۾ حصو ورتو آهي. پنهنجي قانوني پريڪٽس سان گڏوگڏ، هو يونيورسٽي آف لنڊن جي ايڪسٽرنل پروگرام لاءِ ڪمپني لا ۽ لا آف ايويڊنس پڙهائيندو آهي.\n\nعثمان پنهنجي ڪيريئر جو آغاز عمر بنديال اينڊ ايسوسييٽس سان ڪيو ۽ هن وقت عنايت الله چيمبرز ذريعي پنهنجي پريڪٽس هلوائي ٿو.",
+    "badges": ["ثالث (ميڊيئيٽر)", "ماسٽر ٽرينر", "بيرسٽر ايٽ لا"],
+    "expertise": ["ADR ۽ ثالثي جي تربيت", "ايڊوڪيسي اسڪلز ٽريننگ", "ڪمپني لا", "قانونِ شهادت (Law of Evidence)", "تجارتي ۽ سول قانوني چارا جوئي", "قانوني تعليم ۽ پيشيورانه ترقي", "تڪرارن جو حل"],
+    "experience": { "years": "", "label": "سي اي ڊي آر تسليم ٿيل ثالث ۽ ماسٽر ٽرينر" },
+    "accreditations": ["سي اي ڊي آر تسليم ٿيل ثالث ۽ ماسٽر ٽرينر – يوڪي", "بيرسٽر ايٽ لا – لنڪنز ان", "سرٽيفائيڊ ايڊوڪيسي ٽرينر"],
+    "education": ["ايل ايل ايم – ڪنگز ڪاليج، يونيورسٽي آف لنڊن", "ايل ايل بي (Hons) – يونيورسٽي آف لنڊن", "بار ووڪيشنل ڪورس – يونيورسٽي آف دي ويسٽ آف انگلينڊ، برسٽل، يوڪي."],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن (PMA)", "سي اي ڊي آر يوڪي", "معزز سوسائٽي آف لنڪنز ان", "يونيورسٽي ڪاليج لاهور", "يونيورسٽي آف لنڊن ايڪسٽرنل پروگرام", "عنايت الله چيمبرز، ايڊووڪيٽس اينڊ ليگل ڪنسلٽنٽس"],
+    "media": []
+  },
+  "adnan_mufti": {
+    "name": "عدنان مفتي",
+    "role": "ايگزیکٽو ڪميٽي – سائوٿ",
+    "highlight": "",
+    "about": "",
+    "badges": ["ادارو ورتا هم آهنگي", "ليڊرشپ"],
+    "expertise": [],
+    "experience": { "years": "", "label": "" },
+    "accreditations": [],
+    "education": [],
+    "affiliations": [],
+    "media": []
+  },
+  "anwar_kashif_mumtaz": {
+    "name": "انور ڪاشف ممتاز",
+    "role": "ماسٽر ٽرينر",
+    "highlight": "",
+    "about": "انور ڪاشف ممتاز هڪ سينيئر قانوني پيشيور، ليڊرشپ ٽرينر، ۽ تسليم ٿيل ثالث آهي، جنهن کي ڪارپوريٽ، ٽيڪس، ۽ تڪرارن جي حل جي طريقن جو وسيع تجربو آهي. هاءِ ڪورٽ جي وڪيل ۽ سينيئر پارٽنر Saiduddin & Co. جي حيثيت سان، هن پاڪستان ۾ ٽيڪس ۽ ڪارپوريٽ لا ايڊوائزريءَ ۾ هڪ مضبوط سڃاڻپ ٺاهي آهي.\n\nهو ليڊرشپ ۽ پرسنل ڊيولپمينٽ ۾ انٽرنيشنل سرٽيفائيڊ ٽرينر آهي ۽ هڪ سي اي ڊي آر يوڪي تسليم ٿيل ثالث ۽ ماسٽر ٽرينر پڻ آهي. هن پاڪستان ٽيڪس بار ۽ ڪراچي ٽيڪس بار جي سيڪريٽري جنرل، نائب صدر، ۽ صدر طور نمايان عهدن تي پڻ خدمتون سرانجام ڏنيون آهن.",
+    "badges": ["ماسٽر ٽرينر", "سابق صدر", "ليڊرشپ ٽرينر"],
+    "expertise": ["ليڊرشپ ۽ پرسنل ڊيولپمينٽ", "ADR ۽ ثالثي جي تربيت", "ڪارپوريٽ لا", "ٽيڪس لا ۽ ايڊوائزري", "پيشيورانه ترقي جا پروگرام", "تڪرارن جو حل", "ٽرين دي ٽرينر (TOT)"],
+    "experience": { "years": "", "label": "" },
+    "accreditations": ["سي اي ڊي آر يوڪي تسليم ٿيل ثالث", "سي اي ڊي آر يوڪي ماسٽر ٽرينر", "سرٽيفائيڊ انٽرنيشنل ٽرينر – ليڊرشپ ۽ پرسنل ڊيولپمينٽ"],
+    "education": ["ايڊووڪيٽ، هاءِ ڪورٽ آف پاڪستان"],
+    "affiliations": ["پاڪستان ميڊيئيٽرز ايسوسييشن (PMA)", "سي اي ڊي آر يوڪي", "پاڪستان ٽيڪس بار", "ڪراچي ٽيڪس بار", "پبلڪ انٽريسٽ لا ايسوسييشن آف پاڪستان (PILAP)", "ميسرز سعيد الدين اينڊ ڪمپني"],
+    "media": []
+  }
+  },
           "former_presidents": {
             "president_1": {
               "name": "انور ڪاشف ممتاز",
@@ -11421,6 +13304,10 @@
     }
   };
 
+  // Note: Profile modal data (member_1, trainer_*, etc.) is NOT cloned to non-English languages.
+  // This ensures that when users switch to Urdu/Arabic/etc., the system falls back to the
+  // English profile data from memberData instead of using misleading cloned English text in those language bundles.
+
   // Header selectors translation mapping (automatically translates header elements by URL)
   const headerTranslationMap = [
     { selector: '#mainmenu a[href="index.html"]', key: 'nav.home' },
@@ -11456,6 +13343,13 @@
       // Check if we are running in file:// protocol (which blocks local fetch in most browsers)
       if (window.location.protocol === 'file:') {
         console.warn('PMA Translator: Running on file:// protocol. Fetch is blocked by browser CORS policy. Using built-in fallback translations.');
+        // Ensure profile modal resources (if any) are injected into the fallback bundle
+        try {
+          // Await injection so injectProfileModalResources can retry for memberData
+          await injectProfileModalResources(fallbackResources);
+        } catch (e) {
+          // ignore
+        }
         return fallbackResources;
       }
 
@@ -11764,6 +13658,7 @@
 
       // 3. Load translation files
       const resources = await loadResources();
+      await injectProfileModalResources(resources);
 
       // 4. Determine initial language (saved preference -> browser locale -> default to english)
       let savedLang = localStorage.getItem(STORAGE_KEY);

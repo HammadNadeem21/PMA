@@ -1862,13 +1862,13 @@
 
             <!-- Right: detail content -->
             <div class="pma-modal-right">
-                <button class="pma-modal-close" id="pmaModalClose" aria-label="Close profile">&#x2715;</button>
+                <button class="pma-modal-close" id="pmaModalClose" data-i18n-attr-aria-label="leadership_page.modal.profile_close_label" aria-label="Close profile">&#x2715;</button>
 
                 <!-- Badges -->
                 <div class="pma-modal-badges" id="pmaModalBadges"></div>
 
                 <!-- About -->
-                <p class="pma-modal-section-label">About</p>
+                <p class="pma-modal-section-label" data-i18n="leadership_page.modal.about_label">About</p>
                 <p class="pma-modal-about" id="pmaModalAbout"></p>
 
                 <!-- Detail grid -->
@@ -1876,7 +1876,7 @@
 
                     <!-- Expertise -->
                     <div>
-                        <p class="pma-modal-block-title" id="pmaModalExpertiseTitle">Expertise</p>
+                        <p class="pma-modal-block-title" id="pmaModalExpertiseTitle" data-i18n="leadership_page.modal.expertise_title">Expertise</p>
                         <ul class="pma-modal-list" id="pmaModalExpertise"></ul>
                     </div>
 
@@ -1889,25 +1889,25 @@
                                 <div class="pma-modal-exp-label" id="pmaModalExpLabel"></div>
                             </div>
                         </div>
-                        <p class="pma-modal-block-title">Accreditations</p>
+                        <p class="pma-modal-block-title" data-i18n="leadership_page.modal.accreditations_title">Accreditations</p>
                         <ul class="pma-modal-list" id="pmaModalAccreditations"></ul>
                     </div>
 
                     <!-- Education -->
                     <div>
-                        <p class="pma-modal-block-title">Education</p>
+                        <p class="pma-modal-block-title" data-i18n="leadership_page.modal.education_title">Education</p>
                         <ul class="pma-modal-list" id="pmaModalEducation"></ul>
                     </div>
 
                     <!-- Professional Affiliations -->
                     <div>
-                        <p class="pma-modal-block-title">Professional Affiliations</p>
+                        <p class="pma-modal-block-title" data-i18n="leadership_page.modal.affiliations_title">Professional Affiliations</p>
                         <ul class="pma-modal-list" id="pmaModalAffiliations"></ul>
                     </div>
 
                     <!-- Media & Public Engagement (shown only if present) -->
                     <div id="pmaModalMediaWrap" style="display:none;">
-                        <p class="pma-modal-block-title">Media &amp; Public Engagement</p>
+                        <p class="pma-modal-block-title" data-i18n="leadership_page.modal.media_title">Media &amp; Public Engagement</p>
                         <ul class="pma-modal-list" id="pmaModalMedia"></ul>
                     </div>
 
@@ -2410,16 +2410,78 @@
                     media: []
                 }
             };
+            window.pmaLeadershipMemberData = memberData;
 
             /* ═══════════════════════════════════════════════
                MODAL LOGIC
             ═══════════════════════════════════════════════ */
             var $overlay = $('#pmaProfileModal');
 
+            function normalizeModalProfileKey(key) {
+                if (!key) return '';
+                return key.toString().trim().toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+            }
+
+            function buildProfileTranslationKeys(memberKey, path) {
+                var normalizedKey = normalizeModalProfileKey(memberKey);
+                var rawKey = (memberKey || '').toString().trim().toLowerCase();
+                var keys = [];
+
+                if (normalizedKey && path) {
+                    keys.push('leadership_page.profile_modal.' + normalizedKey + '.' + path);
+                }
+                if (rawKey && path && rawKey !== normalizedKey) {
+                    keys.push('leadership_page.profile_modal.' + rawKey + '.' + path);
+                }
+
+                return keys;
+            }
+
+            function translateProfileValue(memberKey, path, fallback) {
+                if (!memberKey || !path) return fallback;
+
+                var translationKeys = buildProfileTranslationKeys(memberKey, path);
+                if (window.i18next && typeof window.i18next.t === 'function') {
+                    for (var i = 0; i < translationKeys.length; i += 1) {
+                        var translated = window.i18next.t(translationKeys[i], { returnObjects: false });
+                        if (translated !== translationKeys[i] && translated !== undefined && translated !== null) {
+                            return translated;
+                        }
+                    }
+                }
+                return fallback;
+            }
+
+            function translateProfileArray(memberKey, path, fallbackArray) {
+                if (!memberKey || !path || !Array.isArray(fallbackArray)) return fallbackArray;
+
+                var translationKeys = buildProfileTranslationKeys(memberKey, path);
+                if (window.i18next && typeof window.i18next.t === 'function') {
+                    for (var i = 0; i < translationKeys.length; i += 1) {
+                        var translated = window.i18next.t(translationKeys[i], { returnObjects: true });
+                        if (Array.isArray(translated) && translated.length > 0) {
+                            return translated;
+                        }
+                    }
+                }
+                return fallbackArray;
+            }
+
+            function getProfileTranslationKey(keyName, fallback) {
+                if (window.i18next && typeof window.i18next.t === 'function') {
+                    var translated = window.i18next.t(keyName);
+                    if (translated !== keyName && translated !== undefined && translated !== null) {
+                        return translated;
+                    }
+                }
+                return fallback;
+            }
+
             /* ── helper: render a list or "Coming Soon" ── */
             function renderList($el, items, iconClass) {
                 if (!items || items.length === 0) {
-                    $el.html('<li class="pma-modal-coming-soon"><i class="fa fa-clock-o" aria-hidden="true"></i> Coming Soon</li>');
+                    var comingSoonText = getProfileTranslationKey('leadership_page.modal.coming_soon', 'Coming Soon');
+                    $el.html('<li class="pma-modal-coming-soon"><i class="fa fa-clock-o" aria-hidden="true"></i> ' + comingSoonText + '</li>');
                 } else {
                     var html = '';
                     $.each(items, function (i, item) {
@@ -2433,12 +2495,15 @@
                 var d = memberData[memberKey];
                 if (!d) return;
 
+                window.pmaProfileModalCurrentKey = memberKey;
+                window.pmaProfileModalCurrentImage = imageSrc || (d.image || '');
+
                 // Modal image
                 if (imageSrc) {
-                    $('#pmaModalImg').attr('src', imageSrc).attr('alt', d.name).show();
+                    $('#pmaModalImg').attr('src', imageSrc).attr('alt', translateProfileValue(memberKey, 'name', d.name)).show();
                     $('#pmaModalImgPlaceholder').hide();
                 } else if (d.image) {
-                    $('#pmaModalImg').attr('src', d.image).attr('alt', d.name).show();
+                    $('#pmaModalImg').attr('src', d.image).attr('alt', translateProfileValue(memberKey, 'name', d.name)).show();
                     $('#pmaModalImgPlaceholder').hide();
                 } else {
                     $('#pmaModalImg').hide();
@@ -2446,57 +2511,61 @@
                 }
 
                 // Left panel
-                $('#pmaModalName').text(d.name);
-                $('#pmaModalRole').text(d.role);
-                $('#pmaModalHighlight').text(d.highlight || '');
+                $('#pmaModalName').text(translateProfileValue(memberKey, 'name', d.name));
+                $('#pmaModalRole').text(translateProfileValue(memberKey, 'role', d.role));
+                $('#pmaModalHighlight').text(translateProfileValue(memberKey, 'highlight', d.highlight || ''));
 
                 // Badges
+                var badges = translateProfileArray(memberKey, 'badges', d.badges);
                 var badgesHtml = '';
-                $.each(d.badges, function (i, b) {
+                $.each(badges, function (i, b) {
                     var cls = i === 0 ? 'pma-modal-badge' : 'pma-modal-badge pma-modal-badge--secondary';
                     badgesHtml += '<span class="' + cls + '">' + b + '</span>';
                 });
                 $('#pmaModalBadges').html(badgesHtml);
 
                 // About
-                if (d.about) {
-                    var aboutParagraphs = d.about.split('\n\n');
+                var aboutText = translateProfileValue(memberKey, 'about', d.about || '');
+                if (aboutText) {
+                    var aboutParagraphs = aboutText.split('\n\n');
                     var aboutHtml = '';
                     $.each(aboutParagraphs, function (i, para) {
                         if (para.trim()) aboutHtml += '<p>' + para.trim() + '</p>';
                     });
                     $('#pmaModalAbout').html(aboutHtml).removeClass('pma-modal-coming-soon-text');
                 } else {
-                    $('#pmaModalAbout').html('<p>Coming Soon</p>').addClass('pma-modal-coming-soon-text');
+                    $('#pmaModalAbout').html('<p>' + getProfileTranslationKey('leadership_page.modal.coming_soon', 'Coming Soon') + '</p>').addClass('pma-modal-coming-soon-text');
                 }
 
                 // Expertise — label changes for trainer profiles
                 var isTrainer = memberKey.indexOf('trainer') === 0;
-                $('#pmaModalExpertiseTitle').text(isTrainer ? 'Training Expertise' : 'Expertise');
-                renderList($('#pmaModalExpertise'), d.expertise, 'fa fa-check-circle');
+                var expertiseLabelKey = isTrainer ? 'leadership_page.modal.training_expertise_title' : 'leadership_page.modal.expertise_title';
+                $('#pmaModalExpertiseTitle').text(getProfileTranslationKey(expertiseLabelKey, isTrainer ? 'Training Expertise' : 'Expertise'));
+                renderList($('#pmaModalExpertise'), translateProfileArray(memberKey, 'expertise', d.expertise), 'fa fa-check-circle');
 
                 // Experience box
                 if (d.experience && d.experience.years) {
-                    $('#pmaModalExpYears').text(d.experience.years);
-                    $('#pmaModalExpLabel').text(d.experience.label);
+                    $('#pmaModalExpYears').text(translateProfileValue(memberKey, 'experience.years', d.experience.years));
+                    $('#pmaModalExpLabel').text(translateProfileValue(memberKey, 'experience.label', d.experience.label));
                     $('.pma-modal-exp-box').show();
                 } else {
                     $('.pma-modal-exp-box').hide();
                 }
 
                 // Accreditations
-                renderList($('#pmaModalAccreditations'), d.accreditations, 'fa fa-check-circle');
+                renderList($('#pmaModalAccreditations'), translateProfileArray(memberKey, 'accreditations', d.accreditations), 'fa fa-check-circle');
 
                 // Education
-                renderList($('#pmaModalEducation'), d.education, 'fa fa-graduation-cap pma-modal-list-icon');
+                renderList($('#pmaModalEducation'), translateProfileArray(memberKey, 'education', d.education), 'fa fa-graduation-cap pma-modal-list-icon');
 
                 // Affiliations
-                renderList($('#pmaModalAffiliations'), d.affiliations, 'fa fa-building-o pma-modal-list-icon');
+                renderList($('#pmaModalAffiliations'), translateProfileArray(memberKey, 'affiliations', d.affiliations), 'fa fa-building-o pma-modal-list-icon');
 
                 // Media & Public Engagement
-                if (d.media && d.media.length > 0) {
+                var mediaItems = translateProfileArray(memberKey, 'media', d.media);
+                if (mediaItems && mediaItems.length > 0) {
                     var mediaHtml = '';
-                    $.each(d.media, function (i, item) {
+                    $.each(mediaItems, function (i, item) {
                         mediaHtml += '<li><i class="fa fa-tv pma-modal-list-icon" aria-hidden="true"></i>' + item + '</li>';
                     });
                     $('#pmaModalMedia').html(mediaHtml);
@@ -2512,6 +2581,23 @@
                 $('body').css('overflow', 'hidden');
                 $overlay.addClass('is-open');
             }
+
+            // Re-render the profile modal when language changes while it is open.
+            function refreshOpenModalTranslation() {
+                if (window.pmaProfileModalCurrentKey && $overlay.hasClass('is-open')) {
+                    openModal(window.pmaProfileModalCurrentKey, window.pmaProfileModalCurrentImage);
+                }
+            }
+
+            function registerModalLanguageHandler() {
+                if (window.i18next && typeof window.i18next.on === 'function') {
+                    window.i18next.off && window.i18next.off('languageChanged', refreshOpenModalTranslation);
+                    window.i18next.on('languageChanged', refreshOpenModalTranslation);
+                } else {
+                    setTimeout(registerModalLanguageHandler, 250);
+                }
+            }
+            registerModalLanguageHandler();
 
             function closeModal() {
                 $overlay.removeClass('is-open');
