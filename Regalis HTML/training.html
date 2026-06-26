@@ -822,7 +822,7 @@
 
                             <!-- Submit -->
                             <div class="pma-join-form-actions">
-                                <button type="submit" class="pma-btn--join-submit">
+                                <button id="training-submit-btn" type="submit" class="pma-btn--join-submit">
                                     <span data-i18n="training-page.registration_section.form_panel.btn_text">Apply for
                                         Enrollment</span>
                                     <i class="fa fa-paper-plane" aria-hidden="true"></i>
@@ -2023,7 +2023,8 @@
             var $regForm = $('#pma-join-form');
             var $regSuccess = $('#pma_register_success_message');
             var $regError = $('#pma_register_error_message');
-            var $regSubmit = $regForm.find('button[type=submit]');
+            var $regSubmit = $('#training-submit-btn');
+            var regSubmitDefaultHtml = $regSubmit.html();
 
             $regForm.on('submit', function (e) {
                 e.preventDefault();
@@ -2047,7 +2048,7 @@
                         $regError.show();
                     })
                     .always(function () {
-                        $regSubmit.prop('disabled', false).html('<span>Apply for Enrollment</span> <i class="fa fa-paper-plane" aria-hidden="true"></i>');
+                        $regSubmit.prop('disabled', false).html(regSubmitDefaultHtml);
                     });
             });
 

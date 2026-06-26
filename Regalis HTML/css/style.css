@@ -21446,6 +21446,17 @@ body.mfp-helper {
     font-size: 16px;
     z-index: 2;
   }
+
+  body.rtl .pma-journey-step:not(:last-child)::after {
+    left: auto;
+    right: calc(50% + 40px);
+  }
+
+  body.rtl .pma-journey-step:not(:last-child)::before {
+    content: "\f104";
+    left: calc(-50% + 40px);
+    right: auto;
+  }
 }
 
 @media (max-width: 768px) {

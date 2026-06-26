@@ -525,7 +525,7 @@
                                     accurate information. All fields marked * are mandatory.</p>
                             </div>
 
-                            <form id="pma-membership-form" class="pma-membership-form">
+                            <form id="pma-membership-form" class="pma-membership-form" action="membership.php" method="POST" enctype="multipart/form-data">
                                 <!-- Personal Information -->
                                 <div class="pma-form-section">
                                     <h4 class="pma-form-section-title"><i class="fa fa-user"></i> <span
@@ -537,42 +537,42 @@
                                             <label
                                                 data-i18n="become_member.membership_application.sections.personal_info.fields.full_name.label">Full
                                                 Name </label>
-                                            <input type="text" class="form-control" placeholder="Enter your full name"
+                                            <input type="text" class="form-control" placeholder="Enter your full name" name="full_name" 
                                                 data-i18n="become_member.membership_application.sections.personal_info.fields.full_name.placeholder">
                                         </div>
                                         <div class="col-md-6">
                                             <label
                                                 data-i18n="become_member.membership_application.sections.personal_info.fields.father_name.label">Father
                                                 Name </label>
-                                            <input type="text" class="form-control" placeholder="Enter father name"
+                                            <input type="text" class="form-control" placeholder="Enter father name" name="father_name"
                                                 data-i18n="become_member.membership_application.sections.personal_info.fields.father_name.placeholder">
                                         </div>
                                         <div class="col-md-6">
                                             <label
                                                 data-i18n="become_member.membership_application.sections.personal_info.fields.qualification.label">Educational
                                                 Qualification </label>
-                                            <input type="text" class="form-control" placeholder="Enter qualification"
+                                            <input type="text" class="form-control" placeholder="Enter qualification" name="qualification"
                                                 data-i18n="become_member.membership_application.sections.personal_info.fields.qualification.placeholder">
                                         </div>
                                         <div class="col-md-6">
                                             <label
                                                 data-i18n="become_member.membership_application.sections.personal_info.fields.designation.label">Designation
                                             </label>
-                                            <input type="text" class="form-control" placeholder="Enter designation"
+                                            <input type="text" class="form-control" placeholder="Enter designation" name="designation" 
                                                 data-i18n="become_member.membership_application.sections.personal_info.fields.designation.placeholder">
                                         </div>
                                         <div class="col-md-6">
                                             <label
                                                 data-i18n="become_member.membership_application.sections.personal_info.fields.cnic.label">CNIC
                                             </label>
-                                            <input type="text" class="form-control" placeholder="Enter CNIC number"
+                                            <input type="text" class="form-control" placeholder="Enter CNIC number" name="cnic" 
                                                 data-i18n="become_member.membership_application.sections.personal_info.fields.cnic.placeholder">
                                         </div>
                                         <div class="col-md-6">
                                             <label
                                                 data-i18n="become_member.membership_application.sections.personal_info.fields.chamber_phone.label">Chamber
                                                 Phone </label>
-                                            <input type="text" class="form-control" placeholder="Enter chamber phone"
+                                            <input type="text" class="form-control" placeholder="Enter chamber phone" name="chamber_phone" 
                                                 data-i18n="become_member.membership_application.sections.personal_info.fields.chamber_phone.placeholder">
                                         </div>
                                     </div>
@@ -590,29 +590,29 @@
                                                     <label
                                                         data-i18n="become_member.membership_application.sections.contact_info.fields.office_address.label">Office
                                                         Address </label>
-                                                    <input type="text" class="form-control"
+                                                    <input type="text" class="form-control" name="office_address" 
                                                         data-i18n="become_member.membership_application.sections.contact_info.fields.office_address.placeholder">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label
                                                         data-i18n="become_member.membership_application.sections.contact_info.fields.res_address.label">Residential
                                                         Address </label>
-                                                    <input type="text" class="form-control"
+                                                    <input type="text" class="form-control" name="res_address" 
                                                         data-i18n="become_member.membership_application.sections.contact_info.fields.res_address.placeholder">
-                                                    placeholder="Enter residential address">
+                                                    Enter residential address">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label
                                                         data-i18n="become_member.membership_application.sections.contact_info.fields.res_phone.label">Residence
                                                         Phone </label>
-                                                    <input type="text" class="form-control"
+                                                    <input type="text" class="form-control" name="res_phone" 
                                                         data-i18n="become_member.membership_application.sections.contact_info.fields.res_phone.placeholder">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label
                                                         data-i18n="become_member.membership_application.sections.contact_info.fields.email.label">Email
                                                     </label>
-                                                    <input type="email" class="form-control"
+                                                    <input type="email" class="form-control" name="email"
                                                         data-i18n="become_member.membership_application.sections.contact_info.fields.email.placeholder">
                                                 </div>
                                             </div>
@@ -629,7 +629,7 @@
                                                 <small
                                                     data-i18n="become_member.membership_application.sections.contact_info.fields.upload.hint">PDF,
                                                     JPG, PNG (Max 5MB)</small>
-                                                <input type="file" class="pma-file-input" multiple>
+                                                <input type="file" class="pma-file-input" name="documents[]" multiple>
                                             </div>
                                         </div>
                                     </div>
@@ -645,42 +645,42 @@
                                             <label
                                                 data-i18n="become_member.membership_application.sections.references.fields.proposer_name.label">Proposer
                                                 Full Name </label>
-                                            <input type="text" class="form-control"
+                                            <input type="text" class="form-control" name="proposer_name" 
                                                 data-i18n="become_member.membership_application.sections.references.fields.proposer_name.placeholder">
                                         </div>
                                         <div class="col-md-4">
                                             <label
                                                 data-i18n="become_member.membership_application.sections.references.fields.proposer_address.label">Proposer
                                                 Residential Address </label>
-                                            <input type="text" class="form-control"
+                                            <input type="text" class="form-control" name="proposer_address"
                                                 data-i18n="become_member.membership_application.sections.references.fields.proposer_address.placeholder">
                                         </div>
                                         <div class="col-md-4">
                                             <label
                                                 data-i18n="become_member.membership_application.sections.references.fields.proposer_phone.label">Proposer
                                                 Phone </label>
-                                            <input type="text" class="form-control"
+                                            <input type="text" class="form-control" name="proposer_phone"
                                                 data-i18n="become_member.membership_application.sections.references.fields.proposer_phone.placeholder">
                                         </div>
                                         <div class="col-md-4">
                                             <label
                                                 data-i18n="become_member.membership_application.sections.references.fields.seconder_name.label">Seconder
                                                 Full Name </label>
-                                            <input type="text" class="form-control"
+                                            <input type="text" class="form-control" name="seconder_name"
                                                 data-i18n="become_member.membership_application.sections.references.fields.seconder_name.placeholder">
                                         </div>
                                         <div class="col-md-4">
                                             <label
                                                 data-i18n="become_member.membership_application.sections.references.fields.seconder_address.label">Seconder
                                                 Residential Address </label>
-                                            <input type="text" class="form-control"
+                                            <input type="text" class="form-control" name="seconder_address"
                                                 data-i18n="become_member.membership_application.sections.references.fields.seconder_address.placeholder">
                                         </div>
                                         <div class="col-md-4">
                                             <label
                                                 data-i18n="become_member.membership_application.sections.references.fields.seconder_phone.label">Seconder
                                                 Phone </label>
-                                            <input type="text" class="form-control"
+                                            <input type="text" class="form-control" name="seconder_phone"
                                                 data-i18n="become_member.membership_application.sections.references.fields.seconder_phone.placeholder">
                                         </div>
                                     </div>
@@ -688,7 +688,7 @@
 
                                 <div class="pma-form-declaration">
                                     <div class="form-check d-flex align-items-center">
-                                        <input class="form-check-input mt-0 me-2" type="checkbox" id="declarationCheck"
+                                        <input class="form-check-input mt-0 me-2" type="checkbox" id="declarationCheck" name="declaration"
                                             required>
                                         <label class="form-check-label" for="declarationCheck"
                                             data-i18n="become_member.membership_application.declaration">
@@ -697,7 +697,7 @@
                                     </div>
                                 </div>
 
-                                <button type="submit" class="btn pma-btn-submit w-100">
+                                <button id="membership-submit-btn" type="submit" class="btn pma-btn-submit w-100">
                                     <i class="fa fa-paper-plane"></i> <span
                                         data-i18n="become_member.membership_application.submit_btn">Submit
                                         Application</span>
@@ -958,6 +958,93 @@
     <!-- swiper slider -->
     <script src="js/swiper.js"></script>
     <script src="js/custom-swiper-1.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('pma-membership-form');
+            var button = document.getElementById('membership-submit-btn');
+            if (!form || !button) {
+                return;
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                var messageId = 'membership-submit-message';
+                var messageEl = document.getElementById(messageId);
+
+                if (!messageEl) {
+                    messageEl = document.createElement('div');
+                    messageEl.id = messageId;
+                    messageEl.className = 'alert alert-info mt-3 mb-0';
+                    messageEl.setAttribute('role', 'status');
+                    messageEl.setAttribute('aria-live', 'polite');
+                    button.insertAdjacentElement('afterend', messageEl);
+                }
+
+                if (!button.dataset.originalHtml) {
+                    button.dataset.originalHtml = button.innerHTML;
+                }
+
+                // show loading state
+                button.disabled = true;
+                button.innerHTML = '<i class="fa fa-spinner fa-spin me-2" aria-hidden="true"></i>Submitting...';
+                messageEl.className = 'alert alert-info mt-3 mb-0';
+                messageEl.textContent = 'Your application is being submitted. Please wait...';
+
+                // Submit via fetch using FormData so files are supported
+                var formData = new FormData(form);
+                var submitUrl = form.getAttribute('action') || window.location.href;
+                var method = (form.getAttribute('method') || 'POST').toUpperCase();
+
+                fetch(submitUrl, {
+                    method: method,
+                    body: formData,
+                    credentials: 'same-origin'
+                })
+                .then(function (res) { return res.text(); })
+                .then(function (text) {
+                    var body = (text || '').trim();
+                    if (/^sent\b/i.test(body)) {
+                        messageEl.className = 'alert alert-success mt-3 mb-0';
+                        var extra = body.replace(/^sent\|?/i, '');
+                        var message = 'Your application has been submitted successfully.';
+                        if (extra) {
+                            var parts = extra.split('|');
+                            parts.forEach(function (part) {
+                                if (part.indexOf('attachments=') === 0) {
+                                    var count = part.split('=')[1] || '0';
+                                    message += ' ' + count + ' attachment' + (count === '1' ? '' : 's') + ' uploaded.';
+                                }
+                                if (part.indexOf('issues=') === 0) {
+                                    var issues = part.replace('issues=', '');
+                                    if (issues) {
+                                        message += ' Note: ' + issues;
+                                    }
+                                }
+                            });
+                        }
+                        messageEl.textContent = message;
+                        form.reset();
+                    } else {
+                        messageEl.className = 'alert alert-danger mt-3 mb-0';
+                        messageEl.textContent = body || 'Submission failed. Please try again.';
+                    }
+                })
+                .catch(function (err) {
+                    messageEl.className = 'alert alert-danger mt-3 mb-0';
+                    messageEl.textContent = 'Network error. Please try again.';
+                })
+                .finally(function () {
+                    // restore button
+                    if (button.dataset.originalHtml) {
+                        button.innerHTML = button.dataset.originalHtml;
+                    }
+                    button.disabled = false;
+                });
+            });
+        });
+    </script>
 
 </body>
 
