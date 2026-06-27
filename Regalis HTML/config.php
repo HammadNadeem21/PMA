@@ -1,12 +1,11 @@
 <?php
 // config.php
 
-// SMTP Settings
-define('SMTP_HOST', 'sandbox.smtp.mailtrap.io');
-define('SMTP_PORT', 2525);
-define('SMTP_USER', '3f7b86c066e82a'); 
-define('SMTP_PASS', 'd338376f3a5fa9'); 
+// SMTP Settings    
+define('SMTP_HOST', 'mail.pma.org.pk'); // Actual mail host
+define('SMTP_PORT', 465); // Secure SSL port
+define('SMTP_USER', 'info@pma.org.pk'); // Actual username
+define('SMTP_PASS', 'email_password'); // Actual password
 
-// Recipient Email (Jahan client ko emails chahiye)
-define('TO_EMAIL', 'hamm426623@gmail.com'); 
+define('TO_EMAIL', 'info@pma.org.pk'); // Recipient Email (where you want to receive emails)
 ?>

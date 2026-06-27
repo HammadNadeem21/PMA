@@ -2,13 +2,16 @@
 error_reporting(0);
 ini_set('display_errors', 0);
 
+
+header('Content-Type: application/json');
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// 1. Same config file include karein
+
 require_once 'config.php';
 
-// 2. PHPMailer paths load karna
+
 if (file_exists('vendor/autoload.php')) {
     require 'vendor/autoload.php';
 } else {
@@ -17,55 +20,52 @@ if (file_exists('vendor/autoload.php')) {
     require 'PHPMailer/src/SMTP.php';
 }
 
-// 3. Form se data safely collect karna
-$full_name     = isset($_POST['full_name']) ? trim($_POST['full_name']) : '';
-$father_name   = isset($_POST['father_name']) ? trim($_POST['father_name']) : '';
-$qualification = isset($_POST['qualification']) ? trim($_POST['qualification']) : '';
-$designation   = isset($_POST['designation']) ? trim($_POST['designation']) : '';
-$cnic          = isset($_POST['cnic']) ? trim($_POST['cnic']) : '';
-$chamber_phone = isset($_POST['chamber_phone']) ? trim($_POST['chamber_phone']) : '';
 
-$office_address = isset($_POST['office_address']) ? trim($_POST['office_address']) : '';
-$res_address    = isset($_POST['res_address']) ? trim($_POST['res_address']) : '';
-$res_phone      = isset($_POST['res_phone']) ? trim($_POST['res_phone']) : '';
-$email          = isset($_POST['email']) ? trim($_POST['email']) : '';
+$full_name = isset($_POST['full_name']) && trim($_POST['full_name']) !== '' ? trim($_POST['full_name']) : 'Not Provided';
+$father_name = isset($_POST['father_name']) && trim($_POST['father_name']) !== '' ? trim($_POST['father_name']) : 'Not Provided';
+$qualification = isset($_POST['qualification']) && trim($_POST['qualification']) !== '' ? trim($_POST['qualification']) : 'Not Provided';
+$designation = isset($_POST['designation']) && trim($_POST['designation']) !== '' ? trim($_POST['designation']) : 'Not Provided';
+$cnic = isset($_POST['cnic']) && trim($_POST['cnic']) !== '' ? trim($_POST['cnic']) : 'Not Provided';
+$chamber_phone = isset($_POST['chamber_phone']) && trim($_POST['chamber_phone']) !== '' ? trim($_POST['chamber_phone']) : 'Not Provided';
 
-$proposer_name    = isset($_POST['proposer_name']) ? trim($_POST['proposer_name']) : 'N/A';
-$proposer_address = isset($_POST['proposer_address']) ? trim($_POST['proposer_address']) : 'N/A';
-$proposer_phone   = isset($_POST['proposer_phone']) ? trim($_POST['proposer_phone']) : 'N/A';
+$office_address = isset($_POST['office_address']) && trim($_POST['office_address']) !== '' ? trim($_POST['office_address']) : 'Not Provided';
+$res_address = isset($_POST['res_address']) && trim($_POST['res_address']) !== '' ? trim($_POST['res_address']) : 'Not Provided';
+$res_phone = isset($_POST['res_phone']) && trim($_POST['res_phone']) !== '' ? trim($_POST['res_phone']) : 'Not Provided';
+$email = isset($_POST['email']) && trim($_POST['email']) !== '' ? trim($_POST['email']) : 'Not Provided';
 
-$seconder_name    = isset($_POST['seconder_name']) ? trim($_POST['seconder_name']) : 'N/A';
-$seconder_address = isset($_POST['seconder_address']) ? trim($_POST['seconder_address']) : 'N/A';
-$seconder_phone   = isset($_POST['seconder_phone']) ? trim($_POST['seconder_phone']) : 'N/A';
+$proposer_name = isset($_POST['proposer_name']) && trim($_POST['proposer_name']) !== '' ? trim($_POST['proposer_name']) : 'N/A';
+$proposer_address = isset($_POST['proposer_address']) && trim($_POST['proposer_address']) !== '' ? trim($_POST['proposer_address']) : 'N/A';
+$proposer_phone = isset($_POST['proposer_phone']) && trim($_POST['proposer_phone']) !== '' ? trim($_POST['proposer_phone']) : 'N/A';
+
+$seconder_name = isset($_POST['seconder_name']) && trim($_POST['seconder_name']) !== '' ? trim($_POST['seconder_name']) : 'N/A';
+$seconder_address = isset($_POST['seconder_address']) && trim($_POST['seconder_address']) !== '' ? trim($_POST['seconder_address']) : 'N/A';
+$seconder_phone = isset($_POST['seconder_phone']) && trim($_POST['seconder_phone']) !== '' ? trim($_POST['seconder_phone']) : 'N/A';
 
 $subject = 'New Membership Application: ' . $full_name;
 $to = TO_EMAIL;
 
-// Required fields verification
-if (empty($full_name) || empty($father_name) || empty($qualification) || empty($designation) || empty($cnic) || empty($office_address) || empty($res_address) || empty($email)) {
-    echo 'failed';
-    exit;
-}
 
-// 4. PHPMailer Config
 $mail = new PHPMailer(true);
 
 try {
-    // Server settings
-    $mail->isSMTP();                                            
-    $mail->Host       = SMTP_HOST;             
-    $mail->SMTPAuth   = true;                                   
-    $mail->Username   = SMTP_USER; 
-    $mail->Password   = SMTP_PASS; 
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         
-    $mail->Port       = SMTP_PORT;                                    
 
-    // Recipients
+    $mail->isSMTP();
+    $mail->Host = SMTP_HOST;
+    $mail->SMTPAuth = true;
+    $mail->Username = SMTP_USER;
+    $mail->Password = SMTP_PASS;
+
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port = SMTP_PORT;
+
     $mail->setFrom($to, 'PMA Membership Portal');
     $mail->addAddress($to);
-    $mail->addReplyTo($email, $full_name);
 
-    // --- MULTIPLE FILES ATTACHMENT LOGIC ---
+    if ($email !== 'Not Provided') {
+        $mail->addReplyTo($email, $full_name);
+    }
+
+
     $attachmentCount = 0;
     $attachmentProblems = [];
 
@@ -75,7 +75,7 @@ try {
                 $file_name = $_FILES['documents']['name'][$key];
                 $file_size = $_FILES['documents']['size'][$key];
                 $file_error = $_FILES['documents']['error'][$key];
-                
+
                 if ($file_error === UPLOAD_ERR_OK && $file_size <= 5242880) {
                     $mail->addAttachment($tmp_name, $file_name);
                     $attachmentCount++;
@@ -93,34 +93,23 @@ try {
                             case UPLOAD_ERR_NO_FILE:
                                 $reason = 'no file uploaded';
                                 break;
-                            case UPLOAD_ERR_NO_TMP_DIR:
-                                $reason = 'missing temporary folder';
-                                break;
-                            case UPLOAD_ERR_CANT_WRITE:
-                                $reason = 'failed to write file';
-                                break;
-                            case UPLOAD_ERR_EXTENSION:
-                                $reason = 'upload blocked by extension';
-                                break;
                             default:
-                                $reason = 'upload error code '.$file_error;
+                                $reason = 'upload error code ' . $file_error;
                                 break;
                         }
                     } elseif ($file_size > 5242880) {
                         $reason = 'file larger than 5MB';
                     }
-                    $attachmentProblems[] = $file_name . ': ' . $reason;
+                    $attachmentProblems[] = $file_name . ' (' . $reason . ')';
                 }
             }
-        } else {
-            $attachmentProblems[] = 'No documents selected for upload.';
         }
     }
 
-    // HTML Content (Clean Legal Professional Look)
+
     $mail->isHTML(true);
     $mail->Subject = $subject;
-    
+
     $mail->Body = "
     <html>
     <head><title>Membership Details</title></head>
@@ -160,7 +149,7 @@ try {
             </table>
             
             <p style='margin-top: 25px; font-size: 12px; color: #666; font-style: italic; background: #fdf2e9; padding: 10px; border-left: 3px solid #b45309;'>
-                * User checked the declaration box confirming that all provided information is accurate and true.
+                * Application processed via background setup. Attachments handled: {$attachmentCount}.
             </p>
         </div>
     </body>
@@ -168,12 +157,17 @@ try {
     ";
 
     $mail->send();
-    $response = 'sent|attachments='.$attachmentCount;
+
+
+    $msg = 'Your membership application has been submitted successfully!';
     if (!empty($attachmentProblems)) {
-        $response .= '|issues='.implode('; ', $attachmentProblems);
+        $msg .= ' (Some files skipped: ' . implode(', ', $attachmentProblems) . ')';
     }
-    echo $response;
+
+    echo json_encode(['status' => 'success', 'message' => $msg]);
+
 } catch (Exception $e) {
-    echo 'failed|'.$e->getMessage();
+    echo json_encode(['status' => 'error', 'message' => 'Mailer Error: ' . $mail->ErrorInfo]);
 }
+exit;
 ?>
